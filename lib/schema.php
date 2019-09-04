@@ -821,6 +821,8 @@ if ( ! class_exists( 'WpssoJsonSchema' ) ) {
 
 					global $wp_query;
 
+					$saved_wp_query = $wp_query;
+
 					$wp_query = new WP_Query( $posts_args );
 				
 					if ( $mod[ 'is_home_index' ] ) {
@@ -859,6 +861,13 @@ if ( ! class_exists( 'WpssoJsonSchema' ) ) {
 
 				} elseif ( $wpsso->debug->enabled ) {
 					$wpsso->debug->log( 'no posts to add' );
+				}
+
+				/**
+				 * Restore the original WP_Query.
+				 */
+				if ( ! $use_query ) {
+					$wp_query = $saved_wp_query;
 				}
 
 			} elseif ( is_object( $mod[ 'obj' ] ) && method_exists( $mod[ 'obj' ], 'get_posts_mods' ) ) {
