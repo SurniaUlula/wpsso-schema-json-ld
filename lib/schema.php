@@ -810,7 +810,10 @@ if ( ! class_exists( 'WpssoJsonSchema' ) ) {
 				/**
 				 * Setup the query for archive pages in the back-end.
 				 */
-				if ( ! SucomUtilWP::doing_frontend() ) {
+				$use_query = SucomUtilWP::doing_frontend() ? true : false;
+				$use_query = apply_filters( $wpsso->lca . '_page_posts_use_query', $use_query, $mod );
+
+				if ( ! $use_query ) {
 
 					if ( $mod[ 'is_post_type_archive' ] ) {
 						$posts_args[ 'post_type' ] = $mod[ 'post_type' ];
