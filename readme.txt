@@ -808,6 +808,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.8.0-dev.2 (2019/09/04)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Added a new 'wpsso_page_posts_use_query' filter for the WP eCommerce integration module in WPSSO Core Premium v6.2.0. 
+
 **Version 2.7.0 (2019/09/01)**
 
 * **New Features**
@@ -911,6 +922,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None.
 
 == Upgrade Notice ==
+
+= 2.8.0-dev.2 =
+
+(2019/09/04) Added a new 'wpsso_page_posts_use_query' filter for the WP eCommerce integration module in WPSSO Core Premium v6.2.0. 
 
 = 2.7.0 =
 
