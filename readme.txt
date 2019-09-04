@@ -743,7 +743,9 @@ Additional e-Commerce plugins are also provided with the WPSSO Core Premium plug
 
 * [Markup Example for a Tech Article](http://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-tech-article/) published on surniaulula.com.
 
-* [Markup Example for a WooCommerce Product](http://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-woocommerce-product/), including its name, description, images, brand, sku, price, availability, ratings, colors, category, width, height, weight, product variations, and much more.
+* [Markup Example for a WooCommerce Product](http://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-woocommerce-product/), including its name, description, images, brand, sku, price, availability, category, width, height, weight, variations, and much more.
+
+* [Markup Example for a WP eCommerce Product](http://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-wp-ecommerce-product/), including its name, description, images, brand, sku, price, availability, category, width, height, weight, variations, and much more.
 
 <h3>WPSSO Core Plugin Required</h3>
 
@@ -808,7 +810,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.8.0-dev.2 (2019/09/04)**
+**Version 2.8.0-dev.3 (2019/09/04)**
 
 * **New Features**
 	* None.
@@ -923,7 +925,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.8.0-dev.2 =
+= 2.8.0-dev.3 =
 
 (2019/09/04) Added a new 'wpsso_page_posts_use_query' filter for the WP eCommerce integration module in WPSSO Core Premium v6.2.0. 
 
