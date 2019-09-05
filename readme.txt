@@ -9,7 +9,7 @@ Assets URI: https://surniaulula.github.io/wpsso-schema-json-ld/assets/
 Tags: schema.org, rich results, structured data, knowledge graph, rich pins, rich cards, woocommerce, pinterest, local seo, image seo, video seo, news seo, rating, review, recipe, event, product, qapage, howto
 Contributors: jsmoriss
 Requires At Least: 3.9
-Tested Up To: 5.2.2
+Tested Up To: 5.2.3
 WC Tested Up To: 3.7.0
 Stable Tag: 2.7.0
 
