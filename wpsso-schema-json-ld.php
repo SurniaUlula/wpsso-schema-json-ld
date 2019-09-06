@@ -97,43 +97,25 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 			}
 		}
 
-		/**
-		 * Also called from the activate_plugin method with $deactivate = true.
-		 */
-		public static function required_notice( $deactivate = false ) {
+		public static function required_notice() {
 
 			self::wpsso_init_textdomain();	// Load the 'wpsso-schema-json-ld' text domain.
 
 			$info = WpssoJsonConfig::$cf[ 'plugin' ][ 'wpssojson' ];
 
-			$die_msg = __( '%1$s is an add-on for the %2$s plugin &mdash; please install and activate the %3$s plugin before activating %4$s.', 'wpsso-schema-json-ld' );
-
 			$error_msg = __( 'The %1$s add-on requires the %2$s plugin &mdash; install and activate the %3$s plugin or <a href="%4$s">deactivate the %5$s add-on</a>.', 'wpsso-schema-json-ld' );
 
-			if ( true === $deactivate ) {
+			$deactivate_url = html_entity_decode( wp_nonce_url( add_query_arg( array(
+				'action'        => 'deactivate',
+				'plugin'        => $info[ 'base' ],
+				'plugin_status' => 'all',
+				'paged'         => 1,
+				's'             => '',
+			), admin_url( 'plugins.php' ) ), 'deactivate-plugin_' . $info[ 'base' ] ) );
 
-				if ( ! function_exists( 'deactivate_plugins' ) ) {
-					require_once trailingslashit( ABSPATH ) . 'wp-admin/includes/plugin.php';
-				}
-
-				deactivate_plugins( $info[ 'base' ], $silent = true );
-
-				wp_die( '<p>' . sprintf( $die_msg, $info[ 'name' ], $info[ 'req' ][ 'name' ], $info[ 'req' ][ 'short' ], $info[ 'short' ] ) . '</p>' );
-
-			} else {
-
-				$deactivate_url = html_entity_decode( wp_nonce_url( add_query_arg( array(
-					'action'        => 'deactivate',
-					'plugin'        => $info[ 'base' ],
-					'plugin_status' => 'all',
-					'paged'         => 1,
-					's'             => '',
-				), admin_url( 'plugins.php' ) ), 'deactivate-plugin_' . $info[ 'base' ] ) );
-
-				echo '<div class="notice notice-error error"><p>';
-				echo sprintf( $error_msg, $info[ 'name' ], $info[ 'req' ][ 'name' ], $info[ 'req' ][ 'short' ], $deactivate_url, $info[ 'short' ] );
-				echo '</p></div>';
-			}
+			echo '<div class="notice notice-error error"><p>';
+			echo sprintf( $error_msg, $info[ 'name' ], $info[ 'req' ][ 'name' ], $info[ 'req' ][ 'short' ], $deactivate_url, $info[ 'short' ] );
+			echo '</p></div>';
 		}
 
 		public static function wpsso_init_textdomain() {

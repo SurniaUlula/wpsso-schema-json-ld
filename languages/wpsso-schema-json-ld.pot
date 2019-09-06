@@ -1412,19 +1412,13 @@ msgctxt "metabox title"
 msgid "Schema Shortcode"
 msgstr ""
 
-#: wpsso-schema-json-ld.php:109
-msgid ""
-"%1$s is an add-on for the %2$s plugin &mdash; please install and activate "
-"the %3$s plugin before activating %4$s."
-msgstr ""
-
-#: wpsso-schema-json-ld.php:111
+#: wpsso-schema-json-ld.php:106
 msgid ""
 "The %1$s add-on requires the %2$s plugin &mdash; install and activate the "
 "%3$s plugin or <a href=\"%4$s\">deactivate the %5$s add-on</a>."
 msgstr ""
 
-#: wpsso-schema-json-ld.php:241
+#: wpsso-schema-json-ld.php:223
 msgid ""
 "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version "
 "%5$s is currently installed)."
