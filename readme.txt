@@ -821,7 +821,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Developer Notes**
 	* None.
 
-**Version 2.8.0-rc.2 (2019/09/07)**
+**Version 2.8.0 (2019/09/07)**
 
 * **New Features**
 	* None.
@@ -936,7 +936,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.8.0-rc.2 =
+= 2.8.0 =
 
 (2019/09/07) Updated the Schema HowTo markup for the latest Google requirements.
 
