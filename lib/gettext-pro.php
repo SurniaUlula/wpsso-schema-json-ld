@@ -47,7 +47,7 @@ _x( 'Total Time', 'option label', 'wpsso-schema-json-ld' );
 _x( 'How-To Supplies', 'option label', 'wpsso-schema-json-ld' );
 _x( 'How-To Tools', 'option label', 'wpsso-schema-json-ld' );
 _x( 'How-To Steps', 'option label', 'wpsso-schema-json-ld' );
-_x( '%1$s Step or %2$s Section Information', 'option label', 'wpsso-schema-json-ld' );
+_x( '%1$s Step or %2$s Section Details', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Section Name or Step Name', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Section Description or Direction Text', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Job Posting Information', 'metabox title', 'wpsso-schema-json-ld' );
