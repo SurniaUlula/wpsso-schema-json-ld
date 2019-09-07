@@ -810,12 +810,23 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.8.0-rc.1 (2019/09/06)**
+**Version 2.9.0-dev.1 (TBD)**
 
 * **New Features**
 	* None.
 * **Improvements**
+	* Added an image selection option in the Document SSO metabox for each Schema HowTo step.
+* **Bugfixes**
 	* None.
+* **Developer Notes**
+	* None.
+
+**Version 2.8.0-rc.2 (2019/09/07)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Updated the Schema HowTo markup for the latest Google requirements.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -925,9 +936,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.8.0-rc.1 =
+= 2.8.0-rc.2 =
 
-(2019/09/06) Added a new 'wpsso_page_posts_use_query' filter for the WP eCommerce integration module in WPSSO Core Premium v6.2.0. 
+(2019/09/07) Updated the Schema HowTo markup for the latest Google requirements.
 
 = 2.7.0 =
 
