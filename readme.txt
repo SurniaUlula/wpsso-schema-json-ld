@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires At Least: 3.9
 Tested Up To: 5.2.3
 WC Tested Up To: 3.7.0
-Stable Tag: 2.7.0
+Stable Tag: 2.8.0
 
 Schema JSON-LD markup and Google SEO Rich Results for Articles, Events, Local Business, Products, Recipes, Reviews and many more.
 
@@ -939,8 +939,4 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 = 2.8.0 =
 
 (2019/09/07) Updated the Schema HowTo markup for the latest Google requirements.
-
-= 2.7.0 =
-
-(2019/09/01) Moved schema shortcode processing to the new 'wpsso_json_data_graph_element' filter hook in WPSSO Core v6.1.0.
 
