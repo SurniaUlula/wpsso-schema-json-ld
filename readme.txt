@@ -810,7 +810,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.9.0-dev.1 (TBD)**
+**Version 2.9.0-dev.2 (TBD)**
 
 * **New Features**
 	* None.
@@ -843,98 +843,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Developer Notes**
 	* Moved schema shortcode processing from 'wpsso_json_data_https_schema_org_thing' to the new 'wpsso_json_data_graph_element' filter hook in WPSSO Core v6.1.0.
 
-**Version 2.6.2 (2019/08/10)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* Fixed possible unrelated data in Schema @graph markup when the "Auto-Refresh Cache After Clearing" option is enabled.
-* **Developer Notes**
-	* None.
-
-**Version 2.6.1 (2019/08/07)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Minor update for "fr_FR" translations.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Simplified and optimized loading of admin library modules for WPSSO Core v5.5.1.
-
-**Version 2.6.0 (2019/08/04)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Removed call to WpssoSchemaCache::get_mod_json_data() for WPSSO v5.5.0.
-
-**Version 2.5.0 (2019/08/02)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added an integration module for the Schema Brand type.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Unified the post.php, term.php, and user.php library files under lib/*/admin/ in a single meta-edit.php library file.
-
-**Version 2.4.1 (2019/07/28)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* Fixed incorrect "Save draft" messages for the Schema description in the term and user Document SSO metabox.
-* **Developer Notes**
-	* None.
-
-**Version 2.4.0 (2019/07/18)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added an '@id' property to the Schema ImageObject and VideoObject markup.
-	* Optimized the SSO &gt; Schema Markup &gt; Schema Types &gt; Default Schema Types options with jQuery to load the selects as needed.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Changed `SucomForm::get_date_time_iso()` to `get_date_time_tz()`.
-
-**Version 2.3.0 (2019/07/13)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added an "Product Information (Additional)" subsection in the Document SSO metabox for the Schema Product type.
-	* Added new options in the Document SSO metabox:
-		* Part of URL
-		* Review Subject Name
-		* Product Length
-		* Product Width
-		* Product Height
-		* Product Depth
-		* Product GTIN-14
-		* Product GTIN-13/EAN
-		* Product GTIN-12/UPC
-		* Product GTIN-8
-		* Product GTIN
-	* Added a min/max character counter to the Product GTIN input fields.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
-
 == Upgrade Notice ==
+
+= 2.9.0-dev.2 =
+
+(TBD) Added an image selection option in the Document SSO metabox for each Schema HowTo step.
 
 = 2.8.0 =
 
