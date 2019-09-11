@@ -449,20 +449,25 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_mixed_multi( array(
 						'schema_howto_step_section' => array(
 							'input_type'    => 'radio',
-							'input_class'   => 'wide howto_step_section',
+							'input_class'   => 'howto_step_section',
 							'input_content' => _x( '%1$s Step or %2$s Section Details', 'option label', 'wpsso-schema-json-ld' ),
 							'input_values'  => array( 0, 1 ),
 							'input_default' => 0,
 						),
 						'schema_howto_step' => array(
-							'input_title' => _x( 'Section Name or Step Name', 'option label', 'wpsso-schema-json-ld' ),
+							'input_label' => _x( 'Name', 'option label', 'wpsso-schema-json-ld' ),
 							'input_type'  => 'text',
 							'input_class' => 'wide howto_step_name value_req',
 						),
 						'schema_howto_step_text' => array(
-							'input_title' => _x( 'Section Description or Direction Text', 'option label', 'wpsso-schema-json-ld' ),
+							'input_label' => _x( 'Description', 'option label', 'wpsso-schema-json-ld' ),
 							'input_type'  => 'textarea',
 							'input_class' => 'wide howto_step_text',
+						),
+						'schema_howto_step_img' => array(
+							'input_label' => _x( 'Image ID', 'option label', 'wpsso-schema-json-ld' ),
+							'input_type'  => 'image',
+							'input_class'   => 'howto_step_img',
 						),
 					), '', 'schema_howto_steps', $start_num = 0, $max_input = 5, $show_first = 5 ),
 				),
