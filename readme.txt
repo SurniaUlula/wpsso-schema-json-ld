@@ -810,7 +810,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.9.0-dev.3 (2019/09/11)**
+**Version 2.9.0-dev.4 (2019/09/12)**
 
 * **New Features**
 	* None.
@@ -845,9 +845,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.9.0-dev.3 =
+= 2.9.0-dev.4 =
 
-(2019/09/11) Added an image selection option in the Document SSO metabox for each Schema HowTo step.
+(2019/09/12) Added an image selection option in the Document SSO metabox for each Schema HowTo step.
 
 = 2.8.0 =
 
