@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD (WPSSO JSON) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 2.8.0\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 2.9.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2019-09-07 14:58-0700\n"
-"PO-Revision-Date: 2019-09-07 14:59-0700\n"
+"POT-Creation-Date: 2019-09-12 17:31-0700\n"
+"PO-Revision-Date: 2019-09-12 17:48-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -459,8 +459,9 @@ msgctxt "option label"
 msgid "Alternate Name"
 msgstr "Autre nom"
 
-#: lib/gettext-pro.php:14 lib/pro/admin/meta-edit.php:173
-#: lib/std/admin/meta-edit.php:154
+#: lib/gettext-pro.php:14 lib/gettext-pro.php:52
+#: lib/pro/admin/meta-edit.php:173 lib/pro/admin/meta-edit.php:459
+#: lib/std/admin/meta-edit.php:154 lib/std/admin/meta-edit.php:463
 msgctxt "option label"
 msgid "Description"
 msgstr "Description"
@@ -645,16 +646,16 @@ msgctxt "option label"
 msgid "How-To Makes"
 msgstr "Le How-To crée"
 
-#: lib/gettext-pro.php:45 lib/gettext-pro.php:93
-#: lib/pro/admin/meta-edit.php:407 lib/pro/admin/meta-edit.php:747
-#: lib/std/admin/meta-edit.php:409 lib/std/admin/meta-edit.php:782
+#: lib/gettext-pro.php:45 lib/gettext-pro.php:94
+#: lib/pro/admin/meta-edit.php:407 lib/pro/admin/meta-edit.php:752
+#: lib/std/admin/meta-edit.php:409 lib/std/admin/meta-edit.php:787
 msgctxt "option label"
 msgid "Preparation Time"
 msgstr "Temps de préparation"
 
-#: lib/gettext-pro.php:46 lib/gettext-pro.php:95
-#: lib/pro/admin/meta-edit.php:417 lib/pro/admin/meta-edit.php:767
-#: lib/std/admin/meta-edit.php:420 lib/std/admin/meta-edit.php:804
+#: lib/gettext-pro.php:46 lib/gettext-pro.php:96
+#: lib/pro/admin/meta-edit.php:417 lib/pro/admin/meta-edit.php:772
+#: lib/std/admin/meta-edit.php:420 lib/std/admin/meta-edit.php:809
 msgctxt "option label"
 msgid "Total Time"
 msgstr "Temps total"
@@ -686,484 +687,484 @@ msgstr "Détails %1$s d'étape ou %2$s de section"
 #: lib/gettext-pro.php:51 lib/pro/admin/meta-edit.php:454
 #: lib/std/admin/meta-edit.php:458
 msgctxt "option label"
-msgid "Section Name or Step Name"
-msgstr "Nom de la section ou nom de l'étape"
+msgid "Name"
+msgstr "Nom"
 
-#: lib/gettext-pro.php:52 lib/pro/admin/meta-edit.php:459
-#: lib/std/admin/meta-edit.php:463
+#: lib/gettext-pro.php:53 lib/pro/admin/meta-edit.php:464
+#: lib/std/admin/meta-edit.php:468
 msgctxt "option label"
-msgid "Section Description or Direction Text"
-msgstr "Description de section ou texte de direction"
+msgid "Image ID"
+msgstr "ID d'une image"
 
-#: lib/gettext-pro.php:53 lib/pro/admin/meta-edit.php:473
-#: lib/std/admin/meta-edit.php:477 lib/submenu/schema-general.php:269
+#: lib/gettext-pro.php:54 lib/pro/admin/meta-edit.php:478
+#: lib/std/admin/meta-edit.php:482 lib/submenu/schema-general.php:269
 msgctxt "metabox title"
 msgid "Job Posting Information"
 msgstr "Informations d'affichage d'emploi"
 
-#: lib/gettext-pro.php:54 lib/pro/admin/meta-edit.php:479
-#: lib/std/admin/meta-edit.php:484
+#: lib/gettext-pro.php:55 lib/pro/admin/meta-edit.php:484
+#: lib/std/admin/meta-edit.php:489
 msgctxt "option label"
 msgid "Job Title"
 msgstr "Titre du poste"
 
-#: lib/gettext-pro.php:55 lib/pro/admin/meta-edit.php:486
-#: lib/std/admin/meta-edit.php:492
+#: lib/gettext-pro.php:56 lib/pro/admin/meta-edit.php:491
+#: lib/std/admin/meta-edit.php:497
 msgctxt "option label"
 msgid "Hiring Organization"
 msgstr "Organisation d'embauche"
 
-#: lib/gettext-pro.php:56 lib/pro/admin/meta-edit.php:494
-#: lib/std/admin/meta-edit.php:501
+#: lib/gettext-pro.php:57 lib/pro/admin/meta-edit.php:499
+#: lib/std/admin/meta-edit.php:506
 msgctxt "option label"
 msgid "Job Location"
 msgstr "Lieu de travail"
 
-#: lib/gettext-pro.php:57 lib/pro/admin/meta-edit.php:502
-#: lib/std/admin/meta-edit.php:510
+#: lib/gettext-pro.php:58 lib/pro/admin/meta-edit.php:507
+#: lib/std/admin/meta-edit.php:515
 msgctxt "option label"
 msgid "Base Salary"
 msgstr "Salaire de base"
 
-#: lib/gettext-pro.php:58 lib/pro/admin/meta-edit.php:506
-#: lib/std/admin/meta-edit.php:514
+#: lib/gettext-pro.php:59 lib/pro/admin/meta-edit.php:511
+#: lib/std/admin/meta-edit.php:519
 msgctxt "option comment"
 msgid "per"
 msgstr "par"
 
-#: lib/gettext-pro.php:59 lib/pro/admin/meta-edit.php:512
-#: lib/std/admin/meta-edit.php:521
+#: lib/gettext-pro.php:60 lib/pro/admin/meta-edit.php:517
+#: lib/std/admin/meta-edit.php:526
 msgctxt "option label"
 msgid "Employment Type"
 msgstr "Type d'emploi"
 
-#: lib/gettext-pro.php:60 lib/pro/admin/meta-edit.php:519
-#: lib/std/admin/meta-edit.php:529
+#: lib/gettext-pro.php:61 lib/pro/admin/meta-edit.php:524
+#: lib/std/admin/meta-edit.php:534
 msgctxt "option label"
 msgid "Job Posting Expires"
 msgstr "L'offre d'emploi expire"
 
-#: lib/gettext-pro.php:61 lib/pro/admin/meta-edit.php:531
-#: lib/std/admin/meta-edit.php:541
+#: lib/gettext-pro.php:62 lib/pro/admin/meta-edit.php:536
+#: lib/std/admin/meta-edit.php:546
 msgctxt "metabox title"
 msgid "Movie Information"
 msgstr "Informations de film"
 
-#: lib/gettext-pro.php:62 lib/pro/admin/meta-edit.php:536
-#: lib/std/admin/meta-edit.php:547
+#: lib/gettext-pro.php:63 lib/pro/admin/meta-edit.php:541
+#: lib/std/admin/meta-edit.php:552
 msgctxt "option label"
 msgid "Cast Names"
 msgstr "Noms de casting"
 
-#: lib/gettext-pro.php:63 lib/pro/admin/meta-edit.php:544
-#: lib/std/admin/meta-edit.php:555
+#: lib/gettext-pro.php:64 lib/pro/admin/meta-edit.php:549
+#: lib/std/admin/meta-edit.php:560
 msgctxt "option label"
 msgid "Director Names"
 msgstr "Noms de réalisateur"
 
-#: lib/gettext-pro.php:64 lib/pro/admin/meta-edit.php:552
-#: lib/std/admin/meta-edit.php:563
+#: lib/gettext-pro.php:65 lib/pro/admin/meta-edit.php:557
+#: lib/std/admin/meta-edit.php:568
 msgctxt "option label"
 msgid "Production Company"
 msgstr "Société de production"
 
-#: lib/gettext-pro.php:65 lib/pro/admin/meta-edit.php:560
-#: lib/std/admin/meta-edit.php:572
+#: lib/gettext-pro.php:66 lib/pro/admin/meta-edit.php:565
+#: lib/std/admin/meta-edit.php:577
 msgctxt "option label"
 msgid "Movie Runtime"
 msgstr "Durée du film"
 
-#: lib/gettext-pro.php:66 lib/pro/admin/meta-edit.php:574
-#: lib/std/admin/meta-edit.php:586
+#: lib/gettext-pro.php:67 lib/pro/admin/meta-edit.php:579
+#: lib/std/admin/meta-edit.php:591
 msgctxt "metabox title"
 msgid "Organization Information"
 msgstr "Informations d'organisation"
 
-#: lib/gettext-pro.php:67 lib/pro/admin/meta-edit.php:579
-#: lib/std/admin/meta-edit.php:592
+#: lib/gettext-pro.php:68 lib/pro/admin/meta-edit.php:584
+#: lib/std/admin/meta-edit.php:597
 msgctxt "option label"
 msgid "Organization"
 msgstr "Organisation"
 
-#: lib/gettext-pro.php:68 lib/pro/admin/meta-edit.php:592
-#: lib/std/admin/meta-edit.php:605
+#: lib/gettext-pro.php:69 lib/pro/admin/meta-edit.php:597
+#: lib/std/admin/meta-edit.php:610
 msgctxt "metabox title"
 msgid "Person Information"
 msgstr "Informations de personne"
 
-#: lib/gettext-pro.php:69 lib/pro/admin/meta-edit.php:597
-#: lib/std/admin/meta-edit.php:611
+#: lib/gettext-pro.php:70 lib/pro/admin/meta-edit.php:602
+#: lib/std/admin/meta-edit.php:616
 msgctxt "option label"
 msgid "Person"
 msgstr "Personne"
 
-#: lib/gettext-pro.php:70 lib/pro/admin/meta-edit.php:612
-#: lib/std/admin/meta-edit.php:626
+#: lib/gettext-pro.php:71 lib/pro/admin/meta-edit.php:617
+#: lib/std/admin/meta-edit.php:631
 msgctxt "metabox title"
 msgid "Product Information (Additional)"
 msgstr "Informations de produit (supplémentaire)"
 
-#: lib/gettext-pro.php:71 lib/pro/admin/meta-edit.php:617
-#: lib/std/admin/meta-edit.php:637
+#: lib/gettext-pro.php:72 lib/pro/admin/meta-edit.php:622
+#: lib/std/admin/meta-edit.php:642
 msgctxt "option label"
 msgid "Product Length"
 msgstr "Longueur du produit"
 
-#: lib/gettext-pro.php:72 lib/pro/admin/meta-edit.php:625
-#: lib/std/admin/meta-edit.php:646
+#: lib/gettext-pro.php:73 lib/pro/admin/meta-edit.php:630
+#: lib/std/admin/meta-edit.php:651
 msgctxt "option label"
 msgid "Product Width"
 msgstr "Largeur du produit"
 
-#: lib/gettext-pro.php:73 lib/pro/admin/meta-edit.php:633
-#: lib/std/admin/meta-edit.php:655
+#: lib/gettext-pro.php:74 lib/pro/admin/meta-edit.php:638
+#: lib/std/admin/meta-edit.php:660
 msgctxt "option label"
 msgid "Product Height"
 msgstr "Hauteur du produit"
 
-#: lib/gettext-pro.php:74 lib/pro/admin/meta-edit.php:641
-#: lib/std/admin/meta-edit.php:664
+#: lib/gettext-pro.php:75 lib/pro/admin/meta-edit.php:646
+#: lib/std/admin/meta-edit.php:669
 msgctxt "option label"
 msgid "Product Depth"
 msgstr "Profondeur du produit"
 
-#: lib/gettext-pro.php:75 lib/pro/admin/meta-edit.php:649
-#: lib/std/admin/meta-edit.php:673
+#: lib/gettext-pro.php:76 lib/pro/admin/meta-edit.php:654
+#: lib/std/admin/meta-edit.php:678
 msgctxt "option label"
 msgid "Product Volume"
 msgstr "Volume du produit"
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/gettext-pro.php:77 lib/pro/admin/meta-edit.php:657
-#: lib/std/admin/meta-edit.php:682
+#: lib/gettext-pro.php:78 lib/pro/admin/meta-edit.php:662
+#: lib/std/admin/meta-edit.php:687
 msgctxt "option label"
 msgid "Product GTIN-14"
 msgstr "GTIN-14 du produit"
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/gettext-pro.php:79 lib/pro/admin/meta-edit.php:664
-#: lib/std/admin/meta-edit.php:690
+#: lib/gettext-pro.php:80 lib/pro/admin/meta-edit.php:669
+#: lib/std/admin/meta-edit.php:695
 msgctxt "option label"
 msgid "Product GTIN-13/EAN"
 msgstr "GTIN-13/EAN du produit"
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/gettext-pro.php:81 lib/pro/admin/meta-edit.php:671
-#: lib/std/admin/meta-edit.php:698
+#: lib/gettext-pro.php:82 lib/pro/admin/meta-edit.php:676
+#: lib/std/admin/meta-edit.php:703
 msgctxt "option label"
 msgid "Product GTIN-12/UPC"
 msgstr "GTIN-12/UPC du produit"
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/gettext-pro.php:83 lib/pro/admin/meta-edit.php:678
-#: lib/std/admin/meta-edit.php:706
+#: lib/gettext-pro.php:84 lib/pro/admin/meta-edit.php:683
+#: lib/std/admin/meta-edit.php:711
 msgctxt "option label"
 msgid "Product GTIN-8"
 msgstr "GTIN-8 du produit"
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/gettext-pro.php:85 lib/pro/admin/meta-edit.php:685
-#: lib/std/admin/meta-edit.php:714
+#: lib/gettext-pro.php:86 lib/pro/admin/meta-edit.php:690
+#: lib/std/admin/meta-edit.php:719
 msgctxt "option label"
 msgid "Product GTIN"
 msgstr "GTIN du produit"
 
-#: lib/gettext-pro.php:86 lib/pro/admin/meta-edit.php:697
-#: lib/std/admin/meta-edit.php:726
+#: lib/gettext-pro.php:87 lib/pro/admin/meta-edit.php:702
+#: lib/std/admin/meta-edit.php:731
 msgctxt "metabox title"
 msgid "QA Page Information"
 msgstr "Informations de page QA"
 
-#: lib/gettext-pro.php:87 lib/pro/admin/meta-edit.php:702
-#: lib/std/admin/meta-edit.php:732
+#: lib/gettext-pro.php:88 lib/pro/admin/meta-edit.php:707
+#: lib/std/admin/meta-edit.php:737
 msgctxt "option label"
 msgid "QA Heading"
 msgstr "En-tête QA"
 
-#: lib/gettext-pro.php:88 lib/pro/admin/meta-edit.php:714
-#: lib/std/admin/meta-edit.php:744
+#: lib/gettext-pro.php:89 lib/pro/admin/meta-edit.php:719
+#: lib/std/admin/meta-edit.php:749
 msgctxt "metabox title"
 msgid "Recipe Information"
 msgstr "Informations de recette"
 
-#: lib/gettext-pro.php:89 lib/pro/admin/meta-edit.php:719
-#: lib/std/admin/meta-edit.php:750
+#: lib/gettext-pro.php:90 lib/pro/admin/meta-edit.php:724
+#: lib/std/admin/meta-edit.php:755
 msgctxt "option label"
 msgid "Recipe Cuisine"
 msgstr "Cuisine de la recette"
 
-#: lib/gettext-pro.php:90 lib/pro/admin/meta-edit.php:726
-#: lib/std/admin/meta-edit.php:758
+#: lib/gettext-pro.php:91 lib/pro/admin/meta-edit.php:731
+#: lib/std/admin/meta-edit.php:763
 msgctxt "option label"
 msgid "Recipe Course"
 msgstr "Cours de la recette"
 
-#: lib/gettext-pro.php:91 lib/pro/admin/meta-edit.php:733
-#: lib/std/admin/meta-edit.php:766
+#: lib/gettext-pro.php:92 lib/pro/admin/meta-edit.php:738
+#: lib/std/admin/meta-edit.php:771
 msgctxt "option label"
 msgid "Recipe Makes"
 msgstr "La recette crée"
 
-#: lib/gettext-pro.php:92 lib/pro/admin/meta-edit.php:740
-#: lib/std/admin/meta-edit.php:774
+#: lib/gettext-pro.php:93 lib/pro/admin/meta-edit.php:745
+#: lib/std/admin/meta-edit.php:779
 msgctxt "option label"
 msgid "Cooking Method"
 msgstr "Méthode de cuisson"
 
-#: lib/gettext-pro.php:94 lib/pro/admin/meta-edit.php:757
-#: lib/std/admin/meta-edit.php:793
+#: lib/gettext-pro.php:95 lib/pro/admin/meta-edit.php:762
+#: lib/std/admin/meta-edit.php:798
 msgctxt "option label"
 msgid "Cooking Time"
 msgstr "Temps de cuisson"
 
-#: lib/gettext-pro.php:96 lib/pro/admin/meta-edit.php:777
-#: lib/std/admin/meta-edit.php:815
+#: lib/gettext-pro.php:97 lib/pro/admin/meta-edit.php:782
+#: lib/std/admin/meta-edit.php:820
 msgctxt "option label"
 msgid "Recipe Ingredients"
 msgstr "Ingrédients de recette"
 
-#: lib/gettext-pro.php:97 lib/pro/admin/meta-edit.php:785
-#: lib/std/admin/meta-edit.php:823
+#: lib/gettext-pro.php:98 lib/pro/admin/meta-edit.php:790
+#: lib/std/admin/meta-edit.php:828
 msgctxt "option label"
 msgid "Recipe Instructions"
 msgstr "Instructions de recette"
 
-#: lib/gettext-pro.php:98 lib/pro/admin/meta-edit.php:798
-#: lib/std/admin/meta-edit.php:835
+#: lib/gettext-pro.php:99 lib/pro/admin/meta-edit.php:803
+#: lib/std/admin/meta-edit.php:840
 msgctxt "metabox title"
 msgid "Nutrition Information per Serving"
 msgstr "Informations nutritionnelle par portion"
 
-#: lib/gettext-pro.php:99 lib/pro/admin/meta-edit.php:803
-#: lib/std/admin/meta-edit.php:841
+#: lib/gettext-pro.php:100 lib/pro/admin/meta-edit.php:808
+#: lib/std/admin/meta-edit.php:846
 msgctxt "option label"
 msgid "Serving Size"
 msgstr "Taille de portion"
 
-#: lib/gettext-pro.php:100 lib/pro/admin/meta-edit.php:810
-#: lib/std/admin/meta-edit.php:849
+#: lib/gettext-pro.php:101 lib/pro/admin/meta-edit.php:815
+#: lib/std/admin/meta-edit.php:854
 msgctxt "option label"
 msgid "Calories"
 msgstr "Calories"
 
-#: lib/gettext-pro.php:101 lib/pro/admin/meta-edit.php:813
-#: lib/std/admin/meta-edit.php:852
+#: lib/gettext-pro.php:102 lib/pro/admin/meta-edit.php:818
+#: lib/std/admin/meta-edit.php:857
 msgctxt "option comment"
 msgid "calories"
 msgstr "calories"
 
-#: lib/gettext-pro.php:102 lib/pro/admin/meta-edit.php:818
-#: lib/std/admin/meta-edit.php:858
+#: lib/gettext-pro.php:103 lib/pro/admin/meta-edit.php:823
+#: lib/std/admin/meta-edit.php:863
 msgctxt "option label"
 msgid "Protein"
 msgstr "Protéine"
 
-#: lib/gettext-pro.php:103 lib/pro/admin/meta-edit.php:821
-#: lib/std/admin/meta-edit.php:861
+#: lib/gettext-pro.php:104 lib/pro/admin/meta-edit.php:826
+#: lib/std/admin/meta-edit.php:866
 msgctxt "option comment"
 msgid "grams of protein"
 msgstr "grammes de protéines"
 
-#: lib/gettext-pro.php:104 lib/pro/admin/meta-edit.php:826
-#: lib/std/admin/meta-edit.php:867
+#: lib/gettext-pro.php:105 lib/pro/admin/meta-edit.php:831
+#: lib/std/admin/meta-edit.php:872
 msgctxt "option label"
 msgid "Fiber"
 msgstr "Fibre"
 
-#: lib/gettext-pro.php:105 lib/pro/admin/meta-edit.php:829
-#: lib/std/admin/meta-edit.php:870
+#: lib/gettext-pro.php:106 lib/pro/admin/meta-edit.php:834
+#: lib/std/admin/meta-edit.php:875
 msgctxt "option comment"
 msgid "grams of fiber"
 msgstr "grammes de fibres"
 
-#: lib/gettext-pro.php:106 lib/pro/admin/meta-edit.php:834
-#: lib/std/admin/meta-edit.php:876
+#: lib/gettext-pro.php:107 lib/pro/admin/meta-edit.php:839
+#: lib/std/admin/meta-edit.php:881
 msgctxt "option label"
 msgid "Carbohydrates"
 msgstr "Glucides"
 
-#: lib/gettext-pro.php:107 lib/pro/admin/meta-edit.php:837
-#: lib/std/admin/meta-edit.php:879
+#: lib/gettext-pro.php:108 lib/pro/admin/meta-edit.php:842
+#: lib/std/admin/meta-edit.php:884
 msgctxt "option comment"
 msgid "grams of carbohydrates"
 msgstr "grammes de glucides"
 
-#: lib/gettext-pro.php:108 lib/pro/admin/meta-edit.php:842
-#: lib/std/admin/meta-edit.php:885
+#: lib/gettext-pro.php:109 lib/pro/admin/meta-edit.php:847
+#: lib/std/admin/meta-edit.php:890
 msgctxt "option label"
 msgid "Sugar"
 msgstr "Sucre"
 
-#: lib/gettext-pro.php:109 lib/pro/admin/meta-edit.php:845
-#: lib/std/admin/meta-edit.php:888
+#: lib/gettext-pro.php:110 lib/pro/admin/meta-edit.php:850
+#: lib/std/admin/meta-edit.php:893
 msgctxt "option comment"
 msgid "grams of sugar"
 msgstr "grammes de sucre"
 
-#: lib/gettext-pro.php:110 lib/pro/admin/meta-edit.php:850
-#: lib/std/admin/meta-edit.php:894
+#: lib/gettext-pro.php:111 lib/pro/admin/meta-edit.php:855
+#: lib/std/admin/meta-edit.php:899
 msgctxt "option label"
 msgid "Sodium"
 msgstr "Sodium"
 
-#: lib/gettext-pro.php:111 lib/pro/admin/meta-edit.php:853
-#: lib/std/admin/meta-edit.php:897
+#: lib/gettext-pro.php:112 lib/pro/admin/meta-edit.php:858
+#: lib/std/admin/meta-edit.php:902
 msgctxt "option comment"
 msgid "milligrams of sodium"
 msgstr "milligrammes de sodium"
 
-#: lib/gettext-pro.php:112 lib/pro/admin/meta-edit.php:858
-#: lib/std/admin/meta-edit.php:903
+#: lib/gettext-pro.php:113 lib/pro/admin/meta-edit.php:863
+#: lib/std/admin/meta-edit.php:908
 msgctxt "option label"
 msgid "Fat"
 msgstr "Gras"
 
-#: lib/gettext-pro.php:113 lib/pro/admin/meta-edit.php:861
-#: lib/std/admin/meta-edit.php:906
+#: lib/gettext-pro.php:114 lib/pro/admin/meta-edit.php:866
+#: lib/std/admin/meta-edit.php:911
 msgctxt "option comment"
 msgid "grams of fat"
 msgstr "grammes de matières grasses"
 
-#: lib/gettext-pro.php:114 lib/pro/admin/meta-edit.php:866
-#: lib/std/admin/meta-edit.php:912
+#: lib/gettext-pro.php:115 lib/pro/admin/meta-edit.php:871
+#: lib/std/admin/meta-edit.php:917
 msgctxt "option label"
 msgid "Saturated Fat"
 msgstr "Gras saturée"
 
-#: lib/gettext-pro.php:115 lib/pro/admin/meta-edit.php:869
-#: lib/std/admin/meta-edit.php:915
+#: lib/gettext-pro.php:116 lib/pro/admin/meta-edit.php:874
+#: lib/std/admin/meta-edit.php:920
 msgctxt "option comment"
 msgid "grams of saturated fat"
 msgstr "grammes de gras saturés"
 
-#: lib/gettext-pro.php:116 lib/pro/admin/meta-edit.php:874
-#: lib/std/admin/meta-edit.php:921
+#: lib/gettext-pro.php:117 lib/pro/admin/meta-edit.php:879
+#: lib/std/admin/meta-edit.php:926
 msgctxt "option label"
 msgid "Unsaturated Fat"
 msgstr "Grais insaturées"
 
-#: lib/gettext-pro.php:117 lib/pro/admin/meta-edit.php:877
-#: lib/std/admin/meta-edit.php:924
+#: lib/gettext-pro.php:118 lib/pro/admin/meta-edit.php:882
+#: lib/std/admin/meta-edit.php:929
 msgctxt "option comment"
 msgid "grams of unsaturated fat"
 msgstr "grammes de gras insaturés"
 
-#: lib/gettext-pro.php:118 lib/pro/admin/meta-edit.php:882
-#: lib/std/admin/meta-edit.php:930
+#: lib/gettext-pro.php:119 lib/pro/admin/meta-edit.php:887
+#: lib/std/admin/meta-edit.php:935
 msgctxt "option label"
 msgid "Trans Fat"
 msgstr "Gras trans"
 
-#: lib/gettext-pro.php:119 lib/pro/admin/meta-edit.php:885
-#: lib/std/admin/meta-edit.php:933
+#: lib/gettext-pro.php:120 lib/pro/admin/meta-edit.php:890
+#: lib/std/admin/meta-edit.php:938
 msgctxt "option comment"
 msgid "grams of trans fat"
 msgstr "grammes de gras trans"
 
-#: lib/gettext-pro.php:120 lib/pro/admin/meta-edit.php:890
-#: lib/std/admin/meta-edit.php:939
+#: lib/gettext-pro.php:121 lib/pro/admin/meta-edit.php:895
+#: lib/std/admin/meta-edit.php:944
 msgctxt "option label"
 msgid "Cholesterol"
 msgstr "Cholestérol"
 
-#: lib/gettext-pro.php:121 lib/pro/admin/meta-edit.php:893
-#: lib/std/admin/meta-edit.php:942
+#: lib/gettext-pro.php:122 lib/pro/admin/meta-edit.php:898
+#: lib/std/admin/meta-edit.php:947
 msgctxt "option comment"
 msgid "milligrams of cholesterol"
 msgstr "milligrammes de cholestérol"
 
-#: lib/gettext-pro.php:122 lib/pro/admin/meta-edit.php:903
-#: lib/std/admin/meta-edit.php:952
+#: lib/gettext-pro.php:123 lib/pro/admin/meta-edit.php:908
+#: lib/std/admin/meta-edit.php:957
 msgctxt "metabox title"
 msgid "Review Information"
 msgstr "Informations d'évaluation"
 
-#: lib/gettext-pro.php:123 lib/pro/admin/meta-edit.php:908
-#: lib/std/admin/meta-edit.php:958
+#: lib/gettext-pro.php:124 lib/pro/admin/meta-edit.php:913
+#: lib/std/admin/meta-edit.php:963
 msgctxt "option label"
 msgid "Review Rating"
 msgstr "Note de l'évaluation"
 
-#: lib/gettext-pro.php:124 lib/pro/admin/meta-edit.php:911
-#: lib/std/admin/meta-edit.php:961
+#: lib/gettext-pro.php:125 lib/pro/admin/meta-edit.php:916
+#: lib/std/admin/meta-edit.php:966
 msgctxt "option comment"
 msgid "from"
 msgstr "de"
 
-#: lib/gettext-pro.php:125 lib/pro/admin/meta-edit.php:913
-#: lib/std/admin/meta-edit.php:963
+#: lib/gettext-pro.php:126 lib/pro/admin/meta-edit.php:918
+#: lib/std/admin/meta-edit.php:968
 msgctxt "option comment"
 msgid "to"
 msgstr "à"
 
-#: lib/gettext-pro.php:126 lib/pro/admin/meta-edit.php:919
-#: lib/std/admin/meta-edit.php:970
+#: lib/gettext-pro.php:127 lib/pro/admin/meta-edit.php:924
+#: lib/std/admin/meta-edit.php:975
 msgctxt "option label"
 msgid "Review Rating Name"
 msgstr "Un nom pour la note"
 
-#: lib/gettext-pro.php:127 lib/pro/admin/meta-edit.php:926
-#: lib/std/admin/meta-edit.php:978
+#: lib/gettext-pro.php:128 lib/pro/admin/meta-edit.php:931
+#: lib/std/admin/meta-edit.php:983
 msgctxt "option label"
 msgid "Review Subject URL"
 msgstr "URL du sujet de l'évaluation"
 
-#: lib/gettext-pro.php:128 lib/pro/admin/meta-edit.php:933
-#: lib/std/admin/meta-edit.php:986
+#: lib/gettext-pro.php:129 lib/pro/admin/meta-edit.php:938
+#: lib/std/admin/meta-edit.php:991
 msgctxt "option label"
 msgid "Review Subject Name"
 msgstr "Nom du sujet de l'évaluation"
 
-#: lib/gettext-pro.php:129 lib/pro/admin/meta-edit.php:945
-#: lib/std/admin/meta-edit.php:998
+#: lib/gettext-pro.php:130 lib/pro/admin/meta-edit.php:950
+#: lib/std/admin/meta-edit.php:1003
 msgctxt "metabox title"
 msgid "Claim Review Information"
 msgstr "Informations d'évaluation de déclaration"
 
-#: lib/gettext-pro.php:130 lib/pro/admin/meta-edit.php:950
-#: lib/std/admin/meta-edit.php:1004
+#: lib/gettext-pro.php:131 lib/pro/admin/meta-edit.php:955
+#: lib/std/admin/meta-edit.php:1009
 msgctxt "option label"
 msgid "Claim Short Summary"
 msgstr "Bref résumé de la déclaration"
 
-#: lib/gettext-pro.php:131 lib/pro/admin/meta-edit.php:957
-#: lib/std/admin/meta-edit.php:1012
+#: lib/gettext-pro.php:132 lib/pro/admin/meta-edit.php:962
+#: lib/std/admin/meta-edit.php:1017
 msgctxt "option label"
 msgid "Claim Made on Date"
 msgstr "Déclaration faite à la date"
 
-#: lib/gettext-pro.php:132 lib/pro/admin/meta-edit.php:964
-#: lib/std/admin/meta-edit.php:1020
+#: lib/gettext-pro.php:133 lib/pro/admin/meta-edit.php:969
+#: lib/std/admin/meta-edit.php:1025
 msgctxt "option label"
 msgid "Claim Author Type"
 msgstr "Type d'auteur de la déclaration"
 
-#: lib/gettext-pro.php:133 lib/pro/admin/meta-edit.php:971
-#: lib/std/admin/meta-edit.php:1028
+#: lib/gettext-pro.php:134 lib/pro/admin/meta-edit.php:976
+#: lib/std/admin/meta-edit.php:1033
 msgctxt "option label"
 msgid "Claim Author Name"
 msgstr "Nom d'auteur de la déclaration"
 
-#: lib/gettext-pro.php:134 lib/pro/admin/meta-edit.php:978
-#: lib/std/admin/meta-edit.php:1036
+#: lib/gettext-pro.php:135 lib/pro/admin/meta-edit.php:983
+#: lib/std/admin/meta-edit.php:1041
 msgctxt "option label"
 msgid "Claim Author URL"
 msgstr "URL d'auteur de la déclaration"
 
-#: lib/gettext-pro.php:135 lib/pro/admin/meta-edit.php:985
-#: lib/std/admin/meta-edit.php:1044
+#: lib/gettext-pro.php:136 lib/pro/admin/meta-edit.php:990
+#: lib/std/admin/meta-edit.php:1049
 msgctxt "option label"
 msgid "First Appearance URL"
 msgstr "URL de la première apparence"
 
-#: lib/gettext-pro.php:136 lib/pro/admin/meta-edit.php:997
-#: lib/std/admin/meta-edit.php:1056
+#: lib/gettext-pro.php:137 lib/pro/admin/meta-edit.php:1002
+#: lib/std/admin/meta-edit.php:1061
 msgctxt "metabox title"
 msgid "Software Application Information"
 msgstr "Informations sur l'application logicielle"
 
-#: lib/gettext-pro.php:137 lib/pro/admin/meta-edit.php:1002
-#: lib/std/admin/meta-edit.php:1062
+#: lib/gettext-pro.php:138 lib/pro/admin/meta-edit.php:1007
+#: lib/std/admin/meta-edit.php:1067
 msgctxt "option label"
 msgid "Operating System"
 msgstr "Système d'exploitation"
