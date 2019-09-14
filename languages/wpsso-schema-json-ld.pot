@@ -435,75 +435,85 @@ msgstr ""
 msgid "Operating system supported (example: %s, etc.)."
 msgstr ""
 
-#: lib/filters.php:1595
+#: lib/filters.php:1599
+msgid ""
+"The AMP %1$s image dimensions for Schema Article JSON-LD markup (the default "
+"dimensions are %2$s)."
+msgstr ""
+
+#: lib/filters.php:1602
+msgid "The minimum image width required by Google is %dpx."
+msgstr ""
+
+#: lib/filters.php:1609
 msgid ""
 "The maximum length used for the Schema CreativeWork text property value (the "
 "default is %d characters)."
 msgstr ""
 
-#: lib/filters.php:1601
+#: lib/filters.php:1615
 msgid ""
 "Add a text property to the Schema CreativeWork type with the complete "
 "textual content of the post / page."
 msgstr ""
 
-#: lib/filters.php:1607
+#: lib/filters.php:1621
 msgid ""
 "When a rating value for the webpage content is not available, a 5 star "
 "rating from the site organization can be added to the main Schema type "
 "markup."
 msgstr ""
 
-#: lib/filters.php:1609
+#: lib/filters.php:1623
 msgid ""
 "Rating and review features for the webpage are available from several "
 "supported plugins, including %s."
 msgstr ""
 
-#: lib/filters.php:1615
+#: lib/filters.php:1629
 msgid ""
 "Select a default family friendly value for the Schema CreativeWork type and/"
 "or its sub-types (Article, BlogPosting, WebPage, etc)."
 msgstr ""
 
-#: lib/filters.php:1621
+#: lib/filters.php:1635
 msgid ""
 "Select a default publisher for the Schema CreativeWork type and/or its sub-"
 "types (Article, BlogPosting, WebPage, etc)."
 msgstr ""
 
-#: lib/filters.php:1627
+#: lib/filters.php:1641
 msgid ""
 "Select a default service provider, service operator, or service performer "
 "(example: \"Netflix\")."
 msgstr ""
 
-#: lib/filters.php:1633
+#: lib/filters.php:1647
 msgid "Select a default organizer (organization) for the Schema Event type."
 msgstr ""
 
-#: lib/filters.php:1639
+#: lib/filters.php:1653
 msgid "Select a default organizer (person) for the Schema Event type."
 msgstr ""
 
-#: lib/filters.php:1645
+#: lib/filters.php:1659
 msgid "Select a default performer (organization) for the Schema Event type."
 msgstr ""
 
-#: lib/filters.php:1651
+#: lib/filters.php:1665
 msgid "Select a default performer (person) for the Schema Event type."
 msgstr ""
 
-#: lib/filters.php:1657
+#: lib/filters.php:1671
 msgid "Select a default venue (place / location) for the Schema Event type."
 msgstr ""
 
-#: lib/filters.php:1663
+#: lib/filters.php:1677
 msgid ""
 "Select a default organization for the Schema JobPosting hiring organization."
 msgstr ""
 
-#: lib/filters.php:1669
+#: lib/filters.php:1683
 msgid ""
 "Select a default place / location for the Schema JobPosting job location."
 msgstr ""

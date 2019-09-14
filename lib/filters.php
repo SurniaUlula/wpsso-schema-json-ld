@@ -1080,17 +1080,17 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 		public function filter_image_dimensions_general_rows( $table_rows, $form ) {
 
-			$table_rows[ 'schema_article_amp1x1_img_size' ] = '' .
+			$table_rows[ 'schema_article_0_amp1x1_img_size' ] = '' .	// Use a key name that sorts first.
 			$form->get_th_html( _x( 'Schema Article AMP 1x1 (Google)',
 				'option label', 'wpsso-schema-json-ld' ), null, 'schema_article_amp1x1_img_size' ) . 
 			'<td>' . $form->get_input_image_dimensions( 'schema_article_amp1x1_img' ) . '</td>';
 
-			$table_rows[ 'schema_article_amp4x3_img_size' ] = '' .
+			$table_rows[ 'schema_article_1_amp4x3_img_size' ] = '' .	// Use a key name that sorts second.
 			$form->get_th_html( _x( 'Schema Article AMP 4x3 (Google)',
 				'option label', 'wpsso-schema-json-ld' ), null, 'schema_article_amp4x3_img_size' ) . 
 			'<td>' . $form->get_input_image_dimensions( 'schema_article_amp4x3_img' ) . '</td>';
 
-			$table_rows[ 'schema_article_amp16x9_img_size' ] = '' .
+			$table_rows[ 'schema_article_2_amp16x9_img_size' ] = '' .	// Use a key name that sorts third.
 			$form->get_th_html( _x( 'Schema Article AMP 16x9 (Google)',
 				'option label', 'wpsso-schema-json-ld' ), null, 'schema_article_amp16x9_img_size' ) . 
 			'<td>' . $form->get_input_image_dimensions( 'schema_article_amp16x9_img' ) . '</td>';
@@ -1590,13 +1590,27 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 			switch ( $msg_key ) {
 
-				case 'tooltip-schema_text_max_len':	// Maximum Text Property Length.
+				case 'tooltip-schema_article_amp1x1_img_size':	// Schema Article AMP 1x1 Img Size.
+				case 'tooltip-schema_article_amp4x3_img_size':	// Schema Article AMP 4x3 Img Size.
+				case 'tooltip-schema_article_amp16x9_img_size':	// Schema Article AMP 16x9 Img Size.
+
+					$ratio = preg_replace( '/^.*_amp([0-9x]+)_.*$/', '$1', $msg_key );
+
+					$text = sprintf( __( 'The AMP %1$s image dimensions for Schema Article JSON-LD markup (the default dimensions are %2$s).',
+						'wpsso-schema-json-ld' ), $ratio, $this->p->msgs->get_def_img_dims( 'schema_article_amp' . $ratio ) ) . ' ';
+
+					$text .= sprintf( __( 'The minimum image width required by Google is %dpx.', 'wpsso-schema-json-ld' ),
+						$this->p->cf[ 'head' ][ 'limit_min' ][ 'schema_article_amp' . $ratio . '_img_width' ] ). ' ';
+
+					break;
+
+				case 'tooltip-schema_text_max_len':		// Maximum Text Property Length.
 
 					$text = sprintf( __( 'The maximum length used for the Schema CreativeWork text property value (the default is %d characters).', 'wpsso-schema-json-ld' ), $this->p->opt->get_defaults( 'schema_text_max_len' ) );
 
 				 	break;
 
-				case 'tooltip-schema_add_text_prop':	// Add CreativeWork Text Property.
+				case 'tooltip-schema_add_text_prop':		// Add CreativeWork Text Property.
 
 					$text = __( 'Add a text property to the Schema CreativeWork type with the complete textual content of the post / page.', 'wpsso-schema-json-ld' );
 
@@ -1616,13 +1630,13 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 				 	break;
 
-				case 'tooltip-schema_def_pub_org_id':	// Default Publisher.
+				case 'tooltip-schema_def_pub_org_id':		// Default Publisher.
 
 					$text = __( 'Select a default publisher for the Schema CreativeWork type and/or its sub-types (Article, BlogPosting, WebPage, etc).', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-schema_def_prov_org_id':	// Default Service Provider.
+				case 'tooltip-schema_def_prov_org_id':		// Default Service Provider.
 
 					$text = __( 'Select a default service provider, service operator, or service performer (example: "Netflix").', 'wpsso-schema-json-ld' );
 
