@@ -47,11 +47,12 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			if ( is_admin() ) {
 
 				$this->p->util->add_plugin_filters( $this, array(
-					'option_type'               => 2,
-					'save_post_options'         => 4,
-					'post_cache_transient_keys' => 4,
-					'messages_tooltip_meta'     => 2,
-					'messages_tooltip_schema'   => 2,
+					'option_type'                   => 2,
+					'save_post_options'             => 4,
+					'post_cache_transient_keys'     => 4,
+					'image_dimensions_general_rows' => 2,
+					'messages_tooltip_meta'         => 2,
+					'messages_tooltip_schema'       => 2,
 				) );
 
 				$this->p->util->add_plugin_filters( $this, array(
@@ -1077,6 +1078,26 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			return $transient_keys;
 		}
 
+		public function filter_image_dimensions_general_rows( $table_rows, $form ) {
+
+			$table_rows[ 'schema_article_amp1x1_img_size' ] = '' .
+			$form->get_th_html( _x( 'Schema Article AMP 1x1 (Google)',
+				'option label', 'wpsso-schema-json-ld' ), null, 'schema_article_amp1x1_img_size' ) . 
+			'<td>' . $form->get_input_image_dimensions( 'schema_article_amp1x1_img' ) . '</td>';
+
+			$table_rows[ 'schema_article_amp4x3_img_size' ] = '' .
+			$form->get_th_html( _x( 'Schema Article AMP 4x3 (Google)',
+				'option label', 'wpsso-schema-json-ld' ), null, 'schema_article_amp4x3_img_size' ) . 
+			'<td>' . $form->get_input_image_dimensions( 'schema_article_amp4x3_img' ) . '</td>';
+
+			$table_rows[ 'schema_article_amp16x9_img_size' ] = '' .
+			$form->get_th_html( _x( 'Schema Article AMP 16x9 (Google)',
+				'option label', 'wpsso-schema-json-ld' ), null, 'schema_article_amp16x9_img_size' ) . 
+			'<td>' . $form->get_input_image_dimensions( 'schema_article_amp16x9_img' ) . '</td>';
+
+			return $table_rows;
+		}
+
 		public function filter_messages_tooltip_meta( $text, $msg_key ) {
 
 			if ( strpos( $msg_key, 'tooltip-meta-schema_' ) !== 0 ) {
@@ -1349,7 +1370,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 				case 'tooltip-meta-schema_person_id':
 
-					$role_label_transl = _x( 'Person', 'user role', 'wpsso' );	// Use the wpsso translation domain.
+					$role_label_transl = _x( 'Person', 'user role', 'wpsso-schema-json-ld' );
 
 					$text = sprintf( __( 'Select a person from the list of eligible WordPress users. To be included in this list, a user must be member of the WordPress "%s" role.', 'wpsso-schema-json-ld' ), $role_label_transl );
 
