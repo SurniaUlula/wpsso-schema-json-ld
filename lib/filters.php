@@ -28,7 +28,6 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			$this->p->util->add_plugin_filters( $this, array(
 				'add_schema_head_attributes'              => '__return_false',
 				'add_schema_meta_array'                   => '__return_false',
-				'add_schema_noscript_array'               => '__return_false',
 				'og_add_mt_offers'                        => '__return_true',
 				'og_add_mt_rating'                        => '__return_true',
 				'og_add_mt_reviews'                       => '__return_true',
