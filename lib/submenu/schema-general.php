@@ -110,58 +110,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 						'option label', 'wpsso-schema-json-ld' ), '', 'site_desc', $atts_locale ) . 
 					'<td>' . $this->form->get_textarea( $site_desc_key, '', '', 0, $def_site_desc ) . '</td>';
 
-					$table_rows[ 'schema_logo_url' ] = '' . 
-					$this->form->get_th_html( '<a href="https://developers.google.com/structured-data/customize/logos">' .
-					_x( 'Organization Logo URL', 'option label', 'wpsso-schema-json-ld' ) . '</a>', '', 'schema_logo_url', $atts_locale ) . 
-					'<td>' . $this->form->get_input( SucomUtil::get_key_locale( 'schema_logo_url', $this->p->options ), 'wide' ) . '</td>';
-
-					$table_rows[ 'schema_banner_url' ] = '' . 
-					$this->form->get_th_html( _x( 'Organization Banner URL',
-						'option label', 'wpsso-schema-json-ld' ), '', 'schema_banner_url', $atts_locale ) . 
-					'<td>' . $this->form->get_input( SucomUtil::get_key_locale( 'schema_banner_url', $this->p->options ), 'wide' ) . '</td>';
-
-					$table_rows[ 'schema_img_max' ] = $this->form->get_tr_hide( 'basic', 'schema_img_max' ) . 
-					$this->form->get_th_html( _x( 'Maximum Images to Include',
-						'option label', 'wpsso-schema-json-ld' ), '', 'schema_img_max' ) . 
-					'<td>' . $this->form->get_select( 'schema_img_max', range( 0, $this->p->cf[ 'form' ][ 'max_media_items' ] ), 'short', '', true ) . 
-					( empty( $this->form->options[ 'og_vid_prev_img' ] ) ? '' : ' <em>' . _x( 'video preview images are enabled (and included first)',
-						'option comment', 'wpsso-schema-json-ld' ) . '</em>' ) . '</td>';
-
-					$table_rows[ 'schema_img' ] = '' . 
-					$this->form->get_th_html( _x( 'Schema Image Size',
-						'option label', 'wpsso-schema-json-ld' ), '', 'schema_img_size' ) . 
-					'<td>' . $this->form->get_input_image_dimensions( 'schema_img' ) . '</td>';
-
-					$table_rows[ 'schema_article_img' ] = '' . 
-					$this->form->get_th_html( _x( 'Schema Article Image Size',
-						'option label', 'wpsso-schema-json-ld' ), '', 'schema_article_img_size' ) . 
-					'<td>' . $this->form->get_input_image_dimensions( 'schema_article_img' ) . '</td>';
-
-					$table_rows[ 'schema_article_amp1x1_img_size' ] = '' .
-					$this->form->get_th_html( _x( 'Schema Article AMP 1x1 Img Size',
-						'option label', 'wpsso-schema-json-ld' ), null, 'schema_article_amp1x1_img_size' ) . 
-					'<td>' . $this->form->get_input_image_dimensions( 'schema_article_amp1x1_img' ) . '</td>';
-
-					$table_rows[ 'schema_article_amp4x3_img_size' ] = '' .
-					$this->form->get_th_html( _x( 'Schema Article AMP 4x3 Img Size',
-						'option label', 'wpsso-schema-json-ld' ), null, 'schema_article_amp4x3_img_size' ) . 
-					'<td>' . $this->form->get_input_image_dimensions( 'schema_article_amp4x3_img' ) . '</td>';
-
-					$table_rows[ 'schema_article_amp16x9_img_size' ] = '' .
-					$this->form->get_th_html( _x( 'Schema Article AMP 16x9 Img Size',
-						'option label', 'wpsso-schema-json-ld' ), null, 'schema_article_amp16x9_img_size' ) . 
-					'<td>' . $this->form->get_input_image_dimensions( 'schema_article_amp16x9_img' ) . '</td>';
-
-					$table_rows[ 'thumb_img_size' ] = '' .
-					$this->form->get_th_html( _x( 'Schema Thumbnail Image Size',
-						'option label', 'wpsso-schema-json-ld' ), null, 'thumb_img_size' ).
-					'<td>' . $this->form->get_input_image_dimensions( 'thumb_img' ) . '</td>';
-
-					$table_rows[ 'schema_desc_max_len' ] = $this->form->get_tr_hide( 'basic', 'schema_desc_max_len' ) . 
-					$this->form->get_th_html( _x( 'Maximum Description Length',
-						'option label', 'wpsso-schema-json-ld' ), '', 'schema_desc_max_len' ) . 
-					'<td>' . $this->form->get_input( 'schema_desc_max_len', 'short' ) . ' ' .
-					_x( 'characters or less', 'option comment', 'wpsso-schema-json-ld' ) . '</td>';
+					$this->add_schema_item_props_table_rows( $table_rows, $this->form );
 
 					$table_rows[ 'schema_text_max_len' ] = $this->form->get_tr_hide( 'basic', 'schema_text_max_len' ) . 
 					$this->form->get_th_html( _x( 'Maximum Text Property Length',

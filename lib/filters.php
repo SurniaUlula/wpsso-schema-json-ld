@@ -23,7 +23,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				$this->p->debug->mark();
 			}
 
-			add_filter( 'amp_post_template_metadata', array( $this, 'filter_amp_post_template_metadata' ), 10000, 2 );
+			add_filter( 'amp_post_template_metadata', '__return_empty_array', 10000, 2 );
 
 			$this->p->util->add_plugin_filters( $this, array(
 				'add_schema_head_attributes'              => '__return_false',
@@ -32,10 +32,10 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				'og_add_mt_offers'                        => '__return_true',
 				'og_add_mt_rating'                        => '__return_true',
 				'og_add_mt_reviews'                       => '__return_true',
+				'json_data_graph_element'                 => 5,
 				'json_data_https_schema_org_blog'         => 5,
 				'json_data_https_schema_org_creativework' => 5,
 				'json_data_https_schema_org_thing'        => 5,
-				'json_data_graph_element'                 => 5,
 			), $prio = -10000 );	// Make sure we run first.
 
 			$this->p->util->add_plugin_filters( $this, array(
@@ -50,24 +50,70 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 					'option_type'                   => 2,
 					'save_post_options'             => 4,
 					'post_cache_transient_keys'     => 4,
-					'image_dimensions_general_rows' => 2,
 					'messages_tooltip_meta'         => 2,
 					'messages_tooltip_schema'       => 2,
 				) );
 
 				$this->p->util->add_plugin_filters( $this, array(
-					'status_pro_features' => 4,
 					'status_std_features' => 4,
+					'status_pro_features' => 4,
 				), $prio = 10, $ext = 'wpssojson' );	// Hook to wpssojson filters.
 			}
 		}
 
 		/**
-		 * Remove AMP json data to prevent duplicate Schema JSON-LD markup.
+		 * If the completed json data for a post object is the main entity, then parse the content for any schema
+		 * shortcodes.
 		 */
-		public function filter_amp_post_template_metadata( $metadata, $post_obj ) {
+		public function filter_json_data_graph_element( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
 
-			return array();
+			if ( ! $is_main ) {
+				return $json_data;
+			}
+
+			if ( $mod[ 'is_post' ] ) {
+
+				$content = get_post_field( 'post_content', $mod[ 'id' ] );
+
+				if ( empty( $content ) ) {
+
+					if ( $this->p->debug->enabled ) {
+						$this->p->debug->log( 'post_content for post id ' . $mod[ 'id' ] . ' is empty' );
+					}
+
+				/**
+				 * Check if the schema shortcode class is loaded.
+				 */
+				} elseif ( isset( $this->p->sc[ 'schema' ] ) && is_object( $this->p->sc[ 'schema' ] ) ) {
+
+					/**
+					 * Check if the shortcode is registered, and that the content has a schema shortcode.
+					 */
+					if ( has_shortcode( $content, WPSSOJSON_SCHEMA_SHORTCODE_NAME ) ) {
+
+						$content_data = $this->p->sc[ 'schema' ]->content_json_data( $content );
+
+						if ( $this->p->debug->enabled ) {
+							$this->p->debug->log_arr( '$content_data', $content_data );
+						}
+
+						if ( ! empty( $content_data ) ) {
+							$json_data = WpssoSchema::return_data_from_filter( $json_data, $content_data );
+						}
+
+					} elseif ( $this->p->debug->enabled ) {
+						$this->p->debug->log( 'schema shortcode skipped - no schema shortcode in content' );
+					}
+
+				} elseif ( $this->p->debug->enabled ) {
+					$this->p->debug->log( 'schema shortcode skipped - schema class not loaded' );
+				}
+
+			} elseif ( $this->p->debug->enabled ) {
+				$this->p->debug->log( 'schema shortcode skipped - module is not a post object' );
+			}
+
+			return $json_data;
 		}
 
 		public function filter_json_data_https_schema_org_blog( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
@@ -540,61 +586,6 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			}
 
 			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
-		}
-
-		/**
-		 * If the completed json data for a post object is the main entity, then parse the content for any schema
-		 * shortcodes.
-		 */
-		public function filter_json_data_graph_element( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
-
-			if ( ! $is_main ) {
-				return $json_data;
-			}
-
-			if ( $mod[ 'is_post' ] ) {
-
-				$content = get_post_field( 'post_content', $mod[ 'id' ] );
-
-				if ( empty( $content ) ) {
-
-					if ( $this->p->debug->enabled ) {
-						$this->p->debug->log( 'post_content for post id ' . $mod[ 'id' ] . ' is empty' );
-					}
-
-				/**
-				 * Check if the schema shortcode class is loaded.
-				 */
-				} elseif ( isset( $this->p->sc[ 'schema' ] ) && is_object( $this->p->sc[ 'schema' ] ) ) {
-
-					/**
-					 * Check if the shortcode is registered, and that the content has a schema shortcode.
-					 */
-					if ( has_shortcode( $content, WPSSOJSON_SCHEMA_SHORTCODE_NAME ) ) {
-
-						$content_data = $this->p->sc[ 'schema' ]->content_json_data( $content );
-
-						if ( $this->p->debug->enabled ) {
-							$this->p->debug->log_arr( '$content_data', $content_data );
-						}
-
-						if ( ! empty( $content_data ) ) {
-							$json_data = WpssoSchema::return_data_from_filter( $json_data, $content_data );
-						}
-
-					} elseif ( $this->p->debug->enabled ) {
-						$this->p->debug->log( 'schema shortcode skipped - no schema shortcode in content' );
-					}
-
-				} elseif ( $this->p->debug->enabled ) {
-					$this->p->debug->log( 'schema shortcode skipped - schema class not loaded' );
-				}
-
-			} elseif ( $this->p->debug->enabled ) {
-				$this->p->debug->log( 'schema shortcode skipped - module is not a post object' );
-			}
-
-			return $json_data;
 		}
 
 		public function filter_get_md_defaults( $md_defs, $mod ) {
@@ -1076,26 +1067,6 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			);
 
 			return $transient_keys;
-		}
-
-		public function filter_image_dimensions_general_rows( $table_rows, $form ) {
-
-			$table_rows[ 'schema_article_0_amp1x1_img_size' ] = '' .	// Use a key name that sorts first.
-			$form->get_th_html( _x( 'Schema Article AMP 1x1 (Google)',
-				'option label', 'wpsso-schema-json-ld' ), null, 'schema_article_amp1x1_img_size' ) . 
-			'<td>' . $form->get_input_image_dimensions( 'schema_article_amp1x1_img' ) . '</td>';
-
-			$table_rows[ 'schema_article_1_amp4x3_img_size' ] = '' .	// Use a key name that sorts second.
-			$form->get_th_html( _x( 'Schema Article AMP 4x3 (Google)',
-				'option label', 'wpsso-schema-json-ld' ), null, 'schema_article_amp4x3_img_size' ) . 
-			'<td>' . $form->get_input_image_dimensions( 'schema_article_amp4x3_img' ) . '</td>';
-
-			$table_rows[ 'schema_article_2_amp16x9_img_size' ] = '' .	// Use a key name that sorts third.
-			$form->get_th_html( _x( 'Schema Article AMP 16x9 (Google)',
-				'option label', 'wpsso-schema-json-ld' ), null, 'schema_article_amp16x9_img_size' ) . 
-			'<td>' . $form->get_input_image_dimensions( 'schema_article_amp16x9_img' ) . '</td>';
-
-			return $table_rows;
 		}
 
 		public function filter_messages_tooltip_meta( $text, $msg_key ) {
@@ -1590,20 +1561,6 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 			switch ( $msg_key ) {
 
-				case 'tooltip-schema_article_amp1x1_img_size':	// Schema Article AMP 1x1 Img Size.
-				case 'tooltip-schema_article_amp4x3_img_size':	// Schema Article AMP 4x3 Img Size.
-				case 'tooltip-schema_article_amp16x9_img_size':	// Schema Article AMP 16x9 Img Size.
-
-					$ratio = preg_replace( '/^.*_amp([0-9x]+)_.*$/', '$1', $msg_key );
-
-					$text = sprintf( __( 'The AMP %1$s image dimensions for Schema Article JSON-LD markup (the default dimensions are %2$s).',
-						'wpsso-schema-json-ld' ), $ratio, $this->p->msgs->get_def_img_dims( 'schema_article_amp' . $ratio ) ) . ' ';
-
-					$text .= sprintf( __( 'The minimum image width required by Google is %dpx.', 'wpsso-schema-json-ld' ),
-						$this->p->cf[ 'head' ][ 'limit_min' ][ 'schema_article_amp' . $ratio . '_img_width' ] ). ' ';
-
-					break;
-
 				case 'tooltip-schema_text_max_len':		// Maximum Text Property Length.
 
 					$text = sprintf( __( 'The maximum length used for the Schema CreativeWork text property value (the default is %d characters).', 'wpsso-schema-json-ld' ), $this->p->opt->get_defaults( 'schema_text_max_len' ) );
@@ -1690,38 +1647,26 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 		}
 
 		/**
-		 * Hooked to 'wpssojson_status_pro_features'.
-		 */
-		public function filter_status_pro_features( $features, $ext, $info, $pkg ) {
-
-			return $this->filter_common_status_features( $features, $ext, $info, $pkg );
-		}
-
-		/**
 		 * Hooked to 'wpssojson_status_std_features'.
 		 */
 		public function filter_status_std_features( $features, $ext, $info, $pkg ) {
 
 			$features = array(
-
-				/**
-				 * The Schema Article markup is handled by the CreativeWork filter. 
-				 */
 				'(code) Schema Type Article (schema_type:article)' => array(
 					'sub'    => 'head',
-					'status' => has_filter( $this->p->lca . '_json_data_https_schema_org_creativework' ) ? 'on' : 'off',
+					'status' => 'on',
 				),
 				'(code) Schema Type Blog (schema_type:blog)' => array(
 					'sub'    => 'head',
-					'status' => has_filter( $this->p->lca . '_json_data_https_schema_org_blog' ) ? 'on' : 'off',
+					'status' => 'on',
 				),
 				'(code) Schema Type CreativeWork (schema_type:creative.work)' => array(
 					'sub'    => 'head',
-					'status' => has_filter( $this->p->lca . '_json_data_https_schema_org_creativework' ) ? 'on' : 'off',
+					'status' => 'on',
 				),
 				'(code) Schema Type Thing (schema_type:thing)' => array(
 					'sub'    => 'head',
-					'status' => has_filter( $this->p->lca . '_json_data_https_schema_org_thing' ) ? 'on' : 'off',
+					'status' => 'on',
 				),
 			);
 
@@ -1744,6 +1689,14 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 					$features[ $label ] = array( 'status' => class_exists( $classname ) ? 'on' : 'off' );
 				}
 			}
+
+			return $this->filter_common_status_features( $features, $ext, $info, $pkg );
+		}
+
+		/**
+		 * Hooked to 'wpssojson_status_pro_features'.
+		 */
+		public function filter_status_pro_features( $features, $ext, $info, $pkg ) {
 
 			return $this->filter_common_status_features( $features, $ext, $info, $pkg );
 		}
