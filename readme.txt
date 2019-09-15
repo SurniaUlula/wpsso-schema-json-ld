@@ -810,15 +810,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.9.0-dev.7 (2019/09/13)**
+**Version 2.9.0-dev.8 (2019/09/15)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* Added new Schema Article AMP image dimensions for Google:
-		* Schema Article AMP 1x1 (Google)
-		* Schema Article AMP 4x3 (Google)
-		* Schema Article AMP 16x9 (Google)
 	* Added image selection options in the Document SSO metabox for each Schema HowTo step.
 * **Bugfixes**
 	* None.
@@ -849,9 +845,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.9.0-dev.7 =
+= 2.9.0-dev.8 =
 
-(2019/09/13) Added new Schema Article AMP image dimensions for Google. Added image selection options in the Document SSO metabox for each Schema HowTo step.
+(2019/09/15) Added image selection options in the Document SSO metabox for each Schema HowTo step.
 
 = 2.8.0 =
 
