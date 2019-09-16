@@ -810,11 +810,18 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.9.0-dev.8 (2019/09/15)**
+**Version 2.9.0-b.1 (2019/09/16)**
+
+New image dimensions (1x1, 4x3, and 16x9) in Schema Article AMP page markup for Google.
 
 * **New Features**
 	* None.
 * **Improvements**
+	* Added new image dimensions in Schema Article AMP page markup for Google:
+		* Schema Article AMP 1x1 (Google).
+		* Schema Article AMP 4x3 (Google).
+		* Schema Article AMP 16x9 (Google).
+	* Added the 'uploadDate' and 'identifier' properties to Schema ImageObject markup.
 	* Added image selection options in the Document SSO metabox for each Schema HowTo step.
 * **Bugfixes**
 	* None.
@@ -832,22 +839,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Developer Notes**
 	* Added a new 'wpsso_page_posts_use_query' filter for the WP eCommerce integration module in WPSSO Core Premium v6.2.0. 
 
-**Version 2.7.0 (2019/09/01)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Moved schema shortcode processing from 'wpsso_json_data_https_schema_org_thing' to the new 'wpsso_json_data_graph_element' filter hook in WPSSO Core v6.1.0.
-
 == Upgrade Notice ==
 
-= 2.9.0-dev.8 =
+= 2.9.0-b.1 =
 
-(2019/09/15) Added image selection options in the Document SSO metabox for each Schema HowTo step.
+(2019/09/16) Added new image dimensions in Schema Article AMP page markup for Google. Added image selection options in the Document SSO metabox for each Schema HowTo step.
 
 = 2.8.0 =
 
