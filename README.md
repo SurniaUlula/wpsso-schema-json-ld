@@ -96,9 +96,9 @@
 <li>Maximum Images to Include</li>
 <li>Schema Image Size</li>
 <li>Schema Article Image Size</li>
-<li>Schema Article AMP 1x1 Image Size</li>
-<li>Schema Article AMP 4x3 Image Size</li>
-<li>Schema Article AMP 16x9 Image Size</li>
+<li>Schema Article AMP 1:1 Image Size</li>
+<li>Schema Article AMP 4:3 Image Size</li>
+<li>Schema Article AMP 16:9 Image Size</li>
 <li>Schema Thumbnail Image Size</li>
 <li>Maximum Description Length</li>
 <li>Maximum Text Property Length</li>

@@ -92,9 +92,9 @@ Additional e-Commerce plugins are also provided with the WPSSO Core Premium plug
 		* Maximum Images to Include
 		* Schema Image Size
 		* Schema Article Image Size
-		* Schema Article AMP 1x1 Image Size
-		* Schema Article AMP 4x3 Image Size
-		* Schema Article AMP 16x9 Image Size
+		* Schema Article AMP 1:1 Image Size
+		* Schema Article AMP 4:3 Image Size
+		* Schema Article AMP 16:9 Image Size
 		* Schema Thumbnail Image Size
 		* Maximum Description Length
 		* Maximum Text Property Length
@@ -810,17 +810,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.9.0-b.1 (2019/09/16)**
+**Version 2.9.0-b.2 (2019/09/16)**
 
-New image dimensions (1x1, 4x3, and 16x9) in Schema Article AMP page markup for Google.
+New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for Google.
 
 * **New Features**
 	* None.
 * **Improvements**
 	* Added new image dimensions in Schema Article AMP page markup for Google:
-		* Schema Article AMP 1x1 (Google).
-		* Schema Article AMP 4x3 (Google).
-		* Schema Article AMP 16x9 (Google).
+		* Schema Article AMP 1:1 (Google).
+		* Schema Article AMP 4:3 (Google).
+		* Schema Article AMP 16:9 (Google).
 	* Added the 'uploadDate' and 'identifier' properties to Schema ImageObject markup.
 	* Added image selection options in the Document SSO metabox for each Schema HowTo step.
 * **Bugfixes**
@@ -841,7 +841,7 @@ New image dimensions (1x1, 4x3, and 16x9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 2.9.0-b.1 =
+= 2.9.0-b.2 =
 
 (2019/09/16) Added new image dimensions in Schema Article AMP page markup for Google. Added image selection options in the Document SSO metabox for each Schema HowTo step.
 
