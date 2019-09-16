@@ -369,7 +369,7 @@ if ( ! class_exists( 'WpssoJsonSchema' ) ) {
 
 							$add_post_data = true;
 
-							break;	// one positive match is enough
+							break;	// One positive match is enough.
 						}
 
 						if ( $wpsso->debug->enabled ) {
@@ -469,7 +469,7 @@ if ( ! class_exists( 'WpssoJsonSchema' ) ) {
 			return $posts_count;
 		}
 
-		public static function add_media_data( &$json_data, $mod, $mt_og, $size_name = null, $add_video = true ) {
+		public static function add_media_data( &$json_data, $mod, $mt_og, $size_names = null, $add_video = true ) {
 
 			$wpsso =& Wpsso::get_instance();
 
@@ -483,10 +483,14 @@ if ( ! class_exists( 'WpssoJsonSchema' ) ) {
 			 */
 			$og_images  = array();
 			$prev_count = 0;
+			$img_added  = 0;
+			$vid_added  = 0;
 			$max_nums   = $wpsso->util->get_max_nums( $mod, 'schema' );
 
-			if ( empty( $size_name ) ) {
-				$size_name = $wpsso->lca . '-schema';
+			if ( empty( $size_names ) ) {
+				$size_names = array( $wpsso->lca . '-schema' );
+			} elseif ( is_string( $size_names ) ) {	// Just in case.
+				$size_names = array( $size_names );
 			}
 
 			/**
@@ -530,7 +534,10 @@ if ( ! class_exists( 'WpssoJsonSchema' ) ) {
 				$wpsso->debug->log( 'adding all image(s)' );
 			}
 
-			$og_images = array_merge( $og_images, $wpsso->og->get_all_images( $max_nums[ 'schema_img_max' ], $size_name, $mod, true, 'schema' ) );
+			foreach ( $size_names as $size_name ) {
+				$og_images = array_merge( $og_images, $wpsso->og->get_all_images( $max_nums[ 'schema_img_max' ],
+					$size_name, $mod, $check_dupes = true, $md_pre = 'schema' ) );
+			}
 
 			if ( ! empty( $og_images ) ) {
 
@@ -538,29 +545,16 @@ if ( ! class_exists( 'WpssoJsonSchema' ) ) {
 					$wpsso->debug->log( 'adding images to json data' );
 				}
 
-				$images_added = WpssoSchema::add_images_data_mt( $json_data[ 'image' ], $og_images );
-
-			} else {
-				$images_added = 0;
+				$img_added = WpssoSchema::add_images_data_mt( $json_data[ 'image' ], $og_images );
 			}
 
-			if ( ! $images_added && $mod[ 'is_post' ] ) {
-
-				if ( $wpsso->debug->enabled ) {
-					$wpsso->debug->log( 'adding default image to json data' );
-				}
-
-				$og_images = $wpsso->media->get_default_images( 1, $size_name, true );
-
-				$images_added = WpssoSchema::add_images_data_mt( $json_data[ 'image' ], $og_images );
-			}
-
-			if ( ! $images_added ) {
-				unset( $json_data[ 'image' ] );	// prevent null assignment
+			
+			if ( empty( $json_data[ 'image' ] ) ) {
+				unset( $json_data[ 'image' ] );	// Prevent null assignment.
 			}
 
 			if ( $wpsso->debug->enabled ) {
-				$wpsso->debug->log( $images_added . ' images added' );
+				$wpsso->debug->log( $img_added . ' images added' );
 			}
 
 			/**
@@ -576,20 +570,20 @@ if ( ! class_exists( 'WpssoJsonSchema' ) ) {
 				}
 
 				if ( ! empty( $mt_og[ 'og:video' ] ) ) {
+
 					if ( $wpsso->debug->enabled ) {
 						$wpsso->debug->log( 'adding videos to json data' );
 					}
-					$videos_added = WpssoSchema::add_videos_data_mt( $json_data[ 'video' ], $mt_og[ 'og:video' ], 'og:video' );
-				} else {
-					$videos_added = 0;
+
+					$vid_added = WpssoSchema::add_videos_data_mt( $json_data[ 'video' ], $mt_og[ 'og:video' ], 'og:video' );
 				}
 
-				if ( ! $videos_added ) {
-					unset( $json_data[ 'video' ] );	// prevent null assignment
+				if ( empty( $json_data[ 'video' ] ) ) {
+					unset( $json_data[ 'video' ] );	// Prevent null assignment.
 				}
 
 				if ( $wpsso->debug->enabled ) {
-					$wpsso->debug->log( $videos_added . ' videos added' );
+					$wpsso->debug->log( $vid_added . ' videos added' );
 				}
 
 			} elseif ( $wpsso->debug->enabled ) {
@@ -617,7 +611,7 @@ if ( ! class_exists( 'WpssoJsonSchema' ) ) {
 
 					reset( $json_data[ $main_prop ] );
 
-					$media_key = key( $json_data[ $main_prop ] );	// media array key should be '0'
+					$media_key = key( $json_data[ $main_prop ] );	// Media array key should be '0'.
 
 					if ( ! isset( $json_data[ $main_prop ][ $media_key ][ 'mainEntityOfPage' ] ) ) {
 
@@ -651,9 +645,9 @@ if ( ! class_exists( 'WpssoJsonSchema' ) ) {
 			$comments = get_comments( array(
 				'post_id' => $mod[ 'id' ],
 				'status'  => 'approve',
-				'parent'  => 0,	// don't get replies
+				'parent'  => 0,					// Don't get replies.
 				'order'   => 'DESC',
-				'number'  => get_option( 'page_comments' ),	// limit number of comments
+				'number'  => get_option( 'page_comments' ),	// Limit number of comments.
 			) );
 
 			if ( is_array( $comments ) ) {

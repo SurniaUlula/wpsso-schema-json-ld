@@ -228,7 +228,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'label'    => _x( 'Family Friendly', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_family_friendly',
 					'content'  => $form->get_no_select_none( 'schema_family_friendly',
-						$this->p->cf[ 'form' ][ 'yes_no' ], 'yes_no', '', $is_assoc = true ),
+						$this->p->cf[ 'form' ][ 'yes_no' ], 'yes-no', '', $is_assoc = true ),
 				),
 				'schema_copyright_year' => array(
 					'tr_class' => $schema_type_tr_class[ 'creative_work' ],

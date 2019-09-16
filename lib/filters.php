@@ -144,12 +144,22 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			 */
 			if ( $this->p->schema->is_schema_type_child( $page_type_id, 'article' ) ) {
 
-				$size_name    = $this->p->lca . '-schema-article';
+				if ( SucomUtil::is_amp() ) {
+					$size_names = array(
+						$this->p->lca . '-schema-article-amp1x1',
+						$this->p->lca . '-schema-article-amp4x3',
+						$this->p->lca . '-schema-article-amp16x9',
+					);
+				} else {
+					$size_names = array( $this->p->lca . '-schema-article' );
+				}
+
 				$org_logo_key = 'org_banner_url';
 
 			} else {
 
-				$size_name    = $this->p->lca . '-schema';
+				$size_names = array( $this->p->lca . '-schema' );
+
 				$org_logo_key = 'org_logo_url';
 			}
 
@@ -334,7 +344,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			 *      image as https://schema.org/ImageObject
 			 *      video as https://schema.org/VideoObject
 			 */
-			WpssoJsonSchema::add_media_data( $ret, $mod, $mt_og, $size_name, $add_video = true );
+			WpssoJsonSchema::add_media_data( $ret, $mod, $mt_og, $size_names, $add_video = true );
 
 			/**
 			 * Check only published posts or other non-post objects.
@@ -352,7 +362,8 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 						if ( $this->p->notice->is_admin_pre_notices() ) { // Skip if notices already shown.
 
 							$notice_key = $mod[ 'name' ] . '-' . $mod[ 'id' ] . '-notice-missing-schema-' . $prop_name;
-							$error_msg  = $this->p->msgs->get( 'notice-missing-schema-' . $prop_name );
+
+							$error_msg = $this->p->msgs->get( 'notice-missing-schema-' . $prop_name );
 
 							$this->p->notice->err( $error_msg, null, $notice_key );
 						}
