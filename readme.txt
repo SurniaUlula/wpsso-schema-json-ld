@@ -19,6 +19,8 @@ Schema JSON-LD markup and Google SEO Rich Results for Articles, Events, Local Bu
 
 <p style="margin:0;"><img class="readme-icon" src="https://surniaulula.github.io/wpsso-schema-json-ld/assets/icon-256x256.png"></p>
 
+> **Coming soon in v2.9.0 - Automatically includes Schema Article AMP 1:1, 4:3, and 16:9 images for Google (see Google's Article [AMP with structured data guidelines](https://developers.google.com/search/docs/data-types/article#amp-sd)).**
+
 **Offers *accurate* and *comprehensive* Schema JSON-LD markup:**
 
 Including image SEO, video SEO, local business, organization, publisher, person, author and co-authors, extensive e-Commerce product markup, product variations, product ratings, aggregate ratings, reviews, recipe information, event details, collection pages, profile pages, search pages, item lists for [Google's Carousel Rich Results](https://developers.google.com/search/docs/guides/mark-up-listings), customized property values, and much, much more (see the complete list of features below for Standard / Premium add-on details).
