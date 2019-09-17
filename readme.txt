@@ -46,7 +46,7 @@ The WooCommerce plugin provides incomplete Schema markup for Google's Product Ri
 * This Product is missing a global identifier.
 * etc.
 
-Additional e-Commerce plugins are also provided with the WPSSO Core Premium plugin, including Easy Digital Downloads, MarketPress, and WP eCommerce.
+Additional e-Commerce plugins are also provided with the WPSSO Core Premium plugin, including Easy Digital Downloads, and WP eCommerce.
 
 <h3>Users Love the WPSSO JSON Add-on</h3>
 
@@ -69,11 +69,13 @@ Additional e-Commerce plugins are also provided with the WPSSO Core Premium plug
 	* [schema.org/CreativeWork](https://schema.org/CreativeWork) (includes 86 Schema types)
 	* [schema.org/Thing](https://schema.org/Thing) (includes 478 Schema types)
 
-* Optinally customize the Schema type for each individual posts, pages, custom post types, tags, categories, custom taxonomy / terms, and attachment pages.
+* Automatically includes Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google.
 
-* Provides complete Schema ImageObject SEO markup with information from the WordPress Media Library (name, alternateName, alternativeHeadline, caption, description, fileFormat, width, height, keywords).
+* Customize the Schema type for each individual posts, pages, custom post types, tags, categories, custom taxonomy / terms, and attachment pages.
 
-* Built-in support for Automattic's [Accelerated Mobile Pages (AMP)](https://wordpress.org/plugins/amp/) plugin.
+* Provides complete Schema ImageObject SEO markup with attachment data from the WordPress Media Library (name, alternateName, alternativeHeadline, caption, description, fileFormat, uploadDate, and more).
+
+* Built-in support for [AMP](https://wordpress.org/plugins/amp/), [Better AMP](https://wordpress.org/plugins/better-amp/), and [AMP for WP](https://wordpress.org/plugins/accelerated-mobile-pages/) plugins.
 
 * Includes contributor markup for [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/) authors and guest authors ([WPSSO Core Premium plugin](https://wpsso.com/) required).
 

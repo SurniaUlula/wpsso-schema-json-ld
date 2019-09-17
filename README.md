@@ -46,7 +46,7 @@
 <li>etc.</li>
 </ul>
 
-<p>Additional e-Commerce plugins are also provided with the WPSSO Core Premium plugin, including Easy Digital Downloads, MarketPress, and WP eCommerce.</p>
+<p>Additional e-Commerce plugins are also provided with the WPSSO Core Premium plugin, including Easy Digital Downloads, and WP eCommerce.</p>
 
 <h3>Users Love the WPSSO JSON Add-on</h3>
 
@@ -70,9 +70,10 @@
 <li><a href="https://schema.org/CreativeWork">schema.org/CreativeWork</a> (includes 86 Schema types)</li>
 <li><a href="https://schema.org/Thing">schema.org/Thing</a> (includes 478 Schema types)</li>
 </ul></li>
-<li><p>Optinally customize the Schema type for each individual posts, pages, custom post types, tags, categories, custom taxonomy / terms, and attachment pages.</p></li>
-<li><p>Provides complete Schema ImageObject SEO markup with information from the WordPress Media Library (name, alternateName, alternativeHeadline, caption, description, fileFormat, width, height, keywords).</p></li>
-<li><p>Built-in support for Automattic's <a href="https://wordpress.org/plugins/amp/">Accelerated Mobile Pages (AMP)</a> plugin.</p></li>
+<li><p>Automatically includes Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google.</p></li>
+<li><p>Customize the Schema type for each individual posts, pages, custom post types, tags, categories, custom taxonomy / terms, and attachment pages.</p></li>
+<li><p>Provides complete Schema ImageObject SEO markup with attachment data from the WordPress Media Library (name, alternateName, alternativeHeadline, caption, description, fileFormat, uploadDate, and more).</p></li>
+<li><p>Built-in support for <a href="https://wordpress.org/plugins/amp/">AMP</a>, <a href="https://wordpress.org/plugins/better-amp/">Better AMP</a>, and <a href="https://wordpress.org/plugins/accelerated-mobile-pages/">AMP for WP</a> plugins.</p></li>
 <li><p>Includes contributor markup for <a href="https://wordpress.org/plugins/co-authors-plus/">Co-Authors Plus</a> authors and guest authors (<a href="https://wpsso.com/">WPSSO Core Premium plugin</a> required).</p></li>
 <li><p>Adds a Schema Markup settings page to the SSO menu with additional options:</p>
 
