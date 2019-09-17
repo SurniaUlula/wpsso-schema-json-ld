@@ -810,7 +810,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.9.0-b.2 (2019/09/16)**
+**Version 2.9.0-rc.1 (2019/09/17)**
 
 New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for Google.
 
@@ -841,9 +841,9 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 2.9.0-b.2 =
+= 2.9.0-rc.1 =
 
-(2019/09/16) Added new image dimensions in Schema Article AMP page markup for Google. Added image selection options in the Document SSO metabox for each Schema HowTo step.
+(2019/09/17) Added new image dimensions in Schema Article AMP page markup for Google. Added image selection options in the Document SSO metabox for each Schema HowTo step.
 
 = 2.8.0 =
 
