@@ -19,7 +19,7 @@ Schema JSON-LD markup and Google SEO Rich Results for Articles, Events, Local Bu
 
 <p style="margin:0;"><img class="readme-icon" src="https://surniaulula.github.io/wpsso-schema-json-ld/assets/icon-256x256.png"></p>
 
-> **Coming soon in WPSSO JSON v2.9.0 - Automatically includes Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google (see [Google's Article AMP with structured data guidelines](https://developers.google.com/search/docs/data-types/article#amp-sd) for details).**
+> **[Coming soon in WPSSO JSON v2.9.0](https://wordpress.org/plugins/wpsso-schema-json-ld/#developers) - Automatically includes Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google (see [Google's Article AMP with structured data guidelines](https://developers.google.com/search/docs/data-types/article#amp-sd) for details).**
 
 **Offers *accurate* and *comprehensive* Schema JSON-LD markup:**
 
