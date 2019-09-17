@@ -146,9 +146,9 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 				if ( SucomUtil::is_amp() ) {
 					$size_names = array(
-						$this->p->lca . '-schema-article-amp1x1',
-						$this->p->lca . '-schema-article-amp4x3',
-						$this->p->lca . '-schema-article-amp16x9',
+						$this->p->lca . '-schema-article-1-1',
+						$this->p->lca . '-schema-article-4-3',
+						$this->p->lca . '-schema-article-16-9',
 					);
 				} else {
 					$size_names = array( $this->p->lca . '-schema-article' );
