@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires At Least: 3.9
 Tested Up To: 5.2.3
 WC Tested Up To: 3.7.0
-Stable Tag: 2.8.0
+Stable Tag: 2.9.0
 
 Schema JSON-LD markup and Google SEO Rich Results for Articles, Events, Local Business, Products, Recipes, Reviews and many more.
 
@@ -19,7 +19,7 @@ Schema JSON-LD markup and Google SEO Rich Results for Articles, Events, Local Bu
 
 <p style="margin:0;"><img class="readme-icon" src="https://surniaulula.github.io/wpsso-schema-json-ld/assets/icon-256x256.png"></p>
 
-> [Coming soon in the Schema JSON-LD Markup v2.9.0 add-on](https://wordpress.org/plugins/wpsso-schema-json-ld/#developers):
+> [NEW in the Schema JSON-LD Markup v2.9.0 add-on](https://wordpress.org/plugins/wpsso-schema-json-ld/#developers):
 > 
 > Automatically provides Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google (see [Google's Article AMP with structured data guidelines](https://developers.google.com/search/docs/data-types/article#amp-sd) for details).
 

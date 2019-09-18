@@ -3,7 +3,7 @@
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Schema JSON-LD Markup</td></tr>
 <tr><th align="right" valign="top" nowrap>Summary</th><td>Schema JSON-LD markup and Google SEO Rich Results for Articles, Events, Local Business, Products, Recipes, Reviews and many more.</td></tr>
-<tr><th align="right" valign="top" nowrap>Stable Version</th><td>2.8.0</td></tr>
+<tr><th align="right" valign="top" nowrap>Stable Version</th><td>2.9.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.9</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 5.2.3</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
@@ -16,7 +16,7 @@
 <p style="margin:0;"><img class="readme-icon" src="https://surniaulula.github.io/wpsso-schema-json-ld/assets/icon-256x256.png"></p>
 
 <blockquote>
-  <p><a href="https://wordpress.org/plugins/wpsso-schema-json-ld/#developers">Coming soon in the Schema JSON-LD Markup v2.9.0 add-on</a>:</p>
+  <p><a href="https://wordpress.org/plugins/wpsso-schema-json-ld/#developers">NEW in the Schema JSON-LD Markup v2.9.0 add-on</a>:</p>
   
   <p>Automatically provides Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google (see <a href="https://developers.google.com/search/docs/data-types/article#amp-sd">Google's Article AMP with structured data guidelines</a> for details).</p>
 </blockquote>
