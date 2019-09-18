@@ -1587,7 +1587,9 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 					$text .= __( 'When a rating value for the webpage content is not available, a 5 star rating from the site organization can be added to the main Schema type markup.', 'wpsso-schema-json-ld' ) . ' ';
 
-					$text .= sprintf( __( 'Rating and review features for the webpage are available from several supported plugins, including %s.', 'wpsso-schema-json-ld' ), '<a href="https://wordpress.org/plugins/woocommerce/">WooCommerce</a>, <a href="https://wordpress.org/plugins/wp-postratings/">WP-PostRatings</a>, <a href="https://wordpress.org/plugins/wpsso-ratings-and-reviews/">WPSSO Ratings and Reviews</a>' ) . ' ';
+					$text .= sprintf( __( 'Visitor rating and review features are available from several supported plugins, including %s.', 'wpsso-schema-json-ld' ), '<a href="https://wordpress.org/plugins/woocommerce/">WooCommerce</a>, <a href="https://wordpress.org/plugins/wp-postratings/">WP-PostRatings</a>, <a href="https://wordpress.org/plugins/wpsso-ratings-and-reviews/">WPSSO Ratings and Reviews</a>' ) . ' ';
+
+					$text .= sprintf( __( 'See <a href="%s">Google\'s Review snippet structured data guidelines</a> for details.', 'wpsso' ), 'https://developers.google.com/search/docs/data-types/review-snippet' );
 
 				 	break;
 
