@@ -21,7 +21,7 @@ Schema JSON-LD markup and Google SEO Rich Results for Articles, Events, Local Bu
 
 > [NEW in the Schema JSON-LD Markup v2.9.0 add-on](https://wordpress.org/plugins/wpsso-schema-json-ld/#developers):
 > 
-> Automatically provides Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google (see [Google's Article AMP with structured data guidelines](https://developers.google.com/search/docs/data-types/article#amp-sd) for details).
+> Automatically provides Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google (see [Google's Article AMP structured data guidelines](https://developers.google.com/search/docs/data-types/article#amp-sd) for details).
 
 **Offers *accurate* and *comprehensive* Schema JSON-LD markup:**
 
@@ -822,7 +822,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **New Features**
 	* None.
 * **Improvements**
-	* Updated the 'aggregateRating' and 'review' property hooks to limit their addition only to Google approved Schema types (see [Google's Review snippeguidelines](thttps://developers.google.com/search/docs/data-types/review-snippet) for details).
+	* Updated the 'aggregateRating' and 'review' property hooks to limit their addition only to Google approved Schema types (see [Google's Review snippet structured data guidelines](thttps://developers.google.com/search/docs/data-types/review-snippet) for details).
 		* The Schema standard includes the 'aggregateRating' and 'review' properties for these types:
 			* Brand
 			 * CreativeWork
