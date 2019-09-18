@@ -832,7 +832,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 			* Place
 			* Product
 			* Service
-		* Unfortunately, Google only supports the 'aggregateRating' and 'review' properties for these types:
+		* Unfortunately, Google only supports 'aggregateRating' and 'review' properties for these types:
 			* Book
 			* Course
 			* Event
