@@ -822,34 +822,34 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **New Features**
 	* None.
 * **Improvements**
-	* Updated the 'aggregateRating' and 'review' property hooks to limit their addition only to Google approved Schema types (see [Google's Review snippet structured data guidelines](thttps://developers.google.com/search/docs/data-types/review-snippet) for details).
-		* The Schema standard includes the 'aggregateRating' and 'review' properties for these types:
+	* Updated the Schema 'aggregateRating' and 'review' property hooks to limit their addition only to Google approved Schema types (see [Google's Review snippet structured data guidelines](thttps://developers.google.com/search/docs/data-types/review-snippet) for details).
+		* The Schema standard provides 'aggregateRating' and 'review' properties for these types:
 			* Brand
-			 * CreativeWork
-			 * Event
-			 * Offer
-			 * Organization
-			 * Place
-			 * Product
-			 * Service 
-		 * Unfortunately, Google only supports the 'aggregateRating' and 'review' properties for these types:
-			 * Book
-			 * Course
-			 * Event
-			 * HowTo (includes the Recipe sub-type)
-			 * LocalBusiness
-			 * Movie
-			 * Product
-			 * SoftwareApplication
-		 * And the 'review' property for these types:
-			 * CreativeWorkSeason
-			 * CreativeWorkSeries
-			 * Episode
-			 * Game
-			 * MediaObject
-			 * MusicPlaylist
-			 * MusicRecording
-			 * Organization
+			* CreativeWork
+			* Event
+			* Offer
+			* Organization
+			* Place
+			* Product
+			* Service
+		* Unfortunately, Google only supports the 'aggregateRating' and 'review' properties for these types:
+			* Book
+			* Course
+			* Event
+			* HowTo (includes the Recipe sub-type)
+			* LocalBusiness
+			* Movie
+			* Product
+			* SoftwareApplication
+		* And the 'review' property for these types:
+			* CreativeWorkSeason
+			* CreativeWorkSeries
+			* Episode
+			* Game
+			* MediaObject
+			* MusicPlaylist
+			* MusicRecording
+			* Organization
 * **Bugfixes**
 	* None.
 * **Developer Notes**
