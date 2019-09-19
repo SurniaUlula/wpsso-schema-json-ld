@@ -21,7 +21,7 @@ Schema JSON-LD markup and Google SEO Rich Results for Articles, Events, Local Bu
 
 > [NEW in the Schema JSON-LD Markup v2.9.0 add-on](https://wordpress.org/plugins/wpsso-schema-json-ld/#developers):
 > 
-> Automatically provides Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google (see [Google's Article AMP structured data guidelines](https://developers.google.com/search/docs/data-types/article#amp-sd) for details).
+> Automatically provides Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google (see the [Google Article AMP structured data guidelines](https://developers.google.com/search/docs/data-types/article#amp-sd) webpage for details).
 
 **Offers *accurate* and *comprehensive* Schema JSON-LD markup:**
 
@@ -818,11 +818,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 **Version 2.10.0-dev.1 (2019/09/18)**
 
+Follows the latest Review snippet structured data guidelines from Google instead of the official Schema standard.
 
 * **New Features**
 	* None.
 * **Improvements**
-	* Updated the Schema 'aggregateRating' and 'review' property hooks to limit their addition only to Google approved Schema types (see [Google's Review snippet structured data guidelines](thttps://developers.google.com/search/docs/data-types/review-snippet) for details).
+	* Updated the Schema 'aggregateRating' and 'review' property hooks to limit their addition to only Google approved Schema types (see the [Google Review snippet structured data guidelines](https://developers.google.com/search/docs/data-types/review-snippet) webpage for details).
 		* The Schema standard provides 'aggregateRating' and 'review' properties for these types:
 			* Brand
 			* CreativeWork
@@ -888,7 +889,7 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 = 2.10.0-dev.1 =
 
-(2019/09/18) Updated the 'aggregateRating' and 'review' property hooks to limit their addition only to Google approved Schema types.
+(2019/09/18) Updated the 'aggregateRating' and 'review' property hooks to limit their addition to only Google approved Schema types.
 
 = 2.9.0 =
 
