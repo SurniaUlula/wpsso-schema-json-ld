@@ -816,7 +816,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.10.0-dev.1 (2019/09/18)**
+**Version 2.10.0-dev.2 (2019/09/18)**
 
 Follows the latest Review snippet structured data guidelines from Google instead of the official Schema standard.
 
@@ -887,7 +887,7 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 2.10.0-dev.1 =
+= 2.10.0-dev.2 =
 
 (2019/09/18) Updated the 'aggregateRating' and 'review' property hooks to limit their addition to only Google approved Schema types.
 
