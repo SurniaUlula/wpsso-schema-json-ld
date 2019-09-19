@@ -446,55 +446,61 @@ msgid ""
 msgstr ""
 
 #: lib/filters.php:1592
-msgid ""
-"See <a href=\"%s\">Google's Review snippet structured data guidelines</a> "
-"for details."
+msgid "See the <a href=\"%1$s\">%2$s</a> webpage for details."
 msgstr ""
 
-#: lib/filters.php:1598
+#: lib/filters.php:1593
+msgid "https://developers.google.com/search/docs/data-types/review-snippet"
+msgstr ""
+
+#: lib/filters.php:1594
+msgid "Google Review snippet structured data guidelines"
+msgstr ""
+
+#: lib/filters.php:1600
 msgid ""
 "Select a default family friendly value for the Schema CreativeWork type and/"
 "or its sub-types (Article, BlogPosting, WebPage, etc)."
 msgstr ""
 
-#: lib/filters.php:1604
+#: lib/filters.php:1606
 msgid ""
 "Select a default publisher for the Schema CreativeWork type and/or its sub-"
 "types (Article, BlogPosting, WebPage, etc)."
 msgstr ""
 
-#: lib/filters.php:1610
+#: lib/filters.php:1612
 msgid ""
 "Select a default service provider, service operator, or service performer "
 "(example: \"Netflix\")."
 msgstr ""
 
-#: lib/filters.php:1616
+#: lib/filters.php:1618
 msgid "Select a default organizer (organization) for the Schema Event type."
 msgstr ""
 
-#: lib/filters.php:1622
+#: lib/filters.php:1624
 msgid "Select a default organizer (person) for the Schema Event type."
 msgstr ""
 
-#: lib/filters.php:1628
+#: lib/filters.php:1630
 msgid "Select a default performer (organization) for the Schema Event type."
 msgstr ""
 
-#: lib/filters.php:1634
+#: lib/filters.php:1636
 msgid "Select a default performer (person) for the Schema Event type."
 msgstr ""
 
-#: lib/filters.php:1640
+#: lib/filters.php:1642
 msgid "Select a default venue (place / location) for the Schema Event type."
 msgstr ""
 
-#: lib/filters.php:1646
+#: lib/filters.php:1648
 msgid ""
 "Select a default organization for the Schema JobPosting hiring organization."
 msgstr ""
 
-#: lib/filters.php:1652
+#: lib/filters.php:1654
 msgid ""
 "Select a default place / location for the Schema JobPosting job location."
 msgstr ""
