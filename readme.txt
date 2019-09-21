@@ -816,7 +816,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.10.0-dev.2 (2019/09/18)**
+**Version 2.10.0-dev.3 (2019/09/21)**
 
 Follows the latest Review snippet structured data guidelines from Google instead of the official Schema standard.
 
@@ -824,7 +824,7 @@ Follows the latest Review snippet structured data guidelines from Google instead
 	* None.
 * **Improvements**
 	* Updated the Schema 'aggregateRating' and 'review' property hooks to limit their addition to only Google approved Schema types (see the [Google Review snippet structured data guidelines](https://developers.google.com/search/docs/data-types/review-snippet) webpage for details).
-		* The Schema standard provides 'aggregateRating' and 'review' properties for these types:
+		* The official Schema standard provides 'aggregateRating' and 'review' properties for these types:
 			* Brand
 			* CreativeWork
 			* Event
@@ -887,9 +887,9 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 2.10.0-dev.2 =
+= 2.10.0-dev.3 =
 
-(2019/09/18) Updated the 'aggregateRating' and 'review' property hooks to limit their addition to only Google approved Schema types.
+(2019/09/21) Updated the 'aggregateRating' and 'review' property hooks to limit their addition to only Google approved Schema types.
 
 = 2.9.0 =
 
