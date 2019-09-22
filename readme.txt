@@ -816,7 +816,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.10.0-rc.1 (2019/09/22)**
+**Version 2.10.0 (2019/09/22)**
 
 Follows the latest Review snippet structured data guidelines from Google instead of the official Schema standard.
 
@@ -874,24 +874,9 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 * **Developer Notes**
 	* None.
 
-**Version 2.8.0 (2019/09/07)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Updated the Schema HowTo markup for the latest Google requirements.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Added a new 'wpsso_page_posts_use_query' filter for the WP eCommerce integration module in WPSSO Core Premium v6.2.0. 
-
 == Upgrade Notice ==
 
-= 2.10.0-rc.1 =
+= 2.10.0 =
 
 (2019/09/22) Updated the 'aggregateRating' and 'review' property hooks to limit their addition to only Google approved Schema types.
-
-= 2.9.0 =
-
-(2019/09/17) Added new image dimensions in Schema Article AMP page markup for Google. Added image selection options in the Document SSO metabox for each Schema HowTo step.
 
