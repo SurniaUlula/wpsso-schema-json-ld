@@ -102,12 +102,12 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 					'schema_def_family_friendly'             => 'none',	// Default Family Friendly.
 					'schema_def_pub_org_id'                  => 'site',	// Default Publisher.
 					'schema_def_prov_org_id'                 => 'none',	// Default Service Provider.
-					'schema_def_event_organizer_org_id'      => 'none',	// Default Event Organizer Org.
-					'schema_def_event_organizer_person_id'   => 'none',	// Default Event Organizer Person.
-					'schema_def_event_performer_org_id'      => 'none',	// Default Event Performer Org.
-					'schema_def_event_performer_person_id'   => 'none',	// Default Event Performer Person.
-					'schema_def_event_location_id'           => 'none',	// Default Event Venue.
-					'schema_def_job_hiring_org_id'           => 'none',	// Default Job Hiring Organization.
+					'schema_def_event_organizer_org_id'      => 'none',	// Default Organizer Org.
+					'schema_def_event_organizer_person_id'   => 'none',	// Default Organizer Person.
+					'schema_def_event_performer_org_id'      => 'none',	// Default Performer Org.
+					'schema_def_event_performer_person_id'   => 'none',	// Default Performer Person.
+					'schema_def_event_location_id'           => 'none',	// Default Venue.
+					'schema_def_job_hiring_org_id'           => 'none',	// Default Hiring Organization.
 					'schema_def_job_location_id'             => 'none',	// Default Job Location.
 				),
 			),

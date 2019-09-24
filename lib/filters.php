@@ -247,6 +247,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			/**
 			 * Property:
 			 *	inLanguage
+			 *	isFamilyFriendly
 			 *      copyrightYear
 			 */
 			if ( ! empty( $mod[ 'obj' ] ) ) {
@@ -257,7 +258,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				 */
 				foreach ( array(
 					'schema_lang'            => 'inLanguage',
-					'schema_family_friendly' => 'isFamilyFriendly',
+					'schema_family_friendly' => 'isFamilyFriendly',	// Fallback to 'schema_def_family_friendly' value.
 					'schema_copyright_year'  => 'copyrightYear',
 				) as $md_key => $prop_name ) {
 
@@ -304,8 +305,8 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				 * value to a property array.
 				 */
 				foreach ( array(
-					'schema_pub_org_id'  => 'publisher',
-					'schema_prov_org_id' => 'provider',
+					'schema_pub_org_id'  => 'publisher',	// Fallback to 'schema_def_pub_org_id' value.
+					'schema_prov_org_id' => 'provider',	// Fallback to 'schema_def_prov_org_id' value.
 				) as $md_key => $prop_name ) {
 	
 					$md_val = $mod[ 'obj' ]->get_options( $mod[ 'id' ], $md_key, $filter_opts = true, $def_fallback = true );
@@ -848,26 +849,35 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 					break;
 
-				case 'schema_type':				// Schema Type.
-				case 'schema_lang':				// Language.
-				case 'schema_family_friendly':			// Family Friendly is 'none', 0, or 1.
-				case 'schema_pub_org_id':			// Publisher.
-				case 'schema_prov_org_id':			// Service Provider.
+				case 'schema_def_event_location_id':		// Default Event Venue.
+				case 'schema_def_event_organizer_org_id':	// Default Organizer Org.
+				case 'schema_def_event_organizer_person_id':	// Default Organizer Person.
+				case 'schema_def_event_performer_org_id':	// Default Performer Org.
+				case 'schema_def_event_performer_person_id':	// Default Performer Person.
+				case 'schema_def_family_friendly':		// Default Family Friendly.
+				case 'schema_def_job_hiring_org_id':		// Default Hiring Organization.
+				case 'schema_def_job_location_id':		// Default Job Location.
+				case 'schema_def_pub_org_id':			// Default Publisher.
 				case 'schema_event_lang':			// Event Language.
+				case 'schema_event_location_id':		// Event Venue.
 				case 'schema_event_offer_currency':
 				case 'schema_event_offer_avail':
-				case 'schema_event_organizer_org_id':
-				case 'schema_event_organizer_person_id':
-				case 'schema_event_performer_org_id':
-				case 'schema_event_performer_person_id':
-				case 'schema_event_location_id':
-				case 'schema_job_hiring_org_id':
-				case 'schema_job_location_id':
+				case 'schema_event_organizer_org_id':		// Event Organizer Org.
+				case 'schema_event_organizer_person_id':	// Event Organizer Person.
+				case 'schema_event_performer_org_id':		// Event Performer Org.
+				case 'schema_event_performer_person_id':	// Event Performer Person.
+				case 'schema_family_friendly':			// Family Friendly.
+				case 'schema_job_hiring_org_id':		// Hiring Organization.
+				case 'schema_job_location_id':			// Job Location.
 				case 'schema_job_salary_currency':
 				case 'schema_job_salary_period':
+				case 'schema_lang':				// Language.
 				case 'schema_movie_prodco_org_id':		// Production Company.
+				case 'schema_prov_org_id':			// Service Provider.
+				case 'schema_pub_org_id':			// Publisher.
 				case 'schema_review_claim_author_type':		// Claim Author Type.
 				case 'schema_review_item_name':			// Review Subject Name.
+				case 'schema_type':				// Schema Type.
 
 					return 'not_blank';
 
@@ -1595,61 +1605,61 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 				 	break;
 
-				case 'tooltip-schema_def_family_friendly':	// Default Family Friendly.
+				case 'tooltip-schema_def_family_friendly':		// Default Family Friendly.
 
 					$text = __( 'Select a default family friendly value for the Schema CreativeWork type and/or its sub-types (Article, BlogPosting, WebPage, etc).', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-schema_def_pub_org_id':		// Default Publisher.
+				case 'tooltip-schema_def_pub_org_id':			// Default Publisher.
 
 					$text = __( 'Select a default publisher for the Schema CreativeWork type and/or its sub-types (Article, BlogPosting, WebPage, etc).', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-schema_def_prov_org_id':		// Default Service Provider.
+				case 'tooltip-schema_def_prov_org_id':			// Default Service Provider.
 
 					$text = __( 'Select a default service provider, service operator, or service performer (example: "Netflix").', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-schema_def_event_organizer_org_id':	// Default Event Organizer Organization
+				case 'tooltip-schema_def_event_organizer_org_id':	// Default Organizer Org.
 
 					$text = __( 'Select a default organizer (organization) for the Schema Event type.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-schema_def_event_organizer_person_id':	// // Default Event Organizer Person.
+				case 'tooltip-schema_def_event_organizer_person_id':	// Default Organizer Person.
 
 					$text = __( 'Select a default organizer (person) for the Schema Event type.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-schema_def_event_performer_org_id':	// Default Event Performer Org.
+				case 'tooltip-schema_def_event_performer_org_id':	// Default Performer Org.
 
 					$text = __( 'Select a default performer (organization) for the Schema Event type.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-schema_def_event_performer_person_id':	// Default Event Performer Person.
+				case 'tooltip-schema_def_event_performer_person_id':	// Default Performer Person.
 
 					$text = __( 'Select a default performer (person) for the Schema Event type.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-schema_def_event_location_id':	// Default Event Venue.
+				case 'tooltip-schema_def_event_location_id':		// Default Event Venue.
 
 					$text = __( 'Select a default venue (place / location) for the Schema Event type.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-schema_def_job_hiring_org_id':	// Default Job Hiring Organization.
+				case 'tooltip-schema_def_job_hiring_org_id':		// Default Job Hiring Organization.
 
 					$text = __( 'Select a default organization for the Schema JobPosting hiring organization.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-schema_def_job_location_id':	// Default Job Location.
+				case 'tooltip-schema_def_job_location_id':		// Default Job Location.
 
 					$text = __( 'Select a default place / location for the Schema JobPosting job location.', 'wpsso-schema-json-ld' );
 
