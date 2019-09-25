@@ -816,11 +816,13 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.10.1-dev.3 (2019/09/25)**
+**Version 2.11.0-dev.4 (2019/09/25)**
 
 * **New Features**
 	* None.
 * **Improvements**
+	* Moved Schema Job markup for the hiring organization and location to the `WpssoSchemaSingle::add_job_data()` method.
+	* Moved Schema Event markup for the location, organizers, and performers to the `WpssoSchemaSingle::add_event_data()` method.
 	* Minor update for Event Offer availability option CSS.
 * **Bugfixes**
 	* None.
@@ -887,7 +889,7 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 2.10.1-dev.3 =
+= 2.11.0-dev.4 =
 
 (2019/09/25) Minor update for Event Offer availability option CSS.
 
