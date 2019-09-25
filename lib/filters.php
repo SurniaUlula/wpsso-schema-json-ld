@@ -262,7 +262,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 					'schema_copyright_year'  => 'copyrightYear',
 				) as $md_key => $prop_name ) {
 
-					$md_val = $mod[ 'obj' ]->get_options( $mod[ 'id' ], $md_key, $filter_opts = true, $def_fallback = true );
+					$md_val = $mod[ 'obj' ]->get_options( $mod[ 'id' ], $md_key, $filter_opts = true, $pad_opts = true );
 
 					if ( $md_val === null || $md_val === '' || $md_val === 'none' ) {
 						continue;
@@ -309,7 +309,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 					'schema_prov_org_id' => 'provider',	// Fallback to 'schema_def_prov_org_id' value.
 				) as $md_key => $prop_name ) {
 	
-					$md_val = $mod[ 'obj' ]->get_options( $mod[ 'id' ], $md_key, $filter_opts = true, $def_fallback = true );
+					$md_val = $mod[ 'obj' ]->get_options( $mod[ 'id' ], $md_key, $filter_opts = true, $pad_opts = true );
 	
 					if ( $md_val === null || $md_val === '' || $md_val === 'none' ) {
 						continue;
@@ -737,18 +737,6 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				'schema_review_claim_first_url'      => '',						// First Appearance URL.
 				'schema_software_app_os'             => '',						// Operating System.
 			);
-
-			/*
-			foreach ( array(
-				'schema_addl_type_url' => SucomUtil::get_const( 'WPSSO_SCHEMA_ADDL_TYPE_URL_MAX', 5 ),
-				'schema_sameas_url'    => SucomUtil::get_const( 'WPSSO_SCHEMA_SAMEAS_URL_MAX', 5 ),
-				'schema_ispartof_url'  => SucomUtil::get_const( 'WPSSO_SCHEMA_ISPARTOF_URL_MAX', 20 ),
-			) as $opt_prefix => $max_num ) {
-				foreach ( range( 0, $max_num - 1, 1 ) as $key_num ) {
-					$schema_md_defs[ $opt_prefix . '_' . $key_num] = '';
-				}
-			}
-			*/
 
 			$md_defs = array_merge( $md_defs, $schema_md_defs );
 
@@ -1193,31 +1181,31 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_event_organizer_org_id':
+				case 'tooltip-meta-schema_event_organizer_org_id':	// Event Organizer Org.
 
 					$text = __( 'Select an organizer (organization) for the Schema Event type.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_event_organizer_person_id':
+				case 'tooltip-meta-schema_event_organizer_person_id':	// Event Organizer Person.
 
 					$text = __( 'Select an organizer (person) for the Schema Event type.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_event_performer_org_id':
+				case 'tooltip-meta-schema_event_performer_org_id':	// Event Performer Org.
 
 					$text = __( 'Select a performer (organization) for the Schema Event type.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_event_performer_person_id':
+				case 'tooltip-meta-schema_event_performer_person_id':	// Event Performer Person.
 
 					$text = __( 'Select a performer (person) for the Schema Event type.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_event_location_id':
+				case 'tooltip-meta-schema_event_location_id':		// Event Venue.
 
 					$text = __( 'Select a venue (place / location) for the Schema Event type.', 'wpsso-schema-json-ld' );
 

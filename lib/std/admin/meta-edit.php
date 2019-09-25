@@ -378,7 +378,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						'schema_event_offer_avail' => array(
 							'input_title'    => _x( 'Event Offer Availability', 'option label', 'wpsso-schema-json-ld' ),
 							'input_type'     => 'select',
-							'input_class'    => 'short',
+							'input_class'    => 'stock',
 							'select_options' => $this->p->cf[ 'form' ][ 'item_availability' ],
 							'select_default' => 'InStock',
 						),
