@@ -816,6 +816,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.10.1-dev.3 (2019/09/25)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Minor update for Event Offer availability option CSS.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+
 **Version 2.10.0 (2019/09/22)**
 
 Follows the latest Review snippet structured data guidelines from Google instead of the official Schema standard.
@@ -875,6 +886,10 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 	* None.
 
 == Upgrade Notice ==
+
+= 2.10.1-dev.3 =
+
+(2019/09/25) Minor update for Event Offer availability option CSS.
 
 = 2.10.0 =
 
