@@ -18,7 +18,7 @@
 <blockquote>
   <p><a href="https://wordpress.org/plugins/wpsso-schema-json-ld/#developers">NEW in the Schema JSON-LD Markup add-on</a>:</p>
   
-  <p>Automatically provides Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google (see the <a href="https://developers.google.com/search/docs/data-types/article#amp-sd">Google Article AMP structured data guidelines</a> webpage for details).</p>
+  <p>Automatically provides Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google (see the <a href="https://developers.google.com/search/docs/data-types/article#amp-sd">Google Article AMP structured data guidelines</a> webpage for details on this new Google requirement).</p>
 </blockquote>
 
 <p><strong>Offers <em>accurate</em> and <em>comprehensive</em> Schema JSON-LD markup:</strong></p>
