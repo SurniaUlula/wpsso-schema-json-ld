@@ -816,6 +816,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.12.0-dev.2 (TBD)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Updated the Document SSO metabox to offer multiple Job Locations.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+
 **Version 2.11.0 (2019/09/26)**
 
 * **New Features**
@@ -887,6 +898,10 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 	* None.
 
 == Upgrade Notice ==
+
+= 2.12.0-dev.2 =
+
+(TBD) Updated the Document SSO metabox to offer multiple Job Locations.
 
 = 2.11.0 =
 
