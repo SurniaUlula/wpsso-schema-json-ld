@@ -671,7 +671,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				'schema_howto_yield'                 => '',						// How-To Yield.
 				'schema_job_title'                   => '',						// Job Title.
 				'schema_job_hiring_org_id'           => $opts[ 'schema_def_job_hiring_org_id' ],	// Job Hiring Organization.
-				'schema_job_location_id'             => $opts[ 'schema_def_job_location_id' ],		// Job Location.
+				'schema_job_location_id_0'           => $opts[ 'schema_def_job_location_id_0' ],	// Job Location.
 				'schema_job_salary'                  => '',						// Base Salary.
 				'schema_job_salary_currency'         => $opts[ 'plugin_def_currency' ],			// Base Salary Currency.
 				'schema_job_salary_period'           => 'year',						// Base Salary per Year, Month, Week, Hour.
@@ -753,6 +753,9 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				16 => array(
 					'schema_def_course_provider_id' => 'schema_def_prov_org_id',
 				),
+				27 => array(
+					'schema_def_job_location_id'    => 'schema_def_job_location_id_0',
+				),
 			);
 
 			return $options_keys;
@@ -782,6 +785,9 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				),
 				26 => array(
 					'schema_part_of_url' => 'schema_ispartof_url',
+				),
+				27 => array(
+					'schema_job_location_id' => 'schema_job_location_id_0',
 				),
 			);
 
@@ -1293,9 +1299,9 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_job_location_id':
+				case 'tooltip-meta-schema_job_location_ids':
 
-					$text = __( 'Select a place / location for the Schema JobPosting job location.', 'wpsso-schema-json-ld' );
+					$text = __( 'Select one or more places / locations for the Schema JobPosting job location(s).', 'wpsso-schema-json-ld' );
 
 				 	break;
 

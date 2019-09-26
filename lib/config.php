@@ -16,8 +16,8 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssojson' => array(			// Plugin acronym.
-					'version'     => '2.11.0',	// Plugin version.
-					'opt_version' => '27',		// Increment when changing default option values.
+					'version'     => '2.12.0-dev.2',	// Plugin version.
+					'opt_version' => '28',		// Increment when changing default option values.
 					'short'       => 'WPSSO JSON',	// Short plugin name.
 					'name'        => 'WPSSO Schema JSON-LD Markup',
 					'desc'        => 'Schema JSON-LD markup and Google SEO Rich Results for Articles, Events, Local Business, Products, Recipes, Reviews and many more.',
@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 					'req'         => array(
 						'short'       => 'WPSSO Core',
 						'name'        => 'WPSSO Core',
-						'min_version' => '6.5.0',
+						'min_version' => '6.6.0-dev.2',
 					),
 					'assets' => array(
 						'icons' => array(
@@ -108,7 +108,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 					'schema_def_event_performer_person_id'   => 'none',	// Default Performer Person.
 					'schema_def_event_location_id'           => 'none',	// Default Venue.
 					'schema_def_job_hiring_org_id'           => 'none',	// Default Hiring Organization.
-					'schema_def_job_location_id'             => 'none',	// Default Job Location.
+					'schema_def_job_location_id_0'           => 'none',	// Default Job Location.
 				),
 			),
 			'menu' => array(

@@ -54,7 +54,7 @@ _x( 'Image ID', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Job Posting Information', 'metabox title', 'wpsso-schema-json-ld' );
 _x( 'Job Title', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Hiring Organization', 'option label', 'wpsso-schema-json-ld' );
-_x( 'Job Location', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Job Locations', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Base Salary', 'option label', 'wpsso-schema-json-ld' );
 _x( 'per', 'option comment', 'wpsso-schema-json-ld' );
 _x( 'Employment Type', 'option label', 'wpsso-schema-json-ld' );
