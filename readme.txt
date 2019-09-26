@@ -816,7 +816,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.11.0-rc.1 (2019/09/26)**
+**Version 2.11.0 (2019/09/26)**
 
 * **New Features**
 	* None.
@@ -888,11 +888,7 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 2.11.0-rc.1 =
+= 2.11.0 =
 
 (2019/09/26) Minor update for Event Offer availability option CSS in the Document SSO metabox.
-
-= 2.10.0 =
-
-(2019/09/22) Updated the 'aggregateRating' and 'review' property hooks to limit their addition to only Google approved Schema types.
 
