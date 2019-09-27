@@ -279,7 +279,7 @@ Additional e-Commerce plugins are also provided with the WPSSO Core Premium plug
 	* Job Posting Information <img class="readme-example" src="https://surniaulula.github.io/wpsso-schema-json-ld/images/settings/wpsso-json-social-metabox-recipe.png">
 		* Job Posting Job Title
 		* Job Posting Hiring Organization
-		* Job Posting Job Location
+		* Job Posting Job Locations
 		* Job Posting Base Salary
 		* Job Posting Employment Type
 		* Job Posting Expires
@@ -816,7 +816,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.12.0-dev.3 (TBD)**
+**Version 2.12.0-dev.4 (TBD)**
 
 * **New Features**
 	* None.
