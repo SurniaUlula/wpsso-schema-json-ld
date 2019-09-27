@@ -1655,7 +1655,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 				case 'tooltip-schema_def_job_location_id':		// Default Job Location.
 
-					$text = __( 'Select a default place / location for the Schema JobPosting job location.', 'wpsso-schema-json-ld' );
+					$text = __( 'Select a default place / location for the primary Schema JobPosting job location.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
