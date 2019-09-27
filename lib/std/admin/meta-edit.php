@@ -126,7 +126,8 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'label'    => _x( 'Schema Type', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_type',
 					'content'  => $form->get_select( 'schema_type', $schema_types,
-						'schema_type', '', true, false, true, 'on_change_unhide_rows' ),
+						$css_class = 'schema_type', $css_id = '', $is_assoc = true, $is_disabled = false,
+							$selected = true, $event_name = 'on_change_unhide_rows' ),
 				),
 				'wpssojson_pro_feature_msg' => array(
 					'table_row' => '<td colspan="2">' . $this->p->msgs->pro_feature( 'wpssojson' ) . '</td>',
