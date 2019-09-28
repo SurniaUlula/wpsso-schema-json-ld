@@ -816,7 +816,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.12.0-dev.4 (TBD)**
+**Version 2.12.0-dev.1 (TBD)**
 
 * **New Features**
 	* None.
