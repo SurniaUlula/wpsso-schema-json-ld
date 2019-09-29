@@ -2,7 +2,7 @@
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Schema JSON-LD Markup</td></tr>
-<tr><th align="right" valign="top" nowrap>Summary</th><td>Google Rich Results / Structured Data and Schema JSON-LD for Articles, Events, Images, Local Business, Products, Recipes, Reviews Videos, and more.</td></tr>
+<tr><th align="right" valign="top" nowrap>Summary</th><td>Schema JSON-LD and Google Rich Results / Structured Data for Articles, Events, Images, Local Business, Products, Recipes, Reviews Videos, and more.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>2.11.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.9</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 5.2.3</td></tr>
