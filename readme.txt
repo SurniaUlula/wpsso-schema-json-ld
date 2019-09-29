@@ -13,7 +13,7 @@ Tested Up To: 5.2.3
 WC Tested Up To: 3.7.0
 Stable Tag: 2.11.0
 
-Google Rich Results / Structured Data with Schema JSON-LD for Articles, Events, Local Business, Products, Recipes, Reviews and many more.
+Google Rich Results / Structured Data with Schema JSON-LD for Articles, Events, Images, Local Business, Products, Recipes, Reviews Videos, and more.
 
 == Description ==
 
