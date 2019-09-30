@@ -277,7 +277,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 				'schema_def_job_location_id' => array(
 					'label'    => _x( 'Default Job Location', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'schema_def_job_location_id',
-					'content'  => $this->form->get_select( 'schema_def_job_location_id_0', $plm_place_names,
+					'content'  => $this->form->get_select( 'schema_def_job_location_id', $plm_place_names,
 						$css_class = 'long_name', $css_id = '', $is_assoc = true, $plm_disable ) . $plm_req_msg,
 				),
 			);

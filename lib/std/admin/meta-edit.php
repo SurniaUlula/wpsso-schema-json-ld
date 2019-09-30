@@ -503,14 +503,18 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_select( 'schema_job_hiring_org_id', $org_site_names,
 						$css_class = 'long_name' ) . $org_req_msg,
 				),
-				'schema_job_location_ids' => array(
+				'schema_job_location_id' => array(
 					'tr_class' => $schema_type_tr_class[ 'job_posting' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Job Locations', 'option label', 'wpsso-schema-json-ld' ),
-					'tooltip'  => 'meta-schema_job_location_ids',
+					'label'    => _x( 'Job Location', 'option label', 'wpsso-schema-json-ld' ),
+					'tooltip'  => 'meta-schema_job_location_id',
+					'content'  => $form->get_no_select( 'schema_job_location_id', $plm_place_names,
+						$css_class = 'long_name' ) . $plm_req_msg,
+					/*
 					'content'  => $form->get_no_select_multi( 'schema_job_location_id', $plm_place_names,
 						$css_class = 'long_name', $css_id = '', $is_assoc = true, $repeat = 3, $plm_req_msg ),
+					*/
 				),
 				'schema_job_salary' => array(
 					'tr_class' => $schema_type_tr_class[ 'job_posting' ],
