@@ -615,6 +615,13 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			$def_schema_type    = $this->p->schema->get_mod_schema_type( $mod, $get_schema_id = true, $use_mod_opts = false );
 			$def_lang           = SucomUtil::get_locale( $mod );
 			$def_copyright_year = '';
+			$job_locations_max  = SucomUtil::get_const( 'WPSSO_SCHEMA_JOB_LOCATIONS_MAX', 5 );
+
+			/*
+			foreach ( range( 0, $job_locations_max - 1, 1 ) as $key_num ) {
+				$md_defs[ 'schema_job_location_id_' . $key_num ] = 'none';
+			}
+			*/
 
 			if ( $mod[ 'is_post' ] ) {
 

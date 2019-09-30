@@ -13,27 +13,27 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/filters.php:1095
+#: lib/filters.php:1102
 msgid ""
 "Select a Schema item type that best describes the main content of this "
 "webpage."
 msgstr ""
 
-#: lib/filters.php:1101
+#: lib/filters.php:1108
 msgid "A customized name / title for the Schema \"name\" property."
 msgstr ""
 
-#: lib/filters.php:1107
+#: lib/filters.php:1114
 msgid ""
 "A customized alternate name / title for the Schema \"alternateName\" "
 "property."
 msgstr ""
 
-#: lib/filters.php:1113
+#: lib/filters.php:1120
 msgid "A customized description for the Schema \"description\" property."
 msgstr ""
 
-#: lib/filters.php:1119
+#: lib/filters.php:1126
 msgid ""
 "Additional (and optional) type URLs for the item, typically used to specify "
 "more precise types from an external vocabulary in microdata syntax. For "
@@ -41,466 +41,466 @@ msgid ""
 "www.productontology.org/id/Hammer (see %s for more examples)."
 msgstr ""
 
-#: lib/filters.php:1125
+#: lib/filters.php:1132
 msgid ""
 "Additional (and optional) webpage reference URLs that unambiguously indicate "
 "the item's identity. For example, the URL of the item's Wikipedia page, "
 "Wikidata entry, IMDB page, official website, etc."
 msgstr ""
 
-#: lib/filters.php:1131
+#: lib/filters.php:1138
 msgid ""
 "Optional URLs to other Schema CreativeWorks that this content is a part of."
 msgstr ""
 
-#: lib/filters.php:1137
+#: lib/filters.php:1144
 msgid "The headline for the Schema CreativeWork type and/or its sub-types."
 msgstr ""
 
-#: lib/filters.php:1143
+#: lib/filters.php:1150
 msgid ""
 "The complete textual and searchable content for the Schema CreativeWork type "
 "and/or its sub-types."
 msgstr ""
 
-#: lib/filters.php:1149
+#: lib/filters.php:1156
 msgid ""
 "Comma delimited list of keywords or tags describing the Schema CreativeWork "
 "content."
 msgstr ""
 
-#: lib/filters.php:1155
+#: lib/filters.php:1162
 msgid "The language (aka locale) for the Schema CreativeWork content."
 msgstr ""
 
-#: lib/filters.php:1161
+#: lib/filters.php:1168
 msgid "The content of this Schema CreativeWork is family friendly."
 msgstr ""
 
-#: lib/filters.php:1167
+#: lib/filters.php:1174
 msgid ""
 "Select a publisher for the Schema CreativeWork type and/or its sub-types "
 "(Article, BlogPosting, WebPage, etc)."
 msgstr ""
 
-#: lib/filters.php:1173
+#: lib/filters.php:1180
 msgid ""
 "Select a service provider, service operator, or service performer (example: "
 "\"Netflix\")."
 msgstr ""
 
-#: lib/filters.php:1179
+#: lib/filters.php:1186
 msgid ""
 "The year during which the claimed copyright was first asserted for this "
 "creative work."
 msgstr ""
 
-#: lib/filters.php:1185
+#: lib/filters.php:1192
 msgid "The language (aka locale) for the Schema Event performance."
 msgstr ""
 
-#: lib/filters.php:1191
+#: lib/filters.php:1198
 msgid "Select an organizer (organization) for the Schema Event type."
 msgstr ""
 
-#: lib/filters.php:1197
+#: lib/filters.php:1204
 msgid "Select an organizer (person) for the Schema Event type."
 msgstr ""
 
-#: lib/filters.php:1203
+#: lib/filters.php:1210
 msgid "Select a performer (organization) for the Schema Event type."
 msgstr ""
 
-#: lib/filters.php:1209
+#: lib/filters.php:1216
 msgid "Select a performer (person) for the Schema Event type."
 msgstr ""
 
-#: lib/filters.php:1215
+#: lib/filters.php:1222
 msgid "Select a venue (place / location) for the Schema Event type."
 msgstr ""
 
-#: lib/filters.php:1221
+#: lib/filters.php:1228
 msgid "Select the event start date and time."
 msgstr ""
 
-#: lib/filters.php:1227
+#: lib/filters.php:1234
 msgid "Select the event end date and time."
 msgstr ""
 
-#: lib/filters.php:1233
+#: lib/filters.php:1240
 msgid "The date and time when tickets go on sale."
 msgstr ""
 
-#: lib/filters.php:1239
+#: lib/filters.php:1246
 msgid "The date and time when tickets are no longer on sale."
 msgstr ""
 
-#: lib/filters.php:1245
+#: lib/filters.php:1252
 msgid ""
 "One or more offers for the event, including the offer name, price and "
 "currency."
 msgstr ""
 
-#: lib/filters.php:1251
+#: lib/filters.php:1258
 msgid ""
 "A list of steps to complete this How-To, including the How-To Step Name and "
 "(optionally) a longer How-To Direction Text."
 msgstr ""
 
-#: lib/filters.php:1253
+#: lib/filters.php:1260
 msgid ""
 "You can also (optionally) define one or more How-To Sections to group "
 "individual steps."
 msgstr ""
 
-#: lib/filters.php:1259
+#: lib/filters.php:1266
 msgid "A list of supplies that are consumed when completing this How-To."
 msgstr ""
 
-#: lib/filters.php:1265
+#: lib/filters.php:1272
 msgid "A list of tools or objects that are required to complete this How-To."
 msgstr ""
 
-#: lib/filters.php:1272
+#: lib/filters.php:1279
 msgid ""
 "The total time it takes to prepare the items before executing the "
 "instruction steps."
 msgstr ""
 
-#: lib/filters.php:1279
+#: lib/filters.php:1286
 msgid ""
 "The total time required to perform the all instructions (including any "
 "preparation time)."
 msgstr ""
 
-#: lib/filters.php:1285
+#: lib/filters.php:1292
 msgid ""
 "The quantity made when following these How-To instructions (example: \"a "
 "paper airplane\", \"10 personalized candles\", etc.)."
 msgstr ""
 
-#: lib/filters.php:1291
+#: lib/filters.php:1298
 msgid ""
 "The title of this job, which may be different than the WordPress post / page "
 "title."
 msgstr ""
 
-#: lib/filters.php:1297
+#: lib/filters.php:1304
 msgid "Select a organization for the Schema JobPosting hiring organization."
 msgstr ""
 
-#: lib/filters.php:1303
+#: lib/filters.php:1310
 msgid "Select a place / location for the Schema JobPosting job location."
 msgstr ""
 
-#: lib/filters.php:1309
+#: lib/filters.php:1316
 msgid ""
 "Optionally provide details on the base salary. The base salary must be "
 "numeric, like 120000, 50.00, etc. Do not use spaces, commas, or currency "
 "symbols, as these are not valid numeric values."
 msgstr ""
 
-#: lib/filters.php:1315
+#: lib/filters.php:1322
 msgid ""
 "Check one or more Google approved employment types (see <a href=\"%s"
 "\">Google's Job Posting guidelines</a> for more information)."
 msgstr ""
 
-#: lib/filters.php:1321
+#: lib/filters.php:1328
 msgid ""
 "Select a job posting expiration date and time. If a job posting never "
 "expires, or you do not know when the job will expire, do not select an "
 "expiration date and time."
 msgstr ""
 
-#: lib/filters.php:1327
+#: lib/filters.php:1334
 msgid "The name of one or more actors appearing in the movie."
 msgstr ""
 
-#: lib/filters.php:1333
+#: lib/filters.php:1340
 msgid "The name of one or more directors of the movie."
 msgstr ""
 
-#: lib/filters.php:1339
+#: lib/filters.php:1346
 msgid "The principle production company or studio responsible for the movie."
 msgstr ""
 
-#: lib/filters.php:1345
+#: lib/filters.php:1352
 msgid "The total movie runtime from the start to the end of the credits."
 msgstr ""
 
-#: lib/filters.php:1351
+#: lib/filters.php:1358
 msgid ""
 "Optionally select a different organization for the Schema Organization item "
 "type and/or its sub-type (Airline, Corporation, School, etc). Select "
 "\"[None]\" to use the default organization details."
 msgstr ""
 
-#: lib/filters.php:1357
+#: lib/filters.php:1364
 msgctxt "user role"
 msgid "Person"
 msgstr ""
 
-#: lib/filters.php:1359
+#: lib/filters.php:1366
 msgid ""
 "Select a person from the list of eligible WordPress users. To be included in "
 "this list, a user must be member of the WordPress \"%s\" role."
 msgstr ""
 
-#: lib/filters.php:1365
+#: lib/filters.php:1372
 msgid "An optional heading / description of the question and it's answer."
 msgstr ""
 
-#: lib/filters.php:1367
+#: lib/filters.php:1374
 msgid ""
 "If the question is part of a larger group of questions on the same subject, "
 "then this would be an appropriate field to describe that subject (example: "
 "\"QA about a Flying Toaster\" )."
 msgstr ""
 
-#: lib/filters.php:1373
+#: lib/filters.php:1380
 msgid "A person's job title (for example, Financial Manager)."
 msgstr ""
 
-#: lib/filters.php:1379
+#: lib/filters.php:1386
 msgid ""
 "The cooking method used for this recipe (example: Baking, Frying, Steaming, "
 "etc.)"
 msgstr ""
 
-#: lib/filters.php:1385
+#: lib/filters.php:1392
 msgid "The total time it takes to cook this recipe."
 msgstr ""
 
-#: lib/filters.php:1391
+#: lib/filters.php:1398
 msgid ""
 "The course name for this recipe (example: Appetizer, Entr&eacute;e, Main "
 "Course / Main Dish, Dessert, Side-dish, etc.)."
 msgstr ""
 
-#: lib/filters.php:1397
+#: lib/filters.php:1404
 msgid ""
 "The type of cuisine for this recipe (example: French, Indian, Italian, "
 "Japanese, Thai, etc.)."
 msgstr ""
 
-#: lib/filters.php:1403
+#: lib/filters.php:1410
 msgid ""
 "A list of ingredients for this recipe (example: \"1 cup flour\", \"1 tsp salt"
 "\", etc.)."
 msgstr ""
 
-#: lib/filters.php:1409
+#: lib/filters.php:1416
 msgid ""
 "A list of instructions for this recipe (example: \"beat eggs\", \"add and "
 "mix flour\", etc.)."
 msgstr ""
 
-#: lib/filters.php:1415
+#: lib/filters.php:1422
 msgid ""
 "The serving size in volume or mass. A serving size is required to include "
 "nutrition information in the Schema recipe markup."
 msgstr ""
 
-#: lib/filters.php:1421
+#: lib/filters.php:1428
 msgid "The number of calories per serving."
 msgstr ""
 
-#: lib/filters.php:1427
+#: lib/filters.php:1434
 msgid "The number of grams of protein per serving."
 msgstr ""
 
-#: lib/filters.php:1433
+#: lib/filters.php:1440
 msgid "The number of grams of fiber per serving."
 msgstr ""
 
-#: lib/filters.php:1439
+#: lib/filters.php:1446
 msgid "The number of grams of carbohydrates per serving."
 msgstr ""
 
-#: lib/filters.php:1445
+#: lib/filters.php:1452
 msgid "The number of grams of sugar per serving."
 msgstr ""
 
-#: lib/filters.php:1451
+#: lib/filters.php:1458
 msgid "The number of milligrams of sodium per serving."
 msgstr ""
 
-#: lib/filters.php:1457
+#: lib/filters.php:1464
 msgid "The number of grams of fat per serving."
 msgstr ""
 
-#: lib/filters.php:1463
+#: lib/filters.php:1470
 msgid "The number of grams of trans fat per serving."
 msgstr ""
 
-#: lib/filters.php:1469
+#: lib/filters.php:1476
 msgid "The number of grams of saturated fat per serving."
 msgstr ""
 
-#: lib/filters.php:1475
+#: lib/filters.php:1482
 msgid "The number of grams of unsaturated fat per serving."
 msgstr ""
 
-#: lib/filters.php:1481
+#: lib/filters.php:1488
 msgid "The number of milligrams of cholesterol per serving."
 msgstr ""
 
-#: lib/filters.php:1487
+#: lib/filters.php:1494
 msgid ""
 "The quantity or servings made by this recipe (example: \"5 servings\", "
 "\"Serves 4-6\", \"Yields 10 burgers\", etc.)."
 msgstr ""
 
-#: lib/filters.php:1493
+#: lib/filters.php:1500
 msgid "A name for the subject being reviewed."
 msgstr ""
 
-#: lib/filters.php:1499
+#: lib/filters.php:1506
 msgid "A webpage URL for the subject being reviewed."
 msgstr ""
 
-#: lib/filters.php:1505
+#: lib/filters.php:1512
 msgid ""
 "A rating for the subject being reviewed, along with the low / high rating "
 "scale (default is 1 to 5)."
 msgstr ""
 
-#: lib/filters.php:1507
+#: lib/filters.php:1514
 msgid ""
 "If you are reviewing a claim, the following rating scale is used: 1 = False, "
 "2 = Mostly false, 3 = Half true, 4 = Mostly true, 5 = True."
 msgstr ""
 
-#: lib/filters.php:1513
+#: lib/filters.php:1520
 msgid ""
 "An alternate name / description for the rating value (example: False, "
 "Misleading, Accurate, etc.)."
 msgstr ""
 
-#: lib/filters.php:1519
+#: lib/filters.php:1526
 msgid ""
 "A short summary of specific claim(s) reviewed in the Schema ClaimReview."
 msgstr ""
 
-#: lib/filters.php:1521
+#: lib/filters.php:1528
 msgid ""
 "The summary should be less than 75 characters to minimize wrapping on mobile "
 "devices."
 msgstr ""
 
-#: lib/filters.php:1527
+#: lib/filters.php:1534
 msgid ""
 "The date when the claim was made or entered public discourse (for example, "
 "when it became popular in social networks)."
 msgstr ""
 
-#: lib/filters.php:1533
+#: lib/filters.php:1540
 msgid ""
 "The publisher of the claim - the publisher can be a person or an "
 "organization."
 msgstr ""
 
-#: lib/filters.php:1539
+#: lib/filters.php:1546
 msgid "The name of the person or organization that is making the claim."
 msgstr ""
 
-#: lib/filters.php:1545
+#: lib/filters.php:1552
 msgid ""
 "The home page of the organization making the claim or another definitive URL "
 "that provides information about the author making the claim, such as a "
 "person or organization's Wikipedia or Wikidata page."
 msgstr ""
 
-#: lib/filters.php:1551
+#: lib/filters.php:1558
 msgid "An optional webpage URL where this specific claim first appeared."
 msgstr ""
 
-#: lib/filters.php:1557
+#: lib/filters.php:1564
 msgid "Operating system supported (example: %s, etc.)."
 msgstr ""
 
-#: lib/filters.php:1579
+#: lib/filters.php:1586
 msgid ""
 "The maximum length used for the Schema CreativeWork text property value (the "
 "default is %d characters)."
 msgstr ""
 
-#: lib/filters.php:1585
+#: lib/filters.php:1592
 msgid ""
 "Add a text property to the Schema CreativeWork type with the complete "
 "textual content of the post / page."
 msgstr ""
 
-#: lib/filters.php:1591
+#: lib/filters.php:1598
 msgid ""
 "When a rating value for the webpage content is not available, a 5 star "
 "rating from the site organization can be added to the main Schema type "
 "markup."
 msgstr ""
 
-#: lib/filters.php:1593
+#: lib/filters.php:1600
 msgid ""
 "Visitor rating and review features are available from several supported "
 "plugins, including %s."
 msgstr ""
 
-#: lib/filters.php:1595
+#: lib/filters.php:1602
 msgid "See the <a href=\"%1$s\">%2$s</a> webpage for details."
 msgstr ""
 
-#: lib/filters.php:1596
+#: lib/filters.php:1603
 msgid "https://developers.google.com/search/docs/data-types/review-snippet"
 msgstr ""
 
-#: lib/filters.php:1597
+#: lib/filters.php:1604
 msgid "Google Review snippet structured data guidelines"
 msgstr ""
 
-#: lib/filters.php:1603
+#: lib/filters.php:1610
 msgid ""
 "Select a default family friendly value for the Schema CreativeWork type and/"
 "or its sub-types (Article, BlogPosting, WebPage, etc)."
 msgstr ""
 
-#: lib/filters.php:1609
+#: lib/filters.php:1616
 msgid ""
 "Select a default publisher for the Schema CreativeWork type and/or its sub-"
 "types (Article, BlogPosting, WebPage, etc)."
 msgstr ""
 
-#: lib/filters.php:1615
+#: lib/filters.php:1622
 msgid ""
 "Select a default service provider, service operator, or service performer "
 "(example: \"Netflix\")."
 msgstr ""
 
-#: lib/filters.php:1621
+#: lib/filters.php:1628
 msgid "Select a default organizer (organization) for the Schema Event type."
 msgstr ""
 
-#: lib/filters.php:1627
+#: lib/filters.php:1634
 msgid "Select a default organizer (person) for the Schema Event type."
 msgstr ""
 
-#: lib/filters.php:1633
+#: lib/filters.php:1640
 msgid "Select a default performer (organization) for the Schema Event type."
 msgstr ""
 
-#: lib/filters.php:1639
+#: lib/filters.php:1646
 msgid "Select a default performer (person) for the Schema Event type."
 msgstr ""
 
-#: lib/filters.php:1645
+#: lib/filters.php:1652
 msgid "Select a default venue (place / location) for the Schema Event type."
 msgstr ""
 
-#: lib/filters.php:1651
+#: lib/filters.php:1658
 msgid ""
 "Select a default organization for the Schema JobPosting hiring organization."
 msgstr ""
 
-#: lib/filters.php:1657
+#: lib/filters.php:1664
 msgid ""
 "Select a default place / location for the Schema JobPosting job location."
 msgstr ""
