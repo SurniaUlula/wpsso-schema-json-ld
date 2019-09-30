@@ -6,7 +6,7 @@ Domain Path: /languages
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://surniaulula.github.io/wpsso-schema-json-ld/assets/
-Tags: schema.org, structured data, image seo, video seo, woocommerce, video seo, news seo, rich results, schema, rich cards, knowledge graph, rating, review, recipe, event, product, qapage, howto
+Tags: schema.org, rich snippets, structured data, image seo, video seo, woocommerce, video seo, news seo, schema, rich cards, knowledge graph, rating, review, recipe, event, product, qapage, howto
 Contributors: jsmoriss
 Requires At Least: 3.9
 Tested Up To: 5.2.3
@@ -71,7 +71,7 @@ Additional e-Commerce plugins are also provided with the WPSSO Core Premium plug
 	* [schema.org/CreativeWork](https://schema.org/CreativeWork) (includes 86 Schema types)
 	* [schema.org/Thing](https://schema.org/Thing) (includes 478 Schema types)
 
-* Automatically includes Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google.
+* Automatically includes Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google Rich Results.
 
 * Customize the Schema type for each individual posts, pages, custom post types, tags, categories, custom taxonomy / terms, and attachment pages.
 
