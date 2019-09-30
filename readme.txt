@@ -816,7 +816,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.11.1-dev.1 (2019/09/30)**
+**Version 2.11.1 (2019/09/30)**
 
 * **New Features**
 	* None.
@@ -899,11 +899,7 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 2.11.1-dev.1 =
+= 2.11.1 =
 
 (2019/09/30) Minor update for How-To Step option layout in the Document SSO metabox.
-
-= 2.11.0 =
-
-(2019/09/26) Minor update for Event Offer availability option CSS in the Document SSO metabox.
 
