@@ -22,6 +22,7 @@ _x( 'Keywords', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Language', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Family Friendly', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Copyright Year', 'option label', 'wpsso-schema-json-ld' );
+_x( 'License URL', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Publisher', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Service Provider', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Event Information', 'metabox title', 'wpsso-schema-json-ld' );

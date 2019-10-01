@@ -246,9 +246,10 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 			/**
 			 * Property:
-			 *	inLanguage
-			 *	isFamilyFriendly
 			 *      copyrightYear
+			 *	license
+			 *	isFamilyFriendly
+			 *	inLanguage
 			 */
 			if ( ! empty( $mod[ 'obj' ] ) ) {
 
@@ -257,9 +258,10 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				 * value to a property array.
 				 */
 				foreach ( array(
-					'schema_lang'            => 'inLanguage',
-					'schema_family_friendly' => 'isFamilyFriendly',
 					'schema_copyright_year'  => 'copyrightYear',
+					'schema_license_url'     => 'license',
+					'schema_family_friendly' => 'isFamilyFriendly',
+					'schema_lang'            => 'inLanguage',
 				) as $md_key => $prop_name ) {
 
 					$md_val = $mod[ 'obj' ]->get_options( $mod[ 'id' ], $md_key, $filter_opts = true, $pad_opts = true );
@@ -647,6 +649,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				'schema_lang'                        => $def_lang,					// Language.
 				'schema_family_friendly'             => $opts[ 'schema_def_family_friendly' ],		// Family Friendly.
 				'schema_copyright_year'              => $def_copyright_year,				// Copyright Year.
+				'schema_license_url'                 => '',						// License URL.
 				'schema_pub_org_id'                  => $opts[ 'schema_def_pub_org_id' ],		// Publisher.
 				'schema_prov_org_id'                 => $opts[ 'schema_def_prov_org_id' ],		// Service Provider.
 				'schema_event_lang'                  => $def_lang,					// Event Language.
@@ -935,6 +938,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_addl_type_url':			// Microdata Type URLs.
 				case 'schema_sameas_url':			// Same-As URLs.
 				case 'schema_ispartof_url':			// Part of URL.
+				case 'schema_license_url':			// License URL.
 				case 'schema_review_item_url':			// Review Subject URL.
 				case 'schema_review_claim_author_url':		// Claim Author URL.
 				case 'schema_review_claim_first_url':		// First Appearance URL.
@@ -1097,97 +1101,103 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 			switch ( $msg_key ) {
 
-				case 'tooltip-meta-schema_type':		// Schema Type
+				case 'tooltip-meta-schema_type':		// Schema Type.
 
 					$text = __( 'Select a Schema item type that best describes the main content of this webpage.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_title':		// Name / Title
+				case 'tooltip-meta-schema_title':		// Name / Title.
 
 					$text = __( 'A customized name / title for the Schema "name" property.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_title_alt':		// Alternate Name
+				case 'tooltip-meta-schema_title_alt':		// Alternate Name.
 
 					$text = __( 'A customized alternate name / title for the Schema "alternateName" property.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_desc':		// Description
+				case 'tooltip-meta-schema_desc':		// Description.
 
 					$text = __( 'A customized description for the Schema "description" property.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_addl_type_url':	// Microdata Type URLs
+				case 'tooltip-meta-schema_addl_type_url':	// Microdata Type URLs.
 
 					$text = sprintf( __( 'Additional (and optional) type URLs for the item, typically used to specify more precise types from an external vocabulary in microdata syntax. For example, an additional Schema type URL for a product item could be http://www.productontology.org/id/Hammer (see %s for more examples).', 'wpsso-schema-json-ld' ), '<a href="http://www.productontology.org/">The Product Types Ontology</a>' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_sameas_url':		// Same-As URLs
+				case 'tooltip-meta-schema_sameas_url':		// Same-As URLs.
 
 					$text = __( 'Additional (and optional) webpage reference URLs that unambiguously indicate the item\'s identity. For example, the URL of the item\'s Wikipedia page, Wikidata entry, IMDB page, official website, etc.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_ispartof_url':	// Part of URL
+				case 'tooltip-meta-schema_ispartof_url':	// Part of URL.
 
 					$text = __( 'Optional URLs to other Schema CreativeWorks that this content is a part of.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_headline':		// Headline
+				case 'tooltip-meta-schema_headline':		// Headline.
 
 					$text = __( 'The headline for the Schema CreativeWork type and/or its sub-types.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_text':		// Full Text
+				case 'tooltip-meta-schema_text':		// Full Text.
 
 					$text = __( 'The complete textual and searchable content for the Schema CreativeWork type and/or its sub-types.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_keywords':		// Keywords
+				case 'tooltip-meta-schema_keywords':		// Keywords.
 
 					$text = __( 'Comma delimited list of keywords or tags describing the Schema CreativeWork content.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_lang':		// Language
+				case 'tooltip-meta-schema_lang':		// Language.
 
 					$text = __( 'The language (aka locale) for the Schema CreativeWork content.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_family_friendly':	// Family Friendly
+				case 'tooltip-meta-schema_family_friendly':	// Family Friendly.
 
 					$text = __( 'The content of this Schema CreativeWork is family friendly.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_pub_org_id':		// Publisher
+				case 'tooltip-meta-schema_pub_org_id':		// Publisher.
 
 					$text = __( 'Select a publisher for the Schema CreativeWork type and/or its sub-types (Article, BlogPosting, WebPage, etc).', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_prov_org_id':		// Service Provider
+				case 'tooltip-meta-schema_prov_org_id':		// Service Provider.
 
 					$text = __( 'Select a service provider, service operator, or service performer (example: "Netflix").', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_copyright_year':	// Copyright Year
+				case 'tooltip-meta-schema_copyright_year':	// Copyright Year.
 
 					$text = __( 'The year during which the claimed copyright was first asserted for this creative work.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_event_lang':
+				case 'tooltip-meta-schema_license_url':		// License URL.
+
+					$text = __( 'A license document URL that applies to this content', 'wpsso-schema-json-ld' );
+
+				 	break;
+
+				case 'tooltip-meta-schema_event_lang':			// Event Language.
 
 					$text = __( 'The language (aka locale) for the Schema Event performance.', 'wpsso-schema-json-ld' );
 

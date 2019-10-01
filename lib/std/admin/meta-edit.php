@@ -138,7 +138,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class'      => 'blank',
 					'label'         => _x( 'Name / Title', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'       => 'meta-schema_title',
-					'content'       => $form->get_no_input_value( $def_schema_title, 'wide' ),
+					'content'       => $form->get_no_input_value( $def_schema_title, $css_class = 'wide' ),
 				),
 				'schema_title_alt' => array(
 					'no_auto_draft' => true,
@@ -146,7 +146,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class'      => 'blank',
 					'label'         => _x( 'Alternate Name', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'       => 'meta-schema_title_alt',
-					'content'       => $form->get_no_input_value( $def_schema_title_alt, 'wide' ),
+					'content'       => $form->get_no_input_value( $def_schema_title_alt, $css_class = 'wide' ),
 				),
 				'schema_desc' => array(
 					'no_auto_draft' => true,
@@ -154,7 +154,8 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class'      => 'blank',
 					'label'         => _x( 'Description', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'       => 'meta-schema_desc',
-					'content'       => $form->get_no_textarea_value( $def_schema_desc, '', '', $schema_desc_max_len ),
+					'content'       => $form->get_no_textarea_value( $def_schema_desc, $css_class = '', $css_id = '',
+						$schema_desc_max_len ),
 				),
 				'schema_addl_type_url' => array(
 					'tr_class' => $form->get_css_class_hide_prefix( 'basic', 'schema_addl_type_url' ),
@@ -162,7 +163,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Microdata Type URLs', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_addl_type_url',
-					'content'  => $form->get_no_input_value( '', 'wide', '', '', $repeat = 2 ),
+					'content'  => $form->get_no_input_value( '', $css_class = 'wide', $css_id = '', '', $repeat = 2 ),
 				),
 				'schema_sameas_url' => array(
 					'tr_class' => $form->get_css_class_hide_prefix( 'basic', 'schema_sameas_url' ),
@@ -170,7 +171,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Same-As URLs', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_sameas_url',
-					'content'  => $form->get_no_input_value( '', 'wide', '', '', $repeat = 2 ),
+					'content'  => $form->get_no_input_value( '', $css_class = 'wide', $css_id = '', '', $repeat = 2 ),
 				),
 
 				/**
@@ -188,7 +189,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Part of URL', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_ispartof_url',
-					'content'  => $form->get_no_input_value( '', 'wide', '', '', $repeat = 2 ),
+					'content'  => $form->get_no_input_value( '', $css_class = 'wide', $css_id = '', '', $repeat = 2 ),
 				),
 				'schema_headline' => array(
 					'no_auto_draft' => true,
@@ -197,7 +198,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class'      => 'blank',
 					'label'         => _x( 'Headline', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'       => 'meta-schema_headline',
-					'content'       => $form->get_no_input_value( $def_schema_headline, 'wide' ),
+					'content'       => $form->get_no_input_value( $def_schema_headline, $css_class = 'wide' ),
 				),
 				'schema_text' => array(
 					'no_auto_draft' => true,
@@ -206,7 +207,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class'      => 'blank',
 					'label'         => _x( 'Full Text', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'       => 'meta-schema_text',
-					'content'       => $form->get_no_textarea_value( $def_schema_text, 'full_text' ),
+					'content'       => $form->get_no_textarea_value( $def_schema_text, $css_class = 'full_text' ),
 				),
 				'schema_keywords' => array(
 					'tr_class' => $schema_type_tr_class[ 'creative_work' ],
@@ -214,7 +215,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Keywords', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_keywords',
-					'content'  => $form->get_no_input_value( $def_schema_keywords, 'wide' ),
+					'content'  => $form->get_no_input_value( $def_schema_keywords, $css_class = 'wide' ),
 				),
 				'schema_lang' => array(
 					'tr_class' => $schema_type_tr_class[ 'creative_work' ],
@@ -231,7 +232,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'label'    => _x( 'Family Friendly', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_family_friendly',
 					'content'  => $form->get_no_select_none( 'schema_family_friendly',
-						$this->p->cf[ 'form' ][ 'yes_no' ], 'yes-no', '', $is_assoc = true ),
+						$this->p->cf[ 'form' ][ 'yes_no' ], $css_class = 'yes-no', $css_id = '', $is_assoc = true ),
 				),
 				'schema_copyright_year' => array(
 					'tr_class' => $schema_type_tr_class[ 'creative_work' ],
@@ -239,7 +240,14 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Copyright Year', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_copyright_year',
-					'content'  => $form->get_no_input_value( $def_copyright_year, 'year' ),
+					'content'  => $form->get_no_input_value( $def_copyright_year, $css_class = 'year' ),
+				),
+				'schema_license_url' => array(
+					'tr_class' => $schema_type_tr_class[ 'creative_work' ],
+					'th_class' => 'medium',
+					'label'    => _x( 'License URL', 'option label', 'wpsso-schema-json-ld' ),
+					'tooltip'  => 'meta-schema_license_url',
+					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
 				),
 				'schema_pub_org_id' => array(
 					'tr_class' => $schema_type_tr_class[ 'creative_work' ],
@@ -433,7 +441,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'How-To Supplies', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_howto_supplies',
-					'content'  => $form->get_no_input_value( '', 'long_name', '', '', $repeat = 5 ),
+					'content'  => $form->get_no_input_value( '', 'long_name', $css_id = '', '', $repeat = 5 ),
 				),
 				'schema_howto_tools' => array(
 					'tr_class' => $schema_type_tr_class[ 'how_to' ],
@@ -441,7 +449,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'How-To Tools', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_howto_tools',
-					'content'  => $form->get_no_input_value( '', 'long_name', '', '', $repeat = 5 ),
+					'content'  => $form->get_no_input_value( '', 'long_name', $css_id = '', '', $repeat = 5 ),
 				),
 				'schema_howto_steps' => array(
 					'tr_class' => $schema_type_tr_class[ 'how_to' ],
@@ -491,7 +499,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class'      => 'blank',
 					'label'         => _x( 'Job Title', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'       => 'meta-schema_job_title',
-					'content'       => $form->get_no_input_value( $def_schema_title, 'wide' ),
+					'content'       => $form->get_no_input_value( $def_schema_title, $css_class = 'wide' ),
 				),
 				'schema_job_hiring_org_id' => array(
 					'tr_class' => $schema_type_tr_class[ 'job_posting' ],
@@ -558,7 +566,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Cast Names', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_movie_actor_person_names',
-					'content'  => $form->get_no_input_value( '', 'long_name', '', '', $repeat = 5 ),
+					'content'  => $form->get_no_input_value( '', 'long_name', $css_id = '', '', $repeat = 5 ),
 				),
 				'schema_movie_director_person_names' => array(
 					'tr_class' => $schema_type_tr_class[ 'movie' ],
@@ -566,7 +574,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Director Names', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_movie_director_person_names',
-					'content'  => $form->get_no_input_value( '', 'long_name', '', '', $repeat = 2 ),
+					'content'  => $form->get_no_input_value( '', 'long_name', $css_id = '', '', $repeat = 2 ),
 				),
 				'schema_movie_prodco_org_id' => array(
 					'tr_class' => $schema_type_tr_class[ 'movie' ],
@@ -648,7 +656,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Product Length', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-product_length_value',
-					'content'  => $form->get_no_input( 'product_length_value', '', '', $placeholder = true ) .
+					'content'  => $form->get_no_input( 'product_length_value', '', $css_id = '', $placeholder = true ) .
 						WpssoAdmin::get_option_unit_comment( 'product_length_value' ),
 				),
 				'schema_product_width_value' => array(
@@ -657,7 +665,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Product Width', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-product_width_value',
-					'content'  => $form->get_no_input( 'product_width_value', '', '', $placeholder = true ) .
+					'content'  => $form->get_no_input( 'product_width_value', '', $css_id = '', $placeholder = true ) .
 						WpssoAdmin::get_option_unit_comment( 'product_width_value' ),
 				),
 				'schema_product_height_value' => array(
@@ -666,7 +674,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Product Height', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-product_height_value',
-					'content'  => $form->get_no_input( 'product_height_value', '', '', $placeholder = true ) .
+					'content'  => $form->get_no_input( 'product_height_value', '', $css_id = '', $placeholder = true ) .
 						WpssoAdmin::get_option_unit_comment( 'product_height_value' ),
 				),
 				'schema_product_depth_value' => array(
@@ -675,7 +683,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Product Depth', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-product_depth_value',
-					'content'  => $form->get_no_input( 'product_depth_value', '', '', $placeholder = true ) .
+					'content'  => $form->get_no_input( 'product_depth_value', '', $css_id = '', $placeholder = true ) .
 						WpssoAdmin::get_option_unit_comment( 'product_depth_value' ),
 				),
 				'schema_product_volume_value' => array(
@@ -684,7 +692,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Product Volume', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-product_volume_value',
-					'content'  => $form->get_no_input( 'product_volume_value', '', '', $placeholder = true ) .
+					'content'  => $form->get_no_input( 'product_volume_value', '', $css_id = '', $placeholder = true ) .
 						WpssoAdmin::get_option_unit_comment( 'product_volume_value' ),
 				),
 				'schema_product_gtin14' => array(
@@ -693,7 +701,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Product GTIN-14', 'option label', 'wpsso' ),
 					'tooltip'  => 'meta-product_gtin14',
-					'content'  => $form->get_no_input( 'product_gtin14', '', '', $placeholder = true ),
+					'content'  => $form->get_no_input( 'product_gtin14', '', $css_id = '', $placeholder = true ),
 				),
 				'schema_product_gtin13' => array(
 					'tr_class' => $schema_type_tr_class[ 'product' ],
@@ -701,7 +709,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Product GTIN-13/EAN', 'option label', 'wpsso' ),	// aka Product EAN
 					'tooltip'  => 'meta-product_gtin13',
-					'content'  => $form->get_no_input( 'product_gtin13', '', '', $placeholder = true ),
+					'content'  => $form->get_no_input( 'product_gtin13', '', $css_id = '', $placeholder = true ),
 				),
 				'schema_product_gtin12' => array(
 					'tr_class' => $schema_type_tr_class[ 'product' ],
@@ -709,7 +717,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Product GTIN-12/UPC', 'option label', 'wpsso' ),	// aka Product UPC
 					'tooltip'  => 'meta-product_gtin12',
-					'content'  => $form->get_no_input( 'product_gtin12', '', '', $placeholder = true ),
+					'content'  => $form->get_no_input( 'product_gtin12', '', $css_id = '', $placeholder = true ),
 				),
 				'schema_product_gtin8' => array(
 					'tr_class' => $schema_type_tr_class[ 'product' ],
@@ -717,7 +725,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Product GTIN-8', 'option label', 'wpsso' ),
 					'tooltip'  => 'meta-product_gtin8',
-					'content'  => $form->get_no_input( 'product_gtin8', '', '', $placeholder = true ),
+					'content'  => $form->get_no_input( 'product_gtin8', '', $css_id = '', $placeholder = true ),
 				),
 				'schema_product_gtin' => array(
 					'tr_class' => $schema_type_tr_class[ 'product' ],
@@ -725,7 +733,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Product GTIN', 'option label', 'wpsso' ),
 					'tooltip'  => 'meta-product_gtin',
-					'content'  => $form->get_no_input( 'product_gtin', '', '', $placeholder = true ),
+					'content'  => $form->get_no_input( 'product_gtin', '', $css_id = '', $placeholder = true ),
 				),
 
 				/**
@@ -743,7 +751,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'QA Heading', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_qa_desc',
-					'content'  => $form->get_no_input_value( '', 'wide' ),
+					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
 				),
 
 				/**
@@ -826,7 +834,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Recipe Ingredients', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_recipe_ingredients',
-					'content'  => $form->get_no_input_value( '', 'long_name', '', '', $repeat = 5 ),
+					'content'  => $form->get_no_input_value( '', 'long_name', $css_id = '', '', $repeat = 5 ),
 				),
 				'schema_recipe_instructions' => array(
 					'tr_class' => $schema_type_tr_class[ 'recipe' ],
@@ -834,7 +842,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Recipe Instructions', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_recipe_instructions',
-					'content'  => $form->get_no_input_value( '', 'wide', '', '', $repeat = 5 ),
+					'content'  => $form->get_no_input_value( '', $css_class = 'wide', $css_id = '', '', $repeat = 5 ),
 				),
 
 				/**
@@ -989,7 +997,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank value_req',
 					'label'    => _x( 'Review Subject URL', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_url',
-					'content'  => $form->get_no_input_value( '', 'wide' ),
+					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
 				),
 				'schema_review_item_name' => array(
 					'tr_class' => $schema_type_tr_class[ 'review' ],
@@ -997,7 +1005,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank value_req',
 					'label'    => _x( 'Review Subject Name', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_name',
-					'content'  => $form->get_no_input_value( '', 'wide' ),
+					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
 				),
 
 				/**
@@ -1015,7 +1023,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Claim Short Summary', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_claim_reviewed',
-					'content'  => $form->get_no_input_value( '', 'wide' ),
+					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
 				),
 				'schema_review_claim_made' => array(
 					'tr_class' => $schema_type_tr_class[ 'review_claim' ],
@@ -1039,7 +1047,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Claim Author Name', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_claim_author_name',
-					'content'  => $form->get_no_input_value( '', 'wide' ),
+					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
 				),
 				'schema_review_claim_author_url' => array(
 					'tr_class' => $schema_type_tr_class[ 'review_claim' ],
@@ -1047,7 +1055,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Claim Author URL', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_claim_author_url',
-					'content'  => $form->get_no_input_value( '', 'wide' ),
+					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
 				),
 				'schema_review_claim_first_url' => array(
 					'tr_class' => $schema_type_tr_class[ 'review_claim' ],
@@ -1055,7 +1063,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'First Appearance URL', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_claim_first_url',
-					'content'  => $form->get_no_input_value( '', 'wide' ),
+					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
 				),
 
 				/**
@@ -1073,7 +1081,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Operating System', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_software_app_os',
-					'content'  => $form->get_no_input_value( '', 'wide' ),
+					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
 				),
 			);
 
