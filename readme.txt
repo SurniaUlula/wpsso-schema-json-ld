@@ -816,7 +816,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.12.0-dev.2 (2019/10/01)**
+**Version 2.12.0-dev.3 (2019/10/02)**
 
 * **New Features**
 	* None.
@@ -910,9 +910,9 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 2.12.0-dev.2 =
+= 2.12.0-dev.3 =
 
-(2019/10/01) Added a License URL option for Schema CreativeWork in the Document SSO metabox.
+(2019/10/02) Added a License URL option for Schema CreativeWork in the Document SSO metabox.
 
 = 2.11.1 =
 
