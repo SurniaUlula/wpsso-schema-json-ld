@@ -1200,7 +1200,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 				case 'tooltip-meta-schema_license_url':		// License URL.
 
-					$text = __( 'A license document URL that applies to this content', 'wpsso-schema-json-ld' );
+					$text = __( 'A license document URL that applies to this content.', 'wpsso-schema-json-ld' );
 
 				 	break;
 

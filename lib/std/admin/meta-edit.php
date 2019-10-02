@@ -245,6 +245,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				'schema_license_url' => array(
 					'tr_class' => $schema_type_tr_class[ 'creative_work' ],
 					'th_class' => 'medium',
+					'td_class' => 'blank',
 					'label'    => _x( 'License URL', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_license_url',
 					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
