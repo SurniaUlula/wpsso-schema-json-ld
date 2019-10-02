@@ -469,7 +469,10 @@ if ( ! class_exists( 'WpssoJsonSchema' ) ) {
 			return $posts_count;
 		}
 
-		public static function add_media_data( &$json_data, $mod, $mt_og, $size_names = null, $add_video = true ) {
+		/**
+		 * $size_names can be null, a string, or an array.
+		 */
+		public static function add_media_data( &$json_data, $mod, $mt_og, $size_names = null, $add_video = true, $alt_size_names = null ) {
 
 			$wpsso =& Wpsso::get_instance();
 
@@ -487,49 +490,26 @@ if ( ! class_exists( 'WpssoJsonSchema' ) ) {
 			$vid_added  = 0;
 			$max_nums   = $wpsso->util->get_max_nums( $mod, 'schema' );
 
+			/**
+			 * $size_names must be an array of one or more image size names.
+			 */
 			if ( empty( $size_names ) ) {
 				$size_names = array( $wpsso->lca . '-schema' );
-			} elseif ( is_string( $size_names ) ) {	// Just in case.
+			} elseif ( is_string( $size_names ) ) {
 				$size_names = array( $size_names );
 			}
 
 			/**
-			 * Include video preview images first.
+			 * $alt_size_names must be empty, or an array of one or more image size names. Images created for
+			 * $alt_size_names are not added to the markup - they are only created to make sure the image file is
+			 * available, and to generate image related notices.
 			 */
-			if ( $wpsso->debug->enabled ) {
-				$wpsso->debug->log( 'getting preview image(s)' );
+			if ( empty( $alt_size_names ) ) {
+				$alt_size_names = null;
+			} elseif ( is_string( $alt_size_names ) ) {
+				$alt_size_names = array( $alt_size_names );
 			}
 
-			if ( ! empty( $mt_og[ 'og:video' ] ) && is_array( $mt_og[ 'og:video' ] ) ) {
-
-				/**
-				 * Prevent duplicates by excluding text/html videos.
-				 */
-				foreach ( $mt_og[ 'og:video' ] as $num => $og_single_video ) {
-
-					if ( isset( $og_single_video[ 'og:video:type' ] ) && $og_single_video[ 'og:video:type' ] !== 'text/html' ) {
-
-						if ( SucomUtil::get_mt_media_url( $og_single_video ) ) {
-							$prev_count++;
-						}
-
-						$og_images[] = SucomUtil::preg_grep_keys( '/^og:image/', $og_single_video );
-					}
-				}
-
-				if ( $prev_count > 0 ) {
-
-					$max_nums[ 'schema_img_max' ] -= $prev_count;
-
-					if ( $wpsso->debug->enabled ) {
-						$wpsso->debug->log( $prev_count . ' preview images found (schema_img_max adjusted to ' . $max_nums[ 'schema_img_max' ] . ')' );
-					}
-				}
-			}
-
-			/**
-			 * All other images.
-			 */
 			if ( $wpsso->debug->enabled ) {
 				$wpsso->debug->log( 'adding all image(s)' );
 			}
@@ -537,6 +517,12 @@ if ( ! class_exists( 'WpssoJsonSchema' ) ) {
 			foreach ( $size_names as $size_name ) {
 				$og_images = array_merge( $og_images, $wpsso->og->get_all_images( $max_nums[ 'schema_img_max' ],
 					$size_name, $mod, $check_dupes = true, $md_pre = 'schema' ) );
+			}
+
+			if ( ! empty( $alt_size_names ) ) {
+				foreach ( $alt_size_names as $size_name ) {
+					$wpsso->og->get_all_images( $max_nums[ 'schema_img_max' ], $size_name, $mod, $check_dupes = true, $md_pre = 'schema' );
+				}
 			}
 
 			if ( ! empty( $og_images ) ) {
@@ -594,8 +580,8 @@ if ( ! class_exists( 'WpssoJsonSchema' ) ) {
 			 * Redefine mainEntityOfPage property for Attachment pages.
 			 *
 			 * If this is an attachment page, and the post mime_type is a known media type (image, video, or audio),
-			 * then set the first media array element mainEntityOfPage to the page url, and set the page mainEntityOfPage
-			 * property to false (so it doesn't get defined later).
+			 * then set the first media array element mainEntityOfPage to the page url, and set the page
+			 * mainEntityOfPage property to false (so it doesn't get defined later).
 			 */
 			$main_prop = $mod[ 'is_post' ] && $mod[ 'post_type' ] === 'attachment' ? preg_replace( '/\/.*$/', '', $mod[ 'post_mime' ] ) : '';
 

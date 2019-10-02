@@ -822,6 +822,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None.
 * **Improvements**
 	* Added a License URL option for Schema CreativeWork in the Document SSO metabox.
+	* Added pre-rendering of Article AMP images when creating Schema Article non-AMP markup.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -912,7 +913,7 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 = 2.12.0-dev.3 =
 
-(2019/10/02) Added a License URL option for Schema CreativeWork in the Document SSO metabox.
+(2019/10/02) Added a License URL option for Schema CreativeWork in the Document SSO metabox. Added pre-rendering of Article AMP images when creating Schema Article non-AMP markup.
 
 = 2.11.1 =
 

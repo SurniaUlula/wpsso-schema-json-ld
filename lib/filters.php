@@ -144,23 +144,30 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			 */
 			if ( $this->p->schema->is_schema_type_child( $page_type_id, 'article' ) ) {
 
-				if ( SucomUtil::is_amp() ) {
-					$size_names = array(
-						$this->p->lca . '-schema-article-1-1',
-						$this->p->lca . '-schema-article-4-3',
-						$this->p->lca . '-schema-article-16-9',
-					);
-				} else {
-					$size_names = array( $this->p->lca . '-schema-article' );
-				}
+				$amp_size_names = array(
+					$this->p->lca . '-schema-article-1-1',
+					$this->p->lca . '-schema-article-4-3',
+					$this->p->lca . '-schema-article-16-9',
+				);
 
-				$org_logo_key = 'org_banner_url';
+				if ( SucomUtil::is_amp() ) {
+
+					$size_names     = $amp_size_names;
+					$alt_size_names = null;
+					$org_logo_key   = 'org_banner_url';
+
+				} else {
+
+					$size_names     = array( $this->p->lca . '-schema-article' );
+					$alt_size_names = empty( $this->p->avail[ 'amp' ][ 'any' ] ) ? null : $amp_size_names;
+					$org_logo_key   = 'org_banner_url';
+				}
 
 			} else {
 
-				$size_names = array( $this->p->lca . '-schema' );
-
-				$org_logo_key = 'org_logo_url';
+				$size_names     = array( $this->p->lca . '-schema' );
+				$alt_size_names = null;
+				$org_logo_key   = 'org_logo_url';
 			}
 
 			/**
@@ -347,7 +354,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			 *      image as https://schema.org/ImageObject
 			 *      video as https://schema.org/VideoObject
 			 */
-			WpssoJsonSchema::add_media_data( $ret, $mod, $mt_og, $size_names, $add_video = true );
+			WpssoJsonSchema::add_media_data( $ret, $mod, $mt_og, $size_names, $add_video = true, $alt_size_names );
 
 			/**
 			 * Check only published posts or other non-post objects.
