@@ -10,7 +10,7 @@ Tags: schema.org, rich snippets, structured data, image seo, video seo, woocomme
 Contributors: jsmoriss
 Requires At Least: 3.9
 Tested Up To: 5.2.3
-WC Tested Up To: 3.7.0
+WC Tested Up To: 3.7.1
 Stable Tag: 2.12.0
 
 Schema JSON-LD and Google Rich Results / Structured Data for Articles, Events, Images, Local Business, Products, Recipes, Reviews Videos, and more.
