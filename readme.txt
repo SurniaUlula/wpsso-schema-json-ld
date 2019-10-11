@@ -817,6 +817,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.13.0-dev.1 (2019/10/11)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Added a new "Financial Product Information" section in the Document SSO metabox.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+
 **Version 2.12.0 (2019/10/04)**
 
 * **New Features**
@@ -911,6 +922,10 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 	* None.
 
 == Upgrade Notice ==
+
+= 2.13.0-dev.1 =
+
+(2019/10/11) Added a new "Financial Product Information" section in the Document SSO metabox.
 
 = 2.12.0 =
 
