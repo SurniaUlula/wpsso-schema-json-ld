@@ -901,7 +901,8 @@ if ( ! class_exists( 'WpssoJsonSchema' ) ) {
 				'creative_work'  => $wpsso->schema->get_children_css_class( 'creative.work', 'hide_schema_type' ),
 				'course'         => $wpsso->schema->get_children_css_class( 'course', 'hide_schema_type' ),
 				'event'          => $wpsso->schema->get_children_css_class( 'event', 'hide_schema_type' ),
-				'how_to'         => $wpsso->schema->get_children_css_class( 'how.to', 'hide_schema_type', '/^recipe$/' ),	// Exclude recipe.
+				'financial_prod' => $wpsso->schema->get_children_css_class( 'service.financial.product', 'hide_schema_type' ),
+				'how_to'         => $wpsso->schema->get_children_css_class( 'how.to', 'hide_schema_type', $exclude_match = '/^recipe$/' ),
 				'job_posting'    => $wpsso->schema->get_children_css_class( 'job.posting', 'hide_schema_type' ),
 				'local_business' => $wpsso->schema->get_children_css_class( 'local.business', 'hide_schema_type' ),
 				'movie'          => $wpsso->schema->get_children_css_class( 'movie', 'hide_schema_type' ),

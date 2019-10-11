@@ -398,6 +398,16 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				),
 
 				/**
+				 * Schema FinancialProduct
+				 */
+				'subsection_financial_prod' => array(
+					'tr_class' => $schema_type_tr_class[ 'financial_prod' ],
+					'td_class' => 'subsection',
+					'header'   => 'h5',
+					'label'    => _x( 'Financial Product Information', 'metabox title', 'wpsso-schema-json-ld' ),
+				),
+
+				/**
 				 * Schema HowTo
 				 */
 				'subsection_howto' => array(

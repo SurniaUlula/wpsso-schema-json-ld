@@ -41,6 +41,7 @@ _x( 'Event Offer Name', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Event Offer Price', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Event Offer Currency', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Event Offer Availability', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Financial Product Information', 'metabox title', 'wpsso-schema-json-ld' );
 _x( 'How-To Information', 'metabox title', 'wpsso-schema-json-ld' );
 _x( 'How-To Makes', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Preparation Time', 'option label', 'wpsso-schema-json-ld' );
