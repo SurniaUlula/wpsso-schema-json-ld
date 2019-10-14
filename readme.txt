@@ -9,7 +9,7 @@ Assets URI: https://surniaulula.github.io/wpsso-schema-json-ld/assets/
 Tags: schema.org, rich snippets, structured data, image seo, video seo, woocommerce, video seo, news seo, schema, rich cards, knowledge graph, rating, review, recipe, event, product, qapage, howto
 Contributors: jsmoriss
 Requires At Least: 3.9
-Tested Up To: 5.2.3
+Tested Up To: 5.2.4
 WC Tested Up To: 3.7.1
 Stable Tag: 2.12.0
 
@@ -817,7 +817,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.13.0-dev.2 (2019/10/14)**
+**Version 2.13.0-b.1 (2019/10/14)**
 
 * **New Features**
 	* None.
@@ -826,7 +826,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* None.
+	* Maintenance release for WPSSO Core v6.8.0.
 
 **Version 2.12.0 (2019/10/04)**
 
@@ -923,9 +923,9 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 2.13.0-dev.2 =
+= 2.13.0-b.1 =
 
-(2019/10/14) None.
+(2019/10/14) Maintenance release for WPSSO Core v6.8.0.
 
 = 2.12.0 =
 
