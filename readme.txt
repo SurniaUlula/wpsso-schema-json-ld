@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires At Least: 3.9
 Tested Up To: 5.2.4
 WC Tested Up To: 3.7.1
-Stable Tag: 2.12.0
+Stable Tag: 2.13.0
 
 Schema JSON-LD and Google Rich Results / Structured Data for Articles, Events, Images, Local Business, Products, Recipes, Reviews Videos, and more.
 
@@ -926,8 +926,4 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 = 2.13.0 =
 
 (2019/10/14) Maintenance release for WPSSO Core v6.8.0.
-
-= 2.12.0 =
-
-(2019/10/04) Added a License URL option for Schema CreativeWork in the Document SSO metabox. Added pre-rendering of Article AMP images when creating Schema Article non-AMP markup.
 
