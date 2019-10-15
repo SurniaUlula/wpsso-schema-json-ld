@@ -909,7 +909,7 @@ msgstr ""
 #: lib/gettext-pro.php:70 lib/pro/admin/meta-edit.php:617
 #: lib/std/admin/meta-edit.php:624
 msgctxt "option label"
-msgid "Organization"
+msgid "Alternate Organization"
 msgstr ""
 
 #: lib/gettext-pro.php:71 lib/pro/admin/meta-edit.php:630
@@ -921,7 +921,7 @@ msgstr ""
 #: lib/gettext-pro.php:72 lib/pro/admin/meta-edit.php:635
 #: lib/std/admin/meta-edit.php:643
 msgctxt "option label"
-msgid "Person"
+msgid "Alternate Person"
 msgstr ""
 
 #: lib/gettext-pro.php:73 lib/pro/admin/meta-edit.php:650
