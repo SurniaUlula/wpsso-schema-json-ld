@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Schema JSON-LD Markup 2.13.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2019-10-14 15:29-0700\n"
-"PO-Revision-Date: 2019-10-14 15:30-0700\n"
+"POT-Creation-Date: 2019-10-15 14:45-0700\n"
+"PO-Revision-Date: 2019-10-15 14:46-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -810,8 +810,8 @@ msgstr "Informations d'organisation"
 #: lib/gettext-pro.php:70 lib/pro/admin/meta-edit.php:617
 #: lib/std/admin/meta-edit.php:624
 msgctxt "option label"
-msgid "Organization"
-msgstr "Organisation"
+msgid "Alternate Organization"
+msgstr "Autre organisation"
 
 #: lib/gettext-pro.php:71 lib/pro/admin/meta-edit.php:630
 #: lib/std/admin/meta-edit.php:637
@@ -822,8 +822,8 @@ msgstr "Informations de personne"
 #: lib/gettext-pro.php:72 lib/pro/admin/meta-edit.php:635
 #: lib/std/admin/meta-edit.php:643
 msgctxt "option label"
-msgid "Person"
-msgstr "Personne"
+msgid "Alternate Person"
+msgstr "Autre personne"
 
 #: lib/gettext-pro.php:73 lib/pro/admin/meta-edit.php:650
 #: lib/std/admin/meta-edit.php:658
@@ -1363,3 +1363,11 @@ msgstr "JS Morisset"
 #. Author URI of the plugin/theme
 msgid "https://wpsso.com/"
 msgstr "https://wpsso.com/"
+
+#~ msgctxt "option label"
+#~ msgid "Organization"
+#~ msgstr "Organisation"
+
+#~ msgctxt "option label"
+#~ msgid "Person"
+#~ msgstr "Personne"
