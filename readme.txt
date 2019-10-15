@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires At Least: 3.9
 Tested Up To: 5.2.4
 WC Tested Up To: 3.7.1
-Stable Tag: 2.13.0
+Stable Tag: 2.13.1
 
 Schema JSON-LD and Google Rich Results / Structured Data for Articles, Events, Images, Local Business, Products, Recipes, Reviews Videos, and more.
 
@@ -813,7 +813,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.13.0 (2019/10/14)**
+**Version 2.13.1 (2019/10/14)**
 
 * **New Features**
 	* None.
@@ -822,7 +822,8 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* Maintenance release for WPSSO Core v6.8.0.
+	* Maintenance release for WPSSO Core v6.8.0:
+		* Removed a call to WpssoSchema `filter_json_data_https_schema_org_localbusiness()` since it is no longer exists - local businesses are now automatically filtered through the organization filter.
 
 **Version 2.12.0 (2019/10/04)**
 
@@ -919,7 +920,7 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 2.13.0 =
+= 2.13.1 =
 
 (2019/10/14) Maintenance release for WPSSO Core v6.8.0.
 
