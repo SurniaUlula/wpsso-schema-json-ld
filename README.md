@@ -8,18 +8,12 @@
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 5.2.4</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
 <tr><th align="right" valign="top" nowrap>License</th><td><a href="https://www.gnu.org/licenses/gpl.txt">GPLv3</a></td></tr>
-<tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>schema.org, rich snippets, structured data, image seo, video seo, woocommerce, video seo, news seo, schema, rich cards, knowledge graph, rating, review, recipe, event, product, qapage, howto</td></tr>
+<tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>schema.org, rich snippets, structured data, amp, woocommerce, image seo, video seo, news seo, schema, rich results, knowledge graph, rating, review, recipe, event, product</td></tr>
 </table>
 
 <h2>Description</h2>
 
 <p style="margin:0;"><img class="readme-icon" src="https://surniaulula.github.io/wpsso-schema-json-ld/assets/icon-256x256.png"></p>
-
-<blockquote>
-  <p><a href="https://wordpress.org/plugins/wpsso-schema-json-ld/#developers">NEW in the Schema JSON-LD Markup add-on</a>:</p>
-  
-  <p>Includes new Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google (see the <a href="https://developers.google.com/search/docs/data-types/article#amp-sd">Google Article AMP structured data guidelines</a> webpage for details on this new Google requirement).</p>
-</blockquote>
 
 <p><strong>Offers accurate and comprehensive Schema JSON-LD markup:</strong></p>
 
@@ -72,7 +66,7 @@
 <li><a href="https://schema.org/CreativeWork">schema.org/CreativeWork</a> (includes 86 Schema types)</li>
 <li><a href="https://schema.org/Thing">schema.org/Thing</a> (includes 478 Schema types)</li>
 </ul></li>
-<li><p>Automatically includes Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google Rich Results.</p></li>
+<li><p>Automatically includes Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google Rich Results (see the <a href="https://developers.google.com/search/docs/data-types/article#amp-sd">Google Article AMP structured data guidelines</a> for details on this new requirement from Google).</p></li>
 <li><p>Customize the Schema type for each individual posts, pages, custom post types, tags, categories, custom taxonomy / terms, and attachment pages.</p></li>
 <li><p>Provides complete Schema ImageObject SEO markup with attachment data from the WordPress Media Library (name, alternateName, alternativeHeadline, caption, description, fileFormat, uploadDate, and more).</p></li>
 <li><p>Built-in support for <a href="https://wordpress.org/plugins/amp/">AMP</a>, <a href="https://wordpress.org/plugins/better-amp/">Better AMP</a>, and <a href="https://wordpress.org/plugins/accelerated-mobile-pages/">AMP for WP</a> plugins.</p></li>

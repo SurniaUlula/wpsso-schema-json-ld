@@ -6,7 +6,7 @@ Domain Path: /languages
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://surniaulula.github.io/wpsso-schema-json-ld/assets/
-Tags: schema.org, rich snippets, structured data, image seo, video seo, woocommerce, video seo, news seo, schema, rich cards, knowledge graph, rating, review, recipe, event, product, qapage, howto
+Tags: schema.org, rich snippets, structured data, amp, woocommerce, image seo, video seo, news seo, schema, rich results, knowledge graph, rating, review, recipe, event, product
 Contributors: jsmoriss
 Requires At Least: 3.9
 Tested Up To: 5.2.4
@@ -18,10 +18,6 @@ Schema JSON-LD and Google Rich Results / Structured Data for Articles, Events, I
 == Description ==
 
 <p style="margin:0;"><img class="readme-icon" src="https://surniaulula.github.io/wpsso-schema-json-ld/assets/icon-256x256.png"></p>
-
-> [NEW in the Schema JSON-LD Markup add-on](https://wordpress.org/plugins/wpsso-schema-json-ld/#developers):
-> 
-> Includes new Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google (see the [Google Article AMP structured data guidelines](https://developers.google.com/search/docs/data-types/article#amp-sd) webpage for details on this new Google requirement).
 
 **Offers accurate and comprehensive Schema JSON-LD markup:**
 
@@ -71,7 +67,7 @@ Additional e-Commerce plugins are also provided with the WPSSO Core Premium plug
 	* [schema.org/CreativeWork](https://schema.org/CreativeWork) (includes 86 Schema types)
 	* [schema.org/Thing](https://schema.org/Thing) (includes 478 Schema types)
 
-* Automatically includes Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google Rich Results.
+* Automatically includes Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google Rich Results (see the [Google Article AMP structured data guidelines](https://developers.google.com/search/docs/data-types/article#amp-sd) for details on this new requirement from Google).
 
 * Customize the Schema type for each individual posts, pages, custom post types, tags, categories, custom taxonomy / terms, and attachment pages.
 
