@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD (WPSSO JSON) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 2.13.0\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 2.13.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2019-10-15 14:45-0700\n"
-"PO-Revision-Date: 2019-10-15 14:46-0700\n"
+"POT-Creation-Date: 2019-10-17 08:23-0700\n"
+"PO-Revision-Date: 2019-10-17 08:24-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -503,8 +503,8 @@ msgstr "Informations d'oeuvre créative"
 #: lib/gettext-pro.php:18 lib/pro/admin/meta-edit.php:211
 #: lib/std/admin/meta-edit.php:190
 msgctxt "option label"
-msgid "Part of URL"
-msgstr "Partie de l'URL"
+msgid "Is Part of URL"
+msgstr "Fait partie de l'URL"
 
 #: lib/gettext-pro.php:19 lib/pro/admin/meta-edit.php:220
 #: lib/std/admin/meta-edit.php:199
@@ -557,8 +557,8 @@ msgstr "Éditeur"
 #: lib/gettext-pro.php:27 lib/pro/admin/meta-edit.php:282
 #: lib/std/admin/meta-edit.php:266
 msgctxt "option label"
-msgid "Service Provider"
-msgstr "Fournisseur de service"
+msgid "Provider"
+msgstr "Fournisseur"
 
 #: lib/gettext-pro.php:28 lib/pro/admin/meta-edit.php:295
 #: lib/std/admin/meta-edit.php:279 lib/submenu/schema-general.php:230
@@ -1293,8 +1293,8 @@ msgstr "Éditeur par défaut"
 
 #: lib/submenu/schema-general.php:218
 msgctxt "option label"
-msgid "Default Service Provider"
-msgstr "Fournisseur de service par défaut"
+msgid "Default Provider"
+msgstr "Fournisseur par défaut"
 
 #: lib/submenu/schema-general.php:233
 msgctxt "option label"
@@ -1363,11 +1363,3 @@ msgstr "JS Morisset"
 #. Author URI of the plugin/theme
 msgid "https://wpsso.com/"
 msgstr "https://wpsso.com/"
-
-#~ msgctxt "option label"
-#~ msgid "Organization"
-#~ msgstr "Organisation"
-
-#~ msgctxt "option label"
-#~ msgid "Person"
-#~ msgstr "Personne"
