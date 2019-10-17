@@ -394,7 +394,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 							'select_options' => $this->p->cf[ 'form' ][ 'item_availability' ],
 							'select_default' => 'InStock',
 						),
-					), '', 'schema_event_offer', $start_num = 0, 10, 2 ),
+					), 'single_line', 'schema_event_offer', $start_num = 0, 10, 2 ),
 				),
 
 				/**

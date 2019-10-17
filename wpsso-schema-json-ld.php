@@ -12,7 +12,7 @@
  * License URI: https://www.gnu.org/licenses/gpl.txt
  * Description: Schema JSON-LD markup and Google SEO Rich Results for Articles, Events, Local Business, Products, Recipes, Reviews and many more.
  * Requires At Least: 3.9
- * Tested Up To: 5.2.4
+ * Tested Up To: 5.3
  * WC Tested Up To: 3.7.1
  * Version: 2.13.1
  * 
