@@ -101,7 +101,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 					 */
 					'schema_def_family_friendly'           => 'none',	// Default Family Friendly.
 					'schema_def_pub_org_id'                => 'site',	// Default Publisher.
-					'schema_def_prov_org_id'               => 'none',	// Default Service Provider.
+					'schema_def_prov_org_id'               => 'none',	// Default Provider.
 					'schema_def_event_organizer_org_id'    => 'none',	// Default Organizer Org.
 					'schema_def_event_organizer_person_id' => 'none',	// Default Organizer Person.
 					'schema_def_event_performer_org_id'    => 'none',	// Default Performer Org.

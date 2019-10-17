@@ -649,7 +649,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				'schema_title'                       => '',						// Name / Title.
 				'schema_title_alt'                   => '',						// Alternate Name.
 				'schema_desc'                        => '',						// Description.
-				'schema_ispartof_url'                => '',						// Part of URL.
+				'schema_ispartof_url'                => '',						// Is Part of URL.
 				'schema_headline'                    => '',						// Headline.
 				'schema_text'                        => '',						// Full Text.
 				'schema_keywords'                    => '',						// Keywords.
@@ -658,7 +658,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				'schema_copyright_year'              => $def_copyright_year,				// Copyright Year.
 				'schema_license_url'                 => '',						// License URL.
 				'schema_pub_org_id'                  => $opts[ 'schema_def_pub_org_id' ],		// Publisher.
-				'schema_prov_org_id'                 => $opts[ 'schema_def_prov_org_id' ],		// Service Provider.
+				'schema_prov_org_id'                 => $opts[ 'schema_def_prov_org_id' ],		// Provider.
 				'schema_event_lang'                  => $def_lang,					// Event Language.
 				'schema_event_start_date'            => '',						// Event Start Date.
 				'schema_event_start_time'            => 'none',						// Event Start Time.
@@ -883,7 +883,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_job_salary_period':
 				case 'schema_lang':				// Language.
 				case 'schema_movie_prodco_org_id':		// Production Company.
-				case 'schema_prov_org_id':			// Service Provider.
+				case 'schema_prov_org_id':			// Provider.
 				case 'schema_pub_org_id':			// Publisher.
 				case 'schema_review_claim_author_type':		// Claim Author Type.
 				case 'schema_review_item_name':			// Review Subject Name.
@@ -944,7 +944,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 				case 'schema_addl_type_url':			// Microdata Type URLs.
 				case 'schema_sameas_url':			// Same-As URLs.
-				case 'schema_ispartof_url':			// Part of URL.
+				case 'schema_ispartof_url':			// Is Part of URL.
 				case 'schema_license_url':			// License URL.
 				case 'schema_review_item_url':			// Review Subject URL.
 				case 'schema_review_claim_author_url':		// Claim Author URL.
@@ -1144,7 +1144,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_ispartof_url':	// Part of URL.
+				case 'tooltip-meta-schema_ispartof_url':	// Is Part of URL.
 
 					$text = __( 'Optional URLs to other Schema CreativeWorks that this content is a part of.', 'wpsso-schema-json-ld' );
 
@@ -1186,7 +1186,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_prov_org_id':		// Service Provider.
+				case 'tooltip-meta-schema_prov_org_id':		// Provider.
 
 					$text = __( 'Select a service provider, service operator, or service performer (example: "Netflix").', 'wpsso-schema-json-ld' );
 
@@ -1634,7 +1634,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 				 	break;
 
-				case 'tooltip-schema_def_prov_org_id':			// Default Service Provider.
+				case 'tooltip-schema_def_prov_org_id':			// Default Provider.
 
 					$text = __( 'Select a default service provider, service operator, or service performer (example: "Netflix").', 'wpsso-schema-json-ld' );
 

@@ -602,7 +602,7 @@ msgstr ""
 #: lib/gettext-pro.php:18 lib/pro/admin/meta-edit.php:211
 #: lib/std/admin/meta-edit.php:190
 msgctxt "option label"
-msgid "Part of URL"
+msgid "Is Part of URL"
 msgstr ""
 
 #: lib/gettext-pro.php:19 lib/pro/admin/meta-edit.php:220
@@ -656,7 +656,7 @@ msgstr ""
 #: lib/gettext-pro.php:27 lib/pro/admin/meta-edit.php:282
 #: lib/std/admin/meta-edit.php:266
 msgctxt "option label"
-msgid "Service Provider"
+msgid "Provider"
 msgstr ""
 
 #: lib/gettext-pro.php:28 lib/pro/admin/meta-edit.php:295
@@ -1397,7 +1397,7 @@ msgstr ""
 
 #: lib/submenu/schema-general.php:218
 msgctxt "option label"
-msgid "Default Service Provider"
+msgid "Default Provider"
 msgstr ""
 
 #: lib/submenu/schema-general.php:233

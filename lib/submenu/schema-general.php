@@ -215,7 +215,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 						$css_class = 'long_name', $css_id = '', $is_assoc = true, $org_disable ) . $org_req_msg,
 				),
 				'schema_def_prov_org_id' => array(
-					'label'    => _x( 'Default Service Provider', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Default Provider', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'schema_def_prov_org_id',
 					'content'  => $this->form->get_select( 'schema_def_prov_org_id', $org_site_names,
 						$css_class = 'long_name', $css_id = '', $is_assoc = true, $org_disable ) . $org_req_msg,
