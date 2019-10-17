@@ -160,7 +160,7 @@ Additional e-Commerce plugins are also provided with the WPSSO Core Premium plug
 		* Creative Work Information
 			* Default Family Friendly
 			* Default Publisher
-			* Default Service Provider
+			* Default Provider
 		* Event Information
 			* Default Organizer Org.
 			* Default Organizer Person
@@ -244,7 +244,7 @@ Additional e-Commerce plugins are also provided with the WPSSO Core Premium plug
 		* Microdata Type URLs
 		* Same-As URLs
 	* Creative Work Information
-		* Part of URL
+		* Is Part of URL
 		* Headline
 		* Full Text
 		* Keywords
@@ -253,7 +253,7 @@ Additional e-Commerce plugins are also provided with the WPSSO Core Premium plug
 		* Copyright Year
 		* License URL
 		* Publisher
-		* Service Provider
+		* Provider
 	* Event Information
 		* Event Language
 		* Event Organizer Org.
