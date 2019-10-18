@@ -818,7 +818,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **New Features**
 	* None.
 * **Improvements**
-	* Added filter hooks to disable the new 'woocommerce_structured_data_review' and 'woocommerce_structured_data_website' filters in WooCommerce v3.7.1.
+	* Added filter hooks to disable the new 'woocommerce_structured_data_review' and 'woocommerce_structured_data_website' filters in WooCommerce v3.7.1 (Premium version).
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -833,8 +833,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* Maintenance release for WPSSO Core v6.8.0:
-		* Removed a call to WpssoSchema `filter_json_data_https_schema_org_localbusiness()` since it is no longer exists - local businesses are now automatically filtered through the organization filter.
+	* Removed a call to WpssoSchema `filter_json_data_https_schema_org_localbusiness()` since it is no longer exists - local businesses are now automatically filtered through the organization filter (Premium version).
 
 **Version 2.12.0 (2019/10/04)**
 
@@ -933,9 +932,5 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 = 2.13.2 =
 
-(2019/10/18) Added filter hooks to disable the new 'woocommerce_structured_data_review' and 'woocommerce_structured_data_website' filters in WooCommerce v3.7.1.
-
-= 2.13.1 =
-
-(2019/10/14) Maintenance release for WPSSO Core v6.8.0.
+(2019/10/18) Added filter hooks to disable the new 'woocommerce_structured_data_review' and 'woocommerce_structured_data_website' filters in WooCommerce v3.7.1 (Premium version).
 
