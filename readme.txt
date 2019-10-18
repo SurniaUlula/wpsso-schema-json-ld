@@ -818,7 +818,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **New Features**
 	* None.
 * **Improvements**
-	* Added a filter to disable the new 'woocommerce_structured_data_review' filter in WooCommerce v3.7.1.
+	* Added filter hooks to disable the new 'woocommerce_structured_data_review' and 'woocommerce_structured_data_website' filters in WooCommerce v3.7.1.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -933,7 +933,7 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 = 2.13.2 =
 
-(2019/10/18) Added a filter to disable the new 'woocommerce_structured_data_review' filter in WooCommerce v3.7.1.
+(2019/10/18) Added filter hooks to disable the new 'woocommerce_structured_data_review' and 'woocommerce_structured_data_website' filters in WooCommerce v3.7.1.
 
 = 2.13.1 =
 
