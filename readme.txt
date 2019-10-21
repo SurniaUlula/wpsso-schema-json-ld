@@ -813,7 +813,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.14.0-dev.1 (2019/10/20)**
+**Version 2.14.0-dev.2 (2019/10/21)**
 
 * **New Features**
 	* None.
@@ -824,7 +824,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* None.
+	* Update method arguments for SucomForm::get_select() in WPSSO Core v6.9.0.
 
 **Version 2.13.2 (2019/10/18)**
 
@@ -943,9 +943,9 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 2.14.0-dev.1 =
+= 2.14.0-dev.2 =
 
-(2019/10/20) Added a new "Review Subject Type" option in the Document SSO metabox.
+(2019/10/21) Added a new "Review Subject Type" option in the Document SSO metabox.
 
 = 2.13.2 =
 
