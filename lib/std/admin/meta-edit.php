@@ -128,7 +128,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_select( 'schema_type', $schema_types,
 						$css_class = 'schema_type', $css_id = '', $is_assoc = true, $is_disabled = false,
 							$selected = true, $event_names = array( 'on_focus_load_json', 'on_change_unhide_rows' ),
-								$event_args = 'schema_types' ),
+								$event_args = 'schema_types' ),	// JSON array variable name.
 				),
 				'wpssojson_pro_feature_msg' => array(
 					'table_row' => '<td colspan="2">' . $this->p->msgs->pro_feature( 'wpssojson' ) . '</td>',
@@ -542,8 +542,8 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Base Salary', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_job_salary',
-					'content'  => $form->get_no_input_value( '', 'medium' ) . ' ' . 
-						$form->get_no_select( 'schema_job_salary_currency', $currencies, 'currency' ) . ' ' . 
+					'content'  => $form->get_no_input_value( '', $css_class = 'medium' ) . ' ' . 
+						$form->get_no_select( 'schema_job_salary_currency', $currencies, $css_class = 'currency' ) . ' ' . 
 						_x( 'per', 'option comment', 'wpsso-schema-json-ld' ) . ' ' . 
 						$form->get_no_select( 'schema_job_salary_period', $this->p->cf[ 'form' ][ 'time_text' ], 'short' ),
 				),
