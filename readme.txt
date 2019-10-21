@@ -818,7 +818,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **New Features**
 	* None.
 * **Improvements**
-	* None.
+	* Added a new "Review Subject Type" option in the Document SSO metabox.
+	* Added a new "Default Review Subject Type" option under the SSO > Schema Markup > Meta Defaults tab.
+	* The Schema 'itemReviewed' property type can now be managed by the "Review Subject Type" option in the Document SSO metabox. 
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -943,7 +945,7 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 = 2.14.0-dev.1 =
 
-(2019/10/20) None.
+(2019/10/20) Added a new "Review Subject Type" option in the Document SSO metabox.
 
 = 2.13.2 =
 
