@@ -990,7 +990,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Review Rating', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_rating',
-					'content'  => $form->get_no_input_value( $form->defaults[ 'schema_review_rating' ], 'short' ) . 
+					'content'  => $form->get_no_input_value( $form->defaults[ 'schema_review_rating' ], 'short value_req' ) . 
 						' ' . _x( 'from', 'option comment', 'wpsso-schema-json-ld' ) . ' ' . 
 						$form->get_no_input_value( $form->defaults[ 'schema_review_rating_from' ], 'short' ) . 
 						' ' . _x( 'to', 'option comment', 'wpsso-schema-json-ld' ) . ' ' . 
@@ -1007,7 +1007,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				'schema_review_item_type' => array(
 					'tr_class' => $schema_type_tr_class[ 'review' ],
 					'th_class' => 'medium',
-					'td_class' => 'blank value_req',
+					'td_class' => 'blank',
 					'label'    => _x( 'Review Subject Type', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_type',
 					'content'  => $form->get_no_select( 'schema_review_item_type', $schema_types, $css_class = 'schema_type' ),
@@ -1015,7 +1015,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				'schema_review_item_url' => array(
 					'tr_class' => $schema_type_tr_class[ 'review' ],
 					'th_class' => 'medium',
-					'td_class' => 'blank value_req',
+					'td_class' => 'blank',
 					'label'    => _x( 'Review Subject URL', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_url',
 					'content'  => $form->get_no_input_value( '', $css_class = 'wide value_req' ),
@@ -1023,7 +1023,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				'schema_review_item_name' => array(
 					'tr_class' => $schema_type_tr_class[ 'review' ],
 					'th_class' => 'medium',
-					'td_class' => 'blank value_req',
+					'td_class' => 'blank',
 					'label'    => _x( 'Review Subject Name', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_name',
 					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
