@@ -286,9 +286,9 @@ Additional e-Commerce plugins are also provided with the WPSSO Core Premium plug
 		* Production Company
 		* Movie Runtime
 	* Organization Information
-		* Organization
+		* Alternate Organization
 	* Person Information
-		* Person
+		* Alternate Person
 	* Product Information (Additional)
 		* Product Length (cm)
 		* Product Width (cm)
@@ -813,6 +813,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.14.0-dev.1 (2019/10/20)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+
 **Version 2.13.2 (2019/10/18)**
 
 * **New Features**
@@ -929,6 +940,10 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 	* None.
 
 == Upgrade Notice ==
+
+= 2.14.0-dev.1 =
+
+(2019/10/20) None.
 
 = 2.13.2 =
 
