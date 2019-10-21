@@ -171,6 +171,11 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 			}
 
 			/**
+			 * Select option arrays.
+			 */
+			$schema_types = $this->p->schema->get_schema_types_select( null, $add_none = false );
+
+			/**
 			 * Organization variables.
 			 */
 			$org_req_msg    = $this->p->msgs->maybe_ext_required( 'wpssoorg' );
@@ -279,6 +284,21 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 					'tooltip'  => 'schema_def_job_location_id',
 					'content'  => $this->form->get_select( 'schema_def_job_location_id', $plm_place_names,
 						$css_class = 'long_name', $css_id = '', $is_assoc = true, $plm_disable ) . $plm_req_msg,
+				),
+
+				/**
+				 * Review defaults.
+				 */
+				'subsection_def_review' => array(
+					'td_class' => 'subsection',
+					'header'   => 'h4',
+					'label'    => _x( 'Review Information', 'metabox title', 'wpsso-schema-json-ld' ),
+				),
+				'schema_def_review_item_type' => array(
+					'label'    => _x( 'Default Review Subject Type', 'option label', 'wpsso-schema-json-ld' ),
+					'tooltip'  => 'schema_def_review_item_type',
+					'content'  => $this->form->get_select( 'schema_def_review_item_type',
+						$schema_types, $css_class = 'schema_type' ),
 				),
 			);
 

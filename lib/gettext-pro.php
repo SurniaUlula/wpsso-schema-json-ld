@@ -127,6 +127,7 @@ _x( 'Review Rating', 'option label', 'wpsso-schema-json-ld' );
 _x( 'from', 'option comment', 'wpsso-schema-json-ld' );
 _x( 'to', 'option comment', 'wpsso-schema-json-ld' );
 _x( 'Review Rating Name', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Review Subject Type', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Review Subject URL', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Review Subject Name', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Claim Review Information', 'metabox title', 'wpsso-schema-json-ld' );

@@ -16,8 +16,8 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssojson' => array(			// Plugin acronym.
-					'version'     => '2.13.2',	// Plugin version.
-					'opt_version' => '29',		// Increment when changing default option values.
+					'version'     => '2.14.0-dev.1',	// Plugin version.
+					'opt_version' => '30',		// Increment when changing default option values.
 					'short'       => 'WPSSO JSON',	// Short plugin name.
 					'name'        => 'WPSSO Schema JSON-LD Markup',
 					'desc'        => 'Schema JSON-LD markup and Google SEO Rich Results for Articles, Events, Local Business, Products, Recipes, Reviews and many more.',
@@ -99,16 +99,17 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 					/**
 					 * Meta Defaults
 					 */
-					'schema_def_family_friendly'           => 'none',	// Default Family Friendly.
-					'schema_def_pub_org_id'                => 'site',	// Default Publisher.
-					'schema_def_prov_org_id'               => 'none',	// Default Provider.
-					'schema_def_event_organizer_org_id'    => 'none',	// Default Organizer Org.
-					'schema_def_event_organizer_person_id' => 'none',	// Default Organizer Person.
-					'schema_def_event_performer_org_id'    => 'none',	// Default Performer Org.
-					'schema_def_event_performer_person_id' => 'none',	// Default Performer Person.
-					'schema_def_event_location_id'         => 'none',	// Default Venue.
-					'schema_def_job_hiring_org_id'         => 'none',	// Default Hiring Organization.
-					'schema_def_job_location_id'           => 'none',	// Default Job Location.
+					'schema_def_family_friendly'           => 'none',		// Default Family Friendly.
+					'schema_def_pub_org_id'                => 'site',		// Default Publisher.
+					'schema_def_prov_org_id'               => 'none',		// Default Provider.
+					'schema_def_event_organizer_org_id'    => 'none',		// Default Organizer Org.
+					'schema_def_event_organizer_person_id' => 'none',		// Default Organizer Person.
+					'schema_def_event_performer_org_id'    => 'none',		// Default Performer Org.
+					'schema_def_event_performer_person_id' => 'none',		// Default Performer Person.
+					'schema_def_event_location_id'         => 'none',		// Default Venue.
+					'schema_def_job_hiring_org_id'         => 'none',		// Default Hiring Organization.
+					'schema_def_job_location_id'           => 'none',		// Default Job Location.
+					'schema_def_review_item_type'          => 'creative.work',	// Default Review Subject Type.
 				),
 			),
 			'menu' => array(

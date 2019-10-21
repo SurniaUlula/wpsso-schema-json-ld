@@ -48,7 +48,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 			/**
 			 * Select option arrays.
 			 */
-			$schema_types = $this->p->schema->get_schema_types_select( null, $add_none = true );
+			$schema_types = $this->p->schema->get_schema_types_select( null, $add_none = false );
 			$currencies   = SucomUtil::get_currency_abbrev();
 
 			/**
@@ -127,7 +127,8 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tooltip'  => 'meta-schema_type',
 					'content'  => $form->get_select( 'schema_type', $schema_types,
 						$css_class = 'schema_type', $css_id = '', $is_assoc = true, $is_disabled = false,
-							$selected = true, $event_name = 'on_change_unhide_rows' ),
+							$selected = true, $event_names = array( 'on_focus_load_json', 'on_change_unhide_rows' ),
+								$event_args = 'schema_types' ),
 				),
 				'wpssojson_pro_feature_msg' => array(
 					'table_row' => '<td colspan="2">' . $this->p->msgs->pro_feature( 'wpssojson' ) . '</td>',
@@ -1003,13 +1004,21 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tooltip'  => 'meta-schema_review_rating_alt_name',
 					'content'  => $form->get_no_input_value(),
 				),
+				'schema_review_item_type' => array(
+					'tr_class' => $schema_type_tr_class[ 'review' ],
+					'th_class' => 'medium',
+					'td_class' => 'blank value_req',
+					'label'    => _x( 'Review Subject Type', 'option label', 'wpsso-schema-json-ld' ),
+					'tooltip'  => 'meta-schema_review_item_type',
+					'content'  => $form->get_no_select( 'schema_review_item_type', $schema_types, $css_class = 'schema_type' ),
+				),
 				'schema_review_item_url' => array(
 					'tr_class' => $schema_type_tr_class[ 'review' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank value_req',
 					'label'    => _x( 'Review Subject URL', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_url',
-					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
+					'content'  => $form->get_no_input_value( '', $css_class = 'wide value_req' ),
 				),
 				'schema_review_item_name' => array(
 					'tr_class' => $schema_type_tr_class[ 'review' ],

@@ -738,8 +738,9 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				'schema_recipe_nutri_unsat_fat'      => '',						// Unsaturated Fat.
 				'schema_recipe_nutri_chol'           => '',						// Cholesterol.
 				'schema_recipe_yield'                => '',						// Recipe Yield.
-				'schema_review_item_name'            => '',						// Review Subject Name.
+				'schema_review_item_type'            => $opts[ 'schema_def_review_item_type' ],		// Review Subject Type.
 				'schema_review_item_url'             => '',						// Review Subject URL.
+				'schema_review_item_name'            => '',						// Review Subject Name.
 				'schema_review_rating'               => '0.0',						// Review Rating.
 				'schema_review_rating_from'          => '1',						// Review Rating (From).
 				'schema_review_rating_to'            => '5',						// Review Rating (To).
@@ -867,7 +868,9 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_def_family_friendly':		// Default Family Friendly.
 				case 'schema_def_job_hiring_org_id':		// Default Hiring Organization.
 				case 'schema_def_job_location_id':		// Default Job Location.
+				case 'schema_def_prov_org_id':			// Default Publisher.
 				case 'schema_def_pub_org_id':			// Default Publisher.
+				case 'schema_def_review_item_type':		// Default Review Subject Type.
 				case 'schema_event_lang':			// Event Language.
 				case 'schema_event_location_id':		// Event Venue.
 				case 'schema_event_offer_currency':
@@ -885,6 +888,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_movie_prodco_org_id':		// Production Company.
 				case 'schema_prov_org_id':			// Provider.
 				case 'schema_pub_org_id':			// Publisher.
+				case 'schema_review_item_type':			// Review Subject Type.
 				case 'schema_review_claim_author_type':		// Claim Author Type.
 				case 'schema_review_item_name':			// Review Subject Name.
 				case 'schema_type':				// Schema Type.
@@ -1512,19 +1516,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_name':	// Review Subject Name.
-
-					$text = __( 'A name for the subject being reviewed.', 'wpsso-schema-json-ld' );
-
-				 	break;
-
-				case 'tooltip-meta-schema_review_item_url':	// Review Subject URL.
-
-					$text = __( 'A webpage URL for the subject being reviewed.', 'wpsso-schema-json-ld' );
-
-				 	break;
-
-				case 'tooltip-meta-schema_review_rating':
+				case 'tooltip-meta-schema_review_rating':		// Review Rating
 
 					$text = __( 'A rating for the subject being reviewed, along with the low / high rating scale (default is 1 to 5).', 'wpsso-schema-json-ld' ) . ' ';
 
@@ -1532,9 +1524,27 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_rating_alt_name':
+				case 'tooltip-meta-schema_review_rating_alt_name':	// Review Rating Name
 
-					$text = __( 'An alternate name / description for the rating value (example: False, Misleading, Accurate, etc.).', 'wpsso-schema-json-ld' );
+					$text = __( 'An alternate name for the rating value (example: False, Misleading, Accurate, etc.).', 'wpsso-schema-json-ld' );
+
+				 	break;
+
+				case 'tooltip-meta-schema_review_item_type':		// Review Subject Type.
+
+					$text = __( 'A Schema type for the subject being reviewed.', 'wpsso-schema-json-ld' );
+
+				 	break;
+
+				case 'tooltip-meta-schema_review_item_url':		// Review Subject URL.
+
+					$text = __( 'A webpage URL for the subject being reviewed.', 'wpsso-schema-json-ld' );
+
+				 	break;
+
+				case 'tooltip-meta-schema_review_item_name':		// Review Subject Name.
+
+					$text = __( 'A name for the subject being reviewed.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
@@ -1554,13 +1564,15 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 				case 'tooltip-meta-schema_review_claim_author_type':	// Claim Author Type
 
-					$text = __( 'The publisher of the claim - the publisher can be a person or an organization.', 'wpsso-schema-json-ld' );
+					$text = __( 'The publisher of the claim.', 'wpsso-schema-json-ld' ) . ' ';
+					
+					$text .= __( 'The publisher can be a person or an organization.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
 				case 'tooltip-meta-schema_review_claim_author_name':	// Claim Author Name
 
-					$text = __( 'The name of the person or organization that is making the claim.', 'wpsso-schema-json-ld' );
+					$text = __( 'The name of the person or organization making the claim.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
@@ -1578,8 +1590,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 				case 'tooltip-meta-schema_software_app_os':
 
-					$text = sprintf( __( 'Operating system supported (example: %s, etc.).', 'wpsso-schema-json-ld' ),
-						'"Windows 7", "OSX 10.6", "Android 1.6"' );
+					$text = sprintf( __( 'The operating system supported (example: %s, etc.).', 'wpsso-schema-json-ld' ), '"Windows 7", "OSX 10.6", "Android 1.6"' );
 
 				 	break;
 			}
@@ -1682,6 +1693,11 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 				 	break;
 
+				case 'tooltip-schema_def_review_item_type':		// Default Review Subject Type.
+
+					$text = __( 'Select a default Schema type for the Schema Review subject URL.', 'wpsso-schema-json-ld' );
+
+				 	break;
 			}
 
 			return $text;
