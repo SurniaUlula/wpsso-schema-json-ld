@@ -532,8 +532,8 @@ msgstr ""
 #: lib/gettext-config.php:8
 msgctxt "plugin description"
 msgid ""
-"Schema JSON-LD markup and Google SEO Rich Results for Articles, Events, "
-"Local Business, Products, Recipes, Reviews and many more."
+"Schema JSON-LD and Google Rich Results with Structured Data for Articles, "
+"Events, Images, Local Business, Products, Recipes, Reviews Videos, and more."
 msgstr ""
 
 #: lib/gettext-pro.php:6 lib/pro/admin/meta-edit.php:102
@@ -1483,8 +1483,8 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Schema JSON-LD markup and Google SEO Rich Results for Articles, Events, "
-"Local Business, Products, Recipes, Reviews and many more."
+"Schema JSON-LD and Google Rich Results with Structured Data for Articles, "
+"Events, Images, Local Business, Products, Recipes, Reviews Videos, and more."
 msgstr ""
 
 #. Author of the plugin/theme
