@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Schema JSON-LD Markup 2.14.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2019-10-21 15:49-0700\n"
-"PO-Revision-Date: 2019-10-21 15:49-0700\n"
+"POT-Creation-Date: 2019-10-22 09:22-0700\n"
+"PO-Revision-Date: 2019-10-22 09:24-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -436,8 +436,8 @@ msgstr "Shortcode Schéma"
 
 #: lib/gettext-config.php:8
 msgctxt "plugin description"
-msgid "Schema JSON-LD markup and Google SEO Rich Results for Articles, Events, Local Business, Products, Recipes, Reviews and many more."
-msgstr "Balisage Schéma JSON-LD et résultats Google SEO riches d'articles, événements, entreprise locale, produits, recettes, critiques et bien plus."
+msgid "Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPages, HowTos, Images, Local Business, Products, Recipes, Reviews, Videos, and more."
+msgstr "Résultats riche de Google avec données structurées d'articles, carrousels, événements, pages FAQ, images, entreprise locale, produits, recettes, critiques, videos, et plus."
 
 #: lib/gettext-pro.php:6 lib/pro/admin/meta-edit.php:102
 #: lib/std/admin/meta-edit.php:76
@@ -1376,8 +1376,8 @@ msgid "https://wpsso.com/extend/plugins/wpsso-schema-json-ld/"
 msgstr "https://wpsso.com/extend/plugins/wpsso-schema-json-ld/"
 
 #. Description of the plugin/theme
-msgid "Schema JSON-LD markup and Google SEO Rich Results for Articles, Events, Local Business, Products, Recipes, Reviews and many more."
-msgstr "Balisage Schéma JSON-LD et résultats Google SEO riches d'articles, événements, entreprise locale, produits, recettes, critiques et bien plus."
+msgid "Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPages, HowTos, Images, Local Business, Products, Recipes, Reviews, Videos, and more."
+msgstr "Résultats riche de Google avec données structurées d'articles, carrousels, événements, pages FAQ, images, entreprise locale, produits, recettes, critiques, videos, et plus."
 
 #. Author of the plugin/theme
 msgid "JS Morisset"

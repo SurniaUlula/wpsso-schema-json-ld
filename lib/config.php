@@ -20,7 +20,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 					'opt_version' => '30',		// Increment when changing default option values.
 					'short'       => 'WPSSO JSON',	// Short plugin name.
 					'name'        => 'WPSSO Schema JSON-LD Markup',
-					'desc'        => 'Schema JSON-LD and Google Rich Results with Structured Data for Articles, Events, Images, Local Business, Products, Recipes, Reviews Videos, and more.',
+					'desc'        => 'Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPages, HowTos, Images, Local Business, Products, Recipes, Reviews, Videos, and more.',
 					'slug'        => 'wpsso-schema-json-ld',
 					'base'        => 'wpsso-schema-json-ld/wpsso-schema-json-ld.php',
 					'update_auth' => 'tid',
