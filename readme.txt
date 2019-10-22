@@ -813,7 +813,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.14.0-rc.1 (2019/10/21)**
+**Version 2.14.0 (2019/10/22)**
 
 * **New Features**
 	* None.
@@ -943,11 +943,7 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 2.14.0-rc.1 =
+= 2.14.0 =
 
-(2019/10/21) Added a new "Review Subject Type" option in the Document SSO metabox.
-
-= 2.13.2 =
-
-(2019/10/18) Added filter hooks to disable the new 'woocommerce_structured_data_review' and 'woocommerce_structured_data_website' filters in WooCommerce v3.7.1 (Premium version).
+(2019/10/22) Added a new "Review Subject Type" option in the Document SSO metabox.
 
