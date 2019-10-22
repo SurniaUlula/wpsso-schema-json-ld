@@ -1,8 +1,8 @@
-<h1>Schema JSON-LD Markup | WPSSO Add-on</h1>
+<h1>Schema JSON-LD Markup | WPSSO Add-on for Google Rich Results with Structured Data</h1>
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Schema JSON-LD Markup</td></tr>
-<tr><th align="right" valign="top" nowrap>Summary</th><td>Schema JSON-LD and Google Rich Results / Structured Data for Articles, Events, Images, Local Business, Products, Recipes, Reviews Videos, and more.</td></tr>
+<tr><th align="right" valign="top" nowrap>Summary</th><td>Schema JSON-LD and Google Rich Results with Structured Data for Articles, Events, Images, Local Business, Products, Recipes, Reviews Videos, and more.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>2.14.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.9</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 5.3</td></tr>
@@ -23,7 +23,7 @@
 
 <p><strong>Better Schema JSON-LD markup for WooCommerce:</strong></p>
 
-<p>The WooCommerce plugin provides incomplete Schema markup for Google's Product Rich Results -- luckily the WPSSO Core Premium plugin and its WPSSO JSON Premium add-on provides extensive, complete, and correct Facebook Product meta tags and Schema product markup for Google, including additional product images, product variations, product attributes (brand, color, condition, EAN, dimensions, GTIN-8/12/13/14, ISBN, material, MPN, size, SKU, weight, etc), product reviews, product ratings, sale start / end dates, sale prices, pre-tax prices, VAT prices, and much, much more (<a href="https://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-woocommerce-product/">see an example test product</a>).</p>
+<p><em>The WooCommerce plugin provides incomplete Schema markup for Google's Product Rich Results</em> -- luckily the WPSSO Core Premium plugin and its WPSSO JSON Premium add-on provides extensive, complete, and correct Facebook Product meta tags and Schema product markup for Google Rich Results, including additional product images, product variations, product attributes (brand, color, condition, EAN, dimensions, GTIN-8/12/13/14, ISBN, material, MPN, size, SKU, weight, etc), product reviews, product ratings, sale start / end dates, sale prices, pre-tax prices, VAT prices, and much, much more (<a href="https://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-woocommerce-product/">see an example test product</a>).</p>
 
 <p><strong>Fixes ALL Google Search Console / Structured Data Testing Tool errors:</strong></p>
 
@@ -207,7 +207,7 @@
 <h3>WPSSO JSON Premium Features</h3>
 
 <ul>
-<li><p>Provides Schema JSON-LD markup (aka Structured Data) for all Schema types and sub-types, including <a href="https://schema.org/ItemList">schema.org/ItemList</a> for <a href="https://developers.google.com/search/docs/guides/mark-up-listings">Google's Carousel Rich Results</a> feature:</p>
+<li><p>Provides Schema JSON-LD markup (aka Google Rich Results with Structured Data) for all Schema types and sub-types, including <a href="https://schema.org/ItemList">schema.org/ItemList</a> for <a href="https://developers.google.com/search/docs/guides/mark-up-listings">Google's Carousel Rich Results</a> feature:</p>
 
 <ul>
 <li><a href="https://schema.org/Brand">schema.org/Brand</a></li>
