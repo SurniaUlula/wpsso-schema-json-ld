@@ -813,7 +813,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.14.0-b.1 (2019/10/21)**
+**Version 2.14.0-rc.1 (2019/10/21)**
 
 * **New Features**
 	* None.
@@ -943,7 +943,7 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 2.14.0-b.1 =
+= 2.14.0-rc.1 =
 
 (2019/10/21) Added a new "Review Subject Type" option in the Document SSO metabox.
 
