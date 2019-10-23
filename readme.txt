@@ -60,12 +60,12 @@ Additional e-Commerce plugins are also provided with the WPSSO Core Premium plug
 
 * Extends the features of the WPSSO Core plugin.
 
-* Provides Schema JSON-LD markup (aka Structured Data) for the following Schema types (other Schema types are available in the Premium add-on):
+* Provides Schema JSON-LD markup (aka Structured Data) for the following Schema types (more specific Schema sub-type markup is available in the Premium add-on):
 
-	* [schema.org/Article](https://schema.org/Article) (includes 19 Schema types)
+	* [schema.org/Article](https://schema.org/Article) (includes 19 Schema sub-types)
 	* [schema.org/Blog](https://schema.org/Blog)
-	* [schema.org/CreativeWork](https://schema.org/CreativeWork) (includes 86 Schema types)
-	* [schema.org/Thing](https://schema.org/Thing) (includes 478 Schema types)
+	* [schema.org/CreativeWork](https://schema.org/CreativeWork) (includes 86 Schema sub-types)
+	* [schema.org/Thing](https://schema.org/Thing) (includes 1457 Schema sub-types)
 
 * Automatically includes Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google Rich Results (see the [Google Article AMP structured data guidelines](https://developers.google.com/search/docs/data-types/article#amp-sd) for details on this new requirement from Google).
 
@@ -177,28 +177,28 @@ Additional e-Commerce plugins are also provided with the WPSSO Core Premium plug
 
 	* [schema.org/Brand](https://schema.org/Brand)
 	* [schema.org/ClaimReview](https://schema.org/ClaimReview)
-	* [schema.org/CollectionPage](https://schema.org/CollectionPage) (includes 3 Schema types)
+	* [schema.org/CollectionPage](https://schema.org/CollectionPage) (includes 3 Schema sub-types)
 	* [schema.org/Course](https://schema.org/Course)
-	* [schema.org/Event](https://schema.org/Event) (includes 19 Schema types)
+	* [schema.org/Event](https://schema.org/Event) (includes 19 Schema sub-types)
 	* [schema.org/FAQPage](https://schema.org/FAQPage)
-	* [schema.org/FoodEstablishment](https://schema.org/FoodEstablishment) (includes 9 Schema types)
-	* [schema.org/HowTo](https://schema.org/HowTo) (includes 2 Schema types)
-	* [schema.org/ItemList](https://schema.org/ItemList) (includes 3 Schema types)
+	* [schema.org/FoodEstablishment](https://schema.org/FoodEstablishment) (includes 17 Schema sub-types)
+	* [schema.org/HowTo](https://schema.org/HowTo) (includes 2 Schema sub-types)
+	* [schema.org/ItemList](https://schema.org/ItemList) (includes 5 Schema sub-types)
 	* [schema.org/JobPosting](https://schema.org/JobPosting)
-	* [schema.org/LocalBusiness](https://schema.org/LocalBusiness) (includes 133 Schema types)
+	* [schema.org/LocalBusiness](https://schema.org/LocalBusiness) (includes 479 Schema sub-types)
 	* [schema.org/Movie](https://schema.org/Movie)
-	* [schema.org/Organization](https://schema.org/Organization) (includes 22 Schema types)
+	* [schema.org/Organization](https://schema.org/Organization) (includes 502 Schema sub-types)
 	* [schema.org/Person](https://schema.org/Person)
-	* [schema.org/Place](https://schema.org/Place) (includes 176 Schema types)
-	* [schema.org/Product](https://schema.org/Product) (includes 9 Schema types)
+	* [schema.org/Place](https://schema.org/Place) (includes 529 Schema sub-types)
+	* [schema.org/Product](https://schema.org/Product) (includes 9 Schema sub-types)
 	* [schema.org/ProfilePage](https://schema.org/ProfilePage)
 	* [schema.org/QAPage](https://schema.org/QAPage)
 	* [schema.org/Question](https://schema.org/Question) and Answer
 	* [schema.org/Recipe](https://schema.org/Recipe)
-	* [schema.org/Review](https://schema.org/Review) (includes 2 Schema types)
+	* [schema.org/Review](https://schema.org/Review) (includes 2 Schema sub-types)
 	* [schema.org/SearchResultsPage](https://schema.org/SearchResultsPage)
-	* [schema.org/SoftwareApplication](https://schema.org/SoftwareApplication) (includes 4 Schema types)
-	* [schema.org/WebPage](https://schema.org/WebPage) (includes 13 Schema types)
+	* [schema.org/SoftwareApplication](https://schema.org/SoftwareApplication) (includes 4 Schema sub-types)
+	* [schema.org/WebPage](https://schema.org/WebPage) (includes 13 Schema sub-types)
 	* [schema.org/WebSite](https://schema.org/WebSite)
 
 * Provides complete video SEO markup with information from video service APIs (Facebook, Slideshare, Soundcloud, Vimeo, Wistia, YouTube).
