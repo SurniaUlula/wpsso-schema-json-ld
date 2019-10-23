@@ -1026,7 +1026,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Review Subject Name', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_name',
-					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
+					'content'  => $form->get_no_input_value( '', $css_class = 'wide value_req' ),
 				),
 
 				/**
