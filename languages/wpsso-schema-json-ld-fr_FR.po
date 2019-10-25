@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: WPSSO Schema JSON-LD Markup 2.14.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
 "POT-Creation-Date: 2019-10-22 09:22-0700\n"
-"PO-Revision-Date: 2019-10-22 09:24-0700\n"
+"PO-Revision-Date: 2019-10-25 13:26-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -242,7 +242,7 @@ msgstr "Une liste d'instructions pour cette recette (exemple: \"battre les oeufs
 
 #: lib/filters.php:1443
 msgid "The serving size in volume or mass. A serving size is required to include nutrition information in the Schema recipe markup."
-msgstr "La taille de portion en volume ou en masse. Une taille de portion est requise pour inclure les informations nutritionnelles dans le balisage Schéma Recipe."
+msgstr "La taille de portion en volume ou en masse. Une taille de portion est requise pour inclure les informations nutritionnelles dans le balisage de Schéma Recipe."
 
 #: lib/filters.php:1449
 msgid "The number of calories per serving."
