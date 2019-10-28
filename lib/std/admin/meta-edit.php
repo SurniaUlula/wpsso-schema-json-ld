@@ -100,7 +100,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 			/**
 			 * Javascript classes to hide/show rows by selected schema type.
 			 */
-			$schema_type_tr_class = WpssoJsonSchema::get_type_tr_class();
+			$schema_type_row_class = WpssoJsonSchema::get_type_row_class();
 
 			/**
 			 * Remove and re-create.
@@ -179,13 +179,13 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				 * Schema CreativeWork
 				 */
 				'subsection_creative_work' => array(
-					'tr_class' => $schema_type_tr_class[ 'creative_work' ],
+					'tr_class' => $schema_type_row_class[ 'creative_work' ],
 					'td_class' => 'subsection',
 					'header'   => 'h5',
 					'label'    => _x( 'Creative Work Information', 'metabox title', 'wpsso-schema-json-ld' ),
 				),
 				'schema_ispartof_url' => array(
-					'tr_class' => $schema_type_tr_class[ 'creative_work' ],
+					'tr_class' => $schema_type_row_class[ 'creative_work' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Is Part of URL', 'option label', 'wpsso-schema-json-ld' ),
@@ -194,7 +194,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				),
 				'schema_headline' => array(
 					'no_auto_draft' => true,
-					'tr_class'      => $schema_type_tr_class[ 'creative_work' ],
+					'tr_class'      => $schema_type_row_class[ 'creative_work' ],
 					'th_class'      => 'medium',
 					'td_class'      => 'blank',
 					'label'         => _x( 'Headline', 'option label', 'wpsso-schema-json-ld' ),
@@ -203,7 +203,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				),
 				'schema_text' => array(
 					'no_auto_draft' => true,
-					'tr_class'      => $schema_type_tr_class[ 'creative_work' ],
+					'tr_class'      => $schema_type_row_class[ 'creative_work' ],
 					'th_class'      => 'medium',
 					'td_class'      => 'blank',
 					'label'         => _x( 'Full Text', 'option label', 'wpsso-schema-json-ld' ),
@@ -211,7 +211,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'       => $form->get_no_textarea_value( $def_schema_text, $css_class = 'full_text' ),
 				),
 				'schema_keywords' => array(
-					'tr_class' => $schema_type_tr_class[ 'creative_work' ],
+					'tr_class' => $schema_type_row_class[ 'creative_work' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Keywords', 'option label', 'wpsso-schema-json-ld' ),
@@ -219,7 +219,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_input_value( $def_schema_keywords, $css_class = 'wide' ),
 				),
 				'schema_lang' => array(
-					'tr_class' => $schema_type_tr_class[ 'creative_work' ],
+					'tr_class' => $schema_type_row_class[ 'creative_work' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Language', 'option label', 'wpsso-schema-json-ld' ),
@@ -227,7 +227,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_select( 'schema_lang', SucomUtil::get_available_locales(), 'locale' ),
 				),
 				'schema_family_friendly' => array(
-					'tr_class' => $schema_type_tr_class[ 'creative_work' ],
+					'tr_class' => $schema_type_row_class[ 'creative_work' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Family Friendly', 'option label', 'wpsso-schema-json-ld' ),
@@ -236,7 +236,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						$this->p->cf[ 'form' ][ 'yes_no' ], $css_class = 'yes-no', $css_id = '', $is_assoc = true ),
 				),
 				'schema_copyright_year' => array(
-					'tr_class' => $schema_type_tr_class[ 'creative_work' ],
+					'tr_class' => $schema_type_row_class[ 'creative_work' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Copyright Year', 'option label', 'wpsso-schema-json-ld' ),
@@ -244,7 +244,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_input_value( $def_copyright_year, $css_class = 'year' ),
 				),
 				'schema_license_url' => array(
-					'tr_class' => $schema_type_tr_class[ 'creative_work' ],
+					'tr_class' => $schema_type_row_class[ 'creative_work' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'License URL', 'option label', 'wpsso-schema-json-ld' ),
@@ -252,7 +252,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
 				),
 				'schema_pub_org_id' => array(
-					'tr_class' => $schema_type_tr_class[ 'creative_work' ],
+					'tr_class' => $schema_type_row_class[ 'creative_work' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Publisher', 'option label', 'wpsso-schema-json-ld' ),
@@ -261,7 +261,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						$css_class = 'long_name' ) . $org_req_msg,
 				),
 				'schema_prov_org_id' => array(
-					'tr_class' => $schema_type_tr_class[ 'creative_work' ],
+					'tr_class' => $schema_type_row_class[ 'creative_work' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Provider', 'option label', 'wpsso-schema-json-ld' ),
@@ -274,13 +274,13 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				 * Schema Event
 				 */
 				'subsection_event' => array(
-					'tr_class' => $schema_type_tr_class[ 'event' ],
+					'tr_class' => $schema_type_row_class[ 'event' ],
 					'td_class' => 'subsection',
 					'header'   => 'h5',
 					'label'    => _x( 'Event Information', 'metabox title', 'wpsso-schema-json-ld' ),
 				),
 				'schema_event_lang' => array(
-					'tr_class' => $schema_type_tr_class[ 'event' ],
+					'tr_class' => $schema_type_row_class[ 'event' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Event Language', 'option label', 'wpsso-schema-json-ld' ),
@@ -288,7 +288,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_select( 'schema_event_lang', SucomUtil::get_available_locales(), 'locale' ),
 				),
 				'schema_event_organizer_org_id' => array(
-					'tr_class' => $schema_type_tr_class[ 'event' ],
+					'tr_class' => $schema_type_row_class[ 'event' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Organizer Org', 'option label', 'wpsso-schema-json-ld' ),
@@ -297,7 +297,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						$css_class = 'long_name' ) . $org_req_msg,
 				),
 				'schema_event_organizer_person_id' => array(
-					'tr_class' => $schema_type_tr_class[ 'event' ],
+					'tr_class' => $schema_type_row_class[ 'event' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Organizer Person', 'option label', 'wpsso-schema-json-ld' ),
@@ -306,7 +306,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						$css_class = 'long_name' ),
 				),
 				'schema_event_performer_org_id' => array(
-					'tr_class' => $schema_type_tr_class[ 'event' ],
+					'tr_class' => $schema_type_row_class[ 'event' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Performer Org', 'option label', 'wpsso-schema-json-ld' ),
@@ -315,7 +315,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						$css_class = 'long_name' ) . $org_req_msg,
 				),
 				'schema_event_performer_person_id' => array(
-					'tr_class' => $schema_type_tr_class[ 'event' ],
+					'tr_class' => $schema_type_row_class[ 'event' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Performer Person', 'option label', 'wpsso-schema-json-ld' ),
@@ -324,7 +324,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						$css_class = 'long_name' ),
 				),
 				'schema_event_location_id' => array(
-					'tr_class' => $schema_type_tr_class[ 'event' ],
+					'tr_class' => $schema_type_row_class[ 'event' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Event Venue', 'option label', 'wpsso-schema-json-ld' ),
@@ -333,7 +333,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						$css_class = 'long_name' ) . $plm_req_msg,
 				),
 				'schema_event_start' => array(
-					'tr_class' => $schema_type_tr_class[ 'event' ],
+					'tr_class' => $schema_type_row_class[ 'event' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Event Start', 'option label', 'wpsso-schema-json-ld' ),
@@ -341,7 +341,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_date_time_iso( 'schema_event_start' ),
 				),
 				'schema_event_end' => array(
-					'tr_class' => $schema_type_tr_class[ 'event' ],
+					'tr_class' => $schema_type_row_class[ 'event' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Event End', 'option label', 'wpsso-schema-json-ld' ),
@@ -349,7 +349,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_date_time_iso( 'schema_event_end' ),
 				),
 				'schema_event_offers_start' => array(
-					'tr_class' => $schema_type_tr_class[ 'event' ],
+					'tr_class' => $schema_type_row_class[ 'event' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Offers Start', 'option label', 'wpsso-schema-json-ld' ),
@@ -357,7 +357,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_date_time_iso( 'schema_event_offers_start' ),
 				),
 				'schema_event_offers_end' => array(
-					'tr_class' => $schema_type_tr_class[ 'event' ],
+					'tr_class' => $schema_type_row_class[ 'event' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Offers End', 'option label', 'wpsso-schema-json-ld' ),
@@ -365,7 +365,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_date_time_iso( 'schema_event_offers_end' ),
 				),
 				'schema_event_offers' => array(
-					'tr_class' => $schema_type_tr_class[ 'event' ],
+					'tr_class' => $schema_type_row_class[ 'event' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Event Offers', 'option label', 'wpsso-schema-json-ld' ),
@@ -402,7 +402,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				 * Schema FinancialProduct
 				 *
 				 * 'subsection_financial_prod' => array(
-				 *	'tr_class' => $schema_type_tr_class[ 'financial_prod' ],
+				 *	'tr_class' => $schema_type_row_class[ 'financial_prod' ],
 				 *	'td_class' => 'subsection',
 				 *	'header'   => 'h5',
 				 *	'label'    => _x( 'Financial Product Information', 'metabox title', 'wpsso-schema-json-ld' ),
@@ -413,13 +413,13 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				 * Schema HowTo
 				 */
 				'subsection_howto' => array(
-					'tr_class' => $schema_type_tr_class[ 'how_to' ],
+					'tr_class' => $schema_type_row_class[ 'how_to' ],
 					'td_class' => 'subsection',
 					'header'   => 'h5',
 					'label'    => _x( 'How-To Information', 'metabox title', 'wpsso-schema-json-ld' ),
 				),
 				'schema_howto_yield' => array(
-					'tr_class' => $schema_type_tr_class[ 'how_to' ],
+					'tr_class' => $schema_type_row_class[ 'how_to' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'How-To Makes', 'option label', 'wpsso-schema-json-ld' ),
@@ -427,7 +427,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_input_value( '', 'long_name' ),
 				),
 				'schema_howto_prep_time' => array(
-					'tr_class' => $schema_type_tr_class[ 'how_to' ],
+					'tr_class' => $schema_type_row_class[ 'how_to' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Preparation Time', 'option label', 'wpsso-schema-json-ld' ),
@@ -438,7 +438,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						$form->get_no_input_value( '0', 'short' ) . $secs_sep,
 				),
 				'schema_howto_total_time' => array(
-					'tr_class' => $schema_type_tr_class[ 'how_to' ],
+					'tr_class' => $schema_type_row_class[ 'how_to' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Total Time', 'option label', 'wpsso-schema-json-ld' ),
@@ -449,7 +449,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						$form->get_no_input_value( '0', 'short' ) . $secs_sep,
 				),
 				'schema_howto_supplies' => array(
-					'tr_class' => $schema_type_tr_class[ 'how_to' ],
+					'tr_class' => $schema_type_row_class[ 'how_to' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'How-To Supplies', 'option label', 'wpsso-schema-json-ld' ),
@@ -457,7 +457,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_input_value( '', 'long_name', $css_id = '', '', $repeat = 5 ),
 				),
 				'schema_howto_tools' => array(
-					'tr_class' => $schema_type_tr_class[ 'how_to' ],
+					'tr_class' => $schema_type_row_class[ 'how_to' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'How-To Tools', 'option label', 'wpsso-schema-json-ld' ),
@@ -465,7 +465,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_input_value( '', 'long_name', $css_id = '', '', $repeat = 5 ),
 				),
 				'schema_howto_steps' => array(
-					'tr_class' => $schema_type_tr_class[ 'how_to' ],
+					'tr_class' => $schema_type_row_class[ 'how_to' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'How-To Steps', 'option label', 'wpsso-schema-json-ld' ),
@@ -500,14 +500,14 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				 * Schema JobPosting
 				 */
 				'subsection_job' => array(
-					'tr_class' => $schema_type_tr_class[ 'job_posting' ],
+					'tr_class' => $schema_type_row_class[ 'job_posting' ],
 					'td_class' => 'subsection',
 					'header'   => 'h5',
 					'label'    => _x( 'Job Posting Information', 'metabox title', 'wpsso-schema-json-ld' ),
 				),
 				'schema_job_title' => array(
 					'no_auto_draft' => true,
-					'tr_class'      => $schema_type_tr_class[ 'job_posting' ],
+					'tr_class'      => $schema_type_row_class[ 'job_posting' ],
 					'th_class'      => 'medium',
 					'td_class'      => 'blank',
 					'label'         => _x( 'Job Title', 'option label', 'wpsso-schema-json-ld' ),
@@ -515,7 +515,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'       => $form->get_no_input_value( $def_schema_title, $css_class = 'wide' ),
 				),
 				'schema_job_hiring_org_id' => array(
-					'tr_class' => $schema_type_tr_class[ 'job_posting' ],
+					'tr_class' => $schema_type_row_class[ 'job_posting' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Hiring Organization', 'option label', 'wpsso-schema-json-ld' ),
@@ -524,7 +524,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						$css_class = 'long_name' ) . $org_req_msg,
 				),
 				'schema_job_location_id' => array(
-					'tr_class' => $schema_type_tr_class[ 'job_posting' ],
+					'tr_class' => $schema_type_row_class[ 'job_posting' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Job Location', 'option label', 'wpsso-schema-json-ld' ),
@@ -537,7 +537,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					*/
 				),
 				'schema_job_salary' => array(
-					'tr_class' => $schema_type_tr_class[ 'job_posting' ],
+					'tr_class' => $schema_type_row_class[ 'job_posting' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Base Salary', 'option label', 'wpsso-schema-json-ld' ),
@@ -548,7 +548,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						$form->get_no_select( 'schema_job_salary_period', $this->p->cf[ 'form' ][ 'time_text' ], 'short' ),
 				),
 				'schema_job_empl_type' => array(
-					'tr_class' => $schema_type_tr_class[ 'job_posting' ],
+					'tr_class' => $schema_type_row_class[ 'job_posting' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Employment Type', 'option label', 'wpsso-schema-json-ld' ),
@@ -556,7 +556,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_checklist( 'schema_job_empl_type', $this->p->cf[ 'form' ][ 'employment_type' ] ),
 				),
 				'schema_job_expire' => array(
-					'tr_class' => $schema_type_tr_class[ 'job_posting' ],
+					'tr_class' => $schema_type_row_class[ 'job_posting' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Job Posting Expires', 'option label', 'wpsso-schema-json-ld' ),
@@ -568,13 +568,13 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				 * Schema Movie
 				 */
 				'subsection_movie' => array(
-					'tr_class' => $schema_type_tr_class[ 'movie' ],
+					'tr_class' => $schema_type_row_class[ 'movie' ],
 					'td_class' => 'subsection',
 					'header'   => 'h5',
 					'label'    => _x( 'Movie Information', 'metabox title', 'wpsso-schema-json-ld' ),
 				),
 				'schema_movie_actor_person_names' => array(
-					'tr_class' => $schema_type_tr_class[ 'movie' ],
+					'tr_class' => $schema_type_row_class[ 'movie' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Cast Names', 'option label', 'wpsso-schema-json-ld' ),
@@ -582,7 +582,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_input_value( '', 'long_name', $css_id = '', '', $repeat = 5 ),
 				),
 				'schema_movie_director_person_names' => array(
-					'tr_class' => $schema_type_tr_class[ 'movie' ],
+					'tr_class' => $schema_type_row_class[ 'movie' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Director Names', 'option label', 'wpsso-schema-json-ld' ),
@@ -590,7 +590,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_input_value( '', 'long_name', $css_id = '', '', $repeat = 2 ),
 				),
 				'schema_movie_prodco_org_id' => array(
-					'tr_class' => $schema_type_tr_class[ 'movie' ],
+					'tr_class' => $schema_type_row_class[ 'movie' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Production Company', 'option label', 'wpsso-schema-json-ld' ),
@@ -599,7 +599,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						$css_class = 'long_name' ) . $org_req_msg,
 				),
 				'schema_movie_duration_time' => array(
-					'tr_class' => $schema_type_tr_class[ 'movie' ],
+					'tr_class' => $schema_type_row_class[ 'movie' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Movie Runtime', 'option label', 'wpsso-schema-json-ld' ),
@@ -613,13 +613,13 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				 * Schema Organization
 				 */
 				'subsection_organization' => array(
-					'tr_class' => $schema_type_tr_class[ 'organization' ] . ' ' . $schema_type_tr_class[ 'local_business' ],
+					'tr_class' => $schema_type_row_class[ 'organization' ],
 					'td_class' => 'subsection',
 					'header'   => 'h5',
 					'label'    => _x( 'Organization Information', 'metabox title', 'wpsso-schema-json-ld' ),
 				),
 				'schema_organization_org_id' => array(
-					'tr_class' => $schema_type_tr_class[ 'organization' ] . ' ' . $schema_type_tr_class[ 'local_business' ],
+					'tr_class' => $schema_type_row_class[ 'organization' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Alternate Organization', 'option label', 'wpsso-schema-json-ld' ),
@@ -632,13 +632,13 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				 * Schema Person
 				 */
 				'subsection_person' => array(
-					'tr_class' => $schema_type_tr_class[ 'person' ],
+					'tr_class' => $schema_type_row_class[ 'person' ],
 					'td_class' => 'subsection',
 					'header'   => 'h5',
 					'label'    => _x( 'Person Information', 'metabox title', 'wpsso-schema-json-ld' ),
 				),
 				'schema_person_id' => array(
-					'tr_class' => $schema_type_tr_class[ 'person' ],
+					'tr_class' => $schema_type_row_class[ 'person' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Alternate Person', 'option label', 'wpsso-schema-json-ld' ),
@@ -653,18 +653,18 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				 * Note that unlike most schema option names, product options start with 'product_' and not 'schema_'.
 				 */
 				'subsection_product' => array(
-					'tr_class' => $schema_type_tr_class[ 'product' ],
+					'tr_class' => $schema_type_row_class[ 'product' ],
 					'td_class' => 'subsection',
 					'header'   => 'h5',
 					'label'    => _x( 'Product Information (Additional)', 'metabox title', 'wpsso-schema-json-ld' ),
 				),
 				'schema_product_ecom_msg' => array(
-					'tr_class' => $schema_type_tr_class[ 'product' ],
+					'tr_class' => $schema_type_row_class[ 'product' ],
 					'table_row' => ( empty( $this->p->avail[ 'ecom' ][ 'any' ] ) ? '' :
 						'<td colspan="2">' . $this->p->msgs->get( 'pro-ecom-product-msg' ) . '</td>' ),
 				),
 				'schema_product_length_value' => array(
-					'tr_class' => $schema_type_tr_class[ 'product' ],
+					'tr_class' => $schema_type_row_class[ 'product' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Product Length', 'option label', 'wpsso-schema-json-ld' ),
@@ -673,7 +673,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						WpssoAdmin::get_option_unit_comment( 'product_length_value' ),
 				),
 				'schema_product_width_value' => array(
-					'tr_class' => $schema_type_tr_class[ 'product' ],
+					'tr_class' => $schema_type_row_class[ 'product' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Product Width', 'option label', 'wpsso-schema-json-ld' ),
@@ -682,7 +682,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						WpssoAdmin::get_option_unit_comment( 'product_width_value' ),
 				),
 				'schema_product_height_value' => array(
-					'tr_class' => $schema_type_tr_class[ 'product' ],
+					'tr_class' => $schema_type_row_class[ 'product' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Product Height', 'option label', 'wpsso-schema-json-ld' ),
@@ -691,7 +691,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						WpssoAdmin::get_option_unit_comment( 'product_height_value' ),
 				),
 				'schema_product_depth_value' => array(
-					'tr_class' => $schema_type_tr_class[ 'product' ],
+					'tr_class' => $schema_type_row_class[ 'product' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Product Depth', 'option label', 'wpsso-schema-json-ld' ),
@@ -700,7 +700,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						WpssoAdmin::get_option_unit_comment( 'product_depth_value' ),
 				),
 				'schema_product_volume_value' => array(
-					'tr_class' => $schema_type_tr_class[ 'product' ],
+					'tr_class' => $schema_type_row_class[ 'product' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Product Volume', 'option label', 'wpsso-schema-json-ld' ),
@@ -709,7 +709,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						WpssoAdmin::get_option_unit_comment( 'product_volume_value' ),
 				),
 				'schema_product_gtin14' => array(
-					'tr_class' => $schema_type_tr_class[ 'product' ],
+					'tr_class' => $schema_type_row_class[ 'product' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Product GTIN-14', 'option label', 'wpsso' ),
@@ -717,7 +717,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_input( 'product_gtin14', '', $css_id = '', $placeholder = true ),
 				),
 				'schema_product_gtin13' => array(
-					'tr_class' => $schema_type_tr_class[ 'product' ],
+					'tr_class' => $schema_type_row_class[ 'product' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Product GTIN-13/EAN', 'option label', 'wpsso' ),	// aka Product EAN
@@ -725,7 +725,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_input( 'product_gtin13', '', $css_id = '', $placeholder = true ),
 				),
 				'schema_product_gtin12' => array(
-					'tr_class' => $schema_type_tr_class[ 'product' ],
+					'tr_class' => $schema_type_row_class[ 'product' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Product GTIN-12/UPC', 'option label', 'wpsso' ),	// aka Product UPC
@@ -733,7 +733,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_input( 'product_gtin12', '', $css_id = '', $placeholder = true ),
 				),
 				'schema_product_gtin8' => array(
-					'tr_class' => $schema_type_tr_class[ 'product' ],
+					'tr_class' => $schema_type_row_class[ 'product' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Product GTIN-8', 'option label', 'wpsso' ),
@@ -741,7 +741,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_input( 'product_gtin8', '', $css_id = '', $placeholder = true ),
 				),
 				'schema_product_gtin' => array(
-					'tr_class' => $schema_type_tr_class[ 'product' ],
+					'tr_class' => $schema_type_row_class[ 'product' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Product GTIN', 'option label', 'wpsso' ),
@@ -753,13 +753,13 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				 * Schema QAPage
 				 */
 				'subsection_qa' => array(
-					'tr_class' => $schema_type_tr_class[ 'qapage' ],
+					'tr_class' => $schema_type_row_class[ 'qapage' ],
 					'td_class' => 'subsection',
 					'header'   => 'h5',
 					'label'    => _x( 'QA Page Information', 'metabox title', 'wpsso-schema-json-ld' ),
 				),
 				'schema_qa_desc' => array(
-					'tr_class' => $schema_type_tr_class[ 'qapage' ],
+					'tr_class' => $schema_type_row_class[ 'qapage' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'QA Heading', 'option label', 'wpsso-schema-json-ld' ),
@@ -771,13 +771,13 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				 * Schema Recipe
 				 */
 				'subsection_recipe' => array(
-					'tr_class' => $schema_type_tr_class[ 'recipe' ],
+					'tr_class' => $schema_type_row_class[ 'recipe' ],
 					'td_class' => 'subsection',
 					'header'   => 'h5',
 					'label'    => _x( 'Recipe Information', 'metabox title', 'wpsso-schema-json-ld' ),
 				),
 				'schema_recipe_cuisine' => array(
-					'tr_class' => $schema_type_tr_class[ 'recipe' ],
+					'tr_class' => $schema_type_row_class[ 'recipe' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Recipe Cuisine', 'option label', 'wpsso-schema-json-ld' ),
@@ -785,7 +785,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_input_value( '', 'long_name' ),
 				),
 				'schema_recipe_course' => array(
-					'tr_class' => $schema_type_tr_class[ 'recipe' ],
+					'tr_class' => $schema_type_row_class[ 'recipe' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Recipe Course', 'option label', 'wpsso-schema-json-ld' ),
@@ -793,7 +793,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_input_value( '', 'long_name' ),
 				),
 				'schema_recipe_yield' => array(
-					'tr_class' => $schema_type_tr_class[ 'recipe' ],
+					'tr_class' => $schema_type_row_class[ 'recipe' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Recipe Makes', 'option label', 'wpsso-schema-json-ld' ),
@@ -801,7 +801,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_input_value( '', 'long_name' ),
 				),
 				'schema_recipe_cook_method' => array(
-					'tr_class' => $schema_type_tr_class[ 'recipe' ],
+					'tr_class' => $schema_type_row_class[ 'recipe' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Cooking Method', 'option label', 'wpsso-schema-json-ld' ),
@@ -809,7 +809,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_input_value( '', 'long_name' ),
 				),
 				'schema_recipe_prep_time' => array(
-					'tr_class' => $schema_type_tr_class[ 'recipe' ],
+					'tr_class' => $schema_type_row_class[ 'recipe' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Preparation Time', 'option label', 'wpsso-schema-json-ld' ),
@@ -820,7 +820,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						$form->get_no_input_value( '0', 'short' ) . $secs_sep,
 				),
 				'schema_recipe_cook_time' => array(
-					'tr_class' => $schema_type_tr_class[ 'recipe' ],
+					'tr_class' => $schema_type_row_class[ 'recipe' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Cooking Time', 'option label', 'wpsso-schema-json-ld' ),
@@ -831,7 +831,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						$form->get_no_input_value( '0', 'short' ) . $secs_sep,
 				),
 				'schema_recipe_total_time' => array(
-					'tr_class' => $schema_type_tr_class[ 'recipe' ],
+					'tr_class' => $schema_type_row_class[ 'recipe' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Total Time', 'option label', 'wpsso-schema-json-ld' ),
@@ -842,7 +842,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						$form->get_no_input_value( '0', 'short' ) . $secs_sep,
 				),
 				'schema_recipe_ingredients' => array(
-					'tr_class' => $schema_type_tr_class[ 'recipe' ],
+					'tr_class' => $schema_type_row_class[ 'recipe' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Recipe Ingredients', 'option label', 'wpsso-schema-json-ld' ),
@@ -850,7 +850,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_input_value( '', 'long_name', $css_id = '', '', $repeat = 5 ),
 				),
 				'schema_recipe_instructions' => array(
-					'tr_class' => $schema_type_tr_class[ 'recipe' ],
+					'tr_class' => $schema_type_row_class[ 'recipe' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Recipe Instructions', 'option label', 'wpsso-schema-json-ld' ),
@@ -862,13 +862,13 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				 * Schema Recipe - Nutrition Information
 				 */
 				'subsection_recipe_nutrition' => array(
-					'tr_class' => $schema_type_tr_class[ 'recipe' ],
+					'tr_class' => $schema_type_row_class[ 'recipe' ],
 					'td_class' => 'subsection',
 					'header'   => 'h5',
 					'label'    => _x( 'Nutrition Information per Serving', 'metabox title', 'wpsso-schema-json-ld' ),
 				),
 				'schema_recipe_nutri_serv' => array(
-					'tr_class' => $schema_type_tr_class[ 'recipe' ],
+					'tr_class' => $schema_type_row_class[ 'recipe' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Serving Size', 'option label', 'wpsso-schema-json-ld' ),
@@ -876,7 +876,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_input_value( '', 'long_name value_req' ),
 				),
 				'schema_recipe_nutri_cal' => array(
-					'tr_class' => $schema_type_tr_class[ 'recipe' ],
+					'tr_class' => $schema_type_row_class[ 'recipe' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Calories', 'option label', 'wpsso-schema-json-ld' ),
@@ -885,7 +885,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						_x( 'calories', 'option comment', 'wpsso-schema-json-ld' ),
 				),
 				'schema_recipe_nutri_prot' => array(
-					'tr_class' => $schema_type_tr_class[ 'recipe' ],
+					'tr_class' => $schema_type_row_class[ 'recipe' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Protein', 'option label', 'wpsso-schema-json-ld' ),
@@ -894,7 +894,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						_x( 'grams of protein', 'option comment', 'wpsso-schema-json-ld' ),
 				),
 				'schema_recipe_nutri_fib' => array(
-					'tr_class' => $schema_type_tr_class[ 'recipe' ],
+					'tr_class' => $schema_type_row_class[ 'recipe' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Fiber', 'option label', 'wpsso-schema-json-ld' ),
@@ -903,7 +903,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						_x( 'grams of fiber', 'option comment', 'wpsso-schema-json-ld' ),
 				),
 				'schema_recipe_nutri_carb' => array(
-					'tr_class' => $schema_type_tr_class[ 'recipe' ],
+					'tr_class' => $schema_type_row_class[ 'recipe' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Carbohydrates', 'option label', 'wpsso-schema-json-ld' ),
@@ -912,7 +912,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						_x( 'grams of carbohydrates', 'option comment', 'wpsso-schema-json-ld' ),
 				),
 				'schema_recipe_nutri_sugar' => array(
-					'tr_class' => $schema_type_tr_class[ 'recipe' ],
+					'tr_class' => $schema_type_row_class[ 'recipe' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Sugar', 'option label', 'wpsso-schema-json-ld' ),
@@ -921,7 +921,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						_x( 'grams of sugar', 'option comment', 'wpsso-schema-json-ld' ),
 				),
 				'schema_recipe_nutri_sod' => array(
-					'tr_class' => $schema_type_tr_class[ 'recipe' ],
+					'tr_class' => $schema_type_row_class[ 'recipe' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Sodium', 'option label', 'wpsso-schema-json-ld' ),
@@ -930,7 +930,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						_x( 'milligrams of sodium', 'option comment', 'wpsso-schema-json-ld' ),
 				),
 				'schema_recipe_nutri_fat' => array(
-					'tr_class' => $schema_type_tr_class[ 'recipe' ],
+					'tr_class' => $schema_type_row_class[ 'recipe' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Fat', 'option label', 'wpsso-schema-json-ld' ),
@@ -939,7 +939,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						_x( 'grams of fat', 'option comment', 'wpsso-schema-json-ld' ),
 				),
 				'schema_recipe_nutri_sat_fat' => array(
-					'tr_class' => $schema_type_tr_class[ 'recipe' ],
+					'tr_class' => $schema_type_row_class[ 'recipe' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Saturated Fat', 'option label', 'wpsso-schema-json-ld' ),
@@ -948,7 +948,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						_x( 'grams of saturated fat', 'option comment', 'wpsso-schema-json-ld' ),
 				),
 				'schema_recipe_nutri_unsat_fat' => array(
-					'tr_class' => $schema_type_tr_class[ 'recipe' ],
+					'tr_class' => $schema_type_row_class[ 'recipe' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Unsaturated Fat', 'option label', 'wpsso-schema-json-ld' ),
@@ -957,7 +957,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						_x( 'grams of unsaturated fat', 'option comment', 'wpsso-schema-json-ld' ),
 				),
 				'schema_recipe_nutri_trans_fat' => array(
-					'tr_class' => $schema_type_tr_class[ 'recipe' ],
+					'tr_class' => $schema_type_row_class[ 'recipe' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Trans Fat', 'option label', 'wpsso-schema-json-ld' ),
@@ -966,7 +966,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						_x( 'grams of trans fat', 'option comment', 'wpsso-schema-json-ld' ),
 				),
 				'schema_recipe_nutri_chol' => array(
-					'tr_class' => $schema_type_tr_class[ 'recipe' ],
+					'tr_class' => $schema_type_row_class[ 'recipe' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Cholesterol', 'option label', 'wpsso-schema-json-ld' ),
@@ -979,13 +979,13 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				 * Schema Review
 				 */
 				'subsection_review' => array(
-					'tr_class' => $schema_type_tr_class[ 'review' ],
+					'tr_class' => $schema_type_row_class[ 'review' ],
 					'td_class' => 'subsection',
 					'header'   => 'h5',
 					'label'    => _x( 'Review Information', 'metabox title', 'wpsso-schema-json-ld' ),
 				),
 				'schema_review_rating' => array(	// Included as schema.org/Rating, not schema.org/aggregateRating.
-					'tr_class' => $schema_type_tr_class[ 'review' ],
+					'tr_class' => $schema_type_row_class[ 'review' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Review Rating', 'option label', 'wpsso-schema-json-ld' ),
@@ -997,7 +997,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						$form->get_no_input_value( $form->defaults[ 'schema_review_rating_to' ], 'short' ),
 				),
 				'schema_review_rating_alt_name' => array(
-					'tr_class' => $schema_type_tr_class[ 'review' ],
+					'tr_class' => $schema_type_row_class[ 'review' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Review Rating Name', 'option label', 'wpsso-schema-json-ld' ),
@@ -1005,26 +1005,26 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_input_value(),
 				),
 				'schema_review_item_type' => array(
-					'tr_class' => $schema_type_tr_class[ 'review' ],
+					'tr_class' => $schema_type_row_class[ 'review' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Review Subject Type', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Reviewed Subject Type', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_type',
 					'content'  => $form->get_no_select( 'schema_review_item_type', $schema_types, $css_class = 'schema_type' ),
 				),
 				'schema_review_item_url' => array(
-					'tr_class' => $schema_type_tr_class[ 'review' ],
+					'tr_class' => $schema_type_row_class[ 'review' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Review Subject URL', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Reviewed Subject URL', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_url',
 					'content'  => $form->get_no_input_value( '', $css_class = 'wide value_req' ),
 				),
 				'schema_review_item_name' => array(
-					'tr_class' => $schema_type_tr_class[ 'review' ],
+					'tr_class' => $schema_type_row_class[ 'review' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Review Subject Name', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Reviewed Subject Name', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_name',
 					'content'  => $form->get_no_input_value( '', $css_class = 'wide value_req' ),
 				),
@@ -1033,13 +1033,13 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				 * Schema ClaimReview
 				 */
 				'subsection_review_claim' => array(
-					'tr_class' => $schema_type_tr_class[ 'review_claim' ],
+					'tr_class' => $schema_type_row_class[ 'review_claim' ],
 					'td_class' => 'subsection',
 					'header'   => 'h5',
 					'label'    => _x( 'Claim Review Information', 'metabox title', 'wpsso-schema-json-ld' ),
 				),
 				'schema_review_claim_reviewed' => array(
-					'tr_class' => $schema_type_tr_class[ 'review_claim' ],
+					'tr_class' => $schema_type_row_class[ 'review_claim' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Claim Short Summary', 'option label', 'wpsso-schema-json-ld' ),
@@ -1047,7 +1047,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
 				),
 				'schema_review_claim_made' => array(
-					'tr_class' => $schema_type_tr_class[ 'review_claim' ],
+					'tr_class' => $schema_type_row_class[ 'review_claim' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Claim Made on Date', 'option label', 'wpsso-schema-json-ld' ),
@@ -1055,7 +1055,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_date_time_iso( 'schema_review_claim_made' ),
 				),
 				'schema_review_claim_author_type' => array(
-					'tr_class' => $schema_type_tr_class[ 'review_claim' ],
+					'tr_class' => $schema_type_row_class[ 'review_claim' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Claim Author Type', 'option label', 'wpsso-schema-json-ld' ),
@@ -1063,7 +1063,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_select( 'schema_review_claim_author_type', $this->p->cf[ 'form' ][ 'claim_author_types' ] ),
 				),
 				'schema_review_claim_author_name' => array(
-					'tr_class' => $schema_type_tr_class[ 'review_claim' ],
+					'tr_class' => $schema_type_row_class[ 'review_claim' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Claim Author Name', 'option label', 'wpsso-schema-json-ld' ),
@@ -1071,7 +1071,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
 				),
 				'schema_review_claim_author_url' => array(
-					'tr_class' => $schema_type_tr_class[ 'review_claim' ],
+					'tr_class' => $schema_type_row_class[ 'review_claim' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Claim Author URL', 'option label', 'wpsso-schema-json-ld' ),
@@ -1079,7 +1079,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
 				),
 				'schema_review_claim_first_url' => array(
-					'tr_class' => $schema_type_tr_class[ 'review_claim' ],
+					'tr_class' => $schema_type_row_class[ 'review_claim' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'First Appearance URL', 'option label', 'wpsso-schema-json-ld' ),
@@ -1091,13 +1091,13 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				 * Schema SoftwareApplication
 				 */
 				'subsection_software_app' => array(
-					'tr_class' => $schema_type_tr_class[ 'software_app' ],
+					'tr_class' => $schema_type_row_class[ 'software_app' ],
 					'td_class' => 'subsection',
 					'header'   => 'h5',
 					'label'    => _x( 'Software Application Information', 'metabox title', 'wpsso-schema-json-ld' ),
 				),
 				'schema_software_app_reviewed' => array(
-					'tr_class' => $schema_type_tr_class[ 'software_app' ],
+					'tr_class' => $schema_type_row_class[ 'software_app' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Operating System', 'option label', 'wpsso-schema-json-ld' ),

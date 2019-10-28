@@ -127,9 +127,12 @@ _x( 'Review Rating', 'option label', 'wpsso-schema-json-ld' );
 _x( 'from', 'option comment', 'wpsso-schema-json-ld' );
 _x( 'to', 'option comment', 'wpsso-schema-json-ld' );
 _x( 'Review Rating Name', 'option label', 'wpsso-schema-json-ld' );
-_x( 'Review Subject Type', 'option label', 'wpsso-schema-json-ld' );
-_x( 'Review Subject URL', 'option label', 'wpsso-schema-json-ld' );
-_x( 'Review Subject Name', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Reviewed Subject Type', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Reviewed Subject URL', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Reviewed Subject Name', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Reviewed Book Information', 'metabox title', 'wpsso-schema-json-ld' );
+// translators: Please ignore - translation uses a different text domain.
+_x( 'Reviewed Book ISBN', 'option label', 'wpsso' );
 _x( 'Claim Review Information', 'metabox title', 'wpsso-schema-json-ld' );
 _x( 'Claim Short Summary', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Claim Made on Date', 'option label', 'wpsso-schema-json-ld' );
