@@ -327,9 +327,13 @@ Additional e-Commerce plugins are also provided with the WPSSO Core Premium plug
 			* Trans Fat
 			* Cholesterol
 	* Review Information
-		* Review Subject URL 
 		* Review Rating 
 		* Review Rating Name
+		* Reviewed Subject Type 
+		* Reviewed Subject URL 
+		* Reviewed Subject Name 
+		* Reviewed Book Information
+			* Reviewed Book ISBN
 	* Claim Review Information
 		* Claim Short Summary
 		* Claim Made on Date
@@ -826,14 +830,27 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.14.1-dev.1 (2019/10/28)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Added a new "Reviewed Book ISBN" option in the Document SSO metabox.
+* **Bugfixes*
+	* None.
+* **Developer Notes**
+	* Refactored the WpssoJsonSchema::get_type_row_class() method.
+	* Added a new lib/filters-messages.php file.
+	* Added a new lib/filters-schema.php file.
+
 **Version 2.14.0 (2019/10/22)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* Added a new "Review Subject Type" option in the Document SSO metabox.
-	* Added a new "Default Review Subject Type" option under the SSO > Schema Markup > Meta Defaults tab.
-	* The Schema 'itemReviewed' property type can now be managed by the "Review Subject Type" option in the Document SSO metabox. 
+	* Added a new "Reviewed Subject Type" option in the Document SSO metabox.
+	* Added a new "Default Reviewed Subject Type" option under the SSO > Schema Markup > Meta Defaults tab.
+	* The Schema 'itemReviewed' property type can now be managed by the "Reviewed Subject Type" option in the Document SSO metabox. 
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -956,7 +973,11 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
+= 2.14.1-dev.1 =
+
+(2019/10/28) Added a new "Reviewed Book ISBN" option in the Document SSO metabox.
+
 = 2.14.0 =
 
-(2019/10/22) Added a new "Review Subject Type" option in the Document SSO metabox.
+(2019/10/22) Added a new "Reviewed Subject Type" option in the Document SSO metabox.
 
