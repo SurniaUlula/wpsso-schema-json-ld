@@ -457,7 +457,7 @@ if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
 						 *
 						 * $context = 'blog', 'post' (default), 'media', or 'query'
 						 */
-						$ret[ 'sameAs' ][] = SucomUtilWP::wp_get_shortlink( $mod[ 'id' ], 'post' );
+						$ret[ 'sameAs' ][] = SucomUtilWP::wp_get_shortlink( $mod[ 'id' ], $context = 'post' );
 					}
 				}
 
