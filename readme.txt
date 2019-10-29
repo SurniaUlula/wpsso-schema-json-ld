@@ -332,14 +332,15 @@ Additional e-Commerce plugins are also provided with the WPSSO Core Premium plug
 		* Reviewed Subject Type 
 		* Reviewed Subject URL 
 		* Reviewed Subject Name 
+		* Reviewed Creative Work Information
+			* Reviewed CW Author Type
+			* Reviewed CW Author Name
+			* Reviewed CW Author URL
+			* Reviewed CW Publish Date
 		* Reviewed Book Information
 			* Reviewed Book ISBN
 	* Claim Review Information
-		* Claim Short Summary
-		* Claim Made on Date
-		* Claim Author Type
-		* Claim Author Name
-		* Claim Author URL
+		* Short Summary of Claim
 		* First Appearance URL
 	* Software Application Information
 		* Operating System
@@ -830,18 +831,26 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.14.1-dev.2 (2019/10/28)**
+**Version 2.15.0-dev.3 (2019/10/28)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* Added a new "Reviewed Book ISBN" option in the Document SSO metabox.
+	* Added a new "Reviewed Creative Work Information" section in the Document SSO metabox:
+		* Renamed the "Claim Author Type" option to "Reviewed CW Author Type".
+		* Renamed the "Claim Author Name" option to "Reviewed CW Author Name".
+		* Renamed the "Claim Author URL" option to "Reviewed CW Author URL".
+		* Renamed the "Claim Made on Date" option to "Reviewed CW Publish Date".
+	* Added a new "Reviewed Book Information" section in the Document SSO metabox:
+		* Added a new "Reviewed Book ISBN" option.
 * **Bugfixes*
 	* None.
 * **Developer Notes**
+	* Added a new lib/filters-messages.php library file.
+	* Added a new lib/filters-schema.php library file.
 	* Refactored the WpssoJsonSchema::get_type_row_class() method.
-	* Added a new lib/filters-messages.php file.
-	* Added a new lib/filters-schema.php file.
+	* Refactored the lib/pro/head/review.php filter for https://schema.org/Review.
+	* Refactored the lib/pro/head/claimreview.php filter for https://schema.org/ClaimReview.
 
 **Version 2.14.0 (2019/10/22)**
 
@@ -973,9 +982,9 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 2.14.1-dev.2 =
+= 2.15.0-dev.3 =
 
-(2019/10/28) Added a new "Reviewed Book ISBN" option in the Document SSO metabox.
+(2019/10/28) Added new "Reviewed Creative Work Information" and "Reviewed Book Information" sections in the Document SSO metabox.
 
 = 2.14.0 =
 
