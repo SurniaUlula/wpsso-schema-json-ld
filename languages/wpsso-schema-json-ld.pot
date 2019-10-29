@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 2.15.0-dev.3\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 2.15.0-dev.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-"
 "ld\n"
 "POT-Creation-Date: 2019-MO-DA HO:MI+ZONE\n"
@@ -387,142 +387,138 @@ msgid "A name for the subject being reviewed."
 msgstr ""
 
 #: lib/filters-messages.php:481
-msgid "The publisher of the claim."
+msgid "The creative work author can be a person or an organization."
 msgstr ""
 
-#: lib/filters-messages.php:483
-msgid "The publisher can be a person or an organization."
+#: lib/filters-messages.php:487
+msgid "Enter the name of the author for this creative work."
 msgstr ""
 
-#: lib/filters-messages.php:489
-msgid "The name of the person or organization making the claim."
-msgstr ""
-
-#: lib/filters-messages.php:495
+#: lib/filters-messages.php:493
 msgid ""
-"The home page of the organization making the claim or another definitive URL "
-"that provides information about the author making the claim, such as a "
-"person or organization's Wikipedia or Wikidata page."
+"The home page of the author, or another definitive URL that provides "
+"information about the author, such as the person or organization's Wikipedia "
+"or Wikidata page."
 msgstr ""
 
-#: lib/filters-messages.php:501
+#: lib/filters-messages.php:499
 msgid ""
-"The date when this reviewed creative work was published or became popular / "
-"entered public discourse (for example, when it became popular on social "
-"networks)."
+"The date when this creative work was published or became popular / entered "
+"public discourse (for example, when it became popular on social networks)."
 msgstr ""
 
-#: lib/filters-messages.php:507
+#: lib/filters-messages.php:505
 msgid ""
 "The ISBN code (aka International Standard Book Number) for the book being "
 "reviewed."
 msgstr ""
 
-#: lib/filters-messages.php:513
+#: lib/filters-messages.php:511
 msgid ""
-"A short summary of specific claim(s) reviewed in the Schema ClaimReview."
+"A short summary of specific claim(s) being reviewed in the Schema "
+"ClaimReview content."
 msgstr ""
 
-#: lib/filters-messages.php:515
+#: lib/filters-messages.php:513
 msgid ""
 "The summary should be less than 75 characters to minimize wrapping on mobile "
 "devices."
 msgstr ""
 
-#: lib/filters-messages.php:521
+#: lib/filters-messages.php:519
 msgid "An optional webpage URL where this specific claim first appeared."
 msgstr ""
 
-#: lib/filters-messages.php:527
+#: lib/filters-messages.php:525
 msgid "The operating system supported (example: %s, etc.)."
 msgstr ""
 
-#: lib/filters-messages.php:548
+#: lib/filters-messages.php:546
 msgid ""
 "The maximum length used for the Schema CreativeWork text property value (the "
 "default is %d characters)."
 msgstr ""
 
-#: lib/filters-messages.php:554
+#: lib/filters-messages.php:552
 msgid ""
 "Add a text property to the Schema CreativeWork type with the complete "
 "textual content of the post / page."
 msgstr ""
 
-#: lib/filters-messages.php:560
+#: lib/filters-messages.php:558
 msgid ""
 "When a rating value for the webpage content is not available, a 5 star "
 "rating from the site organization can be added to the main Schema type "
 "markup."
 msgstr ""
 
-#: lib/filters-messages.php:562
+#: lib/filters-messages.php:560
 msgid ""
 "Visitor rating and review features are available from several supported "
 "plugins, including %s."
 msgstr ""
 
-#: lib/filters-messages.php:564
+#: lib/filters-messages.php:562
 msgid "See the <a href=\"%1$s\">%2$s</a> webpage for details."
 msgstr ""
 
-#: lib/filters-messages.php:565
+#: lib/filters-messages.php:563
 msgid "https://developers.google.com/search/docs/data-types/review-snippet"
 msgstr ""
 
-#: lib/filters-messages.php:566
+#: lib/filters-messages.php:564
 msgid "Google Review snippet structured data guidelines"
 msgstr ""
 
-#: lib/filters-messages.php:572
+#: lib/filters-messages.php:570
 msgid ""
 "Select a default family friendly value for the Schema CreativeWork type and/"
 "or its sub-types (Article, BlogPosting, WebPage, etc)."
 msgstr ""
 
-#: lib/filters-messages.php:578
+#: lib/filters-messages.php:576
 msgid ""
 "Select a default publisher for the Schema CreativeWork type and/or its sub-"
 "types (Article, BlogPosting, WebPage, etc)."
 msgstr ""
 
-#: lib/filters-messages.php:584
+#: lib/filters-messages.php:582
 msgid ""
 "Select a default service provider, service operator, or service performer "
 "(example: \"Netflix\")."
 msgstr ""
 
-#: lib/filters-messages.php:590
+#: lib/filters-messages.php:588
 msgid "Select a default organizer (organization) for the Schema Event type."
 msgstr ""
 
-#: lib/filters-messages.php:596
+#: lib/filters-messages.php:594
 msgid "Select a default organizer (person) for the Schema Event type."
 msgstr ""
 
-#: lib/filters-messages.php:602
+#: lib/filters-messages.php:600
 msgid "Select a default performer (organization) for the Schema Event type."
 msgstr ""
 
-#: lib/filters-messages.php:608
+#: lib/filters-messages.php:606
 msgid "Select a default performer (person) for the Schema Event type."
 msgstr ""
 
-#: lib/filters-messages.php:614
+#: lib/filters-messages.php:612
 msgid "Select a default venue (place / location) for the Schema Event type."
 msgstr ""
 
-#: lib/filters-messages.php:620
+#: lib/filters-messages.php:618
 msgid ""
 "Select a default organization for the Schema JobPosting hiring organization."
 msgstr ""
 
-#: lib/filters-messages.php:626
+#: lib/filters-messages.php:624
 msgid ""
 "Select a default place / location for the Schema JobPosting job location."
 msgstr ""
 
-#: lib/filters-messages.php:632
+#: lib/filters-messages.php:630
 msgid "Select a default Schema type for the Schema Review subject URL."
 msgstr ""
 
@@ -1247,91 +1243,87 @@ msgctxt "option label"
 msgid "Review Rating Name"
 msgstr ""
 
-#: lib/gettext-pro.php:130 lib/pro/admin/meta-edit.php:967
-#: lib/std/admin/meta-edit.php:1015
-msgctxt "option label"
-msgid "Reviewed Subject Type"
+#: lib/gettext-pro.php:130 lib/pro/admin/meta-edit.php:972
+#: lib/std/admin/meta-edit.php:1019
+msgctxt "metabox title"
+msgid "Reviewed Subject Information"
 msgstr ""
 
 #: lib/gettext-pro.php:131 lib/pro/admin/meta-edit.php:977
-#: lib/std/admin/meta-edit.php:1023
+#: lib/std/admin/meta-edit.php:1025
 msgctxt "option label"
-msgid "Reviewed Subject URL"
+msgid "Subject Type"
 msgstr ""
 
-#: lib/gettext-pro.php:132 lib/pro/admin/meta-edit.php:984
-#: lib/std/admin/meta-edit.php:1031
+#: lib/gettext-pro.php:132 lib/pro/admin/meta-edit.php:987
+#: lib/std/admin/meta-edit.php:1033
 msgctxt "option label"
-msgid "Reviewed Subject Name"
+msgid "Subject URL"
 msgstr ""
 
-#: lib/gettext-pro.php:133 lib/pro/admin/meta-edit.php:996
-#: lib/std/admin/meta-edit.php:1043
-msgctxt "metabox title"
-msgid "Reviewed Creative Work Information"
-msgstr ""
-
-#: lib/gettext-pro.php:134 lib/pro/admin/meta-edit.php:1001
-#: lib/std/admin/meta-edit.php:1049
+#: lib/gettext-pro.php:133 lib/pro/admin/meta-edit.php:994
+#: lib/std/admin/meta-edit.php:1041
 msgctxt "option label"
-msgid "Reviewed CW Author Type"
+msgid "Subject Name"
 msgstr ""
 
-#: lib/gettext-pro.php:135 lib/pro/admin/meta-edit.php:1008
-#: lib/std/admin/meta-edit.php:1057
+#: lib/gettext-pro.php:134 lib/pro/admin/meta-edit.php:1005
+#: lib/std/admin/meta-edit.php:1053
 msgctxt "option label"
-msgid "Reviewed CW Author Name"
+msgid "Subject Author Type"
 msgstr ""
 
-#: lib/gettext-pro.php:136 lib/pro/admin/meta-edit.php:1015
-#: lib/std/admin/meta-edit.php:1065
+#: lib/gettext-pro.php:135 lib/pro/admin/meta-edit.php:1012
+#: lib/std/admin/meta-edit.php:1061
 msgctxt "option label"
-msgid "Reviewed CW Author URL"
+msgid "Subject Author Name"
 msgstr ""
 
-#: lib/gettext-pro.php:137 lib/pro/admin/meta-edit.php:1022
-#: lib/std/admin/meta-edit.php:1073
+#: lib/gettext-pro.php:136 lib/pro/admin/meta-edit.php:1019
+#: lib/std/admin/meta-edit.php:1069
 msgctxt "option label"
-msgid "Reviewed CW Publish Date"
+msgid "Subject Author URL"
 msgstr ""
 
-#: lib/gettext-pro.php:138 lib/pro/admin/meta-edit.php:1034
-msgctxt "metabox title"
-msgid "Reviewed Book Information"
+#: lib/gettext-pro.php:137 lib/pro/admin/meta-edit.php:1026
+#: lib/std/admin/meta-edit.php:1077
+msgctxt "option label"
+msgid "Subject Publish Date"
 msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/gettext-pro.php:140 lib/pro/admin/meta-edit.php:1039
+#: lib/gettext-pro.php:139 lib/pro/admin/meta-edit.php:1037
+#: lib/std/admin/meta-edit.php:1089
 msgctxt "option label"
-msgid "Reviewed Book ISBN"
+msgid "Subject ISBN"
 msgstr ""
 
-#: lib/gettext-pro.php:141 lib/pro/admin/meta-edit.php:1052
-#: lib/std/admin/meta-edit.php:1085
+#: lib/gettext-pro.php:140 lib/pro/admin/meta-edit.php:1050
+#: lib/std/admin/meta-edit.php:1101
 msgctxt "metabox title"
 msgid "Claim Review Information"
 msgstr ""
 
-#: lib/gettext-pro.php:142 lib/pro/admin/meta-edit.php:1057
-#: lib/std/admin/meta-edit.php:1091
+#: lib/gettext-pro.php:141 lib/pro/admin/meta-edit.php:1055
+#: lib/std/admin/meta-edit.php:1107
 msgctxt "option label"
 msgid "Short Summary of Claim"
 msgstr ""
 
-#: lib/gettext-pro.php:143 lib/pro/admin/meta-edit.php:1064
-#: lib/std/admin/meta-edit.php:1099
+#: lib/gettext-pro.php:142 lib/pro/admin/meta-edit.php:1062
+#: lib/std/admin/meta-edit.php:1115
 msgctxt "option label"
 msgid "First Appearance URL"
 msgstr ""
 
-#: lib/gettext-pro.php:144 lib/pro/admin/meta-edit.php:1076
-#: lib/std/admin/meta-edit.php:1111
+#: lib/gettext-pro.php:143 lib/pro/admin/meta-edit.php:1074
+#: lib/std/admin/meta-edit.php:1127
 msgctxt "metabox title"
 msgid "Software Application Information"
 msgstr ""
 
-#: lib/gettext-pro.php:145 lib/pro/admin/meta-edit.php:1081
-#: lib/std/admin/meta-edit.php:1117
+#: lib/gettext-pro.php:144 lib/pro/admin/meta-edit.php:1079
+#: lib/std/admin/meta-edit.php:1133
 msgctxt "option label"
 msgid "Operating System"
 msgstr ""

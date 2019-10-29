@@ -478,27 +478,25 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				case 'tooltip-meta-schema_review_item_cw_author_type':	// Reviewed CW Author Type
 
-					$text = __( 'The publisher of the claim.', 'wpsso-schema-json-ld' ) . ' ';
-					
-					$text .= __( 'The publisher can be a person or an organization.', 'wpsso-schema-json-ld' );
+					$text .= __( 'The creative work author can be a person or an organization.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
 				case 'tooltip-meta-schema_review_item_cw_author_name':	// Reviewed CW Author Name
 
-					$text = __( 'The name of the person or organization making the claim.', 'wpsso-schema-json-ld' );
+					$text = __( 'Enter the name of the author for this creative work.', 'wpsso-schema-json-ld' ) . ' ';
 
 				 	break;
 
 				case 'tooltip-meta-schema_review_item_cw_author_url':	// Reviewed CW Author URL
 
-					$text = __( 'The home page of the organization making the claim or another definitive URL that provides information about the author making the claim, such as a person or organization\'s Wikipedia or Wikidata page.', 'wpsso-schema-json-ld' );
+					$text = __( 'The home page of the author, or another definitive URL that provides information about the author, such as the person or organization\'s Wikipedia or Wikidata page.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
 				case 'tooltip-meta-schema_review_item_cw_pub':		// Reviewed CW Publish Date
 
-					$text = __( 'The date when this reviewed creative work was published or became popular / entered public discourse (for example, when it became popular on social networks).', 'wpsso-schema-json-ld' );
+					$text = __( 'The date when this creative work was published or became popular / entered public discourse (for example, when it became popular on social networks).', 'wpsso-schema-json-ld' );
 
 				 	break;
 
@@ -510,7 +508,7 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				case 'tooltip-meta-schema_review_claim_reviewed':	// Short Summary of Claim
 
-					$text = __( 'A short summary of specific claim(s) reviewed in the Schema ClaimReview.', 'wpsso-schema-json-ld' ) . ' ';
+					$text = __( 'A short summary of specific claim(s) being reviewed in the Schema ClaimReview content.', 'wpsso-schema-json-ld' ) . ' ';
 
 					$text .= __( 'The summary should be less than 75 characters to minimize wrapping on mobile devices.', 'wpsso-schema-json-ld' );
 
