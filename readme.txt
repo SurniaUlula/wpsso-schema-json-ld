@@ -329,16 +329,15 @@ Additional e-Commerce plugins are also provided with the WPSSO Core Premium plug
 	* Review Information
 		* Review Rating 
 		* Review Rating Name
-		* Reviewed Subject Type 
-		* Reviewed Subject URL 
-		* Reviewed Subject Name 
-		* Reviewed Creative Work Information
-			* Reviewed CW Author Type
-			* Reviewed CW Author Name
-			* Reviewed CW Author URL
-			* Reviewed CW Publish Date
-		* Reviewed Book Information
-			* Reviewed Book ISBN
+		* Reviewed Subject Information
+			* Subject Type 
+			* Subject URL 
+			* Subject Name 
+			* Subject Author Type
+			* Subject Author Name
+			* Subject Author URL
+			* Subject Publish Date
+			* Subject ISBN
 	* Claim Review Information
 		* Short Summary of Claim
 		* First Appearance URL
@@ -831,7 +830,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.15.0-dev.3 (2019/10/28)**
+**Version 2.15.0-dev.4 (2019/10/28)**
 
 * **New Features**
 	* None.
@@ -982,7 +981,7 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 2.15.0-dev.3 =
+= 2.15.0-dev.4 =
 
 (2019/10/28) Added new "Reviewed Creative Work Information" and "Reviewed Book Information" sections in the Document SSO metabox.
 
