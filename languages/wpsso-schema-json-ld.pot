@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 2.15.0-dev.4\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 2.15.0-b.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-"
 "ld\n"
 "POT-Creation-Date: 2019-MO-DA HO:MI+ZONE\n"
@@ -1240,7 +1240,7 @@ msgstr ""
 #: lib/gettext-pro.php:129 lib/pro/admin/meta-edit.php:960
 #: lib/std/admin/meta-edit.php:1007
 msgctxt "option label"
-msgid "Review Rating Name"
+msgid "Rating Value Name"
 msgstr ""
 
 #: lib/gettext-pro.php:130 lib/pro/admin/meta-edit.php:972

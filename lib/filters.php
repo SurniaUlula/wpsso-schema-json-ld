@@ -190,7 +190,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				'schema_review_rating'               => '0.0',						// Review Rating.
 				'schema_review_rating_from'          => '1',						// Review Rating (From).
 				'schema_review_rating_to'            => '5',						// Review Rating (To).
-				'schema_review_rating_alt_name'      => '',						// Review Rating Name.
+				'schema_review_rating_alt_name'      => '',						// Rating Value Name.
 				'schema_review_item_type'            => $opts[ 'schema_def_review_item_type' ],		// Reviewed Subject Type.
 				'schema_review_item_url'             => '',						// Reviewed Subject URL.
 				'schema_review_item_name'            => '',						// Reviewed Subject Name.

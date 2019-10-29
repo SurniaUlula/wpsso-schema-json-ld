@@ -452,7 +452,7 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_rating_alt_name':	// Review Rating Name
+				case 'tooltip-meta-schema_review_rating_alt_name':	// Rating Value Name
 
 					$text = __( 'An alternate name for the rating value (example: False, Misleading, Accurate, etc.).', 'wpsso-schema-json-ld' );
 

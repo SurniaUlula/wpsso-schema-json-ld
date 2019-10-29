@@ -1004,7 +1004,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => $schema_type_row_class[ 'review' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Review Rating Name', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Rating Value Name', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_rating_alt_name',
 					'content'  => $form->get_no_input_value(),
 				),
