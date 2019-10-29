@@ -110,16 +110,16 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				'schema_prov_org_id'                 => $opts[ 'schema_def_prov_org_id' ],		// Provider.
 				'schema_event_lang'                  => $def_lang,					// Event Language.
 				'schema_event_start_date'            => '',						// Event Start Date.
-				'schema_event_start_time'            => 'none',						// Event Start Time.
+				'schema_event_start_time'            => 'none',					// Event Start Time.
 				'schema_event_start_timezone'        => $timezone,					// Event Start Timezone.
 				'schema_event_end_date'              => '',						// Event End Date.
-				'schema_event_end_time'              => 'none',						// Event End Time.
+				'schema_event_end_time'              => 'none',					// Event End Time.
 				'schema_event_end_timezone'          => $timezone,					// Event End Timezone.
 				'schema_event_offers_start_date'     => '',						// Event Start Date.
-				'schema_event_offers_start_time'     => 'none',						// Offers Start Time.
+				'schema_event_offers_start_time'     => 'none',					// Offers Start Time.
 				'schema_event_offers_start_timezone' => $timezone,					// Offers Start Timezone.
 				'schema_event_offers_end_date'       => '',						// Offers End Date.
-				'schema_event_offers_end_time'       => 'none',						// Offers End Time.
+				'schema_event_offers_end_time'       => 'none',					// Offers End Time.
 				'schema_event_offers_end_timezone'   => $timezone,					// Offers End Timezone.
 				'schema_event_organizer_org_id'      => $opts[ 'schema_def_event_organizer_org_id' ],	// Event Organizer Org.
 				'schema_event_organizer_person_id'   => $opts[ 'schema_def_event_organizer_person_id' ],// Event Organizer Person.
@@ -139,8 +139,8 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				'schema_job_hiring_org_id'           => $opts[ 'schema_def_job_hiring_org_id' ],	// Job Hiring Organization.
 				'schema_job_location_id'             => $opts[ 'schema_def_job_location_id' ],		// Job Location.
 				'schema_job_salary'                  => '',						// Base Salary.
-				'schema_job_salary_currency'         => $opts[ 'plugin_def_currency' ],			// Base Salary Currency.
-				'schema_job_salary_period'           => 'year',						// Base Salary per Year, Month, Week, Hour.
+				'schema_job_salary_currency'         => $opts[ 'plugin_def_currency' ],		// Base Salary Currency.
+				'schema_job_salary_period'           => 'year',					// Base Salary per Year, Month, Week, Hour.
 				'schema_job_empl_type_full_time'     => 0,
 				'schema_job_empl_type_part_time'     => 0,
 				'schema_job_empl_type_contractor'    => 0,
@@ -194,14 +194,14 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				'schema_review_item_type'            => $opts[ 'schema_def_review_item_type' ],		// Reviewed Subject Type.
 				'schema_review_item_url'             => '',						// Reviewed Subject URL.
 				'schema_review_item_name'            => '',						// Reviewed Subject Name.
+				'schema_review_item_cw_author_type'  => 'none',						// Reviewed CW Author Type.
+				'schema_review_item_cw_author_name'  => '',						// Reviewed CW Author Name.
+				'schema_review_item_cw_author_url'   => '',						// Reviewed CW Author URL.
+				'schema_review_item_cw_pub_date'     => '',						// Reviewed CW Publish Date.
+				'schema_review_item_cw_pub_time'     => 'none',						// Reviewed CW Publish Time.
+				'schema_review_item_cw_pub_timezone' => $timezone,					// Reviewed CW Publish Timezone.
 				'schema_review_item_book_isbn'       => '',						// Reviewed Book ISBN.
-				'schema_review_claim_reviewed'       => '',						// Claim Short Summary.
-				'schema_review_claim_made_date'      => '',						// Claim Made on Date.
-				'schema_review_claim_made_time'      => 'none',						// Claim Made on Time.
-				'schema_review_claim_made_timezone'  => $timezone,					// Claim Made on Timezone.
-				'schema_review_claim_author_type'    => 'none',						// Claim Author Type.
-				'schema_review_claim_author_name'    => '',						// Claim Author Name.
-				'schema_review_claim_author_url'     => '',						// Claim Author URL.
+				'schema_review_claim_reviewed'       => '',						// Short Summary of Claim.
 				'schema_review_claim_first_url'      => '',						// First Appearance URL.
 				'schema_software_app_os'             => '',						// Operating System.
 			);
@@ -251,11 +251,14 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				26 => array(
 					'schema_part_of_url' => 'schema_ispartof_url',
 				),
-				/*
-				29 => array(
-					'schema_job_location_id' => 'schema_job_location_id_0',
+				32 => array(
+					'schema_review_claim_author_type'   => 'schema_review_item_cw_author_type',
+					'schema_review_claim_author_name'   => 'schema_review_item_cw_author_name',
+					'schema_review_claim_author_url'    => 'schema_review_item_cw_author_url',
+					'schema_review_claim_made_date'     => 'schema_review_item_cw_pub_date',
+					'schema_review_claim_made_time'     => 'schema_review_item_cw_pub_time',
+					'schema_review_claim_made_timezone' => 'schema_review_item_cw_pub_timezone',
 				),
-				*/
 			);
 
 			return $options_keys;
@@ -299,7 +302,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_review_item_name':			// Reviewed Subject Name.
 				case 'schema_review_item_book_isbn':		// Reviewed Subject Book ISBN.
 				case 'schema_review_claim_reviewed':
-				case 'schema_review_claim_author_name':		// Claim Author Name.
+				case 'schema_review_item_cw_author_name':	// Reviewed CW Author Name.
 				case 'schema_software_app_os':
 
 					return 'one_line';
@@ -341,7 +344,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_prov_org_id':			// Provider.
 				case 'schema_pub_org_id':			// Publisher.
 				case 'schema_review_item_type':			// Reviewed Subject Type.
-				case 'schema_review_claim_author_type':		// Claim Author Type.
+				case 'schema_review_item_cw_author_type':	// Reviewed CW Author Type.
 				case 'schema_type':				// Schema Type.
 
 					return 'not_blank';
@@ -402,7 +405,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_ispartof_url':			// Is Part of URL.
 				case 'schema_license_url':			// License URL.
 				case 'schema_review_item_url':			// Reviewed Subject URL.
-				case 'schema_review_claim_author_url':		// Claim Author URL.
+				case 'schema_review_item_cw_author_url':	// Reviewed CW Author URL.
 				case 'schema_review_claim_first_url':		// First Appearance URL.
 
 					return 'url';

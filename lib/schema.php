@@ -897,6 +897,7 @@ if ( ! class_exists( 'WpssoJsonSchema' ) ) {
 
 			if ( empty( $class_type_ids ) || ! is_array( $class_type_ids ) ) {
 				$class_type_ids = array(
+					'book'           => 'book',
 					'creative_work'  => 'creative.work',
 					'course'         => 'course',
 					'event'          => 'event',

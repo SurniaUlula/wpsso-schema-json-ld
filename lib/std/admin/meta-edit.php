@@ -100,7 +100,11 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 			/**
 			 * Javascript classes to hide/show rows by selected schema type.
 			 */
-			$schema_type_row_class = WpssoJsonSchema::get_type_row_class();
+			$schema_type_row_class             = WpssoJsonSchema::get_type_row_class( 'schema_type' );
+			$schema_review_item_type_row_class = WpssoJsonSchema::get_type_row_class( 'schema_review_item_type', array(
+				'book'           => 'book',
+				'creative_work'  => 'creative.work',
+			) );
 
 			/**
 			 * Remove and re-create.
@@ -1030,6 +1034,48 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				),
 
 				/**
+				 * Schema Review Creative Work
+				 */
+				'subsection_review_item_cw' => array(
+					'tr_class' => 'hide_schema_type ' . $schema_review_item_type_row_class[ 'creative_work' ],
+					'td_class' => 'subsection',
+					'header'   => 'h5',
+					'label'    => _x( 'Reviewed Creative Work Information', 'metabox title', 'wpsso-schema-json-ld' ),
+				),
+				'schema_review_item_cw_author_type' => array(
+					'tr_class' => 'hide_schema_type ' . $schema_review_item_type_row_class[ 'creative_work' ],
+					'th_class' => 'medium',
+					'td_class' => 'blank',
+					'label'    => _x( 'Reviewed CW Author Type', 'option label', 'wpsso-schema-json-ld' ),
+					'tooltip'  => 'meta-schema_review_item_cw_author_type',
+					'content'  => $form->get_no_select( 'schema_review_item_cw_author_type', $this->p->cf[ 'form' ][ 'author_types' ] ),
+				),
+				'schema_review_item_cw_author_name' => array(
+					'tr_class' => 'hide_schema_type ' . $schema_review_item_type_row_class[ 'creative_work' ],
+					'th_class' => 'medium',
+					'td_class' => 'blank',
+					'label'    => _x( 'Reviewed CW Author Name', 'option label', 'wpsso-schema-json-ld' ),
+					'tooltip'  => 'meta-schema_review_item_cw_author_name',
+					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
+				),
+				'schema_review_item_cw_author_url' => array(
+					'tr_class' => 'hide_schema_type ' . $schema_review_item_type_row_class[ 'creative_work' ],
+					'th_class' => 'medium',
+					'td_class' => 'blank',
+					'label'    => _x( 'Reviewed CW Author URL', 'option label', 'wpsso-schema-json-ld' ),
+					'tooltip'  => 'meta-schema_review_item_cw_author_url',
+					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
+				),
+				'schema_review_item_cw_pub' => array(
+					'tr_class' => 'hide_schema_type ' . $schema_review_item_type_row_class[ 'creative_work' ],
+					'th_class' => 'medium',
+					'td_class' => 'blank',
+					'label'    => _x( 'Reviewed CW Publish Date', 'option label', 'wpsso-schema-json-ld' ),
+					'tooltip'  => 'meta-schema_review_item_cw_pub',
+					'content'  => $form->get_no_date_time_iso( 'schema_review_item_cw_pub' ),
+				),
+
+				/**
 				 * Schema ClaimReview
 				 */
 				'subsection_review_claim' => array(
@@ -1042,40 +1088,8 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => $schema_type_row_class[ 'review_claim' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Claim Short Summary', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Short Summary of Claim', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_claim_reviewed',
-					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
-				),
-				'schema_review_claim_made' => array(
-					'tr_class' => $schema_type_row_class[ 'review_claim' ],
-					'th_class' => 'medium',
-					'td_class' => 'blank',
-					'label'    => _x( 'Claim Made on Date', 'option label', 'wpsso-schema-json-ld' ),
-					'tooltip'  => 'meta-schema_review_claim_made',
-					'content'  => $form->get_no_date_time_iso( 'schema_review_claim_made' ),
-				),
-				'schema_review_claim_author_type' => array(
-					'tr_class' => $schema_type_row_class[ 'review_claim' ],
-					'th_class' => 'medium',
-					'td_class' => 'blank',
-					'label'    => _x( 'Claim Author Type', 'option label', 'wpsso-schema-json-ld' ),
-					'tooltip'  => 'meta-schema_review_claim_author_type',
-					'content'  => $form->get_no_select( 'schema_review_claim_author_type', $this->p->cf[ 'form' ][ 'claim_author_types' ] ),
-				),
-				'schema_review_claim_author_name' => array(
-					'tr_class' => $schema_type_row_class[ 'review_claim' ],
-					'th_class' => 'medium',
-					'td_class' => 'blank',
-					'label'    => _x( 'Claim Author Name', 'option label', 'wpsso-schema-json-ld' ),
-					'tooltip'  => 'meta-schema_review_claim_author_name',
-					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
-				),
-				'schema_review_claim_author_url' => array(
-					'tr_class' => $schema_type_row_class[ 'review_claim' ],
-					'th_class' => 'medium',
-					'td_class' => 'blank',
-					'label'    => _x( 'Claim Author URL', 'option label', 'wpsso-schema-json-ld' ),
-					'tooltip'  => 'meta-schema_review_claim_author_url',
 					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
 				),
 				'schema_review_claim_first_url' => array(

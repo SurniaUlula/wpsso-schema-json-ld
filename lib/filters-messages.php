@@ -476,27 +476,7 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_book_isbn':	// Reviewed Book ISBN.
-
-					$text = __( 'The ISBN code (aka International Standard Book Number) for the book being reviewed.', 'wpsso-schema-json-ld' );
-
-				 	break;
-
-				case 'tooltip-meta-schema_review_claim_reviewed':	// Claim Short Summary
-
-					$text = __( 'A short summary of specific claim(s) reviewed in the Schema ClaimReview.', 'wpsso-schema-json-ld' ) . ' ';
-
-					$text .= __( 'The summary should be less than 75 characters to minimize wrapping on mobile devices.', 'wpsso-schema-json-ld' );
-
-				 	break;
-
-				case 'tooltip-meta-schema_review_claim_made':		// Claim Made on Date
-
-					$text = __( 'The date when the claim was made or entered public discourse (for example, when it became popular in social networks).', 'wpsso-schema-json-ld' );
-
-				 	break;
-
-				case 'tooltip-meta-schema_review_claim_author_type':	// Claim Author Type
+				case 'tooltip-meta-schema_review_item_cw_author_type':	// Reviewed CW Author Type
 
 					$text = __( 'The publisher of the claim.', 'wpsso-schema-json-ld' ) . ' ';
 					
@@ -504,15 +484,35 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_claim_author_name':	// Claim Author Name
+				case 'tooltip-meta-schema_review_item_cw_author_name':	// Reviewed CW Author Name
 
 					$text = __( 'The name of the person or organization making the claim.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_claim_author_url':	// Claim Author URL
+				case 'tooltip-meta-schema_review_item_cw_author_url':	// Reviewed CW Author URL
 
 					$text = __( 'The home page of the organization making the claim or another definitive URL that provides information about the author making the claim, such as a person or organization\'s Wikipedia or Wikidata page.', 'wpsso-schema-json-ld' );
+
+				 	break;
+
+				case 'tooltip-meta-schema_review_item_cw_pub':		// Reviewed CW Publish Date
+
+					$text = __( 'The date when this reviewed creative work was published or became popular / entered public discourse (for example, when it became popular on social networks).', 'wpsso-schema-json-ld' );
+
+				 	break;
+
+				case 'tooltip-meta-schema_review_item_book_isbn':	// Reviewed Book ISBN.
+
+					$text = __( 'The ISBN code (aka International Standard Book Number) for the book being reviewed.', 'wpsso-schema-json-ld' );
+
+				 	break;
+
+				case 'tooltip-meta-schema_review_claim_reviewed':	// Short Summary of Claim
+
+					$text = __( 'A short summary of specific claim(s) reviewed in the Schema ClaimReview.', 'wpsso-schema-json-ld' ) . ' ';
+
+					$text .= __( 'The summary should be less than 75 characters to minimize wrapping on mobile devices.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
