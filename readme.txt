@@ -830,18 +830,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.15.0-b.3 (2019/10/30)**
+**Version 2.15.0-rc.1 (2019/10/31)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* Added a new "Reviewed Creative Work Information" section in the Document SSO metabox:
-		* Renamed the "Claim Author Type" option to "Reviewed CW Author Type".
-		* Renamed the "Claim Author Name" option to "Reviewed CW Author Name".
-		* Renamed the "Claim Author URL" option to "Reviewed CW Author URL".
-		* Renamed the "Claim Made on Date" option to "Reviewed CW Publish Date".
-	* Added a new "Reviewed Book Information" section in the Document SSO metabox:
-		* Added a new "Reviewed Book ISBN" option.
+	* Added a new "Reviewed Subject Information" section in the Document SSO metabox:
+		* Renamed the "Claim Author Type" option to "Subject Author Type".
+		* Renamed the "Claim Author Name" option to "Subject Author Name".
+		* Renamed the "Claim Author URL" option to "Subject Author URL".
+		* Renamed the "Claim Made on Date" option to "Subject Publish Date".
+		* Added a new "Subject ISBN" option.
 * **Bugfixes*
 	* None.
 * **Developer Notes**
@@ -981,9 +980,9 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 2.15.0-b.3 =
+= 2.15.0-rc.1 =
 
-(2019/10/30) Added new "Reviewed Creative Work Information" and "Reviewed Book Information" sections in the Document SSO metabox.
+(2019/10/31) Added a new "Reviewed Subject Information" section in the Document SSO metabox.
 
 = 2.14.0 =
 
