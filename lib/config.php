@@ -16,7 +16,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssojson' => array(			// Plugin acronym.
-					'version'     => '2.15.0-b.3',	// Plugin version.
+					'version'     => '2.15.0-rc.1',	// Plugin version.
 					'opt_version' => '33',		// Increment when changing default option values.
 					'short'       => 'WPSSO JSON',	// Short plugin name.
 					'name'        => 'WPSSO Schema JSON-LD Markup',
@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 					'req'         => array(
 						'short'       => 'WPSSO Core',
 						'name'        => 'WPSSO Core',
-						'min_version' => '6.11.0-b.3',
+						'min_version' => '6.11.0-rc.1',
 					),
 					'assets' => array(
 						'icons' => array(
@@ -121,8 +121,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 
 		public static function get_version( $add_slug = false ) {
 
-			$ext  = 'wpssojson';
-			$info =& self::$cf[ 'plugin' ][$ext];
+			$info =& self::$cf[ 'plugin' ][ 'wpssojson' ];
 
 			return $add_slug ? $info[ 'slug' ] . '-' . $info[ 'version' ] : $info[ 'version' ];
 		}
@@ -133,13 +132,21 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 				return;
 			}
 
-			define( 'WPSSOJSON_FILEPATH', $plugin_filepath );						
-			define( 'WPSSOJSON_PLUGINBASE', self::$cf[ 'plugin' ][ 'wpssojson' ][ 'base' ] );		// wpsso-schema-json-ld/wpsso-schema-json-ld.php
-			define( 'WPSSOJSON_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_filepath ) ) ) );
-			define( 'WPSSOJSON_PLUGINSLUG', self::$cf[ 'plugin' ][ 'wpssojson' ][ 'slug' ] );		// wpsso-schema-json-ld
-			define( 'WPSSOJSON_URLPATH', trailingslashit( plugins_url( '', $plugin_filepath ) ) );
-			define( 'WPSSOJSON_VERSION', self::$cf[ 'plugin' ][ 'wpssojson' ][ 'version' ] );						
+			$info =& self::$cf[ 'plugin' ][ 'wpssojson' ];
 
+			/**
+			 * Define fixed constants.
+			 */
+			define( 'WPSSOJSON_FILEPATH', $plugin_filepath );						
+			define( 'WPSSOJSON_PLUGINBASE', $info[ 'base' ] );	// Example: wpsso-schema-json-ld/wpsso-schema-json-ld.php.
+			define( 'WPSSOJSON_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_filepath ) ) ) );
+			define( 'WPSSOJSON_PLUGINSLUG', $info[ 'slug' ] );	// Example: wpsso-schema-json-ld.
+			define( 'WPSSOJSON_URLPATH', trailingslashit( plugins_url( '', $plugin_filepath ) ) );
+			define( 'WPSSOJSON_VERSION', $info[ 'version' ] );						
+
+			/**
+			 * Define variable constants.
+			 */
 			self::set_variable_constants();
 		}
 
@@ -149,6 +156,9 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 				$var_const = self::get_variable_constants();
 			}
 
+			/**
+			 * Define the variable constants, if not already defined.
+			 */
 			foreach ( $var_const as $name => $value ) {
 				if ( ! defined( $name ) ) {
 					define( $name, $value );
@@ -160,14 +170,17 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 
 			$var_const = array();
 
-			$var_const['WPSSOJSON_SCHEMA_SHORTCODE_NAME']           = 'schema';
-			$var_const['WPSSOJSON_SCHEMA_SHORTCODE_SEPARATOR']      = '_';
-			$var_const['WPSSOJSON_SCHEMA_SHORTCODE_DEPTH']          = 3;
-			$var_const['WPSSOJSON_SCHEMA_SHORTCODE_SINGLE_CONTENT'] = true;
+			$var_const[ 'WPSSOJSON_SCHEMA_SHORTCODE_NAME' ]           = 'schema';
+			$var_const[ 'WPSSOJSON_SCHEMA_SHORTCODE_SEPARATOR' ]      = '_';
+			$var_const[ 'WPSSOJSON_SCHEMA_SHORTCODE_DEPTH' ]          = 3;
+			$var_const[ 'WPSSOJSON_SCHEMA_SHORTCODE_SINGLE_CONTENT' ] = true;
 
+			/**
+			 * Maybe override the default constant value with a pre-defined constant value.
+			 */
 			foreach ( $var_const as $name => $value ) {
 				if ( defined( $name ) ) {
-					$var_const[$name] = constant( $name );	// inherit existing values
+					$var_const[$name] = constant( $name );
 				}
 			}
 
