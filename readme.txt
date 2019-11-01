@@ -841,7 +841,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 		* Renamed the "Claim Author URL" option to "Subject Author URL".
 		* Renamed the "Claim Made on Date" option to "Subject Publish Date".
 		* Added a new "Subject ISBN" option.
-* **Bugfixes*
+* **Bugfixes**
 	* None.
 * **Developer Notes**
 	* Added a new lib/filters-messages.php library file.
