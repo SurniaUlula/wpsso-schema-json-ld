@@ -830,7 +830,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.15.0-rc.3 (2019/11/01)**
+**Version 2.15.0 (2019/11/01)**
 
 * **New Features**
 	* None.
@@ -980,11 +980,7 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 2.15.0-rc.3 =
+= 2.15.0 =
 
 (2019/11/01) Added a new "Reviewed Subject Information" section in the Document SSO metabox.
-
-= 2.14.0 =
-
-(2019/10/22) Added a new "Reviewed Subject Type" option in the Document SSO metabox.
 
