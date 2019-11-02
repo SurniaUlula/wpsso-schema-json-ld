@@ -218,18 +218,24 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 
 		private function min_version_notice() {
 
+			if ( ! is_admin() ) {
+				return;
+			}
+
 			$info = WpssoJsonConfig::$cf[ 'plugin' ][ 'wpssojson' ];
 
 			$error_msg = sprintf( __( 'The %1$s version %2$s add-on requires %3$s version %4$s or newer (version %5$s is currently installed).',
 				'wpsso-schema-json-ld' ), $info[ 'name' ], $info[ 'version' ], $info[ 'req' ][ 'short' ], $info[ 'req' ][ 'min_version' ],
 					$this->p->cf[ 'plugin' ][ 'wpsso' ][ 'version' ] );
 
-			if ( is_admin() ) {
+			$this->p->notice->err( $error_msg );
 
-				$this->p->notice->err( $error_msg );
+			if ( method_exists( $this->p->admin, 'get_check_for_updates_link' ) ) {
 
-				if ( method_exists( $this->p->admin, 'get_check_for_updates_link' ) ) {
-					$this->p->notice->inf( $this->p->admin->get_check_for_updates_link() );
+				$update_msg = $this->p->admin->get_check_for_updates_link();
+
+				if ( ! empty( $update_msg ) ) {
+					$this->p->notice->inf( $update_msg );
 				}
 			}
 		}
