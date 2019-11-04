@@ -1,4 +1,4 @@
-=== Schema JSON-LD Markup | WPSSO Add-on provides Google Rich Results with Structured Data ===
+=== Schema JSON-LD Markup | WPSSO Add-on | Google Rich Results / Rich Snippets with Structured Data ===
 Plugin Name: WPSSO Schema JSON-LD Markup
 Plugin Slug: wpsso-schema-json-ld
 Text Domain: wpsso-schema-json-ld
@@ -27,7 +27,7 @@ Including image SEO, video SEO, local business, organization, publisher, person,
 
 **Better Schema JSON-LD markup for WooCommerce:**
 
-*The WooCommerce plugin provides incomplete Schema markup for Google's Product Rich Results* -- luckily the WPSSO Core Premium plugin and its WPSSO JSON Premium add-on provides extensive, complete, and correct Facebook Product meta tags and Schema product markup for Google Rich Results, including additional product images, product variations, product attributes (brand, color, condition, EAN, dimensions, GTIN-8/12/13/14, ISBN, material, MPN, size, SKU, weight, etc), product reviews, product ratings, sale start / end dates, sale prices, pre-tax prices, VAT prices, and much, much more ([see an example test product](https://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-woocommerce-product/)).
+*The WooCommerce plugin provides incomplete Schema markup for Google's Product Rich Results* -- luckily the WPSSO Core Premium plugin and its WPSSO JSON Premium add-on provides extensive, complete, and correct Facebook Product meta tags and Schema product markup for Google Rich Results / Rich Snippets, including additional product images, product variations, product attributes (brand, color, condition, EAN, dimensions, GTIN-8/12/13/14, ISBN, material, MPN, size, SKU, weight, etc), product reviews, product ratings, sale start / end dates, sale prices, pre-tax prices, VAT prices, and much, much more ([see an example test product](https://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-woocommerce-product/)).
 
 **Fixes ALL Google Search Console / Structured Data Testing Tool errors:**
 
@@ -67,7 +67,7 @@ Additional e-Commerce plugins are also provided with the WPSSO Core Premium plug
 	* [schema.org/CreativeWork](https://schema.org/CreativeWork) (includes 86 Schema sub-types)
 	* [schema.org/Thing](https://schema.org/Thing) (includes 1457 Schema sub-types)
 
-* Automatically includes Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google Rich Results (see the [Google Article AMP structured data guidelines](https://developers.google.com/search/docs/data-types/article#amp-sd) for details on this new requirement from Google).
+* Automatically includes Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google Rich Results / Rich Snippets (see the [Google Article AMP structured data guidelines](https://developers.google.com/search/docs/data-types/article#amp-sd) for details on this new requirement from Google).
 
 * Customize the Schema type for each individual posts, pages, custom post types, tags, categories, custom taxonomy / terms, and attachment pages.
 
@@ -173,7 +173,7 @@ Additional e-Commerce plugins are also provided with the WPSSO Core Premium plug
 
 <h3>WPSSO JSON Premium Features</h3>
 
-* Provides Schema JSON-LD markup (aka Google Rich Results with Structured Data) for all Schema types and sub-types, including [schema.org/ItemList](https://schema.org/ItemList) for [Google's Carousel Rich Results](https://developers.google.com/search/docs/guides/mark-up-listings) feature:
+* Provides Schema JSON-LD markup (aka Google Rich Results / Rich Snippets with Structured Data) for all Schema types and sub-types, including [schema.org/ItemList](https://schema.org/ItemList) for [Google's Carousel Rich Results](https://developers.google.com/search/docs/guides/mark-up-listings) feature:
 
 	* [schema.org/Brand](https://schema.org/Brand)
 	* [schema.org/ClaimReview](https://schema.org/ClaimReview)
@@ -203,7 +203,7 @@ Additional e-Commerce plugins are also provided with the WPSSO Core Premium plug
 
 * Provides complete video SEO markup with information from video service APIs (Facebook, Slideshare, Soundcloud, Vimeo, Wistia, YouTube).
 
-* WooCommerce product variations are grouped by currency and added as a Schema AggregateOffer for Google's Rich Results (includes the product variation group high price, low price, and currency).
+* WooCommerce product variations are grouped by currency and added as a Schema AggregateOffer for Google's Rich Results / Rich Snippets (includes the product variation group high price, low price, and currency).
 
 * Fixes common Google testing tool warnings for WooCommerce products, like "Missing Product ID", "brand field is recommended", etc.
 
@@ -861,7 +861,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* Update method arguments for SucomForm::get_select() in WPSSO Core v6.9.0.
+	* Update method arguments for SucomForm->get_select() in WPSSO Core v6.9.0.
 
 **Version 2.13.2 (2019/10/18)**
 
