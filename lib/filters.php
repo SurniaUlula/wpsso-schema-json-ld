@@ -9,6 +9,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'These aren\'t the droids you\'re looking for...' );
 }
 
+if ( ! defined( 'WPSSOJSON_PLUGINDIR' ) ) {	// Just in case.
+	die( 'Incomplete plugin initialization...' );
+}
+
 if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 	require_once WPSSOJSON_PLUGINDIR . 'lib/filters-messages.php';
 }
