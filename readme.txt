@@ -29,9 +29,9 @@ Including image SEO, video SEO, local business, organization, publisher, person,
 
 *The WooCommerce plugin provides incomplete Schema markup for Google's Product Rich Results* -- luckily the <a href="https://wpsso.com/extend/plugins/wpsso/">WPSSO Core Premium plugin</a> and its <a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Premium add-on</a> provide extensive, complete, and correct Facebook Product meta tags and Schema product markup for Google Rich Results / Rich Snippets, including additional product images, product variations, product attributes (brand, color, condition, EAN, dimensions, GTIN-8/12/13/14, ISBN, material, MPN, size, SKU, weight, etc), product reviews, product ratings, sale start / end dates, sale prices, pre-tax prices, VAT prices, and much, much more ([see an example WooCommerce test product](https://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-woocommerce-product/)).
 
-**Fixes ALL Google Search Console / Structured Data Testing Tool errors:**
+**Fixes all Google Search Console / Structured Data Testing Tool errors:**
 
-The WPSSO Core Premium plugin and its WPSSO JSON Premium add-on fix all Google testing tool errors:
+WPSSO Core Premium and the WPSSO JSON Premium add-on fix all known Google testing tool errors:
 
 * A value for the *headline* field is required.
 * A value for the *image* field is required.
@@ -45,6 +45,8 @@ The WPSSO Core Premium plugin and its WPSSO JSON Premium add-on fix all Google t
 * The *review* field is recommended.
 * This Product is missing a global identifier.
 * etc.
+
+Google regularly revies and changes their Schema markup standards - WPSSO JSON Premium customers can also <a href="https://surniaulula.com/support/">open a Premium support ticket for assistance</a> with any new Google testing tool errors.
 
 Additional e-Commerce plugins are also provided with the WPSSO Core Premium plugin, including Easy Digital Downloads and WP eCommerce.
 
