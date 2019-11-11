@@ -48,7 +48,7 @@ The Standard and Premium versions both fix all Google testing tool errors for th
 
 Google regularly reviews and changes their Schema markup requirements - WPSSO JSON Premium customers can also <a href="https://surniaulula.com/support/">open a Premium support ticket for assistance</a> with any new Google testing tool errors.
 
-Additional e-Commerce plugins are also provided with the WPSSO Core Premium plugin, including Easy Digital Downloads and WP eCommerce.
+Additional e-Commerce plugin integration is also provided with the WPSSO Core Premium plugin, including Easy Digital Downloads and WP eCommerce.
 
 <h3>Users Love the WPSSO JSON Add-on</h3>
 
