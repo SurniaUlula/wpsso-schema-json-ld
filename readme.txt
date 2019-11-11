@@ -31,6 +31,8 @@ Including image SEO, video SEO, local business, organization, publisher, person,
 
 **Fixes ALL Google Search Console / Structured Data Testing Tool errors:**
 
+The WPSSO Core Premium plugin and its WPSSO JSON Premium add-on fix all Google testing tool errors (some configuration is required):
+
 * A value for the *headline* field is required.
 * A value for the *image* field is required.
 * A value for the *logo* field is required.

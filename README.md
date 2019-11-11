@@ -27,6 +27,8 @@
 
 <p><strong>Fixes ALL Google Search Console / Structured Data Testing Tool errors:</strong></p>
 
+<p>The WPSSO Core Premium plugin and its WPSSO JSON Premium add-on fix all Google testing tool errors (some configuration is required):</p>
+
 <ul>
 <li>A value for the <em>headline</em> field is required.</li>
 <li>A value for the <em>image</em> field is required.</li>
