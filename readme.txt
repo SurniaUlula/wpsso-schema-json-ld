@@ -177,12 +177,15 @@ Additional e-Commerce plugins are also provided with the WPSSO Core Premium plug
 
 <h3>WPSSO JSON Premium Features</h3>
 
-* Provides Schema JSON-LD markup (aka Google Rich Results / Rich Snippets with Structured Data) for all Schema types and sub-types, including [schema.org/ItemList](https://schema.org/ItemList) for [Google's Carousel Rich Results](https://developers.google.com/search/docs/guides/mark-up-listings) feature:
+* Provides Schema JSON-LD markup (aka Google Rich Results / Rich Snippets with Structured Data) for all Schema types and sub-types, including Schema ItemList for [Google's Carousel Rich Results](https://developers.google.com/search/docs/guides/mark-up-listings):
 
+	* [schema.org/Article](https://schema.org/Article) (includes 19 Schema sub-types)
+	* [schema.org/Blog](https://schema.org/Blog)
 	* [schema.org/Brand](https://schema.org/Brand)
 	* [schema.org/ClaimReview](https://schema.org/ClaimReview)
 	* [schema.org/CollectionPage](https://schema.org/CollectionPage) (includes 3 Schema sub-types)
 	* [schema.org/Course](https://schema.org/Course)
+	* [schema.org/CreativeWork](https://schema.org/CreativeWork) (includes 86 Schema sub-types)
 	* [schema.org/Event](https://schema.org/Event) (includes 19 Schema sub-types)
 	* [schema.org/FAQPage](https://schema.org/FAQPage)
 	* [schema.org/FoodEstablishment](https://schema.org/FoodEstablishment) (includes 17 Schema sub-types)
@@ -202,6 +205,7 @@ Additional e-Commerce plugins are also provided with the WPSSO Core Premium plug
 	* [schema.org/Review](https://schema.org/Review) (includes 2 Schema sub-types)
 	* [schema.org/SearchResultsPage](https://schema.org/SearchResultsPage)
 	* [schema.org/SoftwareApplication](https://schema.org/SoftwareApplication) (includes 4 Schema sub-types)
+	* [schema.org/Thing](https://schema.org/Thing) (includes 1457 Schema sub-types)
 	* [schema.org/WebPage](https://schema.org/WebPage) (includes 13 Schema sub-types)
 	* [schema.org/WebSite](https://schema.org/WebSite)
 
