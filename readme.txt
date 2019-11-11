@@ -25,7 +25,7 @@ Including image SEO, video SEO, local business, organization, publisher, person,
 
 **Includes Schema JSON-LD markup for posts, pages, custom post types, terms (category, tags, etc.), custom taxonomies, user profiles, search results, Accelerated Mobile Pages (AMP) pages, etc.**
 
-**Better Schema JSON-LD markup for WooCommerce:**
+**Much better Schema JSON-LD markup for WooCommerce:**
 
 *The WooCommerce plugin provides incomplete Schema markup for Google's Product Rich Results* -- luckily the <a href="https://wpsso.com/extend/plugins/wpsso/">WPSSO Core Premium plugin</a> and its <a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Premium add-on</a> provide extensive, complete, and correct Facebook Product meta tags and Schema product markup for Google Rich Results / Rich Snippets, including additional product images, product variations, product attributes (brand, color, condition, EAN, dimensions, GTIN-8/12/13/14, ISBN, material, MPN, size, SKU, weight, etc), product reviews, product ratings, sale start / end dates, sale prices, pre-tax prices, VAT prices, and much, much more ([see an example WooCommerce test product](https://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-woocommerce-product/)).
 
