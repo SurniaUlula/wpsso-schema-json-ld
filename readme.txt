@@ -46,7 +46,7 @@ WPSSO Core Premium and the WPSSO JSON Premium add-on fix all known Google testin
 * This Product is missing a global identifier.
 * etc.
 
-Google regularly revies and changes their Schema markup standards - WPSSO JSON Premium customers can also <a href="https://surniaulula.com/support/">open a Premium support ticket for assistance</a> with any new Google testing tool errors.
+Google regularly reviews and changes their Schema markup requirements - WPSSO JSON Premium customers can also <a href="https://surniaulula.com/support/">open a Premium support ticket for assistance</a> with any new Google testing tool errors.
 
 Additional e-Commerce plugins are also provided with the WPSSO Core Premium plugin, including Easy Digital Downloads and WP eCommerce.
 
