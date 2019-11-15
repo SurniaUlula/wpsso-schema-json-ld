@@ -15,6 +15,9 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 		private $p;
 
+		/**
+		 * Instantiated by WpssoJsonFilters->__construct().
+		 */
 		public function __construct( &$plugin ) {
 
 			$this->p =& $plugin;
