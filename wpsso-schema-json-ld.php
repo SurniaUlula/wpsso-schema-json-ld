@@ -27,7 +27,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	die( 'These aren\'t the droids you\'re looking for...' );
+	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
 if ( ! class_exists( 'WpssoJson' ) ) {
@@ -55,9 +55,10 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 
 		public function __construct() {
 
-			require_once ( dirname( __FILE__ ) . '/lib/config.php' );
+			require_once dirname( __FILE__ ) . '/lib/config.php';
 
 			WpssoJsonConfig::set_constants( __FILE__ );
+
 			WpssoJsonConfig::require_libs( __FILE__ );	// Includes the register.php class library.
 
 			$this->reg = new WpssoJsonRegister();		// activate, deactivate, uninstall hooks
