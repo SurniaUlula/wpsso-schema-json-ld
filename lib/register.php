@@ -103,7 +103,7 @@ if ( ! class_exists( 'WpssoJsonRegister' ) ) {
 
 					$version = WpssoJsonConfig::$cf[ 'plugin' ][ 'wpssojson' ][ 'version' ];
 
-					WpssoUtil::save_all_times( 'wpssojson', $version );
+					WpssoUtil::register_ext_version( 'wpssojson', $version );
 				}
 
 				$wpsso =& Wpsso::get_instance();
