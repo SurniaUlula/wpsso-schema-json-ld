@@ -19,7 +19,7 @@ Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPag
 
 <p style="margin:0;"><img class="readme-icon" src="https://surniaulula.github.io/wpsso-schema-json-ld/assets/icon-256x256.png"></p>
 
-**Uses WordPress content and plugin / API data for accurate and comprehensive Schema JSON-LD markup:**
+**Uses your pre-existing content and plugin / API data for accurate and comprehensive Schema JSON-LD markup:**
 
 Including image SEO, video SEO, local business, organization, publisher, person, author and co-authors, extensive e-Commerce product markup, product variations, product ratings, aggregate ratings, reviews, recipe information, event details, collection pages, profile pages, search pages, item lists for [Google's Carousel Rich Results](https://developers.google.com/search/docs/guides/mark-up-listings), customized property values, and much, much more (see the complete list of features below for Standard / Premium add-on details).
 
