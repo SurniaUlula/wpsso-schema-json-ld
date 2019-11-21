@@ -9,18 +9,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
-if ( ! defined( 'WPSSOJSON_PLUGINDIR' ) ) {
-	die( 'Do. Or do not. There is no try.' );
-}
-
-if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
-	require_once WPSSOJSON_PLUGINDIR . 'lib/filters-messages.php';
-}
-
-if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
-	require_once WPSSOJSON_PLUGINDIR . 'lib/filters-schema.php';
-}
-
 if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 	class WpssoJsonFilters {
@@ -37,7 +25,10 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				$this->p->debug->mark();
 			}
 
-			$this->msgs   = new WpssoJsonFiltersMessages( $plugin );
+			if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
+				require_once WPSSOJSON_PLUGINDIR . 'lib/filters-schema.php';
+			}
+
 			$this->schema = new WpssoJsonFiltersschema( $plugin );
 
 			$this->p->util->add_plugin_filters( $this, array(
@@ -47,6 +38,12 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			) );
 
 			if ( is_admin() ) {
+
+				if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
+					require_once WPSSOJSON_PLUGINDIR . 'lib/filters-messages.php';
+				}
+
+				$this->msgs = new WpssoJsonFiltersMessages( $plugin );
 
 				$this->p->util->add_plugin_filters( $this, array(
 					'option_type'                   => 2,
