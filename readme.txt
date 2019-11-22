@@ -838,7 +838,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.15.1-dev.2 (2019/11/21)**
+**Version 2.15.1-dev.3 (2019/11/22)**
 
 * **New Features**
 	* None.
@@ -999,9 +999,9 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 1.15.1-dev.2 =
+= 1.15.1-dev.3 =
 
-(2019/11/21) Update for the new WpssoUtilReg class in WPSSO Core v6.13.0.
+(2019/11/22) Update for the new WpssoUtilReg class in WPSSO Core v6.13.0.
 
 = 2.15.0 =
 
