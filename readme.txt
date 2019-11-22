@@ -847,7 +847,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* Updated WpssoJsonRegister->activate_plugin() for the new WpssoUtilReg class in WPSSO Core v6.13.0.
+	* Updated `WpssoJsonRegister->activate_plugin()` for the new WpssoUtilReg class in WPSSO Core v6.13.0.
 
 **Version 2.15.0 (2019/11/01)**
 
@@ -880,7 +880,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* Update method arguments for SucomForm->get_select() in WPSSO Core v6.9.0.
+	* Update method arguments for `SucomForm->get_select()` in WPSSO Core v6.9.0.
 
 **Version 2.13.2 (2019/10/18)**
 
