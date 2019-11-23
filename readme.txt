@@ -847,7 +847,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* Updated `WpssoJsonRegister->activate_plugin()` for the new WpssoUtilReg class in WPSSO Core v6.13.0.
+	* Updated `WpssoJsonRegister->activate_plugin()` for the new WpssoUtilReg class in WPSSO Core v6.13.1.
 
 **Version 2.15.0 (2019/11/01)**
 
@@ -1001,5 +1001,5 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 = 2.15.1 =
 
-(2019/11/23) Update for the new WpssoUtilReg class in WPSSO Core v6.13.0.
+(2019/11/23) Update for the new WpssoUtilReg class in WPSSO Core v6.13.1.
 
