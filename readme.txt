@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires At Least: 3.9
 Tested Up To: 5.3
 WC Tested Up To: 3.8.0
-Stable Tag: 2.15.0
+Stable Tag: 2.15.1
 
 Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPages, HowTos, Images, Local Business, Products, Recipes, Reviews, Videos, and more.
 
@@ -999,11 +999,7 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 1.15.1 =
+= 2.15.1 =
 
 (2019/11/23) Update for the new WpssoUtilReg class in WPSSO Core v6.13.0.
-
-= 2.15.0 =
-
-(2019/11/01) Added a new "Reviewed Subject Information" section in the Document SSO metabox.
 
