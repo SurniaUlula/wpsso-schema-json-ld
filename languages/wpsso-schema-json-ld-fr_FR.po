@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Schema JSON-LD Markup 2.15.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2019-11-23 11:19-0800\n"
-"PO-Revision-Date: 2019-11-23 11:19-0800\n"
+"POT-Creation-Date: 2019-11-25 13:25-0800\n"
+"PO-Revision-Date: 2019-11-25 13:26-0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -720,8 +720,8 @@ msgstr "Etapes pour How-To"
 #: lib/gettext-pro.php:52 lib/pro/admin/meta-edit.php:478
 #: lib/std/admin/meta-edit.php:481
 msgctxt "option label"
-msgid "%1$s a Step<br/>%2$s or Section Details"
-msgstr "%1$s une étape<br/>%2$s ou details de section"
+msgid "%1$s Step Details %2$s or New Section Details"
+msgstr "%1$s Détails de l'étape %2$s ou détails d'une nouvelle section"
 
 #: lib/gettext-pro.php:53 lib/pro/admin/meta-edit.php:483
 #: lib/std/admin/meta-edit.php:486

@@ -821,7 +821,7 @@ msgstr ""
 #: lib/gettext-pro.php:52 lib/pro/admin/meta-edit.php:478
 #: lib/std/admin/meta-edit.php:481
 msgctxt "option label"
-msgid "%1$s a Step<br/>%2$s or Section Details"
+msgid "%1$s Step Details %2$s or New Section Details"
 msgstr ""
 
 #: lib/gettext-pro.php:53 lib/pro/admin/meta-edit.php:483

@@ -478,7 +478,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						'schema_howto_step_section' => array(
 							'input_type'    => 'radio',
 							'input_class'   => 'howto_step_section',
-							'input_content' => _x( '%1$s a Step<br/>%2$s or Section Details', 'option label', 'wpsso-schema-json-ld' ),
+							'input_content' => _x( '%1$s Step Details %2$s or New Section Details', 'option label', 'wpsso-schema-json-ld' ),
 							'input_values'  => array( 0, 1 ),
 							'input_default' => 0,
 						),
@@ -497,7 +497,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 							'input_type'  => 'image',
 							'input_class' => 'howto_step_img',
 						),
-					), '', 'schema_howto_steps', $start_num = 0, $max_input = 5, $show_first = 5 ),
+					), '', 'schema_howto_steps', $start_num = 0, $max_input = 3, $show_first = 3 ),
 				),
 
 				/**
