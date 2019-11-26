@@ -271,8 +271,8 @@ Additional e-Commerce plugin integration is also provided with the WPSSO Core Pr
 		* Event Venue
 		* Event Start (date, time, timezone)
 		* Event End (date, time, timezone)
-		* Offers Start (date, time, timezone)
-		* Offers End (date, time, timezone)
+		* Event Offers Start (date, time, timezone)
+		* Event Offers End (date, time, timezone)
 		* Event Offers (name, price, currency, availability)
 	* How-To
 		* How-To Makes 
@@ -345,7 +345,8 @@ Additional e-Commerce plugin integration is also provided with the WPSSO Core Pr
 			* Subject Author Name
 			* Subject Author URL
 			* Subject Publish Date
-			* Subject ISBN
+			* Subject Book ISBN
+			* Subject Product Offers (name, price, currency, availability)
 	* Claim Review Information
 		* Short Summary of Claim
 		* First Appearance URL
@@ -838,6 +839,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.16.0-dev.1 (2019/11/26)**
+
+* **New Features**
+	* Added new Subject Product Offers (name, price, currency, availability) options for reviews of products.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Renamed the 'WPSSO_SCHEMA_EVENT_OFFERS_MAX' constant to 'WPSSO_SCHEMA_METADATA_OFFERS_MAX'.
+
 **Version 2.15.1 (2019/11/23)**
 
 * **New Features**
@@ -859,7 +871,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 		* Renamed the "Claim Author Name" option to "Subject Author Name".
 		* Renamed the "Claim Author URL" option to "Subject Author URL".
 		* Renamed the "Claim Made on Date" option to "Subject Publish Date".
-		* Added a new "Subject ISBN" option.
+		* Added a new "Subject Book ISBN" option.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -998,6 +1010,10 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 	* None.
 
 == Upgrade Notice ==
+
+= 2.16.0-dev.1 =
+
+(2019/11/26) Added new Subject Product Offers (name, price, currency, availability) options for reviews of products.
 
 = 2.15.1 =
 
