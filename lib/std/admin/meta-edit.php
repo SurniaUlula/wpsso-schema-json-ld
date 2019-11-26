@@ -1086,12 +1086,20 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Subject Book ISBN', 'option label', 'wpsso' ),
 					'tooltip'  => 'meta-schema_review_item_cw_book_isbn',
-					'content'  => $form->get_no_input( 'schema_review_item_cw_book_isbn' ),
+					'content'  => $form->get_no_input_value( '' ),
 				),
 
 				/**
 				 * Schema Reviewed Subject: Product
 				 */
+				'schema_review_item_product_brand' => array(
+					'tr_class' => 'hide_schema_type ' . $schema_review_item_type_row_class[ 'product' ],
+					'th_class' => 'medium',
+					'td_class' => 'blank',
+					'label'    => _x( 'Subject Product Brand', 'option label', 'wpsso' ),
+					'tooltip'  => 'meta-schema_review_item_product_brand',
+					'content'  => $form->get_no_input_value( '' ),
+				),
 				'schema_review_item_product_offers' => array(
 					'tr_class' => 'hide_schema_type ' . $schema_review_item_type_row_class[ 'product' ],
 					'th_class' => 'medium',

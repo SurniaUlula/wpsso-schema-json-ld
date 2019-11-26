@@ -137,6 +137,8 @@ _x( 'Subject Author URL', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Subject Publish Date', 'option label', 'wpsso-schema-json-ld' );
 // translators: Please ignore - translation uses a different text domain.
 _x( 'Subject Book ISBN', 'option label', 'wpsso' );
+// translators: Please ignore - translation uses a different text domain.
+_x( 'Subject Product Brand', 'option label', 'wpsso' );
 _x( 'Subject Product Offers', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Product Offer Name', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Product Offer Price', 'option label', 'wpsso-schema-json-ld' );

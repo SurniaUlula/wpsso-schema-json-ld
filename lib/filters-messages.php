@@ -509,9 +509,15 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_product_offers':	// Rewviewed Subject Product Offers.
+				case 'tooltip-meta-schema_review_item_product_offers':	// Reviewed Subject Product Offers.
 
 					$text = __( 'One or more offers for the reviewed product, including the offer name, price and currency.', 'wpsso-schema-json-ld' );
+
+				 	break;
+
+				case 'tooltip-meta-schema_review_item_product_brand':	// Reviewed Subject Product Brand.
+
+					$text = __( 'The brand name of the reviewed product.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
