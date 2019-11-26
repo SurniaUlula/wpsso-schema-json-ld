@@ -111,17 +111,17 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				'schema_prov_org_id'                 => $opts[ 'schema_def_prov_org_id' ],		// Provider.
 				'schema_event_lang'                  => $def_lang,					// Event Language.
 				'schema_event_start_date'            => '',						// Event Start Date.
-				'schema_event_start_time'            => 'none',					// Event Start Time.
+				'schema_event_start_time'            => 'none',						// Event Start Time.
 				'schema_event_start_timezone'        => $timezone,					// Event Start Timezone.
 				'schema_event_end_date'              => '',						// Event End Date.
-				'schema_event_end_time'              => 'none',					// Event End Time.
+				'schema_event_end_time'              => 'none',						// Event End Time.
 				'schema_event_end_timezone'          => $timezone,					// Event End Timezone.
-				'schema_event_offers_start_date'     => '',						// Event Start Date.
-				'schema_event_offers_start_time'     => 'none',					// Offers Start Time.
-				'schema_event_offers_start_timezone' => $timezone,					// Offers Start Timezone.
-				'schema_event_offers_end_date'       => '',						// Offers End Date.
-				'schema_event_offers_end_time'       => 'none',					// Offers End Time.
-				'schema_event_offers_end_timezone'   => $timezone,					// Offers End Timezone.
+				'schema_event_offers_start_date'     => '',						// Event Offers Start Date.
+				'schema_event_offers_start_time'     => 'none',						// Event Offers Start Time.
+				'schema_event_offers_start_timezone' => $timezone,					// Event Offers Start Timezone.
+				'schema_event_offers_end_date'       => '',						// Event Offers End Date.
+				'schema_event_offers_end_time'       => 'none',						// Event Offers End Time.
+				'schema_event_offers_end_timezone'   => $timezone,					// Event Offers End Timezone.
 				'schema_event_organizer_org_id'      => $opts[ 'schema_def_event_organizer_org_id' ],	// Event Organizer Org.
 				'schema_event_organizer_person_id'   => $opts[ 'schema_def_event_organizer_person_id' ],// Event Organizer Person.
 				'schema_event_performer_org_id'      => $opts[ 'schema_def_event_performer_org_id' ],	// Event Performer Org.
@@ -140,8 +140,8 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				'schema_job_hiring_org_id'           => $opts[ 'schema_def_job_hiring_org_id' ],	// Job Hiring Organization.
 				'schema_job_location_id'             => $opts[ 'schema_def_job_location_id' ],		// Job Location.
 				'schema_job_salary'                  => '',						// Base Salary.
-				'schema_job_salary_currency'         => $opts[ 'plugin_def_currency' ],		// Base Salary Currency.
-				'schema_job_salary_period'           => 'year',					// Base Salary per Year, Month, Week, Hour.
+				'schema_job_salary_currency'         => $opts[ 'plugin_def_currency' ],			// Base Salary Currency.
+				'schema_job_salary_period'           => 'year',						// Base Salary per Year, Month, Week, Hour.
 				'schema_job_empl_type_full_time'     => 0,
 				'schema_job_empl_type_part_time'     => 0,
 				'schema_job_empl_type_contractor'    => 0,
@@ -195,13 +195,13 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				'schema_review_item_type'            => $opts[ 'schema_def_review_item_type' ],		// Reviewed Subject Type.
 				'schema_review_item_url'             => '',						// Reviewed Subject URL.
 				'schema_review_item_name'            => '',						// Reviewed Subject Name.
-				'schema_review_item_cw_author_type'  => 'none',						// Reviewed CW Author Type.
-				'schema_review_item_cw_author_name'  => '',						// Reviewed CW Author Name.
-				'schema_review_item_cw_author_url'   => '',						// Reviewed CW Author URL.
-				'schema_review_item_cw_pub_date'     => '',						// Reviewed CW Publish Date.
-				'schema_review_item_cw_pub_time'     => 'none',						// Reviewed CW Publish Time.
-				'schema_review_item_cw_pub_timezone' => $timezone,					// Reviewed CW Publish Timezone.
-				'schema_review_item_book_isbn'       => '',						// Reviewed Book ISBN.
+				'schema_review_item_cw_author_type'  => 'none',						// Reviewed Author Type.
+				'schema_review_item_cw_author_name'  => '',						// Reviewed Author Name.
+				'schema_review_item_cw_author_url'   => '',						// Reviewed Author URL.
+				'schema_review_item_cw_pub_date'     => '',						// Reviewed Publish Date.
+				'schema_review_item_cw_pub_time'     => 'none',						// Reviewed Publish Time.
+				'schema_review_item_cw_pub_timezone' => $timezone,					// Reviewed Publish Timezone.
+				'schema_review_item_cw_book_isbn'    => '',						// Reviewed Subject Book ISBN.
 				'schema_review_claim_reviewed'       => '',						// Short Summary of Claim.
 				'schema_review_claim_first_url'      => '',						// First Appearance URL.
 				'schema_software_app_os'             => '',						// Operating System.
@@ -260,6 +260,9 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 					'schema_review_claim_made_time'     => 'schema_review_item_cw_pub_time',
 					'schema_review_claim_made_timezone' => 'schema_review_item_cw_pub_timezone',
 				),
+				34 => array(
+					'schema_review_item_book_isbn' => 'schema_review_item_cw_book_isbn',
+				),
 			);
 
 			return $options_keys;
@@ -301,9 +304,9 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_recipe_yield':			// Recipe Makes.
 				case 'schema_review_rating_alt_name':
 				case 'schema_review_item_name':			// Reviewed Subject Name.
-				case 'schema_review_item_book_isbn':		// Reviewed Subject Book ISBN.
+				case 'schema_review_item_cw_book_isbn':		// Reviewed Subject Book ISBN.
 				case 'schema_review_claim_reviewed':
-				case 'schema_review_item_cw_author_name':	// Reviewed CW Author Name.
+				case 'schema_review_item_cw_author_name':	// Reviewed Subject Author Name.
 				case 'schema_software_app_os':
 
 					return 'one_line';
@@ -345,7 +348,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_prov_org_id':			// Provider.
 				case 'schema_pub_org_id':			// Publisher.
 				case 'schema_review_item_type':			// Reviewed Subject Type.
-				case 'schema_review_item_cw_author_type':	// Reviewed CW Author Type.
+				case 'schema_review_item_cw_author_type':	// Reviewed Subject Author Type.
 				case 'schema_type':				// Schema Type.
 
 					return 'not_blank';
@@ -406,7 +409,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_ispartof_url':			// Is Part of URL.
 				case 'schema_license_url':			// License URL.
 				case 'schema_review_item_url':			// Reviewed Subject URL.
-				case 'schema_review_item_cw_author_url':	// Reviewed CW Author URL.
+				case 'schema_review_item_cw_author_url':	// Reviewed Subject Author URL.
 				case 'schema_review_claim_first_url':		// First Appearance URL.
 
 					return 'url';
@@ -440,15 +443,19 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			}
 
 			/**
-			 * If the review rating is 0, remove the review rating options.
-			 * If we have a review rating, then make sure there's a from/to as well.
+			 * If the review rating is 0, remove the review rating options. If we have a review rating, then make sure
+			 * there's a from/to as well.
 			 */
 			if ( empty( $md_opts[ 'schema_review_rating' ] ) ) {
+
 				foreach ( array( 'schema_review_rating', 'schema_review_rating_from', 'schema_review_rating_to' ) as $md_key ) {
 					unset( $md_opts[ $md_key ] );
 				}
+
 			} else {
+
 				foreach ( array( 'schema_review_rating_from', 'schema_review_rating_to' ) as $md_key ) {
+
 					if ( empty( $md_opts[ $md_key ] ) && isset( $md_defs[ $md_key ] ) ) {
 						$md_opts[ $md_key ] = $md_defs[ $md_key ];
 					}
@@ -486,21 +493,34 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				}
 			}
 
-			$event_offers_max = SucomUtil::get_const( 'WPSSO_SCHEMA_EVENT_OFFERS_MAX', 10 );
+			/**
+			 * Sanitize the offer options.
+			 */
+			$metadata_offers_max = SucomUtil::get_const( 'WPSSO_SCHEMA_METADATA_OFFERS_MAX', 5 );
 
-			foreach ( range( 0, $event_offers_max - 1, 1 ) as $key_num ) {
+			foreach( array(
+				'schema_event',
+				'schema_review_item_product',
+			) as $md_pre ) {
 
-				$valid_offer = false;
+				foreach ( range( 0, $metadata_offers_max - 1, 1 ) as $key_num ) {
 
-				foreach ( array( 'schema_event_offer_name', 'schema_event_offer_price' ) as $md_pre ) {
-					if ( isset( $md_opts[ $md_pre . '_' . $key_num] ) && $md_opts[ $md_pre . '_' . $key_num] !== '' ) {
-						$valid_offer = true;
+					$is_valid_offer = false;
+
+					foreach ( array(
+						$md_pre . '_offer_name',
+						$md_pre . '_offer_price'
+					) as $md_offer_pre ) {
+
+						if ( isset( $md_opts[ $md_offer_pre . '_' . $key_num] ) && $md_opts[ $md_offer_pre . '_' . $key_num] !== '' ) {
+							$is_valid_offer = true;
+						}
 					}
-				}
 
-				if ( ! $valid_offer ) {
-					unset( $md_opts[ 'schema_event_offer_currency_' . $key_num] );
-					unset( $md_opts[ 'schema_event_offer_avail_' . $key_num] );
+					if ( ! $is_valid_offer ) {
+						unset( $md_opts[ $md_pre . '_offer_currency_' . $key_num] );
+						unset( $md_opts[ $md_pre . '_offer_avail_' . $key_num] );
+					}
 				}
 			}
 

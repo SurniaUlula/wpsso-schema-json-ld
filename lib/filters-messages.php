@@ -175,31 +175,31 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_event_start':
+				case 'tooltip-meta-schema_event_start':		// Event Start.
 
 					$text = __( 'Select the event start date and time.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_event_end':
+				case 'tooltip-meta-schema_event_end':		// Event End.
 
 					$text = __( 'Select the event end date and time.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_event_offers_start':
+				case 'tooltip-meta-schema_event_offers_start':	// Event Offers Start.
 
 					$text = __( 'The date and time when tickets go on sale.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_event_offers_end':
+				case 'tooltip-meta-schema_event_offers_end':	// Event Offers End.
 
 					$text = __( 'The date and time when tickets are no longer on sale.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_event_offers':
+				case 'tooltip-meta-schema_event_offers':	// Event Offers.
 
 					$text = __( 'One or more offers for the event, including the offer name, price and currency.', 'wpsso-schema-json-ld' );
 
@@ -479,33 +479,39 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_cw_author_type':	// Reviewed CW Author Type
+				case 'tooltip-meta-schema_review_item_cw_author_type':	// Reviewed Subject Author Type
 
 					$text .= __( 'The creative work author can be a person or an organization.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_cw_author_name':	// Reviewed CW Author Name
+				case 'tooltip-meta-schema_review_item_cw_author_name':	// Reviewed Subject Author Name
 
 					$text = __( 'Enter the name of the author for this creative work.', 'wpsso-schema-json-ld' ) . ' ';
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_cw_author_url':	// Reviewed CW Author URL
+				case 'tooltip-meta-schema_review_item_cw_author_url':	// Reviewed Subject Author URL
 
 					$text = __( 'The home page of the author, or another definitive URL that provides information about the author, such as the person or organization\'s Wikipedia or Wikidata page.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_cw_pub':		// Reviewed CW Publish Date
+				case 'tooltip-meta-schema_review_item_cw_pub':		// Reviewed Subject Publish Date
 
 					$text = __( 'The date when this creative work was published or became popular / entered public discourse (for example, when it became popular on social networks).', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_book_isbn':	// Reviewed Book ISBN.
+				case 'tooltip-meta-schema_review_item_cw_book_isbn':	// Reviewed Subject Book ISBN.
 
 					$text = __( 'The ISBN code (aka International Standard Book Number) for the book being reviewed.', 'wpsso-schema-json-ld' );
+
+				 	break;
+
+				case 'tooltip-meta-schema_review_item_product_offers':	// Rewviewed Subject Product Offers.
+
+					$text = __( 'One or more offers for the reviewed product, including the offer name, price and currency.', 'wpsso-schema-json-ld' );
 
 				 	break;
 

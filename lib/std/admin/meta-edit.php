@@ -356,7 +356,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => $schema_type_row_class[ 'event' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Offers Start', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Event Offers Start', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_event_offers_start',
 					'content'  => $form->get_no_date_time_iso( 'schema_event_offers_start' ),
 				),
@@ -364,7 +364,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => $schema_type_row_class[ 'event' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Offers End', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Event Offers End', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_event_offers_end',
 					'content'  => $form->get_no_date_time_iso( 'schema_event_offers_end' ),
 				),
@@ -399,7 +399,8 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 							'select_options' => $this->p->cf[ 'form' ][ 'item_availability' ],
 							'select_default' => 'InStock',
 						),
-					), 'single_line', 'schema_event_offer', $start_num = 0, 10, 2 ),
+					), $css_class = 'single_line', $css_id = 'schema_event_offer',
+						$start_num = 0, $max_input = 2, $show_first = 2 ),
 				),
 
 				/**
@@ -497,7 +498,8 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 							'input_type'  => 'image',
 							'input_class' => 'howto_step_img',
 						),
-					), '', 'schema_howto_steps', $start_num = 0, $max_input = 3, $show_first = 3 ),
+					), $css_class = '', $css_id = 'schema_howto_step',
+						$start_num = 0, $max_input = 3, $show_first = 3 ),
 				),
 
 				/**
@@ -535,10 +537,6 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tooltip'  => 'meta-schema_job_location_id',
 					'content'  => $form->get_no_select( 'schema_job_location_id', $plm_place_names,
 						$css_class = 'long_name' ) . $plm_req_msg,
-					/*
-					'content'  => $form->get_no_select_multi( 'schema_job_location_id', $plm_place_names,
-						$css_class = 'long_name', $css_id = '', $is_assoc = true, $repeat = 3, $plm_req_msg ),
-					*/
 				),
 				'schema_job_salary' => array(
 					'tr_class' => $schema_type_row_class[ 'job_posting' ],
@@ -1082,13 +1080,51 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				/**
 				 * Schema Reviewed Subject: Book
 				 */
-				'schema_review_item_book_isbn' => array(
+				'schema_review_item_cw_book_isbn' => array(
 					'tr_class' => 'hide_schema_type ' . $schema_review_item_type_row_class[ 'book' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Subject ISBN', 'option label', 'wpsso' ),
-					'tooltip'  => 'meta-schema_review_item_book_isbn',
-					'content'  => $form->get_no_input( 'schema_review_item_book_isbn' ),
+					'label'    => _x( 'Subject Book ISBN', 'option label', 'wpsso' ),
+					'tooltip'  => 'meta-schema_review_item_cw_book_isbn',
+					'content'  => $form->get_no_input( 'schema_review_item_cw_book_isbn' ),
+				),
+
+				/**
+				 * Schema Reviewed Subject: Product
+				 */
+				'schema_review_item_product_offers' => array(
+					'tr_class' => 'hide_schema_type ' . $schema_review_item_type_row_class[ 'product' ],
+					'th_class' => 'medium',
+					'td_class' => 'blank',
+					'label'    => _x( 'Subject Product Offers', 'option label', 'wpsso-schema-json-ld' ),
+					'tooltip'  => 'meta-schema_review_item_product_offers',
+					'content'  => $form->get_no_mixed_multi( array(
+						'schema_review_item_product_offer_name' => array(
+							'input_title' => _x( 'Product Offer Name', 'option label', 'wpsso-schema-json-ld' ),
+							'input_type'  => 'text',
+							'input_class' => 'offer_name',
+						),
+						'schema_review_item_product_offer_price' => array(
+							'input_title' => _x( 'Product Offer Price', 'option label', 'wpsso-schema-json-ld' ),
+							'input_type'  => 'text',
+							'input_class' => 'short',
+						),
+						'schema_review_item_product_offer_currency' => array(
+							'input_title'    => _x( 'Product Offer Currency', 'option label', 'wpsso-schema-json-ld' ),
+							'input_type'     => 'select',
+							'input_class'    => 'currency',
+							'select_options' => $currencies,
+							'select_default' => $this->p->options[ 'plugin_def_currency' ],
+						),
+						'schema_review_item_product_offer_avail' => array(
+							'input_title'    => _x( 'Product Offer Availability', 'option label', 'wpsso-schema-json-ld' ),
+							'input_type'     => 'select',
+							'input_class'    => 'stock',
+							'select_options' => $this->p->cf[ 'form' ][ 'item_availability' ],
+							'select_default' => 'InStock',
+						),
+					), $css_class = 'single_line', $css_id = 'schema_review_item_product_offer',
+						$start_num = 0, $max_input = 2, $show_first = 2 ),
 				),
 
 				/**
