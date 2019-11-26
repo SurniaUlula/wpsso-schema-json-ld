@@ -346,6 +346,7 @@ Additional e-Commerce plugin integration is also provided with the WPSSO Core Pr
 			* Subject Author URL
 			* Subject Publish Date
 			* Subject Book ISBN
+			* Subject Product Brand
 			* Subject Product Offers (name, price, currency, availability)
 	* Claim Review Information
 		* Short Summary of Claim
