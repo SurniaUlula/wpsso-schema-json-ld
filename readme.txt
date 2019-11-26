@@ -843,9 +843,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 **Version 2.16.0-dev.1 (2019/11/26)**
 
 * **New Features**
-	* Added new Subject Product Offers (name, price, currency, availability) options for reviews of products.
-* **Improvements**
 	* None.
+* **Improvements**
+	* Added new Subject Product Brand, Product Offers (name, price, currency, availability), Product SKU, and Product MPN options for reviews of products.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -1014,7 +1014,7 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 = 2.16.0-dev.1 =
 
-(2019/11/26) Added new Subject Product Offers (name, price, currency, availability) options for reviews of products.
+(2019/11/26) Added new Subject Product Brand, Product Offers (name, price, currency, availability), Product SKU, and Product MPN options for reviews of products.
 
 = 2.15.1 =
 
