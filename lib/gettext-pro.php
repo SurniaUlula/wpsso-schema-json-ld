@@ -144,6 +144,10 @@ _x( 'Product Offer Name', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Product Offer Price', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Product Offer Currency', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Product Offer Availability', 'option label', 'wpsso-schema-json-ld' );
+// translators: Please ignore - translation uses a different text domain.
+_x( 'Subject Product SKU', 'option label', 'wpsso' );
+// translators: Please ignore - translation uses a different text domain.
+_x( 'Subject Product MPN', 'option label', 'wpsso' );
 _x( 'Claim Review Information', 'metabox title', 'wpsso-schema-json-ld' );
 _x( 'Short Summary of Claim', 'option label', 'wpsso-schema-json-ld' );
 _x( 'First Appearance URL', 'option label', 'wpsso-schema-json-ld' );

@@ -1134,6 +1134,22 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					), $css_class = 'single_line', $css_id = 'schema_review_item_product_offer',
 						$start_num = 0, $max_input = 2, $show_first = 2 ),
 				),
+				'schema_review_item_product_sku' => array(
+					'tr_class' => 'hide_schema_type ' . $schema_review_item_type_row_class[ 'product' ],
+					'th_class' => 'medium',
+					'td_class' => 'blank',
+					'label'    => _x( 'Subject Product SKU', 'option label', 'wpsso' ),
+					'tooltip'  => 'meta-schema_review_item_product_sku',
+					'content'  => $form->get_no_input_value( '' ),
+				),
+				'schema_review_item_product_mpn' => array(
+					'tr_class' => 'hide_schema_type ' . $schema_review_item_type_row_class[ 'product' ],
+					'th_class' => 'medium',
+					'td_class' => 'blank',
+					'label'    => _x( 'Subject Product MPN', 'option label', 'wpsso' ),
+					'tooltip'  => 'meta-schema_review_item_product_mpn',
+					'content'  => $form->get_no_input_value( '' ),
+				),
 
 				/**
 				 * Schema Claim Review

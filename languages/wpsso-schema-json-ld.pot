@@ -1345,32 +1345,46 @@ msgctxt "option label"
 msgid "Product Offer Availability"
 msgstr ""
 
-#: lib/gettext-pro.php:147 lib/pro/admin/meta-edit.php:1094
-#: lib/std/admin/meta-edit.php:1145
+#. translators: Please ignore - translation uses a different text domain.
+#: lib/gettext-pro.php:148 lib/pro/admin/meta-edit.php:1089
+#: lib/std/admin/meta-edit.php:1141
+msgctxt "option label"
+msgid "Subject Product SKU"
+msgstr ""
+
+#. translators: Please ignore - translation uses a different text domain.
+#: lib/gettext-pro.php:150 lib/pro/admin/meta-edit.php:1096
+#: lib/std/admin/meta-edit.php:1149
+msgctxt "option label"
+msgid "Subject Product MPN"
+msgstr ""
+
+#: lib/gettext-pro.php:151 lib/pro/admin/meta-edit.php:1108
+#: lib/std/admin/meta-edit.php:1161
 msgctxt "metabox title"
 msgid "Claim Review Information"
 msgstr ""
 
-#: lib/gettext-pro.php:148 lib/pro/admin/meta-edit.php:1099
-#: lib/std/admin/meta-edit.php:1151
+#: lib/gettext-pro.php:152 lib/pro/admin/meta-edit.php:1113
+#: lib/std/admin/meta-edit.php:1167
 msgctxt "option label"
 msgid "Short Summary of Claim"
 msgstr ""
 
-#: lib/gettext-pro.php:149 lib/pro/admin/meta-edit.php:1106
-#: lib/std/admin/meta-edit.php:1159
+#: lib/gettext-pro.php:153 lib/pro/admin/meta-edit.php:1120
+#: lib/std/admin/meta-edit.php:1175
 msgctxt "option label"
 msgid "First Appearance URL"
 msgstr ""
 
-#: lib/gettext-pro.php:150 lib/pro/admin/meta-edit.php:1118
-#: lib/std/admin/meta-edit.php:1171
+#: lib/gettext-pro.php:154 lib/pro/admin/meta-edit.php:1132
+#: lib/std/admin/meta-edit.php:1187
 msgctxt "metabox title"
 msgid "Software Application Information"
 msgstr ""
 
-#: lib/gettext-pro.php:151 lib/pro/admin/meta-edit.php:1123
-#: lib/std/admin/meta-edit.php:1177
+#: lib/gettext-pro.php:155 lib/pro/admin/meta-edit.php:1137
+#: lib/std/admin/meta-edit.php:1193
 msgctxt "option label"
 msgid "Operating System"
 msgstr ""
