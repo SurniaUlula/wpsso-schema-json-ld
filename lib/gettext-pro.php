@@ -131,6 +131,7 @@ _x( 'Reviewed Subject Information', 'metabox title', 'wpsso-schema-json-ld' );
 _x( 'Subject Type', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Subject URL', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Subject Name', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Subject Description', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Subject Author Type', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Subject Author Name', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Subject Author URL', 'option label', 'wpsso-schema-json-ld' );

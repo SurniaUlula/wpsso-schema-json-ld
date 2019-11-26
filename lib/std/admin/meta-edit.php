@@ -104,6 +104,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 			$schema_review_item_type_row_class = WpssoJsonSchema::get_type_row_class( 'schema_review_item_type', array(
 				'book'           => 'book',
 				'creative_work'  => 'creative.work',
+				'product'        => 'product',
 			) );
 
 			/**
@@ -130,8 +131,8 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'label'    => _x( 'Schema Type', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_type',
 					'content'  => $form->get_select( 'schema_type', $schema_types,
-						$css_class = 'schema_type', $css_id = '', $is_assoc = true, $is_disabled = false,
-							$selected = true, $event_names = array( 'on_focus_load_json', 'on_change_unhide_rows' ),
+						$css_class = 'schema_type', $css_id = '', $is_assoc = true, $is_disabled = false, $selected = true,
+							$event_names = array( 'on_focus_load_json', 'on_change_unhide_rows' ),
 								$event_args = 'schema_types' ),	// JSON array variable name.
 				),
 				'wpssojson_pro_feature_msg' => array(
@@ -1022,7 +1023,10 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Subject Type', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_type',
-					'content'  => $form->get_no_select( 'schema_review_item_type', $schema_types, $css_class = 'schema_type' ),
+					'content'  => $form->get_no_select( 'schema_review_item_type', $schema_types,
+						$css_class = 'schema_type', $css_id = '', $is_assoc = true, $selected = true,
+							$event_names = array( 'on_focus_load_json', 'on_show_unhide_rows' ),
+								$event_args = 'schema_types' ),	// JSON array variable name.
 				),
 				'schema_review_item_url' => array(
 					'tr_class' => $schema_type_row_class[ 'review' ],
@@ -1039,6 +1043,14 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'label'    => _x( 'Subject Name', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_name',
 					'content'  => $form->get_no_input_value( '', $css_class = 'wide value_req' ),
+				),
+				'schema_review_item_desc' => array(
+					'tr_class' => $schema_type_row_class[ 'review' ],
+					'th_class' => 'medium',
+					'td_class' => 'blank',
+					'label'    => _x( 'Subject Description', 'option label', 'wpsso-schema-json-ld' ),
+					'tooltip'  => 'meta-schema_review_item_desc',
+					'content'  => $form->get_no_textarea_value( '' ),
 				),
 
 				/**
@@ -1075,80 +1087,6 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'label'    => _x( 'Subject Publish Date', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_cw_pub',
 					'content'  => $form->get_no_date_time_iso( 'schema_review_item_cw_pub' ),
-				),
-
-				/**
-				 * Schema Reviewed Subject: Book
-				 */
-				'schema_review_item_cw_book_isbn' => array(
-					'tr_class' => 'hide_schema_type ' . $schema_review_item_type_row_class[ 'book' ],
-					'th_class' => 'medium',
-					'td_class' => 'blank',
-					'label'    => _x( 'Subject Book ISBN', 'option label', 'wpsso' ),
-					'tooltip'  => 'meta-schema_review_item_cw_book_isbn',
-					'content'  => $form->get_no_input_value( '' ),
-				),
-
-				/**
-				 * Schema Reviewed Subject: Product
-				 */
-				'schema_review_item_product_brand' => array(
-					'tr_class' => 'hide_schema_type ' . $schema_review_item_type_row_class[ 'product' ],
-					'th_class' => 'medium',
-					'td_class' => 'blank',
-					'label'    => _x( 'Subject Product Brand', 'option label', 'wpsso' ),
-					'tooltip'  => 'meta-schema_review_item_product_brand',
-					'content'  => $form->get_no_input_value( '' ),
-				),
-				'schema_review_item_product_offers' => array(
-					'tr_class' => 'hide_schema_type ' . $schema_review_item_type_row_class[ 'product' ],
-					'th_class' => 'medium',
-					'td_class' => 'blank',
-					'label'    => _x( 'Subject Product Offers', 'option label', 'wpsso-schema-json-ld' ),
-					'tooltip'  => 'meta-schema_review_item_product_offers',
-					'content'  => $form->get_no_mixed_multi( array(
-						'schema_review_item_product_offer_name' => array(
-							'input_title' => _x( 'Product Offer Name', 'option label', 'wpsso-schema-json-ld' ),
-							'input_type'  => 'text',
-							'input_class' => 'offer_name',
-						),
-						'schema_review_item_product_offer_price' => array(
-							'input_title' => _x( 'Product Offer Price', 'option label', 'wpsso-schema-json-ld' ),
-							'input_type'  => 'text',
-							'input_class' => 'short',
-						),
-						'schema_review_item_product_offer_currency' => array(
-							'input_title'    => _x( 'Product Offer Currency', 'option label', 'wpsso-schema-json-ld' ),
-							'input_type'     => 'select',
-							'input_class'    => 'currency',
-							'select_options' => $currencies,
-							'select_default' => $this->p->options[ 'plugin_def_currency' ],
-						),
-						'schema_review_item_product_offer_avail' => array(
-							'input_title'    => _x( 'Product Offer Availability', 'option label', 'wpsso-schema-json-ld' ),
-							'input_type'     => 'select',
-							'input_class'    => 'stock',
-							'select_options' => $this->p->cf[ 'form' ][ 'item_availability' ],
-							'select_default' => 'InStock',
-						),
-					), $css_class = 'single_line', $css_id = 'schema_review_item_product_offer',
-						$start_num = 0, $max_input = 2, $show_first = 2 ),
-				),
-				'schema_review_item_product_sku' => array(
-					'tr_class' => 'hide_schema_type ' . $schema_review_item_type_row_class[ 'product' ],
-					'th_class' => 'medium',
-					'td_class' => 'blank',
-					'label'    => _x( 'Subject Product SKU', 'option label', 'wpsso' ),
-					'tooltip'  => 'meta-schema_review_item_product_sku',
-					'content'  => $form->get_no_input_value( '' ),
-				),
-				'schema_review_item_product_mpn' => array(
-					'tr_class' => 'hide_schema_type ' . $schema_review_item_type_row_class[ 'product' ],
-					'th_class' => 'medium',
-					'td_class' => 'blank',
-					'label'    => _x( 'Subject Product MPN', 'option label', 'wpsso' ),
-					'tooltip'  => 'meta-schema_review_item_product_mpn',
-					'content'  => $form->get_no_input_value( '' ),
 				),
 
 				/**

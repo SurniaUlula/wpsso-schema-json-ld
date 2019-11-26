@@ -479,6 +479,12 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
+				case 'tooltip-meta-schema_review_item_desc':		// Reviewed Subject Description.
+
+					$text = __( 'A description for the subject being reviewed.', 'wpsso-schema-json-ld' );
+
+				 	break;
+
 				case 'tooltip-meta-schema_review_item_cw_author_type':	// Reviewed Subject Author Type
 
 					$text .= __( 'The creative work author can be a person or an organization.', 'wpsso-schema-json-ld' );
