@@ -515,15 +515,41 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_product_offers':	// Reviewed Subject Product Offers.
+				case 'tooltip-meta-schema_review_item_product_brand':	// Reviewed Subject Product Brand.
 
-					$text = __( 'One or more offers for the reviewed product, including the offer name, price and currency.', 'wpsso-schema-json-ld' );
+					$text = __( 'The brand name of the product being reviewed.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_product_brand':	// Reviewed Subject Product Brand.
+				case 'tooltip-meta-schema_review_item_product_offers':	// Reviewed Subject Product Offers.
 
-					$text = __( 'The brand name of the reviewed product.', 'wpsso-schema-json-ld' );
+					$text = __( 'One or more offers for the product being reviewed, including the offer name, price and currency.', 'wpsso-schema-json-ld' );
+
+				 	break;
+
+				case 'tooltip-meta-schema_review_item_product_sku':	// Reviewed Subject Product SKU.
+
+					$text = __( 'The SKU (aka Stock-Keeping Unit) of the product being reviewed.', 'wpsso-schema-json-ld' );
+
+				 	break;
+
+				case 'tooltip-meta-schema_review_item_product_mpn':	// Reviewed Subject Product MPN.
+
+					$text = __( 'The MPN (aka Manufacturer Part Number) of the product being reviewed.', 'wpsso-schema-json-ld' );
+
+				 	break;
+
+				case 'tooltip-meta-schema_review_item_product_img_id':	// Reviewed Subject Product Image ID.
+
+					$text = __( 'An image ID showing the product being reviewed.', 'wpsso-schema-json-ld' );
+
+				 	break;
+
+				case 'tooltip-meta-schema_review_item_product_img_url':	// Reviewed Subject Product Image URL.
+
+					$text = __( 'An image URL (instead of an image ID) showing the product being reviewed.', 'wpsso-schema-json-ld' );
+
+					$text .= '<em>' . __( 'This field is disabled if an image ID is selected.', 'wpsso' ) . '</em>';
 
 				 	break;
 
