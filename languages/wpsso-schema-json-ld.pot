@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 2.16.0-dev.1\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 2.16.0-dev.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-"
 "ld\n"
 "POT-Creation-Date: 2019-MO-DA HO:MI+ZONE\n"
@@ -1360,31 +1360,43 @@ msgctxt "option label"
 msgid "Subject Product MPN"
 msgstr ""
 
-#: lib/gettext-pro.php:152 lib/pro/admin/meta-edit.php:1115
+#. translators: Please ignore - translation uses a different text domain.
+#: lib/gettext-pro.php:153 lib/pro/admin/meta-edit.php:1110
+msgctxt "option label"
+msgid "Subject Product Image ID"
+msgstr ""
+
+#. translators: Please ignore - translation uses a different text domain.
+#: lib/gettext-pro.php:155 lib/pro/admin/meta-edit.php:1117
+msgctxt "option label"
+msgid "or an Image URL"
+msgstr ""
+
+#: lib/gettext-pro.php:156 lib/pro/admin/meta-edit.php:1129
 #: lib/std/admin/meta-edit.php:1099
 msgctxt "metabox title"
 msgid "Claim Review Information"
 msgstr ""
 
-#: lib/gettext-pro.php:153 lib/pro/admin/meta-edit.php:1120
+#: lib/gettext-pro.php:157 lib/pro/admin/meta-edit.php:1134
 #: lib/std/admin/meta-edit.php:1105
 msgctxt "option label"
 msgid "Short Summary of Claim"
 msgstr ""
 
-#: lib/gettext-pro.php:154 lib/pro/admin/meta-edit.php:1127
+#: lib/gettext-pro.php:158 lib/pro/admin/meta-edit.php:1141
 #: lib/std/admin/meta-edit.php:1113
 msgctxt "option label"
 msgid "First Appearance URL"
 msgstr ""
 
-#: lib/gettext-pro.php:155 lib/pro/admin/meta-edit.php:1139
+#: lib/gettext-pro.php:159 lib/pro/admin/meta-edit.php:1153
 #: lib/std/admin/meta-edit.php:1125
 msgctxt "metabox title"
 msgid "Software Application Information"
 msgstr ""
 
-#: lib/gettext-pro.php:156 lib/pro/admin/meta-edit.php:1144
+#: lib/gettext-pro.php:160 lib/pro/admin/meta-edit.php:1158
 #: lib/std/admin/meta-edit.php:1131
 msgctxt "option label"
 msgid "Operating System"

@@ -384,7 +384,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						'schema_event_offer_price' => array(
 							'input_title' => _x( 'Event Offer Price', 'option label', 'wpsso-schema-json-ld' ),
 							'input_type'  => 'text',
-							'input_class' => 'short',
+							'input_class' => 'price',
 						),
 						'schema_event_offer_currency' => array(
 							'input_title'    => _x( 'Event Offer Currency', 'option label', 'wpsso-schema-json-ld' ),
