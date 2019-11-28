@@ -10,7 +10,7 @@ Tags: schema.org, rich snippets, structured data, amp, woocommerce, image seo, v
 Contributors: jsmoriss
 Requires At Least: 3.9
 Tested Up To: 5.3
-WC Tested Up To: 3.8.0
+WC Tested Up To: 3.8.1
 Stable Tag: 2.15.1
 
 Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPages, HowTos, Images, Local Business, Products, Recipes, Reviews, Videos, and more.
@@ -840,7 +840,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.16.0-b.2 (2019/11/27)**
+**Version 2.16.0-b.3 (2019/11/28)**
 
 * **New Features**
 	* None.
@@ -1017,9 +1017,9 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 2.16.0-b.2 =
+= 2.16.0-b.3 =
 
-(2019/11/27) Added new Subject Product options for reviews of products.
+(2019/11/28) Added new Subject Product options for reviews of products.
 
 = 2.15.1 =
 
