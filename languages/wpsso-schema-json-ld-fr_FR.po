@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Schema JSON-LD Markup 2.16.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2019-11-27 10:20-0800\n"
-"PO-Revision-Date: 2019-11-27 10:25-0800\n"
+"POT-Creation-Date: 2019-11-28 10:58-0800\n"
+"PO-Revision-Date: 2019-11-28 10:59-0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -1318,6 +1318,16 @@ msgstr "Informations sur l'application logicielle"
 msgctxt "option label"
 msgid "Operating System"
 msgstr "Système d'exploitation"
+
+#. translators: Please ignore - translation uses a different text domain.
+#: lib/gettext-pro.php:162 lib/pro/head/howto.php:123
+msgid "adding schema howto step option #%d image"
+msgstr "ajout d'image d'étape de l'option #%d du Schéma How-To"
+
+#. translators: Please ignore - translation uses a different text domain.
+#: lib/gettext-pro.php:164 lib/pro/head/review.php:133
+msgid "adding schema review product image"
+msgstr "ajout d'image de produit du Schéma d'évaluation"
 
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag, %3$s is the type attribute value
 #: lib/shortcode/schema.php:156

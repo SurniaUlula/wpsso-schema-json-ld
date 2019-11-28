@@ -158,3 +158,7 @@ _x( 'Short Summary of Claim', 'option label', 'wpsso-schema-json-ld' );
 _x( 'First Appearance URL', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Software Application Information', 'metabox title', 'wpsso-schema-json-ld' );
 _x( 'Operating System', 'option label', 'wpsso-schema-json-ld' );
+// translators: Please ignore - translation uses a different text domain.
+__( 'adding schema howto step option #%d image', 'wpsso' );
+// translators: Please ignore - translation uses a different text domain.
+__( 'adding schema review product image', 'wpsso' );

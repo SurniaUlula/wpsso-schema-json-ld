@@ -1423,6 +1423,16 @@ msgctxt "option label"
 msgid "Operating System"
 msgstr ""
 
+#. translators: Please ignore - translation uses a different text domain.
+#: lib/gettext-pro.php:162 lib/pro/head/howto.php:123
+msgid "adding schema howto step option #%d image"
+msgstr ""
+
+#. translators: Please ignore - translation uses a different text domain.
+#: lib/gettext-pro.php:164 lib/pro/head/review.php:133
+msgid "adding schema review product image"
+msgstr ""
+
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag, %3$s is the type attribute value
 #: lib/shortcode/schema.php:156
 msgid ""
