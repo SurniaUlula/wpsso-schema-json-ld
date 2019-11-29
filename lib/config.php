@@ -16,7 +16,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssojson' => array(			// Plugin acronym.
-					'version'     => '2.16.0-rc.1',	// Plugin version.
+					'version'     => '2.16.0-rc.2',	// Plugin version.
 					'opt_version' => '35',		// Increment when changing default option values.
 					'short'       => 'WPSSO JSON',	// Short plugin name.
 					'name'        => 'WPSSO Schema JSON-LD Markup',
@@ -126,7 +126,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 			return $add_slug ? $info[ 'slug' ] . '-' . $info[ 'version' ] : $info[ 'version' ];
 		}
 
-		public static function set_constants( $plugin_filepath ) { 
+		public static function set_constants( $plugin_file_path ) { 
 
 			if ( defined( 'WPSSOJSON_VERSION' ) ) {	// Define constants only once.
 				return;
@@ -137,11 +137,11 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 			/**
 			 * Define fixed constants.
 			 */
-			define( 'WPSSOJSON_FILEPATH', $plugin_filepath );						
+			define( 'WPSSOJSON_FILEPATH', $plugin_file_path );						
 			define( 'WPSSOJSON_PLUGINBASE', $info[ 'base' ] );	// Example: wpsso-schema-json-ld/wpsso-schema-json-ld.php.
-			define( 'WPSSOJSON_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_filepath ) ) ) );
+			define( 'WPSSOJSON_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_file_path ) ) ) );
 			define( 'WPSSOJSON_PLUGINSLUG', $info[ 'slug' ] );	// Example: wpsso-schema-json-ld.
-			define( 'WPSSOJSON_URLPATH', trailingslashit( plugins_url( '', $plugin_filepath ) ) );
+			define( 'WPSSOJSON_URLPATH', trailingslashit( plugins_url( '', $plugin_file_path ) ) );
 			define( 'WPSSOJSON_VERSION', $info[ 'version' ] );						
 
 			/**
@@ -187,7 +187,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 			return $var_const;
 		}
 
-		public static function require_libs( $plugin_filepath ) {
+		public static function require_libs( $plugin_file_path ) {
 
 			require_once WPSSOJSON_PLUGINDIR . 'lib/filters.php';
 			require_once WPSSOJSON_PLUGINDIR . 'lib/register.php';
@@ -200,11 +200,11 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 
 			if ( false === $ret && ! empty( $filespec ) ) {
 
-				$filepath = WPSSOJSON_PLUGINDIR . 'lib/' . $filespec . '.php';
+				$file_path = WPSSOJSON_PLUGINDIR . 'lib/' . $filespec . '.php';
 
-				if ( file_exists( $filepath ) ) {
+				if ( file_exists( $file_path ) ) {
 
-					require_once $filepath;
+					require_once $file_path;
 
 					if ( empty( $classname ) ) {
 						return SucomUtil::sanitize_classname( 'wpssojson' . $filespec, $allow_underscore = false );
