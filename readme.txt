@@ -840,14 +840,14 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.16.0-b.3 (2019/11/28)**
+**Version 2.16.0-rc.1 (2019/11/29)**
 
 * **New Features**
 	* None.
 * **Improvements**
 	* Added new Subject Product options for reviews of products:
 		* Subject Product Brand
-		* Subject Product Offers
+		* Subject Product Offers (name, price, currency, availability)
 		* Subject Product SKU
 		* Subject Product MPN
 		* Subject Product Image ID or an Image URL
@@ -1017,9 +1017,9 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 2.16.0-b.3 =
+= 2.16.0-rc.1 =
 
-(2019/11/28) Added new Subject Product options for reviews of products.
+(2019/11/29) Added new Subject Product options for reviews of products.
 
 = 2.15.1 =
 
