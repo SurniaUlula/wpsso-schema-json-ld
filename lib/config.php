@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 					'req'         => array(
 						'short'       => 'WPSSO Core',
 						'name'        => 'WPSSO Core',
-						'min_version' => '6.13.2',
+						'min_version' => '6.14.0',
 					),
 					'assets' => array(
 						'icons' => array(
@@ -90,7 +90,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 					),
 				),
 			),
-			'opt' => array(						// Plugin options.
+			'opt' => array(
 				'defaults' => array(
 					'schema_text_max_len'      => 10000,	// Maximum Text Property Length.
 					'schema_add_text_prop'     => 1,	// Add CreativeWork Text Property.
