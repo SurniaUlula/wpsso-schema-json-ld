@@ -840,7 +840,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.16.0-rc.2 (2019/11/29)**
+**Version 2.16.0-rc.3 (2019/11/30)**
 
 * **New Features**
 	* None.
@@ -1017,9 +1017,9 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 2.16.0-rc.2 =
+= 2.16.0-rc.3 =
 
-(2019/11/29) Added new Subject Product options for reviews of products.
+(2019/11/30) Added new Subject Product options for reviews of products.
 
 = 2.15.1 =
 
