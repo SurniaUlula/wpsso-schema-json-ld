@@ -715,7 +715,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => $schema_type_row_class[ 'product' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Product GTIN-14', 'option label', 'wpsso' ),
+					'label'    => _x( 'Product GTIN-14', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-product_gtin14',
 					'content'  => $form->get_no_input( 'product_gtin14', '', $css_id = '', $placeholder = true ),
 				),
@@ -723,7 +723,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => $schema_type_row_class[ 'product' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Product GTIN-13/EAN', 'option label', 'wpsso' ),	// aka Product EAN
+					'label'    => _x( 'Product GTIN-13/EAN', 'option label', 'wpsso-schema-json-ld' ),	// aka Product EAN
 					'tooltip'  => 'meta-product_gtin13',
 					'content'  => $form->get_no_input( 'product_gtin13', '', $css_id = '', $placeholder = true ),
 				),
@@ -731,7 +731,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => $schema_type_row_class[ 'product' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Product GTIN-12/UPC', 'option label', 'wpsso' ),	// aka Product UPC
+					'label'    => _x( 'Product GTIN-12/UPC', 'option label', 'wpsso-schema-json-ld' ),	// aka Product UPC
 					'tooltip'  => 'meta-product_gtin12',
 					'content'  => $form->get_no_input( 'product_gtin12', '', $css_id = '', $placeholder = true ),
 				),
@@ -739,7 +739,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => $schema_type_row_class[ 'product' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Product GTIN-8', 'option label', 'wpsso' ),
+					'label'    => _x( 'Product GTIN-8', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-product_gtin8',
 					'content'  => $form->get_no_input( 'product_gtin8', '', $css_id = '', $placeholder = true ),
 				),
@@ -747,7 +747,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => $schema_type_row_class[ 'product' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Product GTIN', 'option label', 'wpsso' ),
+					'label'    => _x( 'Product GTIN', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-product_gtin',
 					'content'  => $form->get_no_input( 'product_gtin', '', $css_id = '', $placeholder = true ),
 				),

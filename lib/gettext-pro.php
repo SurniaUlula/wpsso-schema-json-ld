@@ -76,16 +76,11 @@ _x( 'Product Width', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Product Height', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Product Depth', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Product Volume', 'option label', 'wpsso-schema-json-ld' );
-// translators: Please ignore - translation uses a different text domain.
-_x( 'Product GTIN-14', 'option label', 'wpsso' );
-// translators: Please ignore - translation uses a different text domain.
-_x( 'Product GTIN-13/EAN', 'option label', 'wpsso' );
-// translators: Please ignore - translation uses a different text domain.
-_x( 'Product GTIN-12/UPC', 'option label', 'wpsso' );
-// translators: Please ignore - translation uses a different text domain.
-_x( 'Product GTIN-8', 'option label', 'wpsso' );
-// translators: Please ignore - translation uses a different text domain.
-_x( 'Product GTIN', 'option label', 'wpsso' );
+_x( 'Product GTIN-14', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Product GTIN-13/EAN', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Product GTIN-12/UPC', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Product GTIN-8', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Product GTIN', 'option label', 'wpsso-schema-json-ld' );
 _x( 'QA Page Information', 'metabox title', 'wpsso-schema-json-ld' );
 _x( 'QA Heading', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Recipe Information', 'metabox title', 'wpsso-schema-json-ld' );
@@ -136,29 +131,21 @@ _x( 'Subject Author Type', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Subject Author Name', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Subject Author URL', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Subject Publish Date', 'option label', 'wpsso-schema-json-ld' );
-// translators: Please ignore - translation uses a different text domain.
-_x( 'Subject Book ISBN', 'option label', 'wpsso' );
-// translators: Please ignore - translation uses a different text domain.
-_x( 'Subject Product Brand', 'option label', 'wpsso' );
+_x( 'Subject Book ISBN', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Subject Product Brand', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Subject Product Offers', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Product Offer Name', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Product Offer Price', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Product Offer Currency', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Product Offer Availability', 'option label', 'wpsso-schema-json-ld' );
-// translators: Please ignore - translation uses a different text domain.
-_x( 'Subject Product SKU', 'option label', 'wpsso' );
-// translators: Please ignore - translation uses a different text domain.
-_x( 'Subject Product MPN', 'option label', 'wpsso' );
-// translators: Please ignore - translation uses a different text domain.
-_x( 'Subject Product Image ID', 'option label', 'wpsso' );
-// translators: Please ignore - translation uses a different text domain.
-_x( 'or an Image URL', 'option label', 'wpsso' );
+_x( 'Subject Product SKU', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Subject Product MPN', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Subject Product Image ID', 'option label', 'wpsso-schema-json-ld' );
+_x( 'or an Image URL', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Claim Review Information', 'metabox title', 'wpsso-schema-json-ld' );
 _x( 'Short Summary of Claim', 'option label', 'wpsso-schema-json-ld' );
 _x( 'First Appearance URL', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Software Application Information', 'metabox title', 'wpsso-schema-json-ld' );
 _x( 'Operating System', 'option label', 'wpsso-schema-json-ld' );
-// translators: Please ignore - translation uses a different text domain.
-__( 'adding schema howto step option #%d image', 'wpsso' );
-// translators: Please ignore - translation uses a different text domain.
-__( 'adding schema review product image', 'wpsso' );
+__( 'adding schema howto step option #%d image', 'wpsso-schema-json-ld' );
+__( 'adding schema review product image', 'wpsso-schema-json-ld' );
