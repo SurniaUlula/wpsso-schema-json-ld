@@ -487,7 +487,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 						'schema_howto_step' => array(
 							'input_label' => _x( 'Name', 'option label', 'wpsso-schema-json-ld' ),
 							'input_type'  => 'text',
-							'input_class' => 'wide howto_step_name value_req',
+							'input_class' => 'wide howto_step_name is_required',
 						),
 						'schema_howto_step_text' => array(
 							'input_label' => _x( 'Description', 'option label', 'wpsso-schema-json-ld' ),
@@ -876,7 +876,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Serving Size', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_recipe_nutri_serv',
-					'content'  => $form->get_no_input_value( '', 'long_name value_req' ),
+					'content'  => $form->get_no_input_value( '', 'long_name is_required' ),
 				),
 				'schema_recipe_nutri_cal' => array(
 					'tr_class' => $schema_type_row_class[ 'recipe' ],
@@ -993,7 +993,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Review Rating', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_rating',
-					'content'  => $form->get_no_input_value( $form->defaults[ 'schema_review_rating' ], 'short value_req' ) . 
+					'content'  => $form->get_no_input_value( $form->defaults[ 'schema_review_rating' ], 'short is_required' ) . 
 						' ' . _x( 'from', 'option comment', 'wpsso-schema-json-ld' ) . ' ' . 
 						$form->get_no_input_value( $form->defaults[ 'schema_review_rating_from' ], 'short' ) . 
 						' ' . _x( 'to', 'option comment', 'wpsso-schema-json-ld' ) . ' ' . 
@@ -1034,7 +1034,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Subject URL', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_url',
-					'content'  => $form->get_no_input_value( '', $css_class = 'wide value_req' ),
+					'content'  => $form->get_no_input_value( '', $css_class = 'wide is_required' ),
 				),
 				'schema_review_item_name' => array(
 					'tr_class' => $schema_type_row_class[ 'review' ],
@@ -1042,7 +1042,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Subject Name', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_name',
-					'content'  => $form->get_no_input_value( '', $css_class = 'wide value_req' ),
+					'content'  => $form->get_no_input_value( '', $css_class = 'wide is_required' ),
 				),
 				'schema_review_item_desc' => array(
 					'tr_class' => $schema_type_row_class[ 'review' ],
