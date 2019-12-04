@@ -21,7 +21,7 @@ Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPag
 
 **Uses your pre-existing WordPress content and plugin / API data for accurate and comprehensive Schema JSON-LD markup:**
 
-Including image SEO, video SEO, local business, organization, publisher, person, author and co-authors, extensive e-Commerce product markup, product variations, product ratings, aggregate ratings, reviews, recipe information, event details, collection pages, profile pages, search pages, item lists for [Google's Carousel Rich Results](https://developers.google.com/search/docs/guides/mark-up-listings), customized property values, and much, much more (see the complete list of features below for Standard / Premium add-on details).
+Including image SEO, video SEO, local business, organization, publisher, person, author and co-authors, extensive e-Commerce product markup, product variations, product ratings, aggregate ratings, reviews, recipe information, event details, collection pages, profile pages, search pages, item lists for [Google's Carousel Rich Results](https://developers.google.com/search/docs/guides/mark-up-listings), customized property values, and much, much more (see below for Standard and Premium version details).
 
 Offers Schema JSON-LD markup for posts, pages, custom post types, terms (category, tags, etc.), custom taxonomies, user profile pages, search result pages, Accelerated Mobile Pages (AMP) pages, etc.
 
@@ -64,7 +64,7 @@ Additional e-Commerce plugin integration is also provided with the WPSSO Core Pr
 
 * Extends the features of the WPSSO Core plugin.
 
-* Provides Schema properties as JSON-LD markup (aka Google Rich Results / Rich Snippets with Structured Data) for the following Schema types (more specific properties are available in the Premium add-on):
+* Provides Schema properties as JSON-LD markup (aka Google Rich Results / Rich Snippets with Structured Data) for the following Schema types (more specific Schema type properties are available in the Premium version):
 
 	* [schema.org/Article](https://schema.org/Article) (includes 19 Schema sub-types)
 	* [schema.org/Blog](https://schema.org/Blog)
@@ -183,6 +183,8 @@ Additional e-Commerce plugin integration is also provided with the WPSSO Core Pr
 
 <h3>WPSSO JSON Premium Features</h3>
 
+The Standard version is designed to satisfy the requirements of most standard WordPress sites / blogs. If your site requires additional Schema properties, for WooCommerce products, events, places / locations, recipes, etc., then you may want the Premium version for those additional features.
+
 * Provides Schema properties as JSON-LD markup (aka Google Rich Results / Rich Snippets with Structured Data) for the following Schema types, including Schema ItemList for [Google's Carousel Rich Results](https://developers.google.com/search/docs/guides/mark-up-listings):
 
 	* [schema.org/Article](https://schema.org/Article) (includes 19 Schema sub-types)
@@ -219,9 +221,9 @@ Additional e-Commerce plugin integration is also provided with the WPSSO Core Pr
 
 * WooCommerce product variations are grouped by currency and added as a Schema AggregateOffer for Google's Rich Results / Rich Snippets (includes the product variation group high price, low price, and currency).
 
-* Fixes common Google testing tool warnings for WooCommerce products, like "Missing Product ID", "brand field is recommended", etc.
-
 * Fixes common Google testing tool warnings like "aggregateRating field is recommended" and "review field is recommended".
+
+* Fixes Google testing tool warnings for WooCommerce products, like "brand field is recommended", "missing a global identifier", etc.
 
 * Includes Aggregate Rating values (if available from WordPress) in the main webpage Schema "aggregateRating" property.
 

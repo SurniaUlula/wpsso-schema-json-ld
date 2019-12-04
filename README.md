@@ -17,7 +17,7 @@
 
 <p><strong>Uses your pre-existing WordPress content and plugin / API data for accurate and comprehensive Schema JSON-LD markup:</strong></p>
 
-<p>Including image SEO, video SEO, local business, organization, publisher, person, author and co-authors, extensive e-Commerce product markup, product variations, product ratings, aggregate ratings, reviews, recipe information, event details, collection pages, profile pages, search pages, item lists for <a href="https://developers.google.com/search/docs/guides/mark-up-listings">Google's Carousel Rich Results</a>, customized property values, and much, much more (see the complete list of features below for Standard / Premium add-on details).</p>
+<p>Including image SEO, video SEO, local business, organization, publisher, person, author and co-authors, extensive e-Commerce product markup, product variations, product ratings, aggregate ratings, reviews, recipe information, event details, collection pages, profile pages, search pages, item lists for <a href="https://developers.google.com/search/docs/guides/mark-up-listings">Google's Carousel Rich Results</a>, customized property values, and much, much more (see below for Standard and Premium version details).</p>
 
 <p>Offers Schema JSON-LD markup for posts, pages, custom post types, terms (category, tags, etc.), custom taxonomies, user profile pages, search result pages, Accelerated Mobile Pages (AMP) pages, etc.</p>
 
@@ -62,7 +62,7 @@
 
 <ul>
 <li><p>Extends the features of the WPSSO Core plugin.</p></li>
-<li><p>Provides Schema properties as JSON-LD markup (aka Google Rich Results / Rich Snippets with Structured Data) for the following Schema types (more specific properties are available in the Premium add-on):</p>
+<li><p>Provides Schema properties as JSON-LD markup (aka Google Rich Results / Rich Snippets with Structured Data) for the following Schema types (more specific Schema type properties are available in the Premium version):</p>
 
 <ul>
 <li><a href="https://schema.org/Article">schema.org/Article</a> (includes 19 Schema sub-types)</li>
@@ -216,6 +216,8 @@
 
 <h3>WPSSO JSON Premium Features</h3>
 
+<p>The Standard version is designed to satisfy the requirements of most standard WordPress sites / blogs. If your site requires additional Schema properties, for WooCommerce products, events, places / locations, recipes, etc., then you may want the Premium version for those additional features.</p>
+
 <ul>
 <li><p>Provides Schema properties as JSON-LD markup (aka Google Rich Results / Rich Snippets with Structured Data) for the following Schema types, including Schema ItemList for <a href="https://developers.google.com/search/docs/guides/mark-up-listings">Google's Carousel Rich Results</a>:</p>
 
@@ -252,8 +254,8 @@
 </ul></li>
 <li><p>Provides complete video SEO markup with information from video service APIs (Facebook, Slideshare, Soundcloud, Vimeo, Wistia, YouTube).</p></li>
 <li><p>WooCommerce product variations are grouped by currency and added as a Schema AggregateOffer for Google's Rich Results / Rich Snippets (includes the product variation group high price, low price, and currency).</p></li>
-<li><p>Fixes common Google testing tool warnings for WooCommerce products, like "Missing Product ID", "brand field is recommended", etc.</p></li>
 <li><p>Fixes common Google testing tool warnings like "aggregateRating field is recommended" and "review field is recommended".</p></li>
+<li><p>Fixes Google testing tool warnings for WooCommerce products, like "brand field is recommended", "missing a global identifier", etc.</p></li>
 <li><p>Includes Aggregate Rating values (if available from WordPress) in the main webpage Schema "aggregateRating" property.</p></li>
 <li><p>Includes Review values (if available from WordPress) in the main webpage Schema "review" property.</p></li>
 <li><p>Supports the Schema JSON-LD created by the Yoast SEO How-To and FAQ blocks by moving it into the main webpage Schema CreativeWork markup.</p></li>
