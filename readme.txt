@@ -64,7 +64,7 @@ Additional e-Commerce plugin integration is also provided with the WPSSO Core Pr
 
 * Extends the features of the WPSSO Core plugin.
 
-* Provides Schema JSON-LD markup (aka Structured Data) for the following Schema types (more specific Schema sub-type markup is available in the Premium add-on):
+* Provides Schema properties as JSON-LD markup (aka Google Rich Results / Rich Snippets with Structured Data) for the following Schema types (more specific properties are available in the Premium add-on):
 
 	* [schema.org/Article](https://schema.org/Article) (includes 19 Schema sub-types)
 	* [schema.org/Blog](https://schema.org/Blog)
@@ -119,6 +119,7 @@ Additional e-Commerce plugin integration is also provided with the WPSSO Core Pr
 			* Product Brand Attribute Name 
 			* Product Color Attribute Name 
 			* Product Condition Attribute Name 
+			* Product Depth Attribute Name 
 			* Product MPN Attribute Name 
 			* Product GTIN-14 Attribute Name 
 			* Product GTIN-13/EAN Attribute Name 
@@ -129,7 +130,7 @@ Additional e-Commerce plugin integration is also provided with the WPSSO Core Pr
 			* Product Material Attribute Name 
 			* Product Size Attribute Name 
 			* Product Target Gender Attr. Name
-			* Product Volume (ml) Attribute Name
+			* Product Volume Attribute Name (ml)
 	* Custom Meta (WPSSO Core Premium required)
 		* Custom Field Names
 			* Microdata Type URLs Custom Field 
@@ -142,19 +143,24 @@ Additional e-Commerce plugin integration is also provided with the WPSSO Core Pr
 			* Product Color Custom Field 
 			* Product Condition Custom Field 
 			* Product Currency Custom Field
+			* Product Depth Custom Field (cm)
 			* Product GTIN-14 Custom Field 
 			* Product GTIN-13/EAN Custom Field 
 			* Product GTIN-12/UPC Custom Field 
 			* Product GTIN-8 Custom Field 
 			* Product GTIN Custom Field 
+			* Product Height Custom Field 
 			* Product ISBN Custom Field 
+			* Product Length Custom Field (cm)
 			* Product Material Custom Field 
 			* Product MPN Custom Field 
 			* Product Price Custom Field 
 			* Product Size Custom Field 
 			* Product SKU Custom Field 
 			* Product Target Gender Custom Field 
-			* Product Volume (ml) Custom Field 
+			* Product Volume Custom Field (ml)
+			* Product Weight Custom Field (kg)
+			* Product Width Custom Field (cm)
 			* Recipe Ingredients Custom Field 
 			* Recipe Instructions Custom Field 
 			* Same-As URLs Custom Field 
@@ -177,7 +183,7 @@ Additional e-Commerce plugin integration is also provided with the WPSSO Core Pr
 
 <h3>WPSSO JSON Premium Features</h3>
 
-* Provides Schema JSON-LD markup (aka Google Rich Results / Rich Snippets with Structured Data) for all Schema types and sub-types, including Schema ItemList for [Google's Carousel Rich Results](https://developers.google.com/search/docs/guides/mark-up-listings):
+* Provides Schema properties as JSON-LD markup (aka Google Rich Results / Rich Snippets with Structured Data) for the following Schema types, including Schema ItemList for [Google's Carousel Rich Results](https://developers.google.com/search/docs/guides/mark-up-listings):
 
 	* [schema.org/Article](https://schema.org/Article) (includes 19 Schema sub-types)
 	* [schema.org/Blog](https://schema.org/Blog)
@@ -811,10 +817,6 @@ WPSSO Schema JSON-LD Markup (aka WPSSO JSON) is an add-on for the [WPSSO Core pl
 
 01. WPSSO JSON settings page with options for site name, alternate name, logo, banner, image size, and Schema types for posts, pages, custom post types, etc.
 02. WPSSO JSON options in the Document SSO metabox for the Schema type https://schema.org/Article.
-03. WPSSO JSON options in the Document SSO metabox for the Schema type https://schema.org/Recipe.
-04. WPSSO JSON options in the Document SSO metabox for the Schema type https://schema.org/Review.
-05. WPSSO JSON example for the Schema type https://schema.org/Recipe on Pinterest.
-06. WPSSO JSON example for the Schema type https://schema.org/TechArticle in Google's Structured Data Testing Tool.
 
 == Changelog ==
 
