@@ -345,17 +345,23 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 	* Review Information
 		* Review Rating 
 		* Rating Value Name
-		* Reviewed Subject Information
-			* Subject Type 
-			* Subject URL 
-			* Subject Name 
-			* Subject Author Type
-			* Subject Author Name
-			* Subject Author URL
-			* Subject Publish Date
-			* Subject Book ISBN
-			* Subject Product Brand
-			* Subject Product Offers (name, price, currency, availability)
+		* Reviewed Item Information
+			* Item Type 
+			* Item URL 
+			* Item Same-As URL 
+			* Item Name 
+			* Item Description 
+			* Item Image ID or URL 
+			* Item Author Type
+			* Item Author Name
+			* Item Author URL
+			* Item Published Date
+			* Item Created Date
+			* Book ISBN
+			* Product Brand
+			* Product Offers (name, price, currency, availability)
+			* Product SKU
+			* Product MPN
 	* Claim Review Information
 		* Short Summary of Claim
 		* First Appearance URL
@@ -844,17 +850,30 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.17.0-dev.2 (2019/12/05)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Added new options in the Document SSO metabox for the Schema Review type:
+		* Item Same-As URL
+		* Item Image ID or URL
+		* Item Created Date
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+
 **Version 2.16.0 (2019/11/30)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* Added new Subject Product options for reviews of products:
-		* Subject Product Brand
-		* Subject Product Offers (name, price, currency, availability)
-		* Subject Product SKU
-		* Subject Product MPN
-		* Subject Product Image ID or an Image URL
+	* Added new options in the Document SSO metabox for reviews of products:
+		* Product Brand
+		* Product Offers (name, price, currency, availability)
+		* Product SKU
+		* Product MPN
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -876,12 +895,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **New Features**
 	* None.
 * **Improvements**
-	* Added a new "Reviewed Subject Information" section in the Document SSO metabox:
-		* Renamed the "Claim Author Type" option to "Subject Author Type".
-		* Renamed the "Claim Author Name" option to "Subject Author Name".
-		* Renamed the "Claim Author URL" option to "Subject Author URL".
-		* Renamed the "Claim Made on Date" option to "Subject Publish Date".
-		* Added a new "Subject Book ISBN" option.
+	* Added a new "Reviewed Item Information" section in the Document SSO metabox:
+		* Renamed the "Claim Author Type" option to "Item Author Type".
+		* Renamed the "Claim Author Name" option to "Item Author Name".
+		* Renamed the "Claim Author URL" option to "Item Author URL".
+		* Renamed the "Claim Made on Date" option to "Item Publish Date".
+		* Added a new "Book ISBN" option.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -896,9 +915,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **New Features**
 	* None.
 * **Improvements**
-	* Added a new "Reviewed Subject Type" option in the Document SSO metabox.
-	* Added a new "Default Reviewed Subject Type" option under the SSO > Schema Markup > Meta Defaults tab.
-	* The Schema 'itemReviewed' property type can now be managed by the "Reviewed Subject Type" option in the Document SSO metabox. 
+	* Added a new "Reviewed Item Type" option in the Document SSO metabox.
+	* Added a new "Default Reviewed Item Type" option under the SSO > Schema Markup > Meta Defaults tab.
+	* The Schema 'itemReviewed' property type can now be managed by the "Reviewed Item Type" option in the Document SSO metabox. 
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -1021,7 +1040,11 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
+= 2.17.0-dev.2 =
+
+(2019/12/05) Added a new "Item Same-As URLs" option in the Document SSO metabox for the Schema Review type.
+
 = 2.16.0 =
 
-(2019/11/30) Added new Subject Product options for reviews of products.
+(2019/11/30) Added new options in the Document SSO metabox for reviews of products.
 
