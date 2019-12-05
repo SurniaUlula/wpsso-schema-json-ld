@@ -863,6 +863,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None.
 * **Developer Notes**
 	* None.
+* **Requires At Least**
+	* PHP v5.4.
+	* WordPress v3.9.
+	* WPSSO Core v6.15.0-dev.2.
 
 **Version 2.16.0 (2019/11/30)**
 
