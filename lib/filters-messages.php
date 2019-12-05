@@ -461,95 +461,107 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_type':		// Reviewed Subject Type.
+				case 'tooltip-meta-schema_review_item_type':		// Reviewed Item Type.
 
-					$text = __( 'A Schema type for the subject being reviewed.', 'wpsso-schema-json-ld' );
-
-				 	break;
-
-				case 'tooltip-meta-schema_review_item_url':		// Reviewed Subject URL.
-
-					$text = __( 'A webpage URL for the subject being reviewed.', 'wpsso-schema-json-ld' );
+					$text = __( 'A Schema type for the subject of the review.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_name':		// Reviewed Subject Name.
+				case 'tooltip-meta-schema_review_item_url':		// Reviewed Item URL.
 
-					$text = __( 'A name for the subject being reviewed.', 'wpsso-schema-json-ld' );
-
-				 	break;
-
-				case 'tooltip-meta-schema_review_item_desc':		// Reviewed Subject Description.
-
-					$text = __( 'A description for the subject being reviewed.', 'wpsso-schema-json-ld' );
+					$text = __( 'A webpage URL for the subject of the review.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_cw_author_type':	// Reviewed Subject Author Type
+				case 'tooltip-meta-schema_review_item_sameas_url':	// Reviewed Item Same-As URL.
+
+					$text = $this->filter_messages_tooltip_meta( '', 'tooltip-meta-schema_sameas_url' );
+
+				 	break;
+
+				case 'tooltip-meta-schema_review_item_name':		// Reviewed Item Name.
+
+					$text = __( 'A name for the subject of the review.', 'wpsso-schema-json-ld' );
+
+				 	break;
+
+				case 'tooltip-meta-schema_review_item_desc':		// Reviewed Item Description.
+
+					$text = __( 'A description for the subject of the review.', 'wpsso-schema-json-ld' );
+
+				 	break;
+
+				case 'tooltip-meta-schema_review_item_img_id':		// Reviewed Item Image ID.
+
+					$text = __( 'An image ID showing the subject of the review.', 'wpsso-schema-json-ld' );
+
+				 	break;
+
+				case 'tooltip-meta-schema_review_item_img_url':		// Reviewed Item Image URL.
+
+					$text = __( 'An image URL (instead of an image ID) showing the subject of the review.', 'wpsso-schema-json-ld' );
+
+					$text .= '<em>' . __( 'This field is disabled if an image ID is selected.', 'wpsso-schema-json-ld' ) . '</em>';
+
+				 	break;
+
+				case 'tooltip-meta-schema_review_item_cw_author_type':	// Reviewed Item Author Type
 
 					$text .= __( 'The creative work author can be a person or an organization.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_cw_author_name':	// Reviewed Subject Author Name
+				case 'tooltip-meta-schema_review_item_cw_author_name':	// Reviewed Item Author Name
 
 					$text = __( 'Enter the name of the author for this creative work.', 'wpsso-schema-json-ld' ) . ' ';
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_cw_author_url':	// Reviewed Subject Author URL
+				case 'tooltip-meta-schema_review_item_cw_author_url':	// Reviewed Item Author URL
 
 					$text = __( 'The home page of the author, or another definitive URL that provides information about the author, such as the person or organization\'s Wikipedia or Wikidata page.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_cw_pub':		// Reviewed Subject Publish Date
+				case 'tooltip-meta-schema_review_item_cw_pub':		// Reviewed Item Publish Date
 
 					$text = __( 'The date when this creative work was published or became popular / entered public discourse (for example, when it became popular on social networks).', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_cw_book_isbn':	// Reviewed Subject Book ISBN.
+				case 'tooltip-meta-schema_review_item_cw_created':	// Reviewed Item Created Date
+
+					$text = __( 'The date when this creative work was created.', 'wpsso-schema-json-ld' );
+
+				 	break;
+
+				case 'tooltip-meta-schema_review_item_cw_book_isbn':	// Reviewed Book ISBN.
 
 					$text = __( 'The ISBN code (aka International Standard Book Number) for the book being reviewed.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_product_brand':	// Reviewed Subject Product Brand.
+				case 'tooltip-meta-schema_review_item_product_brand':	// Reviewed Product Brand.
 
 					$text = __( 'The brand name of the product being reviewed.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_product_offers':	// Reviewed Subject Product Offers.
+				case 'tooltip-meta-schema_review_item_product_offers':	// Reviewed Product Offers.
 
 					$text = __( 'One or more offers for the product being reviewed, including the offer name, price and currency.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_product_sku':	// Reviewed Subject Product SKU.
+				case 'tooltip-meta-schema_review_item_product_sku':	// Reviewed Product SKU.
 
 					$text = __( 'The SKU (aka Stock-Keeping Unit) of the product being reviewed.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_product_mpn':	// Reviewed Subject Product MPN.
+				case 'tooltip-meta-schema_review_item_product_mpn':	// Reviewed Product MPN.
 
 					$text = __( 'The MPN (aka Manufacturer Part Number) of the product being reviewed.', 'wpsso-schema-json-ld' );
-
-				 	break;
-
-				case 'tooltip-meta-schema_review_item_product_img_id':	// Reviewed Subject Product Image ID.
-
-					$text = __( 'An image ID showing the product being reviewed.', 'wpsso-schema-json-ld' );
-
-				 	break;
-
-				case 'tooltip-meta-schema_review_item_product_img_url':	// Reviewed Subject Product Image URL.
-
-					$text = __( 'An image URL (instead of an image ID) showing the product being reviewed.', 'wpsso-schema-json-ld' );
-
-					$text .= '<em>' . __( 'This field is disabled if an image ID is selected.', 'wpsso-schema-json-ld' ) . '</em>';
 
 				 	break;
 
@@ -672,7 +684,7 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-schema_def_review_item_type':		// Default Reviewed Subject Type.
+				case 'tooltip-schema_def_review_item_type':		// Default Reviewed Item Type.
 
 					$text = __( 'Select a default Schema type for the Schema Review subject URL.', 'wpsso-schema-json-ld' );
 

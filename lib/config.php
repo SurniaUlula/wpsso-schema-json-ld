@@ -16,8 +16,8 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssojson' => array(			// Plugin acronym.
-					'version'     => '2.16.0',	// Plugin version.
-					'opt_version' => '35',		// Increment when changing default option values.
+					'version'     => '2.17.0-dev.2',	// Plugin version.
+					'opt_version' => '36',		// Increment when changing default option values.
 					'short'       => 'WPSSO JSON',	// Short plugin name.
 					'name'        => 'WPSSO Schema JSON-LD Markup',
 					'desc'        => 'Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPages, HowTos, Images, Local Business, Products, Recipes, Reviews, Videos, and more.',
@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 					'req'         => array(
 						'short'       => 'WPSSO Core',
 						'name'        => 'WPSSO Core',
-						'min_version' => '6.14.0',
+						'min_version' => '6.15.0-dev.2',
 					),
 					'assets' => array(
 						'icons' => array(
@@ -109,7 +109,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 					'schema_def_event_location_id'         => 'none',		// Default Venue.
 					'schema_def_job_hiring_org_id'         => 'none',		// Default Hiring Organization.
 					'schema_def_job_location_id'           => 'none',		// Default Job Location.
-					'schema_def_review_item_type'          => 'creative.work',	// Default Reviewed Subject Type.
+					'schema_def_review_item_type'          => 'creative.work',	// Default Reviewed Item Type.
 				),
 			),
 			'menu' => array(

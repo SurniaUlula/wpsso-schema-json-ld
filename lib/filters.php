@@ -89,116 +89,119 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			}
 
 			$schema_md_defs = array(
-				'schema_type'                        => $def_schema_type,				// Schema Type.
-				'schema_title'                       => '',						// Name / Title.
-				'schema_title_alt'                   => '',						// Alternate Name.
-				'schema_desc'                        => '',						// Description.
-				'schema_ispartof_url'                => '',						// Is Part of URL.
-				'schema_headline'                    => '',						// Headline.
-				'schema_text'                        => '',						// Full Text.
-				'schema_keywords'                    => '',						// Keywords.
-				'schema_lang'                        => $def_lang,					// Language.
-				'schema_family_friendly'             => $opts[ 'schema_def_family_friendly' ],		// Family Friendly.
-				'schema_copyright_year'              => $def_copyright_year,				// Copyright Year.
-				'schema_license_url'                 => '',						// License URL.
-				'schema_pub_org_id'                  => $opts[ 'schema_def_pub_org_id' ],		// Publisher.
-				'schema_prov_org_id'                 => $opts[ 'schema_def_prov_org_id' ],		// Provider.
-				'schema_event_lang'                  => $def_lang,					// Event Language.
-				'schema_event_start_date'            => '',						// Event Start Date.
-				'schema_event_start_time'            => 'none',						// Event Start Time.
-				'schema_event_start_timezone'        => $timezone,					// Event Start Timezone.
-				'schema_event_end_date'              => '',						// Event End Date.
-				'schema_event_end_time'              => 'none',						// Event End Time.
-				'schema_event_end_timezone'          => $timezone,					// Event End Timezone.
-				'schema_event_offers_start_date'     => '',						// Event Offers Start Date.
-				'schema_event_offers_start_time'     => 'none',						// Event Offers Start Time.
-				'schema_event_offers_start_timezone' => $timezone,					// Event Offers Start Timezone.
-				'schema_event_offers_end_date'       => '',						// Event Offers End Date.
-				'schema_event_offers_end_time'       => 'none',						// Event Offers End Time.
-				'schema_event_offers_end_timezone'   => $timezone,					// Event Offers End Timezone.
-				'schema_event_organizer_org_id'      => $opts[ 'schema_def_event_organizer_org_id' ],	// Event Organizer Org.
-				'schema_event_organizer_person_id'   => $opts[ 'schema_def_event_organizer_person_id' ],// Event Organizer Person.
-				'schema_event_performer_org_id'      => $opts[ 'schema_def_event_performer_org_id' ],	// Event Performer Org.
-				'schema_event_performer_person_id'   => $opts[ 'schema_def_event_performer_person_id' ],// Event Performer Person.
-				'schema_event_location_id'           => $opts[ 'schema_def_event_location_id' ],	// Event Venue.
-				'schema_howto_prep_days'             => 0,						// How-To Preparation Time (Days).
-				'schema_howto_prep_hours'            => 0,						// How-To Preparation Time (Hours).
-				'schema_howto_prep_mins'             => 0,						// How-To Preparation Time (Mins).
-				'schema_howto_prep_secs'             => 0,						// How-To Preparation Time (Secs).
-				'schema_howto_total_days'            => 0,						// How-To Total Time (Days).
-				'schema_howto_total_hours'           => 0,						// How-To Total Time (Hours).
-				'schema_howto_total_mins'            => 0,						// How-To Total Time (Mins).
-				'schema_howto_total_secs'            => 0,						// How-To Total Time (Secs).
-				'schema_howto_yield'                 => '',						// How-To Yield.
-				'schema_job_title'                   => '',						// Job Title.
-				'schema_job_hiring_org_id'           => $opts[ 'schema_def_job_hiring_org_id' ],	// Job Hiring Organization.
-				'schema_job_location_id'             => $opts[ 'schema_def_job_location_id' ],		// Job Location.
-				'schema_job_salary'                  => '',						// Base Salary.
-				'schema_job_salary_currency'         => $opts[ 'plugin_def_currency' ],			// Base Salary Currency.
-				'schema_job_salary_period'           => 'year',						// Base Salary per Year, Month, Week, Hour.
-				'schema_job_empl_type_full_time'     => 0,
-				'schema_job_empl_type_part_time'     => 0,
-				'schema_job_empl_type_contractor'    => 0,
-				'schema_job_empl_type_temporary'     => 0,
-				'schema_job_empl_type_intern'        => 0,
-				'schema_job_empl_type_volunteer'     => 0,
-				'schema_job_empl_type_per_diem'      => 0,
-				'schema_job_empl_type_other'         => 0,
-				'schema_job_expire_date'             => '',
-				'schema_job_expire_time'             => 'none',
-				'schema_job_expire_timezone'         => $timezone,
-				'schema_movie_prodco_org_id'         => 'none',						// Movie Production Company.
-				'schema_movie_duration_days'         => 0,						// Movie Runtime (Days).
-				'schema_movie_duration_hours'        => 0,						// Movie Runtime (Hours).
-				'schema_movie_duration_mins'         => 0,						// Movie Runtime (Mins).
-				'schema_movie_duration_secs'         => 0,						// Movie Runtime (Secs).
-				'schema_organization_org_id'         => 'none',						// Organization.
-				'schema_person_id'                   => 'none',						// Person.
-				'schema_recipe_cook_method'          => '',						// Recipe Cooking Method.
-				'schema_recipe_course'               => '',						// Recipe Course.
-				'schema_recipe_cuisine'              => '',						// Recipe Cuisine.
-				'schema_recipe_prep_days'            => 0,						// Recipe Preparation Time (Days).
-				'schema_recipe_prep_hours'           => 0,						// Recipe Preparation Time (Hours).
-				'schema_recipe_prep_mins'            => 0,						// Recipe Preparation Time (Mins).
-				'schema_recipe_prep_secs'            => 0,						// Recipe Preparation Time (Secs).
-				'schema_recipe_cook_days'            => 0,						// Recipe Cooking Time (Days).
-				'schema_recipe_cook_hours'           => 0,						// Recipe Cooking Time (Hours).
-				'schema_recipe_cook_mins'            => 0,						// Recipe Cooking Time (Mins).
-				'schema_recipe_cook_secs'            => 0,						// Recipe Cooking Time (Secs).
-				'schema_recipe_total_days'           => 0,						// How-To Total Time (Days).
-				'schema_recipe_total_hours'          => 0,						// How-To Total Time (Hours).
-				'schema_recipe_total_mins'           => 0,						// How-To Total Time (Mins).
-				'schema_recipe_total_secs'           => 0,						// How-To Total Time (Secs).
-				'schema_recipe_nutri_serv'           => '',						// Serving Size.
-				'schema_recipe_nutri_cal'            => '',						// Calories.
-				'schema_recipe_nutri_prot'           => '',						// Protein.
-				'schema_recipe_nutri_fib'            => '',						// Fiber.
-				'schema_recipe_nutri_carb'           => '',						// Carbohydrates.
-				'schema_recipe_nutri_sugar'          => '',						// Sugar.
-				'schema_recipe_nutri_sod'            => '',						// Sodium.
-				'schema_recipe_nutri_fat'            => '',						// Fat.
-				'schema_recipe_nutri_trans_fat'      => '',						// Trans Fat.
-				'schema_recipe_nutri_sat_fat'        => '',						// Saturated Fat.
-				'schema_recipe_nutri_unsat_fat'      => '',						// Unsaturated Fat.
-				'schema_recipe_nutri_chol'           => '',						// Cholesterol.
-				'schema_recipe_yield'                => '',						// Recipe Yield.
-				'schema_review_rating'               => '0.0',						// Review Rating.
-				'schema_review_rating_from'          => '1',						// Review Rating (From).
-				'schema_review_rating_to'            => '5',						// Review Rating (To).
-				'schema_review_rating_alt_name'      => '',						// Rating Value Name.
-				'schema_review_item_type'            => $opts[ 'schema_def_review_item_type' ],		// Reviewed Subject Type.
-				'schema_review_item_url'             => '',						// Reviewed Subject URL.
-				'schema_review_item_name'            => '',						// Reviewed Subject Name.
-				'schema_review_item_cw_author_type'  => 'none',						// Reviewed Author Type.
-				'schema_review_item_cw_author_name'  => '',						// Reviewed Author Name.
-				'schema_review_item_cw_author_url'   => '',						// Reviewed Author URL.
-				'schema_review_item_cw_pub_date'     => '',						// Reviewed Publish Date.
-				'schema_review_item_cw_pub_time'     => 'none',						// Reviewed Publish Time.
-				'schema_review_item_cw_pub_timezone' => $timezone,					// Reviewed Publish Timezone.
-				'schema_review_item_cw_book_isbn'    => '',						// Reviewed Subject Book ISBN.
-				'schema_review_claim_reviewed'       => '',						// Short Summary of Claim.
-				'schema_review_claim_first_url'      => '',						// First Appearance URL.
-				'schema_software_app_os'             => '',						// Operating System.
+				'schema_type'                            => $def_schema_type,				// Schema Type.
+				'schema_title'                           => '',						// Name / Title.
+				'schema_title_alt'                       => '',						// Alternate Name.
+				'schema_desc'                            => '',						// Description.
+				'schema_ispartof_url'                    => '',						// Is Part of URL.
+				'schema_headline'                        => '',						// Headline.
+				'schema_text'                            => '',						// Full Text.
+				'schema_keywords'                        => '',						// Keywords.
+				'schema_lang'                            => $def_lang,					// Language.
+				'schema_family_friendly'                 => $opts[ 'schema_def_family_friendly' ],	// Family Friendly.
+				'schema_copyright_year'                  => $def_copyright_year,			// Copyright Year.
+				'schema_license_url'                     => '',						// License URL.
+				'schema_pub_org_id'                      => $opts[ 'schema_def_pub_org_id' ],		// Publisher.
+				'schema_prov_org_id'                     => $opts[ 'schema_def_prov_org_id' ],		// Provider.
+				'schema_event_lang'                      => $def_lang,					// Event Language.
+				'schema_event_start_date'                => '',						// Event Start Date.
+				'schema_event_start_time'                => 'none',					// Event Start Time.
+				'schema_event_start_timezone'            => $timezone,					// Event Start Timezone.
+				'schema_event_end_date'                  => '',						// Event End Date.
+				'schema_event_end_time'                  => 'none',					// Event End Time.
+				'schema_event_end_timezone'              => $timezone,					// Event End Timezone.
+				'schema_event_offers_start_date'         => '',						// Event Offers Start Date.
+				'schema_event_offers_start_time'         => 'none',					// Event Offers Start Time.
+				'schema_event_offers_start_timezone'     => $timezone,					// Event Offers Start Timezone.
+				'schema_event_offers_end_date'           => '',						// Event Offers End Date.
+				'schema_event_offers_end_time'           => 'none',					// Event Offers End Time.
+				'schema_event_offers_end_timezone'       => $timezone,					// Event Offers End Timezone.
+				'schema_event_organizer_org_id'          => $opts[ 'schema_def_event_organizer_org_id' ],	// Event Organizer Org.
+				'schema_event_organizer_person_id'       => $opts[ 'schema_def_event_organizer_person_id' ],	// Event Organizer Person.
+				'schema_event_performer_org_id'          => $opts[ 'schema_def_event_performer_org_id' ],	// Event Performer Org.
+				'schema_event_performer_person_id'       => $opts[ 'schema_def_event_performer_person_id' ],	// Event Performer Person.
+				'schema_event_location_id'               => $opts[ 'schema_def_event_location_id' ],		// Event Venue.
+				'schema_howto_prep_days'                 => 0,						// How-To Preparation Time (Days).
+				'schema_howto_prep_hours'                => 0,						// How-To Preparation Time (Hours).
+				'schema_howto_prep_mins'                 => 0,						// How-To Preparation Time (Mins).
+				'schema_howto_prep_secs'                 => 0,						// How-To Preparation Time (Secs).
+				'schema_howto_total_days'                => 0,						// How-To Total Time (Days).
+				'schema_howto_total_hours'               => 0,						// How-To Total Time (Hours).
+				'schema_howto_total_mins'                => 0,						// How-To Total Time (Mins).
+				'schema_howto_total_secs'                => 0,						// How-To Total Time (Secs).
+				'schema_howto_yield'                     => '',						// How-To Yield.
+				'schema_job_title'                       => '',						// Job Title.
+				'schema_job_hiring_org_id'               => $opts[ 'schema_def_job_hiring_org_id' ],	// Job Hiring Organization.
+				'schema_job_location_id'                 => $opts[ 'schema_def_job_location_id' ],	// Job Location.
+				'schema_job_salary'                      => '',						// Base Salary.
+				'schema_job_salary_currency'             => $opts[ 'plugin_def_currency' ],		// Base Salary Currency.
+				'schema_job_salary_period'               => 'year',					// Base Salary per Year, Month, Week, Hour.
+				'schema_job_empl_type_full_time'         => 0,
+				'schema_job_empl_type_part_time'         => 0,
+				'schema_job_empl_type_contractor'        => 0,
+				'schema_job_empl_type_temporary'         => 0,
+				'schema_job_empl_type_intern'            => 0,
+				'schema_job_empl_type_volunteer'         => 0,
+				'schema_job_empl_type_per_diem'          => 0,
+				'schema_job_empl_type_other'             => 0,
+				'schema_job_expire_date'                 => '',
+				'schema_job_expire_time'                 => 'none',
+				'schema_job_expire_timezone'             => $timezone,
+				'schema_movie_prodco_org_id'             => 'none',					// Movie Production Company.
+				'schema_movie_duration_days'             => 0,						// Movie Runtime (Days).
+				'schema_movie_duration_hours'            => 0,						// Movie Runtime (Hours).
+				'schema_movie_duration_mins'             => 0,						// Movie Runtime (Mins).
+				'schema_movie_duration_secs'             => 0,						// Movie Runtime (Secs).
+				'schema_organization_org_id'             => 'none',					// Organization.
+				'schema_person_id'                       => 'none',					// Person.
+				'schema_recipe_cook_method'              => '',						// Recipe Cooking Method.
+				'schema_recipe_course'                   => '',						// Recipe Course.
+				'schema_recipe_cuisine'                  => '',						// Recipe Cuisine.
+				'schema_recipe_prep_days'                => 0,						// Recipe Preparation Time (Days).
+				'schema_recipe_prep_hours'               => 0,						// Recipe Preparation Time (Hours).
+				'schema_recipe_prep_mins'                => 0,						// Recipe Preparation Time (Mins).
+				'schema_recipe_prep_secs'                => 0,						// Recipe Preparation Time (Secs).
+				'schema_recipe_cook_days'                => 0,						// Recipe Cooking Time (Days).
+				'schema_recipe_cook_hours'               => 0,						// Recipe Cooking Time (Hours).
+				'schema_recipe_cook_mins'                => 0,						// Recipe Cooking Time (Mins).
+				'schema_recipe_cook_secs'                => 0,						// Recipe Cooking Time (Secs).
+				'schema_recipe_total_days'               => 0,						// How-To Total Time (Days).
+				'schema_recipe_total_hours'              => 0,						// How-To Total Time (Hours).
+				'schema_recipe_total_mins'               => 0,						// How-To Total Time (Mins).
+				'schema_recipe_total_secs'               => 0,						// How-To Total Time (Secs).
+				'schema_recipe_nutri_serv'               => '',						// Serving Size.
+				'schema_recipe_nutri_cal'                => '',						// Calories.
+				'schema_recipe_nutri_prot'               => '',						// Protein.
+				'schema_recipe_nutri_fib'                => '',						// Fiber.
+				'schema_recipe_nutri_carb'               => '',						// Carbohydrates.
+				'schema_recipe_nutri_sugar'              => '',						// Sugar.
+				'schema_recipe_nutri_sod'                => '',						// Sodium.
+				'schema_recipe_nutri_fat'                => '',						// Fat.
+				'schema_recipe_nutri_trans_fat'          => '',						// Trans Fat.
+				'schema_recipe_nutri_sat_fat'            => '',						// Saturated Fat.
+				'schema_recipe_nutri_unsat_fat'          => '',						// Unsaturated Fat.
+				'schema_recipe_nutri_chol'               => '',						// Cholesterol.
+				'schema_recipe_yield'                    => '',						// Recipe Yield.
+				'schema_review_rating'                   => '0.0',					// Review Rating.
+				'schema_review_rating_from'              => '1',					// Review Rating (From).
+				'schema_review_rating_to'                => '5',					// Review Rating (To).
+				'schema_review_rating_alt_name'          => '',						// Rating Value Name.
+				'schema_review_item_type'                => $opts[ 'schema_def_review_item_type' ],	// Reviewed Item Type.
+				'schema_review_item_url'                 => '',						// Reviewed Item URL.
+				'schema_review_item_name'                => '',						// Reviewed Item Name.
+				'schema_review_item_cw_author_type'      => 'none',					// Reviewed Item Author Type.
+				'schema_review_item_cw_author_name'      => '',						// Reviewed Item Author Name.
+				'schema_review_item_cw_author_url'       => '',						// Reviewed Item Author URL.
+				'schema_review_item_cw_pub_date'         => '',						// Reviewed Item Publish Date.
+				'schema_review_item_cw_pub_time'         => 'none',					// Reviewed Item Publish Time.
+				'schema_review_item_cw_pub_timezone'     => $timezone,					// Reviewed Item Publish Timezone.
+				'schema_review_item_cw_created_date'     => '',						// Reviewed Item Created Date.
+				'schema_review_item_cw_created_time'     => 'none',					// Reviewed Item Created Time.
+				'schema_review_item_cw_created_timezone' => $timezone,					// Reviewed Item Created Timezone.
+				'schema_review_item_cw_book_isbn'        => '',						// Reviewed Book ISBN.
+				'schema_review_claim_reviewed'           => '',						// Short Summary of Claim.
+				'schema_review_claim_first_url'          => '',						// First Appearance URL.
+				'schema_software_app_os'                 => '',						// Operating System.
 			);
 
 			$md_defs = array_merge( $md_defs, $schema_md_defs );
@@ -257,6 +260,11 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				34 => array(
 					'schema_review_item_book_isbn' => 'schema_review_item_cw_book_isbn',
 				),
+				35 => array(
+					'schema_review_item_product_img_id'     => 'schema_review_item_img_id',
+					'schema_review_item_product_img_id_pre' => 'schema_review_item_img_id_pre',
+					'schema_review_item_product_img_url'    => 'schema_review_item_img_url',
+				),
 			);
 
 			return $options_keys;
@@ -297,10 +305,10 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_recipe_nutri_serv':
 				case 'schema_recipe_yield':			// Recipe Makes.
 				case 'schema_review_rating_alt_name':
-				case 'schema_review_item_name':			// Reviewed Subject Name.
-				case 'schema_review_item_cw_book_isbn':		// Reviewed Subject Book ISBN.
+				case 'schema_review_item_name':			// Reviewed Item Name.
+				case 'schema_review_item_cw_book_isbn':		// Reviewed Book ISBN.
 				case 'schema_review_claim_reviewed':
-				case 'schema_review_item_cw_author_name':	// Reviewed Subject Author Name.
+				case 'schema_review_item_cw_author_name':	// Reviewed Item Author Name.
 				case 'schema_software_app_os':
 
 					return 'one_line';
@@ -323,7 +331,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_def_job_location_id':		// Default Job Location.
 				case 'schema_def_prov_org_id':			// Default Publisher.
 				case 'schema_def_pub_org_id':			// Default Publisher.
-				case 'schema_def_review_item_type':		// Default Reviewed Subject Type.
+				case 'schema_def_review_item_type':		// Default Reviewed Item Type.
 				case 'schema_event_lang':			// Event Language.
 				case 'schema_event_location_id':		// Event Venue.
 				case 'schema_event_offer_currency':
@@ -341,8 +349,8 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_movie_prodco_org_id':		// Production Company.
 				case 'schema_prov_org_id':			// Provider.
 				case 'schema_pub_org_id':			// Publisher.
-				case 'schema_review_item_type':			// Reviewed Subject Type.
-				case 'schema_review_item_cw_author_type':	// Reviewed Subject Author Type.
+				case 'schema_review_item_type':			// Reviewed Item Type.
+				case 'schema_review_item_cw_author_type':	// Reviewed Item Author Type.
 				case 'schema_type':				// Schema Type.
 
 					return 'not_blank';
@@ -402,8 +410,9 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_sameas_url':			// Same-As URLs.
 				case 'schema_ispartof_url':			// Is Part of URL.
 				case 'schema_license_url':			// License URL.
-				case 'schema_review_item_url':			// Reviewed Subject URL.
-				case 'schema_review_item_cw_author_url':	// Reviewed Subject Author URL.
+				case 'schema_review_item_url':			// Reviewed Item URL.
+				case 'schema_review_item_sameas_url':		// Reviewed Item Same-As URL.
+				case 'schema_review_item_cw_author_url':	// Reviewed Item Author URL.
 				case 'schema_review_claim_first_url':		// First Appearance URL.
 
 					return 'url';

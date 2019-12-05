@@ -174,17 +174,17 @@ if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
 
 			if ( ! empty( $mod[ 'obj' ] ) )	{ // Just in case.
 
-				$mod_opts = $mod[ 'obj' ]->get_options( $mod[ 'id' ] );
+				$md_opts = $mod[ 'obj' ]->get_options( $mod[ 'id' ] );
 
-				if ( is_array( $mod_opts ) ) {	// Just in case.
+				if ( is_array( $md_opts ) ) {	// Just in case.
 
 					foreach ( SucomUtil::preg_grep_keys( '/^schema_ispartof_url_([0-9]+)$/',
-						$mod_opts, $invert = false, $replace = true ) as $num => $ispartof_url ) {
+						$md_opts, $invert = false, $replace = true ) as $num => $ispartof_url ) {
 
-						if ( empty( $mod_opts[ 'schema_ispartof_type_' . $num ] ) ) {
+						if ( empty( $md_opts[ 'schema_ispartof_type_' . $num ] ) ) {
 							$ispartof_type_url = 'https://schema.org/CreativeWork';
 						} else {
-							$ispartof_type_url = $this->p->schema->get_schema_type_url( $mod_opts[ 'schema_ispartof_type_' . $num ] );
+							$ispartof_type_url = $this->p->schema->get_schema_type_url( $md_opts[ 'schema_ispartof_type_' . $num ] );
 						}
 					
 						$ret[ 'isPartOf' ][] = WpssoSchema::get_schema_type_context( $ispartof_type_url, array(
@@ -395,11 +395,11 @@ if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
 
 			if ( ! empty( $mod[ 'obj' ] ) ) {
 
-				$mod_opts = $mod[ 'obj' ]->get_options( $mod[ 'id' ] );
+				$md_opts = $mod[ 'obj' ]->get_options( $mod[ 'id' ] );
 
-				if ( is_array( $mod_opts ) ) {	// Just in case.
+				if ( is_array( $md_opts ) ) {	// Just in case.
 
-					foreach ( SucomUtil::preg_grep_keys( '/^schema_addl_type_url_[0-9]+$/', $mod_opts ) as $addl_type_url ) {
+					foreach ( SucomUtil::preg_grep_keys( '/^schema_addl_type_url_[0-9]+$/', $md_opts ) as $addl_type_url ) {
 
 						if ( false !== filter_var( $addl_type_url, FILTER_VALIDATE_URL ) ) {	// Just in case.
 							$ret[ 'additionalType' ][] = $addl_type_url;
@@ -429,7 +429,7 @@ if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
 
 			if ( ! empty( $mod[ 'obj' ] ) ) {
 
-				$mod_opts = $mod[ 'obj' ]->get_options( $mod[ 'id' ] );
+				$md_opts = $mod[ 'obj' ]->get_options( $mod[ 'id' ] );
 
 				$ret[ 'sameAs' ][] = $this->p->util->get_canonical_url( $mod );
 
@@ -479,67 +479,18 @@ if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
 				/**
 				 * Get additional sameAs URLs from the post/term/user custom meta.
 				 */
-				if ( is_array( $mod_opts ) ) {	// Just in case
+				if ( is_array( $md_opts ) ) {	// Just in case
 
-					foreach ( SucomUtil::preg_grep_keys( '/^schema_sameas_url_[0-9]+$/', $mod_opts ) as $url ) {
+					foreach ( SucomUtil::preg_grep_keys( '/^schema_sameas_url_[0-9]+$/', $md_opts ) as $url ) {
 						$ret[ 'sameAs' ][] = SucomUtil::esc_url_encode( $url );
 					}
 				}
-
-				/**
-				 * Sanitize the sameAs array - make sure URLs are valid and remove any duplicates.
-				 */
-				if ( ! empty( $ret[ 'sameAs' ] ) ) {
-
-					$added_urls = array();
-
-					foreach ( $ret[ 'sameAs' ] as $num => $url ) {
-
-						if ( empty( $url ) ) {
-
-							if ( $this->p->debug->enabled ) {
-								$this->p->debug->log( 'skipping sameAs url - value is empty' );
-							}
-
-						} elseif ( isset( $ret[ 'url' ] ) && $ret[ 'url' ] === $url ) {
-
-							if ( $this->p->debug->enabled ) {
-								$this->p->debug->log( 'skipping sameAs url - value is "url" property (' . $url . ')' );
-							}
-
-						} elseif ( isset( $added_urls[ $url ] ) ) {	// Already added.
-
-							if ( $this->p->debug->enabled ) {
-								$this->p->debug->log( 'skipping sameAs url - value already added (' . $url . ')' );
-							}
-
-						} elseif ( filter_var( $url, FILTER_VALIDATE_URL ) === false ) {
-
-							if ( $this->p->debug->enabled ) {
-								$this->p->debug->log( 'skipping sameAs url - value is not valid (' . $url . ')' );
-							}
-
-						} else {	// Mark the url as already added and get the next url.
-
-							$added_urls[ $url ] = true;
-
-							continue;	// Get the next url.
-						}
-
-						unset( $ret[ 'sameAs' ][ $num ] );	// Remove the duplicate / invalid url.
-					}
-
-					$ret[ 'sameAs' ] = array_values( $ret[ 'sameAs' ] );	// Reindex / renumber the array.
-				}
 			}
-
 
 			$ret[ 'sameAs' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_sameas',
 				$ret[ 'sameAs' ], $mod, $mt_og, $page_type_id, $is_main );
 
-			if ( empty( $ret[ 'sameAs' ] ) ) {
-				unset( $ret[ 'sameAs' ] );
-			}
+			WpssoSchema::check_sameas_prop_values( $ret );
 
 			/**
 			 * Property:
