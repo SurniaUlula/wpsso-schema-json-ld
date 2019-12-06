@@ -580,7 +580,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Cast Names', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_movie_actor_person_names',
-					'content'  => $form->get_no_input_value( '', 'long_name', $css_id = '', '', $repeat = 5 ),
+					'content'  => $form->get_no_input_value( '', $css_class = 'long_name', $css_id = '', '', $repeat = 5 ),
 				),
 				'schema_movie_director_person_names' => array(
 					'tr_class' => $schema_type_row_class[ 'movie' ],
@@ -588,7 +588,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Director Names', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_movie_director_person_names',
-					'content'  => $form->get_no_input_value( '', 'long_name', $css_id = '', '', $repeat = 2 ),
+					'content'  => $form->get_no_input_value( '', $css_class = 'long_name', $css_id = '', '', $repeat = 2 ),
 				),
 				'schema_movie_prodco_org_id' => array(
 					'tr_class' => $schema_type_row_class[ 'movie' ],
@@ -1007,19 +1007,19 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				),
 
 				/**
-				 * Schema Reviewed Item
+				 * Schema Reviewed Subject
 				 */
-				'subsection_review_subject' => array(
+				'subsection_review_item' => array(
 					'tr_class' => $schema_type_row_class[ 'review' ],
 					'td_class' => 'subsection',
-					'header'   => 'h5',
-					'label'    => _x( 'Reviewed Item Information', 'metabox title', 'wpsso-schema-json-ld' ),
+					'header'   => 'h4',
+					'label'    => _x( 'Subject of the Review', 'metabox title', 'wpsso-schema-json-ld' ),
 				),
 				'schema_review_item_type' => array(
 					'tr_class' => $schema_type_row_class[ 'review' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Item Type', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Subject Type', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_type',
 					'content'  => $form->get_no_select( 'schema_review_item_type', $schema_types,
 						$css_class = 'schema_type', $css_id = '', $is_assoc = true, $selected = true,
@@ -1030,7 +1030,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => $schema_type_row_class[ 'review' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Item URL', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Subject Webpage URL', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_url',
 					'content'  => $form->get_no_input_value( '', $css_class = 'wide is_required' ),
 				),
@@ -1038,7 +1038,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => $form->get_css_class_hide_prefix( 'basic', 'schema_review_item_sameas_url' ),
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Item Same-As URLs', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Subject Same-As URLs', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_sameas_url',
 					'content'  => $form->get_no_input_value( '', $css_class = 'wide', $css_id = '', '', $repeat = 2 ),
 				),
@@ -1046,7 +1046,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => $schema_type_row_class[ 'review' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Item Name', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Subject Name', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_name',
 					'content'  => $form->get_no_input_value( '', $css_class = 'wide is_required' ),
 				),
@@ -1054,7 +1054,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => $schema_type_row_class[ 'review' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Item Description', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Subject Description', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_desc',
 					'content'  => $form->get_no_textarea_value( '' ),
 				),
@@ -1062,7 +1062,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => $schema_type_row_class[ 'review' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Item Image ID', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Subject Image ID', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_img_id',
 					'content'  => $form->get_no_input_image_upload( 'schema_review_item_img' ),
 				),
@@ -1076,13 +1076,19 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				),
 
 				/**
-				 * Schema Reviewed Item: Creative Work
+				 * Schema Reviewed Subject: Creative Work
 				 */
+				'subsection_review_item_cw' => array(
+					'tr_class' => 'hide_schema_type ' . $schema_review_item_type_row_class[ 'creative_work' ],
+					'td_class' => 'subsection',
+					'header'   => 'h5',
+					'label'    => _x( 'Creative Work Subject Information', 'metabox title', 'wpsso-schema-json-ld' ),
+				),
 				'schema_review_item_cw_author_type' => array(
 					'tr_class' => 'hide_schema_type ' . $schema_review_item_type_row_class[ 'creative_work' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Item Author Type', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'CW Author Type', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_cw_author_type',
 					'content'  => $form->get_no_select( 'schema_review_item_cw_author_type', $this->p->cf[ 'form' ][ 'author_types' ] ),
 				),
@@ -1090,7 +1096,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => 'hide_schema_type ' . $schema_review_item_type_row_class[ 'creative_work' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Item Author Name', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'CW Author Name', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_cw_author_name',
 					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
 				),
@@ -1098,7 +1104,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => 'hide_schema_type ' . $schema_review_item_type_row_class[ 'creative_work' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Item Author URL', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'CW Author URL', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_cw_author_url',
 					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
 				),
@@ -1106,7 +1112,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => 'hide_schema_type ' . $schema_review_item_type_row_class[ 'creative_work' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Item Published Date', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'CW Published Date', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_cw_pub',
 					'content'  => $form->get_no_date_time_iso( 'schema_review_item_cw_pub' ),
 				),
@@ -1114,7 +1120,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => 'hide_schema_type ' . $schema_review_item_type_row_class[ 'creative_work' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Item Created Date', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'CW Created Date', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_cw_created',
 					'content'  => $form->get_no_date_time_iso( 'schema_review_item_cw_created' ),
 				),
@@ -1126,7 +1132,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => $schema_type_row_class[ 'review_claim' ],
 					'td_class' => 'subsection',
 					'header'   => 'h5',
-					'label'    => _x( 'Claim Review Information', 'metabox title', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Claim Review Subject Information', 'metabox title', 'wpsso-schema-json-ld' ),
 				),
 				'schema_review_claim_reviewed' => array(
 					'tr_class' => $schema_type_row_class[ 'review_claim' ],

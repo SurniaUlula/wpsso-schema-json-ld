@@ -305,10 +305,13 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_recipe_nutri_serv':
 				case 'schema_recipe_yield':			// Recipe Makes.
 				case 'schema_review_rating_alt_name':
-				case 'schema_review_item_name':			// Reviewed Item Name.
-				case 'schema_review_item_cw_book_isbn':		// Reviewed Book ISBN.
 				case 'schema_review_claim_reviewed':
-				case 'schema_review_item_cw_author_name':	// Reviewed Item Author Name.
+				case 'schema_review_item_name':					// Reviewed Subject Name.
+				case 'schema_review_item_desc':					// Reviewed Subject Description.
+				case 'schema_review_item_cw_book_isbn':				// Reviewed Book ISBN.
+				case 'schema_review_item_cw_author_name':			// Reviewed CW Author Name.
+				case 'schema_review_item_cw_movie_actor_person_name':		// Reviewed Movie Cast Names.
+				case 'schema_review_item_cw_movie_director_person_name':	// Reviewed Movie Director Names.
 				case 'schema_software_app_os':
 
 					return 'one_line';
@@ -349,8 +352,8 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_movie_prodco_org_id':		// Production Company.
 				case 'schema_prov_org_id':			// Provider.
 				case 'schema_pub_org_id':			// Publisher.
-				case 'schema_review_item_type':			// Reviewed Item Type.
-				case 'schema_review_item_cw_author_type':	// Reviewed Item Author Type.
+				case 'schema_review_item_type':			// Reviewed Subject Type.
+				case 'schema_review_item_cw_author_type':	// Reviewed Subject Author Type.
 				case 'schema_type':				// Schema Type.
 
 					return 'not_blank';
@@ -410,9 +413,9 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_sameas_url':			// Same-As URLs.
 				case 'schema_ispartof_url':			// Is Part of URL.
 				case 'schema_license_url':			// License URL.
-				case 'schema_review_item_url':			// Reviewed Item URL.
-				case 'schema_review_item_sameas_url':		// Reviewed Item Same-As URL.
-				case 'schema_review_item_cw_author_url':	// Reviewed Item Author URL.
+				case 'schema_review_item_url':			// Reviewed Subject Webpage URL.
+				case 'schema_review_item_sameas_url':		// Reviewed Subject Same-As URL.
+				case 'schema_review_item_cw_author_url':	// Reviewed Subject Author URL.
 				case 'schema_review_claim_first_url':		// First Appearance URL.
 
 					return 'url';

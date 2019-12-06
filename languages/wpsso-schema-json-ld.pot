@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 2.17.0-dev.2\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 2.17.0-dev.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-"
 "ld\n"
 "POT-Creation-Date: 2019-MO-DA HO:MI+ZONE\n"
@@ -434,130 +434,130 @@ msgid ""
 "reviewed."
 msgstr ""
 
-#: lib/filters-messages.php:546
+#: lib/filters-messages.php:558
 msgid "The brand name of the product being reviewed."
 msgstr ""
 
-#: lib/filters-messages.php:552
+#: lib/filters-messages.php:564
 msgid ""
 "One or more offers for the product being reviewed, including the offer name, "
 "price and currency."
 msgstr ""
 
-#: lib/filters-messages.php:558
+#: lib/filters-messages.php:570
 msgid "The SKU (aka Stock-Keeping Unit) of the product being reviewed."
 msgstr ""
 
-#: lib/filters-messages.php:564
+#: lib/filters-messages.php:576
 msgid "The MPN (aka Manufacturer Part Number) of the product being reviewed."
 msgstr ""
 
-#: lib/filters-messages.php:570
+#: lib/filters-messages.php:582
 msgid ""
 "A short summary of specific claim(s) being reviewed in the Schema "
 "ClaimReview content."
 msgstr ""
 
-#: lib/filters-messages.php:572
+#: lib/filters-messages.php:584
 msgid ""
 "The summary should be less than 75 characters to minimize wrapping on mobile "
 "devices."
 msgstr ""
 
-#: lib/filters-messages.php:578
+#: lib/filters-messages.php:590
 msgid "An optional webpage URL where this specific claim first appeared."
 msgstr ""
 
-#: lib/filters-messages.php:584
+#: lib/filters-messages.php:596
 msgid "The operating system supported (example: %s, etc.)."
 msgstr ""
 
-#: lib/filters-messages.php:605
+#: lib/filters-messages.php:617
 msgid ""
 "The maximum length used for the Schema CreativeWork text property value (the "
 "default is %d characters)."
 msgstr ""
 
-#: lib/filters-messages.php:611
+#: lib/filters-messages.php:623
 msgid ""
 "Add a text property to the Schema CreativeWork type with the complete "
 "textual content of the post / page."
 msgstr ""
 
-#: lib/filters-messages.php:617
+#: lib/filters-messages.php:629
 msgid ""
 "When a rating value for the webpage content is not available, a 5 star "
 "rating from the site organization can be added to the main Schema type "
 "markup."
 msgstr ""
 
-#: lib/filters-messages.php:619
+#: lib/filters-messages.php:631
 msgid ""
 "Visitor rating and review features are available from several supported "
 "plugins, including %s."
 msgstr ""
 
-#: lib/filters-messages.php:621
+#: lib/filters-messages.php:633
 msgid "See the <a href=\"%1$s\">%2$s</a> webpage for details."
 msgstr ""
 
-#: lib/filters-messages.php:622
+#: lib/filters-messages.php:634
 msgid "https://developers.google.com/search/docs/data-types/review-snippet"
 msgstr ""
 
-#: lib/filters-messages.php:623
+#: lib/filters-messages.php:635
 msgid "Google Review snippet structured data guidelines"
 msgstr ""
 
-#: lib/filters-messages.php:629
+#: lib/filters-messages.php:641
 msgid ""
 "Select a default family friendly value for the Schema CreativeWork type and/"
 "or its sub-types (Article, BlogPosting, WebPage, etc)."
 msgstr ""
 
-#: lib/filters-messages.php:635
+#: lib/filters-messages.php:647
 msgid ""
 "Select a default publisher for the Schema CreativeWork type and/or its sub-"
 "types (Article, BlogPosting, WebPage, etc)."
 msgstr ""
 
-#: lib/filters-messages.php:641
+#: lib/filters-messages.php:653
 msgid ""
 "Select a default service provider, service operator, or service performer "
 "(example: \"Netflix\")."
 msgstr ""
 
-#: lib/filters-messages.php:647
+#: lib/filters-messages.php:659
 msgid "Select a default organizer (organization) for the Schema Event type."
 msgstr ""
 
-#: lib/filters-messages.php:653
+#: lib/filters-messages.php:665
 msgid "Select a default organizer (person) for the Schema Event type."
 msgstr ""
 
-#: lib/filters-messages.php:659
+#: lib/filters-messages.php:671
 msgid "Select a default performer (organization) for the Schema Event type."
 msgstr ""
 
-#: lib/filters-messages.php:665
+#: lib/filters-messages.php:677
 msgid "Select a default performer (person) for the Schema Event type."
 msgstr ""
 
-#: lib/filters-messages.php:671
+#: lib/filters-messages.php:683
 msgid "Select a default venue (place / location) for the Schema Event type."
 msgstr ""
 
-#: lib/filters-messages.php:677
+#: lib/filters-messages.php:689
 msgid ""
 "Select a default organization for the Schema JobPosting hiring organization."
 msgstr ""
 
-#: lib/filters-messages.php:683
+#: lib/filters-messages.php:695
 msgid ""
 "Select a default place / location for the Schema JobPosting job location."
 msgstr ""
 
-#: lib/filters-messages.php:689
+#: lib/filters-messages.php:701
 msgid "Select a default Schema type for the Schema Review subject URL."
 msgstr ""
 
@@ -1280,43 +1280,43 @@ msgstr ""
 #: lib/gettext-pro.php:125 lib/pro/admin/meta-edit.php:976
 #: lib/std/admin/meta-edit.php:1016
 msgctxt "metabox title"
-msgid "Reviewed Item Information"
+msgid "Subject of the Review"
 msgstr ""
 
 #: lib/gettext-pro.php:126 lib/pro/admin/meta-edit.php:981
 #: lib/std/admin/meta-edit.php:1022
 msgctxt "option label"
-msgid "Item Type"
+msgid "Subject Type"
 msgstr ""
 
 #: lib/gettext-pro.php:127 lib/pro/admin/meta-edit.php:991
 #: lib/std/admin/meta-edit.php:1033
 msgctxt "option label"
-msgid "Item URL"
+msgid "Subject Webpage URL"
 msgstr ""
 
 #: lib/gettext-pro.php:128 lib/pro/admin/meta-edit.php:998
 #: lib/std/admin/meta-edit.php:1041
 msgctxt "option label"
-msgid "Item Same-As URLs"
+msgid "Subject Same-As URLs"
 msgstr ""
 
 #: lib/gettext-pro.php:129 lib/pro/admin/meta-edit.php:1006
 #: lib/std/admin/meta-edit.php:1049
 msgctxt "option label"
-msgid "Item Name"
+msgid "Subject Name"
 msgstr ""
 
 #: lib/gettext-pro.php:130 lib/pro/admin/meta-edit.php:1013
 #: lib/std/admin/meta-edit.php:1057
 msgctxt "option label"
-msgid "Item Description"
+msgid "Subject Description"
 msgstr ""
 
 #: lib/gettext-pro.php:131 lib/pro/admin/meta-edit.php:1020
 #: lib/std/admin/meta-edit.php:1065
 msgctxt "option label"
-msgid "Item Image ID"
+msgid "Subject Image ID"
 msgstr ""
 
 #: lib/gettext-pro.php:132 lib/pro/admin/meta-edit.php:1027
@@ -1325,116 +1325,147 @@ msgctxt "option label"
 msgid "or an Image URL"
 msgstr ""
 
-#: lib/gettext-pro.php:133 lib/pro/admin/meta-edit.php:1038
+#: lib/gettext-pro.php:133 lib/pro/admin/meta-edit.php:1039
 #: lib/std/admin/meta-edit.php:1085
-msgctxt "option label"
-msgid "Item Author Type"
+msgctxt "metabox title"
+msgid "Creative Work Subject Information"
 msgstr ""
 
-#: lib/gettext-pro.php:134 lib/pro/admin/meta-edit.php:1045
-#: lib/std/admin/meta-edit.php:1093
+#: lib/gettext-pro.php:134 lib/pro/admin/meta-edit.php:1044
+#: lib/std/admin/meta-edit.php:1091
 msgctxt "option label"
-msgid "Item Author Name"
+msgid "CW Author Type"
 msgstr ""
 
-#: lib/gettext-pro.php:135 lib/pro/admin/meta-edit.php:1052
-#: lib/std/admin/meta-edit.php:1101
+#: lib/gettext-pro.php:135 lib/pro/admin/meta-edit.php:1051
+#: lib/std/admin/meta-edit.php:1099
 msgctxt "option label"
-msgid "Item Author URL"
+msgid "CW Author Name"
 msgstr ""
 
-#: lib/gettext-pro.php:136 lib/pro/admin/meta-edit.php:1059
-#: lib/std/admin/meta-edit.php:1109
+#: lib/gettext-pro.php:136 lib/pro/admin/meta-edit.php:1058
+#: lib/std/admin/meta-edit.php:1107
 msgctxt "option label"
-msgid "Item Published Date"
+msgid "CW Author URL"
 msgstr ""
 
-#: lib/gettext-pro.php:137 lib/pro/admin/meta-edit.php:1066
-#: lib/std/admin/meta-edit.php:1117
+#: lib/gettext-pro.php:137 lib/pro/admin/meta-edit.php:1065
+#: lib/std/admin/meta-edit.php:1115
 msgctxt "option label"
-msgid "Item Created Date"
+msgid "CW Published Date"
 msgstr ""
 
-#: lib/gettext-pro.php:138 lib/pro/admin/meta-edit.php:1077
+#: lib/gettext-pro.php:138 lib/pro/admin/meta-edit.php:1072
+#: lib/std/admin/meta-edit.php:1123
+msgctxt "option label"
+msgid "CW Created Date"
+msgstr ""
+
+#: lib/gettext-pro.php:139 lib/pro/admin/meta-edit.php:1084
+msgctxt "metabox title"
+msgid "Book Subject Information"
+msgstr ""
+
+#: lib/gettext-pro.php:140 lib/pro/admin/meta-edit.php:1089
 msgctxt "option label"
 msgid "Book ISBN"
 msgstr ""
 
-#: lib/gettext-pro.php:139 lib/pro/admin/meta-edit.php:1093
+#: lib/gettext-pro.php:141 lib/pro/admin/meta-edit.php:1102
+msgctxt "metabox title"
+msgid "Movie Subject Information"
+msgstr ""
+
+#: lib/gettext-pro.php:142 lib/pro/admin/meta-edit.php:1107
+msgctxt "option label"
+msgid "Movie Cast Names"
+msgstr ""
+
+#: lib/gettext-pro.php:143 lib/pro/admin/meta-edit.php:1115
+msgctxt "option label"
+msgid "Movie Director Names"
+msgstr ""
+
+#: lib/gettext-pro.php:144 lib/pro/admin/meta-edit.php:1128
+msgctxt "metabox title"
+msgid "Product Subject Information"
+msgstr ""
+
+#: lib/gettext-pro.php:145 lib/pro/admin/meta-edit.php:1133
 msgctxt "option label"
 msgid "Product Brand"
 msgstr ""
 
-#: lib/gettext-pro.php:140 lib/pro/admin/meta-edit.php:1100
+#: lib/gettext-pro.php:146 lib/pro/admin/meta-edit.php:1140
 msgctxt "option label"
 msgid "Product Offers"
 msgstr ""
 
-#: lib/gettext-pro.php:141 lib/pro/admin/meta-edit.php:1104
+#: lib/gettext-pro.php:147 lib/pro/admin/meta-edit.php:1144
 msgctxt "option label"
 msgid "Product Offer Name"
 msgstr ""
 
-#: lib/gettext-pro.php:142 lib/pro/admin/meta-edit.php:1109
+#: lib/gettext-pro.php:148 lib/pro/admin/meta-edit.php:1149
 msgctxt "option label"
 msgid "Product Offer Price"
 msgstr ""
 
-#: lib/gettext-pro.php:143 lib/pro/admin/meta-edit.php:1114
+#: lib/gettext-pro.php:149 lib/pro/admin/meta-edit.php:1154
 msgctxt "option label"
 msgid "Product Offer Currency"
 msgstr ""
 
-#: lib/gettext-pro.php:144 lib/pro/admin/meta-edit.php:1123
+#: lib/gettext-pro.php:150 lib/pro/admin/meta-edit.php:1163
 msgctxt "option label"
 msgid "Product Offer Availability"
 msgstr ""
 
-#: lib/gettext-pro.php:145 lib/pro/admin/meta-edit.php:1135
+#: lib/gettext-pro.php:151 lib/pro/admin/meta-edit.php:1175
 msgctxt "option label"
 msgid "Product SKU"
 msgstr ""
 
-#: lib/gettext-pro.php:146 lib/pro/admin/meta-edit.php:1142
+#: lib/gettext-pro.php:152 lib/pro/admin/meta-edit.php:1182
 msgctxt "option label"
 msgid "Product MPN"
 msgstr ""
 
-#: lib/gettext-pro.php:147 lib/pro/admin/meta-edit.php:1154
-#: lib/std/admin/meta-edit.php:1129
+#: lib/gettext-pro.php:153 lib/pro/admin/meta-edit.php:1194
+#: lib/std/admin/meta-edit.php:1135
 msgctxt "metabox title"
-msgid "Claim Review Information"
+msgid "Claim Review Subject Information"
 msgstr ""
 
-#: lib/gettext-pro.php:148 lib/pro/admin/meta-edit.php:1159
-#: lib/std/admin/meta-edit.php:1135
+#: lib/gettext-pro.php:154 lib/pro/admin/meta-edit.php:1199
+#: lib/std/admin/meta-edit.php:1141
 msgctxt "option label"
 msgid "Short Summary of Claim"
 msgstr ""
 
-#: lib/gettext-pro.php:149 lib/pro/admin/meta-edit.php:1166
-#: lib/std/admin/meta-edit.php:1143
+#: lib/gettext-pro.php:155 lib/pro/admin/meta-edit.php:1206
+#: lib/std/admin/meta-edit.php:1149
 msgctxt "option label"
 msgid "First Appearance URL"
 msgstr ""
 
-#: lib/gettext-pro.php:150 lib/pro/admin/meta-edit.php:1178
-#: lib/std/admin/meta-edit.php:1155
+#: lib/gettext-pro.php:156 lib/pro/admin/meta-edit.php:1218
+#: lib/std/admin/meta-edit.php:1161
 msgctxt "metabox title"
 msgid "Software Application Information"
 msgstr ""
 
-#: lib/gettext-pro.php:151 lib/pro/admin/meta-edit.php:1183
-#: lib/std/admin/meta-edit.php:1161
+#: lib/gettext-pro.php:157 lib/pro/admin/meta-edit.php:1223
+#: lib/std/admin/meta-edit.php:1167
 msgctxt "option label"
 msgid "Operating System"
 msgstr ""
 
-#: lib/gettext-pro.php:152 lib/pro/head/howto.php:123
+#: lib/gettext-pro.php:158 lib/pro/head/howto.php:123
 msgid "adding schema howto step option #%d image"
 msgstr ""
 
-#: lib/gettext-pro.php:153 lib/pro/head/review.php:92
+#: lib/gettext-pro.php:159 lib/pro/head/review.php:92
 msgid "adding reviewed subject image"
 msgstr ""
 
