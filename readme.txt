@@ -345,23 +345,29 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 	* Review Information
 		* Review Rating 
 		* Rating Value Name
-		* Reviewed Item Information
-			* Item Type 
-			* Item URL 
-			* Item Same-As URL 
-			* Item Name 
-			* Item Description 
-			* Item Image ID or URL 
-			* Item Author Type
-			* Item Author Name
-			* Item Author URL
-			* Item Published Date
-			* Item Created Date
-			* Book ISBN
-			* Product Brand
-			* Product Offers (name, price, currency, availability)
-			* Product SKU
-			* Product MPN
+		* Subject of the Review
+			* Subject Type 
+			* Subject Webpage URL 
+			* Subject Same-As URL 
+			* Subject Name 
+			* Subject Description 
+			* Subject Image ID or URL 
+			* Creative Work Subject Information
+				* CW Author Type
+				* CW Author Name
+				* CW Author URL
+				* CW Published Date
+				* CW Created Date
+			* Book Subject Information
+				* Book ISBN
+			* Movie Subject Information
+				* Movie Cast Names
+				* Movie Director Names
+			* Product Subject Information
+				* Product Brand
+				* Product Offers (name, price, currency, availability)
+				* Product SKU
+				* Product MPN
 	* Claim Review Information
 		* Short Summary of Claim
 		* First Appearance URL
@@ -850,15 +856,20 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.17.0-dev.2 (2019/12/05)**
+**Version 2.17.0-dev.3 (2019/12/06)**
 
 * **New Features**
 	* None.
 * **Improvements**
 	* Added new options in the Document SSO metabox for the Schema Review type:
-		* Item Same-As URL
-		* Item Image ID or URL
-		* Item Created Date
+		* Subject of the Review
+			* Subject Same-As URL
+			* Subject Image ID or URL
+			* Creative Work Subject Information
+				* CW Created Date
+			* Movie Subject Information
+				* Movie Cast Names
+				* Movie Director Names
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -866,7 +877,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.4.
 	* WordPress v3.9.
-	* WPSSO Core v6.15.0-dev.2.
+	* WPSSO Core v6.15.0-dev.3.
 
 **Version 2.16.0 (2019/11/30)**
 
@@ -1044,9 +1055,9 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 2.17.0-dev.2 =
+= 2.17.0-dev.3 =
 
-(2019/12/05) Added a new "Item Same-As URLs" option in the Document SSO metabox for the Schema Review type.
+(2019/12/06) Added new options in the Document SSO metabox for the Schema Review type.
 
 = 2.16.0 =
 
