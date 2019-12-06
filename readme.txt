@@ -352,6 +352,9 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 			* Subject Name 
 			* Subject Description 
 			* Subject Image ID or URL 
+			* Claim Subject Information
+				* Short Summary of Claim
+				* First Appearance URL
 			* Creative Work Subject Information
 				* CW Author Type
 				* CW Author Name
@@ -368,9 +371,6 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 				* Product Offers (name, price, currency, availability)
 				* Product SKU
 				* Product MPN
-	* Claim Review Information
-		* Short Summary of Claim
-		* First Appearance URL
 	* Software Application Information
 		* Operating System
 
@@ -931,7 +931,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None.
 * **Improvements**
 	* Added a new "Reviewed Item Type" option in the Document SSO metabox.
-	* Added a new "Default Reviewed Item Type" option under the SSO > Schema Markup > Meta Defaults tab.
+	* Added a new "Default Reviewed Subject Type" option under the SSO > Schema Markup > Meta Defaults tab.
 	* The Schema 'itemReviewed' property type can now be managed by the "Reviewed Item Type" option in the Document SSO metabox. 
 * **Bugfixes**
 	* None.
