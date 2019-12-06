@@ -1132,7 +1132,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => $schema_type_row_class[ 'review_claim' ],
 					'td_class' => 'subsection',
 					'header'   => 'h5',
-					'label'    => _x( 'Claim Review Subject Information', 'metabox title', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Claim Subject Information', 'metabox title', 'wpsso-schema-json-ld' ),
 				),
 				'schema_review_claim_reviewed' => array(
 					'tr_class' => $schema_type_row_class[ 'review_claim' ],

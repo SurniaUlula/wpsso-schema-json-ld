@@ -150,7 +150,7 @@ _x( 'Product Offer Currency', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Product Offer Availability', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Product SKU', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Product MPN', 'option label', 'wpsso-schema-json-ld' );
-_x( 'Claim Review Subject Information', 'metabox title', 'wpsso-schema-json-ld' );
+_x( 'Claim Subject Information', 'metabox title', 'wpsso-schema-json-ld' );
 _x( 'Short Summary of Claim', 'option label', 'wpsso-schema-json-ld' );
 _x( 'First Appearance URL', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Software Application Information', 'metabox title', 'wpsso-schema-json-ld' );

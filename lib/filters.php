@@ -334,7 +334,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_def_job_location_id':		// Default Job Location.
 				case 'schema_def_prov_org_id':			// Default Publisher.
 				case 'schema_def_pub_org_id':			// Default Publisher.
-				case 'schema_def_review_item_type':		// Default Reviewed Item Type.
+				case 'schema_def_review_item_type':		// Default Reviewed Subject Type.
 				case 'schema_event_lang':			// Event Language.
 				case 'schema_event_location_id':		// Event Venue.
 				case 'schema_event_offer_currency':
