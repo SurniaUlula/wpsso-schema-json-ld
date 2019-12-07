@@ -856,7 +856,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.17.0-dev.3 (2019/12/06)**
+**Version 2.17.0-b.1 (2019/12/07)**
 
 * **New Features**
 	* None.
@@ -877,7 +877,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.4.
 	* WordPress v3.9.
-	* WPSSO Core v6.15.0-dev.3.
+	* WPSSO Core v6.15.0-b.1.
 
 **Version 2.16.0 (2019/11/30)**
 
@@ -1055,9 +1055,9 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 2.17.0-dev.3 =
+= 2.17.0-b.1 =
 
-(2019/12/06) Added new options in the Document SSO metabox for the Schema Review type.
+(2019/12/07) Added new options in the Document SSO metabox for the Schema Review type.
 
 = 2.16.0 =
 
