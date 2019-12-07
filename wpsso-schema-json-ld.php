@@ -61,7 +61,7 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 
 			WpssoJsonConfig::require_libs( __FILE__ );	// Includes the register.php class library.
 
-			$this->reg = new WpssoJsonRegister();		// activate, deactivate, uninstall hooks
+			$this->reg = new WpssoJsonRegister();		// Activate, deactivate, uninstall hooks.
 
 			if ( is_admin() ) {
 				add_action( 'admin_init', array( __CLASS__, 'required_check' ) );
@@ -77,7 +77,7 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 			 * Add WPSSO action hooks.
 			 */
 			add_action( 'wpsso_init_textdomain', array( __CLASS__, 'wpsso_init_textdomain' ) );	// Load the 'wpsso-schema-json-ld' text domain.
-			add_action( 'wpsso_init_options', array( $this, 'wpsso_init_options' ), 100 );	// Sets the $this->p reference variable.
+			add_action( 'wpsso_init_options', array( $this, 'wpsso_init_options' ), 100 );		// Sets the $this->p reference variable.
 			add_action( 'wpsso_init_objects', array( $this, 'wpsso_init_objects' ), 100 );
 			add_action( 'wpsso_init_plugin', array( $this, 'wpsso_init_plugin' ), 100 );
 		}
