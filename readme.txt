@@ -12,7 +12,7 @@ Requires PHP: 5.5
 Requires At Least: 3.9
 Tested Up To: 5.3
 WC Tested Up To: 3.8.1
-Stable Tag: 2.16.0
+Stable Tag: 2.17.0
 
 Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPages, HowTos, Images, Local Business, Products, Recipes, Reviews, Videos, and more.
 
@@ -857,7 +857,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.17.0 (2019/12/07)**
+**Version 2.17.0 (2019/12/08)**
 
 * **New Features**
 	* None.
@@ -1058,5 +1058,5 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 = 2.17.0 =
 
-(2019/12/07) Added new options in the Document SSO metabox for the Schema Review type.
+(2019/12/08) Added new options in the Document SSO metabox for the Schema Review type.
 

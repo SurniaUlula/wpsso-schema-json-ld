@@ -3,7 +3,7 @@
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Schema JSON-LD Markup</td></tr>
 <tr><th align="right" valign="top" nowrap>Summary</th><td>Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPages, HowTos, Images, Local Business, Products, Recipes, Reviews, Videos</td></tr>
-<tr><th align="right" valign="top" nowrap>Stable Version</th><td>2.16.0</td></tr>
+<tr><th align="right" valign="top" nowrap>Stable Version</th><td>2.17.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires PHP</th><td>5.5 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>3.9 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To WordPress</th><td>5.3</td></tr>
