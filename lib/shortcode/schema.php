@@ -14,11 +14,14 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 	class WpssoJsonShortcodeSchema {
 
 		private $p;
-		private $doing_content_data = false;
-		private $json_data_ref      = null;
-		private $prev_data_ref      = null;
-		private $tag_names          = array();
-		private $content_depth      = 0;
+		private $doing_json_data = false;
+		private $json_data_ref   = null;
+		private $prev_data_ref   = null;
+		private $content_depth   = 0;
+		private $shortcode_name  = 'schema';	// Default shortcode name.
+		private $shortcode_sep   = '_';	// Default shortcode separator.
+		private $shortcode_depth = 3;	// Default shortcode depth.
+		private $sc_tag_names    = array();
 
 		public function __construct( &$plugin ) {
 
@@ -28,9 +31,13 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 				$this->p->debug->mark();
 			}
 
-			foreach ( range( 0, WPSSOJSON_SCHEMA_SHORTCODE_DEPTH ) as $max_depth ) {
-				$this->tag_names[] = WPSSOJSON_SCHEMA_SHORTCODE_NAME .
-					( $max_depth ? WPSSOJSON_SCHEMA_SHORTCODE_SEPARATOR . $max_depth : '' );	// Exclude 0.
+			$this->shortcode_name  = WPSSOJSON_SCHEMA_SHORTCODE_NAME;
+			$this->shortcode_depth = WPSSOJSON_SCHEMA_SHORTCODE_DEPTH;
+			$this->shortcode_sep   = WPSSOJSON_SCHEMA_SHORTCODE_SEPARATOR;
+
+			foreach ( range( 0, $this->shortcode_depth ) as $max_depth ) {
+				$this->sc_tag_names[] = $this->shortcode_name .
+					( $max_depth ? $this->shortcode_sep . $max_depth : '' );	// Exclude 0.
 			}
 
 			add_filter( 'no_texturize_shortcodes', array( $this, 'exclude_from_wptexturize' ) );
@@ -40,7 +47,7 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 
 		public function exclude_from_wptexturize( $shortcodes ) {
 
-			foreach ( $this->tag_names as $tag ) {
+			foreach ( $this->sc_tag_names as $tag ) {
 				$shortcodes[] = $tag;
 			}
 
@@ -51,7 +58,7 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 
 			$sc_added = false;
 
-			foreach ( $this->tag_names as $tag ) {
+			foreach ( $this->sc_tag_names as $tag ) {
 
 				if ( ! shortcode_exists( $tag ) ) {
 
@@ -60,11 +67,11 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 					add_shortcode( $tag, array( $this, 'do_shortcode' ) );
 
 					if ( $this->p->debug->enabled ) {
-						$this->p->debug->log( '[' . $tag . '] schema shortcode added' );
+						$this->p->debug->log( $tag . ' shortcode added' );
 					}
 
 				} elseif ( $this->p->debug->enabled ) {
-					$this->p->debug->log( 'cannot add [' . $tag . '] schema shortcode - shortcode already exists' );
+					$this->p->debug->log( 'cannot add ' . $tag . ' shortcode - already exists' );
 				}
 			}
 
@@ -75,7 +82,7 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 
 			$sc_removed = false;
 
-			foreach ( $this->tag_names as $tag ) {
+			foreach ( $this->sc_tag_names as $tag ) {
 
 				if ( shortcode_exists( $tag ) ) {
 
@@ -84,11 +91,11 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 					remove_shortcode( $tag );
 
 					if ( $this->p->debug->enabled ) {
-						$this->p->debug->log( '[' . $tag . '] schema shortcode removed' );
+						$this->p->debug->log( $tag . ' shortcode removed' );
 					}
 
 				} elseif ( $this->p->debug->enabled ) {
-					$this->p->debug->log( 'cannot remove [' . $tag . '] schema shortcode - shortcode does not exist' );
+					$this->p->debug->log( 'cannot remove ' . $tag . ' shortcode - does not exist' );
 				}
 			}
 
@@ -111,14 +118,14 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 			}
 
 			/**
-			 * When WordPress calls do_shortcode(), $this->doing_content_data is false.
-			 * Do not parse / set the json data array - simply add an HTML comment with
-			 * the shortcode attributes as a visual placeholder in the content text.
+			 * When WordPress calls do_shortcode(), $this->doing_json_data is false. Do not parse / set the json
+			 * data array - simply add an HTML comment with the shortcode attributes as a visual placeholder in the
+			 * content text.
 			 */
-			if ( ! $this->doing_content_data ) {
+			if ( ! $this->doing_json_data ) {
 
 				if ( $this->p->debug->enabled ) {
-					$this->p->debug->log( 'doing_content_data is false: content is returned' );
+					$this->p->debug->log( 'doing_json_data is false: content is returned' );
 				}
 
 				$atts_string = '';
@@ -136,7 +143,7 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 				return $content;
 
 			} elseif ( $this->p->debug->enabled ) {
-				$this->p->debug->log( 'doing_content_data is true: boolean will be returned' );
+				$this->p->debug->log( 'doing_json_data is true: boolean will be returned' );
 			}
 
 			/**
@@ -145,7 +152,7 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 			if ( ! empty( $atts[ 'type' ] ) && empty( $atts[ 'prop' ] ) && empty( $atts[ 'prop_name' ] ) ) {
 
 				if ( $this->p->debug->enabled ) {
-					$this->p->debug->log( 'exiting early: [' . $tag . '] shortcode with type is missing a prop attribute value' );
+					$this->p->debug->log( 'exiting early: ' . $tag . ' shortcode with type is missing a prop attribute value' );
 				}
 
 				if ( $this->p->notice->is_admin_pre_notices() ) {
@@ -153,7 +160,7 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 					$info = WpssoJsonConfig::$cf[ 'plugin' ][ 'wpssojson' ];
 
 					// translators: %1$s is the short plugin name, %2$s is the shortcode tag, %3$s is the type attribute value
-					$error_msg = __( '%1$s [%2$s] shortcode with a type value of "%3$s" is missing a required \'prop\' attribute value.',
+					$error_msg = __( '%1$s %2$s shortcode with a type value of "%3$s" is missing a required \'prop\' attribute value.',
 						'wpsso-schema-json-ld' );
 
 					$this->p->notice->err( sprintf( $error_msg, $info[ 'short' ], $tag, $atts[ 'type' ] ) );
@@ -163,13 +170,13 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 			}
 
 			/**
-			 * When there's content (for a description), the schema type id must be specified -
-			 * otherwise it would apply to the main schema, where there is already a description.
+			 * When there's content (for a description), the schema type id must be specified - otherwise it would
+			 * apply to the main schema, where there is already a description.
 			 */
 			if ( ! empty( $content ) && empty( $atts[ 'type' ] ) ) {
 
 				if ( $this->p->debug->enabled ) {
-					$this->p->debug->log( 'exiting early: [' . $tag . '] shortcode with content is missing a type attribute value' );
+					$this->p->debug->log( 'exiting early: ' . $tag . ' shortcode with content is missing a type attribute value' );
 				}
 
 				if ( $this->p->notice->is_admin_pre_notices() ) {
@@ -177,7 +184,7 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 					$info = WpssoJsonConfig::$cf[ 'plugin' ][ 'wpssojson' ];
 
 					// translators: %1$s is the short plugin name, %2$s is the shortcode tag
-					$error_msg = __( '%1$s [%2$s] shortcode with a content is missing a required \'type\' attribute value.',
+					$error_msg = __( '%1$s %2$s shortcode with a content is missing a required \'type\' attribute value.',
 						'wpsso-schema-json-ld' );
 
 					$this->p->notice->err( sprintf( $error_msg, $info[ 'short' ], $tag ) );
@@ -195,8 +202,8 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 			foreach ( $atts as $key => $value ) {
 
 				/**
-				 * Ignore @id, @context, @type, etc. shortcode attribute keys.
-				 * WordPress sets key names with illegal characters in the value string, so test for both.
+				 * Ignore @id, @context, @type, etc. shortcode attribute keys. WordPress sets key names with
+				 * illegal characters in the value string, so test for both.
 				 */
 				if ( strpos( $key, '@' ) === 0 || strpos( $value, '@' ) === 0 ) {
 
@@ -255,7 +262,7 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 					if ( empty( $type_url ) ) {
 
 						if ( $this->p->debug->enabled ) {
-							$this->p->debug->log( 'exiting early: [' . $tag . '] shortcode type "' . $value . '" is not a recognized value' );
+							$this->p->debug->log( 'exiting early: ' . $tag . ' shortcode type "' . $value . '" is not a recognized value' );
 						}
 
 						if ( $this->p->notice->is_admin_pre_notices() ) {
@@ -263,7 +270,7 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 							$info = WpssoJsonConfig::$cf[ 'plugin' ][ 'wpssojson' ];
 
 							// translators: %1$s is the short plugin name, %2$s is the shortcode tag, %3$s is the type attribute value
-							$error_msg = __( '%1$s [%2$s] shortcode type attribute "%3$s" is not a recognized value.',
+							$error_msg = __( '%1$s %2$s shortcode type attribute "%3$s" is not a recognized value.',
 								'wpsso-schema-json-ld' );
 
 							$this->p->notice->err( sprintf( $error_msg, $info[ 'short' ], $tag, $value ) );
@@ -348,10 +355,10 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 				if ( WPSSOJSON_SCHEMA_SHORTCODE_SINGLE_CONTENT ) {
 
 					$prop_content = preg_replace( '/\[' .
-						WPSSOJSON_SCHEMA_SHORTCODE_NAME .
-						WPSSOJSON_SCHEMA_SHORTCODE_SEPARATOR . '[0-9]+[^\]]*\].*\[\/' .
-						WPSSOJSON_SCHEMA_SHORTCODE_NAME .
-						WPSSOJSON_SCHEMA_SHORTCODE_SEPARATOR . '[0-9]+[^\]]*\]/s', '', $content );
+						$this->shortcode_name .
+						$this->shortcode_sep . '[0-9]+[^\]]*\].*\[\/' .
+						$this->shortcode_name .
+						$this->shortcode_sep . '[0-9]+[^\]]*\]/s', '', $content );
 
 				} else {
 					$prop_content =& $content;
@@ -407,12 +414,12 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 					}
 
 				} else {
-					$this->doing_content_data = true;
+					$this->doing_json_data = true;
 				}
 
 				/**
-				 * If we already have a position / depth for additions to the json_data array,
-				 * save it so we can return here after calling do_shortcode().
+				 * If we already have a position / depth for additions to the json_data array, save it so we can
+				 * return here after calling do_shortcode().
 				 */
 				if ( isset( $this->json_data_ref ) ) {
 					$this->prev_data_ref[ $this->content_depth ] =& $this->json_data_ref;
@@ -426,8 +433,8 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 				do_shortcode( $content );
 
 				/**
-				 * If we have a previous position / depth saved, restore that position so later
-				 * shortcode additions can be added from this position / depth.
+				 * If we have a previous position / depth saved, restore that position so later shortcode additions
+				 * can be added from this position / depth.
 				 */
 				if ( isset( $this->prev_data_ref[ $this->content_depth ] ) ) {
 					$this->json_data_ref =& $this->prev_data_ref[ $this->content_depth ];
@@ -442,7 +449,7 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 					}
 
 				} else {
-					$this->doing_content_data = false;
+					$this->doing_json_data = false;
 				}
 			}
 
