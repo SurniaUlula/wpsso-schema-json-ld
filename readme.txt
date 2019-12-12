@@ -47,7 +47,7 @@ The Standard and Premium versions both fix all Google testing tool errors for th
 * This Product is missing a global identifier.
 * etc.
 
-Google regularly reviews and changes their Schema markup requirements - WPSSO JSON Premium customers can also <a href="https://surniaulula.com/support/">open a Premium support ticket for assistance</a> with any new Google testing tool errors.
+Google regularly updates and changes their Schema markup requirements - WPSSO JSON Premium customers can also <a href="https://surniaulula.com/support/">open a Premium support ticket for assistance</a> with any new Google testing tool errors.
 
 Additional e-Commerce plugin integration is also provided with the WPSSO Core Premium plugin, including Easy Digital Downloads and WP eCommerce.
 
@@ -830,8 +830,8 @@ WPSSO Schema JSON-LD Markup (aka WPSSO JSON) is an add-on for the [WPSSO Core pl
 
 == Screenshots ==
 
-01. WPSSO JSON settings page with options for site name, alternate name, logo, banner, image size, and Schema types for posts, pages, custom post types, etc.
-02. WPSSO JSON options in the Document SSO metabox for the Schema type https://schema.org/Article.
+01. WPSSO JSON settings page with options for the site name, alternate name, logo, banner, image sizes, Schema types, and much more.
+02. WPSSO JSON options in the Document SSO metabox for the https://schema.org/Article type (Premium version).
 
 == Changelog ==
 
