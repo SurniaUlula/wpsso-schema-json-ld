@@ -12,7 +12,7 @@ Requires PHP: 5.5
 Requires At Least: 3.9
 Tested Up To: 5.3.1
 WC Tested Up To: 3.8.1
-Stable Tag: 2.17.0
+Stable Tag: 2.17.1
 
 Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPages, HowTos, Images, Local Business, Products, Recipes, Reviews, Videos, and more.
 
@@ -857,6 +857,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.17.1 (2019/12/13)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Minor update to improve a Document SSO option label and its translation.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Updated checks for additional ld+json in the content to assign the json only as 'hasPart' and not 'mentions'.
+* **Requires At Least**
+	* PHP v5.5.
+	* WordPress v3.9.
+	* WPSSO Core v6.16.0.
+
 **Version 2.17.0 (2019/12/08)**
 
 * **New Features**
@@ -1056,7 +1071,7 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 2.17.0 =
+= 2.17.1 =
 
-(2019/12/08) Added new options in the Document SSO metabox for the Schema Review type.
+(2019/12/13) Minor update to improve a Document SSO option label and its translation.
 
