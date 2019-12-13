@@ -530,6 +530,22 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				}
 			}
 
+			if ( isset( $md_opts[ 'schema_type' ] ) && 'review.claim' === $md_opts[ 'schema_type' ] ) {
+			
+				if ( isset( $md_opts[ 'schema_review_item_type' ] ) && 'review.claim' === $md_opts[ 'schema_review_item_type' ] ) {
+
+					$md_opts[ 'schema_review_item_type' ] = $this->p->options[ 'schema_def_review_item_type' ];
+
+					$notice_msg = __( 'You cannot have a Schema ClaimReview of another Schema ClaimReview.',
+						'wpsso-schema-json-ld' ) . ' ';
+
+					$notice_msg .= __( 'Please select a subject webpage type that reflects the subject of the webpage (ie. the content) being reviewed.',
+						'wpsso-schema-json-ld' );
+
+					$this->p->notice->err( $notice_msg );
+				}
+			}
+
 			return $md_opts;
 		}
 

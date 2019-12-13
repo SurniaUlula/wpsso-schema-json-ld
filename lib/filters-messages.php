@@ -463,7 +463,7 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				case 'tooltip-meta-schema_review_item_type':		// Reviewed Subject Webpage Type.
 
-					$text = __( 'A Schema type for the subject of the review.', 'wpsso-schema-json-ld' );
+					$text = __( 'A Schema type for the subject of the webpage (ie. the content) being reviewed.', 'wpsso-schema-json-ld' );
 
 				 	break;
 

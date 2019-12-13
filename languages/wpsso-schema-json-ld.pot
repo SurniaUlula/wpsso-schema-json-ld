@@ -375,7 +375,9 @@ msgid ""
 msgstr ""
 
 #: lib/filters-messages.php:466
-msgid "A Schema type for the subject of the review."
+msgid ""
+"A Schema type for the subject of the webpage (ie. the content) being "
+"reviewed."
 msgstr ""
 
 #: lib/filters-messages.php:472
@@ -559,6 +561,16 @@ msgstr ""
 
 #: lib/filters-messages.php:701
 msgid "Select a default Schema type for the Schema Review subject URL."
+msgstr ""
+
+#: lib/filters.php:539
+msgid "You cannot have a Schema ClaimReview of another Schema ClaimReview."
+msgstr ""
+
+#: lib/filters.php:542
+msgid ""
+"Please select a subject webpage type that reflects the subject of the "
+"webpage (ie. the content) being reviewed."
 msgstr ""
 
 #: lib/gettext-config.php:6

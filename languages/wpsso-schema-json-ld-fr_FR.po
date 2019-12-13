@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Schema JSON-LD Markup 2.17.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2019-12-13 11:37-0800\n"
-"PO-Revision-Date: 2019-12-13 11:49-0800\n"
+"POT-Creation-Date: 2019-12-13 15:18-0800\n"
+"PO-Revision-Date: 2019-12-13 15:21-0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -305,8 +305,8 @@ msgid "An alternate name for the rating value (example: False, Misleading, Accur
 msgstr "Un autre nom pour la note de l'évaluation (exemple: Faux, Trompeur, Précis, etc.)."
 
 #: lib/filters-messages.php:466
-msgid "A Schema type for the subject of the review."
-msgstr "Un type de Schéma pour le sujet de l'évaluation."
+msgid "A Schema type for the subject of the webpage (ie. the content) being reviewed."
+msgstr "Un type de schéma pour le sujet de la page Web (c'est-à-dire le contenu) en cours d'évaluation."
 
 #: lib/filters-messages.php:472
 msgid "A webpage URL for the subject of the review."
@@ -459,6 +459,14 @@ msgstr "Sélectionnez un emplacement de travail par défaut pour le type de Sch�
 #: lib/filters-messages.php:701
 msgid "Select a default Schema type for the Schema Review subject URL."
 msgstr "Sélectionnez un type de Schéma par défaut pour l'URL du sujet de l'évaluation."
+
+#: lib/filters.php:539
+msgid "You cannot have a Schema ClaimReview of another Schema ClaimReview."
+msgstr "Vous ne pouvez pas avoir un Schema ClaimReview d'un autre Schema ClaimReview."
+
+#: lib/filters.php:542
+msgid "Please select a subject webpage type that reflects the subject of the webpage (ie. the content) being reviewed."
+msgstr "Veuillez sélectionner un type de page Web du sujet qui reflète le sujet de la page Web (c'est-à-dire le contenu) en cours de révision."
 
 #: lib/gettext-config.php:6
 msgctxt "lib file description"
