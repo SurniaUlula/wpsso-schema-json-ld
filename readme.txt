@@ -347,7 +347,7 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 		* Review Rating 
 		* Rating Value Name
 		* Subject of the Review
-			* Subject Type 
+			* Subject Webpage Type 
 			* Subject Webpage URL 
 			* Subject Same-As URL 
 			* Subject Name 
@@ -878,7 +878,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.5.
 	* WordPress v3.9.
-	* WPSSO Core v6.15.0.
+	* WPSSO Core v6.16.0.
 
 **Version 2.16.0 (2019/11/30)**
 
@@ -932,7 +932,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None.
 * **Improvements**
 	* Added a new "Reviewed Item Type" option in the Document SSO metabox.
-	* Added a new "Default Reviewed Subject Type" option under the SSO > Schema Markup > Meta Defaults tab.
+	* Added a new "Default Subject Webpage Type" option under the SSO > Schema Markup > Meta Defaults tab.
 	* The Schema 'itemReviewed' property type can now be managed by the "Reviewed Item Type" option in the Document SSO metabox. 
 * **Bugfixes**
 	* None.
