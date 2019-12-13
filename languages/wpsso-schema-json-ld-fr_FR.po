@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD (WPSSO JSON) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 2.17.0\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 2.17.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2019-12-11 12:14-0800\n"
-"PO-Revision-Date: 2019-12-11 12:15-0800\n"
+"POT-Creation-Date: 2019-12-13 11:37-0800\n"
+"PO-Revision-Date: 2019-12-13 11:49-0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -540,7 +540,7 @@ msgstr "URLs de type microdonnées"
 #: lib/std/admin/meta-edit.php:176
 msgctxt "option label"
 msgid "Same-As URLs"
-msgstr "URLs Same-As"
+msgstr "URLs pareilles"
 
 #: lib/gettext-pro.php:17 lib/pro/admin/meta-edit.php:207
 #: lib/std/admin/meta-edit.php:188 lib/submenu/schema-general.php:208
@@ -1182,20 +1182,20 @@ msgstr "Sujet de l'évaluation"
 #: lib/gettext-pro.php:126 lib/pro/admin/meta-edit.php:981
 #: lib/std/admin/meta-edit.php:1022
 msgctxt "option label"
-msgid "Subject Type"
-msgstr "Type du sujet"
+msgid "Subject Webpage Type"
+msgstr "Type de page Web du sujet"
 
 #: lib/gettext-pro.php:127 lib/pro/admin/meta-edit.php:991
 #: lib/std/admin/meta-edit.php:1033
 msgctxt "option label"
 msgid "Subject Webpage URL"
-msgstr "URL de la page Web du sujet"
+msgstr "URL de page Web du sujet"
 
 #: lib/gettext-pro.php:128 lib/pro/admin/meta-edit.php:998
 #: lib/std/admin/meta-edit.php:1041
 msgctxt "option label"
 msgid "Subject Same-As URLs"
-msgstr "URLs Same-As du sujet"
+msgstr "URL pareilles au sujet"
 
 #: lib/gettext-pro.php:129 lib/pro/admin/meta-edit.php:1006
 #: lib/std/admin/meta-edit.php:1049
@@ -1249,7 +1249,7 @@ msgstr "URL d'auteur de l'oeuvre"
 #: lib/std/admin/meta-edit.php:1115
 msgctxt "option label"
 msgid "CW Published Date"
-msgstr "Date de publication de l'oeuvre"
+msgstr "Date de publi. de l'oeuvre"
 
 #: lib/gettext-pro.php:138 lib/pro/admin/meta-edit.php:1072
 #: lib/std/admin/meta-edit.php:1123
@@ -1337,13 +1337,13 @@ msgstr "Informations sur le sujet de la déclaration"
 #: lib/std/admin/meta-edit.php:1141
 msgctxt "option label"
 msgid "Short Summary of Claim"
-msgstr "Bref résumé de la déclaration"
+msgstr "Résumé de la déclaration"
 
 #: lib/gettext-pro.php:155 lib/pro/admin/meta-edit.php:1206
 #: lib/std/admin/meta-edit.php:1149
 msgctxt "option label"
 msgid "First Appearance URL"
-msgstr "URL de la première apparence"
+msgstr "URL de première apparence"
 
 #: lib/gettext-pro.php:156 lib/pro/admin/meta-edit.php:1218
 #: lib/std/admin/meta-edit.php:1161
@@ -1366,17 +1366,17 @@ msgid "adding reviewed subject image"
 msgstr "ajout d'image pour le sujet de l'évaluation"
 
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag, %3$s is the type attribute value
-#: lib/shortcode/schema.php:163
+#: lib/shortcode/schema.php:171
 msgid "%1$s %2$s shortcode with a type value of \"%3$s\" is missing a required 'prop' attribute value."
 msgstr "Le shortcode %2$s de %1$s avec \"%3$s\" comme attribut type doit avoir une valeur pour l'attribut 'prop' aussi."
 
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag
-#: lib/shortcode/schema.php:187
+#: lib/shortcode/schema.php:195
 msgid "%1$s %2$s shortcode with a content is missing a required 'type' attribute value."
 msgstr "Le shortcode %2$s de %1$s avec un texte de description doit avoir une valeur pour l'attribut 'type'."
 
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag, %3$s is the type attribute value
-#: lib/shortcode/schema.php:273
+#: lib/shortcode/schema.php:281
 msgid "%1$s %2$s shortcode type attribute \"%3$s\" is not a recognized value."
 msgstr "Le shortcode %2$s de %1$s avec \"%3$s\" pour l'attribut type n'est pas une valeur reconnue."
 
@@ -1502,8 +1502,8 @@ msgstr "Lieu de travail par défaut"
 
 #: lib/submenu/schema-general.php:298
 msgctxt "option label"
-msgid "Default Reviewed Subject Type"
-msgstr "Type par défaut du sujet évalué"
+msgid "Default Subject Webpage Type"
+msgstr "Type par défaut de page Web du sujet"
 
 #: lib/submenu/schema-shortcode.php:51
 msgctxt "metabox title"
