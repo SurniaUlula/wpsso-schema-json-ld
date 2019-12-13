@@ -866,7 +866,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* Updated checks for additional ld+json in the content to assign the json only as 'hasPart' and not 'mentions'.
+	* Modified checks for additional ld+json in the content to assign found ld+json as 'hasPart' and not 'mentions'.
 * **Requires At Least**
 	* PHP v5.5.
 	* WordPress v3.9.
