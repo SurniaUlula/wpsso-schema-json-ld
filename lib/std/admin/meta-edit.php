@@ -1019,7 +1019,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => $schema_type_row_class[ 'review' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Subject Type', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Subject Webpage Type', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_type',
 					'content'  => $form->get_no_select( 'schema_review_item_type', $schema_types,
 						$css_class = 'schema_type', $css_id = '', $is_assoc = true, $selected = true,

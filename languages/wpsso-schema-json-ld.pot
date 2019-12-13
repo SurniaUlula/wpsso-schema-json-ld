@@ -1286,7 +1286,7 @@ msgstr ""
 #: lib/gettext-pro.php:126 lib/pro/admin/meta-edit.php:981
 #: lib/std/admin/meta-edit.php:1022
 msgctxt "option label"
-msgid "Subject Type"
+msgid "Subject Webpage Type"
 msgstr ""
 
 #: lib/gettext-pro.php:127 lib/pro/admin/meta-edit.php:991
@@ -1610,7 +1610,7 @@ msgstr ""
 
 #: lib/submenu/schema-general.php:298
 msgctxt "option label"
-msgid "Default Reviewed Subject Type"
+msgid "Default Subject Webpage Type"
 msgstr ""
 
 #: lib/submenu/schema-shortcode.php:51

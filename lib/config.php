@@ -109,7 +109,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 					'schema_def_event_location_id'         => 'none',		// Default Venue.
 					'schema_def_job_hiring_org_id'         => 'none',		// Default Hiring Organization.
 					'schema_def_job_location_id'           => 'none',		// Default Job Location.
-					'schema_def_review_item_type'          => 'creative.work',	// Default Reviewed Subject Type.
+					'schema_def_review_item_type'          => 'creative.work',	// Default Subject Webpage Type.
 				),
 			),
 			'menu' => array(

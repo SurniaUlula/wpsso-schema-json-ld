@@ -461,7 +461,7 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_type':		// Reviewed Subject Type.
+				case 'tooltip-meta-schema_review_item_type':		// Reviewed Subject Webpage Type.
 
 					$text = __( 'A Schema type for the subject of the review.', 'wpsso-schema-json-ld' );
 
@@ -696,7 +696,7 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-schema_def_review_item_type':		// Default Review Subject Type.
+				case 'tooltip-schema_def_review_item_type':		// Default Subject Webpage Type.
 
 					$text = __( 'Select a default Schema type for the Schema Review subject URL.', 'wpsso-schema-json-ld' );
 

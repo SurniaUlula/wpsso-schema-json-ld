@@ -295,7 +295,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 					'label'    => _x( 'Review Information', 'metabox title', 'wpsso-schema-json-ld' ),
 				),
 				'schema_def_review_item_type' => array(
-					'label'    => _x( 'Default Reviewed Subject Type', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Default Subject Webpage Type', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'schema_def_review_item_type',
 					'content'  => $this->form->get_select( 'schema_def_review_item_type',
 						$schema_types, $css_class = 'schema_type' ),

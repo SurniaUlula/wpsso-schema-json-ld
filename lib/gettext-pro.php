@@ -123,7 +123,7 @@ _x( 'from', 'option comment', 'wpsso-schema-json-ld' );
 _x( 'to', 'option comment', 'wpsso-schema-json-ld' );
 _x( 'Rating Value Name', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Subject of the Review', 'metabox title', 'wpsso-schema-json-ld' );
-_x( 'Subject Type', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Subject Webpage Type', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Subject Webpage URL', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Subject Same-As URLs', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Subject Name', 'option label', 'wpsso-schema-json-ld' );
