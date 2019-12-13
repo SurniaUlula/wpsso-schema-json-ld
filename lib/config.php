@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 					'req'         => array(
 						'short'       => 'WPSSO Core',
 						'name'        => 'WPSSO Core',
-						'min_version' => '6.15.0',
+						'min_version' => '6.16.0',
 					),
 					'assets' => array(
 						'icons' => array(
@@ -71,7 +71,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 							),
 							'prop' => array(
 								'aggregaterating'  => '(plus) Property aggregateRating',
-								'haspart-mentions' => '(plus) Property hasPart and mentions',
+								'haspart'          => '(plus) Property hasPart',
 								'review'           => '(plus) Property reviews',
 							),
 						),

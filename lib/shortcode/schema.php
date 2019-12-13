@@ -36,8 +36,16 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 			$this->shortcode_sep   = WPSSOJSON_SCHEMA_SHORTCODE_SEPARATOR;
 
 			foreach ( range( 0, $this->shortcode_depth ) as $max_depth ) {
-				$this->sc_tag_names[] = $this->shortcode_name .
-					( $max_depth ? $this->shortcode_sep . $max_depth : '' );	// Exclude 0.
+
+				/**
+				 * Create shortcode tag names:
+				 *
+				 *	schema
+				 *	schema_1
+				 *	schema_2
+				 *	etc.
+				 */
+				$this->sc_tag_names[] = $this->shortcode_name . ( $max_depth ? $this->shortcode_sep . $max_depth : '' );
 			}
 
 			add_filter( 'no_texturize_shortcodes', array( $this, 'exclude_from_wptexturize' ) );
