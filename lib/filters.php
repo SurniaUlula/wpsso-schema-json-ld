@@ -536,7 +536,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 					$md_opts[ 'schema_review_item_type' ] = $this->p->options[ 'schema_def_review_item_type' ];
 
-					$notice_msg = __( 'A Schema ClaimReview cannot be the subject of a Schema ClaimReview.', 'wpsso-schema-json-ld' ) . ' ';
+					$notice_msg = __( 'A claim review cannot be the subject of another claim review.', 'wpsso-schema-json-ld' ) . ' ';
 
 					$notice_msg .= __( 'Please select a subject webpage type that better describes the subject of the webpage (ie. the content) being reviewed.', 'wpsso-schema-json-ld' );
 
