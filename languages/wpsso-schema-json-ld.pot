@@ -563,14 +563,14 @@ msgstr ""
 msgid "Select a default Schema type for the Schema Review subject URL."
 msgstr ""
 
-#: lib/filters.php:539
-msgid "You cannot have a Schema ClaimReview of another Schema ClaimReview."
+#: lib/filters.php:539 lib/gettext-pro.php:158 lib/pro/head/claimreview.php:73
+msgid "A Schema ClaimReview cannot be the subject of a Schema ClaimReview."
 msgstr ""
 
-#: lib/filters.php:542
+#: lib/filters.php:541
 msgid ""
-"Please select a subject webpage type that reflects the subject of the "
-"webpage (ie. the content) being reviewed."
+"Please select a subject webpage type that better describes the subject of "
+"the webpage (ie. the content) being reviewed."
 msgstr ""
 
 #: lib/gettext-config.php:6
@@ -1473,11 +1473,17 @@ msgctxt "option label"
 msgid "Operating System"
 msgstr ""
 
-#: lib/gettext-pro.php:158 lib/pro/head/howto.php:123
+#: lib/gettext-pro.php:159 lib/pro/head/claimreview.php:75
+msgid ""
+"Falling back to using CreativeWork as the Schema type for the subject of "
+"this ClaimReview."
+msgstr ""
+
+#: lib/gettext-pro.php:160 lib/pro/head/howto.php:123
 msgid "adding schema howto step option #%d image"
 msgstr ""
 
-#: lib/gettext-pro.php:159 lib/pro/head/review.php:92
+#: lib/gettext-pro.php:161 lib/pro/head/review.php:92
 msgid "adding reviewed subject image"
 msgstr ""
 

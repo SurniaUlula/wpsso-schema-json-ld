@@ -155,5 +155,7 @@ _x( 'Short Summary of Claim', 'option label', 'wpsso-schema-json-ld' );
 _x( 'First Appearance URL', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Software Application Information', 'metabox title', 'wpsso-schema-json-ld' );
 _x( 'Operating System', 'option label', 'wpsso-schema-json-ld' );
+__( 'A Schema ClaimReview cannot be the subject of a Schema ClaimReview.', 'wpsso-schema-json-ld' );
+__( 'Falling back to using CreativeWork as the Schema type for the subject of this ClaimReview.', 'wpsso-schema-json-ld' );
 __( 'adding schema howto step option #%d image', 'wpsso-schema-json-ld' );
 __( 'adding reviewed subject image', 'wpsso-schema-json-ld' );
