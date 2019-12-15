@@ -299,7 +299,9 @@ if ( ! class_exists( 'WpssoJsonSchema' ) ) {
 			if ( empty( $page_posts_mods ) ) {
 
 				if ( $wpsso->debug->enabled ) {
+
 					$wpsso->debug->log( 'exiting early: page_posts_mods array is empty' );
+
 					$wpsso->debug->mark( 'adding posts data' );	// End timer.
 				}
 
