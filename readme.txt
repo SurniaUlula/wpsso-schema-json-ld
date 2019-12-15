@@ -857,6 +857,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.17.2-dev.1 (TBD)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Added the 'author' and 'datePublished' properties to the 'itemReviewed' array for the Schema ClaimReview type.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v5.5.
+	* WordPress v3.9.
+	* WPSSO Core v6.16.0.
+
 **Version 2.17.1 (2019/12/13)**
 
 * **New Features**
