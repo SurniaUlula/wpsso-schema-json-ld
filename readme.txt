@@ -863,6 +863,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None.
 * **Improvements**
 	* Added the 'author' and 'datePublished' properties to the 'itemReviewed' array for the Schema ClaimReview type.
+	* Minor update to the SSO menu item Schema Markup dashicon.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
