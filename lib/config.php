@@ -114,7 +114,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 			),
 			'menu' => array(
 				'dashicons' => array(
-					'schema-shortcode' => 'sos',
+					'schema-shortcode' => 'welcome-learn-more',
 				),
 			),
 		);
