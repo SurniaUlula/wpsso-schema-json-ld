@@ -857,7 +857,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.17.2-dev.1 (TBD)**
+**Version 2.17.2-dev.1 (2019/12/16)**
 
 * **New Features**
 	* None.
@@ -871,7 +871,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.5.
 	* WordPress v3.9.
-	* WPSSO Core v6.16.0.
+	* WPSSO Core v6.16.1-dev.1.
 
 **Version 2.17.1 (2019/12/13)**
 
@@ -1086,6 +1086,10 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 	* None.
 
 == Upgrade Notice ==
+
+= 2.17.2-dev.1 =
+
+(2019/12/16) Added the 'author' and 'datePublished' properties to the 'itemReviewed' array for the Schema ClaimReview type.
 
 = 2.17.1 =
 
