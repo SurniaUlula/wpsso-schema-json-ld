@@ -13,7 +13,7 @@
  * Description: Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPages, HowTos, Images, Local Business, Products, Recipes, Reviews, Videos, and more.
  * Requires PHP: 5.5
  * Requires At Least: 3.9
- * Tested Up To: 5.3.1
+ * Tested Up To: 5.3.2
  * WC Tested Up To: 3.8.1
  * Version: 2.17.2-b.1
  * 
