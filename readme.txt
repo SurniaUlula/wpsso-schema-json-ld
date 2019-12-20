@@ -857,7 +857,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.17.2-b.2 (2019/12/19)**
+**Version 2.17.2-b.3 (2019/12/20)**
 
 * **New Features**
 	* None.
@@ -867,11 +867,13 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* None.
+	* Renamed metadata option keys:
+		* 'schema_review_item_product_mpn' to 'schema_review_item_product_mfr_part_no'.
+		* 'schema_review_item_product_sku' to 'schema_review_item_product_retailer_part_no'.
 * **Requires At Least**
 	* PHP v5.5.
 	* WordPress v3.9.
-	* WPSSO Core v6.16.1-b.2.
+	* WPSSO Core v6.16.1-b.3.
 
 **Version 2.17.1 (2019/12/13)**
 
@@ -1087,9 +1089,9 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 2.17.2-dev.1 =
+= 2.17.2-b.3 =
 
-(2019/12/19) Added the 'author' and 'datePublished' properties to the 'itemReviewed' array for the Schema ClaimReview type.
+(2019/12/20) Added the 'author' and 'datePublished' properties to the 'itemReviewed' array for the Schema ClaimReview type.
 
 = 2.17.1 =
 
