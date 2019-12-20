@@ -565,7 +565,7 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_product_sku':	// Reviewed Product SKU.
+				case 'tooltip-meta-schema_review_item_product_retailer_part_no':	// Reviewed Product SKU.
 
 					$text = __( 'The SKU (aka Stock-Keeping Unit) of the product being reviewed.', 'wpsso-schema-json-ld' );
 

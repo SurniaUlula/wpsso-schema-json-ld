@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 2.17.2-b.2\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 2.17.2-b.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-"
 "ld\n"
 "POT-Creation-Date: 2019-MO-DA HO:MI+ZONE\n"
@@ -563,11 +563,11 @@ msgstr ""
 msgid "Select a default Schema type for the Schema Review subject URL."
 msgstr ""
 
-#: lib/filters.php:539 lib/gettext-pro.php:158 lib/pro/head/claimreview.php:73
+#: lib/filters.php:571 lib/gettext-pro.php:158 lib/pro/head/claimreview.php:73
 msgid "A claim review cannot be the subject of another claim review."
 msgstr ""
 
-#: lib/filters.php:541
+#: lib/filters.php:573
 msgid ""
 "Please select a subject webpage type that better describes the subject of "
 "the webpage (ie. the content) being reviewed."

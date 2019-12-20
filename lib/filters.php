@@ -186,22 +186,50 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				'schema_review_rating_from'              => '1',					// Review Rating (From).
 				'schema_review_rating_to'                => '5',					// Review Rating (To).
 				'schema_review_rating_alt_name'          => '',						// Rating Value Name.
-				'schema_review_item_type'                => $opts[ 'schema_def_review_item_type' ],	// Reviewed Item Type.
-				'schema_review_item_url'                 => '',						// Reviewed Item URL.
-				'schema_review_item_name'                => '',						// Reviewed Item Name.
-				'schema_review_item_cw_author_type'      => 'none',					// Reviewed Item Author Type.
-				'schema_review_item_cw_author_name'      => '',						// Reviewed Item Author Name.
-				'schema_review_item_cw_author_url'       => '',						// Reviewed Item Author URL.
-				'schema_review_item_cw_pub_date'         => '',						// Reviewed Item Publish Date.
-				'schema_review_item_cw_pub_time'         => 'none',					// Reviewed Item Publish Time.
-				'schema_review_item_cw_pub_timezone'     => $timezone,					// Reviewed Item Publish Timezone.
-				'schema_review_item_cw_created_date'     => '',						// Reviewed Item Created Date.
-				'schema_review_item_cw_created_time'     => 'none',					// Reviewed Item Created Time.
-				'schema_review_item_cw_created_timezone' => $timezone,					// Reviewed Item Created Timezone.
-				'schema_review_item_cw_book_isbn'        => '',						// Reviewed Book ISBN.
-				'schema_review_claim_reviewed'           => '',						// Short Summary of Claim.
-				'schema_review_claim_first_url'          => '',						// First Appearance URL.
-				'schema_software_app_os'                 => '',						// Operating System.
+
+				/**
+				 * Schema Reviewed Subject.
+				 */
+				'schema_review_item_type'                => $opts[ 'schema_def_review_item_type' ],	// Subject Webpage Type.
+				'schema_review_item_url'                 => '',						// Subject Webpage URL.
+				'schema_review_item_name'                => '',						// Subject Name.
+				'schema_review_item_desc'                => '',						// Subject Description.
+
+				/**
+				 * Schema Reviewed Subject: Creative Work.
+				 */
+				'schema_review_item_cw_author_type'      => 'none',	// CW Author Type.
+				'schema_review_item_cw_author_name'      => '',		// CW Author Name.
+				'schema_review_item_cw_author_url'       => '',		// CW Author URL.
+				'schema_review_item_cw_pub_date'         => '',		// CW Publish Date.
+				'schema_review_item_cw_pub_time'         => 'none',	// CW Publish Time.
+				'schema_review_item_cw_pub_timezone'     => $timezone,	// CW Publish Timezone.
+				'schema_review_item_cw_created_date'     => '',		// CW Created Date.
+				'schema_review_item_cw_created_time'     => 'none',	// CW Created Time.
+				'schema_review_item_cw_created_timezone' => $timezone,	// CW Created Timezone.
+
+				/**
+				 * Schema Reviewed Subject: Book.
+				 */
+				'schema_review_item_cw_book_isbn' => '',	// Book ISBN.
+
+				/**
+				 * Schema Reviewed Subject: Product.
+				 */
+				'schema_review_item_product_brand'            => '',	// Product Brand.
+				'schema_review_item_product_retailer_part_no' => '',	// Product SKU.
+				'schema_review_item_product_mfr_part_no'      => '',	// Product MPN.
+
+				/**
+				 * Schema Claim Review.
+				 */
+				'schema_review_claim_reviewed'  => '',	// Short Summary of Claim.
+				'schema_review_claim_first_url' => '',	// First Appearance URL.
+
+				/**
+				 * Schema SoftwareApplication.
+				 */
+				'schema_software_app_os' => '',	// Operating System.
 			);
 
 			$md_defs = array_merge( $md_defs, $schema_md_defs );
@@ -264,6 +292,10 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 					'schema_review_item_product_img_id'     => 'schema_review_item_img_id',
 					'schema_review_item_product_img_id_pre' => 'schema_review_item_img_id_pre',
 					'schema_review_item_product_img_url'    => 'schema_review_item_img_url',
+				),
+				37 => array(
+					'schema_review_item_product_mpn' => 'schema_review_item_product_mfr_part_no',
+					'schema_review_item_product_sku' => 'schema_review_item_product_retailer_part_no',
 				),
 			);
 
