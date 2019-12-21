@@ -9,7 +9,7 @@ Assets URI: https://surniaulula.github.io/wpsso-schema-json-ld/assets/
 Tags: schema.org, rich snippets, structured data, amp, woocommerce, image seo, video seo, news seo, schema, rich results, knowledge graph, rating, review, recipe, event, product
 Contributors: jsmoriss
 Requires PHP: 5.5
-Requires At Least: 3.9
+Requires At Least: 4.0
 Tested Up To: 5.3.2
 WC Tested Up To: 3.8.1
 Stable Tag: 2.17.1
@@ -870,9 +870,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Renamed metadata option keys:
 		* 'schema_review_item_product_mpn' to 'schema_review_item_product_mfr_part_no'.
 		* 'schema_review_item_product_sku' to 'schema_review_item_product_retailer_part_no'.
+	* Updated minimum WordPress version required from 3.9 to 4.0.
 * **Requires At Least**
 	* PHP v5.5.
-	* WordPress v3.9.
+	* WordPress v4.0.
 	* WPSSO Core v6.16.1-b.3.
 
 **Version 2.17.1 (2019/12/13)**
