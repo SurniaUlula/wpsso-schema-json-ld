@@ -857,7 +857,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.17.2-b.3 (2019/12/20)**
+**Version 2.17.2 (2019/12/21)**
 
 * **New Features**
 	* None.
@@ -874,7 +874,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.5.
 	* WordPress v4.0.
-	* WPSSO Core v6.16.1-b.3.
+	* WPSSO Core v6.16.1.
 
 **Version 2.17.1 (2019/12/13)**
 
@@ -1090,11 +1090,7 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 
 == Upgrade Notice ==
 
-= 2.17.2-b.3 =
+= 2.17.2 =
 
-(2019/12/20) Added the 'author' and 'datePublished' properties to the 'itemReviewed' array for the Schema ClaimReview type.
-
-= 2.17.1 =
-
-(2019/12/13) Minor update to improve a Document SSO option label and its translation.
+(2019/12/21) Added the 'author' and 'datePublished' properties to the 'itemReviewed' array for the Schema ClaimReview type.
 
