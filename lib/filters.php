@@ -525,8 +525,12 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				}
 			}
 
-			if ( $this->p->schema->is_schema_type_og_product( $md_opts[ 'schema_type' ] ) ) {
-				$md_opts[ 'og_type' ]    = 'product';
+			/**
+			 * Check of the Schema type requires a specific (and fixed) Open Graph type. For example, a Schema Product
+			 * type / sub-type would return 'product' for the Open Graph type.
+			 */
+			if ( $og_type = $this->p->schema->get_schema_type_og_type( $md_opts[ 'schema_type' ] ) ) {
+				$md_opts[ 'og_type' ]    = $og_type;
 				$md_opts[ 'og_type:is' ] = 'disabled';
 			}
 
