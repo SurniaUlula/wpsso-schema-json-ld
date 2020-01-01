@@ -857,7 +857,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.18.0-dev.1 (TBD)**
+**Version 2.18.0-dev.2 (TBD)**
 
 * **New Features**
 	* None.
@@ -867,7 +867,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None.
 * **Developer Notes**
 	* Added lib/filters-upgrade.php.
-	* Added a WpssoSchema->is_schema_type_og_product() check when saving post options.
+	* Added a WpssoSchema->get_schema_type_og_type() call when saving post options.
 * **Requires At Least**
 	* PHP v5.5.
 	* WordPress v4.0.
