@@ -867,11 +867,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None.
 * **Developer Notes**
 	* Added lib/filters-upgrade.php.
-	* Added a WpssoSchema->get_schema_type_og_type() call when saving post options.
 * **Requires At Least**
 	* PHP v5.5.
 	* WordPress v4.0.
-	* WPSSO Core v6.16.1.
+	* WPSSO Core v6.16.2-dev.2.
 
 **Version 2.17.2 (2019/12/21)**
 
