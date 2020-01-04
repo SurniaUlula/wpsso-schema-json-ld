@@ -563,11 +563,11 @@ msgstr ""
 msgid "Select a default Schema type for the Schema Review subject URL."
 msgstr ""
 
-#: lib/filters.php:520 lib/gettext-pro.php:158 lib/pro/head/claimreview.php:73
+#: lib/filters.php:358 lib/gettext-pro.php:158 lib/pro/head/claimreview.php:73
 msgid "A claim review cannot be the subject of another claim review."
 msgstr ""
 
-#: lib/filters.php:522
+#: lib/filters.php:360
 msgid ""
 "Please select a subject webpage type that better describes the subject of "
 "the webpage (ie. the content) being reviewed."

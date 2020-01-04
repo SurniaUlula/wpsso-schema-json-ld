@@ -45,7 +45,9 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			$this->upg = new WpssoJsonFiltersschema( $plugin );
 
 			$this->p->util->add_plugin_filters( $this, array(
-				'get_md_defaults' => 2,
+				'get_md_defaults'   => 2,
+				'save_post_options' => 4,
+				'option_type'       => 2,
 			) );
 
 			if ( is_admin() ) {
@@ -60,8 +62,6 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				$this->msgs = new WpssoJsonFiltersMessages( $plugin );
 
 				$this->p->util->add_plugin_filters( $this, array(
-					'option_type'               => 2,
-					'save_post_options'         => 4,
 					'post_cache_transient_keys' => 4,
 				) );
 
@@ -251,6 +251,121 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			return $md_defs;
 		}
 
+		public function filter_save_post_options( $md_opts, $post_id, $rel_id, $mod ) {
+
+			$md_defs = $this->filter_get_md_defaults( array(), $mod );	// Only get the schema options.
+
+			/**
+			 * Check for default recipe values.
+			 */
+			foreach ( SucomUtil::preg_grep_keys( '/^schema_recipe_(prep|cook|total)_(days|hours|mins|secs)$/', $md_opts ) as $md_key => $value ) {
+
+				$md_opts[ $md_key ] = (int) $value;
+
+				if ( $md_opts[ $md_key ] === $md_defs[ $md_key ] ) {
+					unset( $md_opts[ $md_key ] );
+				}
+			}
+
+			/**
+			 * If the review rating is 0, remove the review rating options. If we have a review rating, then make sure
+			 * there's a from/to as well.
+			 */
+			if ( empty( $md_opts[ 'schema_review_rating' ] ) ) {
+
+				foreach ( array( 'schema_review_rating', 'schema_review_rating_from', 'schema_review_rating_to' ) as $md_key ) {
+					unset( $md_opts[ $md_key ] );
+				}
+
+			} else {
+
+				foreach ( array( 'schema_review_rating_from', 'schema_review_rating_to' ) as $md_key ) {
+
+					if ( empty( $md_opts[ $md_key ] ) && isset( $md_defs[ $md_key ] ) ) {
+						$md_opts[ $md_key ] = $md_defs[ $md_key ];
+					}
+				}
+			}
+
+			foreach ( array( 'schema_event_start', 'schema_event_end' ) as $md_pre ) {
+
+				/**
+				 * Unset date / time if same as the default value.
+				 */
+				foreach ( array( 'date', 'time', 'timezone' ) as $md_ext ) {
+
+					if ( isset( $md_opts[ $md_pre . '_' . $md_ext ] ) &&
+						( $md_opts[ $md_pre . '_' . $md_ext ] === $md_defs[ $md_pre . '_' . $md_ext ] ||
+							$md_opts[ $md_pre . '_' . $md_ext ] === 'none' ) ) {
+
+						unset( $md_opts[ $md_pre . '_' . $md_ext ] );
+					}
+				}
+
+				if ( empty( $md_opts[ $md_pre . '_date' ] ) && empty( $md_opts[ $md_pre . '_time' ] ) ) {		// No date or time.
+
+					unset( $md_opts[ $md_pre . '_timezone' ] );
+
+					continue;
+
+				} elseif ( ! empty( $md_opts[ $md_pre . '_date' ] ) && empty( $md_opts[ $md_pre . '_time' ] ) ) {	// Date with no time.
+
+					$md_opts[ $md_pre . '_time' ] = '00:00';
+
+				} elseif ( empty( $md_opts[ $md_pre . '_date' ] ) && ! empty( $md_opts[ $md_pre . '_time' ] ) ) {	// Time with no date.
+
+					$md_opts[ $md_pre . '_date' ] = gmdate( 'Y-m-d', time() );
+				}
+			}
+
+			/**
+			 * Sanitize the offer options.
+			 */
+			$metadata_offers_max = SucomUtil::get_const( 'WPSSO_SCHEMA_METADATA_OFFERS_MAX', 5 );
+
+			foreach( array(
+				'schema_event',
+				'schema_review_item_product',
+			) as $md_pre ) {
+
+				foreach ( range( 0, $metadata_offers_max - 1, 1 ) as $key_num ) {
+
+					$is_valid_offer = false;
+
+					foreach ( array(
+						$md_pre . '_offer_name',
+						$md_pre . '_offer_price'
+					) as $md_offer_pre ) {
+
+						if ( isset( $md_opts[ $md_offer_pre . '_' . $key_num] ) && $md_opts[ $md_offer_pre . '_' . $key_num] !== '' ) {
+							$is_valid_offer = true;
+						}
+					}
+
+					if ( ! $is_valid_offer ) {
+						unset( $md_opts[ $md_pre . '_offer_currency_' . $key_num] );
+						unset( $md_opts[ $md_pre . '_offer_avail_' . $key_num] );
+					}
+				}
+			}
+
+			if ( isset( $md_opts[ 'schema_type' ] ) && 'review.claim' === $md_opts[ 'schema_type' ] ) {
+			
+				if ( isset( $md_opts[ 'schema_review_item_type' ] ) && 'review.claim' === $md_opts[ 'schema_review_item_type' ] ) {
+
+					$md_opts[ 'schema_review_item_type' ] = $this->p->options[ 'schema_def_review_item_type' ];
+
+					$notice_msg = __( 'A claim review cannot be the subject of another claim review.', 'wpsso-schema-json-ld' ) . ' ';
+
+					$notice_msg .= __( 'Please select a subject webpage type that better describes the subject of the webpage (ie. the content) being reviewed.', 'wpsso-schema-json-ld' );
+
+					$this->p->notice->err( $notice_msg );
+				}
+			}
+
+			return $md_opts;
+		}
+
 		public function filter_option_type( $type, $base_key ) {
 
 			if ( ! empty( $type ) ) {
@@ -411,121 +526,6 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			}
 
 			return $type;
-		}
-
-		public function filter_save_post_options( $md_opts, $post_id, $rel_id, $mod ) {
-
-			$md_defs = $this->filter_get_md_defaults( array(), $mod );	// Only get the schema options.
-
-			/**
-			 * Check for default recipe values.
-			 */
-			foreach ( SucomUtil::preg_grep_keys( '/^schema_recipe_(prep|cook|total)_(days|hours|mins|secs)$/', $md_opts ) as $md_key => $value ) {
-
-				$md_opts[ $md_key ] = (int) $value;
-
-				if ( $md_opts[ $md_key ] === $md_defs[ $md_key ] ) {
-					unset( $md_opts[ $md_key ] );
-				}
-			}
-
-			/**
-			 * If the review rating is 0, remove the review rating options. If we have a review rating, then make sure
-			 * there's a from/to as well.
-			 */
-			if ( empty( $md_opts[ 'schema_review_rating' ] ) ) {
-
-				foreach ( array( 'schema_review_rating', 'schema_review_rating_from', 'schema_review_rating_to' ) as $md_key ) {
-					unset( $md_opts[ $md_key ] );
-				}
-
-			} else {
-
-				foreach ( array( 'schema_review_rating_from', 'schema_review_rating_to' ) as $md_key ) {
-
-					if ( empty( $md_opts[ $md_key ] ) && isset( $md_defs[ $md_key ] ) ) {
-						$md_opts[ $md_key ] = $md_defs[ $md_key ];
-					}
-				}
-			}
-
-			foreach ( array( 'schema_event_start', 'schema_event_end' ) as $md_pre ) {
-
-				/**
-				 * Unset date / time if same as the default value.
-				 */
-				foreach ( array( 'date', 'time', 'timezone' ) as $md_ext ) {
-
-					if ( isset( $md_opts[ $md_pre . '_' . $md_ext ] ) &&
-						( $md_opts[ $md_pre . '_' . $md_ext ] === $md_defs[ $md_pre . '_' . $md_ext ] ||
-							$md_opts[ $md_pre . '_' . $md_ext ] === 'none' ) ) {
-
-						unset( $md_opts[ $md_pre . '_' . $md_ext ] );
-					}
-				}
-
-				if ( empty( $md_opts[ $md_pre . '_date' ] ) && empty( $md_opts[ $md_pre . '_time' ] ) ) {		// No date or time.
-
-					unset( $md_opts[ $md_pre . '_timezone' ] );
-
-					continue;
-
-				} elseif ( ! empty( $md_opts[ $md_pre . '_date' ] ) && empty( $md_opts[ $md_pre . '_time' ] ) ) {	// Date with no time.
-
-					$md_opts[ $md_pre . '_time' ] = '00:00';
-
-				} elseif ( empty( $md_opts[ $md_pre . '_date' ] ) && ! empty( $md_opts[ $md_pre . '_time' ] ) ) {	// Time with no date.
-
-					$md_opts[ $md_pre . '_date' ] = gmdate( 'Y-m-d', time() );
-				}
-			}
-
-			/**
-			 * Sanitize the offer options.
-			 */
-			$metadata_offers_max = SucomUtil::get_const( 'WPSSO_SCHEMA_METADATA_OFFERS_MAX', 5 );
-
-			foreach( array(
-				'schema_event',
-				'schema_review_item_product',
-			) as $md_pre ) {
-
-				foreach ( range( 0, $metadata_offers_max - 1, 1 ) as $key_num ) {
-
-					$is_valid_offer = false;
-
-					foreach ( array(
-						$md_pre . '_offer_name',
-						$md_pre . '_offer_price'
-					) as $md_offer_pre ) {
-
-						if ( isset( $md_opts[ $md_offer_pre . '_' . $key_num] ) && $md_opts[ $md_offer_pre . '_' . $key_num] !== '' ) {
-							$is_valid_offer = true;
-						}
-					}
-
-					if ( ! $is_valid_offer ) {
-						unset( $md_opts[ $md_pre . '_offer_currency_' . $key_num] );
-						unset( $md_opts[ $md_pre . '_offer_avail_' . $key_num] );
-					}
-				}
-			}
-
-			if ( isset( $md_opts[ 'schema_type' ] ) && 'review.claim' === $md_opts[ 'schema_type' ] ) {
-			
-				if ( isset( $md_opts[ 'schema_review_item_type' ] ) && 'review.claim' === $md_opts[ 'schema_review_item_type' ] ) {
-
-					$md_opts[ 'schema_review_item_type' ] = $this->p->options[ 'schema_def_review_item_type' ];
-
-					$notice_msg = __( 'A claim review cannot be the subject of another claim review.', 'wpsso-schema-json-ld' ) . ' ';
-
-					$notice_msg .= __( 'Please select a subject webpage type that better describes the subject of the webpage (ie. the content) being reviewed.', 'wpsso-schema-json-ld' );
-
-					$this->p->notice->err( $notice_msg );
-				}
-			}
-
-			return $md_opts;
 		}
 
 		public function filter_post_cache_transient_keys( $transient_keys, $mod, $sharing_url, $mod_salt ) {
