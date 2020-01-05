@@ -857,7 +857,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.18.0-dev.2 (TBD)**
+**Version 2.18.0-rc.1 (2020/01/05)**
 
 * **New Features**
 	* None.
@@ -870,7 +870,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.5.
 	* WordPress v4.0.
-	* WPSSO Core v6.16.2-dev.2.
+	* WPSSO Core v6.16.2-rc.1.
 
 **Version 2.17.2 (2019/12/21)**
 
@@ -1104,6 +1104,10 @@ New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for 
 	* None.
 
 == Upgrade Notice ==
+
+= 2.18.0-rc.1 =
+
+(2020/01/05) Added lib/filters-upgrade.php.
 
 = 2.17.2 =
 
