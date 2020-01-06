@@ -790,7 +790,7 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 
 * [Markup Example for a FAQ Page](https://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-faq-page/) on wpsso.com.
 
-* [Markup Example for a Restaurant](http://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-restaurant/) using the WPSSO PLM add-on to manage the Place / Location information (address, geo coordinates, business hours – daily and seasonal, restaurant menu URL, accepts reservations, etc.).
+* [Markup Example for a Restaurant](http://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-restaurant/) using the WPSSO PLM add-on to manage the place information (address, geo coordinates, business hours – daily and seasonal, restaurant menu URL, accepts reservations, etc.).
 
 * [Markup Example for a Tech Article](http://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-tech-article/) published on surniaulula.com.
 
