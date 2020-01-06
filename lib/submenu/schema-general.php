@@ -188,7 +188,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 			$person_names = $this->p->util->get_form_cache( 'person_names', $add_none = true );
 
 			/**
-			 * Place / Location variables.
+			 * Place variables.
 			 */
 			$plm_req_msg     = $this->p->msgs->maybe_ext_required( 'wpssoplm' );
 			$plm_disable     = empty( $plm_req_msg ) ? false : true;
