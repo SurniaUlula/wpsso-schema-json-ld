@@ -171,7 +171,7 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				case 'tooltip-meta-schema_event_location_id':		// Event Venue.
 
-					$text = __( 'Select a venue (place / location) for the Schema Event type.', 'wpsso-schema-json-ld' );
+					$text = __( 'Select a venue for the Schema Event type.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
@@ -259,13 +259,17 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				case 'tooltip-meta-schema_job_location_id':
 
-					$text = __( 'Select a place / location for the Schema JobPosting job location.', 'wpsso-schema-json-ld' );
+					$text = __( 'Select a location for the Schema JobPosting job location.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
 				case 'tooltip-meta-schema_job_salary':
 
-					$text = __( 'Optionally provide details on the base salary. The base salary must be numeric, like 120000, 50.00, etc. Do not use spaces, commas, or currency symbols, as these are not valid numeric values.', 'wpsso-schema-json-ld' );
+					$text = __( 'Optionally provide details on the base salary.', 'wpsso-schema-json-ld' );
+
+					$text .= __( 'The base salary must be numeric, like 120000, 50.00, etc.', 'wpsso-schema-json-ld' );
+
+					$text .= __( 'Do not use spaces, commas, or currency symbols, as these are not valid numeric values.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
@@ -277,7 +281,9 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				case 'tooltip-meta-schema_job_expire':
 
-					$text = __( 'Select a job posting expiration date and time. If a job posting never expires, or you do not know when the job will expire, do not select an expiration date and time.', 'wpsso-schema-json-ld' );
+					$text = __( 'Select a job posting expiration date and time.', 'wpsso-schema-json-ld' );
+
+					$text .= __( 'If a job posting never expires, or you do not know when the job will expire, do not select an expiration date and time.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
@@ -680,7 +686,7 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				case 'tooltip-schema_def_event_location_id':		// Default Event Venue.
 
-					$text = __( 'Select a default venue (place / location) for the Schema Event type.', 'wpsso-schema-json-ld' );
+					$text = __( 'Select a default venue for the Schema Event type.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
@@ -692,7 +698,7 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				case 'tooltip-schema_def_job_location_id':		// Default Job Location.
 
-					$text = __( 'Select a default place / location for the Schema JobPosting job location.', 'wpsso-schema-json-ld' );
+					$text = __( 'Select a default location for the Schema JobPosting job location.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
