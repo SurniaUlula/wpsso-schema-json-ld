@@ -85,7 +85,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 						),
 						'submenu' => array(
 							'schema-general'   => 'Schema Markup',
-							'schema-shortcode' => 'Schema Shortcode',
+							'schema-shortcode' => 'Schema Shortcode Guide',
 						),
 					),
 				),

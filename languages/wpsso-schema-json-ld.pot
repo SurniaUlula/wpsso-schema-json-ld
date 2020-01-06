@@ -589,7 +589,7 @@ msgstr ""
 
 #: lib/gettext-config.php:7
 msgctxt "lib file description"
-msgid "Schema Shortcode"
+msgid "Schema Shortcode Guide"
 msgstr ""
 
 #: lib/gettext-config.php:8
