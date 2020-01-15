@@ -857,12 +857,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.0.0-dev.3 (TBD)**
+**Version 2.18.1-b.1 (2020/01/15)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* None.
+	* Minor update for some option labels and their translated strings.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -870,7 +870,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.5.
 	* WordPress v4.0.
-	* WPSSO Core v6.16.2.
+	* WPSSO Core v6.17.0.
 
 **Version 2.18.0 (2020/01/05)**
 
@@ -921,204 +921,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WordPress v3.9.
 	* WPSSO Core v6.16.0.
 
-**Version 2.17.0 (2019/12/08)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added new options in the Document SSO metabox for the Schema Review type:
-		* Subject of the Review
-			* Subject Same-As URL
-			* Subject Image ID or URL
-			* Creative Work Subject Information
-				* CW Created Date
-			* Movie Subject Information
-				* Movie Cast Names
-				* Movie Director Names
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
-* **Requires At Least**
-	* PHP v5.5.
-	* WordPress v3.9.
-	* WPSSO Core v6.16.0.
-
-**Version 2.16.0 (2019/11/30)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added new options in the Document SSO metabox for reviews of products:
-		* Product Brand
-		* Product Offers (name, price, currency, availability)
-		* Product SKU
-		* Product MPN
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Renamed the 'WPSSO_SCHEMA_EVENT_OFFERS_MAX' constant to 'WPSSO_SCHEMA_METADATA_OFFERS_MAX'.
-
-**Version 2.15.1 (2019/11/23)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Updated `WpssoJsonRegister->activate_plugin()` for the new WpssoUtilReg class in WPSSO Core v6.13.1.
-
-**Version 2.15.0 (2019/11/01)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added a new "Reviewed Item Information" section in the Document SSO metabox:
-		* Renamed the "Claim Author Type" option to "Item Author Type".
-		* Renamed the "Claim Author Name" option to "Item Author Name".
-		* Renamed the "Claim Author URL" option to "Item Author URL".
-		* Renamed the "Claim Made on Date" option to "Item Publish Date".
-		* Added a new "Book ISBN" option.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Added a new lib/filters-messages.php library file.
-	* Added a new lib/filters-schema.php library file.
-	* Refactored the WpssoJsonSchema::get_type_row_class() method.
-	* Refactored the lib/pro/head/review.php filter for https://schema.org/Review.
-	* Refactored the lib/pro/head/claimreview.php filter for https://schema.org/ClaimReview.
-
-**Version 2.14.0 (2019/10/22)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added a new "Reviewed Item Type" option in the Document SSO metabox.
-	* Added a new "Default Subject Webpage Type" option under the SSO > Schema Markup > Meta Defaults tab.
-	* The Schema 'itemReviewed' property type can now be managed by the "Reviewed Item Type" option in the Document SSO metabox. 
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Update method arguments for `SucomForm->get_select()` in WPSSO Core v6.9.0.
-
-**Version 2.13.2 (2019/10/18)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added filter hooks to disable the new 'woocommerce_structured_data_review' and 'woocommerce_structured_data_website' filters in WooCommerce v3.7.1 (Premium version).
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
-
-**Version 2.13.1 (2019/10/14)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Removed a call to WpssoSchema `filter_json_data_https_schema_org_localbusiness()` since it is no longer exists - local businesses are now automatically filtered through the organization filter (Premium version).
-
-**Version 2.12.0 (2019/10/04)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added a License URL option for Schema CreativeWork in the Document SSO metabox.
-	* Added pre-rendering of Article AMP images when creating Schema Article non-AMP markup.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
-
-**Version 2.11.1 (2019/09/30)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Minor update for How-To Step option layout in the Document SSO metabox.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
-
-**Version 2.11.0 (2019/09/26)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Minor update for Event Offer availability option CSS in the Document SSO metabox.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Moved Schema Job markup for the hiring organization and location to the `WpssoSchemaSingle::add_job_data()` method.
-	* Moved Schema Event markup for the location, organizers, and performers to the `WpssoSchemaSingle::add_event_data()` method.
-
-**Version 2.10.0 (2019/09/22)**
-
-Follows the latest Review snippet structured data guidelines from Google instead of the official Schema standard.
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Updated the Schema 'aggregateRating' and 'review' property hooks to limit their addition to only Google approved Schema types (see the [Google Review snippet structured data guidelines](https://developers.google.com/search/docs/data-types/review-snippet) webpage for details).
-		* The official Schema standard provides 'aggregateRating' and 'review' properties for these types:
-			* Brand
-			* CreativeWork
-			* Event
-			* Offer
-			* Organization
-			* Place
-			* Product
-			* Service
-		* Unfortunately, Google only supports 'aggregateRating' and 'review' properties for these types:
-			* Book
-			* Course
-			* Event
-			* HowTo (includes the Recipe sub-type)
-			* LocalBusiness
-			* Movie
-			* Product
-			* SoftwareApplication
-		* And the 'review' property for these types:
-			* CreativeWorkSeason
-			* CreativeWorkSeries
-			* Episode
-			* Game
-			* MediaObject
-			* MusicPlaylist
-			* MusicRecording
-			* Organization
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
-
-**Version 2.9.0 (2019/09/17)**
-
-New image dimensions (1:1, 4:3, and 16:9) in Schema Article AMP page markup for Google.
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added new image dimensions in Schema Article AMP page markup for Google:
-		* Schema Article AMP 1:1 (Google).
-		* Schema Article AMP 4:3 (Google).
-		* Schema Article AMP 16:9 (Google).
-	* Added the 'uploadDate' and 'identifier' properties to Schema ImageObject markup.
-	* Added image selection options in the Document SSO metabox for each Schema HowTo step.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
-
 == Upgrade Notice ==
+
+= 2.18.1-b.1 =
+
+(2020/01/15) Minor update for some option labels and their translated strings. Requires at least WPSSO Core v6.17.0.
 
 = 2.18.0 =
 
