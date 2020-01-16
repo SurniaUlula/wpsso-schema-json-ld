@@ -12,7 +12,7 @@ Requires PHP: 5.5
 Requires At Least: 4.0
 Tested Up To: 5.3.2
 WC Tested Up To: 3.8.1
-Stable Tag: 2.18.0
+Stable Tag: 2.19.0
 
 Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPages, HowTos, Images, Local Business, Products, Recipes, Reviews, Videos, and more.
 
@@ -862,7 +862,8 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **New Features**
 	* None.
 * **Improvements**
-	* Minor update for some option labels and their translated strings.
+	* Added support for Schema ItemList markup in the Standard version.
+	* Minor changes to some option labels and their translated strings.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -876,5 +877,5 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.19.0 =
 
-(2020/01/16) Minor update for some option labels and their translated strings. Requires at least WPSSO Core v6.17.0.
+(2020/01/16) Added support for Schema ItemList markup in the Standard version. Requires at least WPSSO Core v6.17.0.
 
