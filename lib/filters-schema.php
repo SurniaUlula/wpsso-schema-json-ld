@@ -515,9 +515,19 @@ if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
 			 *	name
 			 *	alternateName
 			 */
-			$ret[ 'name' ] = $this->p->page->get_title( 0, '', $mod, true, false, true, 'schema_title', false );
+			$ret[ 'name' ] = $this->p->page->get_title( 0, '', $mod, $read_cache = true,
+				$add_hashtags = false, $do_encode = true, $md_key = 'schema_title' );
 
-			$ret[ 'alternateName' ] = $this->p->page->get_title( $this->p->options[ 'og_title_max_len' ], '...', $mod, true, false, true, 'schema_title_alt' );
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->log( 'name value = ' . $ret[ 'name' ] );
+			}
+
+			$ret[ 'alternateName' ] = $this->p->page->get_title( $this->p->options[ 'og_title_max_len' ], '...', $mod, $read_cache = true,
+				$add_hashtags = false, $do_encode = true, $md_key = 'schema_title_alt' );
+
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->log( 'alternateName value = ' . $ret[ 'alternateName' ] );
+			}
 
 			if ( empty( $ret[ 'alternateName' ] ) || $ret[ 'name' ] === $ret[ 'alternateName' ] ) {
 				unset( $ret[ 'alternateName' ] );
