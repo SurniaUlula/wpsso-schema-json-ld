@@ -857,7 +857,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.18.1-b.1 (2020/01/15)**
+**Version 2.18.1-rc.1 (2020/01/16)**
 
 * **New Features**
 	* None.
@@ -923,9 +923,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.18.1-b.1 =
+= 2.18.1-rc.1 =
 
-(2020/01/15) Minor update for some option labels and their translated strings. Requires at least WPSSO Core v6.17.0.
+(2020/01/16) Minor update for some option labels and their translated strings. Requires at least WPSSO Core v6.17.0.
 
 = 2.18.0 =
 
