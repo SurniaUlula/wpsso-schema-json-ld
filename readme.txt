@@ -857,7 +857,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.18.1-rc.1 (2020/01/16)**
+**Version 2.19.0 (2020/01/16)**
 
 * **New Features**
 	* None.
@@ -872,62 +872,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WordPress v4.0.
 	* WPSSO Core v6.17.0.
 
-**Version 2.18.0 (2020/01/05)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Added lib/filters-upgrade.php.
-* **Requires At Least**
-	* PHP v5.5.
-	* WordPress v4.0.
-	* WPSSO Core v6.16.2.
-
-**Version 2.17.2 (2019/12/21)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Minor update to the SSO menu item Schema Markup dashicon.
-	* Added the 'author' and 'datePublished' properties to the 'itemReviewed' array for the Schema ClaimReview type.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Renamed metadata option keys:
-		* 'schema_review_item_product_mpn' to 'schema_review_item_product_mfr_part_no'.
-		* 'schema_review_item_product_sku' to 'schema_review_item_product_retailer_part_no'.
-	* Updated minimum WordPress version required from 3.9 to 4.0.
-* **Requires At Least**
-	* PHP v5.5.
-	* WordPress v4.0.
-	* WPSSO Core v6.16.1.
-
-**Version 2.17.1 (2019/12/13)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Minor update to improve a Document SSO option label and its translation.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Modified checks for additional ld+json in the content to assign found ld+json as 'hasPart' and not 'mentions'.
-* **Requires At Least**
-	* PHP v5.5.
-	* WordPress v3.9.
-	* WPSSO Core v6.16.0.
-
 == Upgrade Notice ==
 
-= 2.18.1-rc.1 =
+= 2.19.0 =
 
 (2020/01/16) Minor update for some option labels and their translated strings. Requires at least WPSSO Core v6.17.0.
-
-= 2.18.0 =
-
-(2020/01/05) Added lib/filters-upgrade.php.
 
