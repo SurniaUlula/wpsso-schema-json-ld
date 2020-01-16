@@ -37,6 +37,7 @@ if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
 				'json_data_graph_element'                 => 5,
 				'json_data_https_schema_org_blog'         => 5,
 				'json_data_https_schema_org_creativework' => 5,
+				'json_data_https_schema_org_itemlist'     => 5,
 				'json_data_https_schema_org_thing'        => 5,
 			), $prio = -10000 );	// Make sure we run first.
 		}
@@ -370,6 +371,23 @@ if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
 			WpssoJsonSchema::add_comment_list_data( $ret, $mod );
 
 			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+		}
+
+		public function filter_json_data_https_schema_org_itemlist( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
+
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->mark();
+			}
+
+			$ppp = SucomUtil::get_const( 'WPSSO_SCHEMA_ITEMS_PER_LIST_MAX', 200 );
+
+			WpssoJsonSchema::add_itemlist_data( $json_data, $mod, $mt_og, $page_type_id, $is_main, $ppp );
+
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->log_arr( '$json_data', $json_data );
+			}
+
+			return $json_data;
 		}
 
 		/**
