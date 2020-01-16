@@ -51,7 +51,6 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 								'faqpage'             => '(code) Schema Type FAQPage (schema_type:webpage.faq)',
 								'foodestablishment'   => '(code) Schema Type Food Establishment (schema_type:food.establishment)',
 								'howto'               => '(code) Schema Type How-To (schema_type:how.to)',
-								'itemlist'            => '(code) Schema Type Item List (schema_type:item.list)',
 								'jobposting'          => '(code) Schema Type Job Posting (schema_type:job.posting)',
 								'localbusiness'       => '(code) Schema Type Local Business (schema_type:local.business)',
 								'movie'               => '(code) Schema Type Movie (schema_type:movie)',

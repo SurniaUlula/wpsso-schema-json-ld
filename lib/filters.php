@@ -586,18 +586,42 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 		public function filter_status_std_features( $features, $ext, $info, $pkg ) {
 
 			$features = array(
+
+				/**
+				 * See WpssoJsonFiltersSchema->filter_json_data_https_schema_org_creativework().
+				 */
 				'(code) Schema Type Article (schema_type:article)' => array(
 					'sub'    => 'head',
 					'status' => 'on',
 				),
+
+				/**
+				 * See WpssoJsonFiltersSchema->filter_json_data_https_schema_org_blog().
+				 */
 				'(code) Schema Type Blog (schema_type:blog)' => array(
 					'sub'    => 'head',
 					'status' => 'on',
 				),
+
+				/**
+				 * See WpssoJsonFiltersSchema->filter_json_data_https_schema_org_creativework().
+				 */
 				'(code) Schema Type CreativeWork (schema_type:creative.work)' => array(
 					'sub'    => 'head',
 					'status' => 'on',
 				),
+
+				/**
+				 * See WpssoJsonFiltersSchema->filter_json_data_https_schema_org_itemlist().
+				 */
+				'(code) Schema Type ItemList (schema_type:item.list)' => array(
+					'sub'    => 'head',
+					'status' => 'on',
+				),
+
+				/**
+				 * See WpssoJsonFiltersSchema->filter_json_data_https_schema_org_thing().
+				 */
 				'(code) Schema Type Thing (schema_type:thing)' => array(
 					'sub'    => 'head',
 					'status' => 'on',
