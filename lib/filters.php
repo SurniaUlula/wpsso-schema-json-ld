@@ -20,6 +20,17 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 		public function __construct( &$plugin ) {
 
+			/**
+			 * Just in case - prevent filters from being hooked and executed more than once.
+			 */
+			static $do_once = null;
+
+			if ( true === $do_once ) {
+				return;	// Stop here.
+			}
+
+			$do_once = true;
+
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
@@ -33,7 +44,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				require_once WPSSOJSON_PLUGINDIR . 'lib/filters-schema.php';
 			}
 
-			$this->schema = new WpssoJsonFiltersschema( $plugin );
+			$this->schema = new WpssoJsonFiltersSchema( $plugin );
 
 			/**
 			 * Instantiate the WpssoJsonFiltersUpgrade class object.
@@ -42,12 +53,12 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				require_once WPSSOJSON_PLUGINDIR . 'lib/filters-upgrade.php';
 			}
 
-			$this->upg = new WpssoJsonFiltersschema( $plugin );
+			$this->upg = new WpssoJsonFiltersUpgrade( $plugin );
 
 			$this->p->util->add_plugin_filters( $this, array(
-				'get_md_defaults'   => 2,
-				'save_post_options' => 4,
 				'option_type'       => 2,
+				'save_post_options' => 4,
+				'get_md_defaults'   => 2,
 			) );
 
 			if ( is_admin() ) {
@@ -70,6 +81,283 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 					'status_pro_features' => 4,
 				), $prio = 10, $ext = 'wpssojson' );	// Hook to wpssojson filters.
 			}
+		}
+
+		public function filter_option_type( $type, $base_key ) {
+
+			if ( ! empty( $type ) ) {
+				return $type;
+			} elseif ( strpos( $base_key, 'schema_' ) !== 0 ) {
+				return $type;
+			}
+
+			switch ( $base_key ) {
+
+				case 'schema_title':				// Name / Title.
+				case 'schema_title_alt':			// Alternate Name.
+				case 'schema_desc':				// Description.
+				case 'schema_headline':				// Headline.
+				case 'schema_text':				// Full Text.
+				case 'schema_copyright_year':			// Copyright Year.
+				case 'schema_event_offer_name':
+				case 'schema_howto_step':			// How-To Step Name.
+				case 'schema_howto_step_text':			// How-To Direction Text.
+				case 'schema_howto_supply':			// How-To Supplies.
+				case 'schema_howto_tool':			// How-To Tools.
+				case 'schema_howto_yield':			// How-To Makes.
+				case 'schema_job_title':
+				case 'schema_job_currency':
+				case 'schema_movie_actor_person_name':		// Movie Cast Names.
+				case 'schema_movie_director_person_name':	// Movie Director Names.
+				case 'schema_person_job_title':
+				case 'schema_recipe_cook_method':
+				case 'schema_recipe_course':
+				case 'schema_recipe_cuisine':
+				case 'schema_recipe_ingredient':		// Recipe Ingredients.
+				case 'schema_recipe_instruction':		// Recipe Instructions.
+				case 'schema_recipe_nutri_serv':
+				case 'schema_recipe_yield':			// Recipe Makes.
+				case 'schema_review_rating_alt_name':
+				case 'schema_review_claim_reviewed':
+				case 'schema_review_item_name':					// Reviewed Subject Name.
+				case 'schema_review_item_desc':					// Reviewed Subject Description.
+				case 'schema_review_item_cw_book_isbn':				// Reviewed Book ISBN.
+				case 'schema_review_item_cw_author_name':			// Reviewed CW Author Name.
+				case 'schema_review_item_cw_movie_actor_person_name':		// Reviewed Movie Cast Names.
+				case 'schema_review_item_cw_movie_director_person_name':	// Reviewed Movie Director Names.
+				case 'schema_software_app_os':
+
+					return 'one_line';
+
+					break;
+
+				case 'schema_keywords':				// Keywords.
+
+					return 'csv_blank';
+
+					break;
+
+				case 'schema_def_event_location_id':		// Default Event Venue.
+				case 'schema_def_event_organizer_org_id':	// Default Organizer Org.
+				case 'schema_def_event_organizer_person_id':	// Default Organizer Person.
+				case 'schema_def_event_performer_org_id':	// Default Performer Org.
+				case 'schema_def_event_performer_person_id':	// Default Performer Person.
+				case 'schema_def_family_friendly':		// Default Family Friendly.
+				case 'schema_def_job_hiring_org_id':		// Default Hiring Organization.
+				case 'schema_def_job_location_id':		// Default Job Location.
+				case 'schema_def_prov_org_id':			// Default Publisher.
+				case 'schema_def_pub_org_id':			// Default Publisher.
+				case 'schema_def_review_item_type':		// Default Subject Webpage Type.
+				case 'schema_event_lang':			// Event Language.
+				case 'schema_event_location_id':		// Event Venue.
+				case 'schema_event_offer_currency':
+				case 'schema_event_offer_avail':
+				case 'schema_event_organizer_org_id':		// Event Organizer Org.
+				case 'schema_event_organizer_person_id':	// Event Organizer Person.
+				case 'schema_event_performer_org_id':		// Event Performer Org.
+				case 'schema_event_performer_person_id':	// Event Performer Person.
+				case 'schema_family_friendly':			// Family Friendly.
+				case 'schema_job_hiring_org_id':		// Hiring Organization.
+				case 'schema_job_location_id':			// Job Location.
+				case 'schema_job_salary_currency':
+				case 'schema_job_salary_period':
+				case 'schema_lang':				// Language.
+				case 'schema_movie_prodco_org_id':		// Production Company.
+				case 'schema_prov_org_id':			// Provider.
+				case 'schema_pub_org_id':			// Publisher.
+				case 'schema_review_item_type':			// Reviewed Subject Webpage Type.
+				case 'schema_review_item_cw_author_type':	// Reviewed Subject Author Type.
+				case 'schema_type':				// Schema Type.
+
+					return 'not_blank';
+
+					break;
+
+				case 'schema_howto_prep_days':			// How-To Preparation Time.
+				case 'schema_howto_prep_hours':
+				case 'schema_howto_prep_mins':
+				case 'schema_howto_prep_secs':
+				case 'schema_howto_total_days':			// How-To Total Time.
+				case 'schema_howto_total_hours':
+				case 'schema_howto_total_mins':
+				case 'schema_howto_total_secs':
+				case 'schema_movie_duration_days':		// Movie Runtime.
+				case 'schema_movie_duration_hours':
+				case 'schema_movie_duration_mins':
+				case 'schema_movie_duration_secs':
+				case 'schema_recipe_prep_days':			// Recipe Preparation Time.
+				case 'schema_recipe_prep_hours':
+				case 'schema_recipe_prep_mins':
+				case 'schema_recipe_prep_secs':
+				case 'schema_recipe_cook_days':			// Recipe Cooking Time.
+				case 'schema_recipe_cook_hours':
+				case 'schema_recipe_cook_mins':
+				case 'schema_recipe_cook_secs':
+				case 'schema_recipe_total_days':		// Recipe Total Time.
+				case 'schema_recipe_total_hours':
+				case 'schema_recipe_total_mins':
+				case 'schema_recipe_total_secs':
+
+					return 'pos_int';
+
+					break;
+
+				case 'schema_event_offer_price':
+				case 'schema_job_salary':
+				case 'schema_recipe_nutri_cal':
+				case 'schema_recipe_nutri_prot':
+				case 'schema_recipe_nutri_fib':
+				case 'schema_recipe_nutri_carb':
+				case 'schema_recipe_nutri_sugar':
+				case 'schema_recipe_nutri_sod':
+				case 'schema_recipe_nutri_fat':
+				case 'schema_recipe_nutri_sat_fat':
+				case 'schema_recipe_nutri_unsat_fat':
+				case 'schema_recipe_nutri_chol':
+				case 'schema_review_rating':
+				case 'schema_review_rating_from':
+				case 'schema_review_rating_to':
+
+					return 'blank_num';
+
+					break;
+
+				case 'schema_addl_type_url':			// Microdata Type URLs.
+				case 'schema_sameas_url':			// Same-As URLs.
+				case 'schema_ispartof_url':			// Is Part of URL.
+				case 'schema_license_url':			// License URL.
+				case 'schema_review_item_url':			// Reviewed Subject Webpage URL.
+				case 'schema_review_item_sameas_url':		// Reviewed Subject Same-As URL.
+				case 'schema_review_item_cw_author_url':	// Reviewed Subject Author URL.
+				case 'schema_review_claim_first_url':		// First Appearance URL.
+
+					return 'url';
+
+					break;
+
+				case 'schema_howto_step_section':		// How-To Section (radio buttons).
+
+					return 'checkbox';
+
+					break;
+			}
+
+			return $type;
+		}
+
+		public function filter_save_post_options( $md_opts, $post_id, $rel_id, $mod ) {
+
+			$md_defs = $this->filter_get_md_defaults( array(), $mod );	// Only get the schema options.
+
+			/**
+			 * Check for default recipe values.
+			 */
+			foreach ( SucomUtil::preg_grep_keys( '/^schema_recipe_(prep|cook|total)_(days|hours|mins|secs)$/', $md_opts ) as $md_key => $value ) {
+
+				$md_opts[ $md_key ] = (int) $value;
+
+				if ( $md_opts[ $md_key ] === $md_defs[ $md_key ] ) {
+					unset( $md_opts[ $md_key ] );
+				}
+			}
+
+			/**
+			 * If the review rating is 0, remove the review rating options. If we have a review rating, then make sure
+			 * there's a from/to as well.
+			 */
+			if ( empty( $md_opts[ 'schema_review_rating' ] ) ) {
+
+				foreach ( array( 'schema_review_rating', 'schema_review_rating_from', 'schema_review_rating_to' ) as $md_key ) {
+					unset( $md_opts[ $md_key ] );
+				}
+
+			} else {
+
+				foreach ( array( 'schema_review_rating_from', 'schema_review_rating_to' ) as $md_key ) {
+
+					if ( empty( $md_opts[ $md_key ] ) && isset( $md_defs[ $md_key ] ) ) {
+						$md_opts[ $md_key ] = $md_defs[ $md_key ];
+					}
+				}
+			}
+
+			foreach ( array( 'schema_event_start', 'schema_event_end' ) as $md_pre ) {
+
+				/**
+				 * Unset date / time if same as the default value.
+				 */
+				foreach ( array( 'date', 'time', 'timezone' ) as $md_ext ) {
+
+					if ( isset( $md_opts[ $md_pre . '_' . $md_ext ] ) &&
+						( $md_opts[ $md_pre . '_' . $md_ext ] === $md_defs[ $md_pre . '_' . $md_ext ] ||
+							$md_opts[ $md_pre . '_' . $md_ext ] === 'none' ) ) {
+
+						unset( $md_opts[ $md_pre . '_' . $md_ext ] );
+					}
+				}
+
+				if ( empty( $md_opts[ $md_pre . '_date' ] ) && empty( $md_opts[ $md_pre . '_time' ] ) ) {		// No date or time.
+
+					unset( $md_opts[ $md_pre . '_timezone' ] );
+
+					continue;
+
+				} elseif ( ! empty( $md_opts[ $md_pre . '_date' ] ) && empty( $md_opts[ $md_pre . '_time' ] ) ) {	// Date with no time.
+
+					$md_opts[ $md_pre . '_time' ] = '00:00';
+
+				} elseif ( empty( $md_opts[ $md_pre . '_date' ] ) && ! empty( $md_opts[ $md_pre . '_time' ] ) ) {	// Time with no date.
+
+					$md_opts[ $md_pre . '_date' ] = gmdate( 'Y-m-d', time() );
+				}
+			}
+
+			/**
+			 * Sanitize the offer options.
+			 */
+			$metadata_offers_max = SucomUtil::get_const( 'WPSSO_SCHEMA_METADATA_OFFERS_MAX', 5 );
+
+			foreach( array(
+				'schema_event',
+				'schema_review_item_product',
+			) as $md_pre ) {
+
+				foreach ( range( 0, $metadata_offers_max - 1, 1 ) as $key_num ) {
+
+					$is_valid_offer = false;
+
+					foreach ( array(
+						$md_pre . '_offer_name',
+						$md_pre . '_offer_price'
+					) as $md_offer_pre ) {
+
+						if ( isset( $md_opts[ $md_offer_pre . '_' . $key_num] ) && $md_opts[ $md_offer_pre . '_' . $key_num] !== '' ) {
+							$is_valid_offer = true;
+						}
+					}
+
+					if ( ! $is_valid_offer ) {
+						unset( $md_opts[ $md_pre . '_offer_currency_' . $key_num] );
+						unset( $md_opts[ $md_pre . '_offer_avail_' . $key_num] );
+					}
+				}
+			}
+
+			if ( isset( $md_opts[ 'schema_type' ] ) && 'review.claim' === $md_opts[ 'schema_type' ] ) {
+			
+				if ( isset( $md_opts[ 'schema_review_item_type' ] ) && 'review.claim' === $md_opts[ 'schema_review_item_type' ] ) {
+
+					$md_opts[ 'schema_review_item_type' ] = $this->p->options[ 'schema_def_review_item_type' ];
+
+					$notice_msg = __( 'A claim review cannot be the subject of another claim review.', 'wpsso-schema-json-ld' ) . ' ';
+
+					$notice_msg .= __( 'Please select a subject webpage type that better describes the subject of the webpage (ie. the content) being reviewed.', 'wpsso-schema-json-ld' );
+
+					$this->p->notice->err( $notice_msg );
+				}
+			}
+
+			return $md_opts;
 		}
 
 		public function filter_get_md_defaults( $md_defs, $mod ) {
@@ -249,283 +537,6 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			$md_defs = array_merge( $md_defs, $schema_md_defs );
 
 			return $md_defs;
-		}
-
-		public function filter_save_post_options( $md_opts, $post_id, $rel_id, $mod ) {
-
-			$md_defs = $this->filter_get_md_defaults( array(), $mod );	// Only get the schema options.
-
-			/**
-			 * Check for default recipe values.
-			 */
-			foreach ( SucomUtil::preg_grep_keys( '/^schema_recipe_(prep|cook|total)_(days|hours|mins|secs)$/', $md_opts ) as $md_key => $value ) {
-
-				$md_opts[ $md_key ] = (int) $value;
-
-				if ( $md_opts[ $md_key ] === $md_defs[ $md_key ] ) {
-					unset( $md_opts[ $md_key ] );
-				}
-			}
-
-			/**
-			 * If the review rating is 0, remove the review rating options. If we have a review rating, then make sure
-			 * there's a from/to as well.
-			 */
-			if ( empty( $md_opts[ 'schema_review_rating' ] ) ) {
-
-				foreach ( array( 'schema_review_rating', 'schema_review_rating_from', 'schema_review_rating_to' ) as $md_key ) {
-					unset( $md_opts[ $md_key ] );
-				}
-
-			} else {
-
-				foreach ( array( 'schema_review_rating_from', 'schema_review_rating_to' ) as $md_key ) {
-
-					if ( empty( $md_opts[ $md_key ] ) && isset( $md_defs[ $md_key ] ) ) {
-						$md_opts[ $md_key ] = $md_defs[ $md_key ];
-					}
-				}
-			}
-
-			foreach ( array( 'schema_event_start', 'schema_event_end' ) as $md_pre ) {
-
-				/**
-				 * Unset date / time if same as the default value.
-				 */
-				foreach ( array( 'date', 'time', 'timezone' ) as $md_ext ) {
-
-					if ( isset( $md_opts[ $md_pre . '_' . $md_ext ] ) &&
-						( $md_opts[ $md_pre . '_' . $md_ext ] === $md_defs[ $md_pre . '_' . $md_ext ] ||
-							$md_opts[ $md_pre . '_' . $md_ext ] === 'none' ) ) {
-
-						unset( $md_opts[ $md_pre . '_' . $md_ext ] );
-					}
-				}
-
-				if ( empty( $md_opts[ $md_pre . '_date' ] ) && empty( $md_opts[ $md_pre . '_time' ] ) ) {		// No date or time.
-
-					unset( $md_opts[ $md_pre . '_timezone' ] );
-
-					continue;
-
-				} elseif ( ! empty( $md_opts[ $md_pre . '_date' ] ) && empty( $md_opts[ $md_pre . '_time' ] ) ) {	// Date with no time.
-
-					$md_opts[ $md_pre . '_time' ] = '00:00';
-
-				} elseif ( empty( $md_opts[ $md_pre . '_date' ] ) && ! empty( $md_opts[ $md_pre . '_time' ] ) ) {	// Time with no date.
-
-					$md_opts[ $md_pre . '_date' ] = gmdate( 'Y-m-d', time() );
-				}
-			}
-
-			/**
-			 * Sanitize the offer options.
-			 */
-			$metadata_offers_max = SucomUtil::get_const( 'WPSSO_SCHEMA_METADATA_OFFERS_MAX', 5 );
-
-			foreach( array(
-				'schema_event',
-				'schema_review_item_product',
-			) as $md_pre ) {
-
-				foreach ( range( 0, $metadata_offers_max - 1, 1 ) as $key_num ) {
-
-					$is_valid_offer = false;
-
-					foreach ( array(
-						$md_pre . '_offer_name',
-						$md_pre . '_offer_price'
-					) as $md_offer_pre ) {
-
-						if ( isset( $md_opts[ $md_offer_pre . '_' . $key_num] ) && $md_opts[ $md_offer_pre . '_' . $key_num] !== '' ) {
-							$is_valid_offer = true;
-						}
-					}
-
-					if ( ! $is_valid_offer ) {
-						unset( $md_opts[ $md_pre . '_offer_currency_' . $key_num] );
-						unset( $md_opts[ $md_pre . '_offer_avail_' . $key_num] );
-					}
-				}
-			}
-
-			if ( isset( $md_opts[ 'schema_type' ] ) && 'review.claim' === $md_opts[ 'schema_type' ] ) {
-			
-				if ( isset( $md_opts[ 'schema_review_item_type' ] ) && 'review.claim' === $md_opts[ 'schema_review_item_type' ] ) {
-
-					$md_opts[ 'schema_review_item_type' ] = $this->p->options[ 'schema_def_review_item_type' ];
-
-					$notice_msg = __( 'A claim review cannot be the subject of another claim review.', 'wpsso-schema-json-ld' ) . ' ';
-
-					$notice_msg .= __( 'Please select a subject webpage type that better describes the subject of the webpage (ie. the content) being reviewed.', 'wpsso-schema-json-ld' );
-
-					$this->p->notice->err( $notice_msg );
-				}
-			}
-
-			return $md_opts;
-		}
-
-		public function filter_option_type( $type, $base_key ) {
-
-			if ( ! empty( $type ) ) {
-				return $type;
-			} elseif ( strpos( $base_key, 'schema_' ) !== 0 ) {
-				return $type;
-			}
-
-			switch ( $base_key ) {
-
-				case 'schema_title':				// Name / Title.
-				case 'schema_title_alt':			// Alternate Name.
-				case 'schema_desc':				// Description.
-				case 'schema_headline':				// Headline.
-				case 'schema_text':				// Full Text.
-				case 'schema_copyright_year':			// Copyright Year.
-				case 'schema_event_offer_name':
-				case 'schema_howto_step':			// How-To Step Name.
-				case 'schema_howto_step_text':			// How-To Direction Text.
-				case 'schema_howto_supply':			// How-To Supplies.
-				case 'schema_howto_tool':			// How-To Tools.
-				case 'schema_howto_yield':			// How-To Makes.
-				case 'schema_job_title':
-				case 'schema_job_currency':
-				case 'schema_movie_actor_person_name':		// Movie Cast Names.
-				case 'schema_movie_director_person_name':	// Movie Director Names.
-				case 'schema_person_job_title':
-				case 'schema_recipe_cook_method':
-				case 'schema_recipe_course':
-				case 'schema_recipe_cuisine':
-				case 'schema_recipe_ingredient':		// Recipe Ingredients.
-				case 'schema_recipe_instruction':		// Recipe Instructions.
-				case 'schema_recipe_nutri_serv':
-				case 'schema_recipe_yield':			// Recipe Makes.
-				case 'schema_review_rating_alt_name':
-				case 'schema_review_claim_reviewed':
-				case 'schema_review_item_name':					// Reviewed Subject Name.
-				case 'schema_review_item_desc':					// Reviewed Subject Description.
-				case 'schema_review_item_cw_book_isbn':				// Reviewed Book ISBN.
-				case 'schema_review_item_cw_author_name':			// Reviewed CW Author Name.
-				case 'schema_review_item_cw_movie_actor_person_name':		// Reviewed Movie Cast Names.
-				case 'schema_review_item_cw_movie_director_person_name':	// Reviewed Movie Director Names.
-				case 'schema_software_app_os':
-
-					return 'one_line';
-
-					break;
-
-				case 'schema_keywords':				// Keywords.
-
-					return 'csv_blank';
-
-					break;
-
-				case 'schema_def_event_location_id':		// Default Event Venue.
-				case 'schema_def_event_organizer_org_id':	// Default Organizer Org.
-				case 'schema_def_event_organizer_person_id':	// Default Organizer Person.
-				case 'schema_def_event_performer_org_id':	// Default Performer Org.
-				case 'schema_def_event_performer_person_id':	// Default Performer Person.
-				case 'schema_def_family_friendly':		// Default Family Friendly.
-				case 'schema_def_job_hiring_org_id':		// Default Hiring Organization.
-				case 'schema_def_job_location_id':		// Default Job Location.
-				case 'schema_def_prov_org_id':			// Default Publisher.
-				case 'schema_def_pub_org_id':			// Default Publisher.
-				case 'schema_def_review_item_type':		// Default Subject Webpage Type.
-				case 'schema_event_lang':			// Event Language.
-				case 'schema_event_location_id':		// Event Venue.
-				case 'schema_event_offer_currency':
-				case 'schema_event_offer_avail':
-				case 'schema_event_organizer_org_id':		// Event Organizer Org.
-				case 'schema_event_organizer_person_id':	// Event Organizer Person.
-				case 'schema_event_performer_org_id':		// Event Performer Org.
-				case 'schema_event_performer_person_id':	// Event Performer Person.
-				case 'schema_family_friendly':			// Family Friendly.
-				case 'schema_job_hiring_org_id':		// Hiring Organization.
-				case 'schema_job_location_id':			// Job Location.
-				case 'schema_job_salary_currency':
-				case 'schema_job_salary_period':
-				case 'schema_lang':				// Language.
-				case 'schema_movie_prodco_org_id':		// Production Company.
-				case 'schema_prov_org_id':			// Provider.
-				case 'schema_pub_org_id':			// Publisher.
-				case 'schema_review_item_type':			// Reviewed Subject Webpage Type.
-				case 'schema_review_item_cw_author_type':	// Reviewed Subject Author Type.
-				case 'schema_type':				// Schema Type.
-
-					return 'not_blank';
-
-					break;
-
-				case 'schema_howto_prep_days':			// How-To Preparation Time.
-				case 'schema_howto_prep_hours':
-				case 'schema_howto_prep_mins':
-				case 'schema_howto_prep_secs':
-				case 'schema_howto_total_days':			// How-To Total Time.
-				case 'schema_howto_total_hours':
-				case 'schema_howto_total_mins':
-				case 'schema_howto_total_secs':
-				case 'schema_movie_duration_days':		// Movie Runtime.
-				case 'schema_movie_duration_hours':
-				case 'schema_movie_duration_mins':
-				case 'schema_movie_duration_secs':
-				case 'schema_recipe_prep_days':			// Recipe Preparation Time.
-				case 'schema_recipe_prep_hours':
-				case 'schema_recipe_prep_mins':
-				case 'schema_recipe_prep_secs':
-				case 'schema_recipe_cook_days':			// Recipe Cooking Time.
-				case 'schema_recipe_cook_hours':
-				case 'schema_recipe_cook_mins':
-				case 'schema_recipe_cook_secs':
-				case 'schema_recipe_total_days':		// Recipe Total Time.
-				case 'schema_recipe_total_hours':
-				case 'schema_recipe_total_mins':
-				case 'schema_recipe_total_secs':
-
-					return 'pos_int';
-
-					break;
-
-				case 'schema_event_offer_price':
-				case 'schema_job_salary':
-				case 'schema_recipe_nutri_cal':
-				case 'schema_recipe_nutri_prot':
-				case 'schema_recipe_nutri_fib':
-				case 'schema_recipe_nutri_carb':
-				case 'schema_recipe_nutri_sugar':
-				case 'schema_recipe_nutri_sod':
-				case 'schema_recipe_nutri_fat':
-				case 'schema_recipe_nutri_sat_fat':
-				case 'schema_recipe_nutri_unsat_fat':
-				case 'schema_recipe_nutri_chol':
-				case 'schema_review_rating':
-				case 'schema_review_rating_from':
-				case 'schema_review_rating_to':
-
-					return 'blank_num';
-
-					break;
-
-				case 'schema_addl_type_url':			// Microdata Type URLs.
-				case 'schema_sameas_url':			// Same-As URLs.
-				case 'schema_ispartof_url':			// Is Part of URL.
-				case 'schema_license_url':			// License URL.
-				case 'schema_review_item_url':			// Reviewed Subject Webpage URL.
-				case 'schema_review_item_sameas_url':		// Reviewed Subject Same-As URL.
-				case 'schema_review_item_cw_author_url':	// Reviewed Subject Author URL.
-				case 'schema_review_claim_first_url':		// First Appearance URL.
-
-					return 'url';
-
-					break;
-
-				case 'schema_howto_step_section':		// How-To Section (radio buttons).
-
-					return 'checkbox';
-
-					break;
-			}
-
-			return $type;
 		}
 
 		public function filter_post_cache_transient_keys( $transient_keys, $mod, $sharing_url, $mod_salt ) {
