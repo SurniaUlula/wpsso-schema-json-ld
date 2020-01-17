@@ -12,7 +12,7 @@ Requires PHP: 5.5
 Requires At Least: 4.0
 Tested Up To: 5.3.2
 WC Tested Up To: 3.8.1
-Stable Tag: 2.19.0
+Stable Tag: 2.19.1
 
 Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPages, HowTos, Images, Local Business, Products, Recipes, Reviews, Videos, and more.
 
@@ -857,6 +857,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.19.1 (2020/01/17)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* Fixed a duplicate instantiation of the WpssoJsonFiltersSchema class.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v5.5.
+	* WordPress v4.0.
+	* WPSSO Core v6.17.0.
+
 **Version 2.19.0 (2020/01/16)**
 
 * **New Features**
@@ -875,7 +890,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.19.0 =
+= 2.19.1 =
 
-(2020/01/16) Added support for Schema ItemList markup in the Standard version. Requires at least WPSSO Core v6.17.0.
+(2020/01/17) Fixed a duplicate instantiation of the WpssoJsonFiltersSchema class.
 
