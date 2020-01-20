@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 			'plugin' => array(
 				'wpssojson' => array(			// Plugin acronym.
 					'version'     => '2.19.1',	// Plugin version.
-					'opt_version' => '38',		// Increment when changing default option values.
+					'opt_version' => '39',		// Increment when changing default option values.
 					'short'       => 'WPSSO JSON',	// Short plugin name.
 					'name'        => 'WPSSO Schema JSON-LD Markup',
 					'desc'        => 'Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPages, HowTos, Images, Local Business, Products, Recipes, Reviews, Videos, and more.',
