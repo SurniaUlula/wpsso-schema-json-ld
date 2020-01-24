@@ -627,8 +627,7 @@ if ( ! class_exists( 'WpssoJsonSchema' ) ) {
 			$json_data[ 'commentCount' ] = get_comments_number( $mod[ 'id' ] );
 
 			/**
-			 * Only get parent comments. The add_single_comment_data() method 
-			 * will recurse and add the children.
+			 * Only get parent comments. The add_single_comment_data() method will recurse and add the children.
 			 */
 			$comments = get_comments( array(
 				'post_id' => $mod[ 'id' ],
@@ -939,8 +938,7 @@ if ( ! class_exists( 'WpssoJsonSchema' ) ) {
 						break;
 				}
 
-				$row_class[ $class_name ] = $wpsso->schema->get_children_css_class( $type_id,
-					$class_prefix = 'hide_' . $name, $exclude_match );
+				$row_class[ $class_name ] = $wpsso->schema->get_children_css_class( $type_id, $class_prefix = 'hide_' . $name, $exclude_match );
 			}
 
 			return $row_class;
