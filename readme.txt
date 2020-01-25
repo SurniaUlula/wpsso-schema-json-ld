@@ -65,11 +65,12 @@ Additional e-Commerce plugin integration is also provided with the WPSSO Core Pr
 
 * Extends the features of the WPSSO Core plugin.
 
-* Provides Schema properties as JSON-LD markup (aka Google Rich Results / Rich Snippets with Structured Data) for the following Schema types (more specific Schema type properties are available in the Premium version):
+* Provides Schema properties as JSON-LD markup (aka Google Rich Results / Rich Snippets with Structured Data) for the following Schema types, including Schema ItemList for [Google's Carousel Rich Results](https://developers.google.com/search/docs/guides/mark-up-listings) (more specific Schema type properties are available in the Premium version):
 
 	* [schema.org/Article](https://schema.org/Article) (includes 19 Schema sub-types)
 	* [schema.org/Blog](https://schema.org/Blog)
 	* [schema.org/CreativeWork](https://schema.org/CreativeWork) (includes 86 Schema sub-types)
+	* [schema.org/ItemList](https://schema.org/ItemList) (includes 5 Schema sub-types)
 	* [schema.org/Thing](https://schema.org/Thing) (includes 1457 Schema sub-types)
 
 * Automatically includes Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google Rich Results / Rich Snippets (see the [Google Article AMP structured data guidelines](https://developers.google.com/search/docs/data-types/article#amp-sd) for details on this new requirement from Google).
@@ -186,7 +187,7 @@ Additional e-Commerce plugin integration is also provided with the WPSSO Core Pr
 
 The Standard version is designed to satisfy the requirements of most standard WordPress sites / blogs. If your site requires additional Schema properties, for WooCommerce products, events, places / locations, recipes, etc., then you may want the Premium version for those additional features.
 
-* Provides Schema properties as JSON-LD markup (aka Google Rich Results / Rich Snippets with Structured Data) for the following Schema types, including Schema ItemList for [Google's Carousel Rich Results](https://developers.google.com/search/docs/guides/mark-up-listings):
+* Provides Schema properties as JSON-LD markup (aka Google Rich Results / Rich Snippets with Structured Data) for the following Schema types:
 
 	* [schema.org/Article](https://schema.org/Article) (includes 19 Schema sub-types)
 	* [schema.org/Blog](https://schema.org/Blog)
@@ -199,7 +200,6 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 	* [schema.org/FAQPage](https://schema.org/FAQPage)
 	* [schema.org/FoodEstablishment](https://schema.org/FoodEstablishment) (includes 17 Schema sub-types)
 	* [schema.org/HowTo](https://schema.org/HowTo) (includes 2 Schema sub-types)
-	* [schema.org/ItemList](https://schema.org/ItemList) (includes 5 Schema sub-types)
 	* [schema.org/JobPosting](https://schema.org/JobPosting)
 	* [schema.org/LocalBusiness](https://schema.org/LocalBusiness) (includes 479 Schema sub-types)
 	* [schema.org/Movie](https://schema.org/Movie)
