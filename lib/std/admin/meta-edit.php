@@ -106,12 +106,6 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 			) );
 
 			/**
-			 * Remove and re-create.
-			 */
-			unset( $table_rows[ 'subsection_schema' ] );
-			unset( $table_rows[ 'schema_desc' ] );
-
-			/**
 			 * Metabox form rows.
 			 */
 			$form_rows = array(
@@ -1170,6 +1164,11 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
 				),
 			);
+
+			/**
+			 * Remove and re-create any inherited Schema options.
+			 */
+			SucomUtil::preg_grep_keys( '/^(subsection_schema|schema_)/', $table_rows, $invert = true );
 
 			return $form->get_md_form_rows( $table_rows, $form_rows, $head, $mod );
 		}
