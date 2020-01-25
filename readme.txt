@@ -866,7 +866,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* None.
+	* Improved the handling of inherited options in the Document SSO metabox.
 * **Requires At Least**
 	* PHP v5.5.
 	* WordPress v4.0.
@@ -907,7 +907,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.19.2-dev.1 =
 
-(2020/01/25) None.
+(2020/01/25) Improved the handling of inherited options in the Document SSO metabox.
 
 = 2.19.1 =
 
