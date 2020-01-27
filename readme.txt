@@ -857,7 +857,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.19.2-dev.1 (2020/01/25)**
+**Version 2.20.0-dev.2 (2020/01/27)**
 
 * **New Features**
 	* None.
@@ -867,6 +867,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None.
 * **Developer Notes**
 	* Improved the handling of inherited options in the Document SSO metabox.
+	* Moved all methods from WpssoJsonSchema to the WpssoSchema class in WPSSO Core v6.18.0.
+	* Removed the WpssoJson->schema variable.
+	* Removed the lib/schema.php library file.
 * **Requires At Least**
 	* PHP v5.5.
 	* WordPress v4.0.
@@ -905,9 +908,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.19.2-dev.1 =
+= 2.20.0-dev.2 =
 
-(2020/01/25) Improved the handling of inherited options in the Document SSO metabox.
+(2020/01/27) Improved the handling of inherited options in the Document SSO metabox. Moved all methods from WpssoJsonSchema to the WpssoSchema class in WPSSO Core v6.18.0.
 
 = 2.19.1 =
 
