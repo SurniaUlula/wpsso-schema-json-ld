@@ -15,7 +15,7 @@
  * Requires At Least: 4.0
  * Tested Up To: 5.3.2
  * WC Tested Up To: 3.9.0
- * Version: 2.19.2-dev.1
+ * Version: 2.20.0-dev.2
  * 
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -45,7 +45,6 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 		 */
 		public $filters;	// WpssoJsonFilters
 		public $reg;		// WpssoJsonRegister
-		public $schema;		// WpssoJsonSchema
 
 		/**
 		 * Reference Variables (config, options, modules, etc.).
@@ -201,7 +200,6 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 			}
 
 			$this->filters = new WpssoJsonFilters( $this->p );
-			$this->schema  = new WpssoJsonSchema( $this->p );
 		}
 
 		public function wpsso_init_plugin() {

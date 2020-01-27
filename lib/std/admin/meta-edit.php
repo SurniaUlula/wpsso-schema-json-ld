@@ -100,8 +100,8 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 			/**
 			 * Javascript classes to hide/show rows by selected schema type.
 			 */
-			$schema_type_row_class             = WpssoJsonSchema::get_type_row_class( 'schema_type' );
-			$schema_review_item_type_row_class = WpssoJsonSchema::get_type_row_class( 'schema_review_item_type', array(
+			$schema_type_row_class             = WpssoSchema::get_schema_type_row_class( 'schema_type' );
+			$schema_review_item_type_row_class = WpssoSchema::get_schema_type_row_class( 'schema_review_item_type', array(
 				'creative_work'  => 'creative.work',
 			) );
 

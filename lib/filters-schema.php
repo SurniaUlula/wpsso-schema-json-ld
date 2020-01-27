@@ -118,7 +118,7 @@ if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
 
 			$prop_name_type_ids = array( 'blogPost' => 'blog.posting' );	// Allow only posts of schema blog.posting type to be added.
 
-			WpssoJsonSchema::add_posts_data( $json_data, $mod, $mt_og, $page_type_id, $is_main, $ppp, $prop_name_type_ids );
+			WpssoSchema::add_posts_data( $json_data, $mod, $mt_og, $page_type_id, $is_main, $ppp, $prop_name_type_ids );
 
 			return $json_data;
 		}
@@ -347,7 +347,7 @@ if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
 			 *      image as https://schema.org/ImageObject
 			 *      video as https://schema.org/VideoObject
 			 */
-			WpssoJsonSchema::add_media_data( $ret, $mod, $mt_og, $size_names, $add_video = true, $alt_size_names );
+			WpssoSchema::add_media_data( $ret, $mod, $mt_og, $size_names, $add_video = true, $alt_size_names );
 
 			/**
 			 * Check only published posts or other non-post objects.
@@ -379,7 +379,7 @@ if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
 			 *      commentCount
 			 *      comment as https://schema.org/Comment
 			 */
-			WpssoJsonSchema::add_comment_list_data( $ret, $mod );
+			WpssoSchema::add_comment_list_data( $ret, $mod );
 
 			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
 		}
@@ -392,7 +392,7 @@ if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
 
 			$ppp = SucomUtil::get_const( 'WPSSO_SCHEMA_ITEMS_PER_LIST_MAX', 200 );
 
-			WpssoJsonSchema::add_itemlist_data( $json_data, $mod, $mt_og, $page_type_id, $is_main, $ppp );
+			WpssoSchema::add_itemlist_data( $json_data, $mod, $mt_og, $page_type_id, $is_main, $ppp );
 
 			if ( $this->p->debug->enabled ) {
 				$this->p->debug->log_arr( '$json_data', $json_data );
