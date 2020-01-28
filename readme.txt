@@ -857,7 +857,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.20.0-dev.2 (2020/01/27)**
+**Version 2.20.0-b.1 (2020/01/28)**
 
 * **New Features**
 	* None.
@@ -908,9 +908,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.20.0-dev.2 =
+= 2.20.0-b.1 =
 
-(2020/01/27) Improved the handling of inherited options in the Document SSO metabox. Moved all methods from WpssoJsonSchema to the WpssoSchema class in WPSSO Core v6.18.0.
+(2020/01/28) Improved the handling of inherited options in the Document SSO metabox. Moved all methods from WpssoJsonSchema to the WpssoSchema class in WPSSO Core v6.18.0.
 
 = 2.19.1 =
 
