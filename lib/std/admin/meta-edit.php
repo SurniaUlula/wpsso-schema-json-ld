@@ -1017,8 +1017,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tooltip'  => 'meta-schema_review_item_type',
 					'content'  => $form->get_no_select( 'schema_review_item_type', $schema_types,
 						$css_class = 'schema_type', $css_id = '', $is_assoc = true, $selected = true,
-							$event_names = array( 'on_focus_load_json', 'on_show_unhide_rows' ),
-								$event_args = 'schema_types' ),	// JSON array variable name.
+							$event_names = array( 'on_focus_load_json', 'on_show_unhide_rows' ), $event_args = 'schema_types' ),
 				),
 				'schema_review_item_url' => array(
 					'tr_class' => $schema_type_row_class[ 'review' ],
