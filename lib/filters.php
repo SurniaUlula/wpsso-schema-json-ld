@@ -122,9 +122,11 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_review_item_name':					// Reviewed Subject Name.
 				case 'schema_review_item_desc':					// Reviewed Subject Description.
 				case 'schema_review_item_cw_book_isbn':				// Reviewed Book ISBN.
-				case 'schema_review_item_cw_author_name':			// Reviewed CW Author Name.
+				case 'schema_review_item_cw_author_name':			// Reviewed C.W. Author Name.
 				case 'schema_review_item_cw_movie_actor_person_name':		// Reviewed Movie Cast Names.
 				case 'schema_review_item_cw_movie_director_person_name':	// Reviewed Movie Director Names.
+				case 'schema_review_item_software_app_os':
+				case 'schema_review_item_software_app_cat':
 				case 'schema_software_app_os':
 
 					return 'one_line';
@@ -320,12 +322,16 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			foreach( array(
 				'schema_event',
 				'schema_review_item_product',
+				'schema_review_item_software_app',
 			) as $md_pre ) {
 
 				foreach ( range( 0, $metadata_offers_max - 1, 1 ) as $key_num ) {
 
 					$is_valid_offer = false;
 
+					/**
+					 * Must have at least an offer name and price.
+					 */
 					foreach ( array(
 						$md_pre . '_offer_name',
 						$md_pre . '_offer_price'
@@ -500,15 +506,15 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				/**
 				 * Schema Reviewed Subject: Creative Work.
 				 */
-				'schema_review_item_cw_author_type'      => 'none',	// CW Author Type.
-				'schema_review_item_cw_author_name'      => '',		// CW Author Name.
-				'schema_review_item_cw_author_url'       => '',		// CW Author URL.
-				'schema_review_item_cw_pub_date'         => '',		// CW Publish Date.
-				'schema_review_item_cw_pub_time'         => 'none',	// CW Publish Time.
-				'schema_review_item_cw_pub_timezone'     => $timezone,	// CW Publish Timezone.
-				'schema_review_item_cw_created_date'     => '',		// CW Created Date.
-				'schema_review_item_cw_created_time'     => 'none',	// CW Created Time.
-				'schema_review_item_cw_created_timezone' => $timezone,	// CW Created Timezone.
+				'schema_review_item_cw_author_type'      => 'none',	// C.W. Author Type.
+				'schema_review_item_cw_author_name'      => '',		// C.W. Author Name.
+				'schema_review_item_cw_author_url'       => '',		// C.W. Author URL.
+				'schema_review_item_cw_pub_date'         => '',		// C.W. Publish Date.
+				'schema_review_item_cw_pub_time'         => 'none',	// C.W. Publish Time.
+				'schema_review_item_cw_pub_timezone'     => $timezone,	// C.W. Publish Timezone.
+				'schema_review_item_cw_created_date'     => '',		// C.W. Created Date.
+				'schema_review_item_cw_created_time'     => 'none',	// C.W. Created Time.
+				'schema_review_item_cw_created_timezone' => $timezone,	// C.W. Created Timezone.
 
 				/**
 				 * Schema Reviewed Subject: Book.
@@ -523,13 +529,19 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				'schema_review_item_product_mfr_part_no'      => '',	// Product MPN.
 
 				/**
+				 * Schema Reviewed Subject: Product.
+				 */
+				'schema_review_item_software_app_os'  => '',	// Operating System.
+				'schema_review_item_software_app_cat' => '',	// Application Category.
+
+				/**
 				 * Schema Claim Review.
 				 */
 				'schema_review_claim_reviewed'  => '',	// Short Summary of Claim.
 				'schema_review_claim_first_url' => '',	// First Appearance URL.
 
 				/**
-				 * Schema SoftwareApplication.
+				 * Schema Software Application.
 				 */
 				'schema_software_app_os' => '',	// Operating System.
 			);

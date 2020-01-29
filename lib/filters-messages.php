@@ -522,31 +522,31 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_cw_author_type':	// Reviewed CW Author Type.
+				case 'tooltip-meta-schema_review_item_cw_author_type':	// Reviewed C.W. Author Type.
 
 					$text .= __( 'The creative work author can be a person or an organization.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_cw_author_name':	// Reviewed CW Author Name.
+				case 'tooltip-meta-schema_review_item_cw_author_name':	// Reviewed C.W. Author Name.
 
 					$text = __( 'Enter the name of the author for this creative work.', 'wpsso-schema-json-ld' ) . ' ';
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_cw_author_url':	// Reviewed CW Author URL.
+				case 'tooltip-meta-schema_review_item_cw_author_url':	// Reviewed C.W. Author URL.
 
 					$text = __( 'The home page of the author, or another definitive URL that provides information about the author, such as the person or organization\'s Wikipedia or Wikidata page.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_cw_pub':		// Reviewed CW Publish Date
+				case 'tooltip-meta-schema_review_item_cw_pub':		// Reviewed C.W. Publish Date
 
 					$text = __( 'The date when this creative work was published or became popular / entered public discourse (for example, when it became popular on social networks).', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_cw_created':	// Reviewed CW Created Date.
+				case 'tooltip-meta-schema_review_item_cw_created':	// Reviewed C.W. Created Date.
 
 					$text = __( 'The date when this creative work was created.', 'wpsso-schema-json-ld' );
 
@@ -594,6 +594,17 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
+				case 'tooltip-meta-schema_review_item_software_app_cat':	// Reviews Software App Category.
+
+					$text = sprintf( __( 'Type of software application (example: %s, etc.).', 'wpsso-schema-json-ld' ), '"Game, Multimedia"' );
+
+				 	break;
+
+				case 'tooltip-meta-schema_review_item_software_app_offers':	// Reviewed Software App Offers.
+
+					$text = __( 'One or more offers for the software application being reviewed, including the offer name, price and currency.', 'wpsso-schema-json-ld' );
+
+				 	break;
 				case 'tooltip-meta-schema_review_claim_reviewed':	// Short Summary of Claim
 
 					$text = __( 'A short summary of specific claim(s) being reviewed in the Schema ClaimReview content.', 'wpsso-schema-json-ld' ) . ' ';
@@ -608,7 +619,8 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_software_app_os':
+				case 'tooltip-meta-schema_software_app_os':		// Operating System.
+				case 'tooltip-meta-schema_review_item_software_app_os':	// Reviews Software App Operating System.
 
 					$text = sprintf( __( 'The operating system supported (example: %s, etc.).', 'wpsso-schema-json-ld' ), '"Windows 7", "OSX 10.6", "Android 1.6"' );
 
