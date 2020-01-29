@@ -357,11 +357,11 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 				* Short Summary of Claim
 				* First Appearance URL
 			* Creative Work Subject Information
-				* CW Author Type
-				* CW Author Name
-				* CW Author URL
-				* CW Published Date
-				* CW Created Date
+				* C.W. Author Type
+				* C.W. Author Name
+				* C.W. Author URL
+				* C.W. Published Date
+				* C.W. Created Date
 			* Book Subject Information
 				* Book ISBN
 			* Movie Subject Information
@@ -857,12 +857,15 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.20.0-rc.2 (2020/01/29)**
+**Version 2.20.0-rc.3 (2020/01/29)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* None.
+	* Added a new "Software App Subject Information" section to the Document SSO metabox:
+		* Operating System
+		* Application Category
+		* Software App Offers
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -908,9 +911,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.20.0-rc.2 =
+= 2.20.0-rc.3 =
 
-(2020/01/29) Improved the handling of inherited options in the Document SSO metabox. Moved all methods from WpssoJsonSchema to the WpssoSchema class in WPSSO Core v6.18.0.
+(2020/01/29) Added a new "Software App Subject Information" section to the Document SSO metabox.
 
 = 2.19.1 =
 
