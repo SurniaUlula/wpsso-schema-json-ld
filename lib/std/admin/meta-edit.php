@@ -124,8 +124,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tooltip'  => 'meta-schema_type',
 					'content'  => $form->get_select( 'schema_type', $schema_types,
 						$css_class = 'schema_type', $css_id = '', $is_assoc = true, $is_disabled = false, $selected = true,
-							$event_names = array( 'on_focus_load_json', 'on_change_unhide_rows' ),
-								$event_args = 'schema_types' ),	// JSON array variable name.
+							$event_names = array( 'on_focus_load_json', 'on_change_unhide_rows' ), $event_args = 'schema_types' ),
 				),
 				'wpssojson_pro_feature_msg' => array(
 					'table_row' => '<td colspan="2">' . $this->p->msgs->pro_feature( 'wpssojson' ) . '</td>',
