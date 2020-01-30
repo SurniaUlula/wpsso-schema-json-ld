@@ -372,8 +372,13 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 				* Product Offers (name, price, currency, availability)
 				* Product SKU
 				* Product MPN
+			* Software App Subject Information
+				* Operating System
+				* Application Category
+				* Software App Offers (name, price, currency, availability)
 	* Software Application Information
 		* Operating System
+		* Application Category
 
 * Select any available Schema type or sub-type for your content, including the following and many more:
 
@@ -857,7 +862,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.20.0-rc.3 (2020/01/29)**
+**Version 2.20.0-rc.4 (2020/01/30)**
 
 * **New Features**
 	* None.
@@ -911,9 +916,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.20.0-rc.3 =
+= 2.20.0-rc.4 =
 
-(2020/01/29) Added a new "Software App Subject Information" section to the Document SSO metabox.
+(2020/01/30) Added a new "Software App Subject Information" section to the Document SSO metabox.
 
 = 2.19.1 =
 
