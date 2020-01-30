@@ -1145,7 +1145,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				),
 
 				/**
-				 * Schema SoftwareApplication
+				 * Schema Software Application
 				 */
 				'subsection_software_app' => array(
 					'tr_class' => $schema_type_row_class[ 'software_app' ],
@@ -1153,12 +1153,20 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'header'   => 'h5',
 					'label'    => _x( 'Software Application Information', 'metabox title', 'wpsso-schema-json-ld' ),
 				),
-				'schema_software_app_reviewed' => array(
+				'schema_software_app_os' => array(
 					'tr_class' => $schema_type_row_class[ 'software_app' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Operating System', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_software_app_os',
+					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
+				),
+				'schema_software_app_cat' => array(
+					'tr_class' => $schema_type_row_class[ 'software_app' ],
+					'th_class' => 'medium',
+					'td_class' => 'blank',
+					'label'    => _x( 'Application Category', 'option label', 'wpsso-schema-json-ld' ),
+					'tooltip'  => 'meta-schema_software_app_cat',
 					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
 				),
 			);

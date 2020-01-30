@@ -594,12 +594,6 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_software_app_cat':	// Reviews Software App Category.
-
-					$text = sprintf( __( 'Type of software application (example: %s, etc.).', 'wpsso-schema-json-ld' ), '"Game, Multimedia"' );
-
-				 	break;
-
 				case 'tooltip-meta-schema_review_item_software_app_offers':	// Reviewed Software App Offers.
 
 					$text = __( 'One or more offers for the software application being reviewed, including the offer name, price and currency.', 'wpsso-schema-json-ld' );
@@ -616,6 +610,13 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 				case 'tooltip-meta-schema_review_claim_first_url':	// First Appearance URL
 
 					$text = __( 'An optional webpage URL where this specific claim first appeared.', 'wpsso-schema-json-ld' );
+
+				 	break;
+
+				case 'tooltip-meta-schema_software_app_cat':			// Application Category.
+				case 'tooltip-meta-schema_review_item_software_app_cat':	// Reviews Software App Category.
+
+					$text = sprintf( __( 'Type of software application (example: %s, etc.).', 'wpsso-schema-json-ld' ), '"Game, Multimedia"' );
 
 				 	break;
 

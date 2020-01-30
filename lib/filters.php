@@ -125,8 +125,9 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_review_item_cw_author_name':			// Reviewed C.W. Author Name.
 				case 'schema_review_item_cw_movie_actor_person_name':		// Reviewed Movie Cast Names.
 				case 'schema_review_item_cw_movie_director_person_name':	// Reviewed Movie Director Names.
-				case 'schema_review_item_software_app_os':
 				case 'schema_review_item_software_app_cat':
+				case 'schema_review_item_software_app_os':
+				case 'schema_software_app_cat':
 				case 'schema_software_app_os':
 
 					return 'one_line';
@@ -531,8 +532,8 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				/**
 				 * Schema Reviewed Subject: Product.
 				 */
-				'schema_review_item_software_app_os'  => '',	// Operating System.
 				'schema_review_item_software_app_cat' => '',	// Application Category.
+				'schema_review_item_software_app_os'  => '',	// Operating System.
 
 				/**
 				 * Schema Claim Review.
@@ -543,7 +544,8 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				/**
 				 * Schema Software Application.
 				 */
-				'schema_software_app_os' => '',	// Operating System.
+				'schema_software_app_cat' => '',	// Application Category.
+				'schema_software_app_os'  => '',	// Operating System.
 			);
 
 			$md_defs = array_merge( $md_defs, $schema_md_defs );
