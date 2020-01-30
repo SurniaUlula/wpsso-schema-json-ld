@@ -862,7 +862,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.20.0-rc.4 (2020/01/30)**
+**Version 2.20.0 (2020/01/30)**
 
 * **New Features**
 	* None.
@@ -883,44 +883,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WordPress v4.0.
 	* WPSSO Core v6.18.1.
 
-**Version 2.19.1 (2020/01/17)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* Fixed a duplicate instantiation of the WpssoJsonFiltersSchema class.
-* **Developer Notes**
-	* None.
-* **Requires At Least**
-	* PHP v5.5.
-	* WordPress v4.0.
-	* WPSSO Core v6.17.0.
-
-**Version 2.19.0 (2020/01/16)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added support for Schema ItemList markup in the Standard version.
-	* Minor changes to some option labels and their translated strings.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
-* **Requires At Least**
-	* PHP v5.5.
-	* WordPress v4.0.
-	* WPSSO Core v6.17.0.
-
 == Upgrade Notice ==
 
-= 2.20.0-rc.4 =
+= 2.20.0 =
 
 (2020/01/30) Added a new "Software App Subject Information" section to the Document SSO metabox.
-
-= 2.19.1 =
-
-(2020/01/17) Fixed a duplicate instantiation of the WpssoJsonFiltersSchema class.
 
