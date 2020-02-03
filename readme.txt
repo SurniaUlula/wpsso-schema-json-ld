@@ -867,7 +867,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **New Features**
 	* None.
 * **Improvements**
-	* None.
+	* Added file caching to `SucomForm->get_select()` for the javascript Schema type array.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -902,7 +902,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.21.0-dev.2 =
 
-(2020/02/03) None.
+(2020/02/03) Added file caching to SucomForm->get_select() for the javascript Schema type array.
 
 = 2.20.0 =
 
