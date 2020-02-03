@@ -48,8 +48,9 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 			/**
 			 * Select option arrays.
 			 */
-			$schema_types = $this->p->schema->get_schema_types_select( null, $add_none = false );
-			$currencies   = SucomUtil::get_currency_abbrev();
+			$schema_exp_secs = $this->p->util->get_cache_exp_secs( $this->p->lca . '_t_' );	// Default is month in seconds.
+			$schema_types    = $this->p->schema->get_schema_types_select();
+			$currencies      = SucomUtil::get_currency_abbrev();
 
 			/**
 			 * Maximum option lengths.
@@ -118,7 +119,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 			$form_rows = array(
 
 				/**
-				 * All Schema Types
+				 * All Schema Types.
 				 */
 				'wpssojson_pro_feature_msg' => array(
 					'table_row' => '<td colspan="2">' . $this->p->msgs->pro_feature( 'wpssojson' ) . '</td>',
@@ -166,7 +167,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				),
 
 				/**
-				 * Schema CreativeWork
+				 * Schema Creative Work.
 				 */
 				'subsection_creative_work' => array(
 					'tr_class' => $schema_type_row_class[ 'creative_work' ],
@@ -261,7 +262,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				),
 
 				/**
-				 * Schema Event
+				 * Schema Event.
 				 */
 				'subsection_event' => array(
 					'tr_class' => $schema_type_row_class[ 'event' ],
@@ -390,7 +391,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				),
 
 				/**
-				 * Schema FinancialProduct
+				 * Schema Financial Product.
 				 *
 				 * 'subsection_financial_prod' => array(
 				 *	'tr_class' => $schema_type_row_class[ 'financial_prod' ],
@@ -401,7 +402,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				 */
 
 				/**
-				 * Schema HowTo
+				 * Schema How-To.
 				 */
 				'subsection_howto' => array(
 					'tr_class' => $schema_type_row_class[ 'how_to' ],
@@ -489,7 +490,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				),
 
 				/**
-				 * Schema JobPosting
+				 * Schema Job Posting.
 				 */
 				'subsection_job' => array(
 					'tr_class' => $schema_type_row_class[ 'job_posting' ],
@@ -553,7 +554,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				),
 
 				/**
-				 * Schema Movie
+				 * Schema Movie.
 				 */
 				'subsection_movie' => array(
 					'tr_class' => $schema_type_row_class[ 'movie' ],
@@ -598,7 +599,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				),
 
 				/**
-				 * Schema Organization
+				 * Schema Organization.
 				 */
 				'subsection_organization' => array(
 					'tr_class' => $schema_type_row_class[ 'organization' ],
@@ -618,7 +619,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				),
 
 				/**
-				 * Schema Person
+				 * Schema Person.
 				 */
 				'subsection_person' => array(
 					'tr_class' => $schema_type_row_class[ 'person' ],
@@ -637,7 +638,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				),
 
 				/**
-				 * Schema Product
+				 * Schema Product.
 				 *
 				 * Note that unlike most schema option names, product options start with 'product_' and not 'schema_'.
 				 */
@@ -709,7 +710,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => $schema_type_row_class[ 'product' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Product GTIN-13/EAN', 'option label', 'wpsso-schema-json-ld' ),	// aka Product EAN
+					'label'    => _x( 'Product GTIN-13/EAN', 'option label', 'wpsso-schema-json-ld' ),	// aka Product EAN.
 					'tooltip'  => 'meta-product_gtin13',
 					'content'  => $form->get_no_input( 'product_gtin13', '', $css_id = '', $placeholder = true ),
 				),
@@ -717,7 +718,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => $schema_type_row_class[ 'product' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Product GTIN-12/UPC', 'option label', 'wpsso-schema-json-ld' ),	// aka Product UPC
+					'label'    => _x( 'Product GTIN-12/UPC', 'option label', 'wpsso-schema-json-ld' ),	// aka Product UPC.
 					'tooltip'  => 'meta-product_gtin12',
 					'content'  => $form->get_no_input( 'product_gtin12', '', $css_id = '', $placeholder = true ),
 				),
@@ -739,7 +740,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				),
 
 				/**
-				 * Schema QAPage
+				 * Schema QA Page.
 				 */
 				'subsection_qa' => array(
 					'tr_class' => $schema_type_row_class[ 'qapage' ],
@@ -757,7 +758,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				),
 
 				/**
-				 * Schema Recipe
+				 * Schema Recipe.
 				 */
 				'subsection_recipe' => array(
 					'tr_class' => $schema_type_row_class[ 'recipe' ],
@@ -848,7 +849,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				),
 
 				/**
-				 * Schema Recipe - Nutrition Information
+				 * Schema Recipe - Nutrition Information.
 				 */
 				'subsection_recipe_nutrition' => array(
 					'tr_class' => $schema_type_row_class[ 'recipe' ],
@@ -965,7 +966,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				),
 
 				/**
-				 * Schema Review
+				 * Schema Review.
 				 */
 				'subsection_review' => array(
 					'tr_class' => $schema_type_row_class[ 'review' ],
@@ -995,7 +996,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				),
 
 				/**
-				 * Schema Reviewed Subject
+				 * Schema Reviewed Subject.
 				 */
 				'subsection_review_item' => array(
 					'tr_class' => $schema_type_row_class[ 'review' ],
@@ -1009,9 +1010,9 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Subject Webpage Type', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_type',
-					'content'  => $form->get_no_select( 'schema_review_item_type', $schema_types,
-						$css_class = 'schema_type', $css_id = '', $is_assoc = true, $selected = true,
-							$event_names = array( 'on_focus_load_json', 'on_show_unhide_rows' ), $event_args = 'schema_types' ),
+					'content'  => $form->get_no_select( 'schema_review_item_type', $schema_types, $css_class = 'schema_type', $css_id = '',
+						$is_assoc = true, $selected = false, $event_names = array( 'on_focus_load_json', 'on_show_unhide_rows' ),
+							$event_args = array( 'json_var' => 'schema_types', 'exp_secs' => $schema_exp_secs ) ),
 				),
 				'schema_review_item_url' => array(
 					'tr_class' => $schema_type_row_class[ 'review' ],
@@ -1063,7 +1064,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				),
 
 				/**
-				 * Schema Reviewed Subject: Creative Work
+				 * Schema Reviewed Subject: Creative Work.
 				 */
 				'subsection_review_item_cw' => array(
 					'tr_class' => 'hide_schema_type ' . $schema_review_item_type_row_class[ 'creative_work' ],
@@ -1113,7 +1114,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				),
 
 				/**
-				 * Schema Claim Review
+				 * Schema Claim Review.
 				 */
 				'subsection_review_claim' => array(
 					'tr_class' => $schema_type_row_class[ 'review_claim' ],
@@ -1139,7 +1140,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				),
 
 				/**
-				 * Schema Software Application
+				 * Schema Software Application.
 				 */
 				'subsection_software_app' => array(
 					'tr_class' => $schema_type_row_class[ 'software_app' ],

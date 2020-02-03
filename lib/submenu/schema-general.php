@@ -173,7 +173,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 			/**
 			 * Select option arrays.
 			 */
-			$schema_types = $this->p->schema->get_schema_types_select( null, $add_none = false );
+			$schema_types = $this->p->schema->get_schema_types_select();
 
 			/**
 			 * Organization variables.
