@@ -106,26 +106,20 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 			) );
 
 			/**
+			 * Move Schema options to the end of the table, just in case.
+			 */
+			foreach ( SucomUtil::preg_grep_keys( '/^(subsection_schema|schema_)/', $table_rows ) as $key => $row ) {
+				SucomUtil::move_to_end( $table_rows, $key );
+			}
+
+			/**
 			 * Metabox form rows.
 			 */
 			$form_rows = array(
-				'subsection_schema' => array(
-					'td_class' => 'subsection',
-					'header'   => 'h4',
-					'label'    => _x( 'Structured Data / Schema Markup', 'metabox title', 'wpsso-schema-json-ld' )
-				),
 
 				/**
 				 * All Schema Types
 				 */
-				'schema_type' => array(
-					'th_class' => 'medium',
-					'label'    => _x( 'Schema Type', 'option label', 'wpsso-schema-json-ld' ),
-					'tooltip'  => 'meta-schema_type',
-					'content'  => $form->get_select( 'schema_type', $schema_types,
-						$css_class = 'schema_type', $css_id = '', $is_assoc = true, $is_disabled = false, $selected = true,
-							$event_names = array( 'on_focus_load_json', 'on_change_unhide_rows' ), $event_args = 'schema_types' ),
-				),
 				'wpssojson_pro_feature_msg' => array(
 					'table_row' => '<td colspan="2">' . $this->p->msgs->pro_feature( 'wpssojson' ) . '</td>',
 				),
@@ -1170,11 +1164,6 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
 				),
 			);
-
-			/**
-			 * Remove and re-create any inherited Schema options.
-			 */
-			SucomUtil::preg_grep_keys( '/^(subsection_schema|schema_)/', $table_rows, $invert = true );
 
 			return $form->get_md_form_rows( $table_rows, $form_rows, $head, $mod );
 		}

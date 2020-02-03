@@ -7,8 +7,6 @@ _x( 'days', 'option comment', 'wpsso-schema-json-ld' );
 _x( 'hours', 'option comment', 'wpsso-schema-json-ld' );
 _x( 'mins', 'option comment', 'wpsso-schema-json-ld' );
 _x( 'secs', 'option comment', 'wpsso-schema-json-ld' );
-_x( 'Structured Data / Schema Markup', 'metabox title', 'wpsso-schema-json-ld' );
-_x( 'Schema Type', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Name / Title', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Alternate Name', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Description', 'option label', 'wpsso-schema-json-ld' );
