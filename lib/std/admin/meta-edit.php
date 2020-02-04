@@ -646,7 +646,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => $schema_type_row_class[ 'product' ],
 					'td_class' => 'subsection',
 					'header'   => 'h5',
-					'label'    => _x( 'Product Information (Additional)', 'metabox title', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Additional Product Information', 'metabox title', 'wpsso-schema-json-ld' ),
 				),
 				'schema_product_ecom_msg' => array(
 					'tr_class' => $schema_type_row_class[ 'product' ],
