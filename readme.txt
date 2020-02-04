@@ -260,6 +260,17 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 		* Description
 		* Microdata Type URLs
 		* Same-As URLs
+	* Additional Product Information
+		* Product Length (cm)
+		* Product Width (cm)
+		* Product Height (cm)
+		* Product Depth (cm)
+		* Product Volume (ml)
+		* Product GTIN-14
+		* Product GTIN-13/EAN
+		* Product GTIN-12/UPC
+		* Product GTIN-8
+		* Product GTIN
 	* Creative Work Information
 		* Is Part of URL
 		* Headline
@@ -306,17 +317,6 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 		* Alternate Organization
 	* Person Information
 		* Alternate Person
-	* Product Information (Additional)
-		* Product Length (cm)
-		* Product Width (cm)
-		* Product Height (cm)
-		* Product Depth (cm)
-		* Product Volume (ml)
-		* Product GTIN-14
-		* Product GTIN-13/EAN
-		* Product GTIN-12/UPC
-		* Product GTIN-8
-		* Product GTIN
 	* QA Page Information
 		* QA Heading
 	* Recipe Information
@@ -862,7 +862,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.21.0-dev.2 (2020/02/03)**
+**Version 2.21.0-dev.3 (2020/02/04)**
 
 * **New Features**
 	* None.
@@ -875,7 +875,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.5.
 	* WordPress v4.0.
-	* WPSSO Core v6.19.0-dev.2.
+	* WPSSO Core v6.19.0-dev.3.
 
 **Version 2.20.0 (2020/01/30)**
 
@@ -900,9 +900,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.21.0-dev.2 =
+= 2.21.0-dev.3 =
 
-(2020/02/03) Added file caching to SucomForm->get_select() for the javascript Schema type array.
+(2020/02/04) Added file caching to SucomForm->get_select() for the javascript Schema type array.
 
 = 2.20.0 =
 
