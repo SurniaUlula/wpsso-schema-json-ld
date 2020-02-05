@@ -131,11 +131,17 @@ if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
 
 			$ret = array();
 
-			/**
-			 * The Schema Article type must use a minimum image width of 696px and a publisher logo of 600x60px for
-			 * Google.
-			 */
 			if ( $this->p->schema->is_schema_type_child( $page_type_id, 'article' ) ) {
+
+				/**
+				 * Property:
+				 *      dateCreated
+				 *      datePublished
+				 *      dateModified
+				 */
+				WpssoSchema::add_data_itemprop_from_assoc( $ret, $mt_og, array(
+					'articleSection' => 'article:section',
+				) );
 
 				$amp_size_names = array(
 					$this->p->lca . '-schema-article-1-1',
