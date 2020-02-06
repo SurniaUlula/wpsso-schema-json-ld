@@ -588,7 +588,7 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_review_item_product_mpn':	// Reviewed Product MPN.
+				case 'tooltip-meta-schema_review_item_product_mfr_part_no':	// Reviewed Product MPN.
 
 					$text = __( 'The MPN (aka Manufacturer Part Number) of the product being reviewed.', 'wpsso-schema-json-ld' );
 
