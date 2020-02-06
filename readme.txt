@@ -862,7 +862,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.21.0-b.2 (2020/02/05)**
+**Version 2.21.0-b.3 (2020/02/06)**
 
 * **New Features**
 	* None.
@@ -875,7 +875,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.5.
 	* WordPress v4.0.
-	* WPSSO Core v6.19.0-b.2.
+	* WPSSO Core v6.19.0-b.3.
 
 **Version 2.20.0 (2020/01/30)**
 
@@ -900,9 +900,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.21.0-b.1 =
+= 2.21.0-b.3 =
 
-(2020/02/05) Added file caching to SucomForm->get_select() for the javascript Schema type array.
+(2020/02/06) Added file caching to SucomForm->get_select() for the javascript Schema type array.
 
 = 2.20.0 =
 
