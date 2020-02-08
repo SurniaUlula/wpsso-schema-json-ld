@@ -1016,6 +1016,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 								'json_var'  => 'schema_types',
 								'exp_secs'  => $schema_exp_secs,
 								'is_transl' => true,	// No label translation required.
+								'is_sorted' => true,	// No label sorting required.
 							)
 						),
 				),
