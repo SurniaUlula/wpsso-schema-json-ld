@@ -862,16 +862,16 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.21.2-dev.1 (2020/02/09)**
+**Version 2.21.2-dev.2 (2020/02/10)**
 
 * **New Features**
 	* None.
 * **Improvements**
 	* None.
 * **Bugfixes**
-	* None.
+	* Fixed commenting of JSON scripts in the content when added to the Schema hasPart property.
 * **Developer Notes**
-	* Added more status messages in the `WpssoJsonProPropHasPart->maybe_comment_json_scripts()` method.
+	* None.
 * **Requires At Least**
 	* PHP v5.5.
 	* WordPress v4.0.
@@ -930,9 +930,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.21.2-dev.1 =
+= 2.21.2-dev.2 =
 
-(2020/02/09) Added more status messages in the `WpssoJsonProPropHasPart->maybe_comment_json_scripts()` method.
+(2020/02/10) Fixed commenting of JSON scripts in the content when added to the Schema hasPart property.
 
 = 2.21.1 =
 
