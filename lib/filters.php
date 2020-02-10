@@ -250,6 +250,10 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 		public function filter_save_post_options( $md_opts, $post_id, $rel_id, $mod ) {
 
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->mark();
+			}
+
 			$md_defs = $this->filter_get_md_defaults( array(), $mod );	// Only get the schema options.
 
 			/**
