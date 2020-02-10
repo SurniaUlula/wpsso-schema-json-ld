@@ -862,6 +862,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.21.2-dev.1 (2020/02/09)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Added more status messages in the `WpssoJsonProPropHasPart->maybe_comment_json_scripts()` method.
+* **Requires At Least**
+	* PHP v5.5.
+	* WordPress v4.0.
+	* WPSSO Core v6.20.0.
+
 **Version 2.21.1 (2020/02/09)**
 
 * **New Features**
@@ -914,6 +929,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v6.18.0.
 
 == Upgrade Notice ==
+
+= 2.21.2-dev.1 =
+
+(2020/02/09) Added more status messages in the `WpssoJsonProPropHasPart->maybe_comment_json_scripts()` method.
 
 = 2.21.1 =
 
