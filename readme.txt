@@ -668,7 +668,7 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 				* Schema Type [schema.org/ArtGallery](https://schema.org/ArtGallery)
 				* Schema Type [schema.org/Casino](https://schema.org/Casino)
 				* Schema Type [schema.org/ComedyClub](https://schema.org/ComedyClub)
-				* Schema Type [schema.org/MovieTheatre](https://schema.org/MovieTheatre)
+				* Schema Type [schema.org/MovieTheater](https://schema.org/MovieTheater)
 				* Schema Type [schema.org/NightClub](https://schema.org/NightClub)
 			* Schema Type [schema.org/FinancialService](https://schema.org/FinancialService)
 			* Schema Type [schema.org/FoodEstablishment](https://schema.org/FoodEstablishment)
