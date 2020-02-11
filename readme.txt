@@ -862,7 +862,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.21.2-dev.3 (2020/02/10)**
+**Version 2.21.2-dev.4 (2020/02/11)**
 
 * **New Features**
 	* None.
@@ -875,7 +875,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.5.
 	* WordPress v4.0.
-	* WPSSO Core v6.20.0.
+	* WPSSO Core v6.21.0-dev.4.
 
 **Version 2.21.1 (2020/02/09)**
 
@@ -930,9 +930,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.21.2-dev.3 =
+= 2.21.2-dev.4 =
 
-(2020/02/10) Added a warning when an aggregate rating value is added to a Schema type that cannot have an aggregate rating value.
+(2020/02/11) Added a warning when an aggregate rating value is added to a Schema type that cannot have an aggregate rating value.
 
 = 2.21.1 =
 
