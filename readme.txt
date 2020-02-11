@@ -930,7 +930,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.21.2-dev.7 =
+= 2.21.2-dev.9 =
 
 (2020/02/11) Added a warning when an aggregate rating value is added to a Schema type that cannot have an aggregate rating value.
 
