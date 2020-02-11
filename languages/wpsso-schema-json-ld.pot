@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 2.21.2-dev.2\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 2.21.2-dev.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-"
 "ld\n"
 "POT-Creation-Date: 2020-MO-DA HO:MI+ZONE\n"
@@ -582,7 +582,7 @@ msgstr ""
 msgid "Select a default Schema type for the Schema Review subject URL."
 msgstr ""
 
-#: lib/filters.php:363 lib/gettext-pro.php:165 lib/pro/head/claimreview.php:73
+#: lib/filters.php:363 lib/gettext-pro.php:165 lib/pro/head/claimreview.php:76
 msgid "A claim review cannot be the subject of another claim review."
 msgstr ""
 
@@ -1518,7 +1518,7 @@ msgctxt "metabox title"
 msgid "Software Application Information"
 msgstr ""
 
-#: lib/gettext-pro.php:166 lib/pro/head/claimreview.php:75
+#: lib/gettext-pro.php:166 lib/pro/head/claimreview.php:78
 msgid ""
 "CreativeWork will be used instead as the Schema type for the subject of the "
 "webpage (ie. the content) being reviewed."
@@ -1532,22 +1532,29 @@ msgstr ""
 msgid "adding reviewed subject image"
 msgstr ""
 
+#: lib/gettext-pro.php:169 lib/pro/prop/aggregaterating.php:136
+msgid ""
+"An aggregate rating value for this markup has been ignored &mdash; <a href="
+"\"%1$s\">Google does not allow an aggregate rating value for the Schema Type "
+"%2$s</a>."
+msgstr ""
+
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag, %3$s is the type attribute value
-#: lib/shortcode/schema.php:171
+#: lib/shortcode/schema.php:174
 msgid ""
 "%1$s %2$s shortcode with a type value of \"%3$s\" is missing a required "
 "'prop' attribute value."
 msgstr ""
 
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag
-#: lib/shortcode/schema.php:195
+#: lib/shortcode/schema.php:201
 msgid ""
 "%1$s %2$s shortcode with a content is missing a required 'type' attribute "
 "value."
 msgstr ""
 
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag, %3$s is the type attribute value
-#: lib/shortcode/schema.php:281
+#: lib/shortcode/schema.php:290
 msgid "%1$s %2$s shortcode type attribute \"%3$s\" is not a recognized value."
 msgstr ""
 

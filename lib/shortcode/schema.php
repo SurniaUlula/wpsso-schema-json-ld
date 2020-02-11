@@ -163,6 +163,9 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 					$this->p->debug->log( 'exiting early: ' . $tag . ' shortcode with type is missing a prop attribute value' );
 				}
 
+				/**
+				 * Add notice only if the admin notices have not already been shown.
+				 */
 				if ( $this->p->notice->is_admin_pre_notices() ) {
 
 					$info = WpssoJsonConfig::$cf[ 'plugin' ][ 'wpssojson' ];
@@ -187,6 +190,9 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 					$this->p->debug->log( 'exiting early: ' . $tag . ' shortcode with content is missing a type attribute value' );
 				}
 
+				/**
+				 * Add notice only if the admin notices have not already been shown.
+				 */
 				if ( $this->p->notice->is_admin_pre_notices() ) {
 
 					$info = WpssoJsonConfig::$cf[ 'plugin' ][ 'wpssojson' ];
@@ -273,6 +279,9 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 							$this->p->debug->log( 'exiting early: ' . $tag . ' shortcode type "' . $value . '" is not a recognized value' );
 						}
 
+						/**
+						 * Add notice only if the admin notices have not already been shown.
+						 */
 						if ( $this->p->notice->is_admin_pre_notices() ) {
 
 							$info = WpssoJsonConfig::$cf[ 'plugin' ][ 'wpssojson' ];

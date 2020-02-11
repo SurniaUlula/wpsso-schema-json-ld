@@ -368,7 +368,10 @@ if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
 							$this->p->debug->log( 'creativework ' . $prop_name . ' value is empty and required' );
 						}
 
-						if ( $this->p->notice->is_admin_pre_notices() ) { // Skip if notices already shown.
+						/**
+						 * Add notice only if the admin notices have not already been shown.
+						 */
+						if ( $this->p->notice->is_admin_pre_notices() ) {
 
 							$notice_key = $mod[ 'name' ] . '-' . $mod[ 'id' ] . '-notice-missing-schema-' . $prop_name;
 
