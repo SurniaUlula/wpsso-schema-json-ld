@@ -862,7 +862,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.21.2-dev.7 (2020/02/11)**
+**Version 2.21.2-dev.8 (2020/02/11)**
 
 * **New Features**
 	* None.
@@ -875,7 +875,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.5.
 	* WordPress v4.0.
-	* WPSSO Core v6.21.0-dev.7.
+	* WPSSO Core v6.21.0-dev.8.
 
 **Version 2.21.1 (2020/02/09)**
 
