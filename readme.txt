@@ -862,7 +862,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.21.2-b.3 (2020/02/12)**
+**Version 2.21.2-b.4 (2020/02/13)**
 
 * **New Features**
 	* None.
@@ -875,7 +875,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.5.
 	* WordPress v4.0.
-	* WPSSO Core v6.21.0-b.3.
+	* WPSSO Core v6.21.0-b.4.
 
 **Version 2.21.1 (2020/02/09)**
 
@@ -930,9 +930,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.21.2-dev.9 =
+= 2.21.2-b.4 =
 
-(2020/02/12) Added a warning when an aggregate rating value is added to a Schema type that cannot have an aggregate rating value.
+(2020/02/13) Added a warning when an aggregate rating value is added to a Schema type that cannot have an aggregate rating value. Fixed commenting of JSON scripts in the content when added to the Schema hasPart property.
 
 = 2.21.1 =
 
