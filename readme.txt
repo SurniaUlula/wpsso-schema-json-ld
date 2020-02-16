@@ -862,7 +862,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.21.2 (2020/02/15)**
+**Version 2.21.2 (2020/02/16)**
 
 * **New Features**
 	* None.
@@ -932,5 +932,5 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.21.2 =
 
-(2020/02/15) Added a warning when an aggregate rating value is added to a Schema type that cannot have an aggregate rating value. Fixed commenting of JSON scripts in the content when added to the Schema hasPart property.
+(2020/02/16) Added a warning when an aggregate rating value is added to a Schema type that cannot have an aggregate rating value. Fixed commenting of JSON scripts in the content when added to the Schema hasPart property.
 
