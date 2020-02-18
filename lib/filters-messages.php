@@ -54,12 +54,6 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 			switch ( $msg_key ) {
 
-				case 'tooltip-meta-schema_type':		// Schema Type.
-
-					$text = __( 'Select a Schema item type that best describes the main content of this webpage.', 'wpsso-schema-json-ld' );
-
-				 	break;
-
 				case 'tooltip-meta-schema_title':		// Name / Title.
 
 					$text = __( 'A customized name / title for the Schema "name" property.', 'wpsso-schema-json-ld' );
