@@ -28,7 +28,7 @@ Offers Schema JSON-LD markup for posts, pages, custom post types, terms (categor
 
 **Most complete Schema JSON-LD markup for WooCommerce products:**
 
-The WooCommerce plugin is known to provide incomplete Schema markup for Google. The <a href="https://wpsso.com/extend/plugins/wpsso/">WPSSO Core Premium plugin</a> and its <a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Premium add-on</a> provide a far better solution by offering complete Facebook / Pinterest Product meta tags and Schema Product markup for Google Rich Results / Rich Snippets &mdash; including additional product images, product variations, product attributes (brand, color, condition, EAN, dimensions, GTIN-8/12/13/14, ISBN, material, MPN, size, SKU, weight, etc), product reviews, product ratings, sale start / end dates, sale prices, pre-tax prices, VAT prices, and much, much more ([markup for a see an example WooCommerce test product](https://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-woocommerce-product/)).
+The WooCommerce plugin is known to provide incomplete Schema markup for Google. The <a href="https://wpsso.com/extend/plugins/wpsso/">WPSSO Core Premium plugin</a> and its <a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Premium add-on</a> provide a far better solution by offering complete Facebook / Pinterest Product meta tags and Schema Product markup for Google Rich Results (previously known as Rich Snippets) &mdash; including additional product images, product variations, product attributes (brand, color, condition, EAN, dimensions, GTIN-8/12/13/14, ISBN, material, MPN, size, SKU, weight, etc), product reviews, product ratings, sale start / end dates, sale prices, pre-tax prices, VAT prices, and much, much more ([markup for a see an example WooCommerce test product](https://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-woocommerce-product/)).
 
 **Fixes all Google Search Console / Structured Data Testing Tool errors:**
 
@@ -73,7 +73,7 @@ Additional e-Commerce plugin integration is also provided with the WPSSO Core Pr
 	* [schema.org/ItemList](https://schema.org/ItemList) (includes 5 Schema sub-types)
 	* [schema.org/Thing](https://schema.org/Thing) (includes 1457 Schema sub-types)
 
-* Automatically includes Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google Rich Results / Rich Snippets (see the [Google Article AMP structured data guidelines](https://developers.google.com/search/docs/data-types/article#amp-sd) for details on this new requirement from Google).
+* Automatically includes Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google Rich Results (see the [Google Article AMP structured data guidelines](https://developers.google.com/search/docs/data-types/article#amp-sd) for details on this new requirement from Google).
 
 * Customize the Schema type for each individual posts, pages, custom post types, tags, categories, custom taxonomy / terms, and attachment pages.
 
@@ -220,7 +220,7 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 
 * Provides complete video SEO markup with information from video service APIs (Facebook, Slideshare, Soundcloud, Vimeo, Wistia, YouTube).
 
-* WooCommerce product variations are grouped by currency and added as a Schema AggregateOffer for Google's Rich Results / Rich Snippets (includes the product variation group high price, low price, and currency).
+* WooCommerce product variations are grouped by currency and added as a Schema AggregateOffer for Google's Rich Results (includes the product variation group high price, low price, and currency).
 
 * Fixes common Google testing tool warnings like "aggregateRating field is recommended" and "review field is recommended".
 

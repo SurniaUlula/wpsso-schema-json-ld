@@ -25,7 +25,7 @@
 
 <p><strong>Most complete Schema JSON-LD markup for WooCommerce products:</strong></p>
 
-<p>The WooCommerce plugin is known to provide incomplete Schema markup for Google. The <a href="https://wpsso.com/extend/plugins/wpsso/">WPSSO Core Premium plugin</a> and its <a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Premium add-on</a> provide a far better solution by offering complete Facebook / Pinterest Product meta tags and Schema Product markup for Google Rich Results / Rich Snippets &mdash; including additional product images, product variations, product attributes (brand, color, condition, EAN, dimensions, GTIN-8/12/13/14, ISBN, material, MPN, size, SKU, weight, etc), product reviews, product ratings, sale start / end dates, sale prices, pre-tax prices, VAT prices, and much, much more (<a href="https://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-woocommerce-product/">markup for a see an example WooCommerce test product</a>).</p>
+<p>The WooCommerce plugin is known to provide incomplete Schema markup for Google. The <a href="https://wpsso.com/extend/plugins/wpsso/">WPSSO Core Premium plugin</a> and its <a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Premium add-on</a> provide a far better solution by offering complete Facebook / Pinterest Product meta tags and Schema Product markup for Google Rich Results (previously known as Rich Snippets) &mdash; including additional product images, product variations, product attributes (brand, color, condition, EAN, dimensions, GTIN-8/12/13/14, ISBN, material, MPN, size, SKU, weight, etc), product reviews, product ratings, sale start / end dates, sale prices, pre-tax prices, VAT prices, and much, much more (<a href="https://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-woocommerce-product/">markup for a see an example WooCommerce test product</a>).</p>
 
 <p><strong>Fixes all Google Search Console / Structured Data Testing Tool errors:</strong></p>
 
@@ -73,7 +73,7 @@
 <li><a href="https://schema.org/ItemList">schema.org/ItemList</a> (includes 5 Schema sub-types)</li>
 <li><a href="https://schema.org/Thing">schema.org/Thing</a> (includes 1457 Schema sub-types)</li>
 </ul></li>
-<li><p>Automatically includes Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google Rich Results / Rich Snippets (see the <a href="https://developers.google.com/search/docs/data-types/article#amp-sd">Google Article AMP structured data guidelines</a> for details on this new requirement from Google).</p></li>
+<li><p>Automatically includes Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google Rich Results (see the <a href="https://developers.google.com/search/docs/data-types/article#amp-sd">Google Article AMP structured data guidelines</a> for details on this new requirement from Google).</p></li>
 <li><p>Customize the Schema type for each individual posts, pages, custom post types, tags, categories, custom taxonomy / terms, and attachment pages.</p></li>
 <li><p>Provides complete Schema ImageObject SEO markup with attachment data from the WordPress Media Library (name, alternateName, alternativeHeadline, caption, description, fileFormat, uploadDate, and more).</p></li>
 <li><p>Built-in support for <a href="https://wordpress.org/plugins/amp/">AMP</a>, <a href="https://wordpress.org/plugins/better-amp/">Better AMP</a>, and <a href="https://wordpress.org/plugins/accelerated-mobile-pages/">AMP for WP</a> plugins.</p></li>
@@ -255,7 +255,7 @@
 <li><a href="https://schema.org/WebSite">schema.org/WebSite</a></li>
 </ul></li>
 <li><p>Provides complete video SEO markup with information from video service APIs (Facebook, Slideshare, Soundcloud, Vimeo, Wistia, YouTube).</p></li>
-<li><p>WooCommerce product variations are grouped by currency and added as a Schema AggregateOffer for Google's Rich Results / Rich Snippets (includes the product variation group high price, low price, and currency).</p></li>
+<li><p>WooCommerce product variations are grouped by currency and added as a Schema AggregateOffer for Google's Rich Results (includes the product variation group high price, low price, and currency).</p></li>
 <li><p>Fixes common Google testing tool warnings like "aggregateRating field is recommended" and "review field is recommended".</p></li>
 <li><p>Fixes Google testing tool warnings for WooCommerce products, like "brand field is recommended", "missing a global identifier", etc.</p></li>
 <li><p>Includes Aggregate Rating values (if available from WordPress) in the main webpage Schema "aggregateRating" property.</p></li>
