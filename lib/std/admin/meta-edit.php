@@ -607,15 +607,14 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'header'   => 'h5',
 					'label'    => _x( 'Organization Information', 'metabox title', 'wpsso-schema-json-ld' ),
 				),
-
 				'schema_organization_org_id' => array(
 					'tr_class' => $schema_type_row_class[ 'organization' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Select an Organization', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_organization_org_id',
-					'content'  => $form->get_no_select( 'schema_organization_org_id', $org_site_names,
-						$css_class = 'long_name' ) . $org_req_msg,
+					'content'  => $form->get_no_select( 'schema_organization_org_id', $org_site_names, $css_class = 'long_name' ) .
+						( empty( $form->options[ 'schema_organization_org_id:is' ] ) ? $org_req_msg : '' ),
 				),
 
 				/**
