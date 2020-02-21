@@ -862,6 +862,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.21.3-dev.1 (2020/02/21)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Added a check for "Use WordPress Content Filters" when parsing the post content for JSON scripts (to optionally avoid using the WordPress 'the_content' filter).
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v5.5.
+	* WordPress v4.0.
+	* WPSSO Core v6.21.0.
+
 **Version 2.21.2 (2020/02/16)**
 
 * **New Features**
@@ -929,6 +944,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v6.18.0.
 
 == Upgrade Notice ==
+
+= 2.21.3-dev.1 =
+
+(2020/02/21) Added a check for "Use WordPress Content Filters" when parsing the post content for JSON scripts (to optionally avoid using the WordPress 'the_content' filter).
 
 = 2.21.2 =
 
