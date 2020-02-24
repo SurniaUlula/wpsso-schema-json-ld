@@ -384,7 +384,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			}
 
 			$opts               =& $this->p->options;	// Shortcut variable name.
-			$def_schema_type    = $this->p->schema->get_mod_schema_type( $mod, $get_schema_id = true, $use_mod_opts = false );
+			$def_schema_type    = $this->p->schema->get_mod_schema_type( $mod, $get_id = true, $use_mod_opts = false );
 			$def_lang           = SucomUtil::get_locale( $mod );
 			$def_copyright_year = '';
 			$job_locations_max  = SucomUtil::get_const( 'WPSSO_SCHEMA_JOB_LOCATIONS_MAX', 5 );
