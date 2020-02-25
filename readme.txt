@@ -862,14 +862,14 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.21.3-dev.4 (2020/02/24)**
+**Version 2.21.3-dev.5 (2020/02/24)**
 
 * **New Features**
 	* None.
 * **Improvements**
 	* None.
 * **Bugfixes**
-	* None.
+	* Fixed adding two or more "application/ld+json" scripts from the post content to the Schema hasPart property.
 * **Developer Notes**
 	* Replaced the use of 'the_content' filter in WpssoJsonProPropHasPart by a call to `WpssoPage->get_the_content()`.
 * **Requires At Least**
@@ -945,9 +945,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.21.3-dev.4 =
+= 2.21.3-dev.5 =
 
-(2020/02/24) Replaced the use of 'the_content' filter in WpssoJsonProPropHasPart by a call to `WpssoPage->get_the_content()`.
+(2020/02/24) Fixed adding two or more "application/ld+json" scripts from the post content to the Schema hasPart property.
 
 = 2.21.2 =
 
