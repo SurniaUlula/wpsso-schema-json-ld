@@ -862,7 +862,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.21.3-dev.5 (2020/02/24)**
+**Version 2.21.3-dev.5 (2020/02/25)**
 
 * **New Features**
 	* None.
@@ -947,7 +947,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.21.3-dev.5 =
 
-(2020/02/24) Fixed adding two or more "application/ld+json" scripts from the post content to the Schema hasPart property.
+(2020/02/25) Fixed adding two or more "application/ld+json" scripts from the post content to the Schema hasPart property.
 
 = 2.21.2 =
 
