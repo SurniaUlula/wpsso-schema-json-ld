@@ -862,7 +862,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.21.3-dev.2 (2020/02/21)**
+**Version 2.21.3-dev.4 (2020/02/24)**
 
 * **New Features**
 	* None.
@@ -945,9 +945,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.21.3-dev.2 =
+= 2.21.3-dev.4 =
 
-(2020/02/21) Replaced the use of 'the_content' filter in WpssoJsonProPropHasPart by a call to `WpssoPage->get_the_content()`.
+(2020/02/24) Replaced the use of 'the_content' filter in WpssoJsonProPropHasPart by a call to `WpssoPage->get_the_content()`.
 
 = 2.21.2 =
 
