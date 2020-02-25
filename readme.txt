@@ -862,7 +862,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.21.3-dev.5 (2020/02/25)**
+**Version 2.21.3-b.1 (2020/02/25)**
 
 * **New Features**
 	* None.
@@ -875,7 +875,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.5.
 	* WordPress v4.0.
-	* WPSSO Core v6.21.0.
+	* WPSSO Core v6.21.3-b.1.
 
 **Version 2.21.2 (2020/02/16)**
 
@@ -945,7 +945,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.21.3-dev.5 =
+= 2.21.3-b.1 =
 
 (2020/02/25) Fixed adding two or more "application/ld+json" scripts from the post content to the Schema hasPart property.
 
