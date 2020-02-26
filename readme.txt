@@ -862,7 +862,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.21.3-b.1 (2020/02/25)**
+**Version 2.21.3-b.2 (2020/02/26)**
 
 * **New Features**
 	* None.
@@ -875,7 +875,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.5.
 	* WordPress v4.0.
-	* WPSSO Core v6.21.3-b.1.
+	* WPSSO Core v6.22.0-b.2.
 
 **Version 2.21.2 (2020/02/16)**
 
@@ -945,9 +945,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.21.3-b.1 =
+= 2.21.3-b.2 =
 
-(2020/02/25) Fixed adding two or more "application/ld+json" scripts from the post content to the Schema hasPart property.
+(2020/02/26) Fixed adding two or more "application/ld+json" scripts from the post content to the Schema hasPart property.
 
 = 2.21.2 =
 
