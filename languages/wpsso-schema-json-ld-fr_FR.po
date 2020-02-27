@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Schema JSON-LD Markup 2.22.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-02-27 07:52-0800\n"
-"PO-Revision-Date: 2020-02-27 07:52-0800\n"
+"POT-Creation-Date: 2020-02-27 09:23-0800\n"
+"PO-Revision-Date: 2020-02-27 09:24-0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -405,12 +405,12 @@ msgid "The operating system supported (example: %s, etc.)."
 msgstr "Le système d'exploitation supporté (exemple: %s, etc.)."
 
 #: lib/filters-messages.php:641
-msgid "The maximum length used for the Schema CreativeWork text property value (the default is %d characters)."
-msgstr "La longueur maximale utilisée pour la valeur de la propriété Schéma CreativeWork text (la valeur par défaut est %d caractères)."
+msgid "The maximum length of the Schema CreativeWork \"text\" and \"articleBody\" property values (the default is %d characters)."
+msgstr "La longueur maximale des valeurs des propriétés Schema CreativeWork \"text\" et \"articleBody\" (la valeur par défaut est %d caractères)."
 
 #: lib/filters-messages.php:647
-msgid "Add a text property to the Schema CreativeWork type with the complete textual content of the post / page."
-msgstr "Ajoutez une propriété text au type de Schéma CreativeWork avec le contenu textuel complet de l'article / page."
+msgid "Add a \"text\" or \"articleBody\" property to Schema CreativeWork markup with the complete textual content of the post / page."
+msgstr "Ajoutez une propriété \"text\" ou \"articleBody\" au balisage Schema CreativeWork avec le contenu textuel complet de l'article / page."
 
 #: lib/filters-messages.php:653
 msgid "When a rating value for the webpage content is not available, a 5 star rating from the site organization can be added to the main Schema type markup."
@@ -1490,8 +1490,8 @@ msgstr "Description du site Web"
 
 #: lib/submenu/schema-general.php:116
 msgctxt "option label"
-msgid "Maximum Text Property Length"
-msgstr "Longueur maximale de la propriété text"
+msgid "Max. Text or Article Body Length"
+msgstr "Longueur max. text ou corps d'article"
 
 #: lib/submenu/schema-general.php:119
 msgctxt "option comment"
@@ -1500,8 +1500,8 @@ msgstr "caractères ou moins"
 
 #: lib/submenu/schema-general.php:122
 msgctxt "option label"
-msgid "Add CreativeWork Text Property"
-msgstr "Ajouter la propriété CreativeWork text"
+msgid "Add Text or Article Body Properties"
+msgstr "Ajouter prop. texte ou corps d'article"
 
 #: lib/submenu/schema-general.php:127
 msgctxt "option label"
