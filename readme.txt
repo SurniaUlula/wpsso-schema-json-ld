@@ -869,7 +869,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **New Features**
 	* None.
 * **Improvements**
-	* None.
+	* Added the "articleBody" property for Schema Article markup, falling back to the "text" property for all other Schema CreativeWork markup.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
