@@ -638,13 +638,13 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				case 'tooltip-schema_text_max_len':		// Max. Text or Article Body Length.
 
-					$text = sprintf( __( 'The maximum length of the Schema CreativeWork text and articleBody property values (the default is %d characters).', 'wpsso-schema-json-ld' ), $this->p->opt->get_defaults( 'schema_text_max_len' ) );
+					$text = sprintf( __( 'The maximum length of Schema CreativeWork text and articleBody property values (the default is %d characters).', 'wpsso-schema-json-ld' ), $this->p->opt->get_defaults( 'schema_text_max_len' ) );
 
 				 	break;
 
 				case 'tooltip-schema_add_text_prop':		// Add Text or Article Body Properties.
 
-					$text = __( 'Add text or articleBody properties to Schema CreativeWork markup with the complete textual content of the post / page.', 'wpsso-schema-json-ld' );
+					$text = __( 'Add a text or articleBody property to Schema CreativeWork markup with the complete textual content of the post / page.', 'wpsso-schema-json-ld' );
 
 				 	break;
 

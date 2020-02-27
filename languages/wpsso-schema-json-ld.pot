@@ -490,13 +490,13 @@ msgstr ""
 
 #: lib/filters-messages.php:641
 msgid ""
-"The maximum length of the Schema CreativeWork text and articleBody property "
+"The maximum length of Schema CreativeWork text and articleBody property "
 "values (the default is %d characters)."
 msgstr ""
 
 #: lib/filters-messages.php:647
 msgid ""
-"Add text or articleBody properties to Schema CreativeWork markup with the "
+"Add a text or articleBody property to Schema CreativeWork markup with the "
 "complete textual content of the post / page."
 msgstr ""
 
