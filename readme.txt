@@ -864,7 +864,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.22.1-dev.1 (TBD)**
+**Version 2.22.1-dev.1 (2020/02/27)**
 
 * **New Features**
 	* None.
@@ -961,6 +961,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v6.18.0.
 
 == Upgrade Notice ==
+
+= 2.22.1-dev.1 =
+
+(2020/02/27) Added the "articleBody" property for Schema Article markup, falling back to the "text" property for all other Schema CreativeWork markup.
 
 = 2.22.0 =
 
