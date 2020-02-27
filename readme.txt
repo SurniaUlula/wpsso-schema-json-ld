@@ -22,7 +22,7 @@ Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPag
 
 **Uses your existing WordPress content and plugin / API data for accurate and comprehensive Schema JSON-LD markup:**
 
-Including image SEO, video SEO, local business, organization, publisher, person, author and co-authors, extensive e-Commerce product markup, product variations, product ratings, aggregate ratings, reviews, recipe information, event details, collection pages, profile pages, search pages, item lists for [Google's Carousel Rich Results](https://developers.google.com/search/docs/guides/mark-up-listings), customized property values, and much, much more (see below for Standard and Premium version details).
+Including image SEO, video SEO, local business, organization, publisher, person, author and co-authors, extensive e-Commerce product markup, product variations, product ratings, aggregate ratings, reviews, recipe information, event details, collection pages, profile pages, search pages, FAQ pages, item lists for [Google's Carousel Rich Results](https://developers.google.com/search/docs/guides/mark-up-listings), and much, much more (see below for Standard and Premium version details).
 
 Offers Schema JSON-LD markup for posts, pages, custom post types, terms (category, tags, etc.), custom taxonomies, user profile pages, search result pages, Accelerated Mobile Pages (AMP) pages, etc.
 
@@ -217,6 +217,8 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 	* [schema.org/Thing](https://schema.org/Thing) (includes 1457 Schema sub-types)
 	* [schema.org/WebPage](https://schema.org/WebPage) (includes 13 Schema sub-types)
 	* [schema.org/WebSite](https://schema.org/WebSite)
+
+* Provides Schema FAQPage and Question / Answer markup for the [WPSSO FAQ Manager](https://wordpress.org/plugins/wpsso-faq/) add-on custom post types, taxonomies and shortcodes.
 
 * Provides complete video SEO markup with information from video service APIs (Facebook, Slideshare, Soundcloud, Vimeo, Wistia, YouTube).
 
@@ -862,12 +864,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.21.3-rc.2 (2020/02/27)**
+**Version 2.22.0 (2020/02/27)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* None.
+	* Added Schema FAQPage and Question / Answer markup for the [WPSSO FAQ Manager](https://wordpress.org/plugins/wpsso-faq/) add-on shortcodes.
 * **Bugfixes**
 	* Fixed adding two or more "application/ld+json" scripts from the post content to the Schema hasPart property.
 * **Developer Notes**
@@ -875,7 +877,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.5.
 	* WordPress v4.0.
-	* WPSSO Core v6.22.0-rc.2.
+	* WPSSO Core v6.22.0.
 
 **Version 2.21.2 (2020/02/16)**
 
@@ -945,9 +947,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.21.3-rc.2 =
+= 2.22.0 =
 
-(2020/02/27) Fixed adding two or more "application/ld+json" scripts from the post content to the Schema hasPart property.
+(2020/02/27) Added Schema FAQPage and Question / Answer markup for the WPSSO FAQ Manager add-on shortcodes. Fixed adding two or more "application/ld+json" scripts from the post content to the Schema hasPart property.
 
 = 2.21.2 =
 
