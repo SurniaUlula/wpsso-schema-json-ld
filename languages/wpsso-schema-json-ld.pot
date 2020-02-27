@@ -490,14 +490,14 @@ msgstr ""
 
 #: lib/filters-messages.php:641
 msgid ""
-"The maximum length used for the Schema CreativeWork text property value (the "
-"default is %d characters)."
+"The maximum length of the Schema CreativeWork text and articleBody property "
+"values (the default is %d characters)."
 msgstr ""
 
 #: lib/filters-messages.php:647
 msgid ""
-"Add a text property to the Schema CreativeWork type with the complete "
-"textual content of the post / page."
+"Add text or articleBody properties to Schema CreativeWork markup with the "
+"complete textual content of the post / page."
 msgstr ""
 
 #: lib/filters-messages.php:653
@@ -1604,7 +1604,7 @@ msgstr ""
 
 #: lib/submenu/schema-general.php:116
 msgctxt "option label"
-msgid "Maximum Text Property Length"
+msgid "Max. Text or Article Body Length"
 msgstr ""
 
 #: lib/submenu/schema-general.php:119
@@ -1614,7 +1614,7 @@ msgstr ""
 
 #: lib/submenu/schema-general.php:122
 msgctxt "option label"
-msgid "Add CreativeWork Text Property"
+msgid "Add Text or Article Body Properties"
 msgstr ""
 
 #: lib/submenu/schema-general.php:127

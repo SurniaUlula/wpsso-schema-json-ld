@@ -97,35 +97,35 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 
 					$table_rows[ 'site_name' ] = '' .
 					$this->form->get_th_html( _x( 'WebSite Name',
-						'option label', 'wpsso-schema-json-ld' ), '', 'site_name', $atts_locale ) . 
+						'option label', 'wpsso-schema-json-ld' ), $css_class = '', $css_id = 'site_name', $atts_locale ) . 
 					'<td>' . $this->form->get_input( $site_name_key, 'long_name', '', 0, $def_site_name ) . '</td>';
 
 					$table_rows[ 'site_name_alt' ] = '' .
 					$this->form->get_th_html( _x( 'WebSite Alternate Name',
-						'option label', 'wpsso-schema-json-ld' ), '', 'site_name_alt', $atts_locale ) . 
+						'option label', 'wpsso-schema-json-ld' ), $css_class = '', $css_id = 'site_name_alt', $atts_locale ) . 
 					'<td>' . $this->form->get_input( $site_name_alt_key, 'long_name' ) . '</td>';
 
 					$table_rows[ 'site_desc' ] = '' .
 					$this->form->get_th_html( _x( 'WebSite Description',
-						'option label', 'wpsso-schema-json-ld' ), '', 'site_desc', $atts_locale ) . 
-					'<td>' . $this->form->get_textarea( $site_desc_key, '', '', 0, $def_site_desc ) . '</td>';
+						'option label', 'wpsso-schema-json-ld' ), $css_class = '', $css_id = 'site_desc', $atts_locale ) . 
+					'<td>' . $this->form->get_textarea( $site_desc_key, $css_class = '', $css_id = '', 0, $def_site_desc ) . '</td>';
 
 					$this->add_schema_item_props_table_rows( $table_rows, $this->form );
 
 					$table_rows[ 'schema_text_max_len' ] = $this->form->get_tr_hide( 'basic', 'schema_text_max_len' ) . 
-					$this->form->get_th_html( _x( 'Maximum Text Property Length',
-						'option label', 'wpsso-schema-json-ld' ), '', 'schema_text_max_len' ) . 
+					$this->form->get_th_html( _x( 'Max. Text or Article Body Length',
+						'option label', 'wpsso-schema-json-ld' ), $css_class = '', $css_id = 'schema_text_max_len' ) . 
 					'<td>' . $this->form->get_input( 'schema_text_max_len', 'short' ) . ' ' .
 					_x( 'characters or less', 'option comment', 'wpsso-schema-json-ld' ) . '</td>';
 
 					$table_rows[ 'schema_add_text_prop' ] = $this->form->get_tr_hide( 'basic', 'schema_add_text_prop' ) .
-					$this->form->get_th_html( _x( 'Add CreativeWork Text Property',
-						'option label', 'wpsso-schema-json-ld' ), '', 'schema_add_text_prop' ) . 
+					$this->form->get_th_html( _x( 'Add Text or Article Body Properties',
+						'option label', 'wpsso-schema-json-ld' ), $css_class = '', $css_id = 'schema_add_text_prop' ) . 
 					'<td>' . $this->form->get_checkbox( 'schema_add_text_prop' ) . '</td>';
 
 					$table_rows[ 'schema_add_5_star_rating' ] = $this->form->get_tr_hide( 'basic', 'schema_add_5_star_rating' ) .
 					$this->form->get_th_html( _x( 'Add 5 Star Rating If No Rating',
-						'option label', 'wpsso-schema-json-ld' ), '', 'schema_add_5_star_rating' ) . 
+						'option label', 'wpsso-schema-json-ld' ), $css_class = '', $css_id = 'schema_add_5_star_rating' ) . 
 					'<td>' . $this->form->get_checkbox( 'schema_add_5_star_rating' ) . '</td>';
 
 					break;

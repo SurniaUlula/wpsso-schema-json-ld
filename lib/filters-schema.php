@@ -162,35 +162,28 @@ if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
 					$org_logo_key   = 'org_banner_url';
 				}
 
-				/**
-				 * Property:
-				 *      articleBody
-				 */
-				$ret[ 'articleBody' ] = $this->p->page->get_text( $max_len = 0, $dots = '...', $mod );
-
-				if ( empty( $ret[ 'articleBody' ] ) ) { // Just in case.
-					unset( $ret[ 'articleBody' ] );
-				}
+				$text_prop_name = 'articleBody';
 
 			} else {
 
 				$size_names     = array( $this->p->lca . '-schema' );
 				$alt_size_names = null;
 				$org_logo_key   = 'org_logo_url';
+				$text_prop_name = 'text';
+			}
 
-				/**
-				 * Property:
-				 *      text
-				 */
-				if ( ! empty( $this->p->options[ 'schema_add_text_prop' ] ) ) {
+			/**
+			 * Property:
+			 *      text or articleBody
+			 */
+			if ( ! empty( $this->p->options[ 'schema_add_text_prop' ] ) ) {
 
-					$text_max_len = $this->p->options[ 'schema_text_max_len' ];
+				$text_max_len = $this->p->options[ 'schema_text_max_len' ];
 
-					$ret[ 'text' ] = $this->p->page->get_text( $text_max_len, $dots = '...', $mod );
+				$ret[ $text_prop_name ] = $this->p->page->get_text( $text_max_len, $dots = '...', $mod );
 
-					if ( empty( $ret[ 'text' ] ) ) { // Just in case.
-						unset( $ret[ 'text' ] );
-					}
+				if ( empty( $ret[ $text_prop_name ] ) ) { // Just in case.
+					unset( $ret[ $text_prop_name ] );
 				}
 			}
 
