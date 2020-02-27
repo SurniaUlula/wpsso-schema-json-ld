@@ -3,11 +3,11 @@
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Schema JSON-LD Markup</td></tr>
 <tr><th align="right" valign="top" nowrap>Summary</th><td>Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPages, HowTos, Images, Local Business, Products, Recipes, Reviews, Videos</td></tr>
-<tr><th align="right" valign="top" nowrap>Stable Version</th><td>2.21.2</td></tr>
+<tr><th align="right" valign="top" nowrap>Stable Version</th><td>2.22.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires PHP</th><td>5.5 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>4.0 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To WordPress</th><td>5.3.2</td></tr>
-<tr><th align="right" valign="top" nowrap>Tested Up To WooCommerce</th><td>3.9.1</td></tr>
+<tr><th align="right" valign="top" nowrap>Tested Up To WooCommerce</th><td>3.9.2</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
 <tr><th align="right" valign="top" nowrap>License</th><td><a href="https://www.gnu.org/licenses/gpl.txt">GPLv3</a></td></tr>
 <tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>schema.org, rich snippets, structured data, amp, woocommerce, image seo, video seo, news seo, schema, rich results, knowledge graph, rating, review, recipe, event, product</td></tr>
