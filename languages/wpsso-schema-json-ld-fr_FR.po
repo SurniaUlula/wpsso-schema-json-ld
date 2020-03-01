@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Schema JSON-LD Markup 2.22.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-02-27 09:23-0800\n"
-"PO-Revision-Date: 2020-02-27 09:24-0800\n"
+"POT-Creation-Date: 2020-03-01 09:27-0800\n"
+"PO-Revision-Date: 2020-03-01 09:30-0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -201,7 +201,7 @@ msgstr "La durée totale du film du début à la fin du générique."
 
 #: lib/filters-messages.php:321
 msgid "Optionally select a different organization for the Schema Organization item type and/or its sub-type (Airline, Corporation, School, etc). Select \"[None]\" to use the default organization details."
-msgstr "Sélectionnez une organisation différente et optionnelle pour le type d'élément Schéma Organisation et/ou son sous-type (Airline, Corporation, School, etc.). Sélectionnez \"[Aucun]\" pour utiliser les détails de l'organisation par défaut."
+msgstr "Choisir une organisation différente et optionnelle pour le type d'élément Schéma Organisation et/ou son sous-type (Airline, Corporation, School, etc.). Sélectionnez \"[Aucun]\" pour utiliser les détails de l'organisation par défaut."
 
 #: lib/filters-messages.php:327
 msgctxt "user role"
@@ -434,7 +434,7 @@ msgstr "Google Review snippet structured data guidelines"
 
 #: lib/filters-messages.php:665
 msgid "Select a default family friendly value for the Schema CreativeWork type and/or its sub-types (Article, BlogPosting, WebPage, etc)."
-msgstr "Sélectionnez une valeur favorable à la famille par défaut pour le type de Schéma CreativeWork et/ou ses sous-types (Article, BlogPosting, WebPage, etc)."
+msgstr "Sélectionnez une valeur conviviale à la famille par défaut pour le type Schema CreativeWork et/ou ses sous-types (Article, BlogPosting, WebPage, etc.)."
 
 #: lib/filters-messages.php:671
 msgid "Select a default publisher for the Schema CreativeWork type and/or its sub-types (Article, BlogPosting, WebPage, etc)."
@@ -871,7 +871,7 @@ msgstr "Informations d'organisation"
 #: lib/std/admin/meta-edit.php:614
 msgctxt "option label"
 msgid "Select an Organization"
-msgstr "Sélectionnez une organisation"
+msgstr "Choisir une organisation"
 
 #: lib/gettext-pro.php:69 lib/pro/admin/meta-edit.php:622
 #: lib/std/admin/meta-edit.php:627
@@ -882,8 +882,8 @@ msgstr "Informations de personne"
 #: lib/gettext-pro.php:70 lib/pro/admin/meta-edit.php:627
 #: lib/std/admin/meta-edit.php:633
 msgctxt "option label"
-msgid "Alternate Person"
-msgstr "Autre personne"
+msgid "Select a Person"
+msgstr "Choisir une personne"
 
 #: lib/gettext-pro.php:71 lib/pro/admin/meta-edit.php:642
 #: lib/std/admin/meta-edit.php:648
@@ -1595,3 +1595,7 @@ msgstr "JS Morisset"
 #. Author URI of the plugin/theme
 msgid "https://wpsso.com/"
 msgstr "https://wpsso.com/"
+
+#~ msgctxt "option label"
+#~ msgid "Alternate Person"
+#~ msgstr "Autre personne"
