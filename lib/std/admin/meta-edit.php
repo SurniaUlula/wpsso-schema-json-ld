@@ -630,7 +630,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => $schema_type_row_class[ 'person' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Alternate Person', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Select a Person', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_person_id',
 					'content'  => $form->get_no_select( 'schema_person_id', $person_names,
 						$css_class = 'long_name' ),

@@ -987,7 +987,7 @@ msgstr ""
 #: lib/gettext-pro.php:70 lib/pro/admin/meta-edit.php:627
 #: lib/std/admin/meta-edit.php:633
 msgctxt "option label"
-msgid "Alternate Person"
+msgid "Select a Person"
 msgstr ""
 
 #: lib/gettext-pro.php:71 lib/pro/admin/meta-edit.php:642

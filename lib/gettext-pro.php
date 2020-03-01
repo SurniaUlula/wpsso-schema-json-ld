@@ -67,7 +67,7 @@ _x( 'Movie Runtime', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Organization Information', 'metabox title', 'wpsso-schema-json-ld' );
 _x( 'Select an Organization', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Person Information', 'metabox title', 'wpsso-schema-json-ld' );
-_x( 'Alternate Person', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Select a Person', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Additional Product Information', 'metabox title', 'wpsso-schema-json-ld' );
 _x( 'Product Length', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Product Width', 'option label', 'wpsso-schema-json-ld' );
