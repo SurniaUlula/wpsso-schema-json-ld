@@ -316,9 +316,9 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 		* Production Company
 		* Movie Runtime
 	* Organization Information
-		* Alternate Organization
+		* Select an Organization
 	* Person Information
-		* Alternate Person
+		* Select a Person
 	* QA Page Information
 		* QA Heading
 	* Recipe Information

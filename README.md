@@ -368,12 +368,12 @@
 <li>Organization Information
 
 <ul>
-<li>Alternate Organization</li>
+<li>Select an Organization</li>
 </ul></li>
 <li>Person Information
 
 <ul>
-<li>Alternate Person</li>
+<li>Select a Person</li>
 </ul></li>
 <li>QA Page Information
 
