@@ -864,7 +864,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.22.1-dev.1 (2020/02/27)**
+**Version 2.22.1 (2020/03/01)**
 
 * **New Features**
 	* None.
@@ -962,15 +962,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.22.1-dev.1 =
+= 2.22.1 =
 
-(2020/02/27) Added the "articleBody" property for Schema Article markup, falling back to the "text" property for all other Schema CreativeWork markup.
-
-= 2.22.0 =
-
-(2020/02/27) Added Schema FAQPage and Question / Answer markup for the WPSSO FAQ Manager add-on shortcodes. Fixed adding two or more "application/ld+json" scripts from the post content to the Schema hasPart property.
-
-= 2.21.2 =
-
-(2020/02/16) Added a warning when an aggregate rating value is added to a Schema type that cannot have an aggregate rating value. Fixed commenting of JSON scripts in the content when added to the Schema hasPart property.
+(2020/03/01) Added the "articleBody" property for Schema Article markup, falling back to the "text" property for all other Schema CreativeWork markup.
 
