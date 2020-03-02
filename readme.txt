@@ -892,7 +892,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.5.
 	* WordPress v4.0.
-	* WPSSO Core v6.22.0.
+	* WPSSO Core v6.22.1.
 
 **Version 2.22.0 (2020/02/27)**
 
@@ -908,72 +908,6 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* PHP v5.5.
 	* WordPress v4.0.
 	* WPSSO Core v6.22.0.
-
-**Version 2.21.2 (2020/02/16)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added a warning when an aggregate rating value is added to a Schema type that cannot have an aggregate rating value.
-* **Bugfixes**
-	* Fixed commenting of JSON scripts in the content when added to the Schema hasPart property.
-* **Developer Notes**
-	* None.
-* **Requires At Least**
-	* PHP v5.5.
-	* WordPress v4.0.
-	* WPSSO Core v6.21.0.
-
-**Version 2.21.1 (2020/02/09)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Added a success/failure message to the HTML content in `WpssoJsonProPropHasPart->maybe_comment_json_scripts()`.
-* **Requires At Least**
-	* PHP v5.5.
-	* WordPress v4.0.
-	* WPSSO Core v6.20.0.
-
-**Version 2.21.0 (2020/02/06)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added file caching to `SucomForm->get_select()` for the javascript Schema type array.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
-* **Requires At Least**
-	* PHP v5.5.
-	* WordPress v4.0.
-	* WPSSO Core v6.19.0.
-
-**Version 2.20.0 (2020/01/30)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added a new "Software App Subject Information" section to the Document SSO metabox:
-		* Operating System
-		* Application Category
-		* Software App Offers
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Improved the handling of inherited options in the Document SSO metabox.
-	* Moved all methods from WpssoJsonSchema to the WpssoSchema class in WPSSO Core v6.18.0.
-	* Removed the WpssoJson->schema variable.
-	* Removed the lib/schema.php library file.
-* **Requires At Least**
-	* PHP v5.5.
-	* WordPress v4.0.
-	* WPSSO Core v6.18.0.
 
 == Upgrade Notice ==
 
