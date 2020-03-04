@@ -8,7 +8,7 @@ License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://surniaulula.github.io/wpsso-schema-json-ld/assets/
 Tags: schema.org, rich snippets, structured data, amp, woocommerce, image seo, video seo, news seo, schema, rich results, knowledge graph, rating, review, recipe, event, product
 Contributors: jsmoriss
-Requires PHP: 5.5
+Requires PHP: 5.6
 Requires At Least: 4.0
 Tested Up To: 5.4
 WC Tested Up To: 3.9.2
@@ -875,9 +875,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Developer Notes**
 	* Removed the 'no_auto_draft' deprecated argument from all form options.
 * **Requires At Least**
-	* PHP v5.5.
+	* PHP v5.6.
 	* WordPress v4.0.
-	* WPSSO Core v6.23.0.
+	* WPSSO Core v6.23.1.
 
 **Version 2.22.1 (2020/03/01)**
 
@@ -890,7 +890,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Developer Notes**
 	* None.
 * **Requires At Least**
-	* PHP v5.5.
+	* PHP v5.6.
 	* WordPress v4.0.
 	* WPSSO Core v6.22.1.
 
@@ -905,7 +905,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Developer Notes**
 	* Replaced the use of 'the_content' filter in WpssoJsonProPropHasPart by a call to `WpssoPage->get_the_content()`.
 * **Requires At Least**
-	* PHP v5.5.
+	* PHP v5.6.
 	* WordPress v4.0.
 	* WPSSO Core v6.22.0.
 
