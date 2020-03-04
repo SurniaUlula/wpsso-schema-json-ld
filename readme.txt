@@ -12,7 +12,7 @@ Requires PHP: 5.5
 Requires At Least: 4.0
 Tested Up To: 5.3.2
 WC Tested Up To: 3.9.2
-Stable Tag: 2.22.1
+Stable Tag: 2.23.0
 
 Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPages, HowTos, Images, Local Business, Products, Recipes, Reviews, Videos, and more.
 
@@ -914,8 +914,4 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 = 2.23.0 =
 
 (2020/03/04) Removed the 'no_auto_draft' deprecated argument from all form options.
-
-= 2.22.1 =
-
-(2020/03/01) Added the "articleBody" property for Schema Article markup, falling back to the "text" property for all other Schema CreativeWork markup.
 
