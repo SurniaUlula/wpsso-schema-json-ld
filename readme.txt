@@ -864,6 +864,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.23.1-dev.1 (TBD)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Added support for a new WPSSO_SCHEMA_MARKUP_DISABLE constant.
+* **Requires At Least**
+	* PHP v5.6.
+	* WordPress v4.0.
+	* WPSSO Core v6.23.3-dev.1.
+
 **Version 2.23.0 (2020/03/04)**
 
 * **New Features**
