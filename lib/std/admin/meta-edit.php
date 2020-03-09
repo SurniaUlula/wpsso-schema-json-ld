@@ -29,6 +29,11 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'term_edit_rows' => 4,
 					'user_edit_rows' => 4,
 				),
+				'meta_media_rows' => array(
+					'post_media_rows' => 4,
+					'term_media_rows' => 4,
+					'user_media_rows' => 4,
+				),
 			) );
 		}
 
@@ -36,6 +41,13 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 
 			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();
+			}
+
+			/**
+			 * Move options to the end of the table, just in case.
+			 */
+			foreach ( SucomUtil::preg_grep_keys( '/^(subsection_schema|schema_)/', $table_rows ) as $key => $row ) {
+				SucomUtil::move_to_end( $table_rows, $key );
 			}
 
 			$dots               = '...';
@@ -105,13 +117,6 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 			$schema_review_item_type_row_class = WpssoSchema::get_schema_type_row_class( 'schema_review_item_type', array(
 				'creative_work'  => 'creative.work',
 			) );
-
-			/**
-			 * Move Schema options to the end of the table, just in case.
-			 */
-			foreach ( SucomUtil::preg_grep_keys( '/^(subsection_schema|schema_)/', $table_rows ) as $key => $row ) {
-				SucomUtil::move_to_end( $table_rows, $key );
-			}
 
 			/**
 			 * Metabox form rows.
@@ -1163,6 +1168,60 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tooltip'  => 'meta-schema_software_app_cat',
 					'content'  => $form->get_no_input_value( '', $css_class = 'wide' ),
 				),
+			);
+
+			return $form->get_md_form_rows( $table_rows, $form_rows, $head, $mod );
+		}
+
+		public function filter_meta_media_rows( $table_rows, $form, $head, $mod ) {
+
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->mark();
+			}
+
+			/**
+			 * Move options to the end of the table, just in case.
+			 */
+			foreach ( SucomUtil::preg_grep_keys( '/^(subsection_schema|schema_)/', $table_rows ) as $key => $row ) {
+				SucomUtil::move_to_end( $table_rows, $key );
+			}
+
+			$max_media_items = $this->p->cf[ 'form' ][ 'max_media_items' ];
+
+			$media_info = $this->p->og->get_media_info( $this->p->lca . '-schema',
+				array( 'pid', 'img_url' ), $mod, $md_pre = 'og', $mt_pre = 'og' );
+	
+			$form_rows = array(
+				'wpssojson_pro_feature_msg' => array(
+					'table_row' => '<td colspan="2">' . $this->p->msgs->pro_feature( 'wpssojson' ) . '</td>',
+				),
+			);
+
+			if ( $mod[ 'is_post' ] ) {
+				$form_rows[ 'schema_img_max' ] = array(
+					'tr_class' => $form->get_css_class_hide( 'basic', 'schema_img_max' ),
+					'th_class' => 'medium',
+					'td_class' => 'blank',
+					'label'    => _x( 'Maximum Images', 'option label', 'wpsso' ),
+					'tooltip'  => 'schema_img_max',	// Use tooltip message from settings.
+					'content'  => $form->get_no_select( 'schema_img_max', range( 0, $max_media_items ), $css_class = 'medium' ),
+				);
+			}
+
+			$form_rows[ 'schema_img_id' ] = array(
+				'th_class' => 'medium',
+				'td_class' => 'blank',
+				'label'    => _x( 'Image ID', 'option label', 'wpsso' ),
+				'tooltip'  => 'meta-schema_img_id',
+				'content'  => $form->get_no_input_image_upload( 'schema_img', $media_info[ 'pid' ], true ),
+			);
+
+			$form_rows[ 'schema_img_url' ] = array(
+				'th_class' => 'medium',
+				'td_class' => 'blank',
+				'label'    => _x( 'or an Image URL', 'option label', 'wpsso' ),
+				'tooltip'  => 'meta-schema_img_url',
+				'content'  => $form->get_no_input_value( $media_info[ 'img_url' ], $css_class = 'wide' ),
 			);
 
 			return $form->get_md_form_rows( $table_rows, $form_rows, $head, $mod );

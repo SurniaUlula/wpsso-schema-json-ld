@@ -162,6 +162,12 @@ _x( 'First Appearance URL', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Software Application Information', 'metabox title', 'wpsso-schema-json-ld' );
 _x( 'Operating System', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Application Category', 'option label', 'wpsso-schema-json-ld' );
+// translators: Please ignore - translation uses a different text domain.
+_x( 'Maximum Images', 'option label', 'wpsso' );
+// translators: Please ignore - translation uses a different text domain.
+_x( 'Image ID', 'option label', 'wpsso' );
+// translators: Please ignore - translation uses a different text domain.
+_x( 'or an Image URL', 'option label', 'wpsso' );
 __( 'A claim review cannot be the subject of another claim review.', 'wpsso-schema-json-ld' );
 __( 'CreativeWork will be used instead as the Schema type for the subject of the webpage (ie. the content) being reviewed.', 'wpsso-schema-json-ld' );
 __( 'adding schema howto step option #%d image', 'wpsso-schema-json-ld' );
