@@ -864,12 +864,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.23.1-dev.1 (TBD)**
+**Version 2.24.0-dev.1 (2020/03/09)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* None.
+	* Moved the Document SSO &gt; Priority Media &gt; Schema JSON-LD Markup / Rich Results options from WPSSO Core to the WPSSO JSON add-on.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -877,7 +877,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.0.
-	* WPSSO Core v6.23.3-dev.1.
+	* WPSSO Core v6.24.0-dev.1.
 
 **Version 2.23.0 (2020/03/04)**
 
