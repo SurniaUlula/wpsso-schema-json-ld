@@ -926,6 +926,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
+= 2.24.0-dev.1 =
+
+(2020/03/09) Moved the Document SSO &gt; Priority Media &gt; Schema JSON-LD Markup / Rich Results options from WPSSO Core to the WPSSO JSON add-on.
+
 = 2.23.0 =
 
 (2020/03/04) Removed the 'no_auto_draft' deprecated argument from all form options.
