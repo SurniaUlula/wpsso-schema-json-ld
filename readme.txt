@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 5.6
 Requires At Least: 4.0
 Tested Up To: 5.4
-WC Tested Up To: 3.9.2
+WC Tested Up To: 4.0.0
 Stable Tag: 2.23.0
 
 Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPages, HowTos, Images, Local Business, Products, Recipes, Reviews, Videos, and more.
@@ -864,7 +864,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.24.0-b.1 (2020/03/10)**
+**Version 2.24.0-rc.1 (2020/03/11)**
 
 * **New Features**
 	* None.
@@ -877,7 +877,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.0.
-	* WPSSO Core v6.24.0-b.1.
+	* WPSSO Core v6.24.0-rc.1.
 
 **Version 2.23.0 (2020/03/04)**
 
@@ -926,9 +926,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.24.0-b.1 =
+= 2.24.0-rc.1 =
 
-(2020/03/10) Moved the Document SSO &gt; Priority Media &gt; Schema JSON-LD Markup / Rich Results options from WPSSO Core to the WPSSO JSON add-on.
+(2020/03/11) Moved the Document SSO &gt; Priority Media &gt; Schema JSON-LD Markup / Rich Results options from WPSSO Core to the WPSSO JSON add-on.
 
 = 2.23.0 =
 
