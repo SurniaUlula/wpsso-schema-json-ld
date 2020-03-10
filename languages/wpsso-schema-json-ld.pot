@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 2.24.0-dev.2\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 2.24.0-b.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-"
 "ld\n"
 "POT-Creation-Date: 2020-MO-DA HO:MI+ZONE\n"
@@ -660,7 +660,7 @@ msgid "Same-As URLs"
 msgstr ""
 
 #: lib/gettext-pro.php:15 lib/pro/admin/meta-edit.php:198
-#: lib/std/admin/meta-edit.php:178 lib/submenu/schema-general.php:213
+#: lib/std/admin/meta-edit.php:178 lib/submenu/schema-general.php:217
 msgctxt "metabox title"
 msgid "Creative Work Information"
 msgstr ""
@@ -726,7 +726,7 @@ msgid "Provider"
 msgstr ""
 
 #: lib/gettext-pro.php:26 lib/pro/admin/meta-edit.php:285
-#: lib/std/admin/meta-edit.php:271 lib/submenu/schema-general.php:240
+#: lib/std/admin/meta-edit.php:271 lib/submenu/schema-general.php:244
 msgctxt "metabox title"
 msgid "Event Information"
 msgstr ""
@@ -891,7 +891,7 @@ msgid "Image ID"
 msgstr ""
 
 #: lib/gettext-pro.php:54 lib/pro/admin/meta-edit.php:500
-#: lib/std/admin/meta-edit.php:499 lib/submenu/schema-general.php:279
+#: lib/std/admin/meta-edit.php:499 lib/submenu/schema-general.php:283
 msgctxt "metabox title"
 msgid "Job Posting Information"
 msgstr ""
@@ -1263,7 +1263,7 @@ msgid "milligrams of cholesterol"
 msgstr ""
 
 #: lib/gettext-pro.php:118 lib/pro/admin/meta-edit.php:936
-#: lib/std/admin/meta-edit.php:973 lib/submenu/schema-general.php:300
+#: lib/std/admin/meta-edit.php:973 lib/submenu/schema-general.php:304
 msgctxt "metabox title"
 msgid "Review Information"
 msgstr ""
@@ -1598,92 +1598,92 @@ msgctxt "metabox tab"
 msgid "Meta Defaults"
 msgstr ""
 
-#: lib/submenu/schema-general.php:104
+#: lib/submenu/schema-general.php:108
 msgctxt "option label"
 msgid "WebSite Name"
 msgstr ""
 
-#: lib/submenu/schema-general.php:109
+#: lib/submenu/schema-general.php:113
 msgctxt "option label"
 msgid "WebSite Alternate Name"
 msgstr ""
 
-#: lib/submenu/schema-general.php:114
+#: lib/submenu/schema-general.php:118
 msgctxt "option label"
 msgid "WebSite Description"
 msgstr ""
 
-#: lib/submenu/schema-general.php:121
+#: lib/submenu/schema-general.php:125
 msgctxt "option label"
 msgid "Max. Text or Article Body Length"
 msgstr ""
 
-#: lib/submenu/schema-general.php:124
+#: lib/submenu/schema-general.php:128
 msgctxt "option comment"
 msgid "characters or less"
 msgstr ""
 
-#: lib/submenu/schema-general.php:127
+#: lib/submenu/schema-general.php:131
 msgctxt "option label"
 msgid "Add Text or Article Body Properties"
 msgstr ""
 
-#: lib/submenu/schema-general.php:132
+#: lib/submenu/schema-general.php:136
 msgctxt "option label"
 msgid "Add 5 Star Rating If No Rating"
 msgstr ""
 
-#: lib/submenu/schema-general.php:216
+#: lib/submenu/schema-general.php:220
 msgctxt "option label"
 msgid "Default Family Friendly"
 msgstr ""
 
-#: lib/submenu/schema-general.php:222
+#: lib/submenu/schema-general.php:226
 msgctxt "option label"
 msgid "Default Publisher"
 msgstr ""
 
-#: lib/submenu/schema-general.php:228
+#: lib/submenu/schema-general.php:232
 msgctxt "option label"
 msgid "Default Provider"
 msgstr ""
 
-#: lib/submenu/schema-general.php:243
+#: lib/submenu/schema-general.php:247
 msgctxt "option label"
 msgid "Default Organizer Org"
 msgstr ""
 
-#: lib/submenu/schema-general.php:249
+#: lib/submenu/schema-general.php:253
 msgctxt "option label"
 msgid "Default Organizer Person"
 msgstr ""
 
-#: lib/submenu/schema-general.php:255
+#: lib/submenu/schema-general.php:259
 msgctxt "option label"
 msgid "Default Performer Org"
 msgstr ""
 
-#: lib/submenu/schema-general.php:261
+#: lib/submenu/schema-general.php:265
 msgctxt "option label"
 msgid "Default Performer Person"
 msgstr ""
 
-#: lib/submenu/schema-general.php:267
+#: lib/submenu/schema-general.php:271
 msgctxt "option label"
 msgid "Default Event Venue"
 msgstr ""
 
-#: lib/submenu/schema-general.php:282
+#: lib/submenu/schema-general.php:286
 msgctxt "option label"
 msgid "Default Hiring Organization"
 msgstr ""
 
-#: lib/submenu/schema-general.php:288
+#: lib/submenu/schema-general.php:292
 msgctxt "option label"
 msgid "Default Job Location"
 msgstr ""
 
-#: lib/submenu/schema-general.php:303
+#: lib/submenu/schema-general.php:307
 msgctxt "option label"
 msgid "Default Subject Webpage Type"
 msgstr ""
