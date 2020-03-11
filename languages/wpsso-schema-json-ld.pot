@@ -1559,7 +1559,7 @@ msgid ""
 msgstr ""
 
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag, %3$s is the type attribute value
-#: lib/shortcode/schema.php:290
+#: lib/shortcode/schema.php:291
 msgid "%1$s %2$s shortcode type attribute \"%3$s\" is not a recognized value."
 msgstr ""
 

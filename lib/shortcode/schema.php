@@ -216,8 +216,9 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 			foreach ( $atts as $key => $value ) {
 
 				/**
-				 * Ignore @id, @context, @type, etc. shortcode attribute keys. WordPress sets key names with
-				 * illegal characters in the value string, so test for both.
+				 * Ignore @id, @context, @type, etc. shortcode attribute keys.
+				 *
+				 * WordPress sets key names with illegal characters in the value string, so test for both.
 				 */
 				if ( strpos( $key, '@' ) === 0 || strpos( $value, '@' ) === 0 ) {
 
