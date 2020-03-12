@@ -619,8 +619,18 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				/**
 				 * See WpssoJsonFiltersSchema->filter_json_data_https_schema_org_creativework().
 				 */
+				'(plus) Property aggregateRating' => array(
+					'status' => 'on',
+				),
+
+				'(plus) Property reviews' => array(
+					'status' => 'on',
+				),
+
+				/**
+				 * See WpssoJsonFiltersSchema->filter_json_data_https_schema_org_creativework().
+				 */
 				'(code) Schema Type Article (schema_type:article)' => array(
-					'sub'    => 'head',
 					'status' => 'on',
 				),
 
@@ -628,7 +638,6 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				 * See WpssoJsonFiltersSchema->filter_json_data_https_schema_org_blog().
 				 */
 				'(code) Schema Type Blog (schema_type:blog)' => array(
-					'sub'    => 'head',
 					'status' => 'on',
 				),
 
@@ -636,7 +645,6 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				 * See WpssoJsonFiltersSchema->filter_json_data_https_schema_org_creativework().
 				 */
 				'(code) Schema Type CreativeWork (schema_type:creative.work)' => array(
-					'sub'    => 'head',
 					'status' => 'on',
 				),
 
@@ -644,7 +652,6 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				 * See WpssoJsonFiltersSchema->filter_json_data_https_schema_org_itemlist().
 				 */
 				'(code) Schema Type ItemList (schema_type:item.list)' => array(
-					'sub'    => 'head',
 					'status' => 'on',
 				),
 
@@ -652,7 +659,6 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				 * See WpssoJsonFiltersSchema->filter_json_data_https_schema_org_thing().
 				 */
 				'(code) Schema Type Thing (schema_type:thing)' => array(
-					'sub'    => 'head',
 					'status' => 'on',
 				),
 			);
@@ -677,7 +683,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				}
 			}
 
-			return $this->filter_common_status_features( $features, $ext, $info, $pkg );
+			return $this->add_schema_type_count( $features, $ext, $info, $pkg );
 		}
 
 		/**
@@ -685,19 +691,16 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 		 */
 		public function filter_status_pro_features( $features, $ext, $info, $pkg ) {
 
-			return $this->filter_common_status_features( $features, $ext, $info, $pkg );
+			return $this->add_schema_type_count( $features, $ext, $info, $pkg );
 		}
 
-		private function filter_common_status_features( $features, $ext, $info, $pkg ) {
+		private function add_schema_type_count( $features, $ext, $info, $pkg ) {
 
 			foreach ( $features as $feature_key => $feature_info ) {
 
-				if ( isset( $feature_info[ 'sub' ] ) && $feature_info[ 'sub' ] === 'head' ) {
+				if ( preg_match( '/^\(([a-z\-]+)\) (Schema Type .+) \(schema_type:(.+)\)$/', $feature_key, $match ) ) {
 
-					if ( preg_match( '/^\(([a-z\-]+)\) (Schema Type .+) \(schema_type:(.+)\)$/', $feature_key, $match ) ) {
-
-						$features[ $feature_key ][ 'label' ] = $match[2] . ' (' . $this->p->schema->count_schema_type_children( $match[3] ) . ')';
-					}
+					$features[ $feature_key ][ 'label' ] = $match[2] . ' (' . $this->p->schema->count_schema_type_children( $match[3] ) . ')';
 				}
 			}
 

@@ -172,4 +172,3 @@ __( 'A claim review cannot be the subject of another claim review.', 'wpsso-sche
 __( 'CreativeWork will be used instead as the Schema type for the subject of the webpage (ie. the content) being reviewed.', 'wpsso-schema-json-ld' );
 __( 'adding schema howto step option #%d image', 'wpsso-schema-json-ld' );
 __( 'adding reviewed subject image', 'wpsso-schema-json-ld' );
-__( 'An aggregate rating value for this markup has been ignored &mdash; <a href="%1$s">Google does not allow an aggregate rating value for the Schema Type %2$s</a>.', 'wpsso-schema-json-ld' );

@@ -15,5 +15,5 @@ WPSSOJSON_VERSION
 WPSSOJSON_SCHEMA_SHORTCODE_NAME			= 'schema'
 WPSSOJSON_SCHEMA_SHORTCODE_SEPARATOR		= '_'
 WPSSOJSON_SCHEMA_SHORTCODE_DEPTH		= 3
-WPSSOJSON_SCHEMA_SHORTCODE_SINGLE_CONTENT	= true	// remove children from content before parsing for description and media
+WPSSOJSON_SCHEMA_SHORTCODE_SINGLE_CONTENT	= true	// Remove children from content before parsing for description and media.
 

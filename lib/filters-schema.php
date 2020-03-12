@@ -42,6 +42,7 @@ if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
 			$this->p->util->add_plugin_filters( $this, array(
 				'add_schema_head_attributes'              => '__return_false',
 				'add_schema_meta_array'                   => '__return_false',
+				'add_schema_noscript_aggregaterating'     => '__return_false',
 				'og_add_mt_offers'                        => '__return_true',
 				'og_add_mt_rating'                        => '__return_true',
 				'og_add_mt_reviews'                       => '__return_true',
@@ -51,6 +52,63 @@ if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
 				'json_data_https_schema_org_itemlist'     => 5,
 				'json_data_https_schema_org_thing'        => 5,
 			), $prio = -10000 );	// Make sure we run first.
+
+			/**
+			 * The official Schema standard provides 'aggregateRating' and 'review' properties for these types:
+			 *
+			 * 	Brand
+			 * 	CreativeWork
+			 * 	Event
+			 * 	Offer
+			 * 	Organization
+			 * 	Place
+			 * 	Product
+			 * 	Service 
+			 *
+			 * Unfortunately, Google only supports 'aggregateRating' and 'review' properties for these types:
+			 *
+			 *	Book
+			 *	Course
+			 *	Event
+			 *	HowTo (includes the Recipe sub-type)
+			 *	LocalBusiness
+			 *	Movie
+			 *	Product
+			 *	SoftwareApplication
+			 *
+			 * And the 'review' property for these types:
+			 *
+			 *	CreativeWorkSeason
+			 *	CreativeWorkSeries
+			 *	Episode
+			 *	Game
+			 *	MediaObject
+			 *	MusicPlaylist
+			 * 	MusicRecording
+			 *	Organization
+			 */
+			$rating_filters = array(
+				'json_data_https_schema_org_thing' => 5,
+			);
+
+			$this->p->util->add_plugin_filters( $this, array(
+				'json_data_https_schema_org_thing_aggregaterating' => $rating_filters,
+			), $prio = 10000 );
+
+			$review_filters = array();
+
+			foreach ( $this->p->cf[ 'head' ][ 'schema_review_parents' ] as $parent_id ) {
+
+				$parent_url = $this->p->schema->get_schema_type_url( $parent_id );
+
+				$filter_name = 'json_data_' . SucomUtil::sanitize_hookname( $parent_url );
+
+				$review_filters[ $filter_name ] = 5;
+			}
+
+			$this->p->util->add_plugin_filters( $this, array(
+				'json_data_https_schema_org_thing_review' => $review_filters,
+			), $prio = 20000 );
 		}
 
 		/**
@@ -589,6 +647,321 @@ if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
 			}
 
 			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+		}
+
+		/**
+		 * Automatically include an aggregateRating property based on the Open Graph rating meta tags.
+		 *
+		 * $page_type_id is false and $is_main is true when called as part of a collection page part.
+		 */
+		public function filter_json_data_https_schema_org_thing_aggregaterating( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
+
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->mark();
+			}
+
+			$ret = array();
+
+			$og_type = isset( $mt_og[ 'og:type' ] ) ? $mt_og[ 'og:type' ] : '';
+
+			$aggr_rating = array(
+				'ratingValue' => null,
+				'ratingCount' => null,
+				'worstRating' => 1,
+				'bestRating'  => 5,
+				'reviewCount' => null,
+			);
+
+			/**
+			 * Only pull values from meta tags if this is the main entity markup.
+			 */
+			if ( $is_main && $og_type ) {
+
+				WpssoSchema::add_data_itemprop_from_assoc( $aggr_rating, $mt_og, array(
+					'ratingValue' => $og_type . ':rating:average',
+					'ratingCount' => $og_type . ':rating:count',
+					'worstRating' => $og_type . ':rating:worst',
+					'bestRating'  => $og_type . ':rating:best',
+					'reviewCount' => $og_type . ':review:count',
+				) );
+			}
+
+			$aggr_rating = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_aggregaterating',
+				WpssoSchema::get_schema_type_context( 'https://schema.org/AggregateRating', $aggr_rating ),
+					$mod, $mt_og, $page_type_id, $is_main );
+
+			/**
+			 * Remove all empty values (null, 0, false, or empty string).
+			 */
+			foreach ( $aggr_rating as $key => $val ) {
+
+				if ( empty( $val ) ) {
+					unset( $aggr_rating[ $key ] );
+				}
+			}
+
+			/**
+			 * Check for at least two essential meta tags (a rating value, and a rating count or review count).
+			 */
+			if ( isset( $aggr_rating[ 'ratingValue' ] ) &&
+				( isset( $aggr_rating[ 'ratingCount' ] ) || isset( $aggr_rating[ 'reviewCount' ] ) ) ) {
+
+				if ( $this->p->debug->enabled ) {
+					$this->p->debug->log_arr( 'aggregate rating', $aggr_rating );
+				}
+
+				$ret[ 'aggregateRating' ] = $aggr_rating;
+
+			} else {
+
+				if ( $this->p->debug->enabled ) {
+					$this->p->debug->log( 'rating value plus a rating/review count not found' );
+				}
+			}
+
+			/**
+			 * Return if nothing to do.
+			 */
+			if ( empty( $ret[ 'aggregateRating' ] ) && empty( $this->p->options[ 'schema_add_5_star_rating' ] ) ) {
+
+				if ( $this->p->debug->enabled ) {
+					$this->p->debug->log( 'exiting early: nothing to do' );
+				}
+
+				return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+			}
+
+			if ( ! $this->can_add_aggregate_rating( $page_type_id ) ) {
+
+				if ( $this->p->debug->enabled ) {
+					$this->p->debug->log( 'exiting early: cannot add aggregate rating to page type id ' . $page_type_id );
+				}
+
+				if ( ! empty( $ret[ 'aggregateRating' ] ) ) {
+
+					/**
+					 * Add notice only if the admin notices have not already been shown.
+					 */
+					if ( $this->p->notice->is_admin_pre_notices() ) {
+
+						$page_type_url = $this->p->schema->get_schema_type_url( $page_type_id );
+
+						$notice_msg = sprintf( __( 'An aggregate rating value for this markup has been ignored &mdash; <a href="%1$s">Google does not allow an aggregate rating value for the Schema Type %2$s</a>.', 'wpsso-schema-json-ld' ), 'https://developers.google.com/search/docs/data-types/review-snippet', $page_type_url );
+
+						$this->p->notice->warn( $notice_msg );
+					}
+
+					unset( $ret[ 'aggregateRating' ] );
+				}
+
+				unset( $json_data[ 'aggregateRating' ] );	// Just in case.
+
+				return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+			}
+
+			/**
+			 * Prevent a "The aggregateRating field is recommended" warning from the Google testing tool.
+			 */
+			if ( $is_main ) {
+
+				if ( empty( $ret[ 'aggregateRating' ] ) && empty( $json_data[ 'aggregateRating' ] ) ) {
+
+					if ( ! empty( $this->p->options[ 'schema_add_5_star_rating' ] ) ) {
+
+						/**
+						 * Do not add an Aggregate Rating and Review to Reviews.
+						 */
+						if ( ! $this->p->schema->is_schema_type_child( $page_type_id, 'review' ) ) {
+
+							if ( $this->p->debug->enabled ) {
+								$this->p->debug->log( 'adding a default 5-star aggregate rating value' );
+							}
+
+							$ret[ 'aggregateRating' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/AggregateRating', array(
+								'ratingValue' => 5,
+								'ratingCount' => 1,
+								'worstRating' => 1,
+								'bestRating'  => 5,
+							) );
+						}
+					}
+				}
+			}
+
+			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+		}
+
+		/**
+		 * Automatically include a review property based on the Open Graph review meta tags.
+		 *
+		 * $page_type_id is false and $is_main is true when called as part of a collection page part.
+		 */
+		public function filter_json_data_https_schema_org_thing_review( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
+
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->mark();
+			}
+
+			if ( empty( $mt_og[ 'og:type' ] ) ) {
+
+				if ( $this->p->debug->enabled ) {
+					$this->p->debug->log( 'og:type is empty and required for the reviews meta tag prefix' );
+				}
+
+				return $json_data;
+			}
+
+			$ret = array();
+
+			$og_type = $mt_og[ 'og:type' ];
+
+			$all_reviews = array();
+
+			/**
+			 * Move any existing properties (from shortcodes, for example) so we can filter them and add new ones.
+			 */
+			if ( isset( $json_data[ 'review' ] ) ) {
+
+				if ( isset( $json_data[ 'review' ][ 0 ] ) ) {	// Has an array of types.
+
+					$all_reviews = $json_data[ 'review' ];
+
+				} elseif ( ! empty( $json_data[ 'review' ] ) ) {
+
+					$all_reviews[] = $json_data[ 'review' ];	// Markup for a single type.
+				}
+
+				unset( $json_data[ 'review' ] );
+			}
+
+			/**
+			 * Only pull values from meta tags if this is the main entity markup.
+			 */
+			if ( $is_main ) {
+
+				if ( ! empty( $mt_og[ $og_type . ':reviews' ] ) && is_array( $mt_og[ $og_type . ':reviews' ] ) ) {
+
+					if ( $this->p->debug->enabled ) {
+						$this->p->debug->log( 'adding ' . count( $mt_og[ $og_type . ':reviews' ] ) . ' product reviews from mt_og' );
+					}
+	
+					foreach ( $mt_og[ $og_type . ':reviews' ] as $mt_review ) {
+
+						$single_review = array();
+
+						$mt_pre = $og_type . ':review';
+
+						if ( is_array( $mt_review ) && false !== ( $single_review = WpssoSchema::get_data_itemprop_from_assoc( $mt_review, array( 
+							'url'         => $mt_pre . ':url',
+							'dateCreated' => $mt_pre . ':created_time',
+							'description' => $mt_pre . ':content',
+						) ) ) ) {
+
+							if ( isset( $mt_review[ $mt_pre . ':rating:value' ] ) ) {
+
+								$single_review[ 'reviewRating' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/Rating',
+									WpssoSchema::get_data_itemprop_from_assoc( $mt_review, array(
+										'ratingValue' => $mt_pre . ':rating:value',
+										'worstRating' => $mt_pre . ':rating:worst',
+										'bestRating'  => $mt_pre . ':rating:best',
+									) ) );
+							}
+
+							if ( isset( $mt_review[ $mt_pre . ':author:name' ] ) ) {
+
+								/**
+								 * Returns false if no meta tags found.
+								 */
+								if ( false !== ( $author_data = WpssoSchema::get_data_itemprop_from_assoc( $mt_review, array(
+									'name' => $mt_pre . ':author:name',
+								) ) ) ) {
+
+									$single_review[ 'author' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/Person',
+										$author_data );
+								}
+							}
+	
+							if ( isset( $mt_review[ $mt_pre . ':id' ] ) ) {
+
+								$replies_added = WpssoSchemaSingle::add_comment_reply_data( $single_review[ 'comment' ],
+									$mod, $mt_review[ $mt_pre . ':id' ] );
+
+								if ( ! $replies_added ) {
+									unset( $single_review[ 'comment' ] );
+								}
+							}
+
+							/**
+							 * Add the complete review.
+							 */
+							$all_reviews[] = WpssoSchema::get_schema_type_context( 'https://schema.org/Review', $single_review );
+						}
+					}
+				}
+			}
+
+			$all_reviews = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_review',
+				$all_reviews, $mod, $mt_og, $page_type_id, $is_main );
+
+			if ( ! empty( $all_reviews ) ) {
+				$ret[ 'review' ] = $all_reviews;
+			}
+
+			/**
+			 * Prevent a "The review field is recommended" warning from the Google testing tool.
+			 */
+			if ( $is_main ) {
+
+				if ( empty( $ret[ 'review' ] ) && empty( $json_data[ 'review' ] ) ) {
+
+					if ( ! empty( $this->p->options[ 'schema_add_5_star_rating' ] ) ) {
+
+						/**
+						 * Do not add an Aggregate Rating and Review to Reviews.
+						 */
+						if ( ! $this->p->schema->is_schema_type_child( $page_type_id, 'review' ) ) {
+
+							if ( $this->p->debug->enabled ) {
+								$this->p->debug->log( 'adding a default 5-star review value' );
+							}
+
+							$ret[ 'review' ][] = WpssoSchema::get_schema_type_context( 'https://schema.org/Review', array(
+								'author'       => WpssoSchema::get_schema_type_context( 'https://schema.org/Organization', array(
+									'name' => SucomUtil::get_site_name( $this->p->options, $mod ),
+								) ),
+								'reviewRating' => WpssoSchema::get_schema_type_context( 'https://schema.org/Rating', array(
+									'ratingValue' => 5,
+									'worstRating' => 1,
+									'bestRating'  => 5,
+								) ),
+							) );
+						}
+					}
+				}
+			}
+
+			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+		}
+
+		private function can_add_aggregate_rating( $page_type_id ) {
+
+			foreach ( $this->p->cf[ 'head' ][ 'schema_aggregate_rating_parents' ] as $parent_id ) {
+
+				if ( $this->p->schema->is_schema_type_child( $page_type_id, $parent_id ) ) {
+
+					if ( $this->p->debug->enabled ) {
+						$this->p->debug->log( 'aggregate rating for schema type ' . $page_type_id . ' is allowed' );
+					}
+
+					return true;
+				}
+			}
+			
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->log( 'aggregate rating for schema type ' . $page_type_id . ' not allowed' );
+			}
+
+			return false;
 		}
 	}
 }
