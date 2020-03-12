@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD (WPSSO JSON) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 2.24.0\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 2.25.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-03-10 15:05-0700\n"
-"PO-Revision-Date: 2020-03-10 15:05-0700\n"
+"POT-Creation-Date: 2020-03-12 14:16-0700\n"
+"PO-Revision-Date: 2020-03-12 14:16-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -475,6 +475,10 @@ msgstr "Sélectionnez un emplacement de travail par défaut pour le type de Sch�
 #: lib/filters-messages.php:725
 msgid "Select a default Schema type for the Schema Review subject URL."
 msgstr "Sélectionnez un type de Schéma par défaut pour l'URL du sujet de l'évaluation."
+
+#: lib/filters-schema.php:749
+msgid "An aggregate rating value for this markup has been ignored &mdash; <a href=\"%1$s\">Google does not allow an aggregate rating value for the Schema Type %2$s</a>."
+msgstr "Une note agrégé pour ce balisage a été ignorée &mdash; <a href=\"%1$s\">Google n'autorise pas de note agrégé pour le type de schéma %2$s</a> ."
 
 #: lib/filters.php:363 lib/gettext-pro.php:171 lib/pro/head/claimreview.php:76
 msgid "A claim review cannot be the subject of another claim review."
@@ -1430,10 +1434,6 @@ msgstr "ajout d'image d'étape de l'option #%d du Schéma How-To"
 msgid "adding reviewed subject image"
 msgstr "ajout d'image pour le sujet de l'évaluation"
 
-#: lib/gettext-pro.php:175 lib/pro/prop/aggregaterating.php:136
-msgid "An aggregate rating value for this markup has been ignored &mdash; <a href=\"%1$s\">Google does not allow an aggregate rating value for the Schema Type %2$s</a>."
-msgstr "Une note agrégé pour ce balisage a été ignorée &mdash; <a href=\"%1$s\">Google n'autorise pas de note agrégé pour le type de schéma %2$s</a> ."
-
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag, %3$s is the type attribute value
 #: lib/shortcode/schema.php:174
 msgid "%1$s %2$s shortcode with a type value of \"%3$s\" is missing a required 'prop' attribute value."
@@ -1445,7 +1445,7 @@ msgid "%1$s %2$s shortcode with a content is missing a required 'type' attribute
 msgstr "Le shortcode %2$s de %1$s avec un texte de description doit avoir une valeur pour l'attribut 'type'."
 
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag, %3$s is the type attribute value
-#: lib/shortcode/schema.php:290
+#: lib/shortcode/schema.php:291
 msgid "%1$s %2$s shortcode type attribute \"%3$s\" is not a recognized value."
 msgstr "Le shortcode %2$s de %1$s avec \"%3$s\" pour l'attribut type n'est pas une valeur reconnue."
 
