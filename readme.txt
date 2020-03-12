@@ -869,7 +869,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **New Features**
 	* None.
 * **Improvements**
-	* Added support for the 'aggregateRating' and 'review' properties in the Free / Standard version.
+	* Moved support for the 'aggregateRating' and 'review' properties from the Premium version to the Free / Standard version.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -943,7 +943,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.25.0-dev.1 =
 
-(2020/03/12) Added support for the 'aggregateRating' and 'review' properties in the Free / Standard version.
+(2020/03/12) Moved support for the 'aggregateRating' and 'review' properties from the Premium version to the Free / Standard version.
 
 = 2.24.0 =
 
