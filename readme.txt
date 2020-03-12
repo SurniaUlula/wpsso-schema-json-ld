@@ -864,6 +864,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.25.0-dev.1 (2020/03/12)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Added support for the 'aggregateRating' and 'review' properties in the Free / Standard version.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v5.6.
+	* WordPress v4.0.
+	* WPSSO Core v6.25.0-dev.1.
+
 **Version 2.24.0 (2020/03/11)**
 
 * **New Features**
@@ -925,6 +940,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v6.22.0.
 
 == Upgrade Notice ==
+
+= 2.25.0-dev.1 =
+
+(2020/03/12) Added support for the 'aggregateRating' and 'review' properties in the Free / Standard version.
 
 = 2.24.0 =
 
