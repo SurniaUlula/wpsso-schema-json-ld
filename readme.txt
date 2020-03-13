@@ -864,7 +864,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.25.0-b.1 (2020/03/12)**
+**Version 2.25.0-b.1 (2020/03/13)**
 
 * **New Features**
 	* None.
@@ -943,7 +943,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.25.0-b.1 =
 
-(2020/03/12) Moved support for the 'aggregateRating' and 'review' properties from the Premium version to the Free / Standard version.
+(2020/03/13) Moved support for the 'aggregateRating' and 'review' properties from the Premium version to the Free / Standard version.
 
 = 2.24.0 =
 
