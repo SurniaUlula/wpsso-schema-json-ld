@@ -118,11 +118,11 @@
 <ul>
 <li>Type for Page Homepage</li>
 <li>Type for Posts Homepage</li>
-<li>Type for User / Author Webpage</li>
-<li>Type for Search Results Webpage</li>
-<li>Type for Other Archive Webpage</li>
-<li>Type by Post Type for Posts, Pages, Media, Post Type Archive Page, and custom post types</li>
-<li>Type by Taxonomy for Categories, Tags, and custom taxonomies</li>
+<li>Type for User / Author</li>
+<li>Type for Search Results</li>
+<li>Type for Other Archive</li>
+<li>Type by Post Type (Posts, Pages, Media, Post Type Archive Page, and custom post types)</li>
+<li>Type by Taxonomy (Categories, Tags, and custom taxonomies)</li>
 </ul></li>
 <li>Integration (WPSSO Core Premium required)
 

@@ -111,11 +111,11 @@ Additional e-Commerce plugin integration is also provided with the WPSSO Core Pr
 	* Schema Types
 		* Type for Page Homepage
 		* Type for Posts Homepage
-		* Type for User / Author Webpage
-		* Type for Search Results Webpage
-		* Type for Other Archive Webpage
-		* Type by Post Type for Posts, Pages, Media, Post Type Archive Page, and custom post types
-		* Type by Taxonomy for Categories, Tags, and custom taxonomies
+		* Type for User / Author
+		* Type for Search Results
+		* Type for Other Archive
+		* Type by Post Type (Posts, Pages, Media, Post Type Archive Page, and custom post types)
+		* Type by Taxonomy (Categories, Tags, and custom taxonomies)
 	* Integration (WPSSO Core Premium required)
 		* Product Attribute Names
 			* Product Brand Attribute Name 
