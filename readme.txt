@@ -109,11 +109,11 @@ Additional e-Commerce plugin integration is also provided with the WPSSO Core Pr
 		* Add CreativeWork Text Property
 		* Add 5 Star Rating If No Rating
 	* Schema Types
-		* Type for Blog Front Page
-		* Type for Static Front Page
-		* Type for User / Author Page
-		* Type for Search Results Page
-		* Type for Other Archive Page
+		* Type for Page Homepage
+		* Type for Posts Homepage
+		* Type for User / Author Webpage
+		* Type for Search Results Webpage
+		* Type for Other Archive Webpage
 		* Type by Post Type for Posts, Pages, Media, Post Type Archive Page, and custom post types
 		* Type by Taxonomy for Categories, Tags, and custom taxonomies
 	* Integration (WPSSO Core Premium required)
