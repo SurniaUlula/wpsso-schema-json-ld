@@ -626,7 +626,7 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 		}
 
 		/**
-		 * Tooltips for the Meta Defaults tab in the Schema Markup settings page.
+		 * Tooltips for the Schema Markup settings page.
 		 */
 		public function filter_messages_tooltip_schema( $text, $msg_key ) {
 

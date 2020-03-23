@@ -14,8 +14,8 @@
  * Requires PHP: 5.6
  * Requires At Least: 4.0
  * Tested Up To: 5.4
- * WC Tested Up To: 4.0.0
- * Version: 2.25.0
+ * WC Tested Up To: 4.0.1
+ * Version: 3.0.0-dev.1
  * 
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -152,6 +152,9 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 
 			$avail[ 'p_ext' ][ 'json' ] = true;		// Signal that this extension / add-on is available.
 
+			/**
+			 * TODO remove when modules moved to filters sub-dir.
+			 */
 			foreach ( array( 'pro', 'std' ) as $lib ) {
 
 				foreach ( array( 'head', 'prop' ) as $sub_dir ) {
@@ -166,9 +169,7 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 
 						if ( empty( $avail[ $sub_dir ][ $sub_id ] ) ) {	// Optimize.
 
-							list( $id, $stub, $action ) = SucomUtil::get_lib_stub_action( $sub_id );
-
-							$avail[ $sub_dir ][ $id ] = true;
+							$avail[ $sub_dir ][ $sub_id ] = true;
 						}
 					}
 				}
@@ -202,6 +203,9 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 			$this->filters = new WpssoJsonFilters( $this->p );
 		}
 
+		/**
+		 * All WPSSO objects are instantiated and configured.
+		 */
 		public function wpsso_init_plugin() {
 
 			if ( $this->p->debug->enabled ) {
@@ -210,7 +214,7 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 
 			if ( ! $this->have_min_version ) {
 
-				$this->min_version_notice();
+				$this->min_version_notice();	// Show minimum version notice.
 
 				return;	// Stop here.
 			}
