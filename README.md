@@ -7,7 +7,7 @@
 <tr><th align="right" valign="top" nowrap>Requires PHP</th><td>5.6 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>4.0 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To WordPress</th><td>5.4</td></tr>
-<tr><th align="right" valign="top" nowrap>Tested Up To WooCommerce</th><td>4.0.0</td></tr>
+<tr><th align="right" valign="top" nowrap>Tested Up To WooCommerce</th><td>4.0.1</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
 <tr><th align="right" valign="top" nowrap>License</th><td><a href="https://www.gnu.org/licenses/gpl.txt">GPLv3</a></td></tr>
 <tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>schema.org, rich snippets, structured data, amp, woocommerce, image seo, video seo, news seo, schema, rich results, knowledge graph, rating, review, recipe, event, product</td></tr>
@@ -81,6 +81,9 @@
 <li><p>Adds a Schema Markup settings page to the SSO menu with additional options:</p>
 
 <ul>
+<li>Schema Markup
+
+<ul>
 <li>Knowledge Graph
 
 <ul>
@@ -124,10 +127,42 @@
 <li>Type by Post Type (Posts, Pages, Media, Post Type Archive Page, and custom post types)</li>
 <li>Type by Taxonomy (Categories, Tags, and custom taxonomies)</li>
 </ul></li>
-<li>Integration (WPSSO Core Premium required)
+<li>Schema Defaults
 
 <ul>
-<li>Product Attribute Names
+<li>Creative Work Information
+
+<ul>
+<li>Default Family Friendly</li>
+<li>Default Publisher</li>
+<li>Default Provider</li>
+</ul></li>
+<li>Event Information
+
+<ul>
+<li>Default Organizer Org.</li>
+<li>Default Organizer Person</li>
+<li>Default Performer Org.</li>
+<li>Default Performer Person</li>
+<li>Default Event Venue</li>
+</ul></li>
+<li>Job Posting Information
+
+<ul>
+<li>Default Hiring Organization</li>
+<li>Default Job Location</li>
+</ul></li>
+<li>Review Information
+
+<ul>
+<li>Default Subject Webpage Type</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Editing Pages (WPSSO Core Premium required)
+
+<ul>
+<li>Product Attributes
 
 <ul>
 <li>Product Brand Attribute Name </li>
@@ -146,11 +181,7 @@
 <li>Product Target Gender Attr. Name</li>
 <li>Product Volume Attribute Name (ml)</li>
 </ul></li>
-</ul></li>
-<li>Custom Meta (WPSSO Core Premium required)
-
-<ul>
-<li>Custom Field Names
+<li>Custom Fields
 
 <ul>
 <li>Microdata Type URLs Custom Field </li>
@@ -186,32 +217,6 @@
 <li>Same-As URLs Custom Field </li>
 <li>Video Embed HTML Custom Field </li>
 <li>Video URL Custom Field</li>
-</ul></li>
-</ul></li>
-<li>Meta Defaults
-
-<ul>
-<li>Creative Work Information
-
-<ul>
-<li>Default Family Friendly</li>
-<li>Default Publisher</li>
-<li>Default Provider</li>
-</ul></li>
-<li>Event Information
-
-<ul>
-<li>Default Organizer Org.</li>
-<li>Default Organizer Person</li>
-<li>Default Performer Org.</li>
-<li>Default Performer Person</li>
-<li>Default Event Venue</li>
-</ul></li>
-<li>Job Posting Information
-
-<ul>
-<li>Default Hiring Organization</li>
-<li>Default Job Location</li>
 </ul></li>
 </ul></li>
 </ul></li>

@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 5.6
 Requires At Least: 4.0
 Tested Up To: 5.4
-WC Tested Up To: 4.0.0
+WC Tested Up To: 4.0.1
 Stable Tag: 2.25.0
 
 Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPages, HowTos, Images, Local Business, Products, Recipes, Reviews, Videos, and more.
@@ -85,39 +85,56 @@ Additional e-Commerce plugin integration is also provided with the WPSSO Core Pr
 
 * Adds a Schema Markup settings page to the SSO menu with additional options:
 
-	* Knowledge Graph
-		* Knowledge Graph for Home Page
-			* Include WebSite Information for Google Search
-			* Include Organization Social Profile for a Business Website
-			* Include Person Social Profile for a Personal Website
-		* User for Person Social Profile
-	* Schema Properties
-		* WebSite Name
-		* WebSite Alternate Name
-		* WebSite Description
-		* Organization Logo URL
-		* Organization Banner URL
-		* Maximum Images to Include
-		* Schema Image Size
-		* Schema Article Image Size
-		* Schema Article AMP 1:1 Image Size
-		* Schema Article AMP 4:3 Image Size
-		* Schema Article AMP 16:9 Image Size
-		* Schema Thumbnail Image Size
-		* Maximum Description Length
-		* Maximum Text Property Length
-		* Add CreativeWork Text Property
-		* Add 5 Star Rating If No Rating
-	* Schema Types
-		* Type for Page Homepage
-		* Type for Posts Homepage
-		* Type for User / Author
-		* Type for Search Results
-		* Type for Other Archive
-		* Type by Post Type (Posts, Pages, Media, Post Type Archive Page, and custom post types)
-		* Type by Taxonomy (Categories, Tags, and custom taxonomies)
-	* Integration (WPSSO Core Premium required)
-		* Product Attribute Names
+	* Schema Markup
+		* Knowledge Graph
+			* Knowledge Graph for Home Page
+				* Include WebSite Information for Google Search
+				* Include Organization Social Profile for a Business Website
+				* Include Person Social Profile for a Personal Website
+			* User for Person Social Profile
+		* Schema Properties
+			* WebSite Name
+			* WebSite Alternate Name
+			* WebSite Description
+			* Organization Logo URL
+			* Organization Banner URL
+			* Maximum Images to Include
+			* Schema Image Size
+			* Schema Article Image Size
+			* Schema Article AMP 1:1 Image Size
+			* Schema Article AMP 4:3 Image Size
+			* Schema Article AMP 16:9 Image Size
+			* Schema Thumbnail Image Size
+			* Maximum Description Length
+			* Maximum Text Property Length
+			* Add CreativeWork Text Property
+			* Add 5 Star Rating If No Rating
+		* Schema Types
+			* Type for Page Homepage
+			* Type for Posts Homepage
+			* Type for User / Author
+			* Type for Search Results
+			* Type for Other Archive
+			* Type by Post Type (Posts, Pages, Media, Post Type Archive Page, and custom post types)
+			* Type by Taxonomy (Categories, Tags, and custom taxonomies)
+		* Schema Defaults
+			* Creative Work Information
+				* Default Family Friendly
+				* Default Publisher
+				* Default Provider
+			* Event Information
+				* Default Organizer Org.
+				* Default Organizer Person
+				* Default Performer Org.
+				* Default Performer Person
+				* Default Event Venue
+			* Job Posting Information
+				* Default Hiring Organization
+				* Default Job Location
+			* Review Information
+				* Default Subject Webpage Type
+	* Editing Pages (WPSSO Core Premium required)
+		* Product Attributes
 			* Product Brand Attribute Name 
 			* Product Color Attribute Name 
 			* Product Condition Attribute Name 
@@ -133,8 +150,7 @@ Additional e-Commerce plugin integration is also provided with the WPSSO Core Pr
 			* Product Size Attribute Name 
 			* Product Target Gender Attr. Name
 			* Product Volume Attribute Name (ml)
-	* Custom Meta (WPSSO Core Premium required)
-		* Custom Field Names
+		* Custom Fields
 			* Microdata Type URLs Custom Field 
 			* How-To Steps Custom Field 
 			* How-To Supplies Custom Field 
@@ -168,21 +184,7 @@ Additional e-Commerce plugin integration is also provided with the WPSSO Core Pr
 			* Same-As URLs Custom Field 
 			* Video Embed HTML Custom Field 
 			* Video URL Custom Field
-	* Meta Defaults
-		* Creative Work Information
-			* Default Family Friendly
-			* Default Publisher
-			* Default Provider
-		* Event Information
-			* Default Organizer Org.
-			* Default Organizer Person
-			* Default Performer Org.
-			* Default Performer Person
-			* Default Event Venue
-		* Job Posting Information
-			* Default Hiring Organization
-			* Default Job Location
-
+	
 <h3>WPSSO JSON Premium Features</h3>
 
 The Standard version is designed to satisfy the requirements of most standard WordPress sites / blogs. If your site requires additional Schema properties, for WooCommerce products, events, places / locations, recipes, etc., then you may want the Premium version for those additional features.
@@ -864,6 +866,23 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 3.0.0-dev.1 (2020/03/23)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Updated the Schema Markup settings page metaboxes and tabs:
+		* Removed the Integration and Custom Meta tabs (the same settings exist in the SSO &gt; Advanced Settings page).
+		* Renamed the Meta Defaults tab to Schema Defaults.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v5.6.
+	* WordPress v4.0.
+	* WPSSO Core v6.25.1.
+
 **Version 2.25.0 (2020/03/14)**
 
 * **New Features**
@@ -940,6 +959,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v6.22.0.
 
 == Upgrade Notice ==
+
+= 3.0.0-dev.1 =
+
+(2020/03/23) Updated the Schema Markup settings page metaboxes and tabs.
 
 = 2.25.0 =
 
