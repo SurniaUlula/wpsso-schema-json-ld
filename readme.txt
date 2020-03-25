@@ -67,11 +67,11 @@ Additional e-Commerce plugin integration is also provided with the WPSSO Core Pr
 
 * Provides Schema properties as JSON-LD markup (aka Google Rich Results / Rich Snippets with Structured Data) for the following Schema types, including Schema ItemList for [Google's Carousel Rich Results](https://developers.google.com/search/docs/guides/mark-up-listings) (more specific Schema type properties are available in the Premium version):
 
-	* [schema.org/Article](https://schema.org/Article) (includes 19 Schema sub-types)
+	* [schema.org/Article](https://schema.org/Article) (includes 19 sub-types)
 	* [schema.org/Blog](https://schema.org/Blog)
-	* [schema.org/CreativeWork](https://schema.org/CreativeWork) (includes 86 Schema sub-types)
-	* [schema.org/ItemList](https://schema.org/ItemList) (includes 5 Schema sub-types)
-	* [schema.org/Thing](https://schema.org/Thing) (includes 1457 Schema sub-types)
+	* [schema.org/CreativeWork](https://schema.org/CreativeWork) (includes 86 sub-types)
+	* [schema.org/ItemList](https://schema.org/ItemList) (includes 5 sub-types)
+	* [schema.org/Thing](https://schema.org/Thing) (includes 1457 sub-types)
 
 * Automatically includes Schema Article AMP 1:1, 4:3, and 16:9 image sizes for Google Rich Results (see the [Google Article AMP structured data guidelines](https://developers.google.com/search/docs/data-types/article#amp-sd) for details on this new requirement from Google).
 
@@ -191,33 +191,33 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 
 * Provides Schema properties as JSON-LD markup (aka Google Rich Results / Rich Snippets with Structured Data) for the following Schema types:
 
-	* [schema.org/Article](https://schema.org/Article) (includes 19 Schema sub-types)
+	* [schema.org/Article](https://schema.org/Article) (includes 19 sub-types)
 	* [schema.org/Blog](https://schema.org/Blog)
 	* [schema.org/Brand](https://schema.org/Brand)
 	* [schema.org/ClaimReview](https://schema.org/ClaimReview)
-	* [schema.org/CollectionPage](https://schema.org/CollectionPage) (includes 3 Schema sub-types)
+	* [schema.org/CollectionPage](https://schema.org/CollectionPage) (includes 3 sub-types)
 	* [schema.org/Course](https://schema.org/Course)
-	* [schema.org/CreativeWork](https://schema.org/CreativeWork) (includes 86 Schema sub-types)
-	* [schema.org/Event](https://schema.org/Event) (includes 19 Schema sub-types)
+	* [schema.org/CreativeWork](https://schema.org/CreativeWork) (includes 86 sub-types)
+	* [schema.org/Event](https://schema.org/Event) (includes 19 sub-types)
 	* [schema.org/FAQPage](https://schema.org/FAQPage)
-	* [schema.org/FoodEstablishment](https://schema.org/FoodEstablishment) (includes 17 Schema sub-types)
-	* [schema.org/HowTo](https://schema.org/HowTo) (includes 2 Schema sub-types)
+	* [schema.org/FoodEstablishment](https://schema.org/FoodEstablishment) (includes 17 sub-types)
+	* [schema.org/HowTo](https://schema.org/HowTo) (includes 2 sub-types)
 	* [schema.org/JobPosting](https://schema.org/JobPosting)
-	* [schema.org/LocalBusiness](https://schema.org/LocalBusiness) (includes 479 Schema sub-types)
+	* [schema.org/LocalBusiness](https://schema.org/LocalBusiness) (includes 479 sub-types)
 	* [schema.org/Movie](https://schema.org/Movie)
-	* [schema.org/Organization](https://schema.org/Organization) (includes 502 Schema sub-types)
+	* [schema.org/Organization](https://schema.org/Organization) (includes 502 sub-types)
 	* [schema.org/Person](https://schema.org/Person)
-	* [schema.org/Place](https://schema.org/Place) (includes 529 Schema sub-types)
-	* [schema.org/Product](https://schema.org/Product) (includes 9 Schema sub-types)
+	* [schema.org/Place](https://schema.org/Place) (includes 529 sub-types)
+	* [schema.org/Product](https://schema.org/Product) (includes 9 sub-types)
 	* [schema.org/ProfilePage](https://schema.org/ProfilePage)
 	* [schema.org/QAPage](https://schema.org/QAPage)
 	* [schema.org/Question](https://schema.org/Question) and Answer
 	* [schema.org/Recipe](https://schema.org/Recipe)
-	* [schema.org/Review](https://schema.org/Review) (includes 2 Schema sub-types)
+	* [schema.org/Review](https://schema.org/Review) (includes 2 sub-types)
 	* [schema.org/SearchResultsPage](https://schema.org/SearchResultsPage)
-	* [schema.org/SoftwareApplication](https://schema.org/SoftwareApplication) (includes 4 Schema sub-types)
-	* [schema.org/Thing](https://schema.org/Thing) (includes 1457 Schema sub-types)
-	* [schema.org/WebPage](https://schema.org/WebPage) (includes 13 Schema sub-types)
+	* [schema.org/SoftwareApplication](https://schema.org/SoftwareApplication) (includes 4 sub-types)
+	* [schema.org/Thing](https://schema.org/Thing) (includes 1457 sub-types)
+	* [schema.org/WebPage](https://schema.org/WebPage) (includes 13 sub-types)
 	* [schema.org/WebSite](https://schema.org/WebSite)
 
 * Provides Schema FAQPage and Question / Answer markup for the [WPSSO FAQ Manager](https://wordpress.org/plugins/wpsso-faq/) add-on custom post types, taxonomies and shortcodes.
@@ -866,12 +866,44 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.0.0-dev.1 (2020/03/23)**
+**Version 3.0.0-dev.2 (2020/03/24)**
 
 * **New Features**
-	* None.
+	* Moved all Schema type and sub-type modules from the Premium version to the Free / Standard version:
+		* Schema Type Article (includes 19 sub-types)
+		* Schema Type Blog
+		* Schema Type Brand
+		* Schema Type Claim Review
+		* Schema Type Collection Page (includes 3 sub-types)
+		* Schema Type Course
+		* Schema Type CreativeWork (includes 91 sub-types)
+		* Schema Type Event (includes 19 sub-types)
+		* Schema Type FAQPage
+		* Schema Type Food Establishment (includes 17 sub-types)
+		* Schema Type How-To (includes 2 sub-types)
+		* Schema Type ItemList (includes 5 sub-types)
+		* Schema Type Job Posting
+		* Schema Type Local Business (includes 479 sub-types)
+		* Schema Type Movie
+		* Schema Type Organization (includes 502 sub-types)
+		* Schema Type Person
+		* Schema Type Place (includes 529 sub-types)
+		* Schema Type Product (includes 9 sub-types)
+		* Schema Type Profile Page
+		* Schema Type QAPage
+		* Schema Type Question and Answer
+		* Schema Type Recipe
+		* Schema Type Review (includes 2 sub-types)
+		* Schema Type Search Results Page
+		* Schema Type Software Application (includes 4 sub-types)
+		* Schema Type Thing (includes 1467 sub-types)
+		* Schema Type WebPage (includes 13 sub-types)
+		* Schema Type WebSite
+		* Property aggregateRating
+		* Property hasPart
+		* Property review
 * **Improvements**
-	* Updated the Schema Markup settings page metaboxes and tabs:
+	* Refactored the Schema Markup settings page metaboxes and tabs:
 		* Removed the Integration and Custom Meta tabs (the same settings exist in the SSO &gt; Advanced Settings page).
 		* Renamed the Meta Defaults tab to Schema Defaults.
 * **Bugfixes**
@@ -960,9 +992,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.0.0-dev.1 =
+= 3.0.0-dev.2 =
 
-(2020/03/23) Updated the Schema Markup settings page metaboxes and tabs.
+(2020/03/24) Moved all Schema type and sub-type modules from the Premium version to the Free / Standard version. Refactored the Schema Markup settings page metaboxes and tabs.
 
 = 2.25.0 =
 
