@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD (WPSSO JSON) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 2.25.0\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-03-17 19:17-0700\n"
-"PO-Revision-Date: 2020-03-17 19:17-0700\n"
+"POT-Creation-Date: 2020-03-25 13:18-0700\n"
+"PO-Revision-Date: 2020-03-25 13:18-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -14,6 +14,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: lib/filters/prop/aggregaterating.php:172
+msgid "An aggregate rating value for this markup has been ignored &mdash; <a href=\"%1$s\">Google does not allow an aggregate rating value for the Schema Type %2$s</a>."
+msgstr "Une note agrégé pour ce balisage a été ignorée &mdash; <a href=\"%1$s\">Google n'autorise pas de note agrégé pour le type de schéma %2$s</a> ."
+
+#: lib/filters/type/claimreview.php:76 lib/filters.php:410
+msgid "A claim review cannot be the subject of another claim review."
+msgstr "Un examen d'évaluation ne peut pas être le sujet d'un autre examen d'évaluation."
+
+#: lib/filters/type/claimreview.php:78
+msgid "CreativeWork will be used instead as the Schema type for the subject of the webpage (ie. the content) being reviewed."
+msgstr "CreativeWork sera utilisé à la place comme type de Schéma pour le sujet de la page Web (c'est-à-dire le contenu) en cours d'évaluation."
+
+#: lib/filters/type/howto.php:123
+msgid "adding schema howto step option #%d image"
+msgstr "ajout d'image d'étape de l'option #%d du Schéma How-To"
+
+#: lib/filters/type/review.php:92
+msgid "adding reviewed subject image"
+msgstr "ajout d'image pour le sujet de l'évaluation"
 
 #: lib/filters-messages.php:59
 msgid "A customized name / title for the Schema \"name\" property."
@@ -476,15 +496,12 @@ msgstr "Sélectionnez un emplacement de travail par défaut pour le type de Sch�
 msgid "Select a default Schema type for the Schema Review subject URL."
 msgstr "Sélectionnez un type de Schéma par défaut pour l'URL du sujet de l'évaluation."
 
-#: lib/filters-schema.php:749
-msgid "An aggregate rating value for this markup has been ignored &mdash; <a href=\"%1$s\">Google does not allow an aggregate rating value for the Schema Type %2$s</a>."
-msgstr "Une note agrégé pour ce balisage a été ignorée &mdash; <a href=\"%1$s\">Google n'autorise pas de note agrégé pour le type de schéma %2$s</a> ."
+#. translators: Please ignore - translation uses a different text domain.
+#: lib/filters.php:270
+msgid "Non-standard value found for the \"%s\" option - resetting the option to its default value."
+msgstr "Valeur non standard trouvée pour l'option \"%s\" - réinitialisation de l'option à sa valeur par défaut."
 
-#: lib/filters.php:363 lib/gettext-pro.php:171 lib/pro/head/claimreview.php:76
-msgid "A claim review cannot be the subject of another claim review."
-msgstr "Un examen d'évaluation ne peut pas être le sujet d'un autre examen d'évaluation."
-
-#: lib/filters.php:365
+#: lib/filters.php:412
 msgid "Please select a subject webpage type that better describes the subject of the webpage (ie. the content) being reviewed."
 msgstr "SVP sélectionner un type de page Web du sujet qui décrit mieux le sujet de la page Web (c'est-à-dire le contenu) en cours de révision."
 
@@ -558,8 +575,9 @@ msgctxt "option label"
 msgid "Same-As URLs"
 msgstr "URLs pareilles"
 
-#: lib/gettext-pro.php:15 lib/pro/admin/meta-edit.php:198
-#: lib/std/admin/meta-edit.php:178 lib/submenu/schema-general.php:217
+#: lib/gettext-pro.php:15 lib/gettext-pro.php:171
+#: lib/pro/admin/meta-edit.php:198 lib/pro/admin/schema-general.php:76
+#: lib/std/admin/meta-edit.php:178 lib/std/admin/schema-general.php:77
 msgctxt "metabox title"
 msgid "Creative Work Information"
 msgstr "Informations de l'oeuvre"
@@ -624,8 +642,9 @@ msgctxt "option label"
 msgid "Provider"
 msgstr "Fournisseur"
 
-#: lib/gettext-pro.php:26 lib/pro/admin/meta-edit.php:285
-#: lib/std/admin/meta-edit.php:271 lib/submenu/schema-general.php:244
+#: lib/gettext-pro.php:26 lib/gettext-pro.php:175
+#: lib/pro/admin/meta-edit.php:285 lib/pro/admin/schema-general.php:103
+#: lib/std/admin/meta-edit.php:271 lib/std/admin/schema-general.php:107
 msgctxt "metabox title"
 msgid "Event Information"
 msgstr "Informations d'événement"
@@ -783,14 +802,15 @@ msgstr "Nom"
 
 #. translators: Please ignore - translation uses a different text domain.
 #: lib/gettext-pro.php:53 lib/gettext-pro.php:168
-#: lib/pro/admin/meta-edit.php:485 lib/pro/admin/meta-edit.php:1323
-#: lib/std/admin/meta-edit.php:484 lib/std/admin/meta-edit.php:1214
+#: lib/pro/admin/meta-edit.php:485 lib/pro/admin/meta-edit.php:1326
+#: lib/std/admin/meta-edit.php:484 lib/std/admin/meta-edit.php:1218
 msgctxt "option label"
 msgid "Image ID"
 msgstr "ID d'une image"
 
-#: lib/gettext-pro.php:54 lib/pro/admin/meta-edit.php:500
-#: lib/std/admin/meta-edit.php:499 lib/submenu/schema-general.php:283
+#: lib/gettext-pro.php:54 lib/gettext-pro.php:181
+#: lib/pro/admin/meta-edit.php:500 lib/pro/admin/schema-general.php:142
+#: lib/std/admin/meta-edit.php:499 lib/std/admin/schema-general.php:151
 msgctxt "metabox title"
 msgid "Job Posting Information"
 msgstr "Informations d'affichage d'emploi"
@@ -1161,8 +1181,9 @@ msgctxt "option comment"
 msgid "milligrams of cholesterol"
 msgstr "milligrammes de cholestérol"
 
-#: lib/gettext-pro.php:118 lib/pro/admin/meta-edit.php:936
-#: lib/std/admin/meta-edit.php:973 lib/submenu/schema-general.php:304
+#: lib/gettext-pro.php:118 lib/gettext-pro.php:184
+#: lib/pro/admin/meta-edit.php:936 lib/pro/admin/schema-general.php:163
+#: lib/std/admin/meta-edit.php:973 lib/std/admin/schema-general.php:174
 msgctxt "metabox title"
 msgid "Review Information"
 msgstr "Informations d'évaluation"
@@ -1235,8 +1256,8 @@ msgstr "ID d'image du sujet"
 
 #. translators: Please ignore - translation uses a different text domain.
 #: lib/gettext-pro.php:130 lib/gettext-pro.php:170
-#: lib/pro/admin/meta-edit.php:1020 lib/pro/admin/meta-edit.php:1330
-#: lib/std/admin/meta-edit.php:1065 lib/std/admin/meta-edit.php:1222
+#: lib/pro/admin/meta-edit.php:1020 lib/pro/admin/meta-edit.php:1334
+#: lib/std/admin/meta-edit.php:1065 lib/std/admin/meta-edit.php:1227
 msgctxt "option label"
 msgid "or an Image URL"
 msgstr "ou URL d'une image"
@@ -1416,23 +1437,77 @@ msgid "Software Application Information"
 msgstr "Informations sur l'application logicielle"
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/gettext-pro.php:166 lib/pro/admin/meta-edit.php:1315
-#: lib/std/admin/meta-edit.php:1205
+#: lib/gettext-pro.php:166 lib/pro/admin/meta-edit.php:1317
+#: lib/std/admin/meta-edit.php:1208
 msgctxt "option label"
 msgid "Maximum Images"
 msgstr "Images maximum"
 
-#: lib/gettext-pro.php:172 lib/pro/head/claimreview.php:78
-msgid "CreativeWork will be used instead as the Schema type for the subject of the webpage (ie. the content) being reviewed."
-msgstr "CreativeWork sera utilisé à la place comme type de Schéma pour le sujet de la page Web (c'est-à-dire le contenu) en cours d'évaluation."
+#: lib/gettext-pro.php:172 lib/pro/admin/schema-general.php:79
+#: lib/std/admin/schema-general.php:81
+msgctxt "option label"
+msgid "Default Family Friendly"
+msgstr "Favorable à la famille par défaut"
 
-#: lib/gettext-pro.php:173 lib/pro/head/howto.php:123
-msgid "adding schema howto step option #%d image"
-msgstr "ajout d'image d'étape de l'option #%d du Schéma How-To"
+#: lib/gettext-pro.php:173 lib/pro/admin/schema-general.php:85
+#: lib/std/admin/schema-general.php:88
+msgctxt "option label"
+msgid "Default Publisher"
+msgstr "Éditeur par défaut"
 
-#: lib/gettext-pro.php:174 lib/pro/head/review.php:92
-msgid "adding reviewed subject image"
-msgstr "ajout d'image pour le sujet de l'évaluation"
+#: lib/gettext-pro.php:174 lib/pro/admin/schema-general.php:91
+#: lib/std/admin/schema-general.php:95
+msgctxt "option label"
+msgid "Default Provider"
+msgstr "Fournisseur par défaut"
+
+#: lib/gettext-pro.php:176 lib/pro/admin/schema-general.php:106
+#: lib/std/admin/schema-general.php:111
+msgctxt "option label"
+msgid "Default Organizer Org"
+msgstr "Org. par défaut pour l'organisateur"
+
+#: lib/gettext-pro.php:177 lib/pro/admin/schema-general.php:112
+#: lib/std/admin/schema-general.php:118
+msgctxt "option label"
+msgid "Default Organizer Person"
+msgstr "Personne par défaut pour l'organisateur"
+
+#: lib/gettext-pro.php:178 lib/pro/admin/schema-general.php:118
+#: lib/std/admin/schema-general.php:125
+msgctxt "option label"
+msgid "Default Performer Org"
+msgstr "Org. par défaut pour l'interprète"
+
+#: lib/gettext-pro.php:179 lib/pro/admin/schema-general.php:124
+#: lib/std/admin/schema-general.php:132
+msgctxt "option label"
+msgid "Default Performer Person"
+msgstr "Personne par défaut pour l'interprète"
+
+#: lib/gettext-pro.php:180 lib/pro/admin/schema-general.php:130
+#: lib/std/admin/schema-general.php:139
+msgctxt "option label"
+msgid "Default Event Venue"
+msgstr "Lieu par défaut pour l'événement"
+
+#: lib/gettext-pro.php:182 lib/pro/admin/schema-general.php:145
+#: lib/std/admin/schema-general.php:155
+msgctxt "option label"
+msgid "Default Hiring Organization"
+msgstr "Organisation d'embauche par défaut"
+
+#: lib/gettext-pro.php:183 lib/pro/admin/schema-general.php:151
+#: lib/std/admin/schema-general.php:162
+msgctxt "option label"
+msgid "Default Job Location"
+msgstr "Emplacement de travail par défaut"
+
+#: lib/gettext-pro.php:185 lib/pro/admin/schema-general.php:166
+#: lib/std/admin/schema-general.php:178
+msgctxt "option label"
+msgid "Default Subject Webpage Type"
+msgstr "Type par défaut de page Web du sujet"
 
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag, %3$s is the type attribute value
 #: lib/shortcode/schema.php:174
@@ -1451,128 +1526,82 @@ msgstr "Le shortcode %2$s de %1$s avec \"%3$s\" pour l'attribut type n'est pas u
 
 #: lib/submenu/schema-general.php:38
 msgctxt "metabox title"
-msgid "Schema JSON-LD Markup"
-msgstr "Balisage Schéma JSON-LD"
+msgid "Schema Markup"
+msgstr "Balisage de Schéma"
 
-#: lib/submenu/schema-general.php:55
+#. translators: Please ignore - translation uses a different text domain.
+#: lib/submenu/schema-general.php:51
+msgctxt "metabox title"
+msgid "Advanced Settings"
+msgstr "Réglages avancés"
+
+#: lib/submenu/schema-general.php:68
 msgctxt "metabox tab"
 msgid "Knowledge Graph"
 msgstr "Knowledge Graph"
 
-#: lib/submenu/schema-general.php:56
+#: lib/submenu/schema-general.php:69
 msgctxt "metabox tab"
-msgid "Schema Props"
-msgstr "Prop. de Schéma"
+msgid "Schema Properties"
+msgstr "Propriétés de Schéma"
 
-#: lib/submenu/schema-general.php:57
+#: lib/submenu/schema-general.php:70
+msgctxt "metabox tab"
+msgid "Schema Defaults"
+msgstr "Défauts de Schéma"
+
+#. translators: Please ignore - translation uses a different text domain.
+#: lib/submenu/schema-general.php:100
 msgctxt "metabox tab"
 msgid "Schema Types"
 msgstr "Types de Schéma"
 
-#: lib/submenu/schema-general.php:58
+#. translators: Please ignore - translation uses a different text domain.
+#: lib/submenu/schema-general.php:102
 msgctxt "metabox tab"
-msgid "Integration"
-msgstr "Intégration"
+msgid "Product Attributes"
+msgstr "Attributs de produit"
 
-#: lib/submenu/schema-general.php:59
+#. translators: Please ignore - translation uses a different text domain.
+#: lib/submenu/schema-general.php:104
 msgctxt "metabox tab"
-msgid "Custom Meta"
-msgstr "Méta personnalisé"
+msgid "Custom Fields"
+msgstr "Champs personnalisés"
 
-#: lib/submenu/schema-general.php:60
-msgctxt "metabox tab"
-msgid "Meta Defaults"
-msgstr "Défauts de méta"
-
-#: lib/submenu/schema-general.php:108
+#: lib/submenu/schema-general.php:195
 msgctxt "option label"
 msgid "WebSite Name"
 msgstr "Nom du site Web"
 
-#: lib/submenu/schema-general.php:113
+#: lib/submenu/schema-general.php:200
 msgctxt "option label"
 msgid "WebSite Alternate Name"
 msgstr "Autre nom du site Web"
 
-#: lib/submenu/schema-general.php:118
+#: lib/submenu/schema-general.php:205
 msgctxt "option label"
 msgid "WebSite Description"
 msgstr "Description du site Web"
 
-#: lib/submenu/schema-general.php:125
+#: lib/submenu/schema-general.php:212
 msgctxt "option label"
 msgid "Max. Text or Article Body Length"
 msgstr "Longueur max. text ou corps d'article"
 
-#: lib/submenu/schema-general.php:128
+#: lib/submenu/schema-general.php:215
 msgctxt "option comment"
 msgid "characters or less"
 msgstr "caractères ou moins"
 
-#: lib/submenu/schema-general.php:131
+#: lib/submenu/schema-general.php:218
 msgctxt "option label"
 msgid "Add Text or Article Body Properties"
 msgstr "Ajouter prop. texte ou corps d'article"
 
-#: lib/submenu/schema-general.php:136
+#: lib/submenu/schema-general.php:223
 msgctxt "option label"
 msgid "Add 5 Star Rating If No Rating"
 msgstr "Ajouter note 5 étoiles si aucune note"
-
-#: lib/submenu/schema-general.php:220
-msgctxt "option label"
-msgid "Default Family Friendly"
-msgstr "Favorable à la famille par défaut"
-
-#: lib/submenu/schema-general.php:226
-msgctxt "option label"
-msgid "Default Publisher"
-msgstr "Éditeur par défaut"
-
-#: lib/submenu/schema-general.php:232
-msgctxt "option label"
-msgid "Default Provider"
-msgstr "Fournisseur par défaut"
-
-#: lib/submenu/schema-general.php:247
-msgctxt "option label"
-msgid "Default Organizer Org"
-msgstr "Org. par défaut pour l'organisateur"
-
-#: lib/submenu/schema-general.php:253
-msgctxt "option label"
-msgid "Default Organizer Person"
-msgstr "Personne par défaut pour l'organisateur"
-
-#: lib/submenu/schema-general.php:259
-msgctxt "option label"
-msgid "Default Performer Org"
-msgstr "Org. par défaut pour l'interprète"
-
-#: lib/submenu/schema-general.php:265
-msgctxt "option label"
-msgid "Default Performer Person"
-msgstr "Personne par défaut pour l'interprète"
-
-#: lib/submenu/schema-general.php:271
-msgctxt "option label"
-msgid "Default Event Venue"
-msgstr "Lieu par défaut pour l'événement"
-
-#: lib/submenu/schema-general.php:286
-msgctxt "option label"
-msgid "Default Hiring Organization"
-msgstr "Organisation d'embauche par défaut"
-
-#: lib/submenu/schema-general.php:292
-msgctxt "option label"
-msgid "Default Job Location"
-msgstr "Emplacement de travail par défaut"
-
-#: lib/submenu/schema-general.php:307
-msgctxt "option label"
-msgid "Default Subject Webpage Type"
-msgstr "Type par défaut de page Web du sujet"
 
 #: lib/submenu/schema-shortcode.php:51
 msgctxt "metabox title"
@@ -1583,7 +1612,7 @@ msgstr "Shortcode Schéma"
 msgid "The %1$s add-on requires the %2$s plugin &mdash; install and activate the %3$s plugin or <a href=\"%4$s\">deactivate the %5$s add-on</a>."
 msgstr "L'ajout %1$s requiert l'extension %2$s &mdash; installer et activer l'extension %3$s ou <a href=\"%4$s\">désactiver l'ajout %5$s</a>."
 
-#: wpsso-schema-json-ld.php:227
+#: wpsso-schema-json-ld.php:208
 msgid "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version %5$s is currently installed)."
 msgstr "L'ajout %1$s version %2$s requiert %3$s version %4$s ou plus récente (version %5$s est actuellement installée)."
 

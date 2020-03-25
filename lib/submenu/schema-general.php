@@ -96,8 +96,11 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 			$metabox_id = 'schema_advanced';
 
 			$tabs = apply_filters( $this->p->lca . '_' . $metabox_id . '_tabs', array( 
-				'schema_types'  => _x( 'Schema Types', 'metabox tab', 'wpsso-schema-json-ld' ),
+				// translators: Please ignore - translation uses a different text domain.
+				'schema_types'  => _x( 'Schema Types', 'metabox tab', 'wpsso' ),
+				// translators: Please ignore - translation uses a different text domain.
 				'product_attrs' => _x( 'Product Attributes', 'metabox tab', 'wpsso' ),
+				// translators: Please ignore - translation uses a different text domain.
 				'custom_fields' => _x( 'Custom Fields', 'metabox tab', 'wpsso' ),
 			) );
 

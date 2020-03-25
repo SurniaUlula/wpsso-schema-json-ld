@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.0.0-dev.3\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.0.0-dev.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-"
 "ld\n"
 "POT-Creation-Date: 2020-MO-DA HO:MI+ZONE\n"
@@ -1666,52 +1666,55 @@ msgctxt "metabox tab"
 msgid "Schema Defaults"
 msgstr ""
 
-#: lib/submenu/schema-general.php:99
+#. translators: Please ignore - translation uses a different text domain.
+#: lib/submenu/schema-general.php:100
 msgctxt "metabox tab"
 msgid "Schema Types"
 msgstr ""
 
-#: lib/submenu/schema-general.php:100
+#. translators: Please ignore - translation uses a different text domain.
+#: lib/submenu/schema-general.php:102
 msgctxt "metabox tab"
 msgid "Product Attributes"
 msgstr ""
 
-#: lib/submenu/schema-general.php:101
+#. translators: Please ignore - translation uses a different text domain.
+#: lib/submenu/schema-general.php:104
 msgctxt "metabox tab"
 msgid "Custom Fields"
 msgstr ""
 
-#: lib/submenu/schema-general.php:192
+#: lib/submenu/schema-general.php:195
 msgctxt "option label"
 msgid "WebSite Name"
 msgstr ""
 
-#: lib/submenu/schema-general.php:197
+#: lib/submenu/schema-general.php:200
 msgctxt "option label"
 msgid "WebSite Alternate Name"
 msgstr ""
 
-#: lib/submenu/schema-general.php:202
+#: lib/submenu/schema-general.php:205
 msgctxt "option label"
 msgid "WebSite Description"
 msgstr ""
 
-#: lib/submenu/schema-general.php:209
+#: lib/submenu/schema-general.php:212
 msgctxt "option label"
 msgid "Max. Text or Article Body Length"
 msgstr ""
 
-#: lib/submenu/schema-general.php:212
+#: lib/submenu/schema-general.php:215
 msgctxt "option comment"
 msgid "characters or less"
 msgstr ""
 
-#: lib/submenu/schema-general.php:215
+#: lib/submenu/schema-general.php:218
 msgctxt "option label"
 msgid "Add Text or Article Body Properties"
 msgstr ""
 
-#: lib/submenu/schema-general.php:220
+#: lib/submenu/schema-general.php:223
 msgctxt "option label"
 msgid "Add 5 Star Rating If No Rating"
 msgstr ""
