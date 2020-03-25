@@ -57,6 +57,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 			$this->p->util->add_plugin_filters( $this, array(
 				'option_type'       => 2,
+				'save_options'      => 4,
 				'save_post_options' => 4,
 				'get_md_defaults'   => 2,
 			) );
@@ -246,6 +247,52 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			}
 
 			return $type;
+		}
+
+		public function filter_save_options( $opts, $options_name, $network, $doing_upgrade ) {
+
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->mark();
+			}
+
+			if ( $network ) {
+				return $opts;	// Nothing to do.
+			}
+
+			$def_opts = null;	// Optimize and only get array when needed.
+
+			/**
+			 * Adjust / cleanup options.
+			 */
+			if ( empty( $opts[ 'plugin_wpssojson_tid' ] ) && ! $this->p->check->pp( 'wpssojson', $li = false ) ) {
+
+				// translators: Please ignore - translation uses a different text domain.
+				$notice_msg = __( 'Non-standard value found for the "%s" option - resetting the option to its default value.', 'wpsso' );
+
+				if ( null === $def_opts ) {	// Only get default options once.
+					$def_opts = $this->p->opt->get_defaults();
+				}
+
+				$schema_defs = SucomUtil::preg_grep_keys( '/^schema_def_/', $def_opts );
+
+				foreach ( $schema_defs as $opt_key => $def_val ) {
+
+					if ( isset( $opts[ $opt_key ] ) ) {
+
+						if ( $opts[ $opt_key ] === $def_val ) {
+							continue;
+						}
+
+						if ( is_admin() ) {
+							$this->p->notice->warn( sprintf( $notice_msg, $opt_key ) );
+						}
+					}
+
+					$opts[ $opt_key ] = $def_val;
+				}
+			}
+
+			return $opts;
 		}
 
 		public function filter_save_post_options( $md_opts, $post_id, $rel_id, $mod ) {

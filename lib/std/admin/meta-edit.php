@@ -122,13 +122,13 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 			 * Metabox form rows.
 			 */
 			$form_rows = array(
+				'wpssojson_pro_feature_msg' => array(
+					'table_row' => '<td colspan="2">' . $this->p->msgs->pro_feature( 'wpssojson' ) . '</td>',
+				),
 
 				/**
 				 * All Schema Types.
 				 */
-				'wpssojson_pro_feature_msg' => array(
-					'table_row' => '<td colspan="2">' . $this->p->msgs->pro_feature( 'wpssojson' ) . '</td>',
-				),
 				'schema_title' => array(
 					'th_class' => 'medium',
 					'td_class' => 'blank',
