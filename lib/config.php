@@ -16,7 +16,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssojson' => array(			// Plugin acronym.
-					'version'     => '3.0.0-dev.1',	// Plugin version.
+					'version'     => '3.0.0-dev.2',	// Plugin version.
 					'opt_version' => '39',		// Increment when changing default option values.
 					'short'       => 'WPSSO JSON',	// Short plugin name.
 					'name'        => 'WPSSO Schema JSON-LD Markup',
@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 					'req'         => array(
 						'short'       => 'WPSSO Core',
 						'name'        => 'WPSSO Core',
-						'min_version' => '6.26.0-dev.1',
+						'min_version' => '6.26.0-dev.2',
 					),
 					'assets' => array(
 						'icons' => array(
@@ -38,19 +38,20 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 						),
 					),
 					'lib' => array(
-						/**
-						 * TODO create a loader for the 'filters' array.
-						 */
 						'filters' => array(
-							'types' => array(
+							'type' => array(
+								'article'             => '(code) Schema Type Article (schema_type:article)',
+								'blog'                => '(code) Schema Type Blog (schema_type:blog)',
 								'brand'               => '(code) Schema Type Brand (schema_type:brand)',
 								'claimreview'         => '(code) Schema Type Claim Review (schema_type:review.claim)',
 								'collectionpage'      => '(code) Schema Type Collection Page (schema_type:webpage.collection)',
 								'course'              => '(code) Schema Type Course (schema_type:course)',
+								'creativework'        => '(code) Schema Type CreativeWork (schema_type:creative.work)',
 								'event'               => '(code) Schema Type Event (schema_type:event)',
 								'faqpage'             => '(code) Schema Type FAQPage (schema_type:webpage.faq)',
 								'foodestablishment'   => '(code) Schema Type Food Establishment (schema_type:food.establishment)',
 								'howto'               => '(code) Schema Type How-To (schema_type:how.to)',
+								'itemlist'            => '(code) Schema Type ItemList (schema_type:item.list)',
 								'jobposting'          => '(code) Schema Type Job Posting (schema_type:job.posting)',
 								'localbusiness'       => '(code) Schema Type Local Business (schema_type:local.business)',
 								'movie'               => '(code) Schema Type Movie (schema_type:movie)',
@@ -65,51 +66,19 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 								'review'              => '(code) Schema Type Review (schema_type:review)',
 								'searchresultspage'   => '(code) Schema Type Search Results Page (schema_type:webpage.search.results)',
 								'softwareapplication' => '(code) Schema Type Software Application (schema_type:software.application)',
+								'thing'               => '(code) Schema Type Thing (schema_type:thing)',
 								'webpage'             => '(code) Schema Type WebPage (schema_type:webpage)',
 								'website'             => '(code) Schema Type WebSite (schema_type:website)',
 							),
-							'props' => array(
-								'haspart' => '(plus) Property hasPart',
+							'prop' => array(
+								'aggregaterating' => '(plus) Property aggregateRating',
+								'haspart'         => '(plus) Property hasPart',
+								'review'          => '(plus) Property review',
 							),
 						),
 						'pro' => array(
 							'admin' => array(
 								'meta-edit' => 'Extend Meta Edit Settings',
-							),
-							/**
-							 * TODO remove 'head' array.
-							 */
-							'head' => array(
-								'brand'               => '(code) Schema Type Brand (schema_type:brand)',
-								'claimreview'         => '(code) Schema Type Claim Review (schema_type:review.claim)',
-								'collectionpage'      => '(code) Schema Type Collection Page (schema_type:webpage.collection)',
-								'course'              => '(code) Schema Type Course (schema_type:course)',
-								'event'               => '(code) Schema Type Event (schema_type:event)',
-								'faqpage'             => '(code) Schema Type FAQPage (schema_type:webpage.faq)',
-								'foodestablishment'   => '(code) Schema Type Food Establishment (schema_type:food.establishment)',
-								'howto'               => '(code) Schema Type How-To (schema_type:how.to)',
-								'jobposting'          => '(code) Schema Type Job Posting (schema_type:job.posting)',
-								'localbusiness'       => '(code) Schema Type Local Business (schema_type:local.business)',
-								'movie'               => '(code) Schema Type Movie (schema_type:movie)',
-								'organization'        => '(code) Schema Type Organization (schema_type:organization)',
-								'person'              => '(code) Schema Type Person (schema_type:person)',
-								'place'               => '(code) Schema Type Place (schema_type:place)',
-								'product'             => '(code) Schema Type Product (schema_type:product)',
-								'profilepage'         => '(code) Schema Type Profile Page (schema_type:webpage.profile)',
-								'qapage'              => '(code) Schema Type QAPage (schema_type:webpage.qa)',
-								'question'            => '(code) Schema Type Question and Answer (schema_type:question)',
-								'recipe'              => '(code) Schema Type Recipe (schema_type:recipe)',
-								'review'              => '(code) Schema Type Review (schema_type:review)',
-								'searchresultspage'   => '(code) Schema Type Search Results Page (schema_type:webpage.search.results)',
-								'softwareapplication' => '(code) Schema Type Software Application (schema_type:software.application)',
-								'webpage'             => '(code) Schema Type WebPage (schema_type:webpage)',
-								'website'             => '(code) Schema Type WebSite (schema_type:website)',
-							),
-							/**
-							 * TODO remove 'prop' array.
-							 */
-							'prop' => array(
-								'haspart' => '(plus) Property hasPart',
 							),
 						),
 						'shortcode' => array(

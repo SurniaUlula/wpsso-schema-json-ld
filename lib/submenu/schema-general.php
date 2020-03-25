@@ -53,9 +53,9 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 
 			$tabs = apply_filters( $this->p->lca . '_' . $metabox_id . '_tabs', array( 
 				'knowledge_graph' => _x( 'Knowledge Graph', 'metabox tab', 'wpsso-schema-json-ld' ),
-				'props'           => _x( 'Schema Properties', 'metabox tab', 'wpsso-schema-json-ld' ),
-				'types'           => _x( 'Schema Types', 'metabox tab', 'wpsso-schema-json-ld' ),
-				'defaults'        => _x( 'Schema Defaults', 'metabox tab', 'wpsso-schema-json-ld' ),
+				'schema_props'    => _x( 'Schema Properties', 'metabox tab', 'wpsso-schema-json-ld' ),
+				'schema_types'    => _x( 'Schema Types', 'metabox tab', 'wpsso-schema-json-ld' ),
+				'schema_defaults' => _x( 'Schema Defaults', 'metabox tab', 'wpsso-schema-json-ld' ),
 			) );
 
 			$table_rows = array();
@@ -91,19 +91,19 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 
 					break;
 
-				case 'schema_general-props':
+				case 'schema_general-schema_props':
 
 					$this->add_schema_props_table_rows( $table_rows, $this->form );
 
 					break;
 
-				case 'schema_general-types':
+				case 'schema_general-schema_types':
 
 					$this->add_schema_item_types_table_rows( $table_rows, $this->form );
 
 					break;
 
-				case 'schema_general-defaults':
+				case 'schema_general-schema_defaults':
 
 					$this->add_schema_defaults_table_rows( $table_rows, $this->form );
 

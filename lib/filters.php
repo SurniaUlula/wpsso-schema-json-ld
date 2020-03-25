@@ -614,72 +614,23 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 		 */
 		public function filter_status_std_features( $features, $ext, $info, $pkg ) {
 
-			$features = array(
+			foreach ( array( 'filters' ) as $type_dir ) {
 
-				/**
-				 * See WpssoJsonFiltersSchema->filter_json_data_https_schema_org_creativework().
-				 */
-				'(plus) Property aggregateRating' => array(
-					'status' => 'on',
-				),
+				foreach ( $info[ 'lib' ][ $type_dir ] as $sub_dir => $libs ) {
 
-				'(plus) Property reviews' => array(
-					'status' => 'on',
-				),
+					if ( is_array( $libs ) ) {
 
-				/**
-				 * See WpssoJsonFiltersSchema->filter_json_data_https_schema_org_creativework().
-				 */
-				'(code) Schema Type Article (schema_type:article)' => array(
-					'status' => 'on',
-				),
+						if ( $sub_dir === 'admin' ) { // Skip status for admin menus and tabs.
+							continue;
+						}
 
-				/**
-				 * See WpssoJsonFiltersSchema->filter_json_data_https_schema_org_blog().
-				 */
-				'(code) Schema Type Blog (schema_type:blog)' => array(
-					'status' => 'on',
-				),
+						foreach ( $libs as $id => $label ) {
 
-				/**
-				 * See WpssoJsonFiltersSchema->filter_json_data_https_schema_org_creativework().
-				 */
-				'(code) Schema Type CreativeWork (schema_type:creative.work)' => array(
-					'status' => 'on',
-				),
+							$classname = SucomUtil::sanitize_classname( 'wpssojson' . $type_dir . $sub_dir . $id, $allow_underscore = false );
 
-				/**
-				 * See WpssoJsonFiltersSchema->filter_json_data_https_schema_org_itemlist().
-				 */
-				'(code) Schema Type ItemList (schema_type:item.list)' => array(
-					'status' => 'on',
-				),
-
-				/**
-				 * See WpssoJsonFiltersSchema->filter_json_data_https_schema_org_thing().
-				 */
-				'(code) Schema Type Thing (schema_type:thing)' => array(
-					'status' => 'on',
-				),
-			);
-
-			foreach ( $info[ 'lib' ][ 'std' ] as $sub => $libs ) {
-
-				if ( $sub === 'admin' ) { // Skip status for admin menus and tabs.
-					continue;
-				}
-
-				foreach ( $libs as $id_key => $label ) {
-
-					list( $id, $stub, $action ) = SucomUtil::get_lib_stub_action( $id_key );
-
-					if ( $pkg[ 'pp' ] && ! empty( $info[ 'lib' ][ 'pro' ][ $sub ][ $id ] ) ) {
-						continue;
+							$features[ $label ] = array( 'status' => class_exists( $classname ) ? 'on' : 'off' );
+						}
 					}
-
-					$classname = SucomUtil::sanitize_classname( 'wpssojsonstd' . $sub . $id, $allow_underscore = false );
-
-					$features[ $label ] = array( 'status' => class_exists( $classname ) ? 'on' : 'off' );
 				}
 			}
 
@@ -691,7 +642,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 		 */
 		public function filter_status_pro_features( $features, $ext, $info, $pkg ) {
 
-			return $this->add_schema_type_count( $features, $ext, $info, $pkg );
+			return $features;
 		}
 
 		private function add_schema_type_count( $features, $ext, $info, $pkg ) {

@@ -168,7 +168,3 @@ _x( 'Maximum Images', 'option label', 'wpsso' );
 _x( 'Image ID', 'option label', 'wpsso' );
 // translators: Please ignore - translation uses a different text domain.
 _x( 'or an Image URL', 'option label', 'wpsso' );
-__( 'A claim review cannot be the subject of another claim review.', 'wpsso-schema-json-ld' );
-__( 'CreativeWork will be used instead as the Schema type for the subject of the webpage (ie. the content) being reviewed.', 'wpsso-schema-json-ld' );
-__( 'adding schema howto step option #%d image', 'wpsso-schema-json-ld' );
-__( 'adding reviewed subject image', 'wpsso-schema-json-ld' );

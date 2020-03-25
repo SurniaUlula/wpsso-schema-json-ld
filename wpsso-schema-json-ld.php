@@ -15,7 +15,7 @@
  * Requires At Least: 4.0
  * Tested Up To: 5.4
  * WC Tested Up To: 4.0.1
- * Version: 3.0.0-dev.1
+ * Version: 3.0.0-dev.2
  * 
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -151,29 +151,6 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 			}
 
 			$avail[ 'p_ext' ][ 'json' ] = true;		// Signal that this extension / add-on is available.
-
-			/**
-			 * TODO remove when modules moved to filters sub-dir.
-			 */
-			foreach ( array( 'pro', 'std' ) as $lib ) {
-
-				foreach ( array( 'head', 'prop' ) as $sub_dir ) {
-
-					if ( empty( WpssoJsonConfig::$cf[ 'plugin' ][ 'wpssojson' ][ 'lib' ][ $lib ][ $sub_dir ] ) ) {
-						continue;
-					}
-
-					$sub_libs = WpssoJsonConfig::$cf[ 'plugin' ][ 'wpssojson' ][ 'lib' ][ $lib ][ $sub_dir ];
-
-					foreach ( $sub_libs as $sub_id => $sub_label ) {
-
-						if ( empty( $avail[ $sub_dir ][ $sub_id ] ) ) {	// Optimize.
-
-							$avail[ $sub_dir ][ $sub_id ] = true;
-						}
-					}
-				}
-			}
 
 			return $avail;
 		}

@@ -1191,15 +1191,18 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 			$media_info = $this->p->og->get_media_info( $this->p->lca . '-schema',
 				array( 'pid', 'img_url' ), $mod, $md_pre = 'og', $mt_pre = 'og' );
 	
+			$row_class = $form->in_options( '/^schema_img_/', $is_preg = true ) ? '' : 'hide_in_basic';
+
 			$form_rows = array(
 				'wpssojson_pro_feature_msg' => array(
+					'tr_class'  => $row_class,
 					'table_row' => '<td colspan="2">' . $this->p->msgs->pro_feature( 'wpssojson' ) . '</td>',
 				),
 			);
 
 			if ( $mod[ 'is_post' ] ) {
 				$form_rows[ 'schema_img_max' ] = array(
-					'tr_class' => $form->get_css_class_hide( 'basic', 'schema_img_max' ),
+					'tr_class' => $row_class,
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'Maximum Images', 'option label', 'wpsso' ),
@@ -1209,6 +1212,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 			}
 
 			$form_rows[ 'schema_img_id' ] = array(
+				'tr_class' => $row_class,
 				'th_class' => 'medium',
 				'td_class' => 'blank',
 				'label'    => _x( 'Image ID', 'option label', 'wpsso' ),
@@ -1217,6 +1221,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 			);
 
 			$form_rows[ 'schema_img_url' ] = array(
+				'tr_class' => $row_class,
 				'th_class' => 'medium',
 				'td_class' => 'blank',
 				'label'    => _x( 'or an Image URL', 'option label', 'wpsso' ),

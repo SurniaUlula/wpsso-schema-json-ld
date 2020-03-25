@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.0.0-dev.1\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.0.0-dev.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-"
 "ld\n"
 "POT-Creation-Date: 2020-MO-DA HO:MI+ZONE\n"
@@ -12,6 +12,31 @@ msgstr ""
 "PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: lib/filters/prop/aggregaterating.php:172
+msgid ""
+"An aggregate rating value for this markup has been ignored &mdash; <a href="
+"\"%1$s\">Google does not allow an aggregate rating value for the Schema Type "
+"%2$s</a>."
+msgstr ""
+
+#: lib/filters/type/claimreview.php:76 lib/filters.php:363
+msgid "A claim review cannot be the subject of another claim review."
+msgstr ""
+
+#: lib/filters/type/claimreview.php:78
+msgid ""
+"CreativeWork will be used instead as the Schema type for the subject of the "
+"webpage (ie. the content) being reviewed."
+msgstr ""
+
+#: lib/filters/type/howto.php:123
+msgid "adding schema howto step option #%d image"
+msgstr ""
+
+#: lib/filters/type/review.php:92
+msgid "adding reviewed subject image"
+msgstr ""
 
 #: lib/filters-messages.php:59
 msgid "A customized name / title for the Schema \"name\" property."
@@ -576,17 +601,6 @@ msgstr ""
 msgid "Select a default Schema type for the Schema Review subject URL."
 msgstr ""
 
-#: lib/filters-schema.php:749
-msgid ""
-"An aggregate rating value for this markup has been ignored &mdash; <a href="
-"\"%1$s\">Google does not allow an aggregate rating value for the Schema Type "
-"%2$s</a>."
-msgstr ""
-
-#: lib/filters.php:363 lib/gettext-pro.php:171 lib/pro/head/claimreview.php:76
-msgid "A claim review cannot be the subject of another claim review."
-msgstr ""
-
 #: lib/filters.php:365
 msgid ""
 "Please select a subject webpage type that better describes the subject of "
@@ -891,8 +905,8 @@ msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
 #: lib/gettext-pro.php:53 lib/gettext-pro.php:168
-#: lib/pro/admin/meta-edit.php:485 lib/pro/admin/meta-edit.php:1323
-#: lib/std/admin/meta-edit.php:484 lib/std/admin/meta-edit.php:1214
+#: lib/pro/admin/meta-edit.php:485 lib/pro/admin/meta-edit.php:1326
+#: lib/std/admin/meta-edit.php:484 lib/std/admin/meta-edit.php:1218
 msgctxt "option label"
 msgid "Image ID"
 msgstr ""
@@ -1343,8 +1357,8 @@ msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
 #: lib/gettext-pro.php:130 lib/gettext-pro.php:170
-#: lib/pro/admin/meta-edit.php:1020 lib/pro/admin/meta-edit.php:1330
-#: lib/std/admin/meta-edit.php:1065 lib/std/admin/meta-edit.php:1222
+#: lib/pro/admin/meta-edit.php:1020 lib/pro/admin/meta-edit.php:1334
+#: lib/std/admin/meta-edit.php:1065 lib/std/admin/meta-edit.php:1227
 msgctxt "option label"
 msgid "or an Image URL"
 msgstr ""
@@ -1524,24 +1538,10 @@ msgid "Software Application Information"
 msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/gettext-pro.php:166 lib/pro/admin/meta-edit.php:1315
-#: lib/std/admin/meta-edit.php:1205
+#: lib/gettext-pro.php:166 lib/pro/admin/meta-edit.php:1317
+#: lib/std/admin/meta-edit.php:1208
 msgctxt "option label"
 msgid "Maximum Images"
-msgstr ""
-
-#: lib/gettext-pro.php:172 lib/pro/head/claimreview.php:78
-msgid ""
-"CreativeWork will be used instead as the Schema type for the subject of the "
-"webpage (ie. the content) being reviewed."
-msgstr ""
-
-#: lib/gettext-pro.php:173 lib/pro/head/howto.php:123
-msgid "adding schema howto step option #%d image"
-msgstr ""
-
-#: lib/gettext-pro.php:174 lib/pro/head/review.php:92
-msgid "adding reviewed subject image"
 msgstr ""
 
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag, %3$s is the type attribute value
@@ -1689,7 +1689,7 @@ msgid ""
 "%3$s plugin or <a href=\"%4$s\">deactivate the %5$s add-on</a>."
 msgstr ""
 
-#: wpsso-schema-json-ld.php:231
+#: wpsso-schema-json-ld.php:208
 msgid ""
 "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version "
 "%5$s is currently installed)."
