@@ -79,6 +79,8 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 				 */
 				WpssoSchema::add_media_data( $ret, $mod, $mt_og, $size_names, $add_video = true );
 
+				WpssoSchema::check_required( $ret, $mod, array( 'image' ) );
+
 				/**
 				 * Property:
 				 *      provider
@@ -242,34 +244,6 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 
 			if ( empty( $ret[ 'thumbnailUrl' ] ) ) {
 				unset( $ret[ 'thumbnailUrl' ] );
-			}
-
-			/**
-			 * Check only published posts or other non-post objects.
-			 */
-			if ( 'publish' === $mod[ 'post_status' ] || ! $mod[ 'is_post' ] ) {
-
-				foreach ( array( 'image' ) as $prop_name ) {
-
-					if ( empty( $ret[ $prop_name ] ) ) {
-
-						if ( $this->p->debug->enabled ) {
-							$this->p->debug->log( 'creativework ' . $prop_name . ' value is empty and required' );
-						}
-
-						/**
-						 * Add notice only if the admin notices have not already been shown.
-						 */
-						if ( $this->p->notice->is_admin_pre_notices() ) {
-
-							$notice_key = $mod[ 'name' ] . '-' . $mod[ 'id' ] . '-notice-missing-schema-' . $prop_name;
-
-							$error_msg = $this->p->msgs->get( 'notice-missing-schema-' . $prop_name );
-
-							$this->p->notice->err( $error_msg, null, $notice_key );
-						}
-					}
-				}
 			}
 
 			/**

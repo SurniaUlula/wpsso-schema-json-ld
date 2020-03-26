@@ -90,6 +90,8 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeArticle' ) ) {
 			 */
 			WpssoSchema::add_media_data( $ret, $mod, $mt_og, $size_names, $add_video = true, $alt_size_names );
 
+			WpssoSchema::check_required( $ret, $mod, array( 'image' ) );
+
 			/**
 			 * Property:
 			 *      provider
