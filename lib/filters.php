@@ -79,7 +79,6 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 				$this->p->util->add_plugin_filters( $this, array(
 					'status_std_features' => 4,
-					'status_pro_features' => 4,
 				), $prio = 10, $ext = 'wpssojson' );	// Hook to wpssojson filters.
 			}
 		}
@@ -682,14 +681,6 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			}
 
 			return $this->add_schema_type_count( $features, $ext, $info, $pkg );
-		}
-
-		/**
-		 * Hooked to 'wpssojson_status_pro_features'.
-		 */
-		public function filter_status_pro_features( $features, $ext, $info, $pkg ) {
-
-			return $features;
 		}
 
 		private function add_schema_type_count( $features, $ext, $info, $pkg ) {
