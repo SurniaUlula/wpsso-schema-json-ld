@@ -866,7 +866,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.0.0-rc.1 (2020/03/26)**
+**Version 3.0.0-rc.2 (2020/03/26)**
 
 * **New Features**
 	* Moved all Schema type and sub-type modules from the Premium version to the Free / Standard version.
@@ -881,7 +881,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.0.
-	* WPSSO Core v6.25.1.
+	* WPSSO Core v6.26.0-rc.2.
 
 **Version 2.25.0 (2020/03/14)**
 
@@ -960,7 +960,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.0.0-rc.1 =
+= 3.0.0-rc.2 =
 
 (2020/03/26) Moved all Schema type and sub-type modules from the Premium version to the Free / Standard version. Refactored the Schema Markup settings page metaboxes and tabs.
 
