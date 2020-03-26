@@ -866,7 +866,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.0.0-dev.4 (2020/03/25)**
+**Version 3.0.0-b.1 (2020/03/26)**
 
 * **New Features**
 	* Moved all Schema type and sub-type modules from the Premium version to the Free / Standard version:
@@ -992,9 +992,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.0.0-dev.4 =
+= 3.0.0-b.1 =
 
-(2020/03/25) Moved all Schema type and sub-type modules from the Premium version to the Free / Standard version. Refactored the Schema Markup settings page metaboxes and tabs.
+(2020/03/26) Moved all Schema type and sub-type modules from the Premium version to the Free / Standard version. Refactored the Schema Markup settings page metaboxes and tabs.
 
 = 2.25.0 =
 
