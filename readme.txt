@@ -22,7 +22,9 @@ Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPag
 
 **Choose from over 495 supported Schema types and sub-types:**
 
-This add-on uses a layered approach to easily and automatically create Schema markup, allowing it to support an almost unlimited number of Schema types, children sub-types, and properties inherited from each parent type (for example, LocalBusiness is both a sub-type of Organization and Place, which are both sub-types of Thing).
+The WPSSO Schema JSON-LD Markup add-on provides Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPages, HowTos, Images, Local Business, Products, Recipes, Reviews, Videos, and more.
+
+This add-on utilizes a layered approach to easily and automatically create Schema markup, allowing it to support an almost unlimited number of Schema types, children sub-types, and properties inherited from each parent type (for example, LocalBusiness is both a sub-type of Organization and Place, which are both sub-types of Thing).
 
 **Uses your existing WordPress content, plugin and service API data for accurate and comprehensive Schema JSON-LD markup:**
 
