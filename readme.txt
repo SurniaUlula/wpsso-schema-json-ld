@@ -26,7 +26,9 @@ This add-on uses a layered approach to easily and automatically create Schema ma
 
 **Uses your existing WordPress content, plugin and service API data for accurate and comprehensive Schema JSON-LD markup:**
 
-Provides accurate and comprehensive Schema JSON-LD markup for posts, pages, custom post types, terms (category, tags, etc.), custom taxonomies, user profile pages, search result pages, archive pages, and Accelerated Mobile Pages (AMP) pages &mdash; including image SEO, video SEO, local business, organization, publisher, person, author and co-authors, extensive e-Commerce product markup, product variations, product ratings, aggregate ratings, reviews, recipe information, event details, collection pages, profile pages, search pages, FAQ pages, item lists for [Google's Carousel Rich Results](https://developers.google.com/search/docs/guides/mark-up-listings), and much more.
+There's no need to manually re-create descriptions, titles, product information, re-select images / videos, etc.
+
+This add-on provides accurate and comprehensive Schema JSON-LD markup for posts, pages, custom post types, terms (category, tags, etc.), custom taxonomies, user profile pages, search result pages, archive pages, and Accelerated Mobile Pages (AMP) pages &mdash; including image SEO, video SEO, local business, organization, publisher, person, author and co-authors, extensive e-Commerce product markup, product variations, product ratings, aggregate ratings, reviews, recipe information, event details, collection pages, profile pages, search pages, FAQ pages, item lists for [Google's Carousel Rich Results](https://developers.google.com/search/docs/guides/mark-up-listings), and much more.
 
 **Most complete Schema JSON-LD markup for WooCommerce products:**
 
