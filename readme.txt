@@ -22,7 +22,7 @@ Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPag
 
 **Choose from over 495 supported Schema types and sub-types:**
 
-This add-on uses a *layered* approach to creating Schema markup, allowing it to support an almost unlimited number of Schema types, sub-types, sub-type parents (for example, Schema LocalBusiness is both a sub-type of Schema Organization and Schema Place, which are both sub-types of Schema Thing), and the Schema properties provided by each parent type.
+This add-on uses a layered approach to easily and automatically create Schema markup, allowing it to support an almost unlimited number of Schema types, children sub-types, and properties inherited from each parent type (for example, LocalBusiness is both a sub-type of Organization and Place, which are both sub-types of Thing).
 
 **Uses your existing WordPress content, plugin and service API data for accurate and comprehensive Schema JSON-LD markup:**
 
