@@ -87,7 +87,7 @@ Google regularly updates and changes their Schema markup requirements - WPSSO JS
 
 * Includes contributor markup for [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/) authors and guest authors ([WPSSO Core Premium plugin](https://wpsso.com/) required).
 
-* Supports additional custom product information and WooCommerce product attributes from WPSSO Core Premium:
+* Supports additional custom product information and WooCommerce product attributes from the WPSSO Core Premium plugin:
 
 	* Product Availability
 	* Product Brand
@@ -112,7 +112,7 @@ Google regularly updates and changes their Schema markup requirements - WPSSO JS
 	* Product Width
 	* Product Volume
 
-* WooCommerce product variations from WPSSO Core Premium are grouped by currency and added as Schema AggregateOffer for Google's Rich Results (includes the product variation group high price, low price, and currency).
+* WooCommerce product variations from the WPSSO Core Premium plugin are grouped by currency and added as Schema AggregateOffer for Google's Rich Results (includes the product variation group high price, low price, and currency).
 
 * Fixes common Google testing tool warnings like "aggregateRating field is recommended" and "review field is recommended".
 

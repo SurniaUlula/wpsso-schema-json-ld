@@ -78,7 +78,7 @@
 <li><p>Includes Schema JSON-LD scripts from shortcodes and WordPress editor blocks in the Schema CreativeWork type and sub-types.</p></li>
 <li><p>Built-in support for <a href="https://wordpress.org/plugins/amp/">AMP</a>, <a href="https://wordpress.org/plugins/better-amp/">Better AMP</a>, and <a href="https://wordpress.org/plugins/accelerated-mobile-pages/">AMP for WP</a> plugins.</p></li>
 <li><p>Includes contributor markup for <a href="https://wordpress.org/plugins/co-authors-plus/">Co-Authors Plus</a> authors and guest authors (<a href="https://wpsso.com/">WPSSO Core Premium plugin</a> required).</p></li>
-<li><p>Supports additional custom product information and WooCommerce product attributes from WPSSO Core Premium:</p>
+<li><p>Supports additional custom product information and WooCommerce product attributes from the WPSSO Core Premium plugin:</p>
 
 <ul>
 <li>Product Availability</li>
@@ -104,7 +104,7 @@
 <li>Product Width</li>
 <li>Product Volume</li>
 </ul></li>
-<li><p>WooCommerce product variations from WPSSO Core Premium are grouped by currency and added as Schema AggregateOffer for Google's Rich Results (includes the product variation group high price, low price, and currency).</p></li>
+<li><p>WooCommerce product variations from the WPSSO Core Premium plugin are grouped by currency and added as Schema AggregateOffer for Google's Rich Results (includes the product variation group high price, low price, and currency).</p></li>
 <li><p>Fixes common Google testing tool warnings like "aggregateRating field is recommended" and "review field is recommended".</p></li>
 <li><p>Fixes Google testing tool warnings for supported WPSSO Core Premium e-commerce products, like "brand field is recommended", "missing a global identifier", etc.</p></li>
 </ul>
