@@ -317,8 +317,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Moved all Schema type and sub-type modules from the Premium version to the Free / Standard version.
 * **Improvements**
 	* Refactored the Schema Markup settings page metaboxes and tabs:
-		* Removed the Integration and Custom Meta tabs (the same settings exist in the SSO &gt; Advanced Settings page).
 		* Renamed the Meta Defaults tab to Schema Defaults.
+		* Removed the Integration and Custom Meta tabs.
+		* Added an Advanced Settings metabox with relevant tabs from the SSO &gt; Advanced Settings page:
+			* Schema Types
+			* Product Attributes
+			* Custom Fields
 * **Bugfixes**
 	* None.
 * **Developer Notes**
