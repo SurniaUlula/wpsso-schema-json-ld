@@ -323,6 +323,15 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'content'  => $form->get_no_select( 'schema_event_location_id', $plm_place_names,
 						$css_class = 'long_name' ) . $plm_req_msg,
 				),
+				'schema_event_status' => array(
+					'tr_class' => $schema_type_row_class[ 'event' ],
+					'th_class' => 'medium',
+					'td_class' => 'blank',
+					'label'    => _x( 'Event Status', 'option label', 'wpsso-schema-json-ld' ),
+					'tooltip'  => 'meta-schema_event_status',
+					'content'  => $form->get_no_select( 'schema_event_status', $this->p->cf[ 'form' ][ 'event_status' ],
+						$css_class = '', $css_id = '', $is_assoc = true ),
+				),
 				'schema_event_start' => array(
 					'tr_class' => $schema_type_row_class[ 'event' ],
 					'th_class' => 'medium',

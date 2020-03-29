@@ -180,6 +180,12 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
+				case 'tooltip-meta-schema_event_status':		// Event Status.
+
+					$text = __( 'Select the event status (default is Scheduled).', 'wpsso-schema-json-ld' );
+
+				 	break;
+
 				case 'tooltip-meta-schema_event_start':		// Event Start.
 
 					$text = __( 'Select the event start date and time.', 'wpsso-schema-json-ld' );
