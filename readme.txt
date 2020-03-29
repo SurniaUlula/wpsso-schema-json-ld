@@ -311,12 +311,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.1.0-dev.1 (TBD)**
+**Version 3.1.0-dev.1 (2020/03/29)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* Added an "Event Status" option for the Schema Event type in the Document SSO metabox.
+	* Added "Event Status" and "Event Previous Start" options for the Schema Event type in the Document SSO metabox.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -423,6 +423,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v6.22.0.
 
 == Upgrade Notice ==
+
+= 3.1.0-dev.1 =
+
+(2020/03/29) Added "Event Status" and "Event Previous Start" options for the Schema Event type in the Document SSO metabox.
 
 = 3.0.0 =
 
