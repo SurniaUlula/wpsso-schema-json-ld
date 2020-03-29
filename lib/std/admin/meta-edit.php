@@ -338,7 +338,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Event Start', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_event_start',
-					'content'  => $form->get_no_date_time_iso( 'schema_event_start' ),
+					'content'  => $form->get_no_date_time_tz( 'schema_event_start' ),
 				),
 				'schema_event_end' => array(
 					'tr_class' => $schema_type_row_class[ 'event' ],
@@ -346,7 +346,15 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Event End', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_event_end',
-					'content'  => $form->get_no_date_time_iso( 'schema_event_end' ),
+					'content'  => $form->get_no_date_time_tz( 'schema_event_end' ),
+				),
+				'schema_event_previous' => array(
+					'tr_class' => $schema_type_row_class[ 'event' ],
+					'th_class' => 'medium',
+					'td_class' => 'blank',
+					'label'    => _x( 'Event Previous Start', 'option label', 'wpsso-schema-json-ld' ),
+					'tooltip'  => 'meta-schema_event_previous',
+					'content'  => $form->get_no_date_time_tz( 'schema_event_previous' ),
 				),
 				'schema_event_offers_start' => array(
 					'tr_class' => $schema_type_row_class[ 'event' ],
@@ -354,7 +362,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Event Offers Start', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_event_offers_start',
-					'content'  => $form->get_no_date_time_iso( 'schema_event_offers_start' ),
+					'content'  => $form->get_no_date_time_tz( 'schema_event_offers_start' ),
 				),
 				'schema_event_offers_end' => array(
 					'tr_class' => $schema_type_row_class[ 'event' ],
@@ -362,7 +370,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Event Offers End', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_event_offers_end',
-					'content'  => $form->get_no_date_time_iso( 'schema_event_offers_end' ),
+					'content'  => $form->get_no_date_time_tz( 'schema_event_offers_end' ),
 				),
 				'schema_event_offers' => array(
 					'tr_class' => $schema_type_row_class[ 'event' ],
@@ -558,7 +566,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Job Posting Expires', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_job_expire',
-					'content'  => $form->get_no_date_time_iso( 'schema_job_expire' ),
+					'content'  => $form->get_no_date_time_tz( 'schema_job_expire' ),
 				),
 
 				/**
@@ -1115,7 +1123,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'C.W. Published Date', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_cw_pub',
-					'content'  => $form->get_no_date_time_iso( 'schema_review_item_cw_pub' ),
+					'content'  => $form->get_no_date_time_tz( 'schema_review_item_cw_pub' ),
 				),
 				'schema_review_item_cw_created' => array(
 					'tr_class' => 'hide_schema_type ' . $schema_review_item_type_row_class[ 'creative_work' ],
@@ -1123,7 +1131,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'C.W. Created Date', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_review_item_cw_created',
-					'content'  => $form->get_no_date_time_iso( 'schema_review_item_cw_created' ),
+					'content'  => $form->get_no_date_time_tz( 'schema_review_item_cw_created' ),
 				),
 
 				/**

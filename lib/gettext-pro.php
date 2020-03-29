@@ -33,6 +33,7 @@ _x( 'Event Venue', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Event Status', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Event Start', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Event End', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Event Previous Start', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Event Offers Start', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Event Offers End', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Event Offers', 'option label', 'wpsso-schema-json-ld' );

@@ -335,7 +335,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				}
 			}
 
-			foreach ( array( 'schema_event_start', 'schema_event_end' ) as $md_pre ) {
+			foreach ( array( 'schema_event_start', 'schema_event_end', 'schema_event_previous' ) as $md_pre ) {
 
 				/**
 				 * Unset date / time if same as the default value.
@@ -352,9 +352,9 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 				if ( empty( $md_opts[ $md_pre . '_date' ] ) && empty( $md_opts[ $md_pre . '_time' ] ) ) {		// No date or time.
 
+					unset( $md_opts[ $md_pre . '_date' ] );
+					unset( $md_opts[ $md_pre . '_time' ] );
 					unset( $md_opts[ $md_pre . '_timezone' ] );
-
-					continue;
 
 				} elseif ( ! empty( $md_opts[ $md_pre . '_date' ] ) && empty( $md_opts[ $md_pre . '_time' ] ) ) {	// Date with no time.
 
@@ -362,8 +362,32 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 				} elseif ( empty( $md_opts[ $md_pre . '_date' ] ) && ! empty( $md_opts[ $md_pre . '_time' ] ) ) {	// Time with no date.
 
-					$md_opts[ $md_pre . '_date' ] = gmdate( 'Y-m-d', time() );
+					if ( 'schema_event_previous' === $md_pre ) {
+
+						unset( $md_opts[ $md_pre . '_date' ] );
+						unset( $md_opts[ $md_pre . '_time' ] );
+						unset( $md_opts[ $md_pre . '_timezone' ] );
+
+					} else {
+						$md_opts[ $md_pre . '_date' ] = gmdate( 'Y-m-d', time() );
+					}
 				}
+			}
+
+			/**
+			 * Events with a previous start date must have rescheduled as their status.
+			 *
+			 * Rescheduled events, without a previous event date, is an invalid combination.
+			 */
+			if ( ! empty( $md_opts[ 'schema_event_previous_date' ] ) ) {
+
+				$md_opts[ 'schema_event_status' ]    = 'EventRescheduled';
+				$md_opts[ 'schema_event_status:is' ] = 'disabled';
+
+			} elseif ( isset( $md_opts[ 'schema_event_status' ] ) &&
+				'EventRescheduled' === $md_opts[ 'schema_event_status' ] ) {
+
+				$md_opts[ 'schema_event_status' ] = 'EventScheduled';
 			}
 
 			/**
@@ -476,24 +500,27 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				 * Schema Event.
 				 */
 				'schema_event_lang'                      => $def_lang,						// Event Language.
-				'schema_event_organizer_org_id'          => $opts[ 'schema_def_event_organizer_org_id' ],	// Event Organizer Org.
-				'schema_event_organizer_person_id'       => $opts[ 'schema_def_event_organizer_person_id' ],	// Event Organizer Person.
-				'schema_event_performer_org_id'          => $opts[ 'schema_def_event_performer_org_id' ],	// Event Performer Org.
-				'schema_event_performer_person_id'       => $opts[ 'schema_def_event_performer_person_id' ],	// Event Performer Person.
+				'schema_event_organizer_org_id'          => $opts[ 'schema_def_event_organizer_org_id' ],	// Organizer Org.
+				'schema_event_organizer_person_id'       => $opts[ 'schema_def_event_organizer_person_id' ],	// Organizer Person.
+				'schema_event_performer_org_id'          => $opts[ 'schema_def_event_performer_org_id' ],	// Performer Org.
+				'schema_event_performer_person_id'       => $opts[ 'schema_def_event_performer_person_id' ],	// Performer Person.
 				'schema_event_location_id'               => $opts[ 'schema_def_event_location_id' ],		// Event Venue.
 				'schema_event_status'                    => 'EventScheduled',					// Event Status.
-				'schema_event_start_date'                => '',							// Event Start Date.
-				'schema_event_start_time'                => 'none',						// Event Start Time.
-				'schema_event_start_timezone'            => $timezone,						// Event Start Timezone.
-				'schema_event_end_date'                  => '',							// Event End Date.
-				'schema_event_end_time'                  => 'none',						// Event End Time.
-				'schema_event_end_timezone'              => $timezone,						// Event End Timezone.
-				'schema_event_offers_start_date'         => '',							// Event Offers Start Date.
-				'schema_event_offers_start_time'         => 'none',						// Event Offers Start Time.
-				'schema_event_offers_start_timezone'     => $timezone,						// Event Offers Start Timezone.
-				'schema_event_offers_end_date'           => '',							// Event Offers End Date.
-				'schema_event_offers_end_time'           => 'none',						// Event Offers End Time.
-				'schema_event_offers_end_timezone'       => $timezone,						// Event Offers End Timezone.
+				'schema_event_start_date'                => '',							// Event Start (Date).
+				'schema_event_start_time'                => 'none',						// Event Start (Time).
+				'schema_event_start_timezone'            => $timezone,						// Event Start (Timezone).
+				'schema_event_end_date'                  => '',							// Event End (Date).
+				'schema_event_end_time'                  => 'none',						// Event End (Time).
+				'schema_event_end_timezone'              => $timezone,						// Event End (Timezone).
+				'schema_event_previous_date'             => '',							// Event Previous Start (Date).
+				'schema_event_previous_time'             => 'none',						// Event Previous Start (Time).
+				'schema_event_previous_timezone'         => $timezone,						// Event Previous Start (Timezone).
+				'schema_event_offers_start_date'         => '',							// Event Offers Start (Date.
+				'schema_event_offers_start_time'         => 'none',						// Event Offers Start (Time.
+				'schema_event_offers_start_timezone'     => $timezone,						// Event Offers Start (Timezone.
+				'schema_event_offers_end_date'           => '',							// Event Offers End (Date).
+				'schema_event_offers_end_time'           => 'none',						// Event Offers End (Time).
+				'schema_event_offers_end_timezone'       => $timezone,						// Event Offers End (Timezone).
 
 				/**
 				 * Schema How-To.

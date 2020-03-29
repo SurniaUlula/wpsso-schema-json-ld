@@ -182,7 +182,13 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				case 'tooltip-meta-schema_event_status':		// Event Status.
 
-					$text = __( 'Select the event status (default is Scheduled).', 'wpsso-schema-json-ld' );
+					$text = __( 'Select the event status (default is Scheduled).', 'wpsso-schema-json-ld' ) . ' ';
+
+					$text .= __( 'If you select Cancelled, do not change the original event start date.', 'wpsso-schema-json-ld' ) . ' ';
+
+					$text .= __( 'If you select Postponed (but the rescheduled date isn\'t known yet), do not change the original event start date.', 'wpsso-schema-json-ld' ) . ' ';
+
+					$text .= __( 'If you select Rescheduled, update the previous start date option, then change the original start and end dates.', 'wpsso-schema-json-ld' ) . ' ';
 
 				 	break;
 
@@ -195,6 +201,12 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 				case 'tooltip-meta-schema_event_end':		// Event End.
 
 					$text = __( 'Select the event end date and time.', 'wpsso-schema-json-ld' );
+
+				 	break;
+
+				case 'tooltip-meta-schema_event_previous':	// Event Previous Start.
+
+					$text = __( 'The previously scheduled start date for the event, if an event has been rescheduled.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
