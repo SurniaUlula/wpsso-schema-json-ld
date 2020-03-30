@@ -313,7 +313,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.1.0-dev.2 (2020/03/30)**
+**Version 3.1.0-b.1 (2020/03/31)**
+
+Added Schema Event options for virtual, postponed, and canceled events as [suggested by Google on March 17th, 2020](https://webmasters.googleblog.com/2020/03/new-properties-virtual-or-canceled-events.html).
 
 * **New Features**
 	* None.
@@ -330,7 +332,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.0.
-	* WPSSO Core v6.27.0-dev.2.
+	* WPSSO Core v6.27.0-b.1.
 
 **Version 3.0.0 (2020/03/27)**
 
@@ -430,9 +432,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.1.0-dev.2 =
+= 3.1.0-b.1 =
 
-(2020/03/30) Added new options for the Schema Event type in the Document SSO metabox.
+(2020/03/31) Added new options for the Schema Event type in the Document SSO metabox.
 
 = 3.0.0 =
 
