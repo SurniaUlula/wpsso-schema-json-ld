@@ -146,11 +146,13 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 		* Provider
 	* Event Information
 		* Event Language
+		* Event Attendance
+		* Event Online URL
+		* Event Physical Venue
 		* Event Organizer Organization
 		* Event Organizer Person
 		* Event Performer Organization
 		* Event Performer Person
-		* Event Venue
 		* Event Start (date, time, timezone)
 		* Event End (date, time, timezone)
 		* Event Offers Start (date, time, timezone)
@@ -311,12 +313,16 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.1.0-dev.1 (2020/03/29)**
+**Version 3.1.0-dev.2 (2020/03/30)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* Added "Event Status" and "Event Previous Start" options for the Schema Event type in the Document SSO metabox.
+	* Added new options for the Schema Event type in the Document SSO metabox.
+		* Event Attendance
+		* Event Online URL
+		* Event Status
+		* Event Previous Start
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -324,7 +330,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.0.
-	* WPSSO Core v6.27.0-dev.1.
+	* WPSSO Core v6.27.0-dev.2.
 
 **Version 3.0.0 (2020/03/27)**
 
@@ -424,9 +430,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.1.0-dev.1 =
+= 3.1.0-dev.2 =
 
-(2020/03/29) Added "Event Status" and "Event Previous Start" options for the Schema Event type in the Document SSO metabox.
+(2020/03/30) Added new options for the Schema Event type in the Document SSO metabox.
 
 = 3.0.0 =
 
