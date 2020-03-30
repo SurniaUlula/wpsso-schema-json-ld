@@ -106,6 +106,13 @@ if ( ! class_exists( 'WpssoJsonStdAdminSchemaGeneral' ) ) {
 					'header'   => 'h4',
 					'label'    => _x( 'Event Information', 'metabox title', 'wpsso-schema-json-ld' ),
 				),
+				'schema_def_event_location_id' => array(
+					'td_class' => 'blank',
+					'label'    => _x( 'Default Physical Venue', 'option label', 'wpsso-schema-json-ld' ),
+					'tooltip'  => 'schema_def_event_location_id',
+					'content'  => $form->get_no_select( 'schema_def_event_location_id', $plm_place_names,
+						$css_class = 'long_name', $css_id = '', $is_assoc = true ) . $plm_req_msg,
+				),
 				'schema_def_event_organizer_org_id' => array(
 					'td_class' => 'blank',
 					'label'    => _x( 'Default Organizer Org', 'option label', 'wpsso-schema-json-ld' ),
@@ -133,13 +140,6 @@ if ( ! class_exists( 'WpssoJsonStdAdminSchemaGeneral' ) ) {
 					'tooltip'  => 'schema_def_event_performer_person_id',
 					'content'  => $form->get_no_select( 'schema_def_event_performer_person_id', $person_names,
 						$css_class = 'long_name' ),
-				),
-				'schema_def_event_location_id' => array(
-					'td_class' => 'blank',
-					'label'    => _x( 'Default Event Venue', 'option label', 'wpsso-schema-json-ld' ),
-					'tooltip'  => 'schema_def_event_location_id',
-					'content'  => $form->get_no_select( 'schema_def_event_location_id', $plm_place_names,
-						$css_class = 'long_name', $css_id = '', $is_assoc = true ) . $plm_req_msg,
 				),
 
 				/**

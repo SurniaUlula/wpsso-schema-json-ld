@@ -16,7 +16,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssojson' => array(			// Plugin acronym.
-					'version'     => '3.1.0-dev.1',	// Plugin version.
+					'version'     => '3.1.0-dev.2',	// Plugin version.
 					'opt_version' => '39',		// Increment when changing default option values.
 					'short'       => 'WPSSO JSON',	// Short plugin name.
 					'name'        => 'WPSSO Schema JSON-LD Markup',
@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 					'req'         => array(
 						'short'       => 'WPSSO Core',
 						'name'        => 'WPSSO Core',
-						'min_version' => '6.27.0-dev.1',
+						'min_version' => '6.27.0-dev.2',
 					),
 					'assets' => array(
 						'icons' => array(
@@ -110,11 +110,11 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 					'schema_def_family_friendly'           => 'none',		// Default Family Friendly.
 					'schema_def_pub_org_id'                => 'site',		// Default Publisher.
 					'schema_def_prov_org_id'               => 'none',		// Default Provider.
+					'schema_def_event_location_id'         => 'none',		// Default Physical Venue.
 					'schema_def_event_organizer_org_id'    => 'none',		// Default Organizer Org.
 					'schema_def_event_organizer_person_id' => 'none',		// Default Organizer Person.
 					'schema_def_event_performer_org_id'    => 'none',		// Default Performer Org.
 					'schema_def_event_performer_person_id' => 'none',		// Default Performer Person.
-					'schema_def_event_location_id'         => 'none',		// Default Venue.
 					'schema_def_job_hiring_org_id'         => 'none',		// Default Hiring Organization.
 					'schema_def_job_location_id'           => 'none',		// Default Job Location.
 					'schema_def_review_item_type'          => 'creative.work',	// Default Subject Webpage Type.

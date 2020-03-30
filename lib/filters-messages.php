@@ -120,25 +120,25 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_pub_org_id':		// Publisher.
+				case 'tooltip-meta-schema_pub_org_id':			// Publisher.
 
 					$text = __( 'Select a publisher for the Schema CreativeWork type and/or its sub-types (Article, BlogPosting, WebPage, etc).', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_prov_org_id':		// Provider.
+				case 'tooltip-meta-schema_prov_org_id':			// Provider.
 
 					$text = __( 'Select a service provider, service operator, or service performer (example: "Netflix").', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_copyright_year':	// Copyright Year.
+				case 'tooltip-meta-schema_copyright_year':		// Copyright Year.
 
 					$text = __( 'The year during which the claimed copyright was first asserted for this creative work.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_license_url':		// License URL.
+				case 'tooltip-meta-schema_license_url':			// License URL.
 
 					$text = __( 'A license document URL that applies to this content.', 'wpsso-schema-json-ld' );
 
@@ -146,49 +146,76 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				case 'tooltip-meta-schema_event_lang':			// Event Language.
 
-					$text = __( 'The language (aka locale) for the Schema Event performance.', 'wpsso-schema-json-ld' );
+					$text = __( 'The language (aka locale) for the event performance.', 'wpsso-schema-json-ld' );
+
+				 	break;
+
+				case 'tooltip-meta-schema_event_attendance':		// Event Attendance.
+
+					$text = __( 'Select whether the event occurs online, offline at a physical location, or a mix of both online and offline.', 'wpsso-schema-json-ld' );
+
+				 	break;
+
+				case 'tooltip-meta-schema_event_online_url':		// Event Online URL.
+
+					$text = __( 'An online or virtual location URL to attend the event.', 'wpsso-schema-json-ld' );
+
+				 	break;
+
+				case 'tooltip-meta-schema_event_location_id':		// Event Physical Venue.
+
+					$text = __( 'Select a physical venue for the event.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
 				case 'tooltip-meta-schema_event_organizer_org_id':	// Event Organizer Org.
 
-					$text = __( 'Select an organizer (organization) for the Schema Event type.', 'wpsso-schema-json-ld' );
+					$text = __( 'Select an organizer (organization) for the event.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
 				case 'tooltip-meta-schema_event_organizer_person_id':	// Event Organizer Person.
 
-					$text = __( 'Select an organizer (person) for the Schema Event type.', 'wpsso-schema-json-ld' );
+					$text = __( 'Select an organizer (person) for the event.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
 				case 'tooltip-meta-schema_event_performer_org_id':	// Event Performer Org.
 
-					$text = __( 'Select a performer (organization) for the Schema Event type.', 'wpsso-schema-json-ld' );
+					$text = __( 'Select a performer (organization) for the event.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
 				case 'tooltip-meta-schema_event_performer_person_id':	// Event Performer Person.
 
-					$text = __( 'Select a performer (person) for the Schema Event type.', 'wpsso-schema-json-ld' );
-
-				 	break;
-
-				case 'tooltip-meta-schema_event_location_id':		// Event Venue.
-
-					$text = __( 'Select a venue for the Schema Event type.', 'wpsso-schema-json-ld' );
+					$text = __( 'Select a performer (person) for the event.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
 				case 'tooltip-meta-schema_event_status':		// Event Status.
 
+					// translators: Please ignore - translation uses a different text domain.
+					$cancelled   = _x( 'Cancelled', 'option value', 'wpsso' );
+
+					// translators: Please ignore - translation uses a different text domain.
+					$postponed   = _x( 'Postponed', 'option value', 'wpsso' );
+
+					// translators: Please ignore - translation uses a different text domain.
+					$rescheduled = _x( 'Rescheduled', 'option value', 'wpsso' );
+
 					$text = __( 'Select the event status (default is Scheduled).', 'wpsso-schema-json-ld' ) . ' ';
 
-					$text .= __( 'If you select Cancelled, do not change the original event start date.', 'wpsso-schema-json-ld' ) . ' ';
+					// translators: %s is the "Cancelled" event status.
+					$text .= sprintf( __( 'If you select %s, do not change the original event start date.',
+						'wpsso-schema-json-ld' ), $cancelled ) . ' ';
 
-					$text .= __( 'If you select Postponed (but the rescheduled date isn\'t known yet), do not change the original event start date.', 'wpsso-schema-json-ld' ) . ' ';
+					// translators: %s is the "Postponed" event status.
+					$text .= sprintf( __( 'If you select %s (but the rescheduled date isn\'t known yet), do not change the original event start date.',
+						'wpsso-schema-json-ld' ), $postponed ) . ' ';
 
-					$text .= __( 'If you select Rescheduled, update the previous start date option, then change the original start and end dates.', 'wpsso-schema-json-ld' ) . ' ';
+					// translators: %s is the "Rescheduled" event status.
+					$text .= sprintf( __( 'If you select %s, update the previous start date option, then change the original start and end dates.',
+						'wpsso-schema-json-ld' ), $rescheduled ) . ' ';
 
 				 	break;
 
@@ -206,7 +233,7 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				case 'tooltip-meta-schema_event_previous':	// Event Previous Start.
 
-					$text = __( 'The previously scheduled start date for the event, if an event has been rescheduled.', 'wpsso-schema-json-ld' );
+					$text = __( 'The previously scheduled start date for the event, if the event has been rescheduled.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
@@ -696,6 +723,12 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
+				case 'tooltip-schema_def_event_location_id':		// Default Physical Venue.
+
+					$text = __( 'Select a default venue for the Schema Event type.', 'wpsso-schema-json-ld' );
+
+				 	break;
+
 				case 'tooltip-schema_def_event_organizer_org_id':	// Default Organizer Org.
 
 					$text = __( 'Select a default organizer (organization) for the Schema Event type.', 'wpsso-schema-json-ld' );
@@ -717,12 +750,6 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 				case 'tooltip-schema_def_event_performer_person_id':	// Default Performer Person.
 
 					$text = __( 'Select a default performer (person) for the Schema Event type.', 'wpsso-schema-json-ld' );
-
-				 	break;
-
-				case 'tooltip-schema_def_event_location_id':		// Default Event Venue.
-
-					$text = __( 'Select a default venue for the Schema Event type.', 'wpsso-schema-json-ld' );
 
 				 	break;
 

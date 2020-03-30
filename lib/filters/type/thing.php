@@ -83,7 +83,9 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 			 * Property:
 			 *	url
 			 */
-			WpssoSchema::add_data_itemprop_from_assoc( $ret, $mt_og, array( 'url' => 'og:url' ) );
+			WpssoSchema::add_data_itemprop_from_assoc( $ret, $mt_og, array(
+				'url' => 'og:url',
+			) );
 
 			/**
 			 * Property:

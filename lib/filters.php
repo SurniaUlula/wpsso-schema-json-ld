@@ -140,7 +140,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 					break;
 
-				case 'schema_def_event_location_id':		// Default Event Venue.
+				case 'schema_def_event_location_id':		// Default Physical Venue.
 				case 'schema_def_event_organizer_org_id':	// Default Organizer Org.
 				case 'schema_def_event_organizer_person_id':	// Default Organizer Person.
 				case 'schema_def_event_performer_org_id':	// Default Performer Org.
@@ -152,13 +152,14 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_def_pub_org_id':			// Default Publisher.
 				case 'schema_def_review_item_type':		// Default Subject Webpage Type.
 				case 'schema_event_lang':			// Event Language.
-				case 'schema_event_location_id':		// Event Venue.
+				case 'schema_event_location_id':		// Event Physical Venue.
 				case 'schema_event_offer_currency':
 				case 'schema_event_offer_avail':
 				case 'schema_event_organizer_org_id':		// Event Organizer Org.
 				case 'schema_event_organizer_person_id':	// Event Organizer Person.
 				case 'schema_event_performer_org_id':		// Event Performer Org.
 				case 'schema_event_performer_person_id':	// Event Performer Person.
+				case 'schema_event_attendance':			// Event Attendance.
 				case 'schema_event_status':			// Event Status.
 				case 'schema_family_friendly':			// Family Friendly.
 				case 'schema_job_hiring_org_id':		// Hiring Organization.
@@ -230,6 +231,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_sameas_url':			// Same-As URLs.
 				case 'schema_ispartof_url':			// Is Part of URL.
 				case 'schema_license_url':			// License URL.
+				case 'schema_event_online_url':			// Event Online URL.
 				case 'schema_review_item_url':			// Reviewed Subject Webpage URL.
 				case 'schema_review_item_sameas_url':		// Reviewed Subject Same-As URL.
 				case 'schema_review_item_cw_author_url':	// Reviewed Subject Author URL.
@@ -377,15 +379,14 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			/**
 			 * Events with a previous start date must have rescheduled as their status.
 			 *
-			 * Rescheduled events, without a previous event date, is an invalid combination.
+			 * Rescheduled events, without a previous start date, is an invalid combination.
 			 */
 			if ( ! empty( $md_opts[ 'schema_event_previous_date' ] ) ) {
 
 				$md_opts[ 'schema_event_status' ]    = 'EventRescheduled';
 				$md_opts[ 'schema_event_status:is' ] = 'disabled';
 
-			} elseif ( isset( $md_opts[ 'schema_event_status' ] ) &&
-				'EventRescheduled' === $md_opts[ 'schema_event_status' ] ) {
+			} elseif ( isset( $md_opts[ 'schema_event_status' ] ) && 'EventRescheduled' === $md_opts[ 'schema_event_status' ] ) {
 
 				$md_opts[ 'schema_event_status' ] = 'EventScheduled';
 			}
@@ -500,11 +501,13 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				 * Schema Event.
 				 */
 				'schema_event_lang'                      => $def_lang,						// Event Language.
+				'schema_event_attendance'                => 'OfflineEventAttendanceMode',			// Event Attendance.
+				'schema_event_online_url'                => '',							// Event Online URL.
+				'schema_event_location_id'               => $opts[ 'schema_def_event_location_id' ],		// Event Physical Venue.
 				'schema_event_organizer_org_id'          => $opts[ 'schema_def_event_organizer_org_id' ],	// Organizer Org.
 				'schema_event_organizer_person_id'       => $opts[ 'schema_def_event_organizer_person_id' ],	// Organizer Person.
 				'schema_event_performer_org_id'          => $opts[ 'schema_def_event_performer_org_id' ],	// Performer Org.
 				'schema_event_performer_person_id'       => $opts[ 'schema_def_event_performer_person_id' ],	// Performer Person.
-				'schema_event_location_id'               => $opts[ 'schema_def_event_location_id' ],		// Event Venue.
 				'schema_event_status'                    => 'EventScheduled',					// Event Status.
 				'schema_event_start_date'                => '',							// Event Start (Date).
 				'schema_event_start_time'                => 'none',						// Event Start (Time).
