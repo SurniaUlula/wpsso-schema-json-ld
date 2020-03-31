@@ -5,4 +5,4 @@
  */
 _x( 'Schema Markup', 'lib file description', 'wpsso-schema-json-ld' );
 _x( 'Schema Shortcode Guide', 'lib file description', 'wpsso-schema-json-ld' );
-_x( 'Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPages, HowTos, Images, Local Business, Products, Recipes, Reviews, Videos, and more.', 'plugin description', 'wpsso-schema-json-ld' );
+_x( 'Google Rich Results with Structured Data for Articles, Carousels, Events, FAQ Pages, How-Tos, Images, Local Business, Products, Recipes, Reviews, Videos, and more.', 'plugin description', 'wpsso-schema-json-ld' );

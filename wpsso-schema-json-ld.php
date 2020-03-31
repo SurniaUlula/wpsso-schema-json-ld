@@ -10,7 +10,7 @@
  * Author URI: https://wpsso.com/
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl.txt
- * Description: Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPages, HowTos, Images, Local Business, Products, Recipes, Reviews, Videos, and more.
+ * Description: Google Rich Results with Structured Data for Articles, Carousels, Events, FAQ Pages, How-Tos, Images, Local Business, Products, Recipes, Reviews, Videos, and more.
  * Requires PHP: 5.6
  * Requires At Least: 4.0
  * Tested Up To: 5.4
