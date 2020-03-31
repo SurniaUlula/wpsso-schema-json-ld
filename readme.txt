@@ -14,7 +14,7 @@ Tested Up To: 5.4
 WC Tested Up To: 4.0.1
 Stable Tag: 3.0.0
 
-Google Rich Results with Structured Data for Articles, Carousels, Events, FAQ Pages, How-Tos, Local Business, Products, Recipes, Reviews, Videos, and more.
+Rich Results and Structured Data for Articles, Carousels, Events, FAQ Pages, How-Tos, Local Business, Products, Recipes, Reviews, Videos, and more.
 
 == Description ==
 
