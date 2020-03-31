@@ -144,7 +144,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 							'description' => $mt_pre . ':content',
 						) ) ) ) {
 
-							if ( isset( $mt_review[ $mt_pre . ':rating:value' ] ) ) {
+							if ( ! empty( $mt_review[ $mt_pre . ':rating:value' ] ) ) {
 
 								$single_review[ 'reviewRating' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/Rating',
 									WpssoSchema::get_data_itemprop_from_assoc( $mt_review, array(
@@ -154,7 +154,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 									) ) );
 							}
 
-							if ( isset( $mt_review[ $mt_pre . ':author:name' ] ) ) {
+							if ( ! empty( $mt_review[ $mt_pre . ':author:name' ] ) ) {
 
 								/**
 								 * Returns false if no meta tags found.
@@ -168,7 +168,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 								}
 							}
 	
-							if ( isset( $mt_review[ $mt_pre . ':id' ] ) ) {
+							if ( ! empty( $mt_review[ $mt_pre . ':id' ] ) ) {
 
 								$replies_added = WpssoSchemaSingle::add_comment_reply_data( $single_review[ 'comment' ],
 									$mod, $mt_review[ $mt_pre . ':id' ] );

@@ -634,7 +634,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				/**
 				 * Schema Review.
 				 */
-				'schema_review_rating'                   => '0.00',	// Review Rating.
+				'schema_review_rating'                   => '0.0',	// Review Rating.
 				'schema_review_rating_from'              => '1',	// Review Rating (From).
 				'schema_review_rating_to'                => '5',	// Review Rating (To).
 				'schema_review_rating_alt_name'          => '',		// Rating Value Name.

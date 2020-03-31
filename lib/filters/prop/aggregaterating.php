@@ -85,11 +85,11 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 			$ret = array();
 
 			$aggr_rating = array(
-				'ratingValue' => null,
-				'ratingCount' => null,
+				'ratingValue' => 0,
+				'ratingCount' => 0,
 				'worstRating' => 1,
 				'bestRating'  => 5,
-				'reviewCount' => null,
+				'reviewCount' => 0,
 			);
 
 			$og_type = isset( $mt_og[ 'og:type' ] ) ? $mt_og[ 'og:type' ] : '';
@@ -124,21 +124,19 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 			/**
 			 * Check for at least two essential meta tags (a rating value, and a rating count or review count).
 			 */
-			if ( empty( $aggr_rating[ 'ratingValue' ] ) ) {
+			if ( isset( $aggr_rating[ 'ratingValue' ] ) && $aggr_rating[ 'ratingValue' ] > 0 ) {
 
-				if ( $this->p->debug->enabled ) {
-					$this->p->debug->log( 'aggregate rating ignored: ratingValue is empty' );
-				}
+				if ( ( isset( $aggr_rating[ 'ratingCount' ] ) && $aggr_rating[ 'ratingCount' ] > 0 ) ||
+					( isset( $aggr_rating[ 'reviewCount' ] ) && $aggr_rating[ 'reviewCount' ] > 0 ) ) {
+				
+					$ret[ 'aggregateRating' ] = $aggr_rating;
 
-			} elseif ( empty( $aggr_rating[ 'ratingCount' ] ) && empty( $aggr_rating[ 'reviewCount' ] ) ) {
-
-				if ( $this->p->debug->enabled ) {
+				} elseif ( $this->p->debug->enabled ) {
 					$this->p->debug->log( 'aggregate rating ignored: ratingCount and reviewCount are empty' );
 				}
 
-			} else {
-
-				$ret[ 'aggregateRating' ] = $aggr_rating;
+			} elseif ( $this->p->debug->enabled ) {
+				$this->p->debug->log( 'aggregate rating ignored: ratingValue is empty' );
 			}
 
 			/**
