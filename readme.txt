@@ -14,7 +14,7 @@ Tested Up To: 5.4
 WC Tested Up To: 4.0.1
 Stable Tag: 3.0.0
 
-Rich Results and Structured Data for Articles, Carousels, Events, FAQ Pages, How-Tos, Local Business, Products, Recipes, Reviews, Videos, and more.
+Google Rich Results and Structured Data for Articles, Carousels, Events, FAQ Pages, How-Tos, Local SEO, Products, Recipes, Ratings, Reviews, and more.
 
 == Description ==
 
@@ -22,11 +22,11 @@ Rich Results and Structured Data for Articles, Carousels, Events, FAQ Pages, How
 
 **Supports over 495 different Schema types and sub-types:**
 
-Provides Google Rich Results with Structured Data for Articles, Carousels (aka ItemList), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business, Organizations, Products, Recipes, Restaurants, Reviews, Videos, and more.
+Provides Google Rich Results and Structured Data for Articles, Carousels (aka ItemList), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Videos, and more.
 
 This add-on uses a layered approach to programmatically create correct and accurate Schema markup, allowing it to support an almost unlimited number of Schema types, children sub-types, and properties inherited from each parent type (for example, LocalBusiness is both a sub-type of Organization and Place, which are both sub-types of Thing).
 
-**Uses existing WordPress content, plugin and service API data for accurate and comprehensive Schema JSON-LD markup:**
+**Uses your existing WordPress content, plugin and service API data for accurate and comprehensive Schema JSON-LD markup:**
 
 There's no need to manually re-create descriptions, titles, product information, re-select images / videos, etc.
 
