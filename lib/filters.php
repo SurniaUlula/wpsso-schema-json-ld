@@ -318,23 +318,32 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			}
 
 			/**
-			 * If the review rating is 0, remove the review rating options. If we have a review rating, then make sure
-			 * there's a from/to as well.
+			 * The review rating must be greater than 0.
 			 */
-			if ( empty( $md_opts[ 'schema_review_rating' ] ) ) {
+			if ( isset( $md_opts[ 'schema_review_rating' ] ) && $md_opts[ 'schema_review_rating' ] > 0 ) {
 
-				foreach ( array( 'schema_review_rating', 'schema_review_rating_from', 'schema_review_rating_to' ) as $md_key ) {
-					unset( $md_opts[ $md_key ] );
-				}
-
-			} else {
-
-				foreach ( array( 'schema_review_rating_from', 'schema_review_rating_to' ) as $md_key ) {
-
+				/**
+				 * Fallback to the default values if the from/to is empty.
+				 */
+				foreach ( array(
+					'schema_review_rating_from',
+					'schema_review_rating_to',
+				) as $md_key ) {
 					if ( empty( $md_opts[ $md_key ] ) && isset( $md_defs[ $md_key ] ) ) {
 						$md_opts[ $md_key ] = $md_defs[ $md_key ];
 					}
 				}
+
+			} else {
+
+				foreach ( array(
+					'schema_review_rating',
+					'schema_review_rating_from',
+					'schema_review_rating_to',
+				) as $md_key ) {
+					unset( $md_opts[ $md_key ] );
+				}
+
 			}
 
 			foreach ( array( 'schema_event_start', 'schema_event_end', 'schema_event_previous' ) as $md_pre ) {
@@ -622,7 +631,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				/**
 				 * Schema Review.
 				 */
-				'schema_review_rating'                   => '0.0',	// Review Rating.
+				'schema_review_rating'                   => '0.00',	// Review Rating.
 				'schema_review_rating_from'              => '1',	// Review Rating (From).
 				'schema_review_rating_to'                => '5',	// Review Rating (To).
 				'schema_review_rating_alt_name'          => '',		// Rating Value Name.

@@ -20,7 +20,7 @@ msgid ""
 "%2$s</a>."
 msgstr ""
 
-#: lib/filters/type/claimreview.php:76 lib/filters.php:435
+#: lib/filters/type/claimreview.php:76 lib/filters.php:444
 msgid "A claim review cannot be the subject of another claim review."
 msgstr ""
 
@@ -665,7 +665,7 @@ msgid ""
 "default value."
 msgstr ""
 
-#: lib/filters.php:437
+#: lib/filters.php:446
 msgid ""
 "Please select a subject webpage type that better describes the subject of "
 "the webpage (ie. the content) being reviewed."
