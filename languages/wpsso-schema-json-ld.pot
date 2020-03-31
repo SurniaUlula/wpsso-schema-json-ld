@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.1.0-b.1\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.1.0-rc.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-"
 "ld\n"
 "POT-Creation-Date: 2020-MO-DA HO:MI+ZONE\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/filters/prop/aggregaterating.php:172
+#: lib/filters/prop/aggregaterating.php:171
 msgid ""
 "An aggregate rating value for this markup has been ignored &mdash; <a href="
 "\"%1$s\">Google does not allow an aggregate rating value for the Schema Type "
@@ -684,10 +684,10 @@ msgstr ""
 #: lib/gettext-config.php:8
 msgctxt "plugin description"
 msgid ""
-"Google Rich Results and Structured Data for Articles, Carousels (aka "
-"ItemList), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local "
-"Business / Local SEO, Organizations, Products, Ratings, Recipes, "
-"Restaurants, Reviews, Videos, and more."
+"Google Rich Results and Structured Data for Articles, Carousels (aka Item "
+"Lists), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / "
+"Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, "
+"Videos, and more."
 msgstr ""
 
 #: lib/gettext-pro.php:6 lib/pro/admin/meta-edit.php:109
@@ -1828,10 +1828,10 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Google Rich Results and Structured Data for Articles, Carousels (aka "
-"ItemList), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local "
-"Business / Local SEO, Organizations, Products, Ratings, Recipes, "
-"Restaurants, Reviews, Videos, and more."
+"Google Rich Results and Structured Data for Articles, Carousels (aka Item "
+"Lists), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / "
+"Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, "
+"Videos, and more."
 msgstr ""
 
 #. Author of the plugin/theme

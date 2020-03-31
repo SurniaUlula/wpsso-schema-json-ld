@@ -84,8 +84,6 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 
 			$ret = array();
 
-			$og_type = isset( $mt_og[ 'og:type' ] ) ? $mt_og[ 'og:type' ] : '';
-
 			$aggr_rating = array(
 				'ratingValue' => null,
 				'ratingCount' => null,
@@ -94,10 +92,17 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 				'reviewCount' => null,
 			);
 
+			$og_type = isset( $mt_og[ 'og:type' ] ) ? $mt_og[ 'og:type' ] : '';
+
 			/**
 			 * Only pull values from meta tags if this is the main entity markup.
 			 */
 			if ( $is_main && $og_type ) {
+
+				if ( $this->p->debug->enabled ) {
+					$this->p->debug->log_arr( 'open graph rating',
+						SucomUtil::preg_grep_keys( '/:rating:/', $mt_og ) );
+				}
 
 				WpssoSchema::add_data_itemprop_from_assoc( $aggr_rating, $mt_og, array(
 					'ratingValue' => $og_type . ':rating:average',
@@ -112,34 +117,28 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 				WpssoSchema::get_schema_type_context( 'https://schema.org/AggregateRating', $aggr_rating ),
 					$mod, $mt_og, $page_type_id, $is_main );
 
-			/**
-			 * Remove all empty values (null, 0, false, or empty string).
-			 */
-			foreach ( $aggr_rating as $key => $val ) {
-
-				if ( empty( $val ) ) {
-					unset( $aggr_rating[ $key ] );
-				}
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->log_arr( 'aggregate rating', $aggr_rating );
 			}
 
 			/**
 			 * Check for at least two essential meta tags (a rating value, and a rating count or review count).
 			 */
-			if ( isset( $aggr_rating[ 'ratingValue' ] ) &&
-				( isset( $aggr_rating[ 'ratingCount' ] ) || 
-					isset( $aggr_rating[ 'reviewCount' ] ) ) ) {
+			if ( empty( $aggr_rating[ 'ratingValue' ] ) ) {
 
 				if ( $this->p->debug->enabled ) {
-					$this->p->debug->log_arr( 'aggregate rating', $aggr_rating );
+					$this->p->debug->log( 'aggregate rating ignored: ratingValue is empty' );
 				}
 
-				$ret[ 'aggregateRating' ] = $aggr_rating;
+			} elseif ( empty( $aggr_rating[ 'ratingCount' ] ) && empty( $aggr_rating[ 'reviewCount' ] ) ) {
+
+				if ( $this->p->debug->enabled ) {
+					$this->p->debug->log( 'aggregate rating ignored: ratingCount and reviewCount are empty' );
+				}
 
 			} else {
 
-				if ( $this->p->debug->enabled ) {
-					$this->p->debug->log( 'rating value plus a rating/review count not found' );
-				}
+				$ret[ 'aggregateRating' ] = $aggr_rating;
 			}
 
 			/**

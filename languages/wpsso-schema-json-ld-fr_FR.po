@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Schema JSON-LD Markup 3.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-03-30 13:15-0700\n"
-"PO-Revision-Date: 2020-03-30 13:21-0700\n"
+"POT-Creation-Date: 2020-03-31 07:48-0700\n"
+"PO-Revision-Date: 2020-03-31 07:48-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: lib/filters/prop/aggregaterating.php:172
+#: lib/filters/prop/aggregaterating.php:182
 msgid "An aggregate rating value for this markup has been ignored &mdash; <a href=\"%1$s\">Google does not allow an aggregate rating value for the Schema Type %2$s</a>."
 msgstr "Une note agrégé pour ce balisage a été ignorée &mdash; <a href=\"%1$s\">Google n'autorise pas de note agrégé pour le type de schéma %2$s</a> ."
 
@@ -566,8 +566,8 @@ msgstr "Guide shortcode Schéma"
 
 #: lib/gettext-config.php:8
 msgctxt "plugin description"
-msgid "Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPages, HowTos, Images, Local Business, Products, Recipes, Reviews, Videos, and more."
-msgstr "Résultats riche de Google avec données structurées d'articles, carrousels, événements, pages FAQ, images, entreprise locale, produits, recettes, critiques, videos, et plus."
+msgid "Google Rich Results and Structured Data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Videos, and more."
+msgstr "Résultats riche de Google et données structurées pour articles, carrousels, critiques, entreprise / référencement locale, étapes pratiques, évaluations de déclarations, événements, images, organisations, pages FAQ, produits, recettes, restaurants, videos, et plus."
 
 #: lib/gettext-pro.php:6 lib/pro/admin/meta-edit.php:109
 #: lib/std/admin/meta-edit.php:89
@@ -1698,8 +1698,8 @@ msgid "https://wpsso.com/extend/plugins/wpsso-schema-json-ld/"
 msgstr "https://wpsso.com/extend/plugins/wpsso-schema-json-ld/"
 
 #. Description of the plugin/theme
-msgid "Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPages, HowTos, Images, Local Business, Products, Recipes, Reviews, Videos, and more."
-msgstr "Résultats riche de Google avec données structurées d'articles, carrousels, événements, pages FAQ, images, entreprise locale, produits, recettes, critiques, videos, et plus."
+msgid "Google Rich Results and Structured Data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Videos, and more."
+msgstr "Résultats riche de Google et données structurées pour articles, carrousels, critiques, entreprise / référencement locale, étapes pratiques, évaluations de déclarations, événements, images, organisations, pages FAQ, produits, recettes, restaurants, videos, et plus."
 
 #. Author of the plugin/theme
 msgid "JS Morisset"
