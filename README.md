@@ -21,7 +21,7 @@
 
 <p>Provides Google Rich Results and Structured Data for Articles, Carousels (aka ItemList), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Videos, and more.</p>
 
-<p>This add-on uses filters to dynamically (and automatically) create Schema markup, allowing it to provide an almost unlimited number of Schema types, children sub-types, and properties inherited from each parent type (for example, Restaurant is a sub-type of Food Establishment, which is a sub-type of Local Business, which is sub-type of <em>both</em> Organization <em>and</em> Place, which are sub-types of Thing).</p>
+<p>This add-on uses filters to dynamically (and automatically) create Schema markup, allowing it to provide an almost unlimited number of Schema types, children sub-types, and properties inherited from each parent type (for example, Restaurant is a sub-type of Food Establishment, which is a sub-type of Local Business, which is sub-type of <em>both</em> Organization <em>and</em> Place, which are both sub-types of Thing).</p>
 
 <p><strong>Uses your existing WordPress content, plugin and service API data for accurate and comprehensive Schema JSON-LD markup:</strong></p>
 
