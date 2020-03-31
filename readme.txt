@@ -1,4 +1,4 @@
-=== Schema JSON-LD Markup | Google Rich Results / Rich Snippets with Structured Data | WPSSO Add-on ===
+=== Schema JSON-LD Markup for Google Rich Results | WPSSO Add-on ===
 Plugin Name: WPSSO Schema JSON-LD Markup
 Plugin Slug: wpsso-schema-json-ld
 Text Domain: wpsso-schema-json-ld
