@@ -343,10 +343,13 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				) as $md_key ) {
 					unset( $md_opts[ $md_key ] );
 				}
-
 			}
 
-			foreach ( array( 'schema_event_start', 'schema_event_end', 'schema_event_previous' ) as $md_pre ) {
+			foreach ( array(
+				'schema_event_start',
+				'schema_event_end',
+				'schema_event_previous',
+			) as $md_pre ) {
 
 				/**
 				 * Unset date / time if same as the default value.
