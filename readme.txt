@@ -22,7 +22,7 @@ Google Rich Results and Structured Data for Articles, Carousels, Events, FAQ Pag
 
 **Supports over 495 different Schema types and sub-types:**
 
-Google Rich Results and Structured Data for Articles, Carousels (aka ItemList), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Videos, and more.
+Google Rich Results and Structured Data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Videos, and more.
 
 Uses filters to dynamically (and automatically) create Schema markup, allowing the WPSSO Schema JSON-LD Markup add-on to provide an almost unlimited number of Schema types, children sub-types, and properties inherited from each parent type (for example, Restaurant is a sub-type of Food Establishment, which is a sub-type of Local Business, which is sub-type of *both* Organization *and* Place, which are both sub-types of Thing).
 
@@ -313,7 +313,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.1.0-b.1 (2020/03/31)**
+**Version 3.1.0-rc.1 (2020/03/31)**
 
 Added Schema Event options for virtual, postponed, and canceled events as [suggested by Google on March 17th, 2020](https://webmasters.googleblog.com/2020/03/new-properties-virtual-or-canceled-events.html).
 
@@ -332,7 +332,7 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.0.
-	* WPSSO Core v6.27.0-b.1.
+	* WPSSO Core v6.27.0-rc.1.
 
 **Version 3.0.0 (2020/03/27)**
 
@@ -432,7 +432,7 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 
 == Upgrade Notice ==
 
-= 3.1.0-b.1 =
+= 3.1.0-rc.1 =
 
 (2020/03/31) Added new options for the Schema Event type in the Document SSO metabox.
 
