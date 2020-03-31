@@ -332,7 +332,7 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.0.
-	* WPSSO Core v6.27.0.
+	* WPSSO Core v6.27.1.
 
 **Version 3.0.0 (2020/03/27)**
 
