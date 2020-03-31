@@ -124,7 +124,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 			/**
 			 * Check for at least two essential meta tags (a rating value, and a rating count or review count).
 			 *
-			 * The rating value should be a float and the rating counts should be integers.
+			 * The rating value is expected to be a float and the rating counts are expected to be integers.
 			 */
 			if ( ! empty( $aggr_rating[ 'ratingValue' ] ) ) {
 
