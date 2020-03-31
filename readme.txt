@@ -14,19 +14,19 @@ Tested Up To: 5.4
 WC Tested Up To: 4.0.1
 Stable Tag: 3.0.0
 
-Google Rich Results with Structured Data for Articles, Carousels, Events, FAQPages, HowTos, Images, Local Business, Products, Recipes, Reviews, Videos, and more.
+Google Rich Results with Structured Data for Articles, Carousels, Events, FAQ Pages, How-Tos, Images, Local Business, Products, Recipes, Reviews, Videos, and more.
 
 == Description ==
 
 <p style="margin:0;"><img class="readme-icon" src="https://surniaulula.github.io/wpsso-schema-json-ld/assets/icon-256x256.png"></p>
 
-**Choose from over 495 supported Schema types and sub-types:**
+**Supports over 495 different Schema types and sub-types:**
 
-The WPSSO Schema JSON-LD Markup add-on provides Google Rich Results with Structured Data for Articles, Carousels (aka ItemList), Events, FAQPages, HowTos, Images, Local Business, Products, Recipes, Reviews, Videos, and more.
+Provides Google Rich Results with Structured Data for Articles, Carousels (aka ItemList), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business, Organizations, Products, Recipes, Restaurants, Reviews, Videos, and more.
 
-This add-on utilizes a layered approach to easily and automatically create Schema markup, allowing it to support an almost unlimited number of Schema types, children sub-types, and properties inherited from each parent type (for example, LocalBusiness is both a sub-type of Organization and Place, which are both sub-types of Thing).
+This add-on uses a layered approach to programmatically create correct and accurate Schema markup, allowing it to support an almost unlimited number of Schema types, children sub-types, and properties inherited from each parent type (for example, LocalBusiness is both a sub-type of Organization and Place, which are both sub-types of Thing).
 
-**Uses your existing WordPress content, plugin and service API data for accurate and comprehensive Schema JSON-LD markup:**
+**Uses existing WordPress content, plugin and service API data for accurate and comprehensive Schema JSON-LD markup:**
 
 There's no need to manually re-create descriptions, titles, product information, re-select images / videos, etc.
 
