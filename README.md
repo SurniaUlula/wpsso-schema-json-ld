@@ -23,7 +23,7 @@
 
 <p>Uses filters to dynamically (and automatically) create Schema markup, allowing the WPSSO Schema JSON-LD Markup add-on to provide an almost unlimited number of Schema types, children sub-types, and properties inherited from each parent type (for example, Restaurant is a sub-type of Food Establishment, which is a sub-type of Local Business, which is sub-type of <em>both</em> Organization <em>and</em> Place, which are both sub-types of Thing).</p>
 
-<p><strong>Uses your existing WordPress content, plugin and service API data for accurate and comprehensive Schema JSON-LD markup:</strong></p>
+<p><strong>Uses your existing WordPress content, plugin and service API data:</strong></p>
 
 <p>There's no need to manually re-create descriptions, titles, product information, re-select images / videos, etc.</p>
 

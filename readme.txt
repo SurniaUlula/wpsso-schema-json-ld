@@ -26,7 +26,7 @@ Google Rich Results and Structured Data for Articles, Carousels (aka Item Lists)
 
 Uses filters to dynamically (and automatically) create Schema markup, allowing the WPSSO Schema JSON-LD Markup add-on to provide an almost unlimited number of Schema types, children sub-types, and properties inherited from each parent type (for example, Restaurant is a sub-type of Food Establishment, which is a sub-type of Local Business, which is sub-type of *both* Organization *and* Place, which are both sub-types of Thing).
 
-**Uses your existing WordPress content, plugin and service API data for accurate and comprehensive Schema JSON-LD markup:**
+**Uses your existing WordPress content, plugin and service API data:**
 
 There's no need to manually re-create descriptions, titles, product information, re-select images / videos, etc.
 
