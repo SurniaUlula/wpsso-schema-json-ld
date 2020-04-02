@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.1.0\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.2.0-dev.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-"
 "ld\n"
 "POT-Creation-Date: 2020-MO-DA HO:MI+ZONE\n"
@@ -1806,13 +1806,13 @@ msgctxt "metabox title"
 msgid "Schema Shortcode"
 msgstr ""
 
-#: wpsso-schema-json-ld.php:107
+#: wpsso-schema-json-ld.php:114
 msgid ""
 "The %1$s add-on requires the %2$s plugin &mdash; install and activate the "
-"%3$s plugin or <a href=\"%4$s\">deactivate the %5$s add-on</a>."
+"plugin or <a href=\"%3$s\">deactivate this add-on</a>."
 msgstr ""
 
-#: wpsso-schema-json-ld.php:208
+#: wpsso-schema-json-ld.php:220
 msgid ""
 "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version "
 "%5$s is currently installed)."
