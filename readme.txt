@@ -313,6 +313,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 3.2.0-dev.1 (2020/04/02)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Refactored WPSSO Core active and minimum version dependency checks.
+* **Requires At Least**
+	* PHP v5.6.
+	* WordPress v4.0.
+	* WPSSO Core v6.27.1.
+
 **Version 3.1.0 (2020/03/31)**
 
 Added Schema Event options for virtual, postponed, and canceled events as [suggested by Google on March 17th, 2020](https://webmasters.googleblog.com/2020/03/new-properties-virtual-or-canceled-events.html).
@@ -385,52 +400,11 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 	* WordPress v4.0.
 	* WPSSO Core v6.24.0.
 
-**Version 2.23.0 (2020/03/04)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Removed the 'no_auto_draft' deprecated argument from all form options.
-* **Requires At Least**
-	* PHP v5.6.
-	* WordPress v4.0.
-	* WPSSO Core v6.23.2.
-
-**Version 2.22.1 (2020/03/01)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added the "articleBody" property for Schema Article markup, falling back to the "text" property for all other Schema CreativeWork markup.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
-* **Requires At Least**
-	* PHP v5.6.
-	* WordPress v4.0.
-	* WPSSO Core v6.22.1.
-
-**Version 2.22.0 (2020/02/27)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added Schema FAQPage and Question / Answer markup for the [WPSSO FAQ Manager](https://wordpress.org/plugins/wpsso-faq/) add-on shortcodes.
-* **Bugfixes**
-	* Fixed adding two or more "application/ld+json" scripts from the post content to the Schema hasPart property.
-* **Developer Notes**
-	* Replaced the use of 'the_content' filter in WpssoJsonProPropHasPart by a call to `WpssoPage->get_the_content()`.
-* **Requires At Least**
-	* PHP v5.6.
-	* WordPress v4.0.
-	* WPSSO Core v6.22.0.
-
 == Upgrade Notice ==
+
+= 3.2.0-dev.1 =
+
+(2020/04/02) Refactored WPSSO Core active and minimum version dependency checks.
 
 = 3.1.0 =
 
@@ -447,8 +421,4 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 = 2.24.0 =
 
 (2020/03/11) Moved the Document SSO &gt; Priority Media &gt; Schema JSON-LD Markup / Rich Results options from WPSSO Core to the WPSSO JSON add-on.
-
-= 2.23.0 =
-
-(2020/03/04) Removed the 'no_auto_draft' deprecated argument from all form options.
 
