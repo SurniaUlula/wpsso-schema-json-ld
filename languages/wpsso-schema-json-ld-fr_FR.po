@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD (WPSSO JSON) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.1.0\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-03-31 07:48-0700\n"
-"PO-Revision-Date: 2020-03-31 07:48-0700\n"
+"POT-Creation-Date: 2020-04-03 11:29-0700\n"
+"PO-Revision-Date: 2020-04-03 11:29-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -15,11 +15,11 @@ msgstr ""
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: lib/filters/prop/aggregaterating.php:182
+#: lib/filters/prop/aggregaterating.php:170
 msgid "An aggregate rating value for this markup has been ignored &mdash; <a href=\"%1$s\">Google does not allow an aggregate rating value for the Schema Type %2$s</a>."
 msgstr "Une note agrégé pour ce balisage a été ignorée &mdash; <a href=\"%1$s\">Google n'autorise pas de note agrégé pour le type de schéma %2$s</a> ."
 
-#: lib/filters/type/claimreview.php:76 lib/filters.php:435
+#: lib/filters/type/claimreview.php:76 lib/filters.php:447
 msgid "A claim review cannot be the subject of another claim review."
 msgstr "Un examen d'évaluation ne peut pas être le sujet d'un autre examen d'évaluation."
 
@@ -550,7 +550,7 @@ msgstr "Sélectionnez un type de Schéma par défaut pour l'URL du sujet de l'é
 msgid "Non-standard value found for the \"%s\" option - resetting the option to its default value."
 msgstr "Valeur non standard trouvée pour l'option \"%s\" - réinitialisation de l'option à sa valeur par défaut."
 
-#: lib/filters.php:437
+#: lib/filters.php:449
 msgid "Please select a subject webpage type that better describes the subject of the webpage (ie. the content) being reviewed."
 msgstr "SVP sélectionner un type de page Web du sujet qui décrit mieux le sujet de la page Web (c'est-à-dire le contenu) en cours de révision."
 
@@ -1681,11 +1681,11 @@ msgctxt "metabox title"
 msgid "Schema Shortcode"
 msgstr "Shortcode Schéma"
 
-#: wpsso-schema-json-ld.php:107
-msgid "The %1$s add-on requires the %2$s plugin &mdash; install and activate the %3$s plugin or <a href=\"%4$s\">deactivate the %5$s add-on</a>."
-msgstr "L'ajout %1$s requiert l'extension %2$s &mdash; installer et activer l'extension %3$s ou <a href=\"%4$s\">désactiver l'ajout %5$s</a>."
+#: wpsso-schema-json-ld.php:120
+msgid "The %1$s add-on requires the %2$s plugin &mdash; install and activate the plugin or <a href=\"%3$s\">deactivate this add-on</a>."
+msgstr "L'ajout %1$s requiert l'extension %2$s &mdash; installer et activer l'extension ou <a href=\"%3$s\">désactiver cet ajout</a>."
 
-#: wpsso-schema-json-ld.php:208
+#: wpsso-schema-json-ld.php:226
 msgid "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version %5$s is currently installed)."
 msgstr "L'ajout %1$s version %2$s requiert %3$s version %4$s ou plus récente (version %5$s est actuellement installée)."
 
