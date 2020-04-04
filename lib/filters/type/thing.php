@@ -75,10 +75,6 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 			$ret[ 'additionalType' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_additionaltype',
 				$ret[ 'additionalType' ], $mod, $mt_og, $page_type_id, $is_main );
 
-			if ( empty( $ret[ 'additionalType' ] ) ) {
-				unset( $ret[ 'additionalType' ] );
-			}
-
 			/**
 			 * Property:
 			 *	url
@@ -178,7 +174,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 				$this->p->debug->log( 'alternateName value = ' . $ret[ 'alternateName' ] );
 			}
 
-			if ( empty( $ret[ 'alternateName' ] ) || $ret[ 'name' ] === $ret[ 'alternateName' ] ) {
+			if ( $ret[ 'name' ] === $ret[ 'alternateName' ] ) {	// Prevent duplicate values.
 				unset( $ret[ 'alternateName' ] );
 			}
 
@@ -202,10 +198,6 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 
 			$ret[ 'potentialAction' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_potentialaction',
 				$ret[ 'potentialAction' ], $mod, $mt_og, $page_type_id, $is_main );
-
-			if ( empty( $ret[ 'potentialAction' ] ) ) {
-				unset( $ret[ 'potentialAction' ] );
-			}
 
 			/**
 			 * Get additional Schema properties from the optional post content shortcode.

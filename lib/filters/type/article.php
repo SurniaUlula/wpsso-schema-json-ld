@@ -77,10 +77,6 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeArticle' ) ) {
 				$text_max_len = $this->p->options[ 'schema_text_max_len' ];
 
 				$ret[ 'articleBody' ] = $this->p->page->get_text( $text_max_len, $dots = '...', $mod );
-
-				if ( empty( $ret[ 'articleBody' ] ) ) { // Just in case.
-					unset( $ret[ 'articleBody' ] );
-				}
 			}
 
 			/**
@@ -115,10 +111,6 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeArticle' ) ) {
 					}
 	
 					WpssoSchemaSingle::add_organization_data( $ret[ $prop_name ], $mod, $md_val, $org_logo_key, $list_element = false );
-		
-					if ( empty( $ret[ $prop_name ] ) ) {	// Just in case.
-						unset( $ret[ $prop_name ] );
-					}
 				}
 			}
 

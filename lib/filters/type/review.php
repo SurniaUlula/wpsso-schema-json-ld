@@ -267,10 +267,6 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 			$ret[ 'itemReviewed' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_itemreviewed',
 				$item, $mod, $mt_og, $page_type_id, $is_main );
 
-			if ( empty( $ret[ 'itemReviewed' ] ) ) {
-				unset( $ret[ 'itemReviewed' ] );
-			}
-
 			/**
 			 * Property:
 			 * 	reviewRating
@@ -286,10 +282,6 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 
 			$ret[ 'reviewRating' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_reviewrating',
 				$ret[ 'reviewRating' ], $mod, $mt_og, $page_type_id, $is_main );
-
-			if ( empty( $ret[ 'reviewRating' ] ) ) {
-				unset( $ret[ 'reviewRating' ] );
-			}
 
 			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
 		}
