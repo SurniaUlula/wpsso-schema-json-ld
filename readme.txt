@@ -9,7 +9,7 @@ Assets URI: https://surniaulula.github.io/wpsso-schema-json-ld/assets/
 Tags: schema.org, rich snippets, structured data, amp, woocommerce, image seo, video seo, news seo, schema, rich results, knowledge graph, rating, review, recipe, event, product
 Contributors: jsmoriss
 Requires PHP: 5.6
-Requires At Least: 4.0
+Requires At Least: 4.2
 Tested Up To: 5.4
 WC Tested Up To: 4.0.1
 Stable Tag: 3.1.0
@@ -313,20 +313,20 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.2.0-dev.3 (2020/04/03)**
+**Version 3.2.0-dev.4 (2020/04/04)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* None.
+	* Updated "Requires At Least" to WordPress v4.2.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
 	* Refactored WPSSO Core active and minimum version dependency checks.
 * **Requires At Least**
 	* PHP v5.6.
-	* WordPress v4.0.
-	* WPSSO Core v6.27.2-dev.3.
+	* WordPress v4.2.
+	* WPSSO Core v6.28.0-dev.4.
 
 **Version 3.1.0 (2020/03/31)**
 
@@ -402,9 +402,9 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 
 == Upgrade Notice ==
 
-= 3.2.0-dev.3 =
+= 3.2.0-dev.4 =
 
-(2020/04/03) Refactored WPSSO Core active and minimum version dependency checks.
+(2020/04/04) Updated "Requires At Least" to WordPress v4.2. Refactored WPSSO Core active and minimum version dependency checks.
 
 = 3.1.0 =
 
