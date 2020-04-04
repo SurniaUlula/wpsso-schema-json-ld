@@ -105,7 +105,13 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 			}
 
 			if ( ! WpssoSchemaSingle::add_image_data_mt( $item[ 'image' ], $mt_image, 'og:image', $list_element = false ) ) {
-				unset( $item[ 'image' ] );	// Prevent null assignment.
+
+				if ( empty( $item[ 'image' ] ) ) {
+					unset( $item[ 'image' ] );	// Prevent null assignment.
+				}
+
+			} elseif ( $this->p->debug->enabled ) {
+				$this->p->debug->log( $item[ 'image' ] );
 			}
 
 			/**
