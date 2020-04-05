@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Schema JSON-LD Markup 3.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-04-03 11:29-0700\n"
-"PO-Revision-Date: 2020-04-03 11:29-0700\n"
+"POT-Creation-Date: 2020-04-05 15:46-0700\n"
+"PO-Revision-Date: 2020-04-05 15:49-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -84,7 +84,7 @@ msgid "Select a publisher for the Schema CreativeWork type and/or its sub-types 
 msgstr "Sélectionnez un éditeur pour le type de Schéma CreativeWork et/ou ses sous-types (Article, BlogPosting, WebPage, etc)."
 
 #: lib/filters-messages.php:131
-msgid "Select a service provider, service operator, or service performer (example: \"Netflix\")."
+msgid "Select a service provider, service operator or service performer (example: \"Netflix\")."
 msgstr "Sélectionnez un fournisseur de services, un opérateur de service ou un prestataire de services (exemple: \"Netflix\")."
 
 #: lib/filters-messages.php:137
@@ -510,7 +510,7 @@ msgid "Select a default publisher for the Schema CreativeWork type and/or its su
 msgstr "Sélectionnez un éditeur par défaut pour le type de Schéma CreativeWork et/ou ses sous-types (Article, BlogPosting, WebPage, etc)."
 
 #: lib/filters-messages.php:722
-msgid "Select a default service provider, service operator, or service performer (example: \"Netflix\")."
+msgid "Select a default service provider, service operator or service performer (example: \"Netflix\")."
 msgstr "Sélectionnez un fournisseur de services, un opérateur de service ou un prestataire de services par défaut (exemple: \"Netflix\")."
 
 #: lib/filters-messages.php:728
@@ -688,8 +688,8 @@ msgstr "Éditeur"
 #: lib/gettext-pro.php:25 lib/pro/admin/meta-edit.php:272
 #: lib/std/admin/meta-edit.php:258
 msgctxt "option label"
-msgid "Provider"
-msgstr "Fournisseur"
+msgid "Service Provider"
+msgstr "Fournisseur de service"
 
 #: lib/gettext-pro.php:26 lib/gettext-pro.php:179
 #: lib/pro/admin/meta-edit.php:285 lib/pro/admin/schema-general.php:103
@@ -725,7 +725,7 @@ msgstr "Lieu physique pour l'événement"
 #: lib/gettext-pro.php:31 lib/pro/admin/meta-edit.php:320
 #: lib/std/admin/meta-edit.php:311
 msgctxt "option label"
-msgid "Organizer Org"
+msgid "Organizer Organization"
 msgstr "Org. pour l'organisateur"
 
 #: lib/gettext-pro.php:32 lib/pro/admin/meta-edit.php:328
@@ -737,7 +737,7 @@ msgstr "Personne pour l'organisateur"
 #: lib/gettext-pro.php:33 lib/pro/admin/meta-edit.php:336
 #: lib/std/admin/meta-edit.php:329
 msgctxt "option label"
-msgid "Performer Org"
+msgid "Performer Organization"
 msgstr "Org. pour l'interprète"
 
 #: lib/gettext-pro.php:34 lib/pro/admin/meta-edit.php:344
@@ -1531,8 +1531,8 @@ msgstr "Éditeur par défaut"
 #: lib/gettext-pro.php:178 lib/pro/admin/schema-general.php:91
 #: lib/std/admin/schema-general.php:95
 msgctxt "option label"
-msgid "Default Provider"
-msgstr "Fournisseur par défaut"
+msgid "Default Service Provider"
+msgstr "Fournisseur de service par défaut"
 
 #: lib/gettext-pro.php:180 lib/pro/admin/schema-general.php:106
 #: lib/std/admin/schema-general.php:111
@@ -1543,7 +1543,7 @@ msgstr "Lieu physique par défaut pour l'événement"
 #: lib/gettext-pro.php:181 lib/pro/admin/schema-general.php:112
 #: lib/std/admin/schema-general.php:118
 msgctxt "option label"
-msgid "Default Organizer Org"
+msgid "Default Organizer Organization"
 msgstr "Org. par défaut pour l'organisateur"
 
 #: lib/gettext-pro.php:182 lib/pro/admin/schema-general.php:118
@@ -1555,7 +1555,7 @@ msgstr "Personne par défaut pour l'organisateur"
 #: lib/gettext-pro.php:183 lib/pro/admin/schema-general.php:124
 #: lib/std/admin/schema-general.php:132
 msgctxt "option label"
-msgid "Default Performer Org"
+msgid "Default Performer Organization"
 msgstr "Org. par défaut pour l'interprète"
 
 #: lib/gettext-pro.php:184 lib/pro/admin/schema-general.php:130
