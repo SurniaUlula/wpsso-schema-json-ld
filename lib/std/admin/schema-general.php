@@ -92,7 +92,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminSchemaGeneral' ) ) {
 				),
 				'schema_def_prov_org_id' => array(
 					'td_class' => 'blank',
-					'label'    => _x( 'Default Provider', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Default Service Provider', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'schema_def_prov_org_id',
 					'content'  => $form->get_no_select( 'schema_def_prov_org_id', $org_site_names,
 						$css_class = 'long_name', $css_id = '', $is_assoc = true ) . $org_req_msg,
@@ -115,7 +115,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminSchemaGeneral' ) ) {
 				),
 				'schema_def_event_organizer_org_id' => array(
 					'td_class' => 'blank',
-					'label'    => _x( 'Default Organizer Org', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Default Organizer Organization', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'schema_def_event_organizer_org_id',
 					'content'  => $form->get_no_select( 'schema_def_event_organizer_org_id', $org_site_names,
 						$css_class = 'long_name', $css_id = '', $is_assoc = true ) . $org_req_msg,
@@ -129,7 +129,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminSchemaGeneral' ) ) {
 				),
 				'schema_def_event_performer_org_id' => array(
 					'td_class' => 'blank',
-					'label'    => _x( 'Default Performer Org', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Default Performer Organization', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'schema_def_event_performer_org_id',
 					'content'  => $form->get_no_select( 'schema_def_event_performer_org_id', $org_site_names,
 						$css_class = 'long_name', $css_id = '', $is_assoc = true ) . $org_req_msg,

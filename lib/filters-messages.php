@@ -126,9 +126,9 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_prov_org_id':			// Provider.
+				case 'tooltip-meta-schema_prov_org_id':			// Service Provider.
 
-					$text = __( 'Select a service provider, service operator, or service performer (example: "Netflix").', 'wpsso-schema-json-ld' );
+					$text = __( 'Select a service provider, service operator or service performer (example: "Netflix").', 'wpsso-schema-json-ld' );
 
 				 	break;
 
@@ -168,25 +168,25 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_event_organizer_org_id':	// Event Organizer Org.
+				case 'tooltip-meta-schema_event_organizer_org_id':	// Organizer Organization.
 
 					$text = __( 'Select an organizer (organization) for the event.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_event_organizer_person_id':	// Event Organizer Person.
+				case 'tooltip-meta-schema_event_organizer_person_id':	// Organizer Person.
 
 					$text = __( 'Select an organizer (person) for the event.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_event_performer_org_id':	// Event Performer Org.
+				case 'tooltip-meta-schema_event_performer_org_id':	// Performer Organization.
 
 					$text = __( 'Select a performer (organization) for the event.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_event_performer_person_id':	// Event Performer Person.
+				case 'tooltip-meta-schema_event_performer_person_id':	// Performer Person.
 
 					$text = __( 'Select a performer (person) for the event.', 'wpsso-schema-json-ld' );
 
@@ -717,9 +717,9 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-schema_def_prov_org_id':			// Default Provider.
+				case 'tooltip-schema_def_prov_org_id':			// Default Service Provider.
 
-					$text = __( 'Select a default service provider, service operator, or service performer (example: "Netflix").', 'wpsso-schema-json-ld' );
+					$text = __( 'Select a default service provider, service operator or service performer (example: "Netflix").', 'wpsso-schema-json-ld' );
 
 				 	break;
 
@@ -729,7 +729,7 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-schema_def_event_organizer_org_id':	// Default Organizer Org.
+				case 'tooltip-schema_def_event_organizer_org_id':	// Default Organizer Organization.
 
 					$text = __( 'Select a default organizer (organization) for the Schema Event type.', 'wpsso-schema-json-ld' );
 
@@ -741,7 +741,7 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-schema_def_event_performer_org_id':	// Default Performer Org.
+				case 'tooltip-schema_def_event_performer_org_id':	// Default Performer Organization.
 
 					$text = __( 'Select a default performer (organization) for the Schema Event type.', 'wpsso-schema-json-ld' );
 

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.2.0-b.1\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.2.0-rc.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-"
 "ld\n"
 "POT-Creation-Date: 2020-MO-DA HO:MI+ZONE\n"
@@ -104,7 +104,7 @@ msgstr ""
 
 #: lib/filters-messages.php:131
 msgid ""
-"Select a service provider, service operator, or service performer (example: "
+"Select a service provider, service operator or service performer (example: "
 "\"Netflix\")."
 msgstr ""
 
@@ -621,7 +621,7 @@ msgstr ""
 
 #: lib/filters-messages.php:722
 msgid ""
-"Select a default service provider, service operator, or service performer "
+"Select a default service provider, service operator or service performer "
 "(example: \"Netflix\")."
 msgstr ""
 
@@ -809,7 +809,7 @@ msgstr ""
 #: lib/gettext-pro.php:25 lib/pro/admin/meta-edit.php:272
 #: lib/std/admin/meta-edit.php:258
 msgctxt "option label"
-msgid "Provider"
+msgid "Service Provider"
 msgstr ""
 
 #: lib/gettext-pro.php:26 lib/gettext-pro.php:179
@@ -846,7 +846,7 @@ msgstr ""
 #: lib/gettext-pro.php:31 lib/pro/admin/meta-edit.php:320
 #: lib/std/admin/meta-edit.php:311
 msgctxt "option label"
-msgid "Organizer Org"
+msgid "Organizer Organization"
 msgstr ""
 
 #: lib/gettext-pro.php:32 lib/pro/admin/meta-edit.php:328
@@ -858,7 +858,7 @@ msgstr ""
 #: lib/gettext-pro.php:33 lib/pro/admin/meta-edit.php:336
 #: lib/std/admin/meta-edit.php:329
 msgctxt "option label"
-msgid "Performer Org"
+msgid "Performer Organization"
 msgstr ""
 
 #: lib/gettext-pro.php:34 lib/pro/admin/meta-edit.php:344
@@ -1652,7 +1652,7 @@ msgstr ""
 #: lib/gettext-pro.php:178 lib/pro/admin/schema-general.php:91
 #: lib/std/admin/schema-general.php:95
 msgctxt "option label"
-msgid "Default Provider"
+msgid "Default Service Provider"
 msgstr ""
 
 #: lib/gettext-pro.php:180 lib/pro/admin/schema-general.php:106
@@ -1664,7 +1664,7 @@ msgstr ""
 #: lib/gettext-pro.php:181 lib/pro/admin/schema-general.php:112
 #: lib/std/admin/schema-general.php:118
 msgctxt "option label"
-msgid "Default Organizer Org"
+msgid "Default Organizer Organization"
 msgstr ""
 
 #: lib/gettext-pro.php:182 lib/pro/admin/schema-general.php:118
@@ -1676,7 +1676,7 @@ msgstr ""
 #: lib/gettext-pro.php:183 lib/pro/admin/schema-general.php:124
 #: lib/std/admin/schema-general.php:132
 msgctxt "option label"
-msgid "Default Performer Org"
+msgid "Default Performer Organization"
 msgstr ""
 
 #: lib/gettext-pro.php:184 lib/pro/admin/schema-general.php:130
