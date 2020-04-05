@@ -228,8 +228,8 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 
 			/**
 			 * Property:
-			 *      commentCount
 			 *      comment as https://schema.org/Comment
+			 *      commentCount
 			 */
 			WpssoSchema::add_comment_list_data( $ret, $mod );
 
