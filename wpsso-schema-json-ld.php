@@ -15,7 +15,7 @@
  * Requires At Least: 4.2
  * Tested Up To: 5.4
  * WC Tested Up To: 4.0.1
- * Version: 3.2.0-rc.3
+ * Version: 3.2.0
  * 
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -185,6 +185,11 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 			}
 
 			if ( ! $this->have_min_version ) {
+
+				if ( $this->p->debug->enabled ) {
+					$this->p->debug->log( 'exiting early: have_min_version is false' );
+				}
+
 				return;	// Stop here.
 			}
 
