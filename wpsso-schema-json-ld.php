@@ -160,6 +160,10 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 			return SucomUtil::array_merge_recursive_distinct( $cf, WpssoJsonConfig::$cf );
 		}
 
+		/**
+		 * The 'wpsso_get_avail' filter is run after the $check property is defined. The $cache and $notice properties are
+		 * not defined, and the plugin and add-on textdomains are not loaded.
+		 */
 		public function wpsso_get_avail( $avail ) {
 
 			if ( ! $this->have_min_version ) {
@@ -175,6 +179,9 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 		}
 
 		/**
+		 * The 'wpsso_init_options' action is run after the $check, $avail, $debug, $notice, $cache, $util, and $opt
+		 * properties are defined.
+		 *
 		 * Sets the $this->p reference variable for the core plugin instance.
 		 */
 		public function wpsso_init_options() {
