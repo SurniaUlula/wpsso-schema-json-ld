@@ -85,11 +85,11 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 			$ret = array();
 
 			$aggr_rating = array(
-				'ratingValue' => 0,
-				'ratingCount' => 0,
+				'ratingValue' => null,
+				'ratingCount' => null,
 				'worstRating' => 1,
 				'bestRating'  => 5,
-				'reviewCount' => 0,
+				'reviewCount' => null,
 			);
 
 			$og_type = isset( $mt_og[ 'og:type' ] ) ? $mt_og[ 'og:type' ] : '';
@@ -128,8 +128,20 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 			 */
 			if ( ! empty( $aggr_rating[ 'ratingValue' ] ) ) {
 
-				if ( ! empty( $aggr_rating[ 'ratingCount' ] ) || ! empty( $aggr_rating[ 'reviewCount' ] ) ) {
-				
+				if ( ! empty( $aggr_rating[ 'ratingCount' ] ) ) {
+
+					if ( empty( $aggr_rating[ 'reviewCount' ] ) ) {	// Must be positive if included.
+						unset( $aggr_rating[ 'reviewCount' ] );
+					}
+
+					$ret[ 'aggregateRating' ] = $aggr_rating;
+
+				} elseif ( ! empty( $aggr_rating[ 'reviewCount' ] ) ) {
+
+					if ( empty( $aggr_rating[ 'ratingCount' ] ) ) {	// Must be positive if included.
+						unset( $aggr_rating[ 'ratingCount' ] );
+					}
+
 					$ret[ 'aggregateRating' ] = $aggr_rating;
 
 				} elseif ( $this->p->debug->enabled ) {

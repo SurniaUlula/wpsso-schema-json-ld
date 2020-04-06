@@ -13,7 +13,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/filters/prop/aggregaterating.php:170
+#: lib/filters/prop/aggregaterating.php:182
 msgid ""
 "An aggregate rating value for this markup has been ignored &mdash; <a href="
 "\"%1$s\">Google does not allow an aggregate rating value for the Schema Type "
