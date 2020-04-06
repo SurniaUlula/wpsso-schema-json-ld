@@ -215,26 +215,32 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 
 		private function min_version_notice() {
 
-			if ( ! is_admin() ) {
-				return;
-			}
-
 			$info = WpssoJsonConfig::$cf[ 'plugin' ][ 'wpssojson' ];
 
 			$req_info = $info[ 'req' ][ 'wpsso' ];
 
-			$notice_msg = sprintf( __( 'The %1$s version %2$s add-on requires %3$s version %4$s or newer (version %5$s is currently installed).',
-				'wpsso-schema-json-ld' ), $info[ 'name' ], $info[ 'version' ], $req_info[ 'name' ], $req_info[ 'min_version' ],
-					$this->p->cf[ 'plugin' ][ 'wpsso' ][ 'version' ] );
+			if ( is_admin() ) {
 
-			$this->p->notice->err( $notice_msg );
+				$notice_msg = sprintf( __( 'The %1$s version %2$s add-on requires %3$s version %4$s or newer (version %5$s is currently installed).',
+					'wpsso-schema-json-ld' ), $info[ 'name' ], $info[ 'version' ], $req_info[ 'name' ], $req_info[ 'min_version' ],
+						$this->p->cf[ 'plugin' ][ 'wpsso' ][ 'version' ] );
 
-			if ( method_exists( $this->p->admin, 'get_check_for_updates_link' ) ) {
+				$this->p->notice->err( $notice_msg );
 
-				$update_msg = $this->p->admin->get_check_for_updates_link();
+				if ( method_exists( $this->p->admin, 'get_check_for_updates_link' ) ) {
+	
+					$update_msg = $this->p->admin->get_check_for_updates_link();
 
-				if ( ! empty( $update_msg ) ) {
-					$this->p->notice->inf( $update_msg );
+					if ( ! empty( $update_msg ) ) {
+						$this->p->notice->inf( $update_msg );
+					}
+				}
+
+			} else {
+
+				if ( $this->p->debug->enabled ) {
+					$this->p->debug->log( sprintf( '%1$s version %2$s requires %3$s version %4$s or newer',
+						$info[ 'name' ], $info[ 'version' ], $req_info[ 'name' ], $req_info[ 'min_version' ] ) );
 				}
 			}
 		}
