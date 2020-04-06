@@ -78,7 +78,6 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 			 * Add WPSSO action hooks.
 			 */
 			add_action( 'wpsso_init_textdomain', array( __CLASS__, 'wpsso_init_textdomain' ) );	// Load the 'wpsso-schema-json-ld' text domain.
-			add_action( 'wpsso_init_options', array( $this, 'wpsso_init_options' ), 100 );		// Sets the $this->p reference variable.
 			add_action( 'wpsso_init_objects', array( $this, 'wpsso_init_objects' ), 100 );
 			add_action( 'wpsso_init_plugin', array( $this, 'wpsso_init_plugin' ), 100 );
 		}
@@ -161,8 +160,7 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 		}
 
 		/**
-		 * The 'wpsso_get_avail' filter is run after the $check property is defined. The $cache and $notice properties are
-		 * not defined, and the plugin and add-on textdomains are not loaded.
+		 * The 'wpsso_get_avail' filter is run after the $check property is defined.
 		 */
 		public function wpsso_get_avail( $avail ) {
 
@@ -178,22 +176,9 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 			return $avail;
 		}
 
-		/**
-		 * The 'wpsso_init_options' action is run after the $check, $avail, $debug, $notice, $cache, $util, and $opt
-		 * properties are defined.
-		 *
-		 * Sets the $this->p reference variable for the core plugin instance.
-		 */
-		public function wpsso_init_options() {
+		public function wpsso_init_objects() {
 
 			$this->p =& Wpsso::get_instance();
-
-			if ( $this->p->debug->enabled ) {
-				$this->p->debug->mark();
-			}
-		}
-
-		public function wpsso_init_objects() {
 
 			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();
