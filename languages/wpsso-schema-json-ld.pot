@@ -1724,7 +1724,7 @@ msgstr ""
 
 #: lib/submenu/schema-general.php:38
 msgctxt "metabox title"
-msgid "Schema Markup"
+msgid "Schema Markup Settings"
 msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
@@ -1733,70 +1733,70 @@ msgctxt "metabox title"
 msgid "Advanced Settings"
 msgstr ""
 
-#: lib/submenu/schema-general.php:68
+#: lib/submenu/schema-general.php:70
 msgctxt "metabox tab"
 msgid "Knowledge Graph"
 msgstr ""
 
-#: lib/submenu/schema-general.php:69
+#: lib/submenu/schema-general.php:71
 msgctxt "metabox tab"
 msgid "Schema Properties"
 msgstr ""
 
-#: lib/submenu/schema-general.php:70
+#: lib/submenu/schema-general.php:72
 msgctxt "metabox tab"
 msgid "Schema Defaults"
 msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/submenu/schema-general.php:100
+#: lib/submenu/schema-general.php:104
 msgctxt "metabox tab"
 msgid "Schema Types"
 msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/submenu/schema-general.php:102
+#: lib/submenu/schema-general.php:106
 msgctxt "metabox tab"
 msgid "Product Attributes"
 msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/submenu/schema-general.php:104
+#: lib/submenu/schema-general.php:108
 msgctxt "metabox tab"
 msgid "Custom Fields"
 msgstr ""
 
-#: lib/submenu/schema-general.php:195
+#: lib/submenu/schema-general.php:199
 msgctxt "option label"
 msgid "WebSite Name"
 msgstr ""
 
-#: lib/submenu/schema-general.php:200
+#: lib/submenu/schema-general.php:204
 msgctxt "option label"
 msgid "WebSite Alternate Name"
 msgstr ""
 
-#: lib/submenu/schema-general.php:205
+#: lib/submenu/schema-general.php:209
 msgctxt "option label"
 msgid "WebSite Description"
 msgstr ""
 
-#: lib/submenu/schema-general.php:212
+#: lib/submenu/schema-general.php:216
 msgctxt "option label"
 msgid "Max. Text or Article Body Length"
 msgstr ""
 
-#: lib/submenu/schema-general.php:215
+#: lib/submenu/schema-general.php:219
 msgctxt "option comment"
 msgid "characters or less"
 msgstr ""
 
-#: lib/submenu/schema-general.php:218
+#: lib/submenu/schema-general.php:222
 msgctxt "option label"
 msgid "Add Text or Article Body Properties"
 msgstr ""
 
-#: lib/submenu/schema-general.php:223
+#: lib/submenu/schema-general.php:227
 msgctxt "option label"
 msgid "Add 5 Star Rating If No Rating"
 msgstr ""

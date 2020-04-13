@@ -28,11 +28,11 @@ if ( ! class_exists( 'WpssoJsonStdAdminSchemaGeneral' ) ) {
 			}
 
 			$this->p->util->add_plugin_filters( $this, array( 
-				'schema_general_schema_defaults_rows' => 2,
+				'json_general_schema_defaults_rows' => 2,
 			) );
 		}
 
-		public function filter_schema_general_schema_defaults_rows( $table_rows, $form ) {
+		public function filter_json_general_schema_defaults_rows( $table_rows, $form ) {
 
 			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();

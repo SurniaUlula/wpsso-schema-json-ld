@@ -34,8 +34,8 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 
 			$this->maybe_show_language_notice();
 
-			$metabox_id      = 'schema_general';
-			$metabox_title   = _x( 'Schema Markup', 'metabox title', 'wpsso-schema-json-ld' );
+			$metabox_id      = 'general';
+			$metabox_title   = _x( 'Schema Markup Settings', 'metabox title', 'wpsso-schema-json-ld' );
 			$metabox_screen  = $this->pagehook;
 			$metabox_context = 'normal';
 			$metabox_prio    = 'default';
@@ -46,7 +46,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 				array( $this, 'show_metabox_' . $metabox_id ), $metabox_screen,
 					$metabox_context, $metabox_prio, $callback_args );
 
-			$metabox_id      = 'schema_advanced';
+			$metabox_id      = 'advanced';
 			// translators: Please ignore - translation uses a different text domain.
 			$metabox_title   = _x( 'Advanced Settings', 'metabox title', 'wpsso' );
 			$metabox_screen  = $this->pagehook;
@@ -60,11 +60,13 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 					$metabox_context, $metabox_prio, $callback_args );
 		}
 
-		public function show_metabox_schema_general() {
+		public function show_metabox_general() {
 
-			$metabox_id = 'schema_general';
+			$metabox_id = 'json-general';
 
-			$tabs = apply_filters( $this->p->lca . '_' . $metabox_id . '_tabs', array( 
+			$filter_name = SucomUtil::sanitize_hookname( $this->p->lca . '_' . $metabox_id . '_tabs' );
+
+			$tabs = apply_filters( $filter_name, array( 
 				'knowledge_graph' => _x( 'Knowledge Graph', 'metabox tab', 'wpsso-schema-json-ld' ),
 				'schema_props'    => _x( 'Schema Properties', 'metabox tab', 'wpsso-schema-json-ld' ),
 				'schema_defaults' => _x( 'Schema Defaults', 'metabox tab', 'wpsso-schema-json-ld' ),
@@ -80,7 +82,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 
 				} else {
 
-					$filter_name = $this->p->lca . '_' . $metabox_id . '_' . $tab_key . '_rows';
+					$filter_name = SucomUtil::sanitize_hookname( $this->p->lca . '_' . $metabox_id . '_' . $tab_key . '_rows' );
 
 					$table_rows[ $tab_key ] = $this->get_table_rows( $metabox_id, $tab_key );
 
@@ -91,11 +93,13 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 			$this->p->util->do_metabox_tabbed( $metabox_id, $tabs, $table_rows );
 		}
 
-		public function show_metabox_schema_advanced() {
+		public function show_metabox_advanced() {
 
-			$metabox_id = 'schema_advanced';
+			$metabox_id = 'json-advanced';
 
-			$tabs = apply_filters( $this->p->lca . '_' . $metabox_id . '_tabs', array( 
+			$filter_name = SucomUtil::sanitize_hookname( $this->p->lca . '_' . $metabox_id . '_tabs' );
+
+			$tabs = apply_filters( $filter_name, array( 
 				// translators: Please ignore - translation uses a different text domain.
 				'schema_types'  => _x( 'Schema Types', 'metabox tab', 'wpsso' ),
 				// translators: Please ignore - translation uses a different text domain.
@@ -114,7 +118,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 
 				} else {
 
-					$filter_name = $this->p->lca . '_' . $metabox_id . '_' . $tab_key . '_rows';
+					$filter_name = SucomUtil::sanitize_hookname( $this->p->lca . '_' . $metabox_id . '_' . $tab_key . '_rows' );
 
 					$table_rows[ $tab_key ] = $this->get_table_rows( $metabox_id, $tab_key );
 
@@ -134,38 +138,38 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 				/**
 				 * Schema Markup metabox.
 				 */
-				case 'schema_general-knowledge_graph':
+				case 'json-general-knowledge_graph':
 
 					$this->add_schema_knowledge_graph_table_rows( $table_rows, $this->form );
 
 					break;
 
-				case 'schema_general-schema_props':
+				case 'json-general-schema_props':
 
 					$this->add_schema_props_table_rows( $table_rows, $this->form );
 
 					break;
 
-				case 'schema_general-schema_defaults':
+				case 'json-general-schema_defaults':
 
 					break;
 
 				/**
 				 * Advanced Settings metabox.
 				 */
-				case 'schema_advanced-schema_types':
+				case 'json-advanced-schema_types':
 
 					$this->add_schema_item_types_table_rows( $table_rows, $this->form );
 
 					break;
 
-				case 'schema_advanced-product_attrs':
+				case 'json-advanced-product_attrs':
 			
 					$this->add_advanced_product_attr_table_rows( $table_rows, $this->form );
 
 					break;
 
-				case 'schema_advanced-custom_fields':
+				case 'json-advanced-custom_fields':
 			
 					$this->add_advanced_custom_fields_table_rows( $table_rows, $this->form );
 
