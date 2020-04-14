@@ -35,7 +35,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 			 * The Schema 'hasPart' property is only valid for the CreativeWork type.
 			 */
 			$this->p->util->add_plugin_filters( $this, array(
-				'content_html_script_application_ld_json'         => 2,
+				'content_html_script_application_ld_json'         => 3,
 				'json_data_https_schema_org_creativework_haspart' => array(
 					'json_data_https_schema_org_creativework' => 5,
 				),
@@ -48,7 +48,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 			add_filter( 'the_content', array( $this, 'maybe_comment_json_scripts' ), $max_int );
 		}
 
-		public function filter_content_html_script_application_ld_json( $html, $mod ) {
+		public function filter_content_html_script_application_ld_json( $html, $mod, $canonical_url ) {
 
 			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();

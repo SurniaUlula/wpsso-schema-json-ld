@@ -17,7 +17,7 @@
 
 'wpsso_json_data_single_place' ( $place_data, $mod, $place_id )
 
-'wpsso_json_ld_search_url' ( $search_url, $mod, $add_page, $src_id )
+'wpsso_json_ld_search_url' ( $search_url, $mod, $add_page )
 
 'wpsso_json_media_main_prop' ( $main_prop, $mod )	// Empty string by default.
 
