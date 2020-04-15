@@ -79,9 +79,17 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 			 * Property:
 			 *	url
 			 */
-			WpssoSchema::add_data_itemprop_from_assoc( $ret, $mt_og, array(
-				'url' => 'og:url',
-			) );
+			if ( ! empty( $mt_og[ 'og:url' ] ) ) {
+
+				$ret[ 'url' ] = $mt_og[ 'og:url' ];
+
+				if ( $this->p->debug->enabled ) {
+					$this->p->debug->log( 'url values = ' . $ret[ 'url' ] );
+				}
+
+			} elseif ( $this->p->debug->enabled ) {
+				$this->p->debug->log( 'cannot set url value - og:url is empty' );
+			}
 
 			/**
 			 * Property:
