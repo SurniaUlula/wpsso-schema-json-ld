@@ -79,16 +79,10 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 			 * Property:
 			 *	url
 			 */
-			if ( ! empty( $mt_og[ 'og:url' ] ) ) {
-
-				$ret[ 'url' ] = $mt_og[ 'og:url' ];
-
-				if ( $this->p->debug->enabled ) {
-					$this->p->debug->log( 'url values = ' . $ret[ 'url' ] );
-				}
-
-			} elseif ( $this->p->debug->enabled ) {
-				$this->p->debug->log( 'cannot set url value - og:url is empty' );
+			if ( empty( $mod[ 'is_public' ] ) ) {	// Since WPSSO Core v6.29.0.
+				$ret[ 'url' ] = WpssoUtil::get_frag_anchor( $mod );
+			} else {
+				$ret[ 'url' ] = $this->p->util->get_canonical_url( $mod );
 			}
 
 			/**
@@ -97,11 +91,11 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 			 */
 			$ret[ 'sameAs' ] = array();
 
-			if ( ! empty( $mod[ 'obj' ] ) ) {
+			if ( ! empty( $mod[ 'is_public' ] ) ) {	// Since WPSSO Core v6.29.0.
 
-				$md_opts = $mod[ 'obj' ]->get_options( $mod[ 'id' ] );
-
-				$ret[ 'sameAs' ][] = $this->p->util->get_canonical_url( $mod );
+				if ( ! empty( $mt_og[ 'og:url' ] ) ) {
+					$ret[ 'sameAs' ][] = $mt_og[ 'og:url' ];
+				}
 
 				if ( $mod[ 'is_post' ] ) {
 
@@ -145,23 +139,28 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 							$this->p->options[ 'plugin_shortener' ], $mod );
 					}
 				}
+			}
+	
+			/**
+			 * Get additional sameAs URLs from the post/term/user custom meta.
+			 */
+			if ( ! empty( $mod[ 'obj' ] ) ) {
 
-				/**
-				 * Get additional sameAs URLs from the post/term/user custom meta.
-				 */
+				$md_opts = $mod[ 'obj' ]->get_options( $mod[ 'id' ] );
+	
 				if ( is_array( $md_opts ) ) {	// Just in case
-
+	
 					foreach ( SucomUtil::preg_grep_keys( '/^schema_sameas_url_[0-9]+$/', $md_opts ) as $url ) {
 						$ret[ 'sameAs' ][] = SucomUtil::esc_url_encode( $url );
 					}
 				}
 			}
-
+	
 			$ret[ 'sameAs' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_sameas',
 				$ret[ 'sameAs' ], $mod, $mt_og, $page_type_id, $is_main );
-
+	
 			WpssoSchema::check_sameas_prop_values( $ret );
-
+	
 			/**
 			 * Property:
 			 *	name
