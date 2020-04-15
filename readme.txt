@@ -313,7 +313,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.3.0-dev.2 (TBD)**
+**Version 3.3.0-dev.3 (2020/04/15)**
 
 * **New Features**
 	* None.
@@ -322,11 +322,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* Replaced the 'wpss_save_post_options' filter hook by 'wpsso_save_md_options' in WPSSO Core v6.29.0.
+	* Replaced the 'wpss_save_post_options' filter hook by 'wpsso_save_md_options' (available since WPSSO Core v6.29.0).
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v6.29.0-dev.2.
+	* WPSSO Core v6.29.0-dev.3.
 
 **Version 3.2.0 (2020/04/06)**
 
@@ -416,6 +416,10 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 	* WPSSO Core v6.24.0.
 
 == Upgrade Notice ==
+
+= 3.3.0-dev.3 =
+
+(2020/04/15) Replaced the 'wpss_save_post_options' filter hook by 'wpsso_save_md_options' (available since WPSSO Core v6.29.0).
 
 = 3.2.0 =
 
