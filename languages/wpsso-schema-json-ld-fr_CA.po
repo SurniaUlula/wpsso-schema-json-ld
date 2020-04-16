@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD (WPSSO JSON) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.2.0\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.3.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-04-05 15:46-0700\n"
-"PO-Revision-Date: 2020-04-05 15:49-0700\n"
+"POT-Creation-Date: 2020-04-16 06:59-0700\n"
+"PO-Revision-Date: 2020-04-16 07:25-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: lib/filters/prop/aggregaterating.php:170
+#: lib/filters/prop/aggregaterating.php:182
 msgid "An aggregate rating value for this markup has been ignored &mdash; <a href=\"%1$s\">Google does not allow an aggregate rating value for the Schema Type %2$s</a>."
 msgstr "Une note agrégé pour ce balisage a été ignorée &mdash; <a href=\"%1$s\">Google n'autorise pas de note agrégé pour le type de schéma %2$s</a> ."
 
@@ -562,7 +562,7 @@ msgstr "Balisage Schéma"
 #: lib/gettext-config.php:7
 msgctxt "lib file description"
 msgid "Schema Shortcode Guide"
-msgstr "Guide shortcode Schéma"
+msgstr "Guide code court Schéma"
 
 #: lib/gettext-config.php:8
 msgctxt "plugin description"
@@ -1585,22 +1585,22 @@ msgstr "Type par défaut de page Web du sujet"
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag, %3$s is the type attribute value
 #: lib/shortcode/schema.php:174
 msgid "%1$s %2$s shortcode with a type value of \"%3$s\" is missing a required 'prop' attribute value."
-msgstr "Le shortcode %2$s de %1$s avec \"%3$s\" comme attribut type doit avoir une valeur pour l'attribut 'prop' aussi."
+msgstr "Le code court %2$s de %1$s avec \"%3$s\" comme attribut type doit avoir une valeur pour l'attribut 'prop' aussi."
 
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag
 #: lib/shortcode/schema.php:201
 msgid "%1$s %2$s shortcode with a content is missing a required 'type' attribute value."
-msgstr "Le shortcode %2$s de %1$s avec un texte de description doit avoir une valeur pour l'attribut 'type'."
+msgstr "Le code court %2$s de %1$s avec un texte de description doit avoir une valeur pour l'attribut 'type'."
 
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag, %3$s is the type attribute value
 #: lib/shortcode/schema.php:291
 msgid "%1$s %2$s shortcode type attribute \"%3$s\" is not a recognized value."
-msgstr "Le shortcode %2$s de %1$s avec \"%3$s\" pour l'attribut type n'est pas une valeur reconnue."
+msgstr "Le code court %2$s de %1$s avec \"%3$s\" pour l'attribut type n'est pas une valeur reconnue."
 
 #: lib/submenu/schema-general.php:38
 msgctxt "metabox title"
-msgid "Schema Markup"
-msgstr "Balisage de Schéma"
+msgid "Schema Markup Settings"
+msgstr "Réglages de balisage de Schéma"
 
 #. translators: Please ignore - translation uses a different text domain.
 #: lib/submenu/schema-general.php:51
@@ -1608,70 +1608,70 @@ msgctxt "metabox title"
 msgid "Advanced Settings"
 msgstr "Réglages avancés"
 
-#: lib/submenu/schema-general.php:68
+#: lib/submenu/schema-general.php:70
 msgctxt "metabox tab"
 msgid "Knowledge Graph"
 msgstr "Knowledge Graph"
 
-#: lib/submenu/schema-general.php:69
+#: lib/submenu/schema-general.php:71
 msgctxt "metabox tab"
 msgid "Schema Properties"
 msgstr "Propriétés de Schéma"
 
-#: lib/submenu/schema-general.php:70
+#: lib/submenu/schema-general.php:72
 msgctxt "metabox tab"
 msgid "Schema Defaults"
 msgstr "Défauts de Schéma"
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/submenu/schema-general.php:100
+#: lib/submenu/schema-general.php:104
 msgctxt "metabox tab"
 msgid "Schema Types"
 msgstr "Types de Schéma"
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/submenu/schema-general.php:102
+#: lib/submenu/schema-general.php:106
 msgctxt "metabox tab"
 msgid "Product Attributes"
 msgstr "Attributs de produit"
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/submenu/schema-general.php:104
+#: lib/submenu/schema-general.php:108
 msgctxt "metabox tab"
 msgid "Custom Fields"
 msgstr "Champs personnalisés"
 
-#: lib/submenu/schema-general.php:195
+#: lib/submenu/schema-general.php:199
 msgctxt "option label"
 msgid "WebSite Name"
 msgstr "Nom du site Web"
 
-#: lib/submenu/schema-general.php:200
+#: lib/submenu/schema-general.php:204
 msgctxt "option label"
 msgid "WebSite Alternate Name"
 msgstr "Autre nom du site Web"
 
-#: lib/submenu/schema-general.php:205
+#: lib/submenu/schema-general.php:209
 msgctxt "option label"
 msgid "WebSite Description"
 msgstr "Description du site Web"
 
-#: lib/submenu/schema-general.php:212
+#: lib/submenu/schema-general.php:216
 msgctxt "option label"
 msgid "Max. Text or Article Body Length"
 msgstr "Longueur max. text ou corps d'article"
 
-#: lib/submenu/schema-general.php:215
+#: lib/submenu/schema-general.php:219
 msgctxt "option comment"
 msgid "characters or less"
 msgstr "caractères ou moins"
 
-#: lib/submenu/schema-general.php:218
+#: lib/submenu/schema-general.php:222
 msgctxt "option label"
 msgid "Add Text or Article Body Properties"
 msgstr "Ajouter prop. texte ou corps d'article"
 
-#: lib/submenu/schema-general.php:223
+#: lib/submenu/schema-general.php:227
 msgctxt "option label"
 msgid "Add 5 Star Rating If No Rating"
 msgstr "Ajouter note 5 étoiles si aucune note"
@@ -1679,13 +1679,13 @@ msgstr "Ajouter note 5 étoiles si aucune note"
 #: lib/submenu/schema-shortcode.php:51
 msgctxt "metabox title"
 msgid "Schema Shortcode"
-msgstr "Shortcode Schéma"
+msgstr "Code court de Schéma"
 
-#: wpsso-schema-json-ld.php:120
+#: wpsso-schema-json-ld.php:119
 msgid "The %1$s add-on requires the %2$s plugin &mdash; install and activate the plugin or <a href=\"%3$s\">deactivate this add-on</a>."
 msgstr "L'ajout %1$s requiert l'extension %2$s &mdash; installer et activer l'extension ou <a href=\"%3$s\">désactiver cet ajout</a>."
 
-#: wpsso-schema-json-ld.php:226
+#: wpsso-schema-json-ld.php:224
 msgid "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version %5$s is currently installed)."
 msgstr "L'ajout %1$s version %2$s requiert %3$s version %4$s ou plus récente (version %5$s est actuellement installée)."
 
