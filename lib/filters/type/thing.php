@@ -79,7 +79,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 			 * Property:
 			 *	url
 			 */
-			if ( empty( $mod[ 'is_public' ] ) ) {	// Since WPSSO Core v6.29.0.
+			if ( empty( $mod[ 'is_public' ] ) ) {	// Since WPSSO Core v7.0.0.
 				$ret[ 'url' ] = WpssoUtil::get_frag_anchor( $mod );
 			} else {
 				$ret[ 'url' ] = $this->p->util->get_canonical_url( $mod );
@@ -91,7 +91,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 			 */
 			$ret[ 'sameAs' ] = array();
 
-			if ( ! empty( $mod[ 'is_public' ] ) ) {	// Since WPSSO Core v6.29.0.
+			if ( ! empty( $mod[ 'is_public' ] ) ) {	// Since WPSSO Core v7.0.0.
 
 				if ( ! empty( $mt_og[ 'og:url' ] ) ) {
 					$ret[ 'sameAs' ][] = $mt_og[ 'og:url' ];
