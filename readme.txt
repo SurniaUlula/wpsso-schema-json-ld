@@ -322,11 +322,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* Replaced the 'wpss_save_post_options' filter hook by 'wpsso_save_md_options' (available since WPSSO Core v6.29.0).
+	* Replaced the 'wpss_save_post_options' filter hook by 'wpsso_save_md_options' (available since WPSSO Core v7.0.0).
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v6.29.0-rc.1.
+	* WPSSO Core v7.0.0-rc.1.
 
 **Version 3.2.0 (2020/04/06)**
 
@@ -419,7 +419,7 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 
 = 3.3.0-rc.1 =
 
-(2020/04/16) Replaced the 'wpss_save_post_options' filter hook by 'wpsso_save_md_options' (available since WPSSO Core v6.29.0).
+(2020/04/16) Replaced the 'wpss_save_post_options' filter hook by 'wpsso_save_md_options' (available since WPSSO Core v7.0.0).
 
 = 3.2.0 =
 
