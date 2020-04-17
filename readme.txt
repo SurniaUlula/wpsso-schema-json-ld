@@ -313,20 +313,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.3.0-rc.1 (2020/04/16)**
+**Version 3.3.0 (2020/04/17)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* None.
+	* Added support for WPSSO FAQ shortcodes with a non-public 'question' post type and 'faq_category' taxonomy.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
+	* Updated the `WpssoJsonFiltersTypeThing->wpsso_json_data_https_schema_org_thing()` method to check `$mod[ 'is_public' ]` (new in WPSSO Core v7.0.0) and if `false` (ie. not public) set the Schema 'url' property to a fragment (relevant to the current webpage URL). This allows WPSSO JSON to create Schema markup for non-public content which may be included as Schema parts from the current webpage content.
 	* Replaced the 'wpss_save_post_options' filter hook by 'wpsso_save_md_options' (available since WPSSO Core v7.0.0).
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v7.0.0-rc.1.
+	* WPSSO Core v7.0.0.
 
 **Version 3.2.0 (2020/04/06)**
 
@@ -417,9 +418,9 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 
 == Upgrade Notice ==
 
-= 3.3.0-rc.1 =
+= 3.3.0 =
 
-(2020/04/16) Replaced the 'wpss_save_post_options' filter hook by 'wpsso_save_md_options' (available since WPSSO Core v7.0.0).
+(2020/04/17) Added support for WPSSO FAQ shortcodes with a non-public 'question' post type and 'faq_category' taxonomy.
 
 = 3.2.0 =
 
