@@ -124,6 +124,8 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 
 * Includes additional customizable option values in the Document SSO metabox:
 
+> Note that values for Schema type and sub-type properties are created automatically based on different option values, WordPress object properties, WordPress object metadata, 3rd party plugin data, and service API data. The WPSSO JSON Premium add-on offers *human-friendly* customizable options, and these options may be used for one or several different properties.
+
 	* All Schema Types
 		* Name / Title
 		* Alternate Name

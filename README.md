@@ -114,206 +114,143 @@
 <p>The Standard version is designed to satisfy the requirements of most standard WordPress sites / blogs. If your site requires additional customizable Schema properties for products, events, places / locations, recipes, etc., then you may want the Premium version for those additional features.</p>
 
 <ul>
-<li><p>Includes additional customizable option values in the Document SSO metabox:</p>
-
-<ul>
-<li>All Schema Types
-
-<ul>
-<li>Name / Title</li>
-<li>Alternate Name</li>
-<li>Description</li>
-<li>Microdata Type URLs</li>
-<li>Same-As URLs</li>
-</ul></li>
-<li>Claim Review Information
-
-<ul>
-<li>Short Summary of Claim</li>
-<li>First Appearance URL</li>
-</ul></li>
-<li>Creative Work Information
-
-<ul>
-<li>Is Part of URL</li>
-<li>Headline</li>
-<li>Full Text</li>
-<li>Keywords</li>
-<li>Language</li>
-<li>Family Friendly</li>
-<li>Copyright Year</li>
-<li>License URL</li>
-<li>Publisher</li>
-<li>Service Provider</li>
-</ul></li>
-<li>Event Information
-
-<ul>
-<li>Event Language</li>
-<li>Event Attendance</li>
-<li>Event Online URL</li>
-<li>Event Physical Venue</li>
-<li>Event Organizer Organization</li>
-<li>Event Organizer Person</li>
-<li>Event Performer Organization</li>
-<li>Event Performer Person</li>
-<li>Event Start (date, time, timezone)</li>
-<li>Event End (date, time, timezone)</li>
-<li>Event Offers Start (date, time, timezone)</li>
-<li>Event Offers End (date, time, timezone)</li>
-<li>Event Offers (name, price, currency, availability)</li>
-</ul></li>
-<li>How-To
-
-<ul>
-<li>How-To Makes </li>
-<li>How-To Preparation Time </li>
-<li>How-To Total Time </li>
-<li>How-To Supplies </li>
-<li>How-To Tools </li>
-<li>How-To Steps (section name, section description, step name, direction text and image)</li>
-</ul></li>
-<li>Job Posting Information
-
-<ul>
-<li>Job Title</li>
-<li>Hiring Organization</li>
-<li>Job Location</li>
-<li>Base Salary</li>
-<li>Employment Type</li>
-<li>Jpb Posting Expires</li>
-</ul></li>
-<li>Movie Information
-
-<ul>
-<li>Cast Names</li>
-<li>Director Names</li>
-<li>Production Company</li>
-<li>Movie Runtime</li>
-</ul></li>
-<li>Organization Information
-
-<ul>
-<li>Select an Organization</li>
-</ul></li>
-<li>Person Information
-
-<ul>
-<li>Select a Person</li>
-</ul></li>
-<li>Product Information (Additional)
-
-<ul>
-<li>Product Length (cm)</li>
-<li>Product Width (cm)</li>
-<li>Product Height (cm)</li>
-<li>Product Depth (cm)</li>
-<li>Product Volume (ml)</li>
-<li>Product GTIN-14</li>
-<li>Product GTIN-13/EAN</li>
-<li>Product GTIN-12/UPC</li>
-<li>Product GTIN-8</li>
-<li>Product GTIN</li>
-</ul></li>
-<li>QA Page Information
-
-<ul>
-<li>QA Heading</li>
-</ul></li>
-<li>Recipe Information
-
-<ul>
-<li>Recipe Cuisine </li>
-<li>Recipe Course </li>
-<li>Recipe Makes </li>
-<li>Cooking Method </li>
-<li>Preparation Time </li>
-<li>Cooking Time </li>
-<li>Total Time </li>
-<li>Recipe Ingredients </li>
-<li>Recipe Instructions </li>
-<li>Nutrition Information per Serving 
-
-<ul>
-<li>Serving Size</li>
-<li>Calories</li>
-<li>Protein</li>
-<li>Fiber</li>
-<li>Carbohydrates</li>
-<li>Sugar</li>
-<li>Sodium</li>
-<li>Fat</li>
-<li>Saturated Fat</li>
-<li>Unsaturated Fat</li>
-<li>Trans Fat</li>
-<li>Cholesterol</li>
-</ul></li>
-</ul></li>
-<li>Review Information
-
-<ul>
-<li>Review Rating </li>
-<li>Rating Value Name</li>
-<li>Subject of the Review
-
-<ul>
-<li>Subject Webpage Type </li>
-<li>Subject Webpage URL </li>
-<li>Subject Same-As URL </li>
-<li>Subject Name </li>
-<li>Subject Description </li>
-<li>Subject Image ID or URL </li>
-<li>Claim Subject Information
-
-<ul>
-<li>Short Summary of Claim</li>
-<li>First Appearance URL</li>
-</ul></li>
-<li>Creative Work Subject Information
-
-<ul>
-<li>C.W. Author Type</li>
-<li>C.W. Author Name</li>
-<li>C.W. Author URL</li>
-<li>C.W. Published Date</li>
-<li>C.W. Created Date</li>
-</ul></li>
-<li>Book Subject Information
-
-<ul>
-<li>Book ISBN</li>
-</ul></li>
-<li>Movie Subject Information
-
-<ul>
-<li>Movie Cast Names</li>
-<li>Movie Director Names</li>
-</ul></li>
-<li>Product Subject Information
-
-<ul>
-<li>Product Brand</li>
-<li>Product Offers (name, price, currency, availability)</li>
-<li>Product SKU</li>
-<li>Product MPN</li>
-</ul></li>
-<li>Software App Subject Information
-
-<ul>
-<li>Operating System</li>
-<li>Application Category</li>
-<li>Software App Offers (name, price, currency, availability)</li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li>Software Application Information
-
-<ul>
-<li>Operating System</li>
-<li>Application Category</li>
-</ul></li>
-</ul></li>
+<li>Includes additional customizable option values in the Document SSO metabox:</li>
 </ul>
+
+<blockquote>
+  <p>Note that values for Schema type and sub-type properties are created automatically based on different option values, WordPress object properties, WordPress object metadata, 3rd party plugin data, and service API data. The WPSSO JSON Premium add-on offers <em>human-friendly</em> customizable options, and these options may be used for one or several different properties.</p>
+</blockquote>
+
+<pre><code>* All Schema Types
+    * Name / Title
+    * Alternate Name
+    * Description
+    * Microdata Type URLs
+    * Same-As URLs
+* Claim Review Information
+    * Short Summary of Claim
+    * First Appearance URL
+* Creative Work Information
+    * Is Part of URL
+    * Headline
+    * Full Text
+    * Keywords
+    * Language
+    * Family Friendly
+    * Copyright Year
+    * License URL
+    * Publisher
+    * Service Provider
+* Event Information
+    * Event Language
+    * Event Attendance
+    * Event Online URL
+    * Event Physical Venue
+    * Event Organizer Organization
+    * Event Organizer Person
+    * Event Performer Organization
+    * Event Performer Person
+    * Event Start (date, time, timezone)
+    * Event End (date, time, timezone)
+    * Event Offers Start (date, time, timezone)
+    * Event Offers End (date, time, timezone)
+    * Event Offers (name, price, currency, availability)
+* How-To
+    * How-To Makes 
+    * How-To Preparation Time 
+    * How-To Total Time 
+    * How-To Supplies 
+    * How-To Tools 
+    * How-To Steps (section name, section description, step name, direction text and image)
+* Job Posting Information
+    * Job Title
+    * Hiring Organization
+    * Job Location
+    * Base Salary
+    * Employment Type
+    * Jpb Posting Expires
+* Movie Information
+    * Cast Names
+    * Director Names
+    * Production Company
+    * Movie Runtime
+* Organization Information
+    * Select an Organization
+* Person Information
+    * Select a Person
+* Product Information (Additional)
+    * Product Length (cm)
+    * Product Width (cm)
+    * Product Height (cm)
+    * Product Depth (cm)
+    * Product Volume (ml)
+    * Product GTIN-14
+    * Product GTIN-13/EAN
+    * Product GTIN-12/UPC
+    * Product GTIN-8
+    * Product GTIN
+* QA Page Information
+    * QA Heading
+* Recipe Information
+    * Recipe Cuisine 
+    * Recipe Course 
+    * Recipe Makes 
+    * Cooking Method 
+    * Preparation Time 
+    * Cooking Time 
+    * Total Time 
+    * Recipe Ingredients 
+    * Recipe Instructions 
+    * Nutrition Information per Serving 
+        * Serving Size
+        * Calories
+        * Protein
+        * Fiber
+        * Carbohydrates
+        * Sugar
+        * Sodium
+        * Fat
+        * Saturated Fat
+        * Unsaturated Fat
+        * Trans Fat
+        * Cholesterol
+* Review Information
+    * Review Rating 
+    * Rating Value Name
+    * Subject of the Review
+        * Subject Webpage Type 
+        * Subject Webpage URL 
+        * Subject Same-As URL 
+        * Subject Name 
+        * Subject Description 
+        * Subject Image ID or URL 
+        * Claim Subject Information
+            * Short Summary of Claim
+            * First Appearance URL
+        * Creative Work Subject Information
+            * C.W. Author Type
+            * C.W. Author Name
+            * C.W. Author URL
+            * C.W. Published Date
+            * C.W. Created Date
+        * Book Subject Information
+            * Book ISBN
+        * Movie Subject Information
+            * Movie Cast Names
+            * Movie Director Names
+        * Product Subject Information
+            * Product Brand
+            * Product Offers (name, price, currency, availability)
+            * Product SKU
+            * Product MPN
+        * Software App Subject Information
+            * Operating System
+            * Application Category
+            * Software App Offers (name, price, currency, availability)
+* Software Application Information
+    * Operating System
+    * Application Category
+</code></pre>
 
 <h3>WPSSO Core Plugin Required</h3>
 
