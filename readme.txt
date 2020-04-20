@@ -122,7 +122,7 @@ Google regularly updates and changes their Schema markup requirements - WPSSO JS
 
 The Standard version is designed to satisfy the requirements of most standard WordPress sites / blogs. If your site requires additional customizable Schema properties for products, events, places / locations, recipes, etc., then you may want the Premium version for those additional features.
 
-**Note that values for Schema type and sub-type properties are created automatically based on different option values, WordPress object properties, WordPress object metadata, 3rd party plugin data, and service API data. The WPSSO JSON Premium add-on offers *human-friendly* customizable options, and these option values may be used for one or several different properties.**
+**Note that values for Schema type and sub-type properties are created automatically based on different option values, WordPress object properties, WordPress object metadata, 3rd party plugin data, and service API data. The WPSSO JSON Premium add-on offers *human-friendly* customizable options, and option values may be used for one or several different properties.**
 
 * Includes additional customizable option values in the Document SSO metabox:
 
@@ -132,9 +132,6 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 		* Description
 		* Microdata Type URLs
 		* Same-As URLs
-	* Claim Review Information
-		* Short Summary of Claim
-		* First Appearance URL
 	* Creative Work Information
 		* Is Part of URL
 		* Headline
@@ -229,7 +226,7 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 			* Subject Name 
 			* Subject Description 
 			* Subject Image ID or URL 
-			* Claim Subject Information
+			* Claim Subject Information (for Claim Review)
 				* Short Summary of Claim
 				* First Appearance URL
 			* Creative Work Subject Information
