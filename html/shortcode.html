@@ -16,7 +16,7 @@
 	}
 </style>
 
-<img src="https://surniaulula.github.io/wpsso/images/googlebot-1200x1159.png" class="wpsso-html-page alignright">
+<img src="https://surniaulula.github.io/wpsso/images/googlebot-1200x1159.png" class="wpsso-html-page alignright" style="width:30%;">
 
 <p>The <a href="https://wordpress.org/plugins/wpsso-schema-json-ld/">WPSSO Schema JSON-LD Markup add-on</a> provides extensive support for hundreds of Schema types and the <a href="https://wpsso.com/extend/plugins/wpsso/">WPSSO Core Premium plugin</a> can pull information from dozens of supported 3rd party plugins and service APIs. The most popular Schema type properties can be customized easily in the <em>Document SSO (Search and Social Optimization)</em> metabox, and if necessary, the <code>&#91;schema&#93;</code> shortcode can also be used to define additional (non-standard) properties and types for sections of your content.</p>
 
@@ -54,14 +54,16 @@
 <pre class="lang:xhtml decode:true">
 &#91;schema prop="+offers" type="https://schema.org/Offer"&#93;
 
-	&#91;schema_1 prop="priceSpecification" type="https://schema.org/UnitPriceSpecification"
+	&#91;schema_1 prop="priceSpecification"
+		type="https://schema.org/UnitPriceSpecification"
 		price="50.00" priceCurrency="USD" unitText="DAY" /&#93;
 
 &#91;/schema&#93;
 
 &#91;schema prop="+offers" type="https://schema.org/Offer"&#93;
 
-	&#91;schema_1 prop="priceSpecification" type="https://schema.org/UnitPriceSpecification"
+	&#91;schema_1 prop="priceSpecification"
+		type="https://schema.org/UnitPriceSpecification"
 		 price="250.00" priceCurrency="USD" unitText="WEEK" /&#93;
 
 &#91;/schema&#93;
