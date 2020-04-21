@@ -178,14 +178,15 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 
 		public static function set_variable_constants( $var_const = null ) {
 
-			if ( null === $var_const ) {
-				$var_const = self::get_variable_constants();
+			if ( ! is_array( $var_const ) ) {
+				$var_const = (array) self::get_variable_constants();
 			}
 
 			/**
 			 * Define the variable constants, if not already defined.
 			 */
 			foreach ( $var_const as $name => $value ) {
+
 				if ( ! defined( $name ) ) {
 					define( $name, $value );
 				}
@@ -205,6 +206,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 			 * Maybe override the default constant value with a pre-defined constant value.
 			 */
 			foreach ( $var_const as $name => $value ) {
+
 				if ( defined( $name ) ) {
 					$var_const[$name] = constant( $name );
 				}
