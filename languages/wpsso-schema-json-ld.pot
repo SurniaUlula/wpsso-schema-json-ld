@@ -687,7 +687,7 @@ msgid ""
 "Google Rich Results and Structured Data for Articles, Carousels (aka Item "
 "Lists), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / "
 "Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, "
-"Videos, and more."
+"Videos, and More."
 msgstr ""
 
 #: lib/gettext-pro.php:6 lib/pro/admin/meta-edit.php:109
@@ -1831,7 +1831,7 @@ msgid ""
 "Google Rich Results and Structured Data for Articles, Carousels (aka Item "
 "Lists), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / "
 "Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, "
-"Videos, and more."
+"Videos, and More."
 msgstr ""
 
 #. Author of the plugin/theme
