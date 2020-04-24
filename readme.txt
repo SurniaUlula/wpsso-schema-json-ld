@@ -375,7 +375,7 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 		* Added an Advanced Settings metabox with relevant tabs from the SSO &gt; Advanced Settings page:
 			* Schema Types
 			* Product Attributes
-			* Custom Fields
+			* Custom Fields (Metadata)
 * **Bugfixes**
 	* None.
 * **Developer Notes**
