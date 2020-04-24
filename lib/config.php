@@ -118,8 +118,8 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 			 */
 			'opt' => array(
 				'defaults' => array(
-					'schema_text_max_len'      => 10000,	// Max. Text or Article Body Length.
-					'schema_add_text_prop'     => 1,	// Add Text or Article Body Properties.
+					'schema_text_max_len'      => 10000,	// Max. Text and Article Body Length.
+					'schema_add_text_prop'     => 1,	// Add Text and Article Body Properties.
 					'schema_add_5_star_rating' => 0,	// Add 5 Star Rating If No Rating.
 
 					/**

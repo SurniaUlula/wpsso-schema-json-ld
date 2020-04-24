@@ -213,13 +213,13 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 			$this->add_schema_item_props_table_rows( $table_rows, $form );
 
 			$table_rows[ 'schema_text_max_len' ] = $form->get_tr_hide( 'basic', 'schema_text_max_len' ) . 
-			$form->get_th_html( _x( 'Max. Text or Article Body Length', 'option label', 'wpsso-schema-json-ld' ),
+			$form->get_th_html( _x( 'Max. Text and Article Body Length', 'option label', 'wpsso-schema-json-ld' ),
 				$css_class = '', $css_id = 'schema_text_max_len' ) . 
 			'<td>' . $form->get_input( 'schema_text_max_len', 'short' ) . ' ' .
 				_x( 'characters or less', 'option comment', 'wpsso-schema-json-ld' ) . '</td>';
 
 			$table_rows[ 'schema_add_text_prop' ] = $form->get_tr_hide( 'basic', 'schema_add_text_prop' ) .
-			$form->get_th_html( _x( 'Add Text or Article Body Properties', 'option label', 'wpsso-schema-json-ld' ),
+			$form->get_th_html( _x( 'Add Text and Article Body Properties', 'option label', 'wpsso-schema-json-ld' ),
 				$css_class = '', $css_id = 'schema_add_text_prop' ) . 
 			'<td>' . $form->get_checkbox( 'schema_add_text_prop' ) . '</td>';
 

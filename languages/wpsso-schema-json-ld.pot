@@ -1783,7 +1783,7 @@ msgstr ""
 
 #: lib/submenu/schema-general.php:216
 msgctxt "option label"
-msgid "Max. Text or Article Body Length"
+msgid "Max. Text and Article Body Length"
 msgstr ""
 
 #: lib/submenu/schema-general.php:219
@@ -1793,7 +1793,7 @@ msgstr ""
 
 #: lib/submenu/schema-general.php:222
 msgctxt "option label"
-msgid "Add Text or Article Body Properties"
+msgid "Add Text and Article Body Properties"
 msgstr ""
 
 #: lib/submenu/schema-general.php:227
