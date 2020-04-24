@@ -1763,40 +1763,40 @@ msgstr ""
 #. translators: Please ignore - translation uses a different text domain.
 #: lib/submenu/schema-general.php:108
 msgctxt "metabox tab"
-msgid "Custom Fields"
+msgid "Custom Fields (Metadata)"
 msgstr ""
 
-#: lib/submenu/schema-general.php:199
+#: lib/submenu/schema-general.php:197
 msgctxt "option label"
 msgid "WebSite Name"
 msgstr ""
 
-#: lib/submenu/schema-general.php:204
+#: lib/submenu/schema-general.php:202
 msgctxt "option label"
 msgid "WebSite Alternate Name"
 msgstr ""
 
-#: lib/submenu/schema-general.php:209
+#: lib/submenu/schema-general.php:207
 msgctxt "option label"
 msgid "WebSite Description"
 msgstr ""
 
-#: lib/submenu/schema-general.php:216
+#: lib/submenu/schema-general.php:214
 msgctxt "option label"
 msgid "Max. Text and Article Body Length"
 msgstr ""
 
-#: lib/submenu/schema-general.php:219
+#: lib/submenu/schema-general.php:217
 msgctxt "option comment"
 msgid "characters or less"
 msgstr ""
 
-#: lib/submenu/schema-general.php:222
+#: lib/submenu/schema-general.php:220
 msgctxt "option label"
 msgid "Add Text and Article Body Properties"
 msgstr ""
 
-#: lib/submenu/schema-general.php:227
+#: lib/submenu/schema-general.php:225
 msgctxt "option label"
 msgid "Add 5 Star Rating If No Rating"
 msgstr ""

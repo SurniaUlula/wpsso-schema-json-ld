@@ -105,7 +105,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 				// translators: Please ignore - translation uses a different text domain.
 				'product_attrs' => _x( 'Product Attributes', 'metabox tab', 'wpsso' ),
 				// translators: Please ignore - translation uses a different text domain.
-				'custom_fields' => _x( 'Custom Fields', 'metabox tab', 'wpsso' ),
+				'custom_fields' => _x( 'Custom Fields (Metadata)', 'metabox tab', 'wpsso' ),
 			) );
 
 			$table_rows = array();
@@ -186,8 +186,6 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 				$this->p->debug->mark();
 			}
 
-			$atts_locale = array( 'is_locale' => true );
-
 			$def_site_name = get_bloginfo( 'name', 'display' );
 			$def_site_desc = get_bloginfo( 'description', 'display' );
 
@@ -196,18 +194,18 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 			$site_desc_key     = SucomUtil::get_key_locale( 'site_desc', $form->options );
 
 			$table_rows[ 'site_name' ] = '' .
-			$form->get_th_html( _x( 'WebSite Name', 'option label', 'wpsso-schema-json-ld' ),
-				$css_class = '', $css_id = 'site_name', $atts_locale ) . 
+			$form->get_th_html_locale( _x( 'WebSite Name', 'option label', 'wpsso-schema-json-ld' ),
+				$css_class = '', $css_id = 'site_name' ) . 
 			'<td>' . $form->get_input( $site_name_key, 'long_name', '', 0, $def_site_name ) . '</td>';
 
 			$table_rows[ 'site_name_alt' ] = '' .
-			$form->get_th_html( _x( 'WebSite Alternate Name', 'option label', 'wpsso-schema-json-ld' ),
-				$css_class = '', $css_id = 'site_name_alt', $atts_locale ) . 
+			$form->get_th_html_locale( _x( 'WebSite Alternate Name', 'option label', 'wpsso-schema-json-ld' ),
+				$css_class = '', $css_id = 'site_name_alt' ) . 
 			'<td>' . $form->get_input( $site_name_alt_key, 'long_name' ) . '</td>';
 
 			$table_rows[ 'site_desc' ] = '' .
-			$form->get_th_html( _x( 'WebSite Description', 'option label', 'wpsso-schema-json-ld' ),
-				$css_class = '', $css_id = 'site_desc', $atts_locale ) . 
+			$form->get_th_html_locale( _x( 'WebSite Description', 'option label', 'wpsso-schema-json-ld' ),
+				$css_class = '', $css_id = 'site_desc' ) . 
 			'<td>' . $form->get_textarea( $site_desc_key, $css_class = '', $css_id = '', 0, $def_site_desc ) . '</td>';
 
 			$this->add_schema_item_props_table_rows( $table_rows, $form );
