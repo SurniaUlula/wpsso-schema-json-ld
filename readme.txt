@@ -261,8 +261,8 @@ WPSSO Schema JSON-LD Markup (aka WPSSO JSON) is an add-on for the [WPSSO Core pl
 
 <h3 class="top">Install and Uninstall</h3>
 
-* [Install the WPSSO JSON Add-on](https://wpsso.com/docs/plugins/wpsso-schema-json-ld/installation/install-the-plugin/)
-* [Uninstall the WPSSO JSON Add-on](https://wpsso.com/docs/plugins/wpsso-schema-json-ld/installation/uninstall-the-plugin/)
+* [Install the WPSSO Schema JSON-LD Markup add-on](https://wpsso.com/docs/plugins/wpsso-schema-json-ld/installation/install-the-plugin/).
+* [Uninstall the WPSSO Schema JSON-LD Markup add-on](https://wpsso.com/docs/plugins/wpsso-schema-json-ld/installation/uninstall-the-plugin/).
 
 == Frequently Asked Questions ==
 
