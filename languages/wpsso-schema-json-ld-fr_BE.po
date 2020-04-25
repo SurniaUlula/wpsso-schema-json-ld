@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD (WPSSO JSON) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.3.0\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.4.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-04-23 08:12-0700\n"
-"PO-Revision-Date: 2020-04-23 08:12-0700\n"
+"POT-Creation-Date: 2020-04-25 16:44-0700\n"
+"PO-Revision-Date: 2020-04-25 16:47-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -566,8 +566,8 @@ msgstr "Guide code court Schéma"
 
 #: lib/gettext-config.php:8
 msgctxt "plugin description"
-msgid "Google Rich Results and Structured Data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Videos, and more."
-msgstr "Résultats riche de Google et données structurées pour articles, carrousels, critiques, entreprise / référencement locale, étapes pratiques, évaluations de déclarations, événements, images, organisations, pages FAQ, produits, recettes, restaurants, videos, et plus."
+msgid "Google Rich Results and Structured Data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Videos, and More."
+msgstr "Résultats riche et données structurées Google pour articles, carrousels,, évaluations de déclarations, événements, pages FAQ, étapes pratiques, images, entreprise / référencement locale, organisations, produits, recettes, restaurants, critiques, videos, et plus."
 
 #: lib/gettext-pro.php:6 lib/pro/admin/meta-edit.php:109
 #: lib/std/admin/meta-edit.php:89
@@ -1638,40 +1638,40 @@ msgstr "Attributs de produit"
 #. translators: Please ignore - translation uses a different text domain.
 #: lib/submenu/schema-general.php:108
 msgctxt "metabox tab"
-msgid "Custom Fields"
+msgid "Custom Fields (Metadata)"
 msgstr "Champs personnalisés"
 
-#: lib/submenu/schema-general.php:199
+#: lib/submenu/schema-general.php:193
 msgctxt "option label"
 msgid "WebSite Name"
 msgstr "Nom du site Web"
 
-#: lib/submenu/schema-general.php:204
+#: lib/submenu/schema-general.php:199
 msgctxt "option label"
 msgid "WebSite Alternate Name"
 msgstr "Autre nom du site Web"
 
-#: lib/submenu/schema-general.php:209
+#: lib/submenu/schema-general.php:204
 msgctxt "option label"
 msgid "WebSite Description"
 msgstr "Description du site Web"
 
-#: lib/submenu/schema-general.php:216
+#: lib/submenu/schema-general.php:212
 msgctxt "option label"
-msgid "Max. Text or Article Body Length"
-msgstr "Longueur max. text ou corps d'article"
+msgid "Max. Text and Article Body Length"
+msgstr "Longueur max. text et corps d'article"
 
-#: lib/submenu/schema-general.php:219
+#: lib/submenu/schema-general.php:215
 msgctxt "option comment"
 msgid "characters or less"
 msgstr "caractères ou moins"
 
-#: lib/submenu/schema-general.php:222
+#: lib/submenu/schema-general.php:218
 msgctxt "option label"
-msgid "Add Text or Article Body Properties"
-msgstr "Ajouter prop. texte ou corps d'article"
+msgid "Add Text and Article Body Properties"
+msgstr "Ajouter prop. texte et corps d'article"
 
-#: lib/submenu/schema-general.php:227
+#: lib/submenu/schema-general.php:223
 msgctxt "option label"
 msgid "Add 5 Star Rating If No Rating"
 msgstr "Ajouter note 5 étoiles si aucune note"
@@ -1698,8 +1698,8 @@ msgid "https://wpsso.com/extend/plugins/wpsso-schema-json-ld/"
 msgstr "https://wpsso.com/extend/plugins/wpsso-schema-json-ld/"
 
 #. Description of the plugin/theme
-msgid "Google Rich Results and Structured Data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Videos, and more."
-msgstr "Résultats riche de Google et données structurées pour articles, carrousels, critiques, entreprise / référencement locale, étapes pratiques, évaluations de déclarations, événements, images, organisations, pages FAQ, produits, recettes, restaurants, videos, et plus."
+msgid "Google Rich Results and Structured Data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Videos, and More."
+msgstr "Résultats riche et données structurées Google pour articles, carrousels,, évaluations de déclarations, événements, pages FAQ, étapes pratiques, images, entreprise / référencement locale, organisations, produits, recettes, restaurants, critiques, videos, et plus."
 
 #. Author of the plugin/theme
 msgid "JS Morisset"
