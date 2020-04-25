@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.3.0\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.4.0-b.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-"
 "ld\n"
 "POT-Creation-Date: 2020-MO-DA HO:MI+ZONE\n"
@@ -1766,37 +1766,37 @@ msgctxt "metabox tab"
 msgid "Custom Fields (Metadata)"
 msgstr ""
 
-#: lib/submenu/schema-general.php:197
+#: lib/submenu/schema-general.php:193
 msgctxt "option label"
 msgid "WebSite Name"
 msgstr ""
 
-#: lib/submenu/schema-general.php:202
+#: lib/submenu/schema-general.php:198
 msgctxt "option label"
 msgid "WebSite Alternate Name"
 msgstr ""
 
-#: lib/submenu/schema-general.php:207
+#: lib/submenu/schema-general.php:203
 msgctxt "option label"
 msgid "WebSite Description"
 msgstr ""
 
-#: lib/submenu/schema-general.php:214
+#: lib/submenu/schema-general.php:210
 msgctxt "option label"
 msgid "Max. Text and Article Body Length"
 msgstr ""
 
-#: lib/submenu/schema-general.php:217
+#: lib/submenu/schema-general.php:213
 msgctxt "option comment"
 msgid "characters or less"
 msgstr ""
 
-#: lib/submenu/schema-general.php:220
+#: lib/submenu/schema-general.php:216
 msgctxt "option label"
 msgid "Add Text and Article Body Properties"
 msgstr ""
 
-#: lib/submenu/schema-general.php:225
+#: lib/submenu/schema-general.php:221
 msgctxt "option label"
 msgid "Add 5 Star Rating If No Rating"
 msgstr ""

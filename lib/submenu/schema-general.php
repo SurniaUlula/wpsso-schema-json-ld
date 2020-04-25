@@ -189,24 +189,20 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 			$def_site_name = get_bloginfo( 'name', 'display' );
 			$def_site_desc = get_bloginfo( 'description', 'display' );
 
-			$site_name_key     = SucomUtil::get_key_locale( 'site_name', $form->options );
-			$site_name_alt_key = SucomUtil::get_key_locale( 'site_name_alt', $form->options );
-			$site_desc_key     = SucomUtil::get_key_locale( 'site_desc', $form->options );
-
 			$table_rows[ 'site_name' ] = '' .
 			$form->get_th_html_locale( _x( 'WebSite Name', 'option label', 'wpsso-schema-json-ld' ),
 				$css_class = '', $css_id = 'site_name' ) . 
-			'<td>' . $form->get_input( $site_name_key, 'long_name', '', 0, $def_site_name ) . '</td>';
+			'<td>' . $form->get_input_locale( 'site_name', 'long_name', '', 0, $def_site_name ) . '</td>';
 
 			$table_rows[ 'site_name_alt' ] = '' .
 			$form->get_th_html_locale( _x( 'WebSite Alternate Name', 'option label', 'wpsso-schema-json-ld' ),
 				$css_class = '', $css_id = 'site_name_alt' ) . 
-			'<td>' . $form->get_input( $site_name_alt_key, 'long_name' ) . '</td>';
+			'<td>' . $form->get_input_locale( 'site_name_alt', 'long_name' ) . '</td>';
 
 			$table_rows[ 'site_desc' ] = '' .
 			$form->get_th_html_locale( _x( 'WebSite Description', 'option label', 'wpsso-schema-json-ld' ),
 				$css_class = '', $css_id = 'site_desc' ) . 
-			'<td>' . $form->get_textarea( $site_desc_key, $css_class = '', $css_id = '', 0, $def_site_desc ) . '</td>';
+			'<td>' . $form->get_textarea_locale( 'site_desc', $css_class = '', $css_id = '', 0, $def_site_desc ) . '</td>';
 
 			$this->add_schema_item_props_table_rows( $table_rows, $form );
 
