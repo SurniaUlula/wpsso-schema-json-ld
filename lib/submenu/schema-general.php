@@ -192,24 +192,26 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 			$table_rows[ 'site_name' ] = '' .
 			$form->get_th_html_locale( _x( 'WebSite Name', 'option label', 'wpsso-schema-json-ld' ),
 				$css_class = '', $css_id = 'site_name' ) . 
-			'<td>' . $form->get_input_locale( 'site_name', 'long_name', '', 0, $def_site_name ) . '</td>';
+			'<td>' . $form->get_input_locale( 'site_name', $css_class = 'long_name', $css_id = '',
+				$len = 0, $def_site_name ) . '</td>';
 
 			$table_rows[ 'site_name_alt' ] = '' .
 			$form->get_th_html_locale( _x( 'WebSite Alternate Name', 'option label', 'wpsso-schema-json-ld' ),
 				$css_class = '', $css_id = 'site_name_alt' ) . 
-			'<td>' . $form->get_input_locale( 'site_name_alt', 'long_name' ) . '</td>';
+			'<td>' . $form->get_input_locale( 'site_name_alt', $css_class = 'long_name' ) . '</td>';
 
 			$table_rows[ 'site_desc' ] = '' .
 			$form->get_th_html_locale( _x( 'WebSite Description', 'option label', 'wpsso-schema-json-ld' ),
 				$css_class = '', $css_id = 'site_desc' ) . 
-			'<td>' . $form->get_textarea_locale( 'site_desc', $css_class = '', $css_id = '', 0, $def_site_desc ) . '</td>';
+			'<td>' . $form->get_textarea_locale( 'site_desc', $css_class = '', $css_id = '',
+				$len = 0, $def_site_desc ) . '</td>';
 
 			$this->add_schema_item_props_table_rows( $table_rows, $form );
 
 			$table_rows[ 'schema_text_max_len' ] = $form->get_tr_hide( 'basic', 'schema_text_max_len' ) . 
 			$form->get_th_html( _x( 'Max. Text and Article Body Length', 'option label', 'wpsso-schema-json-ld' ),
 				$css_class = '', $css_id = 'schema_text_max_len' ) . 
-			'<td>' . $form->get_input( 'schema_text_max_len', 'short' ) . ' ' .
+			'<td>' . $form->get_input( 'schema_text_max_len', $css_class = 'short' ) . ' ' .
 				_x( 'characters or less', 'option comment', 'wpsso-schema-json-ld' ) . '</td>';
 
 			$table_rows[ 'schema_add_text_prop' ] = $form->get_tr_hide( 'basic', 'schema_add_text_prop' ) .
