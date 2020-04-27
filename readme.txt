@@ -96,8 +96,8 @@ Google regularly updates and changes their Schema markup requirements - WPSSO JS
 	* Product Condition
 	* Product Depth
 	* Product GTIN-14
-	* Product GTIN-13/EAN
-	* Product GTIN-12/UPC
+	* Product GTIN-13 (EAN)
+	* Product GTIN-12 (UPC)
 	* Product GTIN-8
 	* Product GTIN
 	* Product ISBN
@@ -187,8 +187,8 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 		* Product Depth (cm)
 		* Product Volume (ml)
 		* Product GTIN-14
-		* Product GTIN-13/EAN
-		* Product GTIN-12/UPC
+		* Product GTIN-13 (EAN)
+		* Product GTIN-12 (UPC)
 		* Product GTIN-8
 		* Product GTIN
 	* QA Page Information
@@ -311,6 +311,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 <p>Under the SSO &gt; Update Manager settings page, select the "Development and Up" version filter for WPSSO Core and all its extensions (to satisfy any version dependencies). Save the plugin settings, and click the "Check for Updates" button to fetch the latest / current WPSSO version information. When new Development versions are available, they will automatically appear under your WordPress Dashboard &gt; Updates page. You can always re-select the "Stable / Production" version filter at any time to re-install the last stable / production version of a plugin.</p>
 
 <h3>Changelog / Release Notes</h3>
+
+**Version 3.5.0-dev.1 (TBD)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v5.6.
+	* WordPress v4.2.
+	* WPSSO Core v7.1.0.
 
 **Version 3.4.0 (2020/04/25)**
 
