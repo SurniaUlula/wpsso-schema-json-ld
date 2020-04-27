@@ -165,7 +165,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 
 				case 'json-advanced-product_attrs':
 			
-					$this->add_advanced_product_attr_table_rows( $table_rows, $this->form );
+					$this->add_advanced_product_attrs_table_rows( $table_rows, $this->form );
 
 					break;
 

@@ -742,7 +742,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => $schema_type_row_class[ 'product' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Product GTIN-13/EAN', 'option label', 'wpsso-schema-json-ld' ),	// aka Product EAN.
+					'label'    => _x( 'Product GTIN-13 (EAN)', 'option label', 'wpsso-schema-json-ld' ),	// aka Product EAN.
 					'tooltip'  => 'meta-product_gtin13',
 					'content'  => $form->get_no_input( 'product_gtin13', '', $css_id = '', $placeholder = true ),
 				),
@@ -750,7 +750,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'tr_class' => $schema_type_row_class[ 'product' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Product GTIN-12/UPC', 'option label', 'wpsso-schema-json-ld' ),	// aka Product UPC.
+					'label'    => _x( 'Product GTIN-12 (UPC)', 'option label', 'wpsso-schema-json-ld' ),	// aka Product UPC.
 					'tooltip'  => 'meta-product_gtin12',
 					'content'  => $form->get_no_input( 'product_gtin12', '', $css_id = '', $placeholder = true ),
 				),
