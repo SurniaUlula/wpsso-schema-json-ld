@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD (WPSSO JSON) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.4.0\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.5.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-04-25 16:44-0700\n"
-"PO-Revision-Date: 2020-04-25 16:47-0700\n"
+"POT-Creation-Date: 2020-04-28 10:06-0700\n"
+"PO-Revision-Date: 2020-04-28 10:06-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -1029,14 +1029,14 @@ msgstr "GTIN-14 du produit"
 #: lib/gettext-pro.php:82 lib/pro/admin/meta-edit.php:728
 #: lib/std/admin/meta-edit.php:745
 msgctxt "option label"
-msgid "Product GTIN-13/EAN"
-msgstr "GTIN-13/EAN du produit"
+msgid "Product GTIN-13 (EAN)"
+msgstr "GTIN-13 (EAN) du produit"
 
 #: lib/gettext-pro.php:83 lib/pro/admin/meta-edit.php:735
 #: lib/std/admin/meta-edit.php:753
 msgctxt "option label"
-msgid "Product GTIN-12/UPC"
-msgstr "GTIN-12/UPC du produit"
+msgid "Product GTIN-12 (UPC)"
+msgstr "GTIN-12 (UPC) du produit"
 
 #: lib/gettext-pro.php:84 lib/pro/admin/meta-edit.php:742
 #: lib/std/admin/meta-edit.php:761
