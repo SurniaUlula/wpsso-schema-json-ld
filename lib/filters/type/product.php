@@ -78,7 +78,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 				'gtin8'         => 'product:gtin8',		// Valid for both products and offers.
 				'gtin'          => 'product:gtin',		// Valid for both products and offers.
 				'itemCondition' => 'product:condition',
-				'color'         => 'product:color',		// Only valid for products, NOT offers.
+				'color'         => 'product:color',
 				'material'      => 'product:material',
 			) );
 
@@ -143,23 +143,35 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 			) );
 
 			/**
-			 * Property:
-			 * 	offers as https://schema.org/Offer
+			 * Prevent recursion for an itemOffered within a Schema Offer.
 			 */
-			if ( empty( $mt_og[ 'product:offers' ] ) ) {	// No product variations.
+			static $local_recursion = false;
 
-				if ( $single_offer = WpssoSchemaSingle::get_offer_data( $mod, $mt_og ) ) {
+			if ( ! $local_recursion ) {
 
-					$ret[ 'offers' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/Offer', $single_offer );
+				$local_recursion = true;
+
+				/**
+				 * Property:
+				 * 	offers as https://schema.org/Offer
+				 */
+				if ( empty( $mt_og[ 'product:offers' ] ) ) {	// No product variations.
+
+					if ( $single_offer = WpssoSchemaSingle::get_offer_data( $mod, $mt_og ) ) {
+
+						$ret[ 'offers' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/Offer', $single_offer );
+					}
+
+				/**
+				 * Property:
+				 * 	offers as https://schema.org/AggregateOffer
+				 */
+				} elseif ( is_array( $mt_og[ 'product:offers' ] ) ) {	// Just in case - must be an array.
+
+					WpssoSchema::add_aggregate_offer_data( $ret, $mod, $mt_og[ 'product:offers' ] );
 				}
 
-			/**
-			 * Property:
-			 * 	offers as https://schema.org/AggregateOffer
-			 */
-			} elseif ( is_array( $mt_og[ 'product:offers' ] ) ) {	// Just in case - must be an array.
-
-				WpssoSchema::add_aggregate_offer_data( $ret, $mod, $mt_og[ 'product:offers' ] );
+				$local_recursion = false;
 			}
 
 			/**

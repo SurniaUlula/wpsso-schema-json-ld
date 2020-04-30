@@ -66,22 +66,35 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeSoftwareApplication' ) ) {
 			) );
 
 			/**
-			 * Property:
-			 * 	offers as https://schema.org/Offer
+			 * Prevent recursion for an itemOffered within a Schema Offer.
 			 */
-			if ( empty( $mt_og[ 'product:offers' ] ) ) {
+			static $local_recursion = false;
 
-				if ( $single_offer = WpssoSchemaSingle::get_offer_data( $mod, $mt_og ) ) {
-					$ret[ 'offers' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/Offer', $single_offer );
+			if ( ! $local_recursion ) {
+
+				$local_recursion = true;
+
+				/**
+				 * Property:
+				 * 	offers as https://schema.org/Offer
+				 */
+				if ( empty( $mt_og[ 'product:offers' ] ) ) {
+
+					if ( $single_offer = WpssoSchemaSingle::get_offer_data( $mod, $mt_og ) ) {
+
+						$ret[ 'offers' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/Offer', $single_offer );
+					}
+
+				/**
+				 * Property:
+				 * 	offers as https://schema.org/AggregateOffer
+				 */
+				} elseif ( is_array( $mt_og[ 'product:offers' ] ) ) {	// Just in case - must be an array.
+
+					WpssoSchema::add_aggregate_offer_data( $ret, $mod, $mt_og[ 'product:offers' ] );
 				}
 
-			/**
-			 * Property:
-			 * 	offers as https://schema.org/AggregateOffer
-			 */
-			} elseif ( is_array( $mt_og[ 'product:offers' ] ) ) {	// Just in case - must be an array.
-
-				WpssoSchema::add_aggregate_offer_data( $ret, $mod, $mt_og[ 'product:offers' ] );
+				$local_recursion = false;
 			}
 
 			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );

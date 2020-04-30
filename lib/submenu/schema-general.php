@@ -211,7 +211,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 			$table_rows[ 'schema_text_max_len' ] = $form->get_tr_hide( 'basic', 'schema_text_max_len' ) . 
 			$form->get_th_html( _x( 'Max. Text and Article Body Length', 'option label', 'wpsso-schema-json-ld' ),
 				$css_class = '', $css_id = 'schema_text_max_len' ) . 
-			'<td>' . $form->get_input( 'schema_text_max_len', $css_class = 'short' ) . ' ' .
+			'<td>' . $form->get_input( 'schema_text_max_len', $css_class = 'chars' ) . ' ' .
 				_x( 'characters or less', 'option comment', 'wpsso-schema-json-ld' ) . '</td>';
 
 			$table_rows[ 'schema_add_text_prop' ] = $form->get_tr_hide( 'basic', 'schema_add_text_prop' ) .
