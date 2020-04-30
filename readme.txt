@@ -317,7 +317,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **New Features**
 	* None.
 * **Improvements**
-	* None.
+	* Added recursion checks in Schema Product and SoftwareApplication to prevent recursion for an itemOffered within a Schema Offer.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -435,7 +435,7 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 
 = 3.6.0-dev.7 =
 
-(2020/04/30) None.
+(2020/04/30) Added recursion checks in Schema Product and SoftwareApplication to prevent recursion for an itemOffered within a Schema Offer.
 
 = 3.5.0 =
 
