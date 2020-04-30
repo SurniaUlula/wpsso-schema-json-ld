@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD (WPSSO JSON) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.5.0\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.6.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-04-28 10:06-0700\n"
-"PO-Revision-Date: 2020-04-28 10:06-0700\n"
+"POT-Creation-Date: 2020-04-30 09:01-0700\n"
+"PO-Revision-Date: 2020-04-30 09:01-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -1017,8 +1017,8 @@ msgstr "Profondeur du produit"
 #: lib/gettext-pro.php:80 lib/pro/admin/meta-edit.php:713
 #: lib/std/admin/meta-edit.php:728
 msgctxt "option label"
-msgid "Product Volume"
-msgstr "Volume du produit"
+msgid "Product Fluid Volume"
+msgstr "Volume fluide du produit"
 
 #: lib/gettext-pro.php:81 lib/pro/admin/meta-edit.php:721
 #: lib/std/admin/meta-edit.php:737
