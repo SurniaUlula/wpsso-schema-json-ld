@@ -77,7 +77,7 @@ _x( 'Product Length', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Product Width', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Product Height', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Product Depth', 'option label', 'wpsso-schema-json-ld' );
-_x( 'Product Volume', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Product Fluid Volume', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Product GTIN-14', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Product GTIN-13 (EAN)', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Product GTIN-12 (UPC)', 'option label', 'wpsso-schema-json-ld' );

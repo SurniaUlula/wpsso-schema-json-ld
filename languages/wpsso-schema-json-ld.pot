@@ -1138,7 +1138,7 @@ msgstr ""
 #: lib/gettext-pro.php:80 lib/pro/admin/meta-edit.php:713
 #: lib/std/admin/meta-edit.php:728
 msgctxt "option label"
-msgid "Product Volume"
+msgid "Product Fluid Volume"
 msgstr ""
 
 #: lib/gettext-pro.php:81 lib/pro/admin/meta-edit.php:721
