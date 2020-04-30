@@ -95,6 +95,12 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeSoftwareApplication' ) ) {
 				}
 
 				$local_recursion = false;
+
+			} else {
+
+				if ( $this->p->debug->enabled ) {
+					$this->p->debug->log( 'product offer recursion detected and avoided' );
+				}
 			}
 
 			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
