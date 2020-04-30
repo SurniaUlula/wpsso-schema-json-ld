@@ -87,6 +87,7 @@
 <li>Product Color</li>
 <li>Product Condition</li>
 <li>Product Depth</li>
+<li>Product Fluid Volume</li>
 <li>Product GTIN-14</li>
 <li>Product GTIN-13 (EAN)</li>
 <li>Product GTIN-12 (UPC)</li>
@@ -102,7 +103,6 @@
 <li>Product Target Gender</li>
 <li>Product Weight</li>
 <li>Product Width</li>
-<li>Product Volume</li>
 </ul></li>
 <li><p>WooCommerce product variations from the WPSSO Core Premium plugin are grouped by currency and added as Schema AggregateOffer for Google's Rich Results (includes the product variation group high price, low price, and currency).</p></li>
 <li><p>Fixes common Google testing tool warnings like "aggregateRating field is recommended" and "review field is recommended".</p></li>
@@ -204,7 +204,7 @@
 <li>Product Width (cm)</li>
 <li>Product Height (cm)</li>
 <li>Product Depth (cm)</li>
-<li>Product Volume (ml)</li>
+<li>Product Fluid Volume (ml)</li>
 <li>Product GTIN-14</li>
 <li>Product GTIN-13 (EAN)</li>
 <li>Product GTIN-12 (UPC)</li>

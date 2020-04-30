@@ -95,6 +95,7 @@ Google regularly updates and changes their Schema markup requirements - WPSSO JS
 	* Product Color
 	* Product Condition
 	* Product Depth
+	* Product Fluid Volume
 	* Product GTIN-14
 	* Product GTIN-13 (EAN)
 	* Product GTIN-12 (UPC)
@@ -110,7 +111,6 @@ Google regularly updates and changes their Schema markup requirements - WPSSO JS
 	* Product Target Gender
 	* Product Weight
 	* Product Width
-	* Product Volume
 
 * WooCommerce product variations from the WPSSO Core Premium plugin are grouped by currency and added as Schema AggregateOffer for Google's Rich Results (includes the product variation group high price, low price, and currency).
 
@@ -185,7 +185,7 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 		* Product Width (cm)
 		* Product Height (cm)
 		* Product Depth (cm)
-		* Product Volume (ml)
+		* Product Fluid Volume (ml)
 		* Product GTIN-14
 		* Product GTIN-13 (EAN)
 		* Product GTIN-12 (UPC)
