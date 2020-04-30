@@ -312,7 +312,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.6.0-dev.7 (2020/04/30)**
+**Version 3.6.0-b.1 (2020/04/30)**
 
 * **New Features**
 	* None.
@@ -325,7 +325,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v7.3.0-dev.7.
+	* WPSSO Core v7.3.0-b.1.
 
 **Version 3.5.0 (2020/04/28)**
 
@@ -433,7 +433,7 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 
 == Upgrade Notice ==
 
-= 3.6.0-dev.7 =
+= 3.6.0-b.1 =
 
 (2020/04/30) Added recursion checks in Schema Product and SoftwareApplication to prevent recursion for an itemOffered within a Schema Offer.
 
