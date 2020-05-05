@@ -115,7 +115,7 @@ if ( ! class_exists( 'WpssoJsonRegister' ) ) {
 
 				$clear_other = empty( $wpsso->options[ 'plugin_clear_on_activate' ] ) ? false : true;
 
-				$wpsso->util->schedule_clear_all_cache( $user_id = get_current_user_id(), $clear_other );
+				$wpsso->util->cache->schedule_clear( $user_id = get_current_user_id(), $clear_other );
 			}
 		}
 
@@ -127,7 +127,7 @@ if ( ! class_exists( 'WpssoJsonRegister' ) ) {
 
 				$clear_other = empty( $wpsso->options[ 'plugin_clear_on_deactivate' ] ) ? false : true;
 
-				$wpsso->util->schedule_clear_all_cache( $user_id = get_current_user_id(), $clear_other );
+				$wpsso->util->cache->schedule_clear( $user_id = get_current_user_id(), $clear_other );
 			}
 		}
 
