@@ -312,6 +312,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 3.7.0-dev.1 (TBD)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v5.6.
+	* WordPress v4.2.
+	* WPSSO Core v7.3.0.
+
 **Version 3.6.0 (2020/05/01)**
 
 * **New Features**
@@ -432,6 +447,10 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 	* WPSSO Core v6.26.1.
 
 == Upgrade Notice ==
+
+= 3.7.0-dev.1 =
+
+(TBD) None.
 
 = 3.6.0 =
 
