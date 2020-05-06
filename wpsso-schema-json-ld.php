@@ -14,7 +14,7 @@
  * Requires PHP: 5.6
  * Requires At Least: 4.2
  * Tested Up To: 5.4.1
- * WC Tested Up To: 4.0.1
+ * WC Tested Up To: 4.1.0
  * Version: 3.7.0-dev.1
  * 
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
@@ -49,7 +49,7 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 		/**
 		 * Reference Variables (config, options, modules, etc.).
 		 */
-		private $have_min_version = true;	// Have minimum wpsso version.
+		private $have_wpsso_min = true;	// Have WPSSO Core minimum version.
 
 		private static $instance;
 
@@ -151,7 +151,7 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 
 			if ( version_compare( $plugin_version, $req_info[ 'min_version' ], '<' ) ) {
 
-				$this->have_min_version = false;
+				$this->have_wpsso_min = false;
 
 				return $cf;
 			}
@@ -164,7 +164,7 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 		 */
 		public function wpsso_get_avail( $avail ) {
 
-			if ( ! $this->have_min_version ) {
+			if ( ! $this->have_wpsso_min ) {
 
 				$avail[ 'p_ext' ][ 'json' ] = false;	// Signal that this extension / add-on is not available.
 
@@ -184,10 +184,10 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 				$this->p->debug->mark();
 			}
 
-			if ( ! $this->have_min_version ) {
+			if ( ! $this->have_wpsso_min ) {
 
 				if ( $this->p->debug->enabled ) {
-					$this->p->debug->log( 'exiting early: have_min_version is false' );
+					$this->p->debug->log( 'exiting early: have_wpsso_min is false' );
 				}
 
 				return;	// Stop here.
@@ -205,7 +205,7 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 				$this->p->debug->mark();
 			}
 
-			if ( ! $this->have_min_version ) {
+			if ( ! $this->have_wpsso_min ) {
 
 				$this->min_version_notice();	// Show minimum version notice.
 
