@@ -312,12 +312,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.7.0-dev.1 (TBD)**
+**Version 3.7.0-dev.2 (2020/05/06)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* None.
+	* Minor improvements to the requirement checks in the main plugin class.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -325,7 +325,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v7.3.0.
+	* WPSSO Core v7.4.0-dev.2.
 
 **Version 3.6.0 (2020/05/01)**
 
@@ -448,9 +448,9 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 
 == Upgrade Notice ==
 
-= 3.7.0-dev.1 =
+= 3.7.0-dev.2 =
 
-(TBD) Updated clear cache method call for WPSSO Core v7.4.0.
+(2020/05/06) Minor improvements to the requirement checks in the main plugin class.
 
 = 3.6.0 =
 
