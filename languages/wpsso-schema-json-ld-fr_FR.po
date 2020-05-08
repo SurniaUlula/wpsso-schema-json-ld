@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD (WPSSO JSON) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.6.0\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.7.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-05-01 08:54-0700\n"
-"PO-Revision-Date: 2020-05-01 08:55-0700\n"
+"POT-Creation-Date: 2020-05-08 08:10-0700\n"
+"PO-Revision-Date: 2020-05-08 08:10-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -1681,13 +1681,13 @@ msgctxt "metabox title"
 msgid "Schema Shortcode"
 msgstr "Code court de Schéma"
 
-#: wpsso-schema-json-ld.php:119
-msgid "The %1$s add-on requires the %2$s plugin &mdash; install and activate the plugin or <a href=\"%3$s\">deactivate this add-on</a>."
-msgstr "L'ajout %1$s requiert l'extension %2$s &mdash; installer et activer l'extension ou <a href=\"%3$s\">désactiver cet ajout</a>."
+#: wpsso-schema-json-ld.php:242
+msgid "The %1$s version %2$s add-on requires the %3$s plugin &mdash; please activate the missing plugin."
+msgstr "L'ajout %1$s version %2$s nécessite l'extension %3$s &mdash; veuillez activer l'extension manquante."
 
-#: wpsso-schema-json-ld.php:224
+#: wpsso-schema-json-ld.php:245
 msgid "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version %5$s is currently installed)."
-msgstr "L'ajout %1$s version %2$s requiert %3$s version %4$s ou plus récente (version %5$s est actuellement installée)."
+msgstr "L'ajout %1$s version %2$s nécessite %3$s version %4$s ou plus récente (la version %5$s est actuellement installée)."
 
 #. Plugin Name of the plugin/theme
 msgid "WPSSO Schema JSON-LD Markup"
