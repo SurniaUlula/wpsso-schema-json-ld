@@ -317,7 +317,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **New Features**
 	* None.
 * **Improvements**
-	* None.
+	* Added a 'isPartOf' property to the Schema Article and WebPage types with the Schema WebSite markup.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -466,7 +466,7 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 
 = 3.8.0-dev.1 =
 
-(2020/05/13) None.
+(2020/05/13) Added a 'isPartOf' property to the Schema Article and WebPage types with the Schema WebSite markup.
 
 = 3.7.0 =
 
