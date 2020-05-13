@@ -312,7 +312,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.8.0-dev.1 (2020/05/13)**
+**Version 3.8.0-dev.2 (2020/05/13)**
 
 * **New Features**
 	* None.
@@ -464,7 +464,7 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 
 == Upgrade Notice ==
 
-= 3.8.0-dev.1 =
+= 3.8.0-dev.2 =
 
 (2020/05/13) Added a 'isPartOf' property to the Schema Article and WebPage types with the Schema WebSite markup.
 
