@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD (WPSSO JSON) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.7.0\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.8.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
 "POT-Creation-Date: 2020-05-08 08:10-0700\n"
-"PO-Revision-Date: 2020-05-08 08:10-0700\n"
+"PO-Revision-Date: 2020-05-13 12:35-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
