@@ -140,6 +140,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 			 * 	headline
 			 */
 			if ( ! empty( $mod[ 'obj' ] ) )	{ // Just in case.
+
 				$ret[ 'headline' ] = $mod[ 'obj' ]->get_options( $mod[ 'id' ], 'schema_headline' );	// Returns null if index key is not found.
 			}
 
@@ -151,7 +152,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 
 			} else {
 
-				$headline_max_len= $this->p->cf[ 'head' ][ 'limit_max' ][ 'schema_headline_len' ];
+				$headline_max_len = $this->p->cf[ 'head' ][ 'limit_max' ][ 'schema_headline_len' ];
 
 				$ret[ 'headline' ] = $this->p->page->get_title( $headline_max_len, '...', $mod );
 			}

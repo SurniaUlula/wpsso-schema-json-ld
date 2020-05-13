@@ -41,6 +41,10 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeWebpage' ) ) {
 
 			$ret = array();
 
+			if ( $this->p->options[ 'schema_add_home_website' ] ) {
+				$ret[ 'isPartOf' ][] = $this->p->schema->get_json_data_home_website();	// Since WPSSO Core v7.5.0.
+			}
+
 			$crumb_data = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_breadcrumb', 
 				array(), $mod, $mt_og, $page_type_id, $is_main );
 
@@ -49,12 +53,20 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeWebpage' ) ) {
 			}
 
 			if ( ! empty( $json_data[ 'image' ][ 0 ] ) ) {
+
 				if ( ! empty( $json_data[ 'image' ][ 0 ][ '@id' ] ) ) {
+
 					$ret[ 'primaryImageOfPage' ] = array( '@id' => $json_data[ 'image' ][ 0 ][ '@id' ] );
+
 				} else {
+
 					$ret[ 'primaryImageOfPage' ] = $json_data[ 'image' ][ 0 ];
 				}
 			}
+
+			$ret[ 'potentialAction' ][] = WpssoSchema::get_schema_type_context( 'https://schema.org/ReadAction', array(
+				'target' => $json_data[ 'url' ],
+			) );
 
 			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
 		}

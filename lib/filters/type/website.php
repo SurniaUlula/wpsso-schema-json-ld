@@ -41,6 +41,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeWebsite' ) ) {
 			 * Disable JSON-LD markup from the WooCommerce WC_Structured_Data class (since v3.0.0).
 			 */
 			if ( $this->p->avail[ 'ecom' ][ 'woocommerce' ] ) {
+
 				add_filter( 'woocommerce_structured_data_website', '__return_empty_array', $max_int );
 			}
 		}
