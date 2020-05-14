@@ -312,12 +312,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.8.0-rc.1 (2020/05/14)**
+**Version 3.8.0 (2020/05/14)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* Added a 'isPartOf' property to the Schema Article and WebPage types with the Schema WebSite markup.
+	* Added an 'isPartOf' property to the Schema Article and WebPage types with the WordPress site Schema WebSite markup.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -325,7 +325,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v7.5.0-rc.1.
+	* WPSSO Core v7.5.0.
 
 **Version 3.7.0 (2020/05/09)**
 
@@ -464,9 +464,9 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 
 == Upgrade Notice ==
 
-= 3.8.0-rc.1 =
+= 3.8.0 =
 
-(2020/05/14) Added a 'isPartOf' property to the Schema Article and WebPage types with the Schema WebSite markup.
+(2020/05/14) Added an 'isPartOf' property to the Schema Article and WebPage types.
 
 = 3.7.0 =
 
