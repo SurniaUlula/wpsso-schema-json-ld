@@ -41,9 +41,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeArticle' ) ) {
 
 			$ret = array();
 
-			if ( $this->p->options[ 'schema_add_home_website' ] ) {
-				$ret[ 'isPartOf' ][] = $this->p->schema->get_json_data_home_website();	// Since WPSSO Core v7.5.0.
-			}
+			$ret[ 'isPartOf' ][] = $this->p->schema->get_json_data_home_website();	// Since WPSSO Core v7.5.0.
 
 			/**
 			 * Property:
