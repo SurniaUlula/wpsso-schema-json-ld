@@ -41,7 +41,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminSchemaGeneral' ) ) {
 			/**
 			 * Select option arrays.
 			 */
-			$schema_types = $this->p->schema->get_schema_types_select();
+			$schema_types = $this->p->schema->get_schema_types_select( $context = 'settings' );
 
 			/**
 			 * Organization variables.

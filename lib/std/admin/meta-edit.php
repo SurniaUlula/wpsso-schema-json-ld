@@ -61,7 +61,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 			 * Select option arrays.
 			 */
 			$schema_exp_secs = $this->p->util->get_cache_exp_secs( $this->p->lca . '_t_' );	// Default is month in seconds.
-			$schema_types    = $this->p->schema->get_schema_types_select();
+			$schema_types    = $this->p->schema->get_schema_types_select( $context = 'meta' );
 			$currencies      = SucomUtil::get_currency_abbrev();
 
 			/**
