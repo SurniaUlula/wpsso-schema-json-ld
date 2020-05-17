@@ -312,7 +312,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.9.0-dev.5 (2020/05/16)**
+**Version 3.9.0-dev.6 (2020/05/17)**
 
 * **New Features**
 	* None.
@@ -321,11 +321,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* None.
+	* Added a $context argument value for `WpssoSchema->get_schema_types_select()` calls.
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v7.5.0.
+	* WPSSO Core v7.6.0-dev.6.
 
 **Version 3.8.0 (2020/05/14)**
 
@@ -479,9 +479,9 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 
 == Upgrade Notice ==
 
-= 3.9.0-dev.5 =
+= 3.9.0-dev.6 =
 
-(2020/05/16) None.
+(2020/05/17) Added a $context argument value for `WpssoSchema->get_schema_types_select()` calls.
 
 = 3.8.0 =
 
