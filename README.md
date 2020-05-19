@@ -355,7 +355,7 @@
 </ul></li>
 </ul></li>
 </ul></li>
-<li>The <a href="https://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/schema-shortcode/">Schema Shortcode for Custom Markup</a></li>
+<li><a href="https://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/schema-shortcode/">Schema Shortcode for Custom Markup</a></li>
 </ul>
 
 
