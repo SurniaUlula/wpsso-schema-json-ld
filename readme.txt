@@ -312,7 +312,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.9.0-rc.1 (2020/05/19)**
+**Version 3.9.0-rc.1 (2020/05/20)**
 
 * **New Features**
 	* None.
@@ -481,7 +481,7 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 
 = 3.9.0-rc.1 =
 
-(2020/05/19) Added a $context argument value for `WpssoSchema->get_schema_types_select()` calls.
+(2020/05/20) Added a $context argument value for `WpssoSchema->get_schema_types_select()` calls.
 
 = 3.8.0 =
 
