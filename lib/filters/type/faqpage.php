@@ -47,6 +47,36 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeFAQPage' ) ) {
 
 			WpssoSchema::add_posts_data( $json_data, $mod, $mt_og, $page_type_id, $is_main, $ppp, $prop_name_type_ids );
 
+			if ( is_admin() ) {
+
+				$entity_count = 0;
+
+				if ( isset( $json_data[ 'mainEntity' ] ) ) {
+					if ( SucomUtil::is_non_assoc( $json_data[ 'mainEntity' ] ) ) {
+						$entity_count = count( $json_data[ 'mainEntity' ] );
+					}
+				}
+			
+				if ( $entity_count ) {
+
+					$notice_msg = sprintf( _n( '%d question added to the Schema FAQPage markup.',
+						'%d questions added to the Schema FAQPage markup.', $entity_count,
+							'wpsso-schema-json-ld' ), $entity_count );
+
+					$this->p->notice->upd( $notice_msg );
+
+				} else {
+
+					$notice_msg = __( 'No question(s) found for the Schema FAQPage markup.',
+						'wpsso-schema-json-ld' ) . ' ';
+
+					$notice_msg .= __( 'Please note that Google requires at least one question for the Schema FAQPage markup.',
+						'wpsso-schema-json-ld' );
+
+					$this->p->notice->err( $notice_msg );
+				}
+			}
+
 			return $json_data;
 		}
 	}

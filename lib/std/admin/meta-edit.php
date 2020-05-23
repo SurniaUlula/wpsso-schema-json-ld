@@ -780,6 +780,10 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 					'header'   => 'h5',
 					'label'    => _x( 'QA Page Information', 'metabox title', 'wpsso-schema-json-ld' ),
 				),
+				'schema_qa_msg' => array(
+					'tr_class'  => $schema_type_row_class[ 'qapage' ],
+					'table_row' => '<td colspan="2">' . $this->p->msgs->get_schema_qapage_msg() . '</td>',
+				),
 				'schema_qa_desc' => array(
 					'tr_class' => $schema_type_row_class[ 'qapage' ],
 					'th_class' => 'medium',

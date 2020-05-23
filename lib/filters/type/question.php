@@ -39,28 +39,21 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeQuestion' ) ) {
 				$this->p->debug->mark();
 			}
 
-			$ret = array();
+			$question = array();
 
 			/**
 			 * Answer:
 			 *
-			 * Schema Question is a sub-type of CreativeWork - we have the question in 'name' (the post/page title),
-			 * the answer excerpt in 'description', and the full answer text in 'text'. Create the answer first,
-			 * before changing / removing some question properties.
-			 *
-			 * 	'name' = Choose an identifier to name the data item. Using the actual question is a good idea.
-			 *
-			 * 	'text' = The actual text of the answer itself.
-			 *
-			 *	'description' = This property describes the answer. If the answer is from a group that has a heading
-			 *		then this may be an appropriate place to call out what that heading is.
+			 * Schema Question is a sub-type of CreativeWork. We already have the question in 'name' (the post/page
+			 * title), the answer excerpt in 'description', and the full answer text in 'text'. Create the answer
+			 * first, before changing / removing some question properties.
 			 */
-			$ret[ 'acceptedAnswer' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/Answer' );
+			$accepted_answer = WpssoSchema::get_schema_type_context( 'https://schema.org/Answer' );
 			
-			WpssoSchema::add_data_itemprop_from_assoc( $ret[ 'acceptedAnswer' ], $json_data, array( 
+			WpssoSchema::add_data_itemprop_from_assoc( $accepted_answer, $json_data, array( 
 				'url'           => 'url',
 				'name'          => 'description',	// Answer name is CreativeWork custom description or excerpt.
-				'text'          => 'text',
+				'text'          => 'text',		// May not exist if the 'schema_add_text_prop' option is disabled.
 				'inLanguage'    => 'inLanguage',
 				'dateCreated'   => 'dateCreated',
 				'datePublished' => 'datePublished',
@@ -68,54 +61,29 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeQuestion' ) ) {
 				'author'        => 'author',
 			) );
 
-			/**
-			 * WordPress does not offer an upvote feature, so set the 'upvoteCount' to 0.
-			 */
-			$ret[ 'acceptedAnswer' ][ 'upvoteCount' ] = 0;
+			$accepted_answer[ 'upvoteCount' ] = 0;
+
+			$question[ 'acceptedAnswer' ] = $accepted_answer;
+
+			$question[ 'answerCount' ] = 1;
 
 			/**
 			 * Question:
 			 *
-			 * Adjust the Question properties after having added the 'acceptedAnswer' property.
-			 *
-			 * 	'name' = Choose an identifier to name the data item. Using the actual question is a good idea.
-			 *
-			 * 	'text' = The actual text of the question itself.
-			 * 
-			 *	'description' = This property describes the question. If the question has a group heading then
-			 * 		this may be an appropriate place to call out what that heading is.
+			 * Adjust the Question properties after having created the 'acceptedAnswer' property.
 			 */
 			if ( isset( $json_data[ 'name' ] ) ) {	// Just in case.
-				$ret[ 'text' ] = $json_data[ 'name' ];
+				$question[ 'text' ] = $json_data[ 'name' ];
 			}
 
 			/**
-			 * An optional QAPage heading / description of the question and it's answer.
+			 * 'description' = This property describes the question. If the question has a group heading then this may
+			 * 	be an appropriate place to call out what that heading is.
 			 */
-			$qa_desc = $mod[ 'obj' ]->get_options( $mod[ 'id' ], 'schema_qa_desc' );	// Returns null if index key is not found.
+			unset( $question[ 'description' ], $json_data[ 'description' ] );
+			unset( $question[ 'acceptedAnswer' ][ 'description' ] );
 
-			if ( ! empty( $qa_desc ) ) {
-				$json_data[ 'description' ] = $ret[ 'acceptedAnswer' ][ 'description' ] = $qa_desc;
-			} else {
-				unset( $json_data[ 'description' ], $ret[ 'acceptedAnswer' ][ 'description' ] );
-			}
-
-			/**
-			 * Calculate the number of answers.
-			 */
-			$answers = empty( $ret[ 'acceptedAnswer' ] ) ? 0 : 1;
-
-			if ( isset( $ret[ 'suggestedAnswer' ] ) ) {
-				if ( isset( $ret[ 'suggestedAnswer' ][ 0 ] ) ) {
-					$answers += count( $ret[ 'suggestedAnswer' ] );
-				} else {
-					$answers += 1;
-				}
-			}
-
-			$ret[ 'answerCount' ] = $answers;
-			
-			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+			return WpssoSchema::return_data_from_filter( $json_data, $question, $is_main );
 		}
 	}
 }
