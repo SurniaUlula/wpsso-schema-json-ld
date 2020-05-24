@@ -30,20 +30,18 @@ msgid ""
 "webpage (ie. the content) being reviewed."
 msgstr ""
 
-#: lib/filters/type/faqpage.php:62
+#: lib/filters/type/faqpage.php:70
 msgid "%d question added to the Schema FAQPage markup."
 msgid_plural "%d questions added to the Schema FAQPage markup."
 msgstr[0] ""
 msgstr[1] ""
 
-#: lib/filters/type/faqpage.php:70
+#: lib/filters/type/faqpage.php:78
 msgid "No question(s) found for the Schema FAQPage markup."
 msgstr ""
 
-#: lib/filters/type/faqpage.php:73
-msgid ""
-"Please note that Google requires at least one question for the Schema "
-"FAQPage markup."
+#: lib/filters/type/faqpage.php:81
+msgid "Google requires at least one question for the Schema FAQPage markup."
 msgstr ""
 
 #: lib/filters/type/howto.php:123

@@ -29,7 +29,8 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeFAQPage' ) ) {
 			}
 
 			$this->p->util->add_plugin_filters( $this, array(
-				'json_data_https_schema_org_faqpage' => 5,
+				'json_data_https_schema_org_faqpage'          => 5,
+				'json_data_validate_https_schema_org_faqpage' => 5,
 			) );
 		}
 
@@ -47,12 +48,19 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeFAQPage' ) ) {
 
 			WpssoSchema::add_posts_data( $json_data, $mod, $mt_og, $page_type_id, $is_main, $ppp, $prop_name_type_ids );
 
+			return $json_data;
+		}
+
+		public function filter_json_data_validate_https_schema_org_faqpage( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
+
 			if ( is_admin() ) {
 
 				$entity_count = 0;
 
 				if ( isset( $json_data[ 'mainEntity' ] ) ) {
+
 					if ( SucomUtil::is_non_assoc( $json_data[ 'mainEntity' ] ) ) {
+
 						$entity_count = count( $json_data[ 'mainEntity' ] );
 					}
 				}
@@ -70,7 +78,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeFAQPage' ) ) {
 					$notice_msg = __( 'No question(s) found for the Schema FAQPage markup.',
 						'wpsso-schema-json-ld' ) . ' ';
 
-					$notice_msg .= __( 'Please note that Google requires at least one question for the Schema FAQPage markup.',
+					$notice_msg .= __( 'Google requires at least one question for the Schema FAQPage markup.',
 						'wpsso-schema-json-ld' );
 
 					$this->p->notice->err( $notice_msg );
