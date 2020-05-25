@@ -312,7 +312,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.10.0-dev.1 (2020/05/24)**
+**Version 3.10.0-dev.2 (2020/05/25)**
 
 * **New Features**
 	* None.
@@ -321,11 +321,13 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* Added a WpssoJsonFiltersTypeFAQPage class method to validate Schema FAQPage markup.
+	* Added a `WpssoJsonFiltersTypeFAQPage->filter_json_data_validate_https_schema_org_faqpage()` method to validate Schema FAQPage markup.
+	* Renamed the WpssoJsonProAdminMetaEdit class to WpssoJsonProAdminEdit.
+	* Renamed the WpssoJsonStdAdminMetaEdit class to WpssoJsonStdAdminEdit.
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v7.7.0-dev.1.
+	* WPSSO Core v7.7.0-dev.2.
 
 **Version 3.9.0 (2020/05/22)**
 
@@ -494,9 +496,9 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 
 == Upgrade Notice ==
 
-= 3.10.0-dev.1 =
+= 3.10.0-dev.2 =
 
-(2020/05/24) Added a WpssoJsonFiltersTypeFAQPage class method to validate Schema FAQPage markup.
+(2020/05/25) Added a method to validate Schema FAQPage markup.
 
 = 3.9.0 =
 
