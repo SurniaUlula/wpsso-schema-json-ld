@@ -106,9 +106,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 			 * Javascript classes to hide/show rows by selected schema type.
 			 */
 			$schema_type_row_class             = WpssoSchema::get_schema_type_row_class( 'schema_type' );
-			$schema_review_item_type_row_class = WpssoSchema::get_schema_type_row_class( 'schema_review_item_type', array(
-				'creative_work'  => 'creative.work',
-			) );
+			$schema_review_item_type_row_class = WpssoSchema::get_schema_type_row_class( 'schema_review_item_type' );
 
 			/**
 			 * Metabox form rows.
@@ -767,17 +765,13 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 				 * Schema QA Page.
 				 */
 				'subsection_qa' => array(
-					'tr_class' => $schema_type_row_class[ 'qapage' ],
+					'tr_class' => $schema_type_row_class[ 'qa' ],
 					'td_class' => 'subsection',
 					'header'   => 'h5',
 					'label'    => _x( 'QA Page Information', 'metabox title', 'wpsso-schema-json-ld' ),
 				),
-				'schema_qa_msg' => array(
-					'tr_class'  => $schema_type_row_class[ 'qapage' ],
-					'table_row' => '<td colspan="2">' . $this->p->msgs->get_schema_qapage_msg() . '</td>',
-				),
 				'schema_qa_desc' => array(
-					'tr_class' => $schema_type_row_class[ 'qapage' ],
+					'tr_class' => $schema_type_row_class[ 'qa' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
 					'label'    => _x( 'QA Heading', 'option label', 'wpsso-schema-json-ld' ),

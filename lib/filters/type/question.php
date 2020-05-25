@@ -81,6 +81,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeQuestion' ) ) {
 			 * 	be an appropriate place to call out what that heading is.
 			 */
 			unset( $question[ 'description' ], $json_data[ 'description' ] );
+
 			unset( $question[ 'acceptedAnswer' ][ 'description' ] );
 
 			return WpssoSchema::return_data_from_filter( $json_data, $question, $is_main );
