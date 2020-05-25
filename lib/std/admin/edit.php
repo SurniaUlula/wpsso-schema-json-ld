@@ -9,9 +9,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
-if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
+if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 
-	class WpssoJsonStdAdminMetaEdit {
+	class WpssoJsonStdAdminEdit {
 
 		private $p;
 
@@ -24,27 +24,19 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 			}
 
 			$this->p->util->add_plugin_filters( $this, array( 
-				'meta_edit_rows' => array(
-					'post_edit_rows' => 4,
-					'term_edit_rows' => 4,
-					'user_edit_rows' => 4,
-				),
-				'meta_media_rows' => array(
-					'post_media_rows' => 4,
-					'term_media_rows' => 4,
-					'user_media_rows' => 4,
-				),
+				'metabox_sso_edit_rows'  => 4,
+				'metabox_sso_media_rows' => 4,
 			) );
 		}
 
-		public function filter_meta_edit_rows( $table_rows, $form, $head, $mod ) {
+		public function filter_metabox_sso_edit_rows( $table_rows, $form, $head_info, $mod ) {
 
 			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();
 			}
 
 			/**
-			 * Move options to the end of the table, just in case.
+			 * Move Schema options to the end of the table, just in case.
 			 */
 			foreach ( SucomUtil::preg_grep_keys( '/^(subsection_schema|schema_)/', $table_rows ) as $key => $row ) {
 				SucomUtil::move_to_end( $table_rows, $key );
@@ -1208,17 +1200,17 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				),
 			);
 
-			return $form->get_md_form_rows( $table_rows, $form_rows, $head, $mod );
+			return $form->get_md_form_rows( $table_rows, $form_rows, $head_info, $mod );
 		}
 
-		public function filter_meta_media_rows( $table_rows, $form, $head, $mod ) {
+		public function filter_metabox_sso_media_rows( $table_rows, $form, $head_info, $mod ) {
 
 			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();
 			}
 
 			/**
-			 * Move options to the end of the table, just in case.
+			 * Move Schema options to the end of the table, just in case.
 			 */
 			foreach ( SucomUtil::preg_grep_keys( '/^(subsection_schema|schema_)/', $table_rows ) as $key => $row ) {
 				SucomUtil::move_to_end( $table_rows, $key );
@@ -1267,7 +1259,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminMetaEdit' ) ) {
 				'content'  => $form->get_no_input_value( $media_info[ 'img_url' ], $css_class = 'wide' ),
 			);
 
-			return $form->get_md_form_rows( $table_rows, $form_rows, $head, $mod );
+			return $form->get_md_form_rows( $table_rows, $form_rows, $head_info, $mod );
 		}
 	}
 }

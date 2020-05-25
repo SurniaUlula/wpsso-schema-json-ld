@@ -3,6 +3,21 @@
 /**
  * Extract of translatable text strings from the lib/pro classes.
  */
+_x( 'Creative Work Information', 'metabox title', 'wpsso-schema-json-ld' );
+_x( 'Default Family Friendly', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Default Publisher', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Default Service Provider', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Event Information', 'metabox title', 'wpsso-schema-json-ld' );
+_x( 'Default Physical Venue', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Default Organizer Organization', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Default Organizer Person', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Default Performer Organization', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Default Performer Person', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Job Posting Information', 'metabox title', 'wpsso-schema-json-ld' );
+_x( 'Default Hiring Organization', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Default Job Location', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Review Information', 'metabox title', 'wpsso-schema-json-ld' );
+_x( 'Default Subject Webpage Type', 'option label', 'wpsso-schema-json-ld' );
 _x( 'days', 'option comment', 'wpsso-schema-json-ld' );
 _x( 'hours', 'option comment', 'wpsso-schema-json-ld' );
 _x( 'mins', 'option comment', 'wpsso-schema-json-ld' );
@@ -172,18 +187,3 @@ _x( 'Maximum Images', 'option label', 'wpsso' );
 _x( 'Image ID', 'option label', 'wpsso' );
 // translators: Please ignore - translation uses a different text domain.
 _x( 'or an Image URL', 'option label', 'wpsso' );
-_x( 'Creative Work Information', 'metabox title', 'wpsso-schema-json-ld' );
-_x( 'Default Family Friendly', 'option label', 'wpsso-schema-json-ld' );
-_x( 'Default Publisher', 'option label', 'wpsso-schema-json-ld' );
-_x( 'Default Service Provider', 'option label', 'wpsso-schema-json-ld' );
-_x( 'Event Information', 'metabox title', 'wpsso-schema-json-ld' );
-_x( 'Default Physical Venue', 'option label', 'wpsso-schema-json-ld' );
-_x( 'Default Organizer Organization', 'option label', 'wpsso-schema-json-ld' );
-_x( 'Default Organizer Person', 'option label', 'wpsso-schema-json-ld' );
-_x( 'Default Performer Organization', 'option label', 'wpsso-schema-json-ld' );
-_x( 'Default Performer Person', 'option label', 'wpsso-schema-json-ld' );
-_x( 'Job Posting Information', 'metabox title', 'wpsso-schema-json-ld' );
-_x( 'Default Hiring Organization', 'option label', 'wpsso-schema-json-ld' );
-_x( 'Default Job Location', 'option label', 'wpsso-schema-json-ld' );
-_x( 'Review Information', 'metabox title', 'wpsso-schema-json-ld' );
-_x( 'Default Subject Webpage Type', 'option label', 'wpsso-schema-json-ld' );

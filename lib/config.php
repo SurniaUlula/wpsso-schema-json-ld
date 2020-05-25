@@ -16,7 +16,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssojson' => array(			// Plugin acronym.
-					'version'     => '3.10.0-dev.1',	// Plugin version.
+					'version'     => '3.10.0-dev.2',	// Plugin version.
 					'opt_version' => '40',		// Increment when changing default option values.
 					'short'       => 'WPSSO JSON',	// Short plugin name.
 					'name'        => 'WPSSO Schema JSON-LD Markup',
@@ -36,7 +36,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '7.7.0-dev.1',
+							'min_version'   => '7.7.0-dev.2',
 						),
 					),
 
@@ -94,8 +94,8 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 						),
 						'pro' => array(
 							'admin' => array(
-								'meta-edit'      => 'Extend Meta Edit Settings',
-								'schema-general' => 'Extend Schema Markup Settings',
+								'edit'           => 'Edit Metabox Filters',
+								'schema-general' => 'Schema Markup Filters',
 							),
 						),
 						'shortcode' => array(
@@ -103,8 +103,8 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 						),
 						'std' => array(
 							'admin' => array(
-								'meta-edit'      => 'Extend Meta Edit Settings',
-								'schema-general' => 'Extend Schema Markup Settings',
+								'edit'           => 'Edit Metabox Filters',
+								'schema-general' => 'Schema Markup Filters',
 							),
 						),
 						'submenu' => array(
