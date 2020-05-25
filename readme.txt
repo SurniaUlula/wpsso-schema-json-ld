@@ -312,7 +312,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.10.0-dev.2 (2020/05/25)**
+**Version 3.10.0-dev.3 (2020/05/25)**
 
 * **New Features**
 	* None.
@@ -327,7 +327,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v7.7.0-dev.2.
+	* WPSSO Core v7.7.0-dev.3.
 
 **Version 3.9.0 (2020/05/22)**
 
@@ -496,7 +496,7 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 
 == Upgrade Notice ==
 
-= 3.10.0-dev.2 =
+= 3.10.0-dev.3 =
 
 (2020/05/25) Added a method to validate Schema FAQPage markup.
 
