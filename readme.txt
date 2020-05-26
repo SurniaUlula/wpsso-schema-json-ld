@@ -312,7 +312,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.10.0-dev.4 (2020/05/25)**
+**Version 3.10.0-dev.4 (2020/05/26)**
 
 * **New Features**
 	* None.
@@ -498,7 +498,7 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 
 = 3.10.0-dev.4 =
 
-(2020/05/25) Added a "X questions added to the Schema FAQPage markup" update notice when editing or saving a FAQPage.
+(2020/05/26) Added a "X questions added to the Schema FAQPage markup" update notice when editing or saving a FAQPage.
 
 = 3.9.0 =
 
