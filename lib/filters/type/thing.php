@@ -55,6 +55,10 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 			 * Property:
 			 *	additionalType
 			 */
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->log( 'getting additional types' );
+			}
+
 			$ret[ 'additionalType' ] = array();
 
 			if ( ! empty( $mod[ 'obj' ] ) ) {
@@ -79,6 +83,10 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 			 * Property:
 			 *	url
 			 */
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->log( 'getting url (fragment anchor or canonical url)' );
+			}
+
 			if ( empty( $mod[ 'is_public' ] ) ) {				// Since WPSSO Core v7.0.0.
 				$ret[ 'url' ] = WpssoUtil::get_fragment_anchor( $mod );	// Since WPSSO Core v7.0.0.
 			} else {
@@ -89,6 +97,10 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 			 * Property:
 			 *	sameAs
 			 */
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->log( 'getting same as' );
+			}
+
 			$ret[ 'sameAs' ] = array();
 
 			if ( ! empty( $mod[ 'is_public' ] ) ) {	// Since WPSSO Core v7.0.0.
@@ -98,6 +110,10 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 				}
 
 				if ( $mod[ 'is_post' ] ) {
+
+					if ( $this->p->debug->enabled ) {
+						$this->p->debug->log( 'getting post permalink' );
+					}
 
 					/**
 					 * Add the permalink, which may be different than the shared URL and the canonical URL.
@@ -110,6 +126,10 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 					$add_link_rel_shortlink = empty( $this->p->options[ 'add_link_rel_shortlink' ] ) ? false : true; 
 
 					if ( apply_filters( $this->p->lca . '_add_link_rel_shortlink', $add_link_rel_shortlink, $mod ) ) {
+
+						if ( $this->p->debug->enabled ) {
+							$this->p->debug->log( 'getting post shortlink' );
+						}
 
 						$ret[ 'sameAs' ][] = wp_get_shortlink( $mod[ 'id' ], 'post' );
 
@@ -131,12 +151,17 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 				/**
 				 * Add the shortened URL for posts (which may be different to the shortlink), terms, and users.
 				 */
-				if ( ! empty( $this->p->options[ 'plugin_shortener' ] ) && $this->p->options[ 'plugin_shortener' ] !== 'none' ) {
+				if ( ! empty( $mt_og[ 'og:url' ] ) ) {	// Just in case.
 
-					if ( ! empty( $mt_og[ 'og:url' ] ) ) {	// Just in case.
+					$shortener = $this->p->options[ 'plugin_shortener' ];
 
-						$ret[ 'sameAs' ][] = apply_filters( $this->p->lca . '_get_short_url', $mt_og[ 'og:url' ],
-							$this->p->options[ 'plugin_shortener' ], $mod );
+					if ( ! empty( $shortener ) && $shortener !== 'none' ) {
+
+						if ( $this->p->debug->enabled ) {
+							$this->p->debug->log( 'getting short url for ' . $mt_og[ 'og:url' ] );
+						}
+
+						$ret[ 'sameAs' ][] = apply_filters( $this->p->lca . '_get_short_url', $mt_og[ 'og:url' ], $shortener, $mod, $is_main );
 					}
 				}
 			}
@@ -146,11 +171,16 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 			 */
 			if ( ! empty( $mod[ 'obj' ] ) ) {
 
+				if ( $this->p->debug->enabled ) {
+					$this->p->debug->log( 'getting custom urls' );
+				}
+
 				$md_opts = $mod[ 'obj' ]->get_options( $mod[ 'id' ] );
 	
 				if ( is_array( $md_opts ) ) {	// Just in case
 	
 					foreach ( SucomUtil::preg_grep_keys( '/^schema_sameas_url_[0-9]+$/', $md_opts ) as $url ) {
+
 						$ret[ 'sameAs' ][] = SucomUtil::esc_url_encode( $url );
 					}
 				}
@@ -161,6 +191,10 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 	
 			WpssoSchema::check_sameas_prop_values( $ret );
 	
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->log_arr( 'sameAs', $ret[ 'sameAs' ] );
+			}
+
 			/**
 			 * Property:
 			 *	name
