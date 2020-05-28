@@ -178,6 +178,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 					break;
 
+				case 'schema_event_offer_price':
 				case 'schema_howto_prep_days':			// How-To Preparation Time.
 				case 'schema_howto_prep_hours':
 				case 'schema_howto_prep_mins':
@@ -186,29 +187,15 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_howto_total_hours':
 				case 'schema_howto_total_mins':
 				case 'schema_howto_total_secs':
+				case 'schema_job_salary':
 				case 'schema_movie_duration_days':		// Movie Runtime.
 				case 'schema_movie_duration_hours':
 				case 'schema_movie_duration_mins':
 				case 'schema_movie_duration_secs':
-				case 'schema_recipe_prep_days':			// Recipe Preparation Time.
-				case 'schema_recipe_prep_hours':
-				case 'schema_recipe_prep_mins':
-				case 'schema_recipe_prep_secs':
 				case 'schema_recipe_cook_days':			// Recipe Cooking Time.
 				case 'schema_recipe_cook_hours':
 				case 'schema_recipe_cook_mins':
 				case 'schema_recipe_cook_secs':
-				case 'schema_recipe_total_days':		// Recipe Total Time.
-				case 'schema_recipe_total_hours':
-				case 'schema_recipe_total_mins':
-				case 'schema_recipe_total_secs':
-
-					return 'pos_int';
-
-					break;
-
-				case 'schema_event_offer_price':
-				case 'schema_job_salary':
 				case 'schema_recipe_nutri_cal':
 				case 'schema_recipe_nutri_prot':
 				case 'schema_recipe_nutri_fib':
@@ -219,6 +206,14 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_recipe_nutri_sat_fat':
 				case 'schema_recipe_nutri_unsat_fat':
 				case 'schema_recipe_nutri_chol':
+				case 'schema_recipe_prep_days':			// Recipe Preparation Time.
+				case 'schema_recipe_prep_hours':
+				case 'schema_recipe_prep_mins':
+				case 'schema_recipe_prep_secs':
+				case 'schema_recipe_total_days':		// Recipe Total Time.
+				case 'schema_recipe_total_hours':
+				case 'schema_recipe_total_mins':
+				case 'schema_recipe_total_secs':
 				case 'schema_review_rating':
 				case 'schema_review_rating_from':
 				case 'schema_review_rating_to':
