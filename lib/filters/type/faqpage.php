@@ -53,7 +53,10 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeFAQPage' ) ) {
 
 		public function filter_json_data_validate_https_schema_org_faqpage( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
 
-			if ( is_admin() ) {
+			$is_admin = is_admin();
+			$user_id  = get_current_user_id();
+
+			if ( $is_admin && $user_id ) {
 
 				$entity_count = 0;
 
@@ -65,13 +68,15 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeFAQPage' ) ) {
 					}
 				}
 			
+				$notice_key = $mod[ 'name' ] . '-' . $mod[ 'id' ] . '-questions-added-to-faqpage';
+
 				if ( $entity_count ) {
 
 					$notice_msg = sprintf( _n( '%d question added to the Schema FAQPage markup.',
 						'%d questions added to the Schema FAQPage markup.', $entity_count,
 							'wpsso-schema-json-ld' ), $entity_count );
 
-					$this->p->notice->upd( $notice_msg );
+					$this->p->notice->upd( $notice_msg, $user_id, $notice_key );
 
 				} else {
 
@@ -81,7 +86,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeFAQPage' ) ) {
 					$notice_msg .= __( 'Google requires at least one question for the Schema FAQPage markup.',
 						'wpsso-schema-json-ld' );
 
-					$this->p->notice->err( $notice_msg );
+					$this->p->notice->err( $notice_msg, $user_id, $notice_key );
 				}
 			}
 
