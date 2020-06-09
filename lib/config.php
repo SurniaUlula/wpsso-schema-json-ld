@@ -16,7 +16,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssojson' => array(			// Plugin acronym.
-					'version'     => '3.10.0',	// Plugin version.
+					'version'     => '3.11.0-dev.1',	// Plugin version.
 					'opt_version' => '40',		// Increment when changing default option values.
 					'short'       => 'WPSSO JSON',	// Short plugin name.
 					'name'        => 'WPSSO Schema JSON-LD Markup',
@@ -36,7 +36,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '7.7.0',
+							'min_version'   => '7.9.0-dev.1',
 						),
 					),
 
@@ -58,6 +58,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 							'type' => array(
 								'article'             => '(code) Schema Type Article (schema_type:article)',
 								'blog'                => '(code) Schema Type Blog (schema_type:blog)',
+								'book'                => '(code) Schema Type Book (schema_type:book)',
 								'brand'               => '(code) Schema Type Brand (schema_type:brand)',
 								'claimreview'         => '(code) Schema Type Claim Review (schema_type:review.claim)',
 								'collectionpage'      => '(code) Schema Type Collection Page (schema_type:webpage.collection)',
