@@ -312,6 +312,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 3.11.0-dev.1 (2020/06/09)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Added support for the Schema Book type with an 'isbn' property value.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v5.6.
+	* WordPress v4.2.
+	* WPSSO Core v7.7.0.
+
 **Version 3.10.0 (2020/05/30)**
 
 * **New Features**
@@ -495,6 +510,10 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 	* WPSSO Core v6.26.1.
 
 == Upgrade Notice ==
+
+= 3.11.0-dev.1 =
+
+(2020/06/09) Added support for the Schema Book type with an 'isbn' property value.
 
 = 3.10.0 =
 
