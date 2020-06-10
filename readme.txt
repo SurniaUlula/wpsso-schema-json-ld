@@ -312,12 +312,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.11.0-dev.1 (2020/06/09)**
+**Version 3.11.0-dev.1 (2020/06/10)**
 
 * **New Features**
-	* None.
-* **Improvements**
 	* Added support for the Schema Book type with an 'isbn' property value.
+* **Improvements**
+	* None.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -332,7 +332,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **New Features**
 	* None.
 * **Improvements**
-	* Added a "X questions added to the Schema FAQPage markup" update notice when editing or saving a FAQPage.
+	* Added a "# questions added to the Schema FAQPage markup" update notice when editing or saving a FAQPage.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -472,13 +472,13 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 Added Schema Event options for virtual, postponed, and canceled events as [suggested by Google on March 17th, 2020](https://webmasters.googleblog.com/2020/03/new-properties-virtual-or-canceled-events.html).
 
 * **New Features**
-	* None.
-* **Improvements**
 	* Added new options for the Schema Event type in the Document SSO metabox.
 		* Event Attendance
 		* Event Online URL
 		* Event Status
 		* Event Previous Start
+* **Improvements**
+	* None.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -513,7 +513,7 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 
 = 3.11.0-dev.1 =
 
-(2020/06/09) Added support for the Schema Book type with an 'isbn' property value.
+(2020/06/10) Added support for the Schema Book type with an 'isbn' property value.
 
 = 3.10.0 =
 
