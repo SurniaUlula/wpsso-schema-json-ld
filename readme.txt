@@ -10,7 +10,7 @@ Tags: schema.org, schema, rich snippets, structured data, rich results, woocomme
 Contributors: jsmoriss
 Requires PHP: 5.6
 Requires At Least: 4.2
-Tested Up To: 5.4.1
+Tested Up To: 5.4.2
 WC Tested Up To: 4.2.0
 Stable Tag: 3.10.0
 
