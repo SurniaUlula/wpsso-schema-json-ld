@@ -132,13 +132,9 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 					return 'one_line';
 
-					break;
-
 				case 'schema_keywords':				// Keywords.
 
 					return 'csv_blank';
-
-					break;
 
 				case 'schema_def_event_location_id':		// Default Physical Venue.
 				case 'schema_def_event_organizer_org_id':	// Default Organizer Organization.
@@ -175,8 +171,6 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_type':				// Schema Type.
 
 					return 'not_blank';
-
-					break;
 
 				case 'schema_event_offer_price':
 				case 'schema_howto_prep_days':			// How-To Preparation Time.
@@ -220,8 +214,6 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 					return 'blank_num';
 
-					break;
-
 				case 'schema_addl_type_url':			// Microdata Type URLs.
 				case 'schema_sameas_url':			// Same-As URLs.
 				case 'schema_ispartof_url':			// Is Part of URL.
@@ -234,13 +226,9 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 					return 'url';
 
-					break;
-
 				case 'schema_howto_step_section':		// How-To Section (radio buttons).
 
 					return 'checkbox';
-
-					break;
 			}
 
 			return $type;
