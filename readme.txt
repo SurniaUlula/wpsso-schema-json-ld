@@ -12,7 +12,7 @@ Requires PHP: 5.6
 Requires At Least: 4.2
 Tested Up To: 5.4.2
 WC Tested Up To: 4.2.0
-Stable Tag: 3.10.0
+Stable Tag: 3.11.0
 
 Google Rich Results and Structured Data for Articles, Carousels, Events, FAQ Pages, How-Tos, Local SEO, Products, Recipes, Ratings, Reviews, and More.
 
@@ -514,48 +514,4 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 = 3.11.0 =
 
 (2020/06/12) Added support for the Schema Book type with an 'isbn' property value.
-
-= 3.10.0 =
-
-(2020/05/30) Added a "X questions added to the Schema FAQPage markup" update notice when editing or saving a FAQPage.
-
-= 3.9.0 =
-
-(2020/05/22) Added a $context argument value for `WpssoSchema->get_schema_types_select()` calls.
-
-= 3.8.0 =
-
-(2020/05/14) Added an 'isPartOf' property to the Schema Article and WebPage types.
-
-= 3.7.0 =
-
-(2020/05/09) Refactored the required plugin check to (optionally) check the class name and a version constant.
-
-= 3.6.0 =
-
-(2020/05/01) Added recursion checks in Schema Product and SoftwareApplication to prevent recursion for an itemOffered within a Schema Offer.
-
-= 3.5.0 =
-
-(2020/04/28) Minor update for option labels in WPSSO Core v7.2.0.
-
-= 3.4.0 =
-
-(2020/04/25) Updated multilingual option method calls for optimized methods in WPSSO Core v7.1.0.
-
-= 3.3.0 =
-
-(2020/04/17) Added support for WPSSO FAQ shortcodes with a non-public 'question' post type and 'faq_category' taxonomy.
-
-= 3.2.0 =
-
-(2020/04/06) Updated "Requires At Least" to WordPress v4.2. Refactored WPSSO Core active and minimum version dependency checks.
-
-= 3.1.0 =
-
-(2020/03/31) Added Schema Event options for virtual, postponed, and canceled events
-
-= 3.0.0 =
-
-(2020/03/27) Moved all Schema type and sub-type modules from the Premium version to the Free / Standard version. Refactored the Schema Markup settings page metaboxes and tabs.
 
