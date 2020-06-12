@@ -312,7 +312,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.11.0-rc.1 (2020/06/12)**
+**Version 3.11.0 (2020/06/12)**
 
 * **New Features**
 	* Added support for the Schema Book type with an 'isbn' property value.
@@ -511,7 +511,7 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 
 == Upgrade Notice ==
 
-= 3.11.0-rc.1 =
+= 3.11.0 =
 
 (2020/06/12) Added support for the Schema Book type with an 'isbn' property value.
 
