@@ -234,6 +234,9 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			return $type;
 		}
 
+		/**
+		 * $doing_upgrade added in WPSSO Core v4.4.0.
+		 */
 		public function filter_save_options( $opts, $options_name, $network, $doing_upgrade ) {
 
 			if ( $this->p->debug->enabled ) {
