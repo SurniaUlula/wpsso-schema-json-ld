@@ -235,9 +235,9 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 		}
 
 		/**
-		 * $doing_upgrade added in WPSSO Core v4.4.0.
+		 * $network is true if saving multisite network settings.
 		 */
-		public function filter_save_options( $opts, $options_name, $network, $doing_upgrade ) {
+		public function filter_save_setting_options( array $opts, $network, $doing_upgrade ) {
 
 			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();
@@ -247,21 +247,17 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				return $opts;	// Nothing to do.
 			}
 
-			$def_opts = null;	// Optimize and only get array when needed.
-
 			/**
 			 * Adjust / cleanup options.
 			 */
 			if ( empty( $opts[ 'plugin_wpssojson_tid' ] ) && ! $this->p->check->pp( 'wpssojson', $li = false ) ) {
 
-				// translators: Please ignore - translation uses a different text domain.
-				$notice_msg = __( 'Non-standard value found for the "%s" option - resetting the option to its default value.', 'wpsso' );
-
-				if ( null === $def_opts ) {	// Only get default options once.
-					$def_opts = $this->p->opt->get_defaults();
-				}
+				$def_opts = $this->p->opt->get_defaults();
 
 				$schema_defs = SucomUtil::preg_grep_keys( '/^schema_def_/', $def_opts );
+
+				// translators: Please ignore - translation uses a different text domain.
+				$notice_msg = __( 'Non-standard value found for the "%s" option - resetting the option to its default value.', 'wpsso' );
 
 				foreach ( $schema_defs as $opt_key => $def_val ) {
 
