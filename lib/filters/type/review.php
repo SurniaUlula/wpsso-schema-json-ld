@@ -141,6 +141,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 				 * Add the creative work published date, if one is available.
 				 */
 				if ( $date = WpssoSchema::get_opts_date_iso( $md_opts, 'schema_review_item_cw_pub' ) ) {
+
 					$item[ 'datePublished' ] = $date;
 				}
 
@@ -148,6 +149,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 				 * Add the creative work created date, if one is available.
 				 */
 				if ( $date = WpssoSchema::get_opts_date_iso( $md_opts, 'schema_review_item_cw_created' ) ) {
+
 					$item[ 'dateCreated' ] = $date;
 				}
 

@@ -172,6 +172,10 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 					return 'not_blank';
 
+				case 'schema_book_audio_duration_days':		// Audiobook Duration.
+				case 'schema_book_audio_duration_hours':
+				case 'schema_book_audio_duration_mins':
+				case 'schema_book_audio_duration_secs':
 				case 'schema_event_offer_price':
 				case 'schema_howto_prep_days':			// How-To Preparation Time.
 				case 'schema_howto_prep_hours':
@@ -490,6 +494,14 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				'schema_license_url'     => '',						// License URL.
 				'schema_pub_org_id'      => $opts[ 'schema_def_pub_org_id' ],		// Publisher.
 				'schema_prov_org_id'     => $opts[ 'schema_def_prov_org_id' ],		// Service Provider.
+
+				/**
+				 * Schema Audiobook.
+				 */
+				'schema_book_audio_duration_days'  => 0,	// Audiobook Duration (Days).
+				'schema_book_audio_duration_hours' => 0,	// Audiobook Duration (Hours).
+				'schema_book_audio_duration_mins'  => 0,	// Audiobook Duration (Mins).
+				'schema_book_audio_duration_secs'  => 0,	// Audiobook Duration (Secs).
 
 				/**
 				 * Schema Event.

@@ -59,6 +59,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeRecipe' ) ) {
 			 * 	recipeCuisine
 			 */
 			if ( ! empty( $md_opts[ 'schema_recipe_cuisine' ] ) ) {
+
 				$ret[ 'recipeCuisine' ] = (string) $md_opts[ 'schema_recipe_cuisine' ];
 			}
 
@@ -67,6 +68,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeRecipe' ) ) {
 			 * 	recipeCategory
 			 */
 			if ( ! empty( $md_opts[ 'schema_recipe_course' ] ) ) {
+
 				$ret[ 'recipeCategory' ] = (string) $md_opts[ 'schema_recipe_course' ];
 			}
 
@@ -75,6 +77,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeRecipe' ) ) {
 			 * 	recipeYield
 			 */
 			if ( ! empty( $md_opts[ 'schema_recipe_yield' ] ) ) {
+
 				$ret[ 'recipeYield' ] = (string) $md_opts[ 'schema_recipe_yield' ];
 			}
 
@@ -83,6 +86,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeRecipe' ) ) {
 			 * 	cookingMethod
 			 */
 			if ( ! empty( $md_opts[ 'schema_recipe_cook_method' ] ) ) {
+
 				$ret[ 'cookingMethod' ] = (string) $md_opts[ 'schema_recipe_cook_method' ];
 			}
 
@@ -103,6 +107,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeRecipe' ) ) {
 			 * 	recipeIngredient (supersedes ingredients)
 			 */
 			foreach ( SucomUtil::preg_grep_keys( '/^schema_recipe_ingredient_[0-9]+$/', $md_opts ) as $md_key => $value ) {
+
 				$ret[ 'recipeIngredient' ][] = $value;
 			}
 
@@ -111,6 +116,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeRecipe' ) ) {
 			 * 	recipeInstructions
 			 */
 			foreach ( SucomUtil::preg_grep_keys( '/^schema_recipe_instruction_[0-9]+$/', $md_opts ) as $md_key => $value ) {
+
 				$ret[ 'recipeInstructions' ][] = $value;
 			}
 

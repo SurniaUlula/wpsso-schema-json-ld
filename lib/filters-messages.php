@@ -144,6 +144,11 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
+				case 'tooltip-meta-schema_book_audio_duration_time':	// Audiobook Duration.
+
+					$text = __( 'The total duration of the audio recording.', 'wpsso-schema-json-ld' );
+
+				 	break;
 				case 'tooltip-meta-schema_event_lang':			// Event Language.
 
 					$text = __( 'The language (aka locale) for the event performance.', 'wpsso-schema-json-ld' );
@@ -337,25 +342,25 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_movie_actor_person_names':	// Cast Names
+				case 'tooltip-meta-schema_movie_actor_person_names':	// Cast Names.
 
 					$text = __( 'The name of one or more actors appearing in the movie.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_movie_director_person_names':	// Director Names
+				case 'tooltip-meta-schema_movie_director_person_names':	// Director Names.
 
 					$text = __( 'The name of one or more directors of the movie.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_movie_prodco_org_id':		// Movie Production Company
+				case 'tooltip-meta-schema_movie_prodco_org_id':		// Movie Production Company.
 
 					$text = __( 'The principle production company or studio responsible for the movie.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_movie_duration_time':		// Movie Runtime
+				case 'tooltip-meta-schema_movie_duration_time':		// Movie Runtime.
 
 					$text = __( 'The total movie runtime from the start to the end of the credits.', 'wpsso-schema-json-ld' );
 
