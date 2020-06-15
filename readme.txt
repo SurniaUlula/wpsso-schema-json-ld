@@ -312,20 +312,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.12.0-dev.1 (2020/06/14)**
+**Version 3.12.0-dev.2 (2020/06/15)**
 
 * **New Features**
-	* None.
+	* Added an "Audiobook Information" section in the Document SSO metabox with a new Audiobook Duration option.
 * **Improvements**
 	* None.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
+	* Added support for the Schema Audiobook type in lib/filters/type/audiobook.php with a 'duration' property value.
 	* Replaced the 'wpsso_save_options' filter with 'wpsso_save_setting_options' (new in WPSSO Core v7.10.0).
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v7.10.0-dev.1.
+	* WPSSO Core v7.10.0-dev.2.
 
 **Version 3.11.0 (2020/06/12)**
 
@@ -526,9 +527,9 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 
 == Upgrade Notice ==
 
-= 3.12.0-dev.1 =
+= 3.12.0-dev.2 =
 
-(2020/06/14) Replaced the 'wpsso_save_options' filter with 'wpsso_save_setting_options'.
+(2020/06/15) Added an "Audiobook Information" section in the Document SSO metabox with a new Audiobook Duration option.
 
 = 3.11.0 =
 
