@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD (WPSSO JSON) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.10.0\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.11.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-05-28 08:56-0700\n"
-"PO-Revision-Date: 2020-05-28 08:56-0700\n"
+"POT-Creation-Date: 2020-06-12 07:15-0700\n"
+"PO-Revision-Date: 2020-06-12 07:15-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -19,7 +19,7 @@ msgstr ""
 msgid "An aggregate rating value for this markup has been ignored &mdash; <a href=\"%1$s\">Google does not allow an aggregate rating value for the Schema Type %2$s</a>."
 msgstr "Une note agrégé pour ce balisage a été ignorée &mdash; <a href=\"%1$s\">Google n'autorise pas de note agrégé pour le type de schéma %2$s</a> ."
 
-#: lib/filters/type/claimreview.php:76 lib/filters.php:442
+#: lib/filters/type/claimreview.php:76 lib/filters.php:430
 msgid "A claim review cannot be the subject of another claim review."
 msgstr "Un examen d'évaluation ne peut pas être le sujet d'un autre examen d'évaluation."
 
@@ -27,17 +27,17 @@ msgstr "Un examen d'évaluation ne peut pas être le sujet d'un autre examen d'�
 msgid "CreativeWork will be used instead as the Schema type for the subject of the webpage (ie. the content) being reviewed."
 msgstr "CreativeWork sera utilisé à la place comme type de Schéma pour le sujet de la page Web (c'est-à-dire le contenu) en cours d'évaluation."
 
-#: lib/filters/type/faqpage.php:70
+#: lib/filters/type/faqpage.php:75
 msgid "%d question added to the Schema FAQPage markup."
 msgid_plural "%d questions added to the Schema FAQPage markup."
 msgstr[0] "%d question ajoutée au balisage de Schéma FAQPage."
 msgstr[1] "%d questions ajoutées au balisage de Schéma FAQPage."
 
-#: lib/filters/type/faqpage.php:78
+#: lib/filters/type/faqpage.php:83
 msgid "No question(s) found for the Schema FAQPage markup."
 msgstr "Aucune question trouvée pour le balisage de Schéma FAQPage."
 
-#: lib/filters/type/faqpage.php:81
+#: lib/filters/type/faqpage.php:86
 msgid "Google requires at least one question for the Schema FAQPage markup."
 msgstr "Google requiert au moins une question pour le balisage de Schéma FAQPage."
 
@@ -560,11 +560,11 @@ msgid "Select a default Schema type for the Schema Review subject URL."
 msgstr "Sélectionnez un type de Schéma par défaut pour l'URL du sujet de l'évaluation."
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/filters.php:267
+#: lib/filters.php:255
 msgid "Non-standard value found for the \"%s\" option - resetting the option to its default value."
 msgstr "Valeur non standard trouvée pour l'option \"%s\" - réinitialisation de l'option à sa valeur par défaut."
 
-#: lib/filters.php:444
+#: lib/filters.php:432
 msgid "Please select a subject webpage type that better describes the subject of the webpage (ie. the content) being reviewed."
 msgstr "SVP sélectionner un type de page Web du sujet qui décrit mieux le sujet de la page Web (c'est-à-dire le contenu) en cours de révision."
 
@@ -1618,7 +1618,7 @@ msgctxt "option label"
 msgid "Add 5 Star Rating If No Rating"
 msgstr "Ajouter note 5 étoiles si aucune note"
 
-#: lib/submenu/schema-shortcode.php:51
+#: lib/submenu/schema-shortcode.php:56
 msgctxt "metabox title"
 msgid "Schema Shortcode"
 msgstr "Code court de Schéma"
