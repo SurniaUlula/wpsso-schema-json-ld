@@ -312,7 +312,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.12.0-rc.1 (2020/06/19)**
+**Version 3.12.0 (2020/06/19)**
 
 * **New Features**
 	* Added an "Audiobook Information" section in the Document SSO metabox with a new Audiobook Duration option.
@@ -326,7 +326,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v7.10.0-rc.1.
+	* WPSSO Core v7.10.0.
 
 **Version 3.11.0 (2020/06/12)**
 
@@ -527,7 +527,7 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 
 == Upgrade Notice ==
 
-= 3.12.0-rc.1 =
+= 3.12.0 =
 
 (2020/06/19) Added an "Audiobook Information" section in the Document SSO metabox with a new Audiobook Duration option.
 
