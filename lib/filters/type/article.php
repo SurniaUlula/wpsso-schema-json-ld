@@ -41,8 +41,6 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeArticle' ) ) {
 
 			$ret = array();
 
-			$ret[ 'isPartOf' ][] = $this->p->schema->get_json_data_home_website();	// Since WPSSO Core v7.5.0.
-
 			/**
 			 * Property:
 			 *	articleSection

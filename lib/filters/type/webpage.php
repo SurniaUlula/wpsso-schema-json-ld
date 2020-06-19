@@ -41,8 +41,6 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeWebpage' ) ) {
 
 			$ret = array();
 
-			$ret[ 'isPartOf' ][] = $this->p->schema->get_json_data_home_website();	// Since WPSSO Core v7.5.0.
-
 			$crumb_data = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_breadcrumb', 
 				array(), $mod, $mt_og, $page_type_id, $is_main );
 
