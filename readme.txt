@@ -312,7 +312,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.12.0 (2020/06/19)**
+**Version 3.12.0 (2020/06/20)**
 
 * **New Features**
 	* Added an "Audiobook Information" section in the Document SSO metabox with a new Audiobook Duration option.
@@ -529,7 +529,7 @@ Added Schema Event options for virtual, postponed, and canceled events as [sugge
 
 = 3.12.0 =
 
-(2020/06/19) Added an "Audiobook Information" section in the Document SSO metabox with a new Audiobook Duration option.
+(2020/06/20) Added an "Audiobook Information" section in the Document SSO metabox with a new Audiobook Duration option.
 
 = 3.11.0 =
 
