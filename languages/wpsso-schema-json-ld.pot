@@ -1754,7 +1754,7 @@ msgctxt "option label"
 msgid "Add 5 Star Rating If No Rating"
 msgstr ""
 
-#: lib/submenu/schema-shortcode.php:56
+#: lib/submenu/schema-shortcode.php:61
 msgctxt "metabox title"
 msgid "Schema Shortcode"
 msgstr ""
