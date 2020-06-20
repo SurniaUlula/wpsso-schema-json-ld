@@ -322,11 +322,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None.
 * **Developer Notes**
 	* Added support for the Schema Audiobook type in lib/filters/type/audiobook.php with a 'duration' property value.
-	* Replaced the 'wpsso_save_options' filter with 'wpsso_save_setting_options' (new in WPSSO Core v7.10.0).
+	* Replaced the 'wpsso_save_options' filter with 'wpsso_save_setting_options' (new in WPSSO Core v7.10.1).
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v7.10.0.
+	* WPSSO Core v7.10.1.
 
 **Version 3.11.0 (2020/06/12)**
 
