@@ -56,10 +56,10 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			$this->upg = new WpssoJsonFiltersUpgrade( $plugin );
 
 			$this->p->util->add_plugin_filters( $this, array(
-				'option_type'     => 2,
-				'save_options'    => 4,
-				'save_md_options' => 2,
-				'get_md_defaults' => 2,
+				'option_type'          => 2,
+				'save_setting_options' => 3,
+				'save_md_options'      => 2,
+				'get_md_defaults'      => 2,
 			) );
 
 			if ( is_admin() ) {
