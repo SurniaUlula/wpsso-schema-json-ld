@@ -93,6 +93,11 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 			switch ( $base_key ) {
 
+				case 'schema_howto_step_section':						// How-To Section (radio buttons).
+				case ( 0 === strpos( $base_key, 'schema_job_empl_type_' ) ? true : false ):	// Employment Type.
+
+					return 'checkbox';
+
 				case 'schema_title':				// Name / Title.
 				case 'schema_title_alt':			// Alternate Name.
 				case 'schema_desc':				// Description.
@@ -229,10 +234,6 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_review_claim_first_url':		// First Appearance URL.
 
 					return 'url';
-
-				case 'schema_howto_step_section':		// How-To Section (radio buttons).
-
-					return 'checkbox';
 			}
 
 			return $type;

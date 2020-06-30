@@ -20,7 +20,7 @@ msgid ""
 "%2$s</a>."
 msgstr ""
 
-#: lib/filters/type/claimreview.php:76 lib/filters.php:433
+#: lib/filters/type/claimreview.php:76 lib/filters.php:434
 msgid "A claim review cannot be the subject of another claim review."
 msgstr ""
 
@@ -677,13 +677,13 @@ msgid "Select a default Schema type for the Schema Review subject URL."
 msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/filters.php:264
+#: lib/filters.php:265
 msgid ""
 "Non-standard value found for the \"%s\" option - resetting the option to its "
 "default value."
 msgstr ""
 
-#: lib/filters.php:435
+#: lib/filters.php:436
 msgid ""
 "Please select a subject webpage type that better describes the subject of "
 "the webpage (ie. the content) being reviewed."
