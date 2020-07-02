@@ -16,8 +16,8 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssojson' => array(			// Plugin acronym.
-					'version'     => '3.12.1',	// Plugin version.
-					'opt_version' => '40',		// Increment when changing default option values.
+					'version'     => '3.13.0-dev.1',	// Plugin version.
+					'opt_version' => '41',		// Increment when changing default option values.
 					'short'       => 'WPSSO JSON',	// Short plugin name.
 					'name'        => 'WPSSO Schema JSON-LD Markup',
 					'desc'        => 'Google Rich Results and Structured Data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Videos, and More.',
@@ -36,7 +36,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '7.10.1',
+							'min_version'   => '7.12.0-dev.1',
 						),
 					),
 

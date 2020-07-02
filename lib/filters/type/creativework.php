@@ -89,8 +89,8 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 					 * than one value to a property array.
 					 */
 					foreach ( array(
-						'schema_pub_org_id'  => 'publisher',
 						'schema_prov_org_id' => 'provider',
+						'schema_pub_org_id'  => 'publisher',
 					) as $md_key => $prop_name ) {
 	
 						$md_val = $mod[ 'obj' ]->get_options( $mod[ 'id' ], $md_key, $filter_opts = true, $pad_opts = true );
@@ -98,7 +98,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 						if ( $md_val === null || $md_val === '' || $md_val === 'none' ) {
 							continue;
 						}
-	
+
 						WpssoSchemaSingle::add_organization_data( $ret[ $prop_name ], $mod, $md_val, $org_logo_key, $list_element = false );
 					}
 				}

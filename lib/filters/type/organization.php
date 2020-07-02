@@ -28,32 +28,12 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeOrganization' ) ) {
 				$this->p->debug->mark();
 			}
 
-			$this->p->util->add_plugin_filters( $this, array(
+			/**
+			 * Use the WpssoSchema filter.
+			 */
+			$this->p->util->add_plugin_filters( $this->p->schema, array(
 				'json_data_https_schema_org_organization' => 5,
 			) );
-		}
-
-		public function filter_json_data_https_schema_org_organization( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
-
-			if ( $this->p->debug->enabled ) {
-				$this->p->debug->mark();
-			}
-
-			$ret = $this->p->schema->filter_json_data_https_schema_org_organization( $json_data, $mod, $mt_og, $page_type_id, $is_main );
-
-			$size_name = $this->p->lca . '-schema';
-
-			/**
-			 * Property:
-			 *	image as https://schema.org/ImageObject
-			 */
-			if ( $this->p->debug->enabled ) {
-				$this->p->debug->log( 'adding image property for organization (videos disabled)' );
-			}
-
-			WpssoSchema::add_media_data( $ret, $mod, $mt_og, $size_name, $add_video = false );
-
-			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
 		}
 	}
 }

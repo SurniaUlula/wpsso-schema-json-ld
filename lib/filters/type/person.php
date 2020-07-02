@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePerson' ) ) {
 			}
 
 			/**
-			 * Use the WpssoSchema method / filter.
+			 * Use the WpssoSchema filter.
 			 */
 			$this->p->util->add_plugin_filters( $this->p->schema, array(
 				'json_data_https_schema_org_person' => 5,

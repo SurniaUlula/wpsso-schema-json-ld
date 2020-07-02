@@ -191,6 +191,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 				$all_reviews, $mod, $mt_og, $page_type_id, $is_main );
 
 			if ( ! empty( $all_reviews ) ) {
+
 				$ret[ 'review' ] = $all_reviews;
 			}
 

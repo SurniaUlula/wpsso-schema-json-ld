@@ -35,7 +35,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 			$this->maybe_show_language_notice();
 
 			$metabox_id      = 'general';
-			$metabox_title   = _x( 'Schema Markup Settings', 'metabox title', 'wpsso-schema-json-ld' );
+			$metabox_title   = _x( 'Schema Markup', 'metabox title', 'wpsso-schema-json-ld' );
 			$metabox_screen  = $this->pagehook;
 			$metabox_context = 'normal';
 			$metabox_prio    = 'default';
@@ -67,8 +67,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 			$filter_name = SucomUtil::sanitize_hookname( $this->p->lca . '_' . $metabox_id . '_tabs' );
 
 			$tabs = apply_filters( $filter_name, array( 
-				'knowledge_graph' => _x( 'Knowledge Graph', 'metabox tab', 'wpsso-schema-json-ld' ),
-				'schema_props'    => _x( 'Schema Properties', 'metabox tab', 'wpsso-schema-json-ld' ),
+				'schema_general'  => _x( 'General Settings', 'metabox tab', 'wpsso-schema-json-ld' ),
 				'schema_defaults' => _x( 'Schema Defaults', 'metabox tab', 'wpsso-schema-json-ld' ),
 			) );
 
@@ -135,18 +134,9 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 
 			switch ( $metabox_id . '-' . $tab_key ) {
 
-				/**
-				 * Schema Markup metabox.
-				 */
-				case 'json-general-knowledge_graph':
+				case 'json-general-schema_general':
 
-					$this->add_schema_knowledge_graph_table_rows( $table_rows, $this->form );
-
-					break;
-
-				case 'json-general-schema_props':
-
-					$this->add_schema_props_table_rows( $table_rows, $this->form );
+					$this->add_schema_general_table_rows( $table_rows, $this->form );
 
 					break;
 
@@ -180,7 +170,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 			return $table_rows;
 		}
 
-		private function add_schema_props_table_rows( array &$table_rows, $form ) {
+		private function add_schema_general_table_rows( array &$table_rows, $form ) {
 
 			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();
