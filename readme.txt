@@ -312,6 +312,23 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 3.13.0-dev.1 (2020/07/02)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Added a new "WebSite Publisher Type" option under the SSO &gt; Schema Markup &gt; General Settings tab.
+	* Renamed the Schema Properties tab to General Settings.
+	* Removed the Knowledge Graph settings page tab.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Replaced the 'wpsso_json_data_https_schema_org_organization' filter hook in `WpssoJsonFiltersTypeOrganization` by the filter from `WpssoSchema`.
+* **Requires At Least**
+	* PHP v5.6.
+	* WordPress v4.2.
+	* WPSSO Core v7.10.1.
+
 **Version 3.12.1 (2020/06/23)**
 
 * **New Features**
@@ -329,6 +346,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v7.10.1.
 
 == Upgrade Notice ==
+
+= 3.13.0-dev.1 =
+
+(2020/07/02) Added a new "WebSite Publisher Type" option under the SSO &gt; Schema Markup &gt; General Settings tab.
 
 = 3.12.1 =
 
