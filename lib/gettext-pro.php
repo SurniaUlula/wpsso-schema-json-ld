@@ -5,7 +5,8 @@
  */
 _x( 'Creative Work Information', 'metabox title', 'wpsso-schema-json-ld' );
 _x( 'Default Family Friendly', 'option label', 'wpsso-schema-json-ld' );
-_x( 'Default Publisher', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Default Publisher Organization', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Default Publisher Person', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Default Service Provider', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Event Information', 'metabox title', 'wpsso-schema-json-ld' );
 _x( 'Default Physical Venue', 'option label', 'wpsso-schema-json-ld' );
@@ -32,7 +33,7 @@ _x( 'Language', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Family Friendly', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Copyright Year', 'option label', 'wpsso-schema-json-ld' );
 _x( 'License URL', 'option label', 'wpsso-schema-json-ld' );
-_x( 'Publisher', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Publisher Organization', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Service Provider', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Audiobook Information', 'metabox title', 'wpsso-schema-json-ld' );
 _x( 'Duration', 'option label', 'wpsso-schema-json-ld' );

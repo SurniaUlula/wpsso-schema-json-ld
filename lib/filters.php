@@ -58,6 +58,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			$this->p->util->add_plugin_filters( $this, array(
 				'option_type'          => 2,
 				'save_setting_options' => 3,
+				'get_defaults'         => 2,
 				'save_md_options'      => 2,
 				'get_md_defaults'      => 2,
 			) );
@@ -149,8 +150,9 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_def_family_friendly':		// Default Family Friendly.
 				case 'schema_def_job_hiring_org_id':		// Default Hiring Organization.
 				case 'schema_def_job_location_id':		// Default Job Location.
-				case 'schema_def_prov_org_id':			// Default Publisher.
-				case 'schema_def_pub_org_id':			// Default Publisher.
+				case 'schema_def_prov_org_id':			// Default Service Provider.
+				case 'schema_def_pub_org_id':			// Default Publisher Organization.
+				case 'schema_def_pub_person_id':		// Default Publisher Person.
 				case 'schema_def_review_item_type':		// Default Subject Webpage Type.
 				case 'schema_event_lang':			// Event Language.
 				case 'schema_event_location_id':		// Event Physical Venue.
@@ -170,7 +172,8 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				case 'schema_lang':				// Language.
 				case 'schema_movie_prodco_org_id':		// Production Company.
 				case 'schema_prov_org_id':			// Service Provider.
-				case 'schema_pub_org_id':			// Publisher.
+				case 'schema_pub_org_id':			// Publisher Organization.
+				case 'schema_pub_person_id':			// Publisher Person.
 				case 'schema_review_item_type':			// Reviewed Subject Webpage Type.
 				case 'schema_review_item_cw_author_type':	// Reviewed Subject Author Type.
 				case 'schema_type':				// Schema Type.
@@ -282,6 +285,32 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			}
 
 			return $opts;
+		}
+
+		public function filter_get_defaults( $defs ) {
+
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->mark();
+			}
+
+			switch ( $this->p->options[ 'site_pub_schema_type' ] ) {
+
+				case 'organization':
+
+					$defs[ 'schema_def_pub_org_id' ]    = 'site';
+					$defs[ 'schema_def_pub_person_id' ] = 'none';
+
+					break;
+
+				case 'person':
+
+					$defs[ 'schema_def_pub_org_id' ]    = 'none';
+					$defs[ 'schema_def_pub_person_id' ] = $this->p->options[ 'site_pub_person_id' ];
+
+					break;
+			}
+
+			return $defs;
 		}
 
 		public function filter_save_md_options( $md_opts, $mod ) {
@@ -493,8 +522,9 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				'schema_family_friendly' => $opts[ 'schema_def_family_friendly' ],	// Family Friendly.
 				'schema_copyright_year'  => $def_copyright_year,			// Copyright Year.
 				'schema_license_url'     => '',						// License URL.
-				'schema_pub_org_id'      => $opts[ 'schema_def_pub_org_id' ],		// Publisher.
 				'schema_prov_org_id'     => $opts[ 'schema_def_prov_org_id' ],		// Service Provider.
+				'schema_pub_org_id'      => $opts[ 'schema_def_pub_org_id' ],		// Publisher Organization.
+				'schema_pub_person_id'   => $opts[ 'schema_def_pub_person_id' ],	// Publisher Person.
 
 				/**
 				 * Schema Audiobook.

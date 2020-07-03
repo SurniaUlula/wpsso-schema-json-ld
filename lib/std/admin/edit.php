@@ -228,7 +228,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 					'tr_class' => $schema_type_row_class[ 'creative_work' ],
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Publisher', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Publisher Organization', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_pub_org_id',
 					'content'  => $form->get_no_select( 'schema_pub_org_id', $org_site_names,
 						$css_class = 'long_name' ) . $org_req_msg,
@@ -634,9 +634,9 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 						$is_assoc = true, $selected = false, $event_names = array( 'on_focus_load_json', 'on_show_unhide_rows' ),
 							$event_args = array(
 								'json_var'  => 'schema_types',
-								'exp_secs'  => $schema_exp_secs,
-								'is_transl' => true,	// No label translation required.
-								'is_sorted' => true,	// No label sorting required.
+								'exp_secs'  => $schema_exp_secs,	// Create and read from a javascript URL.
+								'is_transl' => true,			// No label translation required.
+								'is_sorted' => true,			// No label sorting required.
 							)
 						),
 				),

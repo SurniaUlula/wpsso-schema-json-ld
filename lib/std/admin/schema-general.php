@@ -85,10 +85,17 @@ if ( ! class_exists( 'WpssoJsonStdAdminSchemaGeneral' ) ) {
 				),
 				'schema_def_pub_org_id' => array(
 					'td_class' => 'blank',
-					'label'    => _x( 'Default Publisher', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Default Publisher Organization', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'schema_def_pub_org_id',
 					'content'  => $form->get_no_select( 'schema_def_pub_org_id', $org_site_names,
 						$css_class = 'long_name', $css_id = '', $is_assoc = true ) . $org_req_msg,
+				),
+				'schema_def_pub_person_id' => array(
+					'td_class' => 'blank',
+					'label'    => _x( 'Default Publisher Person', 'option label', 'wpsso-schema-json-ld' ),
+					'tooltip'  => 'schema_def_pub_person_id',
+					'content'  => $form->get_no_select( 'schema_def_pub_person_id', $person_names,
+						$css_class = 'long_name', $css_id = '', $is_assoc = true ),
 				),
 				'schema_def_prov_org_id' => array(
 					'td_class' => 'blank',

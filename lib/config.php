@@ -16,7 +16,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssojson' => array(			// Plugin acronym.
-					'version'     => '3.13.0-dev.1',	// Plugin version.
+					'version'     => '3.13.0-dev.2',	// Plugin version.
 					'opt_version' => '41',		// Increment when changing default option values.
 					'short'       => 'WPSSO JSON',	// Short plugin name.
 					'name'        => 'WPSSO Schema JSON-LD Markup',
@@ -36,7 +36,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '7.12.0-dev.1',
+							'min_version'   => '7.12.0-dev.2',
 						),
 					),
 
@@ -130,7 +130,8 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 					 * Schema Defaults
 					 */
 					'schema_def_family_friendly'           => 'none',		// Default Family Friendly.
-					'schema_def_pub_org_id'                => 'site',		// Default Publisher.
+					'schema_def_pub_org_id'                => 'none',		// Default Publisher Organization.
+					'schema_def_pub_person_id'             => 'none',		// Default Publisher Person.
 					'schema_def_prov_org_id'               => 'none',		// Default Service Provider.
 					'schema_def_event_location_id'         => 'none',		// Default Physical Venue.
 					'schema_def_event_organizer_org_id'    => 'none',		// Default Organizer Organization.
