@@ -141,7 +141,7 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 		* Family Friendly
 		* Copyright Year
 		* License URL
-		* Publisher
+		* Publisher Organization
 		* Service Provider
 	* Event Information
 		* Event Language
@@ -312,7 +312,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.13.0-dev.1 (2020/07/02)**
+**Version 3.13.0-dev.2 (2020/07/03)**
 
 * **New Features**
 	* None.
@@ -347,9 +347,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.13.0-dev.1 =
+= 3.13.0-dev.2 =
 
-(2020/07/02) Added a new "WebSite Publisher Type" option under the SSO &gt; Schema Markup &gt; General Settings tab.
+(2020/07/03) Added a new "WebSite Publisher Type" option under the SSO &gt; Schema Markup &gt; General Settings tab.
 
 = 3.12.1 =
 

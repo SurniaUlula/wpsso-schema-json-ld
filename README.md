@@ -139,7 +139,7 @@
 <li>Family Friendly</li>
 <li>Copyright Year</li>
 <li>License URL</li>
-<li>Publisher</li>
+<li>Publisher Organization</li>
 <li>Service Provider</li>
 </ul></li>
 <li>Event Information
