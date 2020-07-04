@@ -139,7 +139,8 @@
 <li>Family Friendly</li>
 <li>Copyright Year</li>
 <li>License URL</li>
-<li>Publisher Organization</li>
+<li>Publisher (Organization)</li>
+<li>Publisher (Person)</li>
 <li>Service Provider</li>
 </ul></li>
 <li>Event Information
@@ -149,10 +150,10 @@
 <li>Event Attendance</li>
 <li>Event Online URL</li>
 <li>Event Physical Venue</li>
-<li>Event Organizer Organization</li>
-<li>Event Organizer Person</li>
-<li>Event Performer Organization</li>
-<li>Event Performer Person</li>
+<li>Event Organizer (Organization)</li>
+<li>Event Organizer (Person)</li>
+<li>Event Performer (Organization)</li>
+<li>Event Performer (Person)</li>
 <li>Event Start (date, time, timezone)</li>
 <li>Event End (date, time, timezone)</li>
 <li>Event Offers Start (date, time, timezone)</li>
@@ -173,7 +174,7 @@
 
 <ul>
 <li>Job Title</li>
-<li>Hiring Organization</li>
+<li>Hiring (Organization)</li>
 <li>Job Location</li>
 <li>Base Salary</li>
 <li>Employment Type</li>

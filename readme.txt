@@ -141,17 +141,18 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 		* Family Friendly
 		* Copyright Year
 		* License URL
-		* Publisher Organization
+		* Publisher (Organization)
+		* Publisher (Person)
 		* Service Provider
 	* Event Information
 		* Event Language
 		* Event Attendance
 		* Event Online URL
 		* Event Physical Venue
-		* Event Organizer Organization
-		* Event Organizer Person
-		* Event Performer Organization
-		* Event Performer Person
+		* Event Organizer (Organization)
+		* Event Organizer (Person)
+		* Event Performer (Organization)
+		* Event Performer (Person)
 		* Event Start (date, time, timezone)
 		* Event End (date, time, timezone)
 		* Event Offers Start (date, time, timezone)
@@ -166,7 +167,7 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 		* How-To Steps (section name, section description, step name, direction text and image)
 	* Job Posting Information
 		* Job Title
-		* Hiring Organization
+		* Hiring (Organization)
 		* Job Location
 		* Base Salary
 		* Employment Type
@@ -312,11 +313,13 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.13.0-dev.2 (2020/07/03)**
+**Version 3.13.0-dev.3 (2020/07/04)**
 
 * **New Features**
 	* None.
 * **Improvements**
+	* Added a new "Publisher (Person)" option in the Document SSO metabox.
+	* Added a new "Default Publisher (Person)" option under the SSO &gt; Schema Markup &gt; Schema Defaults tab.
 	* Added a new "WebSite Publisher Type" option under the SSO &gt; Schema Markup &gt; General Settings tab.
 	* Renamed the Schema Properties tab to General Settings.
 	* Removed the Knowledge Graph settings page tab.
@@ -347,9 +350,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.13.0-dev.2 =
+= 3.13.0-dev.3 =
 
-(2020/07/03) Added a new "WebSite Publisher Type" option under the SSO &gt; Schema Markup &gt; General Settings tab.
+(2020/07/04) Added a new "WebSite Publisher Type" option under the SSO &gt; Schema Markup &gt; General Settings tab.
 
 = 3.12.1 =
 
