@@ -120,25 +120,31 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_pub_org_id':			// Publisher Organization.
+				case 'tooltip-meta-schema_pub_org_id':		// Publisher (Organization).
 
 					$text = __( 'Select a publisher organization for the Schema CreativeWork type and/or its sub-types (Article, BlogPosting, WebPage, etc).', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_prov_org_id':			// Service Provider.
+				case 'tooltip-schema_pub_person_id':		// Publisher (Person).
+
+					$text = __( 'Select a publisher person for the Schema CreativeWork type and/or its sub-types (Article, BlogPosting, WebPage, etc).', 'wpsso-schema-json-ld' );
+
+				 	break;
+
+				case 'tooltip-meta-schema_prov_org_id':		// Service Provider.
 
 					$text = __( 'Select a service provider, service operator or service performer (example: "Netflix").', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_copyright_year':		// Copyright Year.
+				case 'tooltip-meta-schema_copyright_year':	// Copyright Year.
 
 					$text = __( 'The year during which the claimed copyright was first asserted for this creative work.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_license_url':			// License URL.
+				case 'tooltip-meta-schema_license_url':		// License URL.
 
 					$text = __( 'A license document URL that applies to this content.', 'wpsso-schema-json-ld' );
 
@@ -173,25 +179,25 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-meta-schema_event_organizer_org_id':	// Organizer Organization.
+				case 'tooltip-meta-schema_event_organizer_org_id':	// Organizer (Organization).
 
 					$text = __( 'Select an organizer (organization) for the event.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_event_organizer_person_id':	// Organizer Person.
+				case 'tooltip-meta-schema_event_organizer_person_id':	// Organizer (Person).
 
 					$text = __( 'Select an organizer (person) for the event.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_event_performer_org_id':	// Performer Organization.
+				case 'tooltip-meta-schema_event_performer_org_id':	// Performer (Organization).
 
 					$text = __( 'Select a performer (organization) for the event.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-meta-schema_event_performer_person_id':	// Performer Person.
+				case 'tooltip-meta-schema_event_performer_person_id':	// Performer (Person).
 
 					$text = __( 'Select a performer (person) for the event.', 'wpsso-schema-json-ld' );
 
@@ -716,13 +722,13 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-schema_def_pub_org_id':			// Default Publisher Organization.
+				case 'tooltip-schema_def_pub_org_id':			// Default Publisher (Organization).
 
 					$text = __( 'Select a default publisher organization for the Schema CreativeWork type and/or its sub-types (Article, BlogPosting, WebPage, etc).', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-schema_def_pub_person_id':		// Default Publisher Person.
+				case 'tooltip-schema_def_pub_person_id':		// Default Publisher (Person).
 
 					$text = __( 'Select a default publisher person for the Schema CreativeWork type and/or its sub-types (Article, BlogPosting, WebPage, etc).', 'wpsso-schema-json-ld' );
 
@@ -740,31 +746,31 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-schema_def_event_organizer_org_id':	// Default Organizer Organization.
+				case 'tooltip-schema_def_event_organizer_org_id':	// Default Organizer (Organization).
 
 					$text = __( 'Select a default organizer (organization) for the Schema Event type.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-schema_def_event_organizer_person_id':	// Default Organizer Person.
+				case 'tooltip-schema_def_event_organizer_person_id':	// Default Organizer (Person).
 
 					$text = __( 'Select a default organizer (person) for the Schema Event type.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-schema_def_event_performer_org_id':	// Default Performer Organization.
+				case 'tooltip-schema_def_event_performer_org_id':	// Default Performer (Organization).
 
 					$text = __( 'Select a default performer (organization) for the Schema Event type.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-schema_def_event_performer_person_id':	// Default Performer Person.
+				case 'tooltip-schema_def_event_performer_person_id':	// Default Performer (Person).
 
 					$text = __( 'Select a default performer (person) for the Schema Event type.', 'wpsso-schema-json-ld' );
 
 				 	break;
 
-				case 'tooltip-schema_def_job_hiring_org_id':		// Default Job Hiring Organization.
+				case 'tooltip-schema_def_job_hiring_org_id':		// Default Job Hiring (Organization).
 
 					$text = __( 'Select a default organization for the Schema JobPosting hiring organization.', 'wpsso-schema-json-ld' );
 
