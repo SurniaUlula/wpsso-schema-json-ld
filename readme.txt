@@ -355,7 +355,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 3.13.0-rc.1 =
 
-(2020/07/04) Added a new "WebSite Publisher Type" option under the SSO &gt; Schema Markup &gt; General Settings tab.
+(2020/07/04) Added several new Publisher and Service Provider related options. 
 
 = 3.12.1 =
 
