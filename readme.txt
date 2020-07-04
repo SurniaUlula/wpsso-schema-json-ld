@@ -141,17 +141,18 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 		* Family Friendly
 		* Copyright Year
 		* License URL
-		* Publisher (Organization)
+		* Publisher (Org)
 		* Publisher (Person)
-		* Service Provider
+		* Service Provider (Org)
+		* Service Provider (Person)
 	* Event Information
 		* Event Language
 		* Event Attendance
 		* Event Online URL
 		* Event Physical Venue
-		* Event Organizer (Organization)
+		* Event Organizer (Org)
 		* Event Organizer (Person)
-		* Event Performer (Organization)
+		* Event Performer (Org)
 		* Event Performer (Person)
 		* Event Start (date, time, timezone)
 		* Event End (date, time, timezone)
@@ -167,7 +168,7 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 		* How-To Steps (section name, section description, step name, direction text and image)
 	* Job Posting Information
 		* Job Title
-		* Hiring (Organization)
+		* Hiring Organization
 		* Job Location
 		* Base Salary
 		* Employment Type
@@ -313,7 +314,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.13.0-b.1 (2020/07/04)**
+**Version 3.13.0-rc.1 (2020/07/04)**
 
 * **New Features**
 	* None.
@@ -350,7 +351,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.13.0-b.1 =
+= 3.13.0-rc.1 =
 
 (2020/07/04) Added a new "WebSite Publisher Type" option under the SSO &gt; Schema Markup &gt; General Settings tab.
 
