@@ -88,32 +88,6 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeArticle' ) ) {
 
 			WpssoSchema::check_required( $ret, $mod, array( 'image' ) );
 
-			/**
-			 * Property:
-			 *      provider
-			 *      publisher
-			 */
-			if ( ! empty( $mod[ 'obj' ] ) ) {	// Just in case.
-
-				/**
-				 * The meta data key is unique, but the Schema property name may be repeated to add more than one
-				 * value to a property array.
-				 */
-				foreach ( array(
-					'schema_pub_org_id'  => 'publisher',
-					'schema_prov_org_id' => 'provider',
-				) as $md_key => $prop_name ) {
-	
-					$md_val = $mod[ 'obj' ]->get_options( $mod[ 'id' ], $md_key, $filter_opts = true, $pad_opts = true );
-	
-					if ( $md_val === null || $md_val === '' || $md_val === 'none' ) {
-						continue;
-					}
-	
-					WpssoSchemaSingle::add_organization_data( $ret[ $prop_name ], $mod, $md_val, $org_logo_key, $list_element = false );
-				}
-			}
-
 			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
 		}
 	}

@@ -77,29 +77,39 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 
 				WpssoSchema::check_required( $ret, $mod, array( 'image' ) );
 
+			}
+
+			/**
+			 * Property:
+			 *      provider
+			 *      publisher
+			 */
+			if ( ! empty( $mod[ 'obj' ] ) ) {	// Just in case.
+
 				/**
-				 * Property:
-				 *      provider
-				 *      publisher
+				 * The meta data key is unique, but the Schema property name may be repeated to add more than one
+				 * value to a property array.
 				 */
-				if ( ! empty( $mod[ 'obj' ] ) ) {	// Just in case.
+				foreach ( array(
+					'schema_prov_org_id'    => 'provider',
+					'schema_prov_person_id' => 'provider',
+					'schema_pub_org_id'     => 'publisher',
+					'schema_pub_person_id'  => 'publisher',
+				) as $md_key => $prop_name ) {
 
-					/**
-					 * The meta data key is unique, but the Schema property name may be repeated to add more
-					 * than one value to a property array.
-					 */
-					foreach ( array(
-						'schema_prov_org_id' => 'provider',
-						'schema_pub_org_id'  => 'publisher',
-					) as $md_key => $prop_name ) {
-	
-						$md_val = $mod[ 'obj' ]->get_options( $mod[ 'id' ], $md_key, $filter_opts = true, $pad_opts = true );
-	
-						if ( $md_val === null || $md_val === '' || $md_val === 'none' ) {
-							continue;
-						}
+					$md_val = $mod[ 'obj' ]->get_options( $mod[ 'id' ], $md_key, $filter_opts = true, $pad_opts = true );
 
-						WpssoSchemaSingle::add_organization_data( $ret[ $prop_name ], $mod, $md_val, $org_logo_key, $list_element = false );
+					if ( $md_val === null || $md_val === '' || $md_val === 'none' ) {
+						continue;
+					}
+
+					if ( strpos( $md_key, '_org_id' ) ) {
+
+						WpssoSchemaSingle::add_organization_data( $ret[ $prop_name ], $mod, $md_val, $org_logo_key, $list_element = true );
+
+					} elseif ( strpos( $md_key, '_person_id' ) ) {
+
+						WpssoSchemaSingle::add_person_data( $ret[ $prop_name ], $mod, $md_val, $list_element = true );
 					}
 				}
 			}

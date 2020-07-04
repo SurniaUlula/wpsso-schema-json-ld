@@ -126,7 +126,7 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
-				case 'tooltip-schema_pub_person_id':		// Publisher (Person).
+				case 'tooltip-meta-schema_pub_person_id':	// Publisher (Person).
 
 					$text = __( 'Select a publisher person for the Schema CreativeWork type and/or its sub-types (Article, BlogPosting, WebPage, etc).', 'wpsso-schema-json-ld' );
 

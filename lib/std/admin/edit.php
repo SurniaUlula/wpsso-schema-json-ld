@@ -236,7 +236,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 				'schema_pub_person_id' => array(
 					'td_class' => 'blank',
 					'label'    => _x( 'Publisher (Person)', 'option label', 'wpsso-schema-json-ld' ),
-					'tooltip'  => 'schema_pub_person_id',
+					'tooltip'  => 'meta-schema_pub_person_id',
 					'content'  => $form->get_no_select( 'schema_pub_person_id', $person_names,
 						$css_class = 'long_name', $css_id = '', $is_assoc = true ),
 				),
