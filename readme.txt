@@ -320,7 +320,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None.
 * **Improvements**
 	* Added a new "Publisher (Person)" option in the Document SSO metabox.
+	* Added a new "Service Provider (Person)" option in the Document SSO metabox.
 	* Added a new "Default Publisher (Person)" option under the SSO &gt; Schema Markup &gt; Schema Defaults tab.
+	* Added a new "Default Service Provider (Person)" option under the SSO &gt; Schema Markup &gt; Schema Defaults tab.
 	* Added a new "WebSite Publisher Type" option under the SSO &gt; Schema Markup &gt; General Settings tab.
 	* Renamed the Schema Properties tab to General Settings.
 	* Removed the Knowledge Graph settings page tab.
@@ -331,7 +333,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v7.10.1.
+	* WPSSO Core v7.12.0-rc.1.
 
 **Version 3.12.1 (2020/06/23)**
 
