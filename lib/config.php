@@ -16,8 +16,8 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssojson' => array(			// Plugin acronym.
-					'version'     => '3.13.0-b.1',	// Plugin version.
-					'opt_version' => '42',		// Increment when changing default option values.
+					'version'     => '3.13.0-rc.1',	// Plugin version.
+					'opt_version' => '43',		// Increment when changing default option values.
 					'short'       => 'WPSSO JSON',	// Short plugin name.
 					'name'        => 'WPSSO Schema JSON-LD Markup',
 					'desc'        => 'Google Rich Results and Structured Data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Videos, and More.',
@@ -36,7 +36,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '7.12.0-b.1',
+							'min_version'   => '7.12.0-rc.1',
 						),
 					),
 
@@ -130,15 +130,16 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 					 * Schema Defaults
 					 */
 					'schema_def_family_friendly'           => 'none',		// Default Family Friendly.
-					'schema_def_pub_org_id'                => 'none',		// Default Publisher (Organization).
+					'schema_def_pub_org_id'                => 'none',		// Default Publisher (Org).
 					'schema_def_pub_person_id'             => 'none',		// Default Publisher (Person).
-					'schema_def_prov_org_id'               => 'none',		// Default Service Provider.
+					'schema_def_prov_org_id'               => 'none',		// Default Service Prov. (Org).
+					'schema_def_prov_person_id'            => 'none',		// Default Service Prov. (Person).
 					'schema_def_event_location_id'         => 'none',		// Default Physical Venue.
-					'schema_def_event_organizer_org_id'    => 'none',		// Default Organizer (Organization).
+					'schema_def_event_organizer_org_id'    => 'none',		// Default Organizer (Org).
 					'schema_def_event_organizer_person_id' => 'none',		// Default Organizer (Person).
-					'schema_def_event_performer_org_id'    => 'none',		// Default Performer (Organization).
+					'schema_def_event_performer_org_id'    => 'none',		// Default Performer (Org).
 					'schema_def_event_performer_person_id' => 'none',		// Default Performer (Person).
-					'schema_def_job_hiring_org_id'         => 'none',		// Default Hiring (Organization).
+					'schema_def_job_hiring_org_id'         => 'none',		// Default Hiring (Org).
 					'schema_def_job_location_id'           => 'none',		// Default Job Location.
 					'schema_def_review_item_type'          => 'creative.work',	// Default Subject Webpage Type.
 				),

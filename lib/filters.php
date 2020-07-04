@@ -143,36 +143,38 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 					return 'csv_blank';
 
 				case 'schema_def_event_location_id':		// Default Physical Venue.
-				case 'schema_def_event_organizer_org_id':	// Default Organizer (Organization).
+				case 'schema_def_event_organizer_org_id':	// Default Organizer (Org).
 				case 'schema_def_event_organizer_person_id':	// Default Organizer (Person).
-				case 'schema_def_event_performer_org_id':	// Default Performer (Organization).
+				case 'schema_def_event_performer_org_id':	// Default Performer (Org).
 				case 'schema_def_event_performer_person_id':	// Default Performer (Person).
 				case 'schema_def_family_friendly':		// Default Family Friendly.
-				case 'schema_def_job_hiring_org_id':		// Default Hiring (Organization).
+				case 'schema_def_job_hiring_org_id':		// Default Hiring Organization.
 				case 'schema_def_job_location_id':		// Default Job Location.
-				case 'schema_def_prov_org_id':			// Default Service Provider.
-				case 'schema_def_pub_org_id':			// Default Publisher (Organization).
+				case 'schema_def_prov_org_id':			// Default Service Prov. (Org).
+				case 'schema_def_prov_person_id':		// Default Service Prov. (Person).
+				case 'schema_def_pub_org_id':			// Default Publisher (Org).
 				case 'schema_def_pub_person_id':		// Default Publisher (Person).
 				case 'schema_def_review_item_type':		// Default Subject Webpage Type.
 				case 'schema_event_lang':			// Event Language.
 				case 'schema_event_location_id':		// Event Physical Venue.
 				case 'schema_event_offer_currency':
 				case 'schema_event_offer_avail':
-				case 'schema_event_organizer_org_id':		// Event Organizer (Organization).
+				case 'schema_event_organizer_org_id':		// Event Organizer (Org).
 				case 'schema_event_organizer_person_id':	// Event Organizer (Person).
-				case 'schema_event_performer_org_id':		// Event Performer (Organization).
+				case 'schema_event_performer_org_id':		// Event Performer (Org).
 				case 'schema_event_performer_person_id':	// Event Performer (Person).
 				case 'schema_event_attendance':			// Event Attendance.
 				case 'schema_event_status':			// Event Status.
 				case 'schema_family_friendly':			// Family Friendly.
-				case 'schema_job_hiring_org_id':		// Hiring (Organization).
+				case 'schema_job_hiring_org_id':		// Hiring Organization.
 				case 'schema_job_location_id':			// Job Location.
-				case 'schema_job_salary_currency':
+				case 'schema_job_salary_currency':		// Base Salary.
 				case 'schema_job_salary_period':
 				case 'schema_lang':				// Language.
 				case 'schema_movie_prodco_org_id':		// Production Company.
-				case 'schema_prov_org_id':			// Service Provider.
-				case 'schema_pub_org_id':			// Publisher (Organization).
+				case 'schema_prov_org_id':			// Service Prov. (Org).
+				case 'schema_prov_person_id':			// Service Prov. (Person).
+				case 'schema_pub_org_id':			// Publisher (Org).
 				case 'schema_pub_person_id':			// Publisher (Person).
 				case 'schema_review_item_type':			// Reviewed Subject Webpage Type.
 				case 'schema_review_item_cw_author_type':	// Reviewed Subject Author Type.
@@ -522,8 +524,9 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				'schema_family_friendly' => $opts[ 'schema_def_family_friendly' ],	// Family Friendly.
 				'schema_copyright_year'  => $def_copyright_year,			// Copyright Year.
 				'schema_license_url'     => '',						// License URL.
-				'schema_prov_org_id'     => $opts[ 'schema_def_prov_org_id' ],		// Service Provider.
-				'schema_pub_org_id'      => $opts[ 'schema_def_pub_org_id' ],		// Publisher (Organization).
+				'schema_prov_org_id'     => $opts[ 'schema_def_prov_org_id' ],		// Service Prov. (Org).
+				'schema_prov_person_id'  => $opts[ 'schema_def_prov_person_id' ],	// Service Prov. (Person).
+				'schema_pub_org_id'      => $opts[ 'schema_def_pub_org_id' ],		// Publisher (Org).
 				'schema_pub_person_id'   => $opts[ 'schema_def_pub_person_id' ],	// Publisher (Person).
 
 				/**
@@ -541,9 +544,9 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				'schema_event_attendance'            => 'OfflineEventAttendanceMode',				// Event Attendance.
 				'schema_event_online_url'            => '',							// Event Online URL.
 				'schema_event_location_id'           => $opts[ 'schema_def_event_location_id' ],		// Event Physical Venue.
-				'schema_event_organizer_org_id'      => $opts[ 'schema_def_event_organizer_org_id' ],		// Organizer (Organization).
+				'schema_event_organizer_org_id'      => $opts[ 'schema_def_event_organizer_org_id' ],		// Organizer (Org).
 				'schema_event_organizer_person_id'   => $opts[ 'schema_def_event_organizer_person_id' ],	// Organizer (Person).
-				'schema_event_performer_org_id'      => $opts[ 'schema_def_event_performer_org_id' ],		// Performer (Organization).
+				'schema_event_performer_org_id'      => $opts[ 'schema_def_event_performer_org_id' ],		// Performer (Org).
 				'schema_event_performer_person_id'   => $opts[ 'schema_def_event_performer_person_id' ],	// Performer (Person).
 				'schema_event_status'                => 'EventScheduled',					// Event Status.
 				'schema_event_start_date'            => '',							// Event Start (Date).
@@ -579,7 +582,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				 * Schema Job Posting.
 				 */
 				'schema_job_title'                => '',					// Job Title.
-				'schema_job_hiring_org_id'        => $opts[ 'schema_def_job_hiring_org_id' ],	// Job Hiring (Organization).
+				'schema_job_hiring_org_id'        => $opts[ 'schema_def_job_hiring_org_id' ],	// Job Hiring Organization.
 				'schema_job_location_id'          => $opts[ 'schema_def_job_location_id' ],	// Job Location.
 				'schema_job_salary'               => '',					// Base Salary.
 				'schema_job_salary_currency'      => $opts[ 'plugin_def_currency' ],		// Base Salary Currency.
