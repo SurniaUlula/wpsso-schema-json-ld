@@ -314,7 +314,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.13.0-rc.1 (2020/07/04)**
+**Version 3.13.0 (2020/07/04)**
 
 * **New Features**
 	* None.
@@ -333,7 +333,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v7.12.0-rc.1.
+	* WPSSO Core v7.12.0.
 
 **Version 3.12.1 (2020/06/23)**
 
@@ -353,11 +353,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.13.0-rc.1 =
+= 3.13.0 =
 
 (2020/07/04) Added several new Publisher and Service Provider related options. 
-
-= 3.12.1 =
-
-(2020/06/23) Added an "Audiobook Information" section in the Document SSO metabox with a new Audiobook Duration option.
 
