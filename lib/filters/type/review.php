@@ -207,7 +207,13 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 								'priceCurrency' => 'offer_currency',
 								'availability'  => 'offer_avail',	// In stock, Out of stock, Pre-order, etc.
 							) ) ) ) {
-		
+	
+								/**
+								 * Avoid Google validator warnings.
+								 */
+								$offer[ 'url' ]             = $item[ 'url' ];
+								$offer[ 'priceValidUntil' ] = gmdate( 'c', time() + MONTH_IN_SECONDS );
+
 								/**
 								 * Add the offer.
 								 */
