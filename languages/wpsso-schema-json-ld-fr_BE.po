@@ -1,5 +1,3 @@
-# Copyright (C) 2016 WPSSO Schema JSON-LD (WPSSO JSON)
-# This file is distributed under the same license as the WPSSO Schema JSON-LD (WPSSO JSON) package.
 msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Schema JSON-LD Markup 3.13.0\n"
