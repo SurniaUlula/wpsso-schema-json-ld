@@ -10,7 +10,7 @@
 <tr><th align="right" valign="top" nowrap>Tested Up To WooCommerce</th><td>4.3.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
 <tr><th align="right" valign="top" nowrap>License</th><td><a href="https://www.gnu.org/licenses/gpl.txt">GPLv3</a></td></tr>
-<tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>schema.org, schema, rich snippets, structured data, rich results, woocommerce, seo, image seo, video seo, local seo, news seo, knowledge graph</td></tr>
+<tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>schema.org, schema, woocommerce, structured data, rich results, rich snippets, seo, image seo, video seo, local seo, news seo, knowledge graph</td></tr>
 </table>
 
 <h2>Description</h2>
