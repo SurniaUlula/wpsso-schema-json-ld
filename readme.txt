@@ -24,7 +24,7 @@ Google Rich Results and Structured Data for Articles, Carousels, Events, FAQ Pag
 
 Google Rich Results and Structured Data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Video Objects, and more.
 
-**Uses your existing WordPress content, plugin and service API data:**
+**Reads your existing WordPress content, plugin and service API data:**
 
 There's no need to manually re-create descriptions, titles, product information, re-select images / videos, etc.
 
