@@ -24,8 +24,6 @@ Google Rich Results and Structured Data for Articles, Carousels, Events, FAQ Pag
 
 Google Rich Results and Structured Data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Video Objects, and more.
 
-Uses filters to dynamically (and automatically) create Schema markup, allowing the WPSSO Schema JSON-LD Markup add-on to provide an almost unlimited number of Schema types, children sub-types, and properties inherited from each parent type (for example, Restaurant is a sub-type of Food Establishment, which is a sub-type of Local Business, which is sub-type of *both* Organization *and* Place, which are both sub-types of Thing).
-
 **Uses your existing WordPress content, plugin and service API data:**
 
 There's no need to manually re-create descriptions, titles, product information, re-select images / videos, etc.
@@ -34,7 +32,7 @@ This add-on provides accurate and comprehensive Schema JSON-LD markup for posts,
 
 **Most complete Schema JSON-LD markup for WooCommerce products:**
 
-The WooCommerce plugin is known to offer incomplete Schema markup for Google. The <a href="https://wpsso.com/extend/plugins/wpsso/">WPSSO Core Premium plugin</a> (required for WooCommerce integration) and its WPSSO Schema JSON-LD add-on provide a far better solution by offering complete Facebook / Pinterest Product meta tags and Schema Product markup for Google Rich Results (aka Rich Snippets) &mdash; including additional product images, product variations, product information (brand, color, condition, dimensions, material, size, weight, SKU, GTIN-8/12/13/14, EAN, ISBN, MPN, etc), product reviews, product ratings, prices and currencies, sale start / end dates, sale prices, pre-tax prices, VAT prices, and much, much more.
+The WooCommerce plugin is known to offer incomplete Schema markup for Google. The <a href="https://wpsso.com/extend/plugins/wpsso/">WPSSO Core Premium plugin</a> (required for WooCommerce integration) and this add-on provide a far better solution by offering complete Facebook / Pinterest Product meta tags and Schema Product markup for Google Rich Results (aka Rich Snippets) &mdash; including additional product images, product variations, product information (brand, color, condition, dimensions, material, size, weight, SKU, GTIN-8/12/13/14, EAN, ISBN, MPN, etc), product reviews, product ratings, prices and currencies, sale start / end dates, sale prices, pre-tax prices, VAT prices, and much, much more.
 
 **Fixes all Google Search Console / Structured Data Testing Tool errors:**
 
