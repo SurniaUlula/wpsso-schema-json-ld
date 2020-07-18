@@ -55,7 +55,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeArticle' ) ) {
 				$this->p->lca . '-schema-article-16-9',
 			);
 
-			if ( SucomUtil::is_amp() ) {
+			if ( SucomUtil::is_amp() ) {	// Returns null, true, or false.
 
 				$size_names     = $amp_size_names;
 				$alt_size_names = null;
