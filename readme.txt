@@ -53,7 +53,7 @@ The WooCommerce plugin is known to offer incomplete Schema markup for Google. Th
 
 Some Schema property values may require data from <a href="https://wpsso.com/extend/plugins/wpsso/">WPSSO Core Premium</a> supported 3rd party plugins and service APIs.
 
-Google regularly updates and changes their Schema markup requirements - WPSSO JSON Premium customers can also <a href="https://surniaulula.com/support/">open a Premium support ticket for assistance</a> with any new Google testing tool errors.
+Google regularly updates and changes their Schema markup requirements - WPSSO JSON Premium customers can also <a href="https://surniaulula.com/support/">open a Premium support ticket for timely assistance</a> with any new Google testing tool errors.
 
 <h3>Users Love the WPSSO JSON Add-on</h3>
 
