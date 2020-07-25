@@ -11,6 +11,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -25,6 +26,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -38,6 +40,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 			 * Disable microdata markup from the Easy Digital Download plugin.
 			 */
 			if ( $this->p->avail[ 'ecom' ][ 'edd' ] ) {
+
 				add_filter( 'edd_add_schema_microdata', '__return_false', $max_int );
 			}
 
@@ -45,6 +48,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 			 * Disable JSON-LD markup from the WooCommerce WC_Structured_Data class (since v3.0.0).
 			 */
 			if ( $this->p->avail[ 'ecom' ][ 'woocommerce' ] ) {
+
 				add_filter( 'woocommerce_structured_data_product', '__return_empty_array', $max_int );
 				add_filter( 'woocommerce_structured_data_review', '__return_empty_array', $max_int );
 			}
@@ -53,6 +57,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 		public function filter_json_data_https_schema_org_product( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -111,6 +116,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 				) );
 
 				if ( false !== $single_brand ) {	// Just in case.
+
 					$ret[ 'brand' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/Brand', $single_brand );
 				}
 			}
@@ -176,6 +182,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 			} else {
 
 				if ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'product offer recursion detected and avoided' );
 				}
 			}
@@ -185,6 +192,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 			 *	image as https://schema.org/ImageObject
 			 */
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->log( 'adding image property for product (videos disabled)' );
 			}
 
