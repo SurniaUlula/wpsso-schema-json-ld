@@ -13,14 +13,14 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/filters/prop/aggregaterating.php:182
+#: lib/filters/prop/aggregaterating.php:193
 msgid ""
 "An aggregate rating value for this markup has been ignored &mdash; <a href="
 "\"%1$s\">Google does not allow an aggregate rating value for the Schema Type "
 "%2$s</a>."
 msgstr ""
 
-#: lib/filters/type/claimreview.php:76 lib/filters.php:465
+#: lib/filters/type/claimreview.php:76 lib/filters.php:468
 msgid "A claim review cannot be the subject of another claim review."
 msgstr ""
 
@@ -689,29 +689,39 @@ msgid "Select a default Schema type for the Schema Review subject URL."
 msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/filters.php:270
+#: lib/filters.php:273
 msgid ""
 "Non-standard value found for the \"%s\" option - resetting the option to its "
 "default value."
 msgstr ""
 
-#: lib/filters.php:467
+#: lib/filters.php:470
 msgid ""
 "Please select a subject webpage type that better describes the subject of "
 "the webpage (ie. the content) being reviewed."
 msgstr ""
 
-#: lib/gettext-config.php:6
+#: lib/gettext-config.php:6 lib/gettext-config.php:8
+msgctxt "lib file description"
+msgid "Edit Metabox Filters"
+msgstr ""
+
+#: lib/gettext-config.php:7 lib/gettext-config.php:9
+msgctxt "lib file description"
+msgid "Schema Markup Filters"
+msgstr ""
+
+#: lib/gettext-config.php:10
 msgctxt "lib file description"
 msgid "Schema Markup"
 msgstr ""
 
-#: lib/gettext-config.php:7
+#: lib/gettext-config.php:11
 msgctxt "lib file description"
 msgid "Schema Shortcode Guide"
 msgstr ""
 
-#: lib/gettext-config.php:8
+#: lib/gettext-config.php:12
 msgctxt "plugin description"
 msgid ""
 "Google Rich Results and Structured Data for Articles, Carousels (aka Item "

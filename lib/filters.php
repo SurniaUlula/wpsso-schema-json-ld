@@ -79,16 +79,19 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				) );
 
 				$this->p->util->add_plugin_filters( $this, array(
-					'status_std_features' => 4,
-				), $prio = 10, $ext = 'wpssojson' );	// Hook to wpssojson filters.
+					'status_std_features' => 3,
+				), $prio = 10, $ext = 'wpssojson' );	// Hooks the 'wpssojson' filters.
 			}
 		}
 
 		public function filter_option_type( $type, $base_key ) {
 
 			if ( ! empty( $type ) ) {
+
 				return $type;
+
 			} elseif ( strpos( $base_key, 'schema_' ) !== 0 ) {
+
 				return $type;
 			}
 
@@ -777,9 +780,14 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 		}
 
 		/**
-		 * Hooked to 'wpssojson_status_std_features'.
+		 * Filter for 'wpssojson_status_std_features'.
 		 */
-		public function filter_status_std_features( $features, $ext, $info, $pkg ) {
+		public function filter_status_std_features( $features, $ext, $info ) {
+
+			if ( $this->p->debug->enabled ) {
+
+				$this->p->debug->mark();
+			}
 
 			foreach ( array( 'filters' ) as $type_dir ) {
 
@@ -801,16 +809,16 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				}
 			}
 
-			return $this->add_schema_type_count( $features, $ext, $info, $pkg );
+			return $this->add_schema_type_count( $features, $ext, $info );
 		}
 
-		private function add_schema_type_count( $features, $ext, $info, $pkg ) {
+		private function add_schema_type_count( $features, $ext, $info ) {
 
 			foreach ( $features as $feature_key => $feature_info ) {
 
 				if ( preg_match( '/^\(([a-z\-]+)\) (Schema Type .+) \(schema_type:(.+)\)$/', $feature_key, $match ) ) {
 
-					$features[ $feature_key ][ 'label' ] = $match[2] . ' (' . $this->p->schema->count_schema_type_children( $match[3] ) . ')';
+					$features[ $feature_key ][ 'label' ] = $match[ 2 ] . ' (' . $this->p->schema->count_schema_type_children( $match[ 3 ] ) . ')';
 				}
 			}
 

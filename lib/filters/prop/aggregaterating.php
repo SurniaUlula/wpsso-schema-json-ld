@@ -11,6 +11,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -25,6 +26,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -79,6 +81,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 		public function filter_json_data_https_schema_org_thing_aggregaterating( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -100,6 +103,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 			if ( $is_main && $og_type ) {
 
 				if ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log_arr( 'open graph rating',
 						SucomUtil::preg_grep_keys( '/:rating:/', $mt_og ) );
 				}
@@ -118,6 +122,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 					$mod, $mt_og, $page_type_id, $is_main );
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->log_arr( 'aggregate rating', $aggr_rating );
 			}
 
@@ -131,6 +136,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 				if ( ! empty( $aggr_rating[ 'ratingCount' ] ) ) {
 
 					if ( empty( $aggr_rating[ 'reviewCount' ] ) ) {	// Must be positive if included.
+
 						unset( $aggr_rating[ 'reviewCount' ] );
 					}
 
@@ -139,16 +145,19 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 				} elseif ( ! empty( $aggr_rating[ 'reviewCount' ] ) ) {
 
 					if ( empty( $aggr_rating[ 'ratingCount' ] ) ) {	// Must be positive if included.
+
 						unset( $aggr_rating[ 'ratingCount' ] );
 					}
 
 					$ret[ 'aggregateRating' ] = $aggr_rating;
 
 				} elseif ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'aggregate rating ignored: ratingCount and reviewCount are empty' );
 				}
 
 			} elseif ( $this->p->debug->enabled ) {
+
 				$this->p->debug->log( 'aggregate rating ignored: ratingValue is empty' );
 			}
 
@@ -158,6 +167,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 			if ( empty( $ret[ 'aggregateRating' ] ) && empty( $this->p->options[ 'schema_add_5_star_rating' ] ) ) {
 
 				if ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'exiting early: nothing to do' );
 				}
 
@@ -167,6 +177,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 			if ( ! $this->can_add_aggregate_rating( $page_type_id ) ) {
 
 				if ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'exiting early: cannot add aggregate rating to page type id ' . $page_type_id );
 				}
 
@@ -207,6 +218,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 						if ( ! $this->p->schema->is_schema_type_child( $page_type_id, 'review' ) ) {
 
 							if ( $this->p->debug->enabled ) {
+
 								$this->p->debug->log( 'adding a default 5-star aggregate rating value' );
 							}
 
@@ -231,6 +243,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 				if ( $this->p->schema->is_schema_type_child( $page_type_id, $parent_id ) ) {
 
 					if ( $this->p->debug->enabled ) {
+
 						$this->p->debug->log( 'aggregate rating for schema type ' . $page_type_id . ' is allowed' );
 					}
 
@@ -239,6 +252,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 			}
 			
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->log( 'aggregate rating for schema type ' . $page_type_id . ' not allowed' );
 			}
 
