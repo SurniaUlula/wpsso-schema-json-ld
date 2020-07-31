@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Schema JSON-LD Markup 3.14.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-07-31 06:34-0700\n"
-"PO-Revision-Date: 2020-07-31 06:35-0700\n"
+"POT-Creation-Date: 2020-07-31 07:12-0700\n"
+"PO-Revision-Date: 2020-07-31 07:12-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -578,27 +578,17 @@ msgstr "Valeur non standard trouvée pour l'option \"%s\" - réinitialisation de
 msgid "Please select a subject webpage type that better describes the subject of the webpage (ie. the content) being reviewed."
 msgstr "SVP sélectionner un type de page Web du sujet qui décrit mieux le sujet de la page Web (c'est-à-dire le contenu) en cours de révision."
 
-#: lib/gettext-config.php:6 lib/gettext-config.php:8
-msgctxt "lib file description"
-msgid "Edit Metabox Filters"
-msgstr "Filtres de metabox d'édition"
-
-#: lib/gettext-config.php:7 lib/gettext-config.php:9
-msgctxt "lib file description"
-msgid "Schema Markup Filters"
-msgstr "Filtres de balisage de schéma"
-
-#: lib/gettext-config.php:10
+#: lib/gettext-config.php:6
 msgctxt "lib file description"
 msgid "Schema Markup"
 msgstr "Balisage Schéma"
 
-#: lib/gettext-config.php:11
+#: lib/gettext-config.php:7
 msgctxt "lib file description"
 msgid "Schema Shortcode Guide"
 msgstr "Guide code court Schéma"
 
-#: lib/gettext-config.php:12
+#: lib/gettext-config.php:8
 msgctxt "plugin description"
 msgid "Google Rich Results and Structured Data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Videos, and More."
 msgstr "Résultats riche et données structurées Google pour articles, carrousels,, évaluations de déclarations, événements, pages FAQ, étapes pratiques, images, entreprise / référencement locale, organisations, produits, recettes, restaurants, critiques, videos, et plus."
