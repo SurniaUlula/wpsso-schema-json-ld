@@ -796,6 +796,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 					if ( is_array( $libs ) ) {
 
 						if ( $sub_dir === 'admin' ) { // Skip status for admin menus and tabs.
+
 							continue;
 						}
 
