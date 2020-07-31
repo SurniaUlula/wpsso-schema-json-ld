@@ -312,7 +312,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.14.0-dev.1 (2020/07/30)**
+**Version 3.14.0-dev.2 (2020/07/31)**
 
 * **New Features**
 	* None.
@@ -366,9 +366,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.14.0-dev.1 =
+= 3.14.0-dev.2 =
 
-(2020/07/30) Added the ability to translate labels in the "Standard Features Status" metabox.
+(2020/07/31) Added the ability to translate labels in the "Standard Features Status" metabox.
 
 = 3.13.0 =
 
