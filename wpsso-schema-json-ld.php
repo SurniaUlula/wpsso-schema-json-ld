@@ -15,7 +15,7 @@
  * Requires At Least: 4.2
  * Tested Up To: 5.5
  * WC Tested Up To: 4.3.1
- * Version: 3.14.0-dev.3
+ * Version: 3.14.0-dev.4
  * 
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -28,6 +28,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -131,6 +132,7 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 			static $loaded = null;
 
 			if ( null !== $loaded ) {
+
 				return;
 			}
 
@@ -144,12 +146,14 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 			$this->p =& Wpsso::get_instance();
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
 			if ( self::get_missing_requirements() ) {	// Returns false or an array of missing requirements.
 
 				if ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'exiting early: have missing requirements' );
 				}
 
@@ -190,6 +194,7 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 						}
 			
 						if ( $this->p->debug->enabled ) {
+
 							$this->p->debug->log( strtolower( $req_info[ 'notice' ] ) );
 						}
 					}
@@ -202,12 +207,14 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 		public static function maybe_show_notices() {
 
 			if ( self::$missing_shown ) {	// Nothing to do.
+
 				return;	// Stop here.
 			}
 
 			$missing_reqs = self::get_missing_requirements();	// Returns false or an array of missing requirements.
 
 			if ( ! $missing_reqs ) {
+
 				return;	// Stop here.
 			}
 
@@ -230,6 +237,7 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 			static $local_cache = null;
 
 			if ( null !== $local_cache ) {
+
 				return $local_cache;
 			}
 
