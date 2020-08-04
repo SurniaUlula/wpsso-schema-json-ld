@@ -6,6 +6,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -802,9 +803,14 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 						foreach ( $libs as $id => $label ) {
 
+							$label_transl = _x( $label, 'lib file description', 'wpsso-schema-json-ld' );
+
 							$classname = SucomUtil::sanitize_classname( 'wpssojson' . $type_dir . $sub_dir . $id, $allow_underscore = false );
 
-							$features[ $label ] = array( 'status' => class_exists( $classname ) ? 'on' : 'off' );
+							$features[ $label ] = array(
+								'label_transl' => $label_transl,
+								'classname'    => $classname,
+							);
 						}
 					}
 				}
@@ -815,11 +821,11 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 		private function add_schema_type_count( $features, $ext, $info ) {
 
-			foreach ( $features as $feature_key => $feature_info ) {
+			foreach ( $features as $label => $arr ) {
 
-				if ( preg_match( '/^\(([a-z\-]+)\) (Schema Type .+) \(schema_type:(.+)\)$/', $feature_key, $match ) ) {
+				if ( preg_match( '/^(.*) \[schema_type:(.+)\]$/', $arr[ 'label_transl' ], $match ) ) {
 
-					$features[ $feature_key ][ 'label' ] = $match[ 2 ] . ' (' . $this->p->schema->count_schema_type_children( $match[ 3 ] ) . ')';
+					$features[ $label ][ 'label_transl' ] = $match[ 1 ] . ' (' . $this->p->schema->count_schema_type_children( $match[ 2 ] ) . ')';
 				}
 			}
 

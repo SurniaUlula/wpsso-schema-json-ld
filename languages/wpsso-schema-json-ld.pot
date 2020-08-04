@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.14.0\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.15.0-dev.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-"
 "ld\n"
 "POT-Creation-Date: 2020-MO-DA HO:MI+ZONE\n"
@@ -20,7 +20,7 @@ msgid ""
 "%2$s</a>."
 msgstr ""
 
-#: lib/filters/type/claimreview.php:76 lib/filters.php:468
+#: lib/filters/type/claimreview.php:76 lib/filters.php:469
 msgid "A claim review cannot be the subject of another claim review."
 msgstr ""
 
@@ -689,13 +689,13 @@ msgid "Select a default Schema type for the Schema Review subject URL."
 msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/filters.php:273
+#: lib/filters.php:274
 msgid ""
 "Non-standard value found for the \"%s\" option - resetting the option to its "
 "default value."
 msgstr ""
 
-#: lib/filters.php:470
+#: lib/filters.php:471
 msgid ""
 "Please select a subject webpage type that better describes the subject of "
 "the webpage (ie. the content) being reviewed."
@@ -703,15 +703,187 @@ msgstr ""
 
 #: lib/gettext-config.php:6
 msgctxt "lib file description"
-msgid "Schema Markup"
+msgid "(code) Schema Type Article [schema_type:article]"
 msgstr ""
 
 #: lib/gettext-config.php:7
 msgctxt "lib file description"
-msgid "Schema Shortcode Guide"
+msgid "(code) Schema Type Audiobook [schema_type:book.audio]"
 msgstr ""
 
 #: lib/gettext-config.php:8
+msgctxt "lib file description"
+msgid "(code) Schema Type Blog [schema_type:blog]"
+msgstr ""
+
+#: lib/gettext-config.php:9
+msgctxt "lib file description"
+msgid "(code) Schema Type Book [schema_type:book]"
+msgstr ""
+
+#: lib/gettext-config.php:10
+msgctxt "lib file description"
+msgid "(code) Schema Type Brand [schema_type:brand]"
+msgstr ""
+
+#: lib/gettext-config.php:11
+msgctxt "lib file description"
+msgid "(code) Schema Type Claim Review [schema_type:review.claim]"
+msgstr ""
+
+#: lib/gettext-config.php:12
+msgctxt "lib file description"
+msgid "(code) Schema Type Collection Page [schema_type:webpage.collection]"
+msgstr ""
+
+#: lib/gettext-config.php:13
+msgctxt "lib file description"
+msgid "(code) Schema Type Course [schema_type:course]"
+msgstr ""
+
+#: lib/gettext-config.php:14
+msgctxt "lib file description"
+msgid "(code) Schema Type CreativeWork [schema_type:creative.work]"
+msgstr ""
+
+#: lib/gettext-config.php:15
+msgctxt "lib file description"
+msgid "(code) Schema Type Event [schema_type:event]"
+msgstr ""
+
+#: lib/gettext-config.php:16
+msgctxt "lib file description"
+msgid "(code) Schema Type FAQPage [schema_type:webpage.faq]"
+msgstr ""
+
+#: lib/gettext-config.php:17
+msgctxt "lib file description"
+msgid "(code) Schema Type Food Establishment [schema_type:food.establishment]"
+msgstr ""
+
+#: lib/gettext-config.php:18
+msgctxt "lib file description"
+msgid "(code) Schema Type How-To [schema_type:how.to]"
+msgstr ""
+
+#: lib/gettext-config.php:19
+msgctxt "lib file description"
+msgid "(code) Schema Type ItemList [schema_type:item.list]"
+msgstr ""
+
+#: lib/gettext-config.php:20
+msgctxt "lib file description"
+msgid "(code) Schema Type Job Posting [schema_type:job.posting]"
+msgstr ""
+
+#: lib/gettext-config.php:21
+msgctxt "lib file description"
+msgid "(code) Schema Type Local Business [schema_type:local.business]"
+msgstr ""
+
+#: lib/gettext-config.php:22
+msgctxt "lib file description"
+msgid "(code) Schema Type Movie [schema_type:movie]"
+msgstr ""
+
+#: lib/gettext-config.php:23
+msgctxt "lib file description"
+msgid "(code) Schema Type Organization [schema_type:organization]"
+msgstr ""
+
+#: lib/gettext-config.php:24
+msgctxt "lib file description"
+msgid "(code) Schema Type Person [schema_type:person]"
+msgstr ""
+
+#: lib/gettext-config.php:25
+msgctxt "lib file description"
+msgid "(code) Schema Type Place [schema_type:place]"
+msgstr ""
+
+#: lib/gettext-config.php:26
+msgctxt "lib file description"
+msgid "(code) Schema Type Product [schema_type:product]"
+msgstr ""
+
+#: lib/gettext-config.php:27
+msgctxt "lib file description"
+msgid "(code) Schema Type Profile Page [schema_type:webpage.profile]"
+msgstr ""
+
+#: lib/gettext-config.php:28
+msgctxt "lib file description"
+msgid "(code) Schema Type QAPage [schema_type:webpage.qa]"
+msgstr ""
+
+#: lib/gettext-config.php:29
+msgctxt "lib file description"
+msgid "(code) Schema Type Question and Answer [schema_type:question]"
+msgstr ""
+
+#: lib/gettext-config.php:30
+msgctxt "lib file description"
+msgid "(code) Schema Type Recipe [schema_type:recipe]"
+msgstr ""
+
+#: lib/gettext-config.php:31
+msgctxt "lib file description"
+msgid "(code) Schema Type Review [schema_type:review]"
+msgstr ""
+
+#: lib/gettext-config.php:32
+msgctxt "lib file description"
+msgid ""
+"(code) Schema Type Search Results Page [schema_type:webpage.search.results]"
+msgstr ""
+
+#: lib/gettext-config.php:33
+msgctxt "lib file description"
+msgid ""
+"(code) Schema Type Software Application [schema_type:software.application]"
+msgstr ""
+
+#: lib/gettext-config.php:34
+msgctxt "lib file description"
+msgid "(code) Schema Type Thing [schema_type:thing]"
+msgstr ""
+
+#: lib/gettext-config.php:35
+msgctxt "lib file description"
+msgid "(code) Schema Type WebPage [schema_type:webpage]"
+msgstr ""
+
+#: lib/gettext-config.php:36
+msgctxt "lib file description"
+msgid "(code) Schema Type WebSite [schema_type:website]"
+msgstr ""
+
+#: lib/gettext-config.php:37
+msgctxt "lib file description"
+msgid "(plus) Schema Property aggregateRating"
+msgstr ""
+
+#: lib/gettext-config.php:38
+msgctxt "lib file description"
+msgid "(plus) Schema Property hasPart"
+msgstr ""
+
+#: lib/gettext-config.php:39
+msgctxt "lib file description"
+msgid "(plus) Schema Property review"
+msgstr ""
+
+#: lib/gettext-config.php:40
+msgctxt "lib file description"
+msgid "Schema Markup"
+msgstr ""
+
+#: lib/gettext-config.php:41
+msgctxt "lib file description"
+msgid "Schema Shortcode Guide"
+msgstr ""
+
+#: lib/gettext-config.php:42
 msgctxt "plugin description"
 msgid ""
 "Google Rich Results and Structured Data for Articles, Carousels (aka Item "
@@ -1792,13 +1964,13 @@ msgctxt "metabox title"
 msgid "Schema Shortcode"
 msgstr ""
 
-#: wpsso-schema-json-ld.php:250
+#: wpsso-schema-json-ld.php:271
 msgid ""
 "The %1$s version %2$s add-on requires the %3$s plugin &mdash; please "
 "activate the missing plugin."
 msgstr ""
 
-#: wpsso-schema-json-ld.php:253
+#: wpsso-schema-json-ld.php:284
 msgid ""
 "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version "
 "%5$s is currently installed)."

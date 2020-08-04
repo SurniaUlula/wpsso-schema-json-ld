@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.14.0\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.15.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-08-03 11:51-0700\n"
-"PO-Revision-Date: 2020-08-03 12:06-0700\n"
+"POT-Creation-Date: 2020-08-04 11:52-0700\n"
+"PO-Revision-Date: 2020-08-04 11:52-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -580,15 +580,185 @@ msgstr "SVP sélectionner un type de page Web du sujet qui décrit mieux le suje
 
 #: lib/gettext-config.php:6
 msgctxt "lib file description"
+msgid "(code) Schema Type Article [schema_type:article]"
+msgstr "(code) Type de Schéma Article [schema_type:article]"
+
+#: lib/gettext-config.php:7
+msgctxt "lib file description"
+msgid "(code) Schema Type Audiobook [schema_type:book.audio]"
+msgstr "(code) Type de Schéma Audiobook [schema_type:book.audio]"
+
+#: lib/gettext-config.php:8
+msgctxt "lib file description"
+msgid "(code) Schema Type Blog [schema_type:blog]"
+msgstr "(code) Type de Schéma Blog [schema_type:blog]"
+
+#: lib/gettext-config.php:9
+msgctxt "lib file description"
+msgid "(code) Schema Type Book [schema_type:book]"
+msgstr "(code) Type de Schéma Book [schema_type:book]"
+
+#: lib/gettext-config.php:10
+msgctxt "lib file description"
+msgid "(code) Schema Type Brand [schema_type:brand]"
+msgstr "(code) Type de Schéma Brand [schema_type:brand]"
+
+#: lib/gettext-config.php:11
+msgctxt "lib file description"
+msgid "(code) Schema Type Claim Review [schema_type:review.claim]"
+msgstr "(code) Type de Schéma Claim Review [schema_type:review.claim]"
+
+#: lib/gettext-config.php:12
+msgctxt "lib file description"
+msgid "(code) Schema Type Collection Page [schema_type:webpage.collection]"
+msgstr "(code) Type de Schéma Collection Page [schema_type:webpage.collection]"
+
+#: lib/gettext-config.php:13
+msgctxt "lib file description"
+msgid "(code) Schema Type Course [schema_type:course]"
+msgstr "(code) Type de Schéma Course [schema_type:course]"
+
+#: lib/gettext-config.php:14
+msgctxt "lib file description"
+msgid "(code) Schema Type CreativeWork [schema_type:creative.work]"
+msgstr "(code) Type de Schéma CreativeWork [schema_type:creative.work]"
+
+#: lib/gettext-config.php:15
+msgctxt "lib file description"
+msgid "(code) Schema Type Event [schema_type:event]"
+msgstr "(code) Type de Schéma Event [schema_type:event]"
+
+#: lib/gettext-config.php:16
+msgctxt "lib file description"
+msgid "(code) Schema Type FAQPage [schema_type:webpage.faq]"
+msgstr "(code) Type de Schéma FAQPage [schema_type:webpage.faq]"
+
+#: lib/gettext-config.php:17
+msgctxt "lib file description"
+msgid "(code) Schema Type Food Establishment [schema_type:food.establishment]"
+msgstr "(code) Type de Schéma Food Establishment [schema_type:food.establishment]"
+
+#: lib/gettext-config.php:18
+msgctxt "lib file description"
+msgid "(code) Schema Type How-To [schema_type:how.to]"
+msgstr "(code) Type de Schéma How-To [schema_type:how.to]"
+
+#: lib/gettext-config.php:19
+msgctxt "lib file description"
+msgid "(code) Schema Type ItemList [schema_type:item.list]"
+msgstr "(code) Type de Schéma ItemList [schema_type:item.list]"
+
+#: lib/gettext-config.php:20
+msgctxt "lib file description"
+msgid "(code) Schema Type Job Posting [schema_type:job.posting]"
+msgstr "(code) Type de Schéma Job Posting [schema_type:job.posting]"
+
+#: lib/gettext-config.php:21
+msgctxt "lib file description"
+msgid "(code) Schema Type Local Business [schema_type:local.business]"
+msgstr "(code) Type de Schéma Local Business [schema_type:local.business]"
+
+#: lib/gettext-config.php:22
+msgctxt "lib file description"
+msgid "(code) Schema Type Movie [schema_type:movie]"
+msgstr "(code) Type de Schéma Movie [schema_type:movie]"
+
+#: lib/gettext-config.php:23
+msgctxt "lib file description"
+msgid "(code) Schema Type Organization [schema_type:organization]"
+msgstr "(code) Type de Schéma Organization [schema_type:organization]"
+
+#: lib/gettext-config.php:24
+msgctxt "lib file description"
+msgid "(code) Schema Type Person [schema_type:person]"
+msgstr "(code) Type de Schéma Person [schema_type:person]"
+
+#: lib/gettext-config.php:25
+msgctxt "lib file description"
+msgid "(code) Schema Type Place [schema_type:place]"
+msgstr "(code) Type de Schéma Place [schema_type:place]"
+
+#: lib/gettext-config.php:26
+msgctxt "lib file description"
+msgid "(code) Schema Type Product [schema_type:product]"
+msgstr "(code) Type de Schéma Product [schema_type:product]"
+
+#: lib/gettext-config.php:27
+msgctxt "lib file description"
+msgid "(code) Schema Type Profile Page [schema_type:webpage.profile]"
+msgstr "(code) Type de Schéma Profile Page [schema_type:webpage.profile]"
+
+#: lib/gettext-config.php:28
+msgctxt "lib file description"
+msgid "(code) Schema Type QAPage [schema_type:webpage.qa]"
+msgstr "(code) Type de Schéma QAPage [schema_type:webpage.qa]"
+
+#: lib/gettext-config.php:29
+msgctxt "lib file description"
+msgid "(code) Schema Type Question and Answer [schema_type:question]"
+msgstr "(code) Type de Schéma Question and Answer [schema_type:question]"
+
+#: lib/gettext-config.php:30
+msgctxt "lib file description"
+msgid "(code) Schema Type Recipe [schema_type:recipe]"
+msgstr "(code) Type de Schéma Recipe [schema_type:recipe]"
+
+#: lib/gettext-config.php:31
+msgctxt "lib file description"
+msgid "(code) Schema Type Review [schema_type:review]"
+msgstr "(code) Type de Schéma Review [schema_type:review]"
+
+#: lib/gettext-config.php:32
+msgctxt "lib file description"
+msgid "(code) Schema Type Search Results Page [schema_type:webpage.search.results]"
+msgstr "(code) Type de Schéma Search Results Page [schema_type:webpage.search.results]"
+
+#: lib/gettext-config.php:33
+msgctxt "lib file description"
+msgid "(code) Schema Type Software Application [schema_type:software.application]"
+msgstr "(code) Type de Schéma Software Application [schema_type:software.application]"
+
+#: lib/gettext-config.php:34
+msgctxt "lib file description"
+msgid "(code) Schema Type Thing [schema_type:thing]"
+msgstr "(code) Type de Schéma Thing [schema_type:thing]"
+
+#: lib/gettext-config.php:35
+msgctxt "lib file description"
+msgid "(code) Schema Type WebPage [schema_type:webpage]"
+msgstr "(code) Type de Schéma WebPage [schema_type:webpage]"
+
+#: lib/gettext-config.php:36
+msgctxt "lib file description"
+msgid "(code) Schema Type WebSite [schema_type:website]"
+msgstr "(code) Type de Schéma WebSite [schema_type:website]"
+
+#: lib/gettext-config.php:37
+msgctxt "lib file description"
+msgid "(plus) Schema Property aggregateRating"
+msgstr "(plus) Propriété de Schéma aggregateRating"
+
+#: lib/gettext-config.php:38
+msgctxt "lib file description"
+msgid "(plus) Schema Property hasPart"
+msgstr "(plus) Propriété de Schéma hasPart"
+
+#: lib/gettext-config.php:39
+msgctxt "lib file description"
+msgid "(plus) Schema Property review"
+msgstr "(plus) Propriété de Schéma review"
+
+#: lib/gettext-config.php:40
+msgctxt "lib file description"
 msgid "Schema Markup"
 msgstr "Balisage Schéma"
 
-#: lib/gettext-config.php:7
+#: lib/gettext-config.php:41
 msgctxt "lib file description"
 msgid "Schema Shortcode Guide"
 msgstr "Guide code court Schéma"
 
-#: lib/gettext-config.php:8
+#: lib/gettext-config.php:42
 msgctxt "plugin description"
 msgid "Google Rich Results and Structured Data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Videos, and More."
 msgstr "Résultats riche et données structurées Google pour articles, carrousels,, évaluations de déclarations, événements, pages FAQ, étapes pratiques, images, entreprise / référencement locale, organisations, produits, recettes, restaurants, critiques, videos, et plus."
