@@ -11,6 +11,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -25,6 +26,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeSoftwareApplication' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -36,12 +38,14 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeSoftwareApplication' ) ) {
 		public function filter_json_data_https_schema_org_softwareapplication( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
 			$ret = array();
 
 			if ( ! empty( $mod[ 'obj' ] ) ) {	// Just in case.
+
 				$md_opts = SucomUtil::get_opts_begin( 'schema_software_app_', (array) $mod[ 'obj' ]->get_options( $mod[ 'id' ] ) );
 			}
 
@@ -50,6 +54,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeSoftwareApplication' ) ) {
 			 * 	applicationCategory
 			 */
 			if ( ! empty( $md_opts[ 'schema_software_app_cat' ] ) ) {
+
 				$ret[ 'applicationCategory' ] = (string) $md_opts[ 'schema_software_app_cat' ];
 			}
 
@@ -58,6 +63,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeSoftwareApplication' ) ) {
 			 * 	operatingSystem
 			 */
 			if ( ! empty( $md_opts[ 'schema_software_app_os' ] ) ) {
+
 				$ret[ 'operatingSystem' ] = (string) $md_opts[ 'schema_software_app_os' ];
 			}
 
@@ -80,9 +86,23 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeSoftwareApplication' ) ) {
 				 */
 				if ( empty( $mt_og[ 'product:offers' ] ) ) {
 
+					if ( $this->p->debug->enabled ) {
+
+						$this->p->debug->log( 'getting single offer data' );
+					}
+
 					if ( $single_offer = WpssoSchemaSingle::get_offer_data( $mod, $mt_og ) ) {
 
+						if ( $this->p->debug->enabled ) {
+
+							$this->p->debug->log_arr( '$single_offer', $single_offer );
+						}
+
 						$ret[ 'offers' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/Offer', $single_offer );
+
+					} elseif ( $this->p->debug->enabled ) {
+
+						$this->p->debug->log( 'returned $single_offer is empty' );
 					}
 
 				/**
@@ -90,6 +110,11 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeSoftwareApplication' ) ) {
 				 * 	offers as https://schema.org/AggregateOffer
 				 */
 				} elseif ( is_array( $mt_og[ 'product:offers' ] ) ) {	// Just in case - must be an array.
+
+					if ( $this->p->debug->enabled ) {
+
+						$this->p->debug->log( 'getting aggregate offer data' );
+					}
 
 					WpssoSchema::add_aggregate_offer_data( $ret, $mod, $mt_og[ 'product:offers' ] );
 				}
@@ -99,6 +124,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeSoftwareApplication' ) ) {
 			} else {
 
 				if ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'product offer recursion detected and avoided' );
 				}
 			}

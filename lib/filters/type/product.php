@@ -163,9 +163,23 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 				 */
 				if ( empty( $mt_og[ 'product:offers' ] ) ) {	// No product variations.
 
+					if ( $this->p->debug->enabled ) {
+
+						$this->p->debug->log( 'getting single offer data' );
+					}
+
 					if ( $single_offer = WpssoSchemaSingle::get_offer_data( $mod, $mt_og ) ) {
 
+						if ( $this->p->debug->enabled ) {
+
+							$this->p->debug->log_arr( '$single_offer', $single_offer );
+						}
+
 						$ret[ 'offers' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/Offer', $single_offer );
+
+					} elseif ( $this->p->debug->enabled ) {
+
+						$this->p->debug->log( 'returned $single_offer is empty' );
 					}
 
 				/**
@@ -173,6 +187,11 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 				 * 	offers as https://schema.org/AggregateOffer
 				 */
 				} elseif ( is_array( $mt_og[ 'product:offers' ] ) ) {	// Just in case - must be an array.
+
+					if ( $this->p->debug->enabled ) {
+
+						$this->p->debug->log( 'getting aggregate offer data' );
+					}
 
 					WpssoSchema::add_aggregate_offer_data( $ret, $mod, $mt_og[ 'product:offers' ] );
 				}
