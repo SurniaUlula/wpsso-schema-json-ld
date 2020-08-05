@@ -95,7 +95,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 				'reviewCount' => null,
 			);
 
-			$og_type = isset( $mt_og[ 'og:type' ] ) ? $mt_og[ 'og:type' ] : '';
+			$og_type = isset( $mt_og[ 'og:type' ] ) ? $mt_og[ 'og:type' ] : false;
 
 			/**
 			 * Only pull values from meta tags if this is the main entity markup.
@@ -104,8 +104,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 
 				if ( $this->p->debug->enabled ) {
 
-					$this->p->debug->log_arr( 'open graph rating',
-						SucomUtil::preg_grep_keys( '/:rating:/', $mt_og ) );
+					$this->p->debug->log_arr( 'open graph rating', SucomUtil::preg_grep_keys( '/:rating:/', $mt_og ) );
 				}
 
 				WpssoSchema::add_data_itemprop_from_assoc( $aggr_rating, $mt_og, array(
@@ -117,9 +116,10 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 				) );
 			}
 
+			$aggr_rating = WpssoSchema::get_schema_type_context( 'https://schema.org/AggregateRating', $aggr_rating );
+
 			$aggr_rating = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_aggregaterating',
-				WpssoSchema::get_schema_type_context( 'https://schema.org/AggregateRating', $aggr_rating ),
-					$mod, $mt_og, $page_type_id, $is_main );
+				$aggr_rating, $mod, $mt_og, $page_type_id, $is_main );
 
 			if ( $this->p->debug->enabled ) {
 
@@ -174,7 +174,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 				return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
 			}
 
-			if ( ! $this->can_add_aggregate_rating( $page_type_id ) ) {
+			if ( ! $this->allow_aggregate_rating( $page_type_id ) ) {
 
 				if ( $this->p->debug->enabled ) {
 
@@ -236,7 +236,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
 		}
 
-		private function can_add_aggregate_rating( $page_type_id ) {
+		private function allow_aggregate_rating( $page_type_id ) {
 
 			foreach ( $this->p->cf[ 'head' ][ 'schema_aggregate_rating_parents' ] as $parent_id ) {
 

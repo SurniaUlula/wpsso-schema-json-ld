@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.15.0-dev.1\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.15.0-dev.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-"
 "ld\n"
 "POT-Creation-Date: 2020-MO-DA HO:MI+ZONE\n"
@@ -18,6 +18,12 @@ msgid ""
 "An aggregate rating value for this markup has been ignored &mdash; <a href="
 "\"%1$s\">Google does not allow an aggregate rating value for the Schema Type "
 "%2$s</a>."
+msgstr ""
+
+#: lib/filters/prop/review.php:203
+msgid ""
+"Reviews for this markup have been ignored &mdash; <a href=\"%1$s\">Google "
+"does not allow reviews for the Schema Type %2$s</a>."
 msgstr ""
 
 #: lib/filters/type/claimreview.php:76 lib/filters.php:469

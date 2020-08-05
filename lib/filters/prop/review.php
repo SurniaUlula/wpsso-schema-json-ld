@@ -11,6 +11,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -25,6 +26,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -62,16 +64,9 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 			 * 	MusicRecording
 			 *	Organization
 			 */
-			$review_filters = array();
-
-			foreach ( $this->p->cf[ 'head' ][ 'schema_review_parents' ] as $parent_id ) {
-
-				$parent_url = $this->p->schema->get_schema_type_url( $parent_id );
-
-				$filter_name = 'json_data_' . SucomUtil::sanitize_hookname( $parent_url );
-
-				$review_filters[ $filter_name ] = 5;
-			}
+			$review_filters = array(
+				'json_data_https_schema_org_thing' => 5,
+			);
 
 			$this->p->util->add_plugin_filters( $this, array(
 				'json_data_https_schema_org_thing_review' => $review_filters,
@@ -86,23 +81,15 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 		public function filter_json_data_https_schema_org_thing_review( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
-			}
-
-			if ( empty( $mt_og[ 'og:type' ] ) ) {
-
-				if ( $this->p->debug->enabled ) {
-					$this->p->debug->log( 'og:type is empty and required for the reviews meta tag prefix' );
-				}
-
-				return $json_data;
 			}
 
 			$ret = array();
 
-			$og_type = $mt_og[ 'og:type' ];
-
 			$all_reviews = array();
+
+			$og_type = isset( $mt_og[ 'og:type' ] ) ? $mt_og[ 'og:type' ] : false;
 
 			/**
 			 * Move any existing properties (from shortcodes, for example) so we can filter them and add new ones.
@@ -124,11 +111,12 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 			/**
 			 * Only pull values from meta tags if this is the main entity markup.
 			 */
-			if ( $is_main ) {
+			if ( $is_main && $og_type ) {
 
 				if ( ! empty( $mt_og[ $og_type . ':reviews' ] ) && is_array( $mt_og[ $og_type . ':reviews' ] ) ) {
 
 					if ( $this->p->debug->enabled ) {
+
 						$this->p->debug->log( 'adding ' . count( $mt_og[ $og_type . ':reviews' ] ) . ' product reviews from mt_og' );
 					}
 	
@@ -174,6 +162,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 									$mod, $mt_review[ $mt_pre . ':id' ] );
 
 								if ( ! $replies_added ) {
+
 									unset( $single_review[ 'comment' ] );
 								}
 							}
@@ -195,6 +184,35 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 				$ret[ 'review' ] = $all_reviews;
 			}
 
+			if ( ! $this->allow_review( $page_type_id ) ) {
+
+				if ( $this->p->debug->enabled ) {
+
+					$this->p->debug->log( 'exiting early: cannot add review to page type id ' . $page_type_id );
+				}
+
+				if ( ! empty( $ret[ 'review' ] ) ) {
+
+					/**
+					 * Add notice only if the admin notices have not already been shown.
+					 */
+					if ( $this->p->notice->is_admin_pre_notices() ) {
+
+						$page_type_url = $this->p->schema->get_schema_type_url( $page_type_id );
+
+						$notice_msg = sprintf( __( 'Reviews for this markup have been ignored &mdash; <a href="%1$s">Google does not allow reviews for the Schema Type %2$s</a>.', 'wpsso-schema-json-ld' ), 'https://developers.google.com/search/docs/data-types/review-snippet', $page_type_url );
+
+						$this->p->notice->warn( $notice_msg );
+					}
+
+					unset( $ret[ 'review' ] );
+				}
+
+				unset( $json_data[ 'review' ] );	// Just in case.
+
+				return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+			}
+
 			/**
 			 * Prevent a "The review field is recommended" warning from the Google testing tool.
 			 */
@@ -210,6 +228,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 						if ( ! $this->p->schema->is_schema_type_child( $page_type_id, 'review' ) ) {
 
 							if ( $this->p->debug->enabled ) {
+
 								$this->p->debug->log( 'adding a default 5-star review value' );
 							}
 
@@ -229,6 +248,29 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 			}
 
 			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+		}
+
+		private function allow_review( $page_type_id ) {
+
+			foreach ( $this->p->cf[ 'head' ][ 'schema_review_parents' ] as $parent_id ) {
+
+				if ( $this->p->schema->is_schema_type_child( $page_type_id, $parent_id ) ) {
+
+					if ( $this->p->debug->enabled ) {
+
+						$this->p->debug->log( 'review for schema type ' . $page_type_id . ' is allowed' );
+					}
+
+					return true;
+				}
+			}
+			
+			if ( $this->p->debug->enabled ) {
+
+				$this->p->debug->log( 'review for schema type ' . $page_type_id . ' not allowed' );
+			}
+
+			return false;
 		}
 	}
 }
