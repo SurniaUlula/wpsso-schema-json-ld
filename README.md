@@ -71,7 +71,7 @@
 <li><p>Provides accurate and comprehensive Schema JSON-LD markup for Google Rich Results (aka Rich Snippets) with Structured Data.</p></li>
 <li><p>Provides complete Schema ImageObject SEO markup with image information from the WordPress Media Library (name, alternateName, alternativeHeadline, caption, description, fileFormat, uploadDate, and more).</p></li>
 <li><p>Provides complete Schema VideoObject SEO markup with video information from WPSSO Core Premium service APIs (Facebook, Slideshare, Soundcloud, Vimeo, Wistia, YouTube) including the 'embedUrl' and 'contentUrl' properties for Google.</p></li>
-<li><p>Provides Schema Article AMP 1:1, 4:3, and 16:9 images for mobile Google Rich Results (see the <a href="https://developers.google.com/search/docs/data-types/article#amp-sd">Google Article AMP structured data guidelines</a> for details).</p></li>
+<li><p>Provides Schema 1:1, 4:3, and 16:9 images for Google Rich Results (see the <a href="https://developers.google.com/search/docs/guides/search-gallery">Google rich results search library</a> for details).</p></li>
 <li><p>Provides Schema FAQPage and Question / Answer markup for the <a href="https://wordpress.org/plugins/wpsso-faq/">WPSSO FAQ Manager</a> add-on.</p></li>
 <li><p>Includes Schema JSON-LD scripts from shortcodes and WordPress editor blocks in the Schema CreativeWork type and sub-types.</p></li>
 <li><p>Built-in support for <a href="https://wordpress.org/plugins/amp/">AMP</a>, <a href="https://wordpress.org/plugins/better-amp/">Better AMP</a>, and <a href="https://wordpress.org/plugins/accelerated-mobile-pages/">AMP for WP</a> plugins.</p></li>

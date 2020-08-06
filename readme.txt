@@ -75,7 +75,7 @@ Google regularly updates and changes their Schema markup requirements - WPSSO JS
 
 * Provides complete Schema VideoObject SEO markup with video information from WPSSO Core Premium service APIs (Facebook, Slideshare, Soundcloud, Vimeo, Wistia, YouTube) including the 'embedUrl' and 'contentUrl' properties for Google.
 
-* Provides Schema Article AMP 1:1, 4:3, and 16:9 images for mobile Google Rich Results (see the [Google Article AMP structured data guidelines](https://developers.google.com/search/docs/data-types/article#amp-sd) for details).
+* Provides Schema 1:1, 4:3, and 16:9 images for Google Rich Results (see the [Google rich results search library](https://developers.google.com/search/docs/guides/search-gallery) for details).
 
 * Provides Schema FAQPage and Question / Answer markup for the [WPSSO FAQ Manager](https://wordpress.org/plugins/wpsso-faq/) add-on.
 
@@ -312,7 +312,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.15.0-dev.5 (2020/08/06)**
+**Version 3.15.0-dev.6 (2020/08/06)**
 
 * **New Features**
 	* None.
@@ -325,7 +325,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v7.16.0-dev.5.
+	* WPSSO Core v7.16.0-dev.6.
 
 **Version 3.14.0 (2020/08/02)**
 
@@ -381,7 +381,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.15.0-dev.5 =
+= 3.15.0-dev.6 =
 
 (2020/08/06) Refactored text domain related methods to allow reloading translation files when debugging is enabled.
 
