@@ -186,8 +186,6 @@ _x( 'Product GTIN', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Maximum Images', 'option label', 'wpsso' );
 // translators: Please ignore - translation uses a different text domain.
 _x( 'Image ID', 'option label', 'wpsso' );
-// translators: Please ignore - translation uses a different text domain.
-_x( 'or an Image URL', 'option label', 'wpsso' );
 _x( 'days', 'option comment', 'wpsso-schema-json-ld' );
 _x( 'hours', 'option comment', 'wpsso-schema-json-ld' );
 _x( 'mins', 'option comment', 'wpsso-schema-json-ld' );

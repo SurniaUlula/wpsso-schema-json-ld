@@ -1218,9 +1218,9 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 			}
 
 			$max_media_items = $this->p->cf[ 'form' ][ 'max_media_items' ];
-			$size_name       = $this->p->lca . '-schema';
-			$media_request   = array( 'pid', 'img_url' );
-			$media_info = $this->p->og->get_media_info( $size_name, $media_request, $mod, $md_pre = 'og', $mt_pre = 'og' );
+			$size_name       = $this->p->lca . '-schema-1-1';
+			$media_request   = array( 'pid' );
+			$media_info = $this->p->og->get_media_info( $size_name, $media_request, $mod, $md_pre = 'og' );
 	
 			$row_class = $form->in_options( '/^schema_img_/', $is_preg = true ) ? '' : 'hide_in_basic';
 
@@ -1250,15 +1250,6 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 				'label'    => _x( 'Image ID', 'option label', 'wpsso' ),
 				'tooltip'  => 'meta-schema_img_id',
 				'content'  => $form->get_no_input_image_upload( 'schema_img', $media_info[ 'pid' ], true ),
-			);
-
-			$form_rows[ 'schema_img_url' ] = array(
-				'tr_class' => $row_class,
-				'th_class' => 'medium',
-				'td_class' => 'blank',
-				'label'    => _x( 'or an Image URL', 'option label', 'wpsso' ),
-				'tooltip'  => 'meta-schema_img_url',
-				'content'  => $form->get_no_input_value( $media_info[ 'img_url' ], $css_class = 'wide' ),
 			);
 
 			return $form->get_md_form_rows( $table_rows, $form_rows, $head_info, $mod );

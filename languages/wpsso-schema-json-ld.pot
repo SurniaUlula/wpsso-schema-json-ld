@@ -1403,10 +1403,8 @@ msgctxt "option label"
 msgid "Subject Image ID"
 msgstr ""
 
-#. translators: Please ignore - translation uses a different text domain.
-#: lib/gettext-pro.php:105 lib/gettext-pro.php:190 lib/pro/admin/edit.php:684
-#: lib/pro/admin/edit.php:1359 lib/std/admin/edit.php:709
-#: lib/std/admin/edit.php:1259
+#: lib/gettext-pro.php:105 lib/pro/admin/edit.php:684
+#: lib/std/admin/edit.php:709
 msgctxt "option label"
 msgid "or an Image URL"
 msgstr ""
@@ -1848,26 +1846,26 @@ msgctxt "option label"
 msgid "Maximum Images"
 msgstr ""
 
-#: lib/gettext-pro.php:191 lib/pro/admin/edit.php:1379
-#: lib/std/admin/edit.php:1279
+#: lib/gettext-pro.php:189 lib/pro/admin/edit.php:1371
+#: lib/std/admin/edit.php:1270
 msgctxt "option comment"
 msgid "days"
 msgstr ""
 
-#: lib/gettext-pro.php:192 lib/pro/admin/edit.php:1380
-#: lib/std/admin/edit.php:1280
+#: lib/gettext-pro.php:190 lib/pro/admin/edit.php:1372
+#: lib/std/admin/edit.php:1271
 msgctxt "option comment"
 msgid "hours"
 msgstr ""
 
-#: lib/gettext-pro.php:193 lib/pro/admin/edit.php:1381
-#: lib/std/admin/edit.php:1281
+#: lib/gettext-pro.php:191 lib/pro/admin/edit.php:1373
+#: lib/std/admin/edit.php:1272
 msgctxt "option comment"
 msgid "mins"
 msgstr ""
 
-#: lib/gettext-pro.php:194 lib/pro/admin/edit.php:1382
-#: lib/std/admin/edit.php:1282
+#: lib/gettext-pro.php:192 lib/pro/admin/edit.php:1374
+#: lib/std/admin/edit.php:1273
 msgctxt "option comment"
 msgid "secs"
 msgstr ""
