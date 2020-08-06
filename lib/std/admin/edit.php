@@ -6,6 +6,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -20,6 +21,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -32,6 +34,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 		public function filter_metabox_sso_edit_rows( $table_rows, $form, $head_info, $mod ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -39,6 +42,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 			 * Move Schema options to the end of the table, just in case.
 			 */
 			foreach ( SucomUtil::preg_grep_keys( '/^(subsection_schema|schema_)/', $table_rows ) as $key => $row ) {
+
 				SucomUtil::move_to_end( $table_rows, $key );
 			}
 
@@ -1201,6 +1205,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 		public function filter_metabox_sso_media_rows( $table_rows, $form, $head_info, $mod ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -1208,13 +1213,14 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 			 * Move Schema options to the end of the table, just in case.
 			 */
 			foreach ( SucomUtil::preg_grep_keys( '/^(subsection_schema|schema_)/', $table_rows ) as $key => $row ) {
+
 				SucomUtil::move_to_end( $table_rows, $key );
 			}
 
 			$max_media_items = $this->p->cf[ 'form' ][ 'max_media_items' ];
-
-			$media_info = $this->p->og->get_media_info( $this->p->lca . '-schema',
-				array( 'pid', 'img_url' ), $mod, $md_pre = 'og', $mt_pre = 'og' );
+			$size_name       = $this->p->lca . '-schema';
+			$media_request   = array( 'pid', 'img_url' );
+			$media_info = $this->p->og->get_media_info( $size_name, $media_request, $mod, $md_pre = 'og', $mt_pre = 'og' );
 	
 			$row_class = $form->in_options( '/^schema_img_/', $is_preg = true ) ? '' : 'hide_in_basic';
 
@@ -1226,6 +1232,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 			);
 
 			if ( $mod[ 'is_post' ] ) {
+
 				$form_rows[ 'schema_img_max' ] = array(
 					'tr_class' => $row_class,
 					'th_class' => 'medium',
@@ -1268,6 +1275,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 			 * Translated text strings.
 			 */
 			if ( null === $days_sep ) {
+
 				$days_sep  = ' ' . _x( 'days', 'option comment', 'wpsso-schema-json-ld' ) . ', ';
 				$hours_sep = ' ' . _x( 'hours', 'option comment', 'wpsso-schema-json-ld' ) . ', ';
 				$mins_sep  = ' ' . _x( 'mins', 'option comment', 'wpsso-schema-json-ld' ) . ', ';

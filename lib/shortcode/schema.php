@@ -403,9 +403,11 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 				}
 
 				$size_name = $this->p->lca . '-schema';
+
 				$og_images = $this->p->media->get_content_images( 1, $size_name, false, false, false, $prop_content );
 
 				if ( ! empty( $og_images ) ) {
+
 					WpssoSchema::add_images_data_mt( $prop_ref[ 'image' ], $og_images );
 				}
 

@@ -36,12 +36,14 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 		public function filter_json_data_https_schema_org_howto( $json_data, $mod, $mt_og, $page_type_id, $is_main  ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
 			if ( $page_type_id === 'recipe' ) {
 
 				if ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'exiting early: page_type_id is recipe (avoiding conflicting properties)' );
 				}
 
@@ -54,14 +56,13 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 
 			if ( ! empty( $mod[ 'obj' ] ) ) {	// Just in case.
 
-				$md_opts = SucomUtil::get_opts_begin( 'schema_howto_', 
-					array_merge( 
-						(array) $mod[ 'obj' ]->get_defaults( $mod[ 'id' ] ), 
-						(array) $mod[ 'obj' ]->get_options( $mod[ 'id' ] )	// Returns empty string if no meta found.
-					)
-				);
+				$md_opts = SucomUtil::get_opts_begin( 'schema_howto_', array_merge( 
+					(array) $mod[ 'obj' ]->get_defaults( $mod[ 'id' ] ), 
+					(array) $mod[ 'obj' ]->get_options( $mod[ 'id' ] )	// Returns empty string if no meta found.
+				) );
 
 			} else {
+
 				$md_opts = array();
 			}
 
@@ -70,6 +71,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 			 * 	yield
 			 */
 			if ( ! empty( $md_opts[ 'schema_howto_yield' ] ) ) {
+
 				$ret[ 'yield' ] = (string) $md_opts[ 'schema_howto_yield' ];
 			}
 

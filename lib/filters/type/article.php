@@ -41,6 +41,12 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeArticle' ) ) {
 
 			$ret = array();
 
+			$size_names = array(
+				$this->p->lca . '-schema-1-1',
+				$this->p->lca . '-schema-4-3',
+				$this->p->lca . '-schema-16-9',
+			);
+
 			/**
 			 * Property:
 			 *	articleSection
@@ -48,25 +54,6 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeArticle' ) ) {
 			WpssoSchema::add_data_itemprop_from_assoc( $ret, $mt_og, array(
 				'articleSection' => 'article:section',
 			) );
-
-			$amp_size_names = array(
-				$this->p->lca . '-schema-article-1-1',
-				$this->p->lca . '-schema-article-4-3',
-				$this->p->lca . '-schema-article-16-9',
-			);
-
-			if ( SucomUtil::is_amp() ) {	// Returns null, true, or false.
-
-				$size_names     = $amp_size_names;
-				$alt_size_names = null;
-				$org_logo_key   = 'org_banner_url';
-
-			} else {
-
-				$size_names     = array( $this->p->lca . '-schema-article' );
-				$alt_size_names = empty( $this->p->avail[ 'amp' ][ 'any' ] ) ? null : $amp_size_names;
-				$org_logo_key   = 'org_banner_url';
-			}
 
 			/**
 			 * Property:
@@ -84,7 +71,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeArticle' ) ) {
 			 *      image as https://schema.org/ImageObject
 			 *      video as https://schema.org/VideoObject
 			 */
-			WpssoSchema::add_media_data( $ret, $mod, $mt_og, $size_names, $add_video = true, $alt_size_names );
+			WpssoSchema::add_media_data( $ret, $mod, $mt_og, $size_names, $add_video = true );
 
 			WpssoSchema::check_required( $ret, $mod, array( 'image' ) );
 

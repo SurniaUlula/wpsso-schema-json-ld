@@ -51,6 +51,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 				) );
 
 			} else {
+
 				$md_opts = array();
 			}
 
