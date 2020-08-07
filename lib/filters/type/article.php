@@ -11,6 +11,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -25,6 +26,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeArticle' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -36,16 +38,11 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeArticle' ) ) {
 		public function filter_json_data_https_schema_org_article( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
 			$ret = array();
-
-			$size_names = array(
-				$this->p->lca . '-schema-1-1',
-				$this->p->lca . '-schema-4-3',
-				$this->p->lca . '-schema-16-9',
-			);
 
 			/**
 			 * Property:
@@ -57,23 +54,14 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeArticle' ) ) {
 
 			/**
 			 * Property:
-			 *      articleBody
+			 *	articleBody
 			 */
-			if ( ! empty( $this->p->options[ 'schema_add_text_prop' ] ) ) {
+			if ( isset( $json_data[ 'text' ] ) ) {
 
-				$text_max_len = $this->p->options[ 'schema_text_max_len' ];
+				$ret[ 'articleBody' ] = $json_data[ 'text' ];
 
-				$ret[ 'articleBody' ] = $this->p->page->get_text( $text_max_len, $dots = '...', $mod );
+				unset( $json_data[ 'text' ] );
 			}
-
-			/**
-			 * Property:
-			 *      image as https://schema.org/ImageObject
-			 *      video as https://schema.org/VideoObject
-			 */
-			WpssoSchema::add_media_data( $ret, $mod, $mt_og, $size_names, $add_video = true );
-
-			WpssoSchema::check_required( $ret, $mod, array( 'image' ) );
 
 			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
 		}

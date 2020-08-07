@@ -11,6 +11,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -25,6 +26,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -36,22 +38,22 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 		public function filter_json_data_https_schema_org_place( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
 			$ret = array();
-
-			$size_name = $this->p->lca . '-schema';
 
 			/**
 			 * Property:
 			 *	image as https://schema.org/ImageObject
 			 */
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->log( 'adding image property for place (videos disabled)' );
 			}
 
-			WpssoSchema::add_media_data( $ret, $mod, $mt_og, $size_name, $add_video = false );
+			WpssoSchema::add_media_data( $ret, $mod, $mt_og, $size_names = 'schema', $add_video = false );
 
 			/**
 			 * Skip reading place meta tags if not main schema type or if there are no place meta tags.
@@ -65,6 +67,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 				} else {
 
 					if ( $this->p->debug->enabled ) {
+
 						$this->p->debug->log( 'skipped reading place meta tags (not main schema type)' );
 					}
 
@@ -74,6 +77,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 			} else {
 
 				if ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'no place meta tags found' );
 				}
 
@@ -106,6 +110,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 				) as $prop_name => $mt_suffix ) {
 
 					if ( isset( $mt_og[ 'place:' . $mt_suffix ] ) ) {
+
 						$postal_address[ $prop_name ] = $mt_og[ 'place:' . $mt_suffix ];
 					}
 				}
@@ -113,12 +118,14 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 				if ( ! empty( $postal_address ) ) {
 
 					if ( $this->p->debug->enabled ) {
+
 						$this->p->debug->log( 'adding place address meta tags for postal address' );
 					}
 
 					$ret[ 'address' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/PostalAddress', $postal_address );
 
 				} elseif ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'no place address meta tags found for postal address' );
 				}
 			}
@@ -134,6 +141,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 				) as $prop_name => $og_key ) {
 
 					if ( isset( $mt_og[ 'place:' . $og_key ] ) ) {
+
 						$ret[ $prop_name ] = $mt_og[ 'place:' . $og_key ];
 					}
 				}
@@ -161,15 +169,21 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 				) as $prop_name => $mt_suffix ) {
 
 					if ( isset( $mt_og[ 'place:location:' . $mt_suffix ] ) ) {	// Prefer the place location meta tags.
+
 						$geo_coords[ $prop_name ] = $mt_og[ 'place:location:' . $mt_suffix ];
+
 					} elseif ( isset( $mt_og[ 'og:' . $mt_suffix ] ) ) {
+
 						$geo_coords[ $prop_name ] = $mt_og[ 'og:' . $mt_suffix ];
 					}
 				}
 
 				if ( ! empty( $geo_coords ) ) {
+
 					$ret[ 'geo' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/GeoCoordinates', $geo_coords ); 
+
 				} elseif ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'no place:location meta tags found for geo coordinates' );
 				}
 			}
@@ -223,6 +237,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 							) as $prop_name => $mt_key ) {
 
 								if ( isset( $mt_opening_hours[ $mt_key ] ) && $mt_opening_hours[ $mt_key ] !== '' ) {
+
 									$weekday_spec[ $prop_name ] = $mt_opening_hours[ $mt_key ];
 								}
 							}
@@ -232,10 +247,12 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 					}
 
 					if ( ! empty( $opening_spec ) ) {
+
 						$ret[ 'openingHoursSpecification' ] = $opening_spec;
 					}
 
 				} elseif ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'no place:opening_hours:day meta tags found for opening hours specification' );
 				}
 			}

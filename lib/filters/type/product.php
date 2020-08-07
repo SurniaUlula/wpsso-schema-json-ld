@@ -63,8 +63,6 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 
 			$ret = array();
 
-			$size_name = $this->p->lca . '-schema';
-
 			/**
 			 * Note that there is no Schema 'ean' property for the 'product:ean' value.
 			 *
@@ -215,7 +213,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 				$this->p->debug->log( 'adding image property for product (videos disabled)' );
 			}
 
-			WpssoSchema::add_media_data( $ret, $mod, $mt_og, $size_name, $add_video = false );
+			WpssoSchema::add_media_data( $ret, $mod, $mt_og, $size_names = 'schema', $add_video = false );
 
 			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
 		}

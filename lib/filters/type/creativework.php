@@ -11,6 +11,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -25,6 +26,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -36,48 +38,33 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 		public function filter_json_data_https_schema_org_creativework( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
 			$ret = array();
 
-			$size_names = array( $this->p->lca . '-schema' );
-
 			$org_logo_key = 'org_logo_url';
 
 			/**
-			 * The Article type has different requirements for the following properties, so if this is an Article type
-			 * or sub-type, skip this section and allow the Article filter to add them.
+			 * Property:
+			 *      text
 			 */
-			if ( $this->p->schema->is_schema_type_child( $page_type_id, 'article' ) ) {
+			if ( ! empty( $this->p->options[ 'schema_add_text_prop' ] ) ) {
 
-				if ( $this->p->debug->enabled ) {
-					$this->p->debug->log( 'skipping article specific properties' );
-				}
+				$text_max_len = $this->p->options[ 'schema_text_max_len' ];
 
-			} else {
-
-				/**
-				 * Property:
-				 *      text
-				 */
-				if ( ! empty( $this->p->options[ 'schema_add_text_prop' ] ) ) {
-
-					$text_max_len = $this->p->options[ 'schema_text_max_len' ];
-
-					$ret[ 'text' ] = $this->p->page->get_text( $text_max_len, $dots = '...', $mod );
-				}
-
-				/**
-				 * Property:
-				 *      image as https://schema.org/ImageObject
-				 *      video as https://schema.org/VideoObject
-				 */
-				WpssoSchema::add_media_data( $ret, $mod, $mt_og, $size_names, $add_video = true );
-
-				WpssoSchema::check_required( $ret, $mod, array( 'image' ) );
-
+				$ret[ 'text' ] = $this->p->page->get_text( $text_max_len, $dots = '...', $mod );
 			}
+
+			/**
+			 * Property:
+			 *      image as https://schema.org/ImageObject
+			 *      video as https://schema.org/VideoObject
+			 */
+			WpssoSchema::add_media_data( $ret, $mod, $mt_og, $size_names = 'schema', $add_video = true );
+
+			WpssoSchema::check_required( $ret, $mod, array( 'image' ) );
 
 			/**
 			 * Property:
@@ -100,6 +87,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 					$md_val = $mod[ 'obj' ]->get_options( $mod[ 'id' ], $md_key, $filter_opts = true, $pad_opts = true );
 
 					if ( $md_val === null || $md_val === '' || $md_val === 'none' ) {
+
 						continue;
 					}
 
@@ -130,8 +118,11 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 						$md_opts, $invert = false, $replace = true ) as $num => $ispartof_url ) {
 
 						if ( empty( $md_opts[ 'schema_ispartof_type_' . $num ] ) ) {
+
 							$ispartof_type_url = 'https://schema.org/CreativeWork';
+
 						} else {
+
 							$ispartof_type_url = $this->p->schema->get_schema_type_url( $md_opts[ 'schema_ispartof_type_' . $num ] );
 						}
 					
@@ -157,6 +148,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 			if ( ! empty( $ret[ 'headline' ] ) ) {	// Must be a non-empty string.
 
 				if ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'found custom meta headline = ' . $ret[ 'headline' ] );
 				}
 
@@ -196,6 +188,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 					$md_val = $mod[ 'obj' ]->get_options( $mod[ 'id' ], $md_key, $filter_opts = true, $pad_opts = true );
 
 					if ( $md_val === null || $md_val === '' || $md_val === 'none' ) {
+
 						continue;
 					}
 
