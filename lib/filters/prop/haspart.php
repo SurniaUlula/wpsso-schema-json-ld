@@ -11,6 +11,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -19,6 +20,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 	class WpssoJsonFiltersPropHasPart {
 
 		private $p;
+
 		private static $meta_key = '_wpsso_json_haspart';
 
 		public function __construct( &$plugin ) {
@@ -26,6 +28,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -42,6 +45,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 			), $prio = 10000 );
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->log( 'added maybe_comment_json_scripts filter hook for the_content' );
 			}
 
@@ -51,12 +55,14 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 		public function filter_content_html_script_application_ld_json( $html, $mod ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
 			$json_data = $this->p->schema->get_mod_json_data( $mod );	// Can return false.
 
 			if ( ! empty( $json_data ) ) {
+
 				$html .= '<script type="application/ld+json">' . $this->p->util->json_format( $json_data ) . '</script>' . "\n";
 			}
 
@@ -69,14 +75,16 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 		public function filter_json_data_https_schema_org_creativework_haspart( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
 			if ( ! $is_main ) {
+
 				return $json_data;
 			}
 
-			$ret = array();
+			$json_ret = array();
 
 			$data_props = array(
 				'hasPart'  => array(),
@@ -108,6 +116,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 				$content = $this->p->page->get_the_content( $mod, $read_cache = true, $md_key = '', $flatten = false );
 
 				if ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'getting json scripts from the content' );
 				}
 
@@ -116,6 +125,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 				if ( empty( $scripts_data ) ) {
 
 					if ( $this->p->debug->enabled ) {
+
 						$this->p->debug->log( 'no json scripts found in the content' );
 					}
 
@@ -128,6 +138,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 						if ( is_array( $single_data ) ) {	// Just in case.
 
 							if ( $this->p->debug->enabled ) {
+
 								$this->p->debug->log_arr( 'adding single data for $single_md5 ' . $single_md5, $single_data );
 							}
 	
@@ -136,6 +147,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 						} else {
 	
 							if ( $this->p->debug->enabled ) {
+
 								$this->p->debug->log( 'skipped ' . $single_md5 . ': single data is not an array' );
 								$this->p->debug->log( $single_data );
 							}
@@ -145,6 +157,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 					if ( empty( $md5_added ) ) {
 
 						if ( $this->p->debug->enabled ) {
+
 							$this->p->debug->log( 'deleting ' . self::$meta_key . ' post meta' );
 						}
 
@@ -153,6 +166,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 					} else {
 
 						if ( $this->p->debug->enabled ) {
+
 							$this->p->debug->log_arr( 'saving $md5_added to ' . self::$meta_key . ' post meta', $md5_added );
 						}
 
@@ -180,11 +194,12 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 				}
 
 				if ( ! empty( $prop_values ) ) {
-					$ret[ $prop_name ] = $prop_values;
+
+					$json_ret[ $prop_name ] = $prop_values;
 				}
 			}
 
-			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+			return WpssoSchema::return_data_from_filter( $json_data, $json_ret, $is_main );
 		}
 
 		/**
@@ -194,6 +209,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 		private function maybe_add_single_data( array &$md5_added, array &$data_props, $single_md5, array $single_data, $default_context = null ) {
 
 			if ( null === $default_context ) {
+
 				$default_context = empty( $single_data[ '@context' ] ) ? 'https://schema.org' : $single_data[ '@context' ];
 			}
 
@@ -227,6 +243,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 			} else {
 
 				if ( empty( $single_data[ '@context' ] ) ) {	// Just in case.
+
 					$single_data[ '@context' ] = $default_context;
 				}
 
@@ -251,12 +268,14 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 		public function maybe_comment_json_scripts( $content ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
 			if ( ! empty( $GLOBALS[ $this->p->lca . '_doing_filter_the_content' ] ) ) {
 
 				if ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'exiting early: ' . $this->p->lca . '_doing_filter_the_content is true' );
 				}
 
@@ -270,6 +289,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 			} else {
 
 				if ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'exiting early: no global post object id' );
 				}
 
@@ -281,6 +301,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 			if ( empty( $md5_added ) || ! is_array( $md5_added ) ) {	// Nothing to do.
 
 				if ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'exiting early: no json scripts added' );
 				}
 
@@ -288,6 +309,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 			}
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->log_arr( '$md5_added', $md5_added );
 			}
 
@@ -301,6 +323,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 			if ( empty( $json_scripts ) ) {	// Nothing to do.
 
 				if ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'exiting early: no json scripts found in the content' );
 				}
 
@@ -308,12 +331,14 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 			}
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->log_arr( '$json_scripts', $json_scripts );
 			}
 
 			foreach ( $json_scripts as $single_md5 => $single_json ) {
 
 				if ( empty( $md5_added[ $single_md5 ] ) ) {
+
 					continue;
 				}
 
@@ -338,12 +363,14 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 				if ( $count ) {
 
 					if ( $this->p->debug->enabled ) {
+
 						$this->p->debug->log( 'json script ' . $single_md5 . ' successfully commented' );
 					}
 
 				} else {
 
 					if ( $this->p->debug->enabled ) {
+
 						$this->p->debug->log( 'json script ' . $single_md5 . ' not found in content' );
 					}
 

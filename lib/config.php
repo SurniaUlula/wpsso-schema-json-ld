@@ -6,6 +6,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -165,6 +166,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 		public static function set_constants( $plugin_file_path ) { 
 
 			if ( defined( 'WPSSOJSON_VERSION' ) ) {	// Define constants only once.
+
 				return;
 			}
 
@@ -189,6 +191,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 		public static function set_variable_constants( $var_const = null ) {
 
 			if ( ! is_array( $var_const ) ) {
+
 				$var_const = (array) self::get_variable_constants();
 			}
 
@@ -198,6 +201,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 			foreach ( $var_const as $name => $value ) {
 
 				if ( ! defined( $name ) ) {
+
 					define( $name, $value );
 				}
 			}
@@ -218,6 +222,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 			foreach ( $var_const as $name => $value ) {
 
 				if ( defined( $name ) ) {
+
 					$var_const[$name] = constant( $name );
 				}
 			}
@@ -233,9 +238,9 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 			add_filter( 'wpssojson_load_lib', array( 'WpssoJsonConfig', 'load_lib' ), 10, 3 );
 		}
 
-		public static function load_lib( $ret = false, $filespec = '', $classname = '' ) {
+		public static function load_lib( $success = false, $filespec = '', $classname = '' ) {
 
-			if ( false === $ret && ! empty( $filespec ) ) {
+			if ( false === $success && ! empty( $filespec ) ) {
 
 				$file_path = WPSSOJSON_PLUGINDIR . 'lib/' . $filespec . '.php';
 
@@ -244,14 +249,15 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 					require_once $file_path;
 
 					if ( empty( $classname ) ) {
+
 						return SucomUtil::sanitize_classname( 'wpssojson' . $filespec, $allow_underscore = false );
-					} else {
-						return $classname;
 					}
+
+					return $classname;
 				}
 			}
 
-			return $ret;
+			return $success;
 		}
 	}
 }

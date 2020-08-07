@@ -85,7 +85,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 				$this->p->debug->mark();
 			}
 
-			$ret = array();
+			$json_ret = array();
 
 			$all_reviews = array();
 
@@ -181,7 +181,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 
 			if ( ! empty( $all_reviews ) ) {
 
-				$ret[ 'review' ] = $all_reviews;
+				$json_ret[ 'review' ] = $all_reviews;
 			}
 
 			if ( ! $this->allow_review( $page_type_id ) ) {
@@ -191,7 +191,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 					$this->p->debug->log( 'exiting early: cannot add review to page type id ' . $page_type_id );
 				}
 
-				if ( ! empty( $ret[ 'review' ] ) ) {
+				if ( ! empty( $json_ret[ 'review' ] ) ) {
 
 					/**
 					 * Add notice only if the admin notices have not already been shown.
@@ -205,12 +205,12 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 						$this->p->notice->warn( $notice_msg );
 					}
 
-					unset( $ret[ 'review' ] );
+					unset( $json_ret[ 'review' ] );
 				}
 
 				unset( $json_data[ 'review' ] );	// Just in case.
 
-				return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+				return WpssoSchema::return_data_from_filter( $json_data, $json_ret, $is_main );
 			}
 
 			/**
@@ -218,7 +218,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 			 */
 			if ( $is_main ) {
 
-				if ( empty( $ret[ 'review' ] ) && empty( $json_data[ 'review' ] ) ) {
+				if ( empty( $json_ret[ 'review' ] ) && empty( $json_data[ 'review' ] ) ) {
 
 					if ( ! empty( $this->p->options[ 'schema_add_5_star_rating' ] ) ) {
 
@@ -232,7 +232,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 								$this->p->debug->log( 'adding a default 5-star review value' );
 							}
 
-							$ret[ 'review' ][] = WpssoSchema::get_schema_type_context( 'https://schema.org/Review', array(
+							$json_ret[ 'review' ][] = WpssoSchema::get_schema_type_context( 'https://schema.org/Review', array(
 								'author'       => WpssoSchema::get_schema_type_context( 'https://schema.org/Organization', array(
 									'name' => SucomUtil::get_site_name( $this->p->options, $mod ),
 								) ),
@@ -247,7 +247,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 				}
 			}
 
-			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+			return WpssoSchema::return_data_from_filter( $json_data, $json_ret, $is_main );
 		}
 
 		private function allow_review( $page_type_id ) {

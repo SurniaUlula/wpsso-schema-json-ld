@@ -11,6 +11,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -25,6 +26,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeQAPage' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -36,12 +38,13 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeQAPage' ) ) {
 		public function filter_json_data_https_schema_org_qapage( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
 			unset( $json_data[ 'mainEntityOfPage' ] );
 
-			$ret = array();
+			$json_ret = array();
 
 			$question = WpssoSchema::get_schema_type_context( 'https://schema.org/Question' );
 
@@ -66,6 +69,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeQAPage' ) ) {
 				$question[ 'description' ] = $mod[ 'obj' ]->get_options( $mod[ 'id' ], 'schema_qa_desc' );
 
 				if ( ! empty( $question[ 'acceptedAnswer' ] ) ) {
+
 					$question[ 'acceptedAnswer' ][ 'description' ] = $question[ 'description' ];
 				}
 
@@ -88,9 +92,9 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeQAPage' ) ) {
 
 			$question[ 'answerCount' ] = $answer_count;
 			
-			$ret[ 'mainEntity' ] = $question;
+			$json_ret[ 'mainEntity' ] = $question;
 
-			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+			return WpssoSchema::return_data_from_filter( $json_data, $json_ret, $is_main );
 		}
 	}
 }

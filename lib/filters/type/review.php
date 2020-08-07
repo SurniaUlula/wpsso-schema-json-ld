@@ -11,6 +11,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -25,6 +26,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -36,10 +38,11 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 		public function filter_json_data_https_schema_org_review( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
-			$ret = array();
+			$json_ret = array();
 
 			$size_name = $this->p->lca . '-schema';
 
@@ -60,16 +63,19 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 			 * 	itemReviewed
 			 */
 			if ( empty( $md_opts[ 'schema_review_item_type' ] ) || 'none' === $md_opts[ 'schema_review_item_type' ] ) {
+
 				$item_type_id = 'thing';
+
 			} else {
+
 				$item_type_id = $md_opts[ 'schema_review_item_type' ];
 			}
 
 			$item_type_url = $this->p->schema->get_schema_type_url( $item_type_id );
 
-			$ret[ 'itemReviewed' ] = WpssoSchema::get_schema_type_context( $item_type_url );
+			$json_ret[ 'itemReviewed' ] = WpssoSchema::get_schema_type_context( $item_type_url );
 
-			$item =& $ret[ 'itemReviewed' ];	// Shortcut variable name.
+			$item =& $json_ret[ 'itemReviewed' ];	// Shortcut variable name.
 
 			WpssoSchema::add_data_itemprop_from_assoc( $item, $md_opts, array(
 				'url'         => 'schema_review_item_url',
@@ -102,16 +108,19 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 			 * Restore previous reference values for admin notices.
 			 */
 			if ( is_admin() ) {
+
 				$this->p->notice->unset_ref( $sharing_url );
 			}
 
 			if ( ! WpssoSchemaSingle::add_image_data_mt( $item[ 'image' ], $mt_image, 'og:image', $list_element = false ) ) {
 
 				if ( empty( $item[ 'image' ] ) ) {
+
 					unset( $item[ 'image' ] );	// Prevent null assignment.
 				}
 
 			} elseif ( $this->p->debug->enabled ) {
+
 				$this->p->debug->log( $item[ 'image' ] );
 			}
 
@@ -134,6 +143,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 					) );
 
 					if ( ! empty( $md_opts[ 'schema_review_item_cw_author_url' ] ) ) {
+
 						$item[ 'author' ][ 'sameAs' ][] = SucomUtil::esc_url_encode( $md_opts[ 'schema_review_item_cw_author_url' ] );
 					}
 				}
@@ -242,6 +252,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 				) );
 
 				if ( false !== $single_brand ) {	// Just in case.
+
 					$item[ 'brand' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/Brand', $single_brand );
 				}
 
@@ -273,26 +284,26 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 				}
 			}
 
-			$ret[ 'itemReviewed' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_itemreviewed',
+			$json_ret[ 'itemReviewed' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_itemreviewed',
 				$item, $mod, $mt_og, $page_type_id, $is_main );
 
 			/**
 			 * Property:
 			 * 	reviewRating
 			 */
-			$ret[ 'reviewRating' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/Rating' );
+			$json_ret[ 'reviewRating' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/Rating' );
 
-			WpssoSchema::add_data_itemprop_from_assoc( $ret[ 'reviewRating' ], $md_opts, array(
+			WpssoSchema::add_data_itemprop_from_assoc( $json_ret[ 'reviewRating' ], $md_opts, array(
 				'alternateName' => 'schema_review_rating_alt_name',
 				'ratingValue'   => 'schema_review_rating',
 				'worstRating'   => 'schema_review_rating_from',
 				'bestRating'    => 'schema_review_rating_to',
 			) );
 
-			$ret[ 'reviewRating' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_reviewrating',
-				$ret[ 'reviewRating' ], $mod, $mt_og, $page_type_id, $is_main );
+			$json_ret[ 'reviewRating' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_reviewrating',
+				$json_ret[ 'reviewRating' ], $mod, $mt_og, $page_type_id, $is_main );
 
-			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+			return WpssoSchema::return_data_from_filter( $json_data, $json_ret, $is_main );
 		}
 	}
 }

@@ -42,7 +42,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 				$this->p->debug->mark();
 			}
 
-			$ret = array();
+			$json_ret = array();
 
 			$org_logo_key = 'org_logo_url';
 
@@ -54,7 +54,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 
 				$text_max_len = $this->p->options[ 'schema_text_max_len' ];
 
-				$ret[ 'text' ] = $this->p->page->get_text( $text_max_len, $dots = '...', $mod );
+				$json_ret[ 'text' ] = $this->p->page->get_text( $text_max_len, $dots = '...', $mod );
 			}
 
 			/**
@@ -62,9 +62,9 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 			 *      image as https://schema.org/ImageObject
 			 *      video as https://schema.org/VideoObject
 			 */
-			WpssoSchema::add_media_data( $ret, $mod, $mt_og, $size_names = 'schema', $add_video = true );
+			WpssoSchema::add_media_data( $json_ret, $mod, $mt_og, $size_names = 'schema', $add_video = true );
 
-			WpssoSchema::check_required( $ret, $mod, array( 'image' ) );
+			WpssoSchema::check_required( $json_ret, $mod, array( 'image' ) );
 
 			/**
 			 * Property:
@@ -93,11 +93,11 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 
 					if ( strpos( $md_key, '_org_id' ) ) {
 
-						WpssoSchemaSingle::add_organization_data( $ret[ $prop_name ], $mod, $md_val, $org_logo_key, $list_element = true );
+						WpssoSchemaSingle::add_organization_data( $json_ret[ $prop_name ], $mod, $md_val, $org_logo_key, $list_element = true );
 
 					} elseif ( strpos( $md_key, '_person_id' ) ) {
 
-						WpssoSchemaSingle::add_person_data( $ret[ $prop_name ], $mod, $md_val, $list_element = true );
+						WpssoSchemaSingle::add_person_data( $json_ret[ $prop_name ], $mod, $md_val, $list_element = true );
 					}
 				}
 			}
@@ -106,7 +106,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 			 * Property:
 			 * 	isPartOf
 			 */
-			$ret[ 'isPartOf' ] = array();
+			$json_ret[ 'isPartOf' ] = array();
 
 			if ( ! empty( $mod[ 'obj' ] ) )	{ // Just in case.
 
@@ -126,15 +126,15 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 							$ispartof_type_url = $this->p->schema->get_schema_type_url( $md_opts[ 'schema_ispartof_type_' . $num ] );
 						}
 					
-						$ret[ 'isPartOf' ][] = WpssoSchema::get_schema_type_context( $ispartof_type_url, array(
+						$json_ret[ 'isPartOf' ][] = WpssoSchema::get_schema_type_context( $ispartof_type_url, array(
 							'url' => $ispartof_url,
 						) );
 					}
 				}
 			}
 
-			$ret[ 'isPartOf' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_ispartof',
-				$ret[ 'isPartOf' ], $mod, $mt_og, $page_type_id, $is_main );
+			$json_ret[ 'isPartOf' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_ispartof',
+				$json_ret[ 'isPartOf' ], $mod, $mt_og, $page_type_id, $is_main );
 
 			/**
 			 * Property:
@@ -142,28 +142,28 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 			 */
 			if ( ! empty( $mod[ 'obj' ] ) )	{ // Just in case.
 
-				$ret[ 'headline' ] = $mod[ 'obj' ]->get_options( $mod[ 'id' ], 'schema_headline' );	// Returns null if index key is not found.
+				$json_ret[ 'headline' ] = $mod[ 'obj' ]->get_options( $mod[ 'id' ], 'schema_headline' );	// Returns null if index key is not found.
 			}
 
-			if ( ! empty( $ret[ 'headline' ] ) ) {	// Must be a non-empty string.
+			if ( ! empty( $json_ret[ 'headline' ] ) ) {	// Must be a non-empty string.
 
 				if ( $this->p->debug->enabled ) {
 
-					$this->p->debug->log( 'found custom meta headline = ' . $ret[ 'headline' ] );
+					$this->p->debug->log( 'found custom meta headline = ' . $json_ret[ 'headline' ] );
 				}
 
 			} else {
 
 				$headline_max_len = $this->p->cf[ 'head' ][ 'limit_max' ][ 'schema_headline_len' ];
 
-				$ret[ 'headline' ] = $this->p->page->get_title( $headline_max_len, '...', $mod );
+				$json_ret[ 'headline' ] = $this->p->page->get_title( $headline_max_len, '...', $mod );
 			}
 
 			/**
 			 * Property:
 			 *      keywords
 			 */
-			$ret[ 'keywords' ] = $this->p->page->get_keywords( $mod, $read_cache = true, $md_key = 'schema_keywords' );
+			$json_ret[ 'keywords' ] = $this->p->page->get_keywords( $mod, $read_cache = true, $md_key = 'schema_keywords' );
 
 			/**
 			 * Property:
@@ -201,7 +201,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 							break;
 					}
 
-					$ret[ $prop_name ] = $md_val;
+					$json_ret[ $prop_name ] = $md_val;
 				}
 			}
 
@@ -211,7 +211,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 			 *      datePublished
 			 *      dateModified
 			 */
-			WpssoSchema::add_data_itemprop_from_assoc( $ret, $mt_og, array(
+			WpssoSchema::add_data_itemprop_from_assoc( $json_ret, $mt_og, array(
 				'dateCreated'   => 'article:published_time',	// In WordPress, created and published times are the same.
 				'datePublished' => 'article:published_time',
 				'dateModified'  => 'article:modified_time',
@@ -222,22 +222,22 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 			 *      author as https://schema.org/Person
 			 *      contributor as https://schema.org/Person
 			 */
-			WpssoSchema::add_author_coauthor_data( $ret, $mod );
+			WpssoSchema::add_author_coauthor_data( $json_ret, $mod );
 
 			/**
 			 * Property:
 			 *      thumbnailURL
 			 */
-			$ret[ 'thumbnailUrl' ] = $this->p->og->get_thumbnail_url( $this->p->lca . '-thumbnail', $mod, $md_pre = 'schema' );
+			$json_ret[ 'thumbnailUrl' ] = $this->p->og->get_thumbnail_url( $this->p->lca . '-thumbnail', $mod, $md_pre = 'schema' );
 
 			/**
 			 * Property:
 			 *      comment as https://schema.org/Comment
 			 *      commentCount
 			 */
-			WpssoSchema::add_comment_list_data( $ret, $mod );
+			WpssoSchema::add_comment_list_data( $json_ret, $mod );
 
-			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+			return WpssoSchema::return_data_from_filter( $json_data, $json_ret, $is_main );
 		}
 	}
 }

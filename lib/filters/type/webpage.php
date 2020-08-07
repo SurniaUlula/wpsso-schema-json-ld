@@ -11,6 +11,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -25,6 +26,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeWebpage' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -36,35 +38,37 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeWebpage' ) ) {
 		public function filter_json_data_https_schema_org_webpage( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
-			$ret = array();
+			$json_ret = array();
 
 			$crumb_data = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_breadcrumb', 
 				array(), $mod, $mt_og, $page_type_id, $is_main );
 
 			if ( ! empty( $crumb_data ) ) {
-				$ret[ 'breadcrumb' ] = $crumb_data;
+
+				$json_ret[ 'breadcrumb' ] = $crumb_data;
 			}
 
 			if ( ! empty( $json_data[ 'image' ][ 0 ] ) ) {
 
 				if ( ! empty( $json_data[ 'image' ][ 0 ][ '@id' ] ) ) {
 
-					$ret[ 'primaryImageOfPage' ] = array( '@id' => $json_data[ 'image' ][ 0 ][ '@id' ] );
+					$json_ret[ 'primaryImageOfPage' ] = array( '@id' => $json_data[ 'image' ][ 0 ][ '@id' ] );
 
 				} else {
 
-					$ret[ 'primaryImageOfPage' ] = $json_data[ 'image' ][ 0 ];
+					$json_ret[ 'primaryImageOfPage' ] = $json_data[ 'image' ][ 0 ];
 				}
 			}
 
-			$ret[ 'potentialAction' ][] = WpssoSchema::get_schema_type_context( 'https://schema.org/ReadAction', array(
+			$json_ret[ 'potentialAction' ][] = WpssoSchema::get_schema_type_context( 'https://schema.org/ReadAction', array(
 				'target' => $json_data[ 'url' ],
 			) );
 
-			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+			return WpssoSchema::return_data_from_filter( $json_data, $json_ret, $is_main );
 		}
 	}
 }

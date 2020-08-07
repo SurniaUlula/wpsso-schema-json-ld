@@ -11,6 +11,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -25,6 +26,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeClaimReview' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -36,10 +38,11 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeClaimReview' ) ) {
 		public function filter_json_data_https_schema_org_claimreview( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
-			$ret = array();
+			$json_ret = array();
 
 			if ( ! empty( $mod[ 'obj' ] ) ) {	// Just in case.
 
@@ -95,19 +98,21 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeClaimReview' ) ) {
 			 */
 			$claim_type_url = $this->p->schema->get_schema_type_url( 'claim' );
 
-			$ret[ 'itemReviewed' ] = WpssoSchema::get_schema_type_context( $claim_type_url );
+			$json_ret[ 'itemReviewed' ] = WpssoSchema::get_schema_type_context( $claim_type_url );
 
 			/**
 			 * Google suggests adding the 'author' and 'datePublished' properties to the Schema Claim type, if
 			 * available.
 			 */
 			foreach ( array( 'author', 'datePublished' ) as $prop_name ) {
+
 				if ( ! empty( $appearance_type_obj[ $prop_name ] ) ) {
-					$ret[ 'itemReviewed' ][ $prop_name ] = $appearance_type_obj[ $prop_name ];
+
+					$json_ret[ 'itemReviewed' ][ $prop_name ] = $appearance_type_obj[ $prop_name ];
 				}
 			}
 
-			$ret[ 'itemReviewed' ][ 'appearance' ] = $appearance_type_obj;
+			$json_ret[ 'itemReviewed' ][ 'appearance' ] = $appearance_type_obj;
 
 			/**
 			 * https://schema.org/claimReviewed
@@ -119,7 +124,8 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeClaimReview' ) ) {
 			 *	ClaimReview 
 			 */
 			if ( ! empty( $md_opts[ 'schema_review_claim_reviewed' ] ) ) {
-				$ret[ 'claimReviewed' ] = $md_opts[ 'schema_review_claim_reviewed' ];
+
+				$json_ret[ 'claimReviewed' ] = $md_opts[ 'schema_review_claim_reviewed' ];
 			} 
 
 			/**
@@ -127,14 +133,14 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeClaimReview' ) ) {
 			 */
 			if ( ! empty( $md_opts[ 'schema_review_claim_first_url' ] ) ) {
 
-				$ret[ 'itemReviewed' ][ 'firstAppearance' ] = WpssoSchema::get_schema_type_context( $appearance_type_url );
+				$json_ret[ 'itemReviewed' ][ 'firstAppearance' ] = WpssoSchema::get_schema_type_context( $appearance_type_url );
 
-				WpssoSchema::add_data_itemprop_from_assoc( $ret[ 'itemReviewed' ][ 'firstAppearance' ], $md_opts, array(
+				WpssoSchema::add_data_itemprop_from_assoc( $json_ret[ 'itemReviewed' ][ 'firstAppearance' ], $md_opts, array(
 					'url' => 'schema_review_claim_first_url',
 				) );
 			}
 
-			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+			return WpssoSchema::return_data_from_filter( $json_data, $json_ret, $is_main );
 		}
 	}
 }

@@ -11,6 +11,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -25,6 +26,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeAudiobook' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -36,21 +38,21 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeAudiobook' ) ) {
 		public function filter_json_data_https_schema_org_audiobook( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
-			$ret = array();
+			$json_ret = array();
 
 			if ( ! empty( $mod[ 'obj' ] ) ) {	// Just in case.
 
-				$md_opts = SucomUtil::get_opts_begin( 'schema_book_audio_', 
-					array_merge( 
-						(array) $mod[ 'obj' ]->get_defaults( $mod[ 'id' ] ), 
-						(array) $mod[ 'obj' ]->get_options( $mod[ 'id' ] )	// Returns empty string if no meta found.
-					)
-				);
+				$md_opts = SucomUtil::get_opts_begin( 'schema_book_audio_', array_merge( 
+					(array) $mod[ 'obj' ]->get_defaults( $mod[ 'id' ] ), 
+					(array) $mod[ 'obj' ]->get_options( $mod[ 'id' ] )	// Returns empty string if no meta found.
+				) );
 
 			} else {
+
 				$md_opts = array();
 			}
 
@@ -58,11 +60,11 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeAudiobook' ) ) {
 			 * Property:
 			 * 	duration
 			 */
-			WpssoSchema::add_data_time_from_assoc( $ret, $md_opts, array(
+			WpssoSchema::add_data_time_from_assoc( $json_ret, $md_opts, array(
 				'duration'  => 'schema_book_audio_duration',	// Option prefix for days, hours, mins, secs.
 			) );
 
-			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+			return WpssoSchema::return_data_from_filter( $json_data, $json_ret, $is_main );
 		}
 	}
 }

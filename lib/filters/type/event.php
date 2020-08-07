@@ -42,9 +42,9 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeEvent' ) ) {
 				$this->p->debug->mark();
 			}
 
-			$ret = array();
+			$json_ret = array();
 
-			WpssoSchemaSingle::add_event_data( $ret, $mod, $event_id = false, $list_element = false );
+			WpssoSchemaSingle::add_event_data( $json_ret, $mod, $event_id = false, $list_element = false );
 
 			/**
 			 * Property:
@@ -55,9 +55,9 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeEvent' ) ) {
 				$this->p->debug->log( 'adding image property for event (videos disabled)' );
 			}
 
-			WpssoSchema::add_media_data( $ret, $mod, $mt_og, $size_names = 'schema', $add_video = false );
+			WpssoSchema::add_media_data( $json_ret, $mod, $mt_og, $size_names = 'schema', $add_video = false );
 
-			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+			return WpssoSchema::return_data_from_filter( $json_data, $json_ret, $is_main );
 		}
 	}
 }

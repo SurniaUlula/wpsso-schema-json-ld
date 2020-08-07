@@ -11,6 +11,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -25,6 +26,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeRecipe' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -36,19 +38,18 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeRecipe' ) ) {
 		public function filter_json_data_https_schema_org_recipe( $json_data, $mod, $mt_og, $page_type_id, $is_main  ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
-			$ret = array();
+			$json_ret = array();
 
 			if ( ! empty( $mod[ 'obj' ] ) ) {	// Just in case.
 
-				$md_opts = SucomUtil::get_opts_begin( 'schema_recipe_', 
-					array_merge( 
-						(array) $mod[ 'obj' ]->get_defaults( $mod[ 'id' ] ), 
-						(array) $mod[ 'obj' ]->get_options( $mod[ 'id' ] )	// Returns empty string if no meta found.
-					)
-				);
+				$md_opts = SucomUtil::get_opts_begin( 'schema_recipe_', array_merge( 
+					(array) $mod[ 'obj' ]->get_defaults( $mod[ 'id' ] ), 
+					(array) $mod[ 'obj' ]->get_options( $mod[ 'id' ] )	// Returns empty string if no meta found.
+				) );
 
 			} else {
 				$md_opts = array();
@@ -60,7 +61,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeRecipe' ) ) {
 			 */
 			if ( ! empty( $md_opts[ 'schema_recipe_cuisine' ] ) ) {
 
-				$ret[ 'recipeCuisine' ] = (string) $md_opts[ 'schema_recipe_cuisine' ];
+				$json_ret[ 'recipeCuisine' ] = (string) $md_opts[ 'schema_recipe_cuisine' ];
 			}
 
 			/**
@@ -69,7 +70,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeRecipe' ) ) {
 			 */
 			if ( ! empty( $md_opts[ 'schema_recipe_course' ] ) ) {
 
-				$ret[ 'recipeCategory' ] = (string) $md_opts[ 'schema_recipe_course' ];
+				$json_ret[ 'recipeCategory' ] = (string) $md_opts[ 'schema_recipe_course' ];
 			}
 
 			/**
@@ -78,7 +79,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeRecipe' ) ) {
 			 */
 			if ( ! empty( $md_opts[ 'schema_recipe_yield' ] ) ) {
 
-				$ret[ 'recipeYield' ] = (string) $md_opts[ 'schema_recipe_yield' ];
+				$json_ret[ 'recipeYield' ] = (string) $md_opts[ 'schema_recipe_yield' ];
 			}
 
 			/**
@@ -87,7 +88,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeRecipe' ) ) {
 			 */
 			if ( ! empty( $md_opts[ 'schema_recipe_cook_method' ] ) ) {
 
-				$ret[ 'cookingMethod' ] = (string) $md_opts[ 'schema_recipe_cook_method' ];
+				$json_ret[ 'cookingMethod' ] = (string) $md_opts[ 'schema_recipe_cook_method' ];
 			}
 
 			/**
@@ -96,7 +97,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeRecipe' ) ) {
 			 * 	cookTime
 			 * 	totalTime
 			 */
-			WpssoSchema::add_data_time_from_assoc( $ret, $md_opts, array(
+			WpssoSchema::add_data_time_from_assoc( $json_ret, $md_opts, array(
 				'prepTime'  => 'schema_recipe_prep',
 				'cookTime'  => 'schema_recipe_cook',
 				'totalTime' => 'schema_recipe_total',
@@ -108,7 +109,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeRecipe' ) ) {
 			 */
 			foreach ( SucomUtil::preg_grep_keys( '/^schema_recipe_ingredient_[0-9]+$/', $md_opts ) as $md_key => $value ) {
 
-				$ret[ 'recipeIngredient' ][] = $value;
+				$json_ret[ 'recipeIngredient' ][] = $value;
 			}
 
 			/**
@@ -117,7 +118,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeRecipe' ) ) {
 			 */
 			foreach ( SucomUtil::preg_grep_keys( '/^schema_recipe_instruction_[0-9]+$/', $md_opts ) as $md_key => $value ) {
 
-				$ret[ 'recipeInstructions' ][] = $value;
+				$json_ret[ 'recipeInstructions' ][] = $value;
 			}
 
 			/**
@@ -143,11 +144,11 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeRecipe' ) ) {
 
 					self::add_nutrition_measures( $nutrition );
 
-					$ret[ 'nutrition' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/NutritionInformation', $nutrition );
+					$json_ret[ 'nutrition' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/NutritionInformation', $nutrition );
 				}
 			}
 
-			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+			return WpssoSchema::return_data_from_filter( $json_data, $json_ret, $is_main );
 		}
 
 		private static function add_nutrition_measures( array &$nutrition ) {
@@ -167,7 +168,9 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeRecipe' ) ) {
 			);
 
 			foreach ( $nutrition as $prop_name => &$value ) {		// Update value by reference.
+
 				if ( isset( $measures[ $prop_name ] ) ) {
+
 					$value .= ' ' . $measures[ $prop_name ];	// Add measure unit.
 				}
 			}

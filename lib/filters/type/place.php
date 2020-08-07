@@ -42,7 +42,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 				$this->p->debug->mark();
 			}
 
-			$ret = array();
+			$json_ret = array();
 
 			/**
 			 * Property:
@@ -53,7 +53,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 				$this->p->debug->log( 'adding image property for place (videos disabled)' );
 			}
 
-			WpssoSchema::add_media_data( $ret, $mod, $mt_og, $size_names = 'schema', $add_video = false );
+			WpssoSchema::add_media_data( $json_ret, $mod, $mt_og, $size_names = 'schema', $add_video = false );
 
 			/**
 			 * Skip reading place meta tags if not main schema type or if there are no place meta tags.
@@ -122,7 +122,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 						$this->p->debug->log( 'adding place address meta tags for postal address' );
 					}
 
-					$ret[ 'address' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/PostalAddress', $postal_address );
+					$json_ret[ 'address' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/PostalAddress', $postal_address );
 
 				} elseif ( $this->p->debug->enabled ) {
 
@@ -142,7 +142,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 
 					if ( isset( $mt_og[ 'place:' . $og_key ] ) ) {
 
-						$ret[ $prop_name ] = $mt_og[ 'place:' . $og_key ];
+						$json_ret[ $prop_name ] = $mt_og[ 'place:' . $og_key ];
 					}
 				}
 			}
@@ -180,7 +180,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 
 				if ( ! empty( $geo_coords ) ) {
 
-					$ret[ 'geo' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/GeoCoordinates', $geo_coords ); 
+					$json_ret[ 'geo' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/GeoCoordinates', $geo_coords ); 
 
 				} elseif ( $this->p->debug->enabled ) {
 
@@ -248,7 +248,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 
 					if ( ! empty( $opening_spec ) ) {
 
-						$ret[ 'openingHoursSpecification' ] = $opening_spec;
+						$json_ret[ 'openingHoursSpecification' ] = $opening_spec;
 					}
 
 				} elseif ( $this->p->debug->enabled ) {
@@ -257,7 +257,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 				}
 			}
 
-			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+			return WpssoSchema::return_data_from_filter( $json_data, $json_ret, $is_main );
 		}
 	}
 }

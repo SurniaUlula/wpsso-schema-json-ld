@@ -42,7 +42,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeSoftwareApplication' ) ) {
 				$this->p->debug->mark();
 			}
 
-			$ret = array();
+			$json_ret = array();
 
 			if ( ! empty( $mod[ 'obj' ] ) ) {	// Just in case.
 
@@ -55,7 +55,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeSoftwareApplication' ) ) {
 			 */
 			if ( ! empty( $md_opts[ 'schema_software_app_cat' ] ) ) {
 
-				$ret[ 'applicationCategory' ] = (string) $md_opts[ 'schema_software_app_cat' ];
+				$json_ret[ 'applicationCategory' ] = (string) $md_opts[ 'schema_software_app_cat' ];
 			}
 
 			/**
@@ -64,10 +64,10 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeSoftwareApplication' ) ) {
 			 */
 			if ( ! empty( $md_opts[ 'schema_software_app_os' ] ) ) {
 
-				$ret[ 'operatingSystem' ] = (string) $md_opts[ 'schema_software_app_os' ];
+				$json_ret[ 'operatingSystem' ] = (string) $md_opts[ 'schema_software_app_os' ];
 			}
 
-			WpssoSchema::add_data_itemprop_from_assoc( $ret, $mt_og, array( 
+			WpssoSchema::add_data_itemprop_from_assoc( $json_ret, $mt_og, array( 
 				'material' => 'product:material',
 			) );
 
@@ -98,7 +98,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeSoftwareApplication' ) ) {
 							$this->p->debug->log_arr( '$single_offer', $single_offer );
 						}
 
-						$ret[ 'offers' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/Offer', $single_offer );
+						$json_ret[ 'offers' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/Offer', $single_offer );
 
 					} elseif ( $this->p->debug->enabled ) {
 
@@ -116,7 +116,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeSoftwareApplication' ) ) {
 						$this->p->debug->log( 'getting aggregate offer data' );
 					}
 
-					WpssoSchema::add_aggregate_offer_data( $ret, $mod, $mt_og[ 'product:offers' ] );
+					WpssoSchema::add_aggregate_offer_data( $json_ret, $mod, $mt_og[ 'product:offers' ] );
 				}
 
 				$local_recursion = false;
@@ -129,7 +129,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeSoftwareApplication' ) ) {
 				}
 			}
 
-			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+			return WpssoSchema::return_data_from_filter( $json_data, $json_ret, $is_main );
 		}
 	}
 }

@@ -42,7 +42,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeBrand' ) ) {
 				$this->p->debug->mark();
 			}
 
-			$ret = array();
+			$json_ret = array();
 
 			/**
 			 * Property:
@@ -53,9 +53,9 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeBrand' ) ) {
 				$this->p->debug->log( 'adding image property for brand (videos disabled)' );
 			}
 
-			WpssoSchema::add_media_data( $ret, $mod, $mt_og, $size_names = 'schema', $add_video = false );
+			WpssoSchema::add_media_data( $json_ret, $mod, $mt_og, $size_names = 'schema', $add_video = false );
 
-			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+			return WpssoSchema::return_data_from_filter( $json_data, $json_ret, $is_main );
 		}
 	}
 }

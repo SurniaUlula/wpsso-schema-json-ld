@@ -42,13 +42,13 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeArticle' ) ) {
 				$this->p->debug->mark();
 			}
 
-			$ret = array();
+			$json_ret = array();
 
 			/**
 			 * Property:
 			 *	articleSection
 			 */
-			WpssoSchema::add_data_itemprop_from_assoc( $ret, $mt_og, array(
+			WpssoSchema::add_data_itemprop_from_assoc( $json_ret, $mt_og, array(
 				'articleSection' => 'article:section',
 			) );
 
@@ -58,12 +58,12 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeArticle' ) ) {
 			 */
 			if ( isset( $json_data[ 'text' ] ) ) {
 
-				$ret[ 'articleBody' ] = $json_data[ 'text' ];
+				$json_ret[ 'articleBody' ] = $json_data[ 'text' ];
 
 				unset( $json_data[ 'text' ] );
 			}
 
-			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+			return WpssoSchema::return_data_from_filter( $json_data, $json_ret, $is_main );
 		}
 	}
 }

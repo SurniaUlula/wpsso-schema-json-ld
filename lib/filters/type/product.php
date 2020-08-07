@@ -61,14 +61,14 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 				$this->p->debug->mark();
 			}
 
-			$ret = array();
+			$json_ret = array();
 
 			/**
 			 * Note that there is no Schema 'ean' property for the 'product:ean' value.
 			 *
 			 * Note that there is no Schema 'size' property for the 'product:size' value.
 			 */
-			WpssoSchema::add_data_itemprop_from_assoc( $ret, $mt_og, array(
+			WpssoSchema::add_data_itemprop_from_assoc( $json_ret, $mt_og, array(
 				'url'           => 'product:url',
 				'name'          => 'product:title',
 				'description'   => 'product:description',
@@ -85,11 +85,11 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 				'material'      => 'product:material',
 			) );
 
-			WpssoSchema::check_category_prop_value( $ret );
+			WpssoSchema::check_category_prop_value( $json_ret );
 
-			WpssoSchema::check_gtin_prop_value( $ret );
+			WpssoSchema::check_gtin_prop_value( $json_ret );
 
-			WpssoSchema::check_itemprop_content_map( $ret, 'itemCondition', 'product:condition' );
+			WpssoSchema::check_itemprop_content_map( $json_ret, 'itemCondition', 'product:condition' );
 
 			/**
 			 * See the https://schema.org/productID example.
@@ -98,7 +98,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 
 				if ( ! empty( $mt_og[ 'product:' . $pref_id ] ) ) {
 
-					$ret[ 'productID' ] = $pref_id . ':' . $mt_og[ 'product:' . $pref_id ];
+					$json_ret[ 'productID' ] = $pref_id . ':' . $mt_og[ 'product:' . $pref_id ];
 
 					break;	// Stop here.
 				}
@@ -115,7 +115,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 
 				if ( false !== $single_brand ) {	// Just in case.
 
-					$ret[ 'brand' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/Brand', $single_brand );
+					$json_ret[ 'brand' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/Brand', $single_brand );
 				}
 			}
 
@@ -136,7 +136,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 			 * 	'width'        => 'product:width:value',
 			 * );
 			 */
-			WpssoSchema::add_data_unit_from_assoc( $ret, $mt_og, $names = array( 
+			WpssoSchema::add_data_unit_from_assoc( $json_ret, $mt_og, $names = array( 
 				'depth'        => 'product:depth:value',
 				'height'       => 'product:height:value',
 				'length'       => 'product:length:value',
@@ -173,7 +173,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 							$this->p->debug->log_arr( '$single_offer', $single_offer );
 						}
 
-						$ret[ 'offers' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/Offer', $single_offer );
+						$json_ret[ 'offers' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/Offer', $single_offer );
 
 					} elseif ( $this->p->debug->enabled ) {
 
@@ -191,7 +191,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 						$this->p->debug->log( 'getting aggregate offer data' );
 					}
 
-					WpssoSchema::add_aggregate_offer_data( $ret, $mod, $mt_og[ 'product:offers' ] );
+					WpssoSchema::add_aggregate_offer_data( $json_ret, $mod, $mt_og[ 'product:offers' ] );
 				}
 
 				$local_recursion = false;
@@ -213,9 +213,9 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 				$this->p->debug->log( 'adding image property for product (videos disabled)' );
 			}
 
-			WpssoSchema::add_media_data( $ret, $mod, $mt_og, $size_names = 'schema', $add_video = false );
+			WpssoSchema::add_media_data( $json_ret, $mod, $mt_og, $size_names = 'schema', $add_video = false );
 
-			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+			return WpssoSchema::return_data_from_filter( $json_data, $json_ret, $is_main );
 		}
 	}
 }

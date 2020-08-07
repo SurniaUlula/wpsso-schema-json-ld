@@ -11,6 +11,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -25,6 +26,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -50,7 +52,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 				return $json_data;
 			}
 
-			$ret = array();
+			$json_ret = array();
 
 			$size_name = $this->p->lca . '-schema';
 
@@ -72,7 +74,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 			 */
 			if ( ! empty( $md_opts[ 'schema_howto_yield' ] ) ) {
 
-				$ret[ 'yield' ] = (string) $md_opts[ 'schema_howto_yield' ];
+				$json_ret[ 'yield' ] = (string) $md_opts[ 'schema_howto_yield' ];
 			}
 
 			/**
@@ -80,7 +82,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 			 * 	prepTime
 			 * 	totalTime
 			 */
-			WpssoSchema::add_data_time_from_assoc( $ret, $md_opts, array(
+			WpssoSchema::add_data_time_from_assoc( $json_ret, $md_opts, array(
 				'prepTime'  => 'schema_howto_prep',
 				'totalTime' => 'schema_howto_total',
 			) );
@@ -131,6 +133,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 						 * Restore previous reference values for admin notices.
 						 */
 						if ( is_admin() ) {
+
 							$this->p->notice->unset_ref( $sharing_url );
 						}
 
@@ -144,7 +147,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 
 						$howto_step_url = $json_data[ 'url' ] . '#section' . $howto_section_pos;
 
-						$ret[ 'step' ][ $howto_step_idx ] = WpssoSchema::get_schema_type_context( 'https://schema.org/HowToSection',
+						$json_ret[ 'step' ][ $howto_step_idx ] = WpssoSchema::get_schema_type_context( 'https://schema.org/HowToSection',
 							array(
 								'url'             => $howto_step_url,
 								'name'            => $md_val,
@@ -156,10 +159,11 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 						);
 
 						if ( $howto_step_image ) {
-							$ret[ 'step' ][ $howto_step_idx ][ 'image' ][] = $howto_step_image;
+
+							$json_ret[ 'step' ][ $howto_step_idx ][ 'image' ][] = $howto_step_image;
 						}
 
-						$howto_section_ref =& $ret[ 'step' ][ $howto_step_idx ];
+						$howto_section_ref =& $json_ret[ 'step' ][ $howto_step_idx ];
 
 						$howto_section_pos++;
 
@@ -182,6 +186,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 						);
 
 						if ( $howto_step_image ) {
+
 							$howto_step_arr[ 'image' ][] = $howto_step_image;
 						}
 
@@ -196,7 +201,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 
 						} else {
 
-							$ret[ 'step' ][ $howto_step_idx ] = $howto_step_arr;
+							$json_ret[ 'step' ][ $howto_step_idx ] = $howto_step_arr;
 
 							$howto_step_idx++;
 						}
@@ -212,7 +217,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 			 */
 			foreach ( SucomUtil::preg_grep_keys( '/^schema_howto_supply_[0-9]+$/', $md_opts ) as $md_key => $md_val ) {
 
-				$ret[ 'supply' ][] = WpssoSchema::get_schema_type_context( 'https://schema.org/HowToSupply',
+				$json_ret[ 'supply' ][] = WpssoSchema::get_schema_type_context( 'https://schema.org/HowToSupply',
 					array(
 						'name' => $md_val,
 					)
@@ -225,14 +230,14 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 			 */
 			foreach ( SucomUtil::preg_grep_keys( '/^schema_howto_tool_[0-9]+$/', $md_opts ) as $md_key => $md_val ) {
 
-				$ret[ 'tool' ][] = WpssoSchema::get_schema_type_context( 'https://schema.org/HowToTool',
+				$json_ret[ 'tool' ][] = WpssoSchema::get_schema_type_context( 'https://schema.org/HowToTool',
 					array(
 						'name' => $md_val,
 					)
 				);
 			}
 
-			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+			return WpssoSchema::return_data_from_filter( $json_data, $json_ret, $is_main );
 		}
 	}
 }

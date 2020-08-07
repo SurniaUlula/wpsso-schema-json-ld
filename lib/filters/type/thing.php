@@ -11,6 +11,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -25,6 +26,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -44,22 +46,24 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 		public function filter_json_data_https_schema_org_thing( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
 			$page_type_url = $this->p->schema->get_schema_type_url( $page_type_id );
 
-			$ret = WpssoSchema::get_schema_type_context( $page_type_url );
+			$json_ret = WpssoSchema::get_schema_type_context( $page_type_url );
 
 			/**
 			 * Property:
 			 *	additionalType
 			 */
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->log( 'getting additional types' );
 			}
 
-			$ret[ 'additionalType' ] = array();
+			$json_ret[ 'additionalType' ] = array();
 
 			if ( ! empty( $mod[ 'obj' ] ) ) {
 
@@ -70,27 +74,32 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 					foreach ( SucomUtil::preg_grep_keys( '/^schema_addl_type_url_[0-9]+$/', $md_opts ) as $addl_type_url ) {
 
 						if ( false !== filter_var( $addl_type_url, FILTER_VALIDATE_URL ) ) {	// Just in case.
-							$ret[ 'additionalType' ][] = $addl_type_url;
+
+							$json_ret[ 'additionalType' ][] = $addl_type_url;
 						}
 					}
 				}
 			}
 
-			$ret[ 'additionalType' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_additionaltype',
-				$ret[ 'additionalType' ], $mod, $mt_og, $page_type_id, $is_main );
+			$json_ret[ 'additionalType' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_additionaltype',
+				$json_ret[ 'additionalType' ], $mod, $mt_og, $page_type_id, $is_main );
 
 			/**
 			 * Property:
 			 *	url
 			 */
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->log( 'getting url (fragment anchor or canonical url)' );
 			}
 
 			if ( empty( $mod[ 'is_public' ] ) ) {				// Since WPSSO Core v7.0.0.
-				$ret[ 'url' ] = WpssoUtil::get_fragment_anchor( $mod );	// Since WPSSO Core v7.0.0.
+
+				$json_ret[ 'url' ] = WpssoUtil::get_fragment_anchor( $mod );	// Since WPSSO Core v7.0.0.
+
 			} else {
-				$ret[ 'url' ] = $this->p->util->get_canonical_url( $mod );
+
+				$json_ret[ 'url' ] = $this->p->util->get_canonical_url( $mod );
 			}
 
 			/**
@@ -98,27 +107,30 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 			 *	sameAs
 			 */
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->log( 'getting same as' );
 			}
 
-			$ret[ 'sameAs' ] = array();
+			$json_ret[ 'sameAs' ] = array();
 
 			if ( ! empty( $mod[ 'is_public' ] ) ) {	// Since WPSSO Core v7.0.0.
 
 				if ( ! empty( $mt_og[ 'og:url' ] ) ) {
-					$ret[ 'sameAs' ][] = $mt_og[ 'og:url' ];
+
+					$json_ret[ 'sameAs' ][] = $mt_og[ 'og:url' ];
 				}
 
 				if ( $mod[ 'is_post' ] ) {
 
 					if ( $this->p->debug->enabled ) {
+
 						$this->p->debug->log( 'getting post permalink' );
 					}
 
 					/**
 					 * Add the permalink, which may be different than the shared URL and the canonical URL.
 					 */
-					$ret[ 'sameAs' ][] = get_permalink( $mod[ 'id' ] );
+					$json_ret[ 'sameAs' ][] = get_permalink( $mod[ 'id' ] );
 
 					/**
 					 * Add the shortlink / short URL, but only if the link rel shortlink tag is enabled.
@@ -128,10 +140,11 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 					if ( apply_filters( $this->p->lca . '_add_link_rel_shortlink', $add_link_rel_shortlink, $mod ) ) {
 
 						if ( $this->p->debug->enabled ) {
+
 							$this->p->debug->log( 'getting post shortlink' );
 						}
 
-						$ret[ 'sameAs' ][] = wp_get_shortlink( $mod[ 'id' ], 'post' );
+						$json_ret[ 'sameAs' ][] = wp_get_shortlink( $mod[ 'id' ], 'post' );
 
 						/**
 						 * Some themes and plugins have been known to hook the WordPress 'get_shortlink' filter 
@@ -144,7 +157,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 						 *
 						 * $context = 'blog', 'post' (default), 'media', or 'query'
 						 */
-						$ret[ 'sameAs' ][] = SucomUtilWP::wp_get_shortlink( $mod[ 'id' ], $context = 'post' );
+						$json_ret[ 'sameAs' ][] = SucomUtilWP::wp_get_shortlink( $mod[ 'id' ], $context = 'post' );
 					}
 				}
 
@@ -158,10 +171,11 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 					if ( ! empty( $shortener ) && $shortener !== 'none' ) {
 
 						if ( $this->p->debug->enabled ) {
+
 							$this->p->debug->log( 'getting short url for ' . $mt_og[ 'og:url' ] );
 						}
 
-						$ret[ 'sameAs' ][] = apply_filters( $this->p->lca . '_get_short_url', $mt_og[ 'og:url' ], $shortener, $mod, $is_main );
+						$json_ret[ 'sameAs' ][] = apply_filters( $this->p->lca . '_get_short_url', $mt_og[ 'og:url' ], $shortener, $mod, $is_main );
 					}
 				}
 			}
@@ -172,6 +186,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 			if ( ! empty( $mod[ 'obj' ] ) ) {
 
 				if ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'getting custom urls' );
 				}
 
@@ -181,18 +196,19 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 	
 					foreach ( SucomUtil::preg_grep_keys( '/^schema_sameas_url_[0-9]+$/', $md_opts ) as $url ) {
 
-						$ret[ 'sameAs' ][] = SucomUtil::esc_url_encode( $url );
+						$json_ret[ 'sameAs' ][] = SucomUtil::esc_url_encode( $url );
 					}
 				}
 			}
 	
-			$ret[ 'sameAs' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_sameas',
-				$ret[ 'sameAs' ], $mod, $mt_og, $page_type_id, $is_main );
+			$json_ret[ 'sameAs' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_sameas',
+				$json_ret[ 'sameAs' ], $mod, $mt_og, $page_type_id, $is_main );
 	
-			WpssoSchema::check_sameas_prop_values( $ret );
+			WpssoSchema::check_sameas_prop_values( $json_ret );
 	
 			if ( $this->p->debug->enabled ) {
-				$this->p->debug->log_arr( 'sameAs', $ret[ 'sameAs' ] );
+
+				$this->p->debug->log_arr( 'sameAs', $json_ret[ 'sameAs' ] );
 			}
 
 			/**
@@ -200,23 +216,26 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 			 *	name
 			 *	alternateName
 			 */
-			$ret[ 'name' ] = $this->p->page->get_title( 0, '', $mod, $read_cache = true,
+			$json_ret[ 'name' ] = $this->p->page->get_title( 0, '', $mod, $read_cache = true,
 				$add_hashtags = false, $do_encode = true, $md_key = 'schema_title' );
 
 			if ( $this->p->debug->enabled ) {
-				$this->p->debug->log( 'name value = ' . $ret[ 'name' ] );
+
+				$this->p->debug->log( 'name value = ' . $json_ret[ 'name' ] );
 			}
 
-			$ret[ 'alternateName' ] = $this->p->page->get_title( $this->p->options[ 'og_title_max_len' ],
+			$json_ret[ 'alternateName' ] = $this->p->page->get_title( $this->p->options[ 'og_title_max_len' ],
 				$dots = '...', $mod, $read_cache = true, $add_hashtags = false, $do_encode = true,
 					$md_key = 'schema_title_alt' );
 
 			if ( $this->p->debug->enabled ) {
-				$this->p->debug->log( 'alternateName value = ' . $ret[ 'alternateName' ] );
+
+				$this->p->debug->log( 'alternateName value = ' . $json_ret[ 'alternateName' ] );
 			}
 
-			if ( $ret[ 'name' ] === $ret[ 'alternateName' ] ) {	// Prevent duplicate values.
-				unset( $ret[ 'alternateName' ] );
+			if ( $json_ret[ 'name' ] === $json_ret[ 'alternateName' ] ) {	// Prevent duplicate values.
+
+				unset( $json_ret[ 'alternateName' ] );
 			}
 
 			/**
@@ -224,10 +243,11 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 			 *	description
 			 */
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->log( 'getting schema description with custom meta fallback: schema_desc, seo_desc, og_desc' );
 			}
 
-			$ret[ 'description' ] = $this->p->page->get_description( $this->p->options[ 'schema_desc_max_len' ],
+			$json_ret[ 'description' ] = $this->p->page->get_description( $this->p->options[ 'schema_desc_max_len' ],
 				$dots = '...', $mod, $read_cache = true, $add_hashtags = false, $do_encode = true,
 					$md_key = array( 'schema_desc', 'seo_desc', 'og_desc' ) );
 
@@ -235,19 +255,20 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 			 * Property:
 			 *	potentialAction
 			 */
-			$ret[ 'potentialAction' ] = array();
+			$json_ret[ 'potentialAction' ] = array();
 
-			$ret[ 'potentialAction' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_potentialaction',
-				$ret[ 'potentialAction' ], $mod, $mt_og, $page_type_id, $is_main );
+			$json_ret[ 'potentialAction' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_potentialaction',
+				$json_ret[ 'potentialAction' ], $mod, $mt_og, $page_type_id, $is_main );
 
 			/**
 			 * Get additional Schema properties from the optional post content shortcode.
 			 */
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->log( 'checking for schema shortcodes' );
 			}
 
-			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+			return WpssoSchema::return_data_from_filter( $json_data, $json_ret, $is_main );
 		}
 	}
 }

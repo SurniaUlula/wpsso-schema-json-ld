@@ -11,6 +11,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -25,6 +26,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeLocalBusiness' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -36,10 +38,11 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeLocalBusiness' ) ) {
 		public function filter_json_data_https_schema_org_localbusiness( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
-			$ret = array();
+			$json_ret = array();
 
 			/**
 			 * Skip reading place meta tags if not main schema type or if there are no place meta tags.
@@ -47,6 +50,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeLocalBusiness' ) ) {
 			$read_mt_place = false;
 
 			if ( $is_main && preg_grep( '/^place:/', array_keys( $mt_og ) ) ) {
+
 				$read_mt_place = true;
 			}
 
@@ -58,7 +62,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeLocalBusiness' ) ) {
 			 */
 			if ( $read_mt_place ) {
 
-				WpssoSchema::add_data_itemprop_from_assoc( $ret, $mt_og, array(
+				WpssoSchema::add_data_itemprop_from_assoc( $json_ret, $mt_og, array(
 					'currenciesAccepted' => 'place:business:currencies_accepted',	// Example: USD, CAD.
 					'paymentAccepted'    => 'place:business:payment_accepted',	// Example: Cash, Credit Card.
 					'priceRange'         => 'place:business:price_range',		// Example: $$.
@@ -75,7 +79,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeLocalBusiness' ) ) {
 					! empty( $mt_og[ 'place:location:longitude' ] ) &&
 						! empty( $mt_og[ 'place:business:service_radius' ] ) ) {
 	
-					$ret[ 'areaServed' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/GeoShape',
+					$json_ret[ 'areaServed' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/GeoShape',
 						array(
 							'circle' => $mt_og[ 'place:location:latitude' ] . ' ' . 
 								$mt_og[ 'place:location:longitude' ] . ' ' . 
@@ -84,11 +88,12 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeLocalBusiness' ) ) {
 					);
 
 				} elseif ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'no place:location meta tags found for area served' );
 				}
 			}
 
-			return WpssoSchema::return_data_from_filter( $json_data, $ret, $is_main );
+			return WpssoSchema::return_data_from_filter( $json_data, $json_ret, $is_main );
 		}
 	}
 }

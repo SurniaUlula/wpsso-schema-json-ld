@@ -26,35 +26,35 @@ msgid ""
 "does not allow reviews for the Schema Type %2$s</a>."
 msgstr ""
 
-#: lib/filters/type/claimreview.php:76 lib/filters.php:469
+#: lib/filters/type/claimreview.php:79 lib/filters.php:469
 msgid "A claim review cannot be the subject of another claim review."
 msgstr ""
 
-#: lib/filters/type/claimreview.php:78
+#: lib/filters/type/claimreview.php:81
 msgid ""
 "CreativeWork will be used instead as the Schema type for the subject of the "
 "webpage (ie. the content) being reviewed."
 msgstr ""
 
-#: lib/filters/type/faqpage.php:75
+#: lib/filters/type/faqpage.php:78
 msgid "%d question added to the Schema FAQPage markup."
 msgid_plural "%d questions added to the Schema FAQPage markup."
 msgstr[0] ""
 msgstr[1] ""
 
-#: lib/filters/type/faqpage.php:83
+#: lib/filters/type/faqpage.php:86
 msgid "No question(s) found for the Schema FAQPage markup."
 msgstr ""
 
-#: lib/filters/type/faqpage.php:86
+#: lib/filters/type/faqpage.php:89
 msgid "Google requires at least one question for the Schema FAQPage markup."
 msgstr ""
 
-#: lib/filters/type/howto.php:125
+#: lib/filters/type/howto.php:127
 msgid "adding schema howto step option #%d image"
 msgstr ""
 
-#: lib/filters/type/review.php:93
+#: lib/filters/type/review.php:99
 msgid "adding reviewed subject image"
 msgstr ""
 
@@ -1871,21 +1871,21 @@ msgid "secs"
 msgstr ""
 
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag, %3$s is the type attribute value
-#: lib/shortcode/schema.php:174
+#: lib/shortcode/schema.php:186
 msgid ""
 "%1$s %2$s shortcode with a type value of \"%3$s\" is missing a required "
 "'prop' attribute value."
 msgstr ""
 
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag
-#: lib/shortcode/schema.php:201
+#: lib/shortcode/schema.php:214
 msgid ""
 "%1$s %2$s shortcode with a content is missing a required 'type' attribute "
 "value."
 msgstr ""
 
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag, %3$s is the type attribute value
-#: lib/shortcode/schema.php:291
+#: lib/shortcode/schema.php:314
 msgid "%1$s %2$s shortcode type attribute \"%3$s\" is not a recognized value."
 msgstr ""
 
