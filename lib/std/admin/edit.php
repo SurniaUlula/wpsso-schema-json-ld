@@ -1218,7 +1218,8 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 			}
 
 			$max_media_items = $this->p->cf[ 'form' ][ 'max_media_items' ];
-			$size_name       = $this->p->lca . '-schema-1-1';	// Get the largest Schema image size.
+			$size_names      = $this->p->util->get_image_size_names( 'schema' );	// Always returns an array.
+			$size_name       = reset( $size_names );
 			$media_request   = array( 'pid', 'img_url' );
 			$media_info      = $this->p->og->get_media_info( $size_name, $media_request, $mod, $md_pre = 'og' );
 			$row_class       = $form->in_options( '/^schema_img_/', $is_preg = true ) ? '' : 'hide_in_basic';

@@ -1152,8 +1152,8 @@ msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
 #: lib/gettext-pro.php:53 lib/gettext-pro.php:188 lib/pro/admin/edit.php:365
-#: lib/pro/admin/edit.php:1349 lib/std/admin/edit.php:360
-#: lib/std/admin/edit.php:1248
+#: lib/pro/admin/edit.php:1350 lib/std/admin/edit.php:360
+#: lib/std/admin/edit.php:1249
 msgctxt "option label"
 msgid "Image ID"
 msgstr ""
@@ -1405,8 +1405,8 @@ msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
 #: lib/gettext-pro.php:105 lib/gettext-pro.php:190 lib/pro/admin/edit.php:684
-#: lib/pro/admin/edit.php:1357 lib/std/admin/edit.php:709
-#: lib/std/admin/edit.php:1257
+#: lib/pro/admin/edit.php:1358 lib/std/admin/edit.php:709
+#: lib/std/admin/edit.php:1258
 msgctxt "option label"
 msgid "or an Image URL"
 msgstr ""
@@ -1842,32 +1842,32 @@ msgid "Product GTIN"
 msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/gettext-pro.php:186 lib/pro/admin/edit.php:1340
-#: lib/std/admin/edit.php:1238
+#: lib/gettext-pro.php:186 lib/pro/admin/edit.php:1341
+#: lib/std/admin/edit.php:1239
 msgctxt "option label"
 msgid "Maximum Images"
 msgstr ""
 
-#: lib/gettext-pro.php:191 lib/pro/admin/edit.php:1377
-#: lib/std/admin/edit.php:1277
+#: lib/gettext-pro.php:191 lib/pro/admin/edit.php:1378
+#: lib/std/admin/edit.php:1278
 msgctxt "option comment"
 msgid "days"
 msgstr ""
 
-#: lib/gettext-pro.php:192 lib/pro/admin/edit.php:1378
-#: lib/std/admin/edit.php:1278
+#: lib/gettext-pro.php:192 lib/pro/admin/edit.php:1379
+#: lib/std/admin/edit.php:1279
 msgctxt "option comment"
 msgid "hours"
 msgstr ""
 
-#: lib/gettext-pro.php:193 lib/pro/admin/edit.php:1379
-#: lib/std/admin/edit.php:1279
+#: lib/gettext-pro.php:193 lib/pro/admin/edit.php:1380
+#: lib/std/admin/edit.php:1280
 msgctxt "option comment"
 msgid "mins"
 msgstr ""
 
-#: lib/gettext-pro.php:194 lib/pro/admin/edit.php:1380
-#: lib/std/admin/edit.php:1280
+#: lib/gettext-pro.php:194 lib/pro/admin/edit.php:1381
+#: lib/std/admin/edit.php:1281
 msgctxt "option comment"
 msgid "secs"
 msgstr ""
