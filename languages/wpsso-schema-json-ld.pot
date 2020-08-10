@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.15.0-dev.9\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 3.15.0-dev.10\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-"
 "ld\n"
 "POT-Creation-Date: 2020-MO-DA HO:MI+ZONE\n"
@@ -50,11 +50,11 @@ msgstr ""
 msgid "Google requires at least one question for the Schema FAQPage markup."
 msgstr ""
 
-#: lib/filters/type/howto.php:127
+#: lib/filters/type/howto.php:125
 msgid "adding schema howto step option #%d image"
 msgstr ""
 
-#: lib/filters/type/review.php:99
+#: lib/filters/type/review.php:97
 msgid "adding reviewed subject image"
 msgstr ""
 
@@ -1152,8 +1152,8 @@ msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
 #: lib/gettext-pro.php:53 lib/gettext-pro.php:188 lib/pro/admin/edit.php:365
-#: lib/pro/admin/edit.php:1351 lib/std/admin/edit.php:360
-#: lib/std/admin/edit.php:1250
+#: lib/pro/admin/edit.php:1349 lib/std/admin/edit.php:360
+#: lib/std/admin/edit.php:1248
 msgctxt "option label"
 msgid "Image ID"
 msgstr ""
@@ -1403,8 +1403,10 @@ msgctxt "option label"
 msgid "Subject Image ID"
 msgstr ""
 
-#: lib/gettext-pro.php:105 lib/pro/admin/edit.php:684
-#: lib/std/admin/edit.php:709
+#. translators: Please ignore - translation uses a different text domain.
+#: lib/gettext-pro.php:105 lib/gettext-pro.php:190 lib/pro/admin/edit.php:684
+#: lib/pro/admin/edit.php:1357 lib/std/admin/edit.php:709
+#: lib/std/admin/edit.php:1257
 msgctxt "option label"
 msgid "or an Image URL"
 msgstr ""
@@ -1840,32 +1842,32 @@ msgid "Product GTIN"
 msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/gettext-pro.php:186 lib/pro/admin/edit.php:1342
-#: lib/std/admin/edit.php:1240
+#: lib/gettext-pro.php:186 lib/pro/admin/edit.php:1340
+#: lib/std/admin/edit.php:1238
 msgctxt "option label"
 msgid "Maximum Images"
 msgstr ""
 
-#: lib/gettext-pro.php:189 lib/pro/admin/edit.php:1371
-#: lib/std/admin/edit.php:1270
+#: lib/gettext-pro.php:191 lib/pro/admin/edit.php:1377
+#: lib/std/admin/edit.php:1277
 msgctxt "option comment"
 msgid "days"
 msgstr ""
 
-#: lib/gettext-pro.php:190 lib/pro/admin/edit.php:1372
-#: lib/std/admin/edit.php:1271
+#: lib/gettext-pro.php:192 lib/pro/admin/edit.php:1378
+#: lib/std/admin/edit.php:1278
 msgctxt "option comment"
 msgid "hours"
 msgstr ""
 
-#: lib/gettext-pro.php:191 lib/pro/admin/edit.php:1373
-#: lib/std/admin/edit.php:1272
+#: lib/gettext-pro.php:193 lib/pro/admin/edit.php:1379
+#: lib/std/admin/edit.php:1279
 msgctxt "option comment"
 msgid "mins"
 msgstr ""
 
-#: lib/gettext-pro.php:192 lib/pro/admin/edit.php:1374
-#: lib/std/admin/edit.php:1273
+#: lib/gettext-pro.php:194 lib/pro/admin/edit.php:1380
+#: lib/std/admin/edit.php:1280
 msgctxt "option comment"
 msgid "secs"
 msgstr ""

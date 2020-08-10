@@ -44,8 +44,6 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 
 			$json_ret = array();
 
-			$size_name = $this->p->lca . '-schema';
-
 			if ( ! empty( $mod[ 'obj' ] ) ) {	// Just in case.
 
 				$md_opts = SucomUtil::get_opts_begin( 'schema_review_', array_merge( 
@@ -101,8 +99,21 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 
 			/**
 			 * Add the item image.
+			 *
+			 * Changed from get_opts_single_image() to get_mt_opts_images() on 2020/08/10.
 			 */
-			$mt_image = $this->p->media->get_opts_single_image( $md_opts, $size_name, 'schema_review_item_img' );
+			$mt_images = $this->p->media->get_mt_opts_images( $md_opts, $size_names = 'schema', $img_pre = 'schema_review_item_img' );
+
+			WpssoSchema::add_images_data_mt( $item[ 'image' ], $mt_images );
+
+			if ( empty( $item[ 'image' ] ) ) {
+
+				unset( $item[ 'image' ] );	// Prevent null assignment.
+
+			} elseif ( $this->p->debug->enabled ) {
+
+				$this->p->debug->log( $item[ 'image' ] );
+			}
 
 			/**
 			 * Restore previous reference values for admin notices.
@@ -110,18 +121,6 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 			if ( is_admin() ) {
 
 				$this->p->notice->unset_ref( $sharing_url );
-			}
-
-			if ( ! WpssoSchemaSingle::add_image_data_mt( $item[ 'image' ], $mt_image, 'og:image', $list_element = false ) ) {
-
-				if ( empty( $item[ 'image' ] ) ) {
-
-					unset( $item[ 'image' ] );	// Prevent null assignment.
-				}
-
-			} elseif ( $this->p->debug->enabled ) {
-
-				$this->p->debug->log( $item[ 'image' ] );
 			}
 
 			/**

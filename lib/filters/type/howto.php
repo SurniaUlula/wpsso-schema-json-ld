@@ -54,8 +54,6 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 
 			$json_ret = array();
 
-			$size_name = $this->p->lca . '-schema';
-
 			if ( ! empty( $mod[ 'obj' ] ) ) {	// Just in case.
 
 				$md_opts = SucomUtil::get_opts_begin( 'schema_howto_', array_merge( 
@@ -97,22 +95,22 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 
 				$howto_section_ref = false;
 				$howto_section_pos = 1;
-				$howto_step_pos    = 1;
-				$howto_step_url    = $json_data[ 'url' ] . '#';
-				$howto_step_idx    = 0;
+
+				$step_pos = 1;
+				$step_url = $json_data[ 'url' ] . '#';
+				$step_idx = 0;
 
 				/**
 				 * $md_val is the section/step name.
 				 */
 				foreach ( $howto_steps as $md_num => $md_val ) {
 
-					$howto_step_text = isset( $md_opts[ 'schema_howto_step_text_' . $md_num ] ) ?
-						$md_opts[ 'schema_howto_step_text_' . $md_num ] : $md_val;
+					$step_text = isset( $md_opts[ 'schema_howto_step_text_' . $md_num ] ) ? $md_opts[ 'schema_howto_step_text_' . $md_num ] : $md_val;
 
 					/**
 					 * Get the image, which will be added to the section or step.
 					 */
-					$howto_step_image = array();
+					$step_images = array();
 
 					if ( ! empty( $md_opts[ 'schema_howto_step_img_id_' . $md_num ] ) ) {
 
@@ -127,7 +125,12 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 								sprintf( __( 'adding schema howto step option #%d image', 'wpsso-schema-json-ld' ), $md_num + 1 ) );
 						}
 
-						$mt_image = $this->p->media->get_opts_single_image( $md_opts, $size_name, 'schema_howto_step_img', $md_num );
+						/**
+						 * Changed from get_opts_single_image() to get_mt_opts_images() on 2020/08/10.
+						 */
+						$mt_images = $this->p->media->get_mt_opts_images( $md_opts, $size_names = 'schema', $img_pre = 'schema_howto_step_img', $md_num );
+
+						WpssoSchema::add_images_data_mt( $step_images, $mt_images );
 
 						/**
 						 * Restore previous reference values for admin notices.
@@ -136,8 +139,6 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 
 							$this->p->notice->unset_ref( $sharing_url );
 						}
-
-						WpssoSchemaSingle::add_image_data_mt( $howto_step_image, $mt_image, 'og:image', false );
 					}
 
 					/**
@@ -145,31 +146,31 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 					 */
 					if ( ! empty( $md_opts[ 'schema_howto_step_section_' . $md_num ] ) ) {
 
-						$howto_step_url = $json_data[ 'url' ] . '#section' . $howto_section_pos;
+						$step_url = $json_data[ 'url' ] . '#section' . $howto_section_pos;
 
-						$json_ret[ 'step' ][ $howto_step_idx ] = WpssoSchema::get_schema_type_context( 'https://schema.org/HowToSection',
+						$json_ret[ 'step' ][ $step_idx ] = WpssoSchema::get_schema_type_context( 'https://schema.org/HowToSection',
 							array(
-								'url'             => $howto_step_url,
+								'url'             => $step_url,
 								'name'            => $md_val,
-								'description'     => $howto_step_text,
+								'description'     => $step_text,
 								'numberOfItems'   => 0,
 								'itemListOrder'   => 'https://schema.org/ItemListOrderAscending',
 								'itemListElement' => array(),
 							)
 						);
 
-						if ( $howto_step_image ) {
+						if ( $step_images ) {
 
-							$json_ret[ 'step' ][ $howto_step_idx ][ 'image' ][] = $howto_step_image;
+							$json_ret[ 'step' ][ $step_idx ][ 'image' ] = $step_images;
 						}
 
-						$howto_section_ref =& $json_ret[ 'step' ][ $howto_step_idx ];
+						$howto_section_ref =& $json_ret[ 'step' ][ $step_idx ];
 
 						$howto_section_pos++;
 
-						$howto_step_pos = 1;
+						$step_pos = 1;
 
-						$howto_step_idx++;
+						$step_idx++;
 
 					/**
 					 * How-To Step.
@@ -178,16 +179,16 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 
 						$howto_step_arr = WpssoSchema::get_schema_type_context( 'https://schema.org/HowToStep',
 							array(
-								'url'      => $howto_step_url . 'step' . $howto_step_pos,
-								'position' => $howto_step_pos,
+								'url'      => $step_url . 'step' . $step_pos,
+								'position' => $step_pos,
 								'name'     => $md_val,
-								'text'     => $howto_step_text,
+								'text'     => $step_text,
 							)
 						);
 
-						if ( $howto_step_image ) {
+						if ( $step_images ) {
 
-							$howto_step_arr[ 'image' ][] = $howto_step_image;
+							$howto_step_arr[ 'image' ] = $step_images;
 						}
 
 						/**
@@ -197,16 +198,16 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 
 							$howto_section_ref[ 'itemListElement' ][] = $howto_step_arr;
 
-							$howto_section_ref[ 'numberOfItems' ] = $howto_step_pos;
+							$howto_section_ref[ 'numberOfItems' ] = $step_pos;
 
 						} else {
 
-							$json_ret[ 'step' ][ $howto_step_idx ] = $howto_step_arr;
+							$json_ret[ 'step' ][ $step_idx ] = $howto_step_arr;
 
-							$howto_step_idx++;
+							$step_idx++;
 						}
 
-						$howto_step_pos++;
+						$step_pos++;
 					}
 				}
 			}
