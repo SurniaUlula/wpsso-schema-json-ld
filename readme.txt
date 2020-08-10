@@ -312,7 +312,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.15.0-dev.9 (2020/08/09)**
+**Version 3.15.0-dev.10 (2020/08/10)**
 
 * **New Features**
 	* None.
@@ -326,7 +326,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v8.0.0-dev.9.
+	* WPSSO Core v8.0.0-dev.10.
 
 **Version 3.14.0 (2020/08/02)**
 
@@ -382,9 +382,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.15.0-dev.9 =
+= 3.15.0-dev.10 =
 
-(2020/08/09) Added support for the new WpssoUtilMetabox class in WPSSO Core v8.0.0. Refactored text domain related methods to allow reloading translation files when debugging is enabled.
+(2020/08/10) Added support for the new WpssoUtilMetabox class in WPSSO Core v8.0.0. Refactored text domain related methods to allow reloading translation files when debugging is enabled.
 
 = 3.14.0 =
 
