@@ -27,6 +27,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			static $do_once = null;
 
 			if ( true === $do_once ) {
+
 				return;	// Stop here.
 			}
 
@@ -35,6 +36,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -42,6 +44,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			 * Instantiate the WpssoJsonFiltersSchema class object.
 			 */
 			if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
+
 				require_once WPSSOJSON_PLUGINDIR . 'lib/filters-schema.php';
 			}
 
@@ -51,6 +54,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			 * Instantiate the WpssoJsonFiltersUpgrade class object.
 			 */
 			if ( ! class_exists( 'WpssoJsonFiltersUpgrade' ) ) {
+
 				require_once WPSSOJSON_PLUGINDIR . 'lib/filters-upgrade.php';
 			}
 
@@ -70,6 +74,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				 * Instantiate the WpssoJsonFiltersMessages class object.
 				 */
 				if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
+
 					require_once WPSSOJSON_PLUGINDIR . 'lib/filters-messages.php';
 				}
 
@@ -254,10 +259,12 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 		public function filter_save_setting_options( array $opts, $network, $upgrading ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
 			if ( $network ) {
+
 				return $opts;	// Nothing to do.
 			}
 
@@ -278,10 +285,12 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 					if ( isset( $opts[ $opt_key ] ) ) {
 
 						if ( $opts[ $opt_key ] === $def_val ) {
+
 							continue;
 						}
 
 						if ( is_admin() ) {
+
 							$this->p->notice->warn( sprintf( $notice_msg, $opt_key ) );
 						}
 					}
@@ -296,6 +305,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 		public function filter_get_defaults( $defs ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -322,6 +332,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 		public function filter_save_md_options( $md_opts, $mod ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -335,6 +346,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				$md_opts[ $md_key ] = (int) $value;
 
 				if ( $md_opts[ $md_key ] === $md_defs[ $md_key ] ) {
+
 					unset( $md_opts[ $md_key ] );
 				}
 			}
@@ -351,7 +363,9 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 					'schema_review_rating_from',
 					'schema_review_rating_to',
 				) as $md_key ) {
+
 					if ( empty( $md_opts[ $md_key ] ) && isset( $md_defs[ $md_key ] ) ) {
+
 						$md_opts[ $md_key ] = $md_defs[ $md_key ];
 					}
 				}
@@ -363,6 +377,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 					'schema_review_rating_from',
 					'schema_review_rating_to',
 				) as $md_key ) {
+
 					unset( $md_opts[ $md_key ] );
 				}
 			}
@@ -449,11 +464,13 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 					) as $md_offer_pre ) {
 
 						if ( isset( $md_opts[ $md_offer_pre . '_' . $key_num] ) && $md_opts[ $md_offer_pre . '_' . $key_num] !== '' ) {
+
 							$is_valid_offer = true;
 						}
 					}
 
 					if ( ! $is_valid_offer ) {
+
 						unset( $md_opts[ $md_pre . '_offer_currency_' . $key_num] );
 						unset( $md_opts[ $md_pre . '_offer_avail_' . $key_num] );
 					}
@@ -486,6 +503,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			$timezone = get_option( 'timezone_string' );
 
 			if ( empty( $timezone ) ) {
+
 				$timezone = 'UTC';
 			}
 
@@ -503,6 +521,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				 * Check for a WordPress bug that returns -0001 for the year of a draft post.
 				 */
 				if ( $def_copyright_year === '-0001' ) {
+
 					$def_copyright_year = '';
 				}
 			}
