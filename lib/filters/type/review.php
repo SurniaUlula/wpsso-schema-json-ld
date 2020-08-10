@@ -98,9 +98,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 			}
 
 			/**
-			 * Add the item image.
-			 *
-			 * Changed from get_opts_single_image() to get_mt_opts_images() on 2020/08/10.
+			 * Add the item images.
 			 */
 			$mt_images = $this->p->media->get_mt_opts_images( $md_opts, $size_names = 'schema', $img_pre = 'schema_review_item_img' );
 

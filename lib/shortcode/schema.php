@@ -435,13 +435,16 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 					WpssoSchema::add_videos_data_mt( $prop_ref[ 'video' ], $mt_videos, 'og:video' );
 				}
 
-				$size_name = $this->p->lca . '-schema';
+				$size_names = $this->p->util->get_image_size_names( 'schema' );	// Always returns an array.
 
-				$mt_images = $this->p->media->get_content_images( 1, $size_name, false, false, false, $prop_content );
+				foreach ( $size_names as $size_name ) {
 
-				if ( ! empty( $mt_images ) ) {
+					$mt_images = $this->p->media->get_content_images( $num = 1, $size_name, $mod = false, $check_dupes = false, $prop_content );
 
-					WpssoSchema::add_images_data_mt( $prop_ref[ 'image' ], $mt_images );
+					if ( ! empty( $mt_images ) ) {
+
+						WpssoSchema::add_images_data_mt( $prop_ref[ 'image' ], $mt_images );
+					}
 				}
 
 				$this->content_json_data( $content, $prop_ref, $increment = true );

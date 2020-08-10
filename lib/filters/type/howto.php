@@ -125,9 +125,6 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 								sprintf( __( 'adding schema howto step option #%d image', 'wpsso-schema-json-ld' ), $md_num + 1 ) );
 						}
 
-						/**
-						 * Changed from get_opts_single_image() to get_mt_opts_images() on 2020/08/10.
-						 */
 						$mt_images = $this->p->media->get_mt_opts_images( $md_opts, $size_names = 'schema', $img_pre = 'schema_howto_step_img', $md_num );
 
 						WpssoSchema::add_images_data_mt( $step_images, $mt_images );
