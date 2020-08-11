@@ -312,12 +312,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.15.0-b.3 (2020/08/11)**
+**Version 4.0.0-rc.1 (2020/08/11)**
+
+Google has updated their Rich Results requirements and now prefers 1:1, 4:3, and 16:9 images for all Schema types, not just the Schema Article type for AMP webpages. The "Schema" and "Schema Article" image sizes have been removed and replaced by new Schema 1:1, 4:3, and 16:9 image sizes.
 
 * **New Features**
 	* None.
 * **Improvements**
 	* Added an 'audience' property to Schema Product markup for the Target Gender value.
+	* Renamed the following SSO &gt; Image Sizes:
+		* Schema Article AMP 1:1 to Schema 1:1 (Google)
+		* Schema Article AMP 4:3 to Schema 4:3 (Google)
+		* Schema Article AMP 16:9 to Schema 16:9 (Google)
+	* Removed the following SSO &gt; Image Sizes:
+		* Schema
+		* Schema Article
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -327,7 +336,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v8.0.0-b.3.
+	* WPSSO Core v8.0.0-rc.1.
 
 **Version 3.14.0 (2020/08/02)**
 
@@ -383,9 +392,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.15.0-b.3 =
+= 4.0.0-rc.1 =
 
-(2020/08/11) Added an 'audience' property to Schema Product markup for the Target Gender value.
+(2020/08/11) Added an 'audience' property to Schema Product markup for the Target Gender value. Added support for Schema 1:1, 4:3, and 16:9 images for Google.
 
 = 3.14.0 =
 
