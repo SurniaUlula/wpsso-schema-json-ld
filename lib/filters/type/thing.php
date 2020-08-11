@@ -168,7 +168,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 
 					$shortener = $this->p->options[ 'plugin_shortener' ];
 
-					if ( ! empty( $shortener ) && $shortener !== 'none' ) {
+					if ( WpssoSchema::is_valid_val( $shortener ) ) {	// Not null, an empty string, or 'none'.
 
 						if ( $this->p->debug->enabled ) {
 

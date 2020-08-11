@@ -96,7 +96,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 			 */
 			foreach ( array( 'isbn', 'retailer_item_id' ) as $pref_id ) {
 
-				if ( ! empty( $mt_og[ 'product:' . $pref_id ] ) ) {
+				if ( WpssoSchema::is_valid_key( $mt_og, 'product:' . $pref_id ) ) {	// Not null, an empty string, or 'none'.
 
 					$json_ret[ 'productID' ] = $pref_id . ':' . $mt_og[ 'product:' . $pref_id ];
 
@@ -105,9 +105,9 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 			}
 
 			/**
-			 * There can only be one Open Graph brand meta tag, which must be a string, not an array.
+			 * Brand.
 			 */
-			if ( ! empty( $mt_og[ 'product:brand' ] ) && is_string( $mt_og[ 'product:brand' ] ) ) {
+			if ( WpssoSchema::is_valid_key( $mt_og, 'product:brand' ) ) {	// Not null, an empty string, or 'none'.
 
 				$single_brand = WpssoSchema::get_data_itemprop_from_assoc( $mt_og, array( 
 					'name' => 'product:brand',
@@ -116,6 +116,21 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 				if ( false !== $single_brand ) {	// Just in case.
 
 					$json_ret[ 'brand' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/Brand', $single_brand );
+				}
+			}
+
+			/**
+			 * Audience.
+			 */
+			if ( WpssoSchema::is_valid_key( $mt_og, 'product:target_gender' ) ) {	// Not null, an empty string, or 'none'.
+
+				$single_audience = WpssoSchema::get_data_itemprop_from_assoc( $mt_og, array( 
+					'suggestedGender' => 'product:target_gender',
+				) );
+
+				if ( false !== $single_audience ) {	// Just in case.
+
+					$json_ret[ 'audience' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/PeopleAudience', $single_audience );
 				}
 			}
 

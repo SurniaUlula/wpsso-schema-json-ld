@@ -60,13 +60,13 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 			 * Property:
 			 * 	itemReviewed
 			 */
-			if ( empty( $md_opts[ 'schema_review_item_type' ] ) || 'none' === $md_opts[ 'schema_review_item_type' ] ) {
+			if ( WpssoSchema::is_valid_key( $md_opts, 'schema_review_item_type' ) ) {	// Not null, an empty string, or 'none'.
 
-				$item_type_id = 'thing';
+				$item_type_id = $md_opts[ 'schema_review_item_type' ];
 
 			} else {
 
-				$item_type_id = $md_opts[ 'schema_review_item_type' ];
+				$item_type_id = 'thing';
 			}
 
 			$item_type_url = $this->p->schema->get_schema_type_url( $item_type_id );
@@ -129,7 +129,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 				/**
 				 * The author type value should be either 'organization' or 'person'.
 				 */
-				if ( ! empty( $md_opts[ 'schema_review_item_cw_author_type' ] ) && 'none' !== $md_opts[ 'schema_review_item_cw_author_type' ] ) {
+				if ( WpssoSchema::is_valid_key( $md_opts, 'schema_review_item_cw_author_type' ) ) {	// Not null, an empty string, or 'none'.
 
 					$author_type_url = $this->p->schema->get_schema_type_url( $md_opts[ 'schema_review_item_cw_author_type' ] );
 

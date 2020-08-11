@@ -86,18 +86,16 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 
 					$md_val = $mod[ 'obj' ]->get_options( $mod[ 'id' ], $md_key, $filter_opts = true, $pad_opts = true );
 
-					if ( $md_val === null || $md_val === '' || $md_val === 'none' ) {
+					if ( WpssoSchema::is_valid_val( $md_val ) ) {	// Not null, an empty string, or 'none'.
 
-						continue;
-					}
+						if ( strpos( $md_key, '_org_id' ) ) {
 
-					if ( strpos( $md_key, '_org_id' ) ) {
+							WpssoSchemaSingle::add_organization_data( $json_ret[ $prop_name ], $mod, $md_val, $org_logo_key, $list_element = true );
 
-						WpssoSchemaSingle::add_organization_data( $json_ret[ $prop_name ], $mod, $md_val, $org_logo_key, $list_element = true );
+						} elseif ( strpos( $md_key, '_person_id' ) ) {
 
-					} elseif ( strpos( $md_key, '_person_id' ) ) {
-
-						WpssoSchemaSingle::add_person_data( $json_ret[ $prop_name ], $mod, $md_val, $list_element = true );
+							WpssoSchemaSingle::add_person_data( $json_ret[ $prop_name ], $mod, $md_val, $list_element = true );
+						}
 					}
 				}
 			}
@@ -187,21 +185,19 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 
 					$md_val = $mod[ 'obj' ]->get_options( $mod[ 'id' ], $md_key, $filter_opts = true, $pad_opts = true );
 
-					if ( $md_val === null || $md_val === '' || $md_val === 'none' ) {
+					if ( WpssoSchema::is_valid_val( $md_val ) ) {	// Not null, an empty string, or 'none'.
 
-						continue;
-					}
+						switch ( $prop_name ) {
 
-					switch ( $prop_name ) {
-
-						case 'isFamilyFriendly':	// Must be a true or false boolean value.
+							case 'isFamilyFriendly':	// Must be a true or false boolean value.
 	
-							$md_val = empty( $md_val ) ? false : true;
+								$md_val = empty( $md_val ) ? false : true;
 
-							break;
+								break;
+						}
+
+						$json_ret[ $prop_name ] = $md_val;
 					}
-
-					$json_ret[ $prop_name ] = $md_val;
 				}
 			}
 

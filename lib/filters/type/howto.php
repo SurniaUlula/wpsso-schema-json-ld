@@ -53,6 +53,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 			}
 
 			$json_ret = array();
+			$md_opts  = array();
 
 			if ( ! empty( $mod[ 'obj' ] ) ) {	// Just in case.
 
@@ -60,10 +61,6 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 					(array) $mod[ 'obj' ]->get_defaults( $mod[ 'id' ] ), 
 					(array) $mod[ 'obj' ]->get_options( $mod[ 'id' ] )	// Returns empty string if no meta found.
 				) );
-
-			} else {
-
-				$md_opts = array();
 			}
 
 			/**
@@ -215,11 +212,9 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 			 */
 			foreach ( SucomUtil::preg_grep_keys( '/^schema_howto_supply_[0-9]+$/', $md_opts ) as $md_key => $md_val ) {
 
-				$json_ret[ 'supply' ][] = WpssoSchema::get_schema_type_context( 'https://schema.org/HowToSupply',
-					array(
-						'name' => $md_val,
-					)
-				);
+				$json_ret[ 'supply' ][] = WpssoSchema::get_schema_type_context( 'https://schema.org/HowToSupply', array(
+					'name' => $md_val,
+				) );
 			}
 
 			/**
@@ -228,11 +223,9 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 			 */
 			foreach ( SucomUtil::preg_grep_keys( '/^schema_howto_tool_[0-9]+$/', $md_opts ) as $md_key => $md_val ) {
 
-				$json_ret[ 'tool' ][] = WpssoSchema::get_schema_type_context( 'https://schema.org/HowToTool',
-					array(
-						'name' => $md_val,
-					)
-				);
+				$json_ret[ 'tool' ][] = WpssoSchema::get_schema_type_context( 'https://schema.org/HowToTool', array(
+					'name' => $md_val,
+				) );
 			}
 
 			return WpssoSchema::return_data_from_filter( $json_data, $json_ret, $is_main );

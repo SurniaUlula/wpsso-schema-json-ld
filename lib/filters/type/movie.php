@@ -49,12 +49,10 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeMovie' ) ) {
 				/**
 				 * Merge defaults to get a complete meta options array.
 				 */
-				$md_opts = SucomUtil::get_opts_begin( 'schema_movie_', 
-					array_merge( 
-						(array) $mod[ 'obj' ]->get_defaults( $mod[ 'id' ] ), 
-						(array) $mod[ 'obj' ]->get_options( $mod[ 'id' ] )	// Returns empty string if no meta found.
-					)
-				);
+				$md_opts = SucomUtil::get_opts_begin( 'schema_movie_', array_merge( 
+					(array) $mod[ 'obj' ]->get_defaults( $mod[ 'id' ] ), 
+					(array) $mod[ 'obj' ]->get_options( $mod[ 'id' ] )	// Returns empty string if no meta found.
+				) );
 
 			} else {
 				$md_opts = array();
@@ -84,14 +82,11 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeMovie' ) ) {
 			 * Property:
 			 * 	productionCompany
 			 */
-			if ( isset( $md_opts[ 'schema_movie_prodco_org_id' ] ) ) {
+			if ( WpssoSchema::is_valid_key( $md_opts, 'schema_movie_prodco_org_id' ) ) {	// Not null, an empty string, or 'none'.
 
 				$md_val = $md_opts[ 'schema_movie_prodco_org_id' ]; 
 				
-				if ( null !== $md_val && '' !== $md_val && 'none' !== $md_val ) {
-
-					WpssoSchemaSingle::add_organization_data( $json_ret[ 'productionCompany' ], $mod, $md_val, 'org_logo_url', $list_element = true );
-				}
+				WpssoSchemaSingle::add_organization_data( $json_ret[ 'productionCompany' ], $mod, $md_val, 'org_logo_url', $list_element = true );
 			}
 
 			return WpssoSchema::return_data_from_filter( $json_data, $json_ret, $is_main );
