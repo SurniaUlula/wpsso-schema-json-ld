@@ -12,7 +12,7 @@ Requires PHP: 5.6
 Requires At Least: 4.2
 Tested Up To: 5.5
 WC Tested Up To: 4.3.2
-Stable Tag: 3.14.0
+Stable Tag: 4.0.0
 
 Google Rich Results and Structured Data for Articles, Carousels, Events, FAQ Pages, How-Tos, Local SEO, Products, Recipes, Ratings, Reviews, and More.
 
