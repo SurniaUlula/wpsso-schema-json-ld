@@ -312,6 +312,23 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 4.1.0-dev.1 (2020/08/14)**
+
+Google has updated their Rich Results requirements to use the complete URL of Schema enumeration values instead of only the enumeration name (as they previously required). The product availability, product condition, event attendance, event status, and offer availability values have all been updated to include their complete enumeration URL. For example, a previous product condition might have been 'New' or 'NewCondition' and will now be included in Schema markup as 'https://schema.org/NewCondition'.
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Added a new 'wpsso_sanitize_md_options' filter hook in WpssoJsonFilters to sanitize the post metadata event attendence, event status, and offer availability values.
+* **Requires At Least**
+	* PHP v5.6.
+	* WordPress v4.2.
+	* WPSSO Core v8.2.0-dev.1.
+
 **Version 4.0.0 (2020/08/11)**
 
 **Google has updated their Rich Results requirements and now prefers 1:1, 4:3, and 16:9 images for all Schema types, not just the Schema Article type for AMP webpages. The "Schema" and "Schema Article" image sizes have been removed and replaced by new Schema 1:1, 4:3, and 16:9 image sizes (minimum dimensions are 1200x1200px, 1200x900px, and 1200x675px).**
@@ -391,6 +408,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v7.10.1.
 
 == Upgrade Notice ==
+
+= 4.1.0-dev.1 =
+
+(2020/08/14) Added a new filter hook to sanitize the post metadata event attendence, event status, and offer availability values.
 
 = 4.0.0 =
 
