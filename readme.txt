@@ -314,7 +314,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 **Version 4.1.0-dev.2 (2020/08/14)**
 
-Google has updated their Rich Results requirements to use the complete URL of Schema enumeration values instead of only the enumeration name (as they previously required). The product availability, product condition, event attendance, event status, and offer availability values have all been updated to include their complete enumeration URL. For example, a previous product condition might have been 'New' or 'NewCondition' and will now be included in Schema markup as 'https://schema.org/NewCondition'.
+**Google has updated their Rich Results requirements to use the complete URL of Schema enumeration values instead of only the enumeration name (as they previously required). The product availability, product condition, event attendance, event status, and offer availability values have all been updated to include their complete enumeration URL. For example, a previous product condition might have been 'New' or 'NewCondition' and will now be included in Schema markup as 'https://schema.org/NewCondition'.**
 
 * **New Features**
 	* None.
