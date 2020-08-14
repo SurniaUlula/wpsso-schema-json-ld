@@ -73,19 +73,20 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 
 			$json_ret[ 'itemReviewed' ] = WpssoSchema::get_schema_type_context( $item_type_url );
 
-			$item =& $json_ret[ 'itemReviewed' ];	// Shortcut variable name.
+			$item_reviewed =& $json_ret[ 'itemReviewed' ];	// Shortcut variable name.
 
-			WpssoSchema::add_data_itemprop_from_assoc( $item, $md_opts, array(
+			WpssoSchema::add_data_itemprop_from_assoc( $item_reviewed, $md_opts, array(
 				'url'         => 'schema_review_item_url',
 				'name'        => 'schema_review_item_name',
 				'description' => 'schema_review_item_desc',
 			) );
 
 			foreach ( SucomUtil::preg_grep_keys( '/^schema_review_item_sameas_url_[0-9]+$/', $md_opts ) as $url ) {
-				$item[ 'sameAs' ][] = SucomUtil::esc_url_encode( $url );
+
+				$item_reviewed[ 'sameAs' ][] = SucomUtil::esc_url_encode( $url );
 			}
 
-			WpssoSchema::check_sameas_prop_values( $item );
+			WpssoSchema::check_prop_value_sameas( $item_reviewed );
 
 			/**
 			 * Set reference values for admin notices.
@@ -102,15 +103,15 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 			 */
 			$mt_images = $this->p->media->get_mt_opts_images( $md_opts, $size_names = 'schema', $img_pre = 'schema_review_item_img' );
 
-			WpssoSchema::add_images_data_mt( $item[ 'image' ], $mt_images );
+			WpssoSchema::add_images_data_mt( $item_reviewed[ 'image' ], $mt_images );
 
-			if ( empty( $item[ 'image' ] ) ) {
+			if ( empty( $item_reviewed[ 'image' ] ) ) {
 
-				unset( $item[ 'image' ] );	// Prevent null assignment.
+				unset( $item_reviewed[ 'image' ] );	// Prevent null assignment.
 
 			} elseif ( $this->p->debug->enabled ) {
 
-				$this->p->debug->log( $item[ 'image' ] );
+				$this->p->debug->log( $item_reviewed[ 'image' ] );
 			}
 
 			/**
@@ -133,15 +134,15 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 
 					$author_type_url = $this->p->schema->get_schema_type_url( $md_opts[ 'schema_review_item_cw_author_type' ] );
 
-					$item[ 'author' ] = WpssoSchema::get_schema_type_context( $author_type_url );
+					$item_reviewed[ 'author' ] = WpssoSchema::get_schema_type_context( $author_type_url );
 
-					WpssoSchema::add_data_itemprop_from_assoc( $item[ 'author' ], $md_opts, array(
+					WpssoSchema::add_data_itemprop_from_assoc( $item_reviewed[ 'author' ], $md_opts, array(
 						'name' => 'schema_review_item_cw_author_name',
 					) );
 
 					if ( ! empty( $md_opts[ 'schema_review_item_cw_author_url' ] ) ) {
 
-						$item[ 'author' ][ 'sameAs' ][] = SucomUtil::esc_url_encode( $md_opts[ 'schema_review_item_cw_author_url' ] );
+						$item_reviewed[ 'author' ][ 'sameAs' ][] = SucomUtil::esc_url_encode( $md_opts[ 'schema_review_item_cw_author_url' ] );
 					}
 				}
 
@@ -150,7 +151,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 				 */
 				if ( $date = WpssoSchema::get_opts_date_iso( $md_opts, 'schema_review_item_cw_pub' ) ) {
 
-					$item[ 'datePublished' ] = $date;
+					$item_reviewed[ 'datePublished' ] = $date;
 				}
 
 				/**
@@ -158,7 +159,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 				 */
 				if ( $date = WpssoSchema::get_opts_date_iso( $md_opts, 'schema_review_item_cw_created' ) ) {
 
-					$item[ 'dateCreated' ] = $date;
+					$item_reviewed[ 'dateCreated' ] = $date;
 				}
 
 				/**
@@ -166,7 +167,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 				 */
 				if ( $this->p->schema->is_schema_type_child( $item_type_id, 'book' ) ) {
 
-					WpssoSchema::add_data_itemprop_from_assoc( $item, $md_opts, array(
+					WpssoSchema::add_data_itemprop_from_assoc( $item_reviewed, $md_opts, array(
 						'isbn' => 'schema_review_item_cw_book_isbn',
 					) );
 
@@ -179,20 +180,20 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 					 * Property:
 					 * 	actor (supersedes actors)
 					 */
-					WpssoSchema::add_person_names_data( $item, 'actor', $md_opts, 'schema_review_item_cw_movie_actor_person_name' );
+					WpssoSchema::add_person_names_data( $item_reviewed, 'actor', $md_opts, 'schema_review_item_cw_movie_actor_person_name' );
 
 					/**
 					 * Property:
 					 * 	director
 					 */
-					WpssoSchema::add_person_names_data( $item, 'director', $md_opts, 'schema_review_item_cw_movie_director_person_name' );
+					WpssoSchema::add_person_names_data( $item_reviewed, 'director', $md_opts, 'schema_review_item_cw_movie_director_person_name' );
 
 				/**
 				 * Schema Reviewed Item: Creative Work -> Software Application
 				 */
 				} elseif ( $this->p->schema->is_schema_type_child( $item_type_id, 'software.application' ) ) {
 	
-					WpssoSchema::add_data_itemprop_from_assoc( $item, $md_opts, array(
+					WpssoSchema::add_data_itemprop_from_assoc( $item_reviewed, $md_opts, array(
 						'applicationCategory'  => 'schema_review_item_software_app_cat',
 						'operatingSystem'      => 'schema_review_item_software_app_os',
 					) );
@@ -219,13 +220,13 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 								/**
 								 * Avoid Google validator warnings.
 								 */
-								$offer[ 'url' ]             = $item[ 'url' ];
+								$offer[ 'url' ]             = $item_reviewed[ 'url' ];
 								$offer[ 'priceValidUntil' ] = gmdate( 'c', time() + MONTH_IN_SECONDS );
 
 								/**
 								 * Add the offer.
 								 */
-								$item[ 'offers' ][] = WpssoSchema::get_schema_type_context( 'https://schema.org/Offer', $offer );
+								$item_reviewed[ 'offers' ][] = WpssoSchema::get_schema_type_context( 'https://schema.org/Offer', $offer );
 							}
 						}
 					}
@@ -236,7 +237,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 			 */
 			} elseif ( $this->p->schema->is_schema_type_child( $item_type_id, 'product' ) ) {
 
-				WpssoSchema::add_data_itemprop_from_assoc( $item, $md_opts, array(
+				WpssoSchema::add_data_itemprop_from_assoc( $item_reviewed, $md_opts, array(
 					'sku'  => 'schema_review_item_product_retailer_part_no',
 					'mpn'  => 'schema_review_item_product_mfr_part_no',
 				) );
@@ -250,7 +251,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 
 				if ( false !== $single_brand ) {	// Just in case.
 
-					$item[ 'brand' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/Brand', $single_brand );
+					$item_reviewed[ 'brand' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/Brand', $single_brand );
 				}
 
 				$metadata_offers_max = SucomUtil::get_const( 'WPSSO_SCHEMA_METADATA_OFFERS_MAX', 5 );
@@ -275,14 +276,14 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 							/**
 							 * Add the offer.
 							 */
-							$item[ 'offers' ][] = WpssoSchema::get_schema_type_context( 'https://schema.org/Offer', $offer );
+							$item_reviewed[ 'offers' ][] = WpssoSchema::get_schema_type_context( 'https://schema.org/Offer', $offer );
 						}
 					}
 				}
 			}
 
 			$json_ret[ 'itemReviewed' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_itemreviewed',
-				$item, $mod, $mt_og, $page_type_id, $is_main );
+				$item_reviewed, $mod, $mt_og, $page_type_id, $is_main );
 
 			/**
 			 * Property:

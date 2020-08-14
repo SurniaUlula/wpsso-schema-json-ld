@@ -85,11 +85,12 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 				'material'      => 'product:material',
 			) );
 
-			WpssoSchema::check_category_prop_value( $json_ret );
+			/**
+			 * Convert a numeric category ID to its Google product type string.
+			 */
+			WpssoSchema::check_prop_value_category( $json_ret );
 
-			WpssoSchema::check_gtin_prop_value( $json_ret );
-
-			WpssoSchema::check_itemprop_content_map( $json_ret, 'itemCondition', 'product:condition' );
+			WpssoSchema::check_prop_value_gtin( $json_ret );
 
 			/**
 			 * See the https://schema.org/productID example.

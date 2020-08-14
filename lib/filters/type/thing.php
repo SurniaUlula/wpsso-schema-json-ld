@@ -204,7 +204,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 			$json_ret[ 'sameAs' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_sameas',
 				$json_ret[ 'sameAs' ], $mod, $mt_og, $page_type_id, $is_main );
 	
-			WpssoSchema::check_sameas_prop_values( $json_ret );
+			WpssoSchema::check_prop_value_sameas( $json_ret );
 	
 			if ( $this->p->debug->enabled ) {
 

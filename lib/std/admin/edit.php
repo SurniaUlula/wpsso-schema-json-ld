@@ -988,7 +988,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 							'input_type'     => 'select',
 							'input_class'    => 'stock',
 							'select_options' => $this->p->cf[ 'form' ][ 'item_availability' ],
-							'select_default' => 'InStock',
+							'select_default' => 'https://schema.org/InStock',
 						),
 					), $css_class = 'single_line', $css_id = 'schema_event_offer',
 						$start_num = 0, $max_input = 2, $show_first = 2 ),

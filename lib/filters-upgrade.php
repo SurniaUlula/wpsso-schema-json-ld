@@ -6,6 +6,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -26,6 +27,7 @@ if ( ! class_exists( 'WpssoJsonFiltersUpgrade' ) ) {
 			static $do_once = null;
 
 			if ( true === $do_once ) {
+
 				return;	// Stop here.
 			}
 
@@ -34,6 +36,7 @@ if ( ! class_exists( 'WpssoJsonFiltersUpgrade' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -46,6 +49,7 @@ if ( ! class_exists( 'WpssoJsonFiltersUpgrade' ) ) {
 		public function filter_rename_options_keys( $options_keys ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -61,6 +65,7 @@ if ( ! class_exists( 'WpssoJsonFiltersUpgrade' ) ) {
 		public function filter_rename_md_options_keys( $options_keys ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
