@@ -64,6 +64,8 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 			$json_ret = array();
 
 			/**
+			 * Note that there is no Schema 'availability' property for the 'product:availability' value.
+			 *
 			 * Note that there is no Schema 'ean' property for the 'product:ean' value.
 			 *
 			 * Note that there is no Schema 'size' property for the 'product:size' value.
