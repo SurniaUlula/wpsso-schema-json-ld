@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.0.0\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-08-11 12:07-0700\n"
-"PO-Revision-Date: 2020-08-11 12:10-0700\n"
+"POT-Creation-Date: 2020-08-14 17:50-0700\n"
+"PO-Revision-Date: 2020-08-14 17:50-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -21,7 +21,7 @@ msgstr "Une note agrégé pour ce balisage a été ignorée &mdash; <a href=\"%1
 msgid "Reviews for this markup have been ignored &mdash; <a href=\"%1$s\">Google does not allow reviews for the Schema Type %2$s</a>."
 msgstr "Les critiques pour ce balisage ont été ignorés &mdash; <a href=\"%1$s\"> Google n'autorise pas les critiques pour le type de schéma %2$s</a>."
 
-#: lib/filters/type/claimreview.php:79 lib/filters.php:486
+#: lib/filters/type/claimreview.php:79 lib/filters.php:740
 msgid "A claim review cannot be the subject of another claim review."
 msgstr "Un examen d'évaluation ne peut pas être le sujet d'un autre examen d'évaluation."
 
@@ -47,7 +47,7 @@ msgstr "Google requiert au moins une question pour le balisage de Schéma FAQPag
 msgid "adding schema howto step option #%d image"
 msgstr "ajout d'image d'étape de l'option #%d du Schéma How-To"
 
-#: lib/filters/type/review.php:97
+#: lib/filters/type/review.php:98
 msgid "adding reviewed subject image"
 msgstr "ajout d'image pour le sujet de l'évaluation"
 
@@ -574,11 +574,11 @@ msgid "Select a default Schema type for the Schema Review subject URL."
 msgstr "Sélectionnez un type de Schéma par défaut pour l'URL du sujet de l'évaluation."
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/filters.php:281
+#: lib/filters.php:309
 msgid "Non-standard value found for the \"%s\" option - resetting the option to its default value."
 msgstr "Valeur non standard trouvée pour l'option \"%s\" - réinitialisation de l'option à sa valeur par défaut."
 
-#: lib/filters.php:488
+#: lib/filters.php:742
 msgid "Please select a subject webpage type that better describes the subject of the webpage (ie. the content) being reviewed."
 msgstr "SVP sélectionner un type de page Web du sujet qui décrit mieux le sujet de la page Web (c'est-à-dire le contenu) en cours de révision."
 
