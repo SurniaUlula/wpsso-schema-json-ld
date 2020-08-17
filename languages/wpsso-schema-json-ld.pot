@@ -899,106 +899,106 @@ msgid ""
 msgstr ""
 
 #: lib/gettext-pro.php:6 lib/gettext-pro.php:28 lib/pro/admin/edit.php:180
-#: lib/pro/admin/schema-general.php:78 lib/std/admin/edit.php:164
+#: lib/pro/admin/schema-general.php:81 lib/std/admin/edit.php:164
 #: lib/std/admin/schema-general.php:77
 msgctxt "metabox title"
 msgid "Creative Work Information"
 msgstr ""
 
-#: lib/gettext-pro.php:7 lib/pro/admin/schema-general.php:81
+#: lib/gettext-pro.php:7 lib/pro/admin/schema-general.php:84
 #: lib/std/admin/schema-general.php:81
 msgctxt "option label"
 msgid "Default Family Friendly"
 msgstr ""
 
-#: lib/gettext-pro.php:8 lib/pro/admin/schema-general.php:87
+#: lib/gettext-pro.php:8 lib/pro/admin/schema-general.php:90
 #: lib/std/admin/schema-general.php:88
 msgctxt "option label"
 msgid "Default Publisher (Org)"
 msgstr ""
 
-#: lib/gettext-pro.php:9 lib/pro/admin/schema-general.php:93
+#: lib/gettext-pro.php:9 lib/pro/admin/schema-general.php:96
 #: lib/std/admin/schema-general.php:95
 msgctxt "option label"
 msgid "Default Publisher (Person)"
 msgstr ""
 
-#: lib/gettext-pro.php:10 lib/pro/admin/schema-general.php:100
+#: lib/gettext-pro.php:10 lib/pro/admin/schema-general.php:103
 #: lib/std/admin/schema-general.php:102
 msgctxt "option label"
 msgid "Default Service Prov. (Org)"
 msgstr ""
 
-#: lib/gettext-pro.php:11 lib/pro/admin/schema-general.php:106
+#: lib/gettext-pro.php:11 lib/pro/admin/schema-general.php:109
 #: lib/std/admin/schema-general.php:109
 msgctxt "option label"
 msgid "Default Service Prov. (Person)"
 msgstr ""
 
 #: lib/gettext-pro.php:12 lib/gettext-pro.php:142 lib/pro/admin/edit.php:975
-#: lib/pro/admin/schema-general.php:119 lib/std/admin/edit.php:841
+#: lib/pro/admin/schema-general.php:122 lib/std/admin/edit.php:841
 #: lib/std/admin/schema-general.php:121
 msgctxt "metabox title"
 msgid "Event Information"
 msgstr ""
 
-#: lib/gettext-pro.php:13 lib/pro/admin/schema-general.php:122
+#: lib/gettext-pro.php:13 lib/pro/admin/schema-general.php:125
 #: lib/std/admin/schema-general.php:125
 msgctxt "option label"
 msgid "Default Physical Venue"
 msgstr ""
 
-#: lib/gettext-pro.php:14 lib/pro/admin/schema-general.php:128
+#: lib/gettext-pro.php:14 lib/pro/admin/schema-general.php:131
 #: lib/std/admin/schema-general.php:132
 msgctxt "option label"
 msgid "Default Organizer (Org)"
 msgstr ""
 
-#: lib/gettext-pro.php:15 lib/pro/admin/schema-general.php:134
+#: lib/gettext-pro.php:15 lib/pro/admin/schema-general.php:137
 #: lib/std/admin/schema-general.php:139
 msgctxt "option label"
 msgid "Default Organizer (Person)"
 msgstr ""
 
-#: lib/gettext-pro.php:16 lib/pro/admin/schema-general.php:141
+#: lib/gettext-pro.php:16 lib/pro/admin/schema-general.php:144
 #: lib/std/admin/schema-general.php:146
 msgctxt "option label"
 msgid "Default Performer (Org)"
 msgstr ""
 
-#: lib/gettext-pro.php:17 lib/pro/admin/schema-general.php:147
+#: lib/gettext-pro.php:17 lib/pro/admin/schema-general.php:150
 #: lib/std/admin/schema-general.php:153
 msgctxt "option label"
 msgid "Default Performer (Person)"
 msgstr ""
 
 #: lib/gettext-pro.php:18 lib/gettext-pro.php:162 lib/pro/admin/edit.php:1127
-#: lib/pro/admin/schema-general.php:160 lib/std/admin/edit.php:1004
+#: lib/pro/admin/schema-general.php:163 lib/std/admin/edit.php:1004
 #: lib/std/admin/schema-general.php:165
 msgctxt "metabox title"
 msgid "Job Posting Information"
 msgstr ""
 
-#: lib/gettext-pro.php:19 lib/pro/admin/schema-general.php:163
+#: lib/gettext-pro.php:19 lib/pro/admin/schema-general.php:166
 #: lib/std/admin/schema-general.php:169
 msgctxt "option label"
 msgid "Default Hiring Organization"
 msgstr ""
 
-#: lib/gettext-pro.php:20 lib/pro/admin/schema-general.php:169
+#: lib/gettext-pro.php:20 lib/pro/admin/schema-general.php:172
 #: lib/std/admin/schema-general.php:176
 msgctxt "option label"
 msgid "Default Job Location"
 msgstr ""
 
 #: lib/gettext-pro.php:21 lib/gettext-pro.php:93 lib/pro/admin/edit.php:600
-#: lib/pro/admin/schema-general.php:181 lib/std/admin/edit.php:617
+#: lib/pro/admin/schema-general.php:184 lib/std/admin/edit.php:617
 #: lib/std/admin/schema-general.php:188
 msgctxt "metabox title"
 msgid "Review Information"
 msgstr ""
 
-#: lib/gettext-pro.php:22 lib/pro/admin/schema-general.php:184
+#: lib/gettext-pro.php:22 lib/pro/admin/schema-general.php:187
 #: lib/std/admin/schema-general.php:192
 msgctxt "option label"
 msgid "Default Subject Webpage Type"
