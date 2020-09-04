@@ -312,6 +312,22 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 4.2.0-rc.1 (2020/09/04)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Added a cleanup method for Yoast SEO to remove its Schema JSON-LD markup.
+	* Added a cleanup method for Rank Math to remove its Schema JSON-LD markup, except for the Schema BreadcrumbList markup.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Added a lib/compat.php library file for 3rd party plugin and theme compatibility actions and filters.
+* **Requires At Least**
+	* PHP v5.6.
+	* WordPress v4.2.
+	* WPSSO Core v8.3.0-rc.1.
+
 **Version 4.1.0 (2020/08/15)**
 
 **Google has updated their Rich Results requirements to use the complete URL of Schema enumeration values instead of only the enumeration name (as they previously required). The product availability, product condition, event attendance, event status, and offer availability values have all been updated to include their complete enumeration URL. For example, a previous product condition might have been 'New' or 'NewCondition' and will now be included in Schema markup as 'https://schema.org/NewCondition'.**
@@ -392,6 +408,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v7.12.0.
 
 == Upgrade Notice ==
+
+= 4.2.0-rc.1 =
+
+(2020/09/04) Added a cleanup method for Yoast SEO and Rank Math.
 
 = 4.1.0 =
 
