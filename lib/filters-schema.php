@@ -21,9 +21,6 @@ if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
 		 */
 		public function __construct( &$plugin ) {
 
-			/**
-			 * Just in case - prevent filters from being hooked and executed more than once.
-			 */
 			static $do_once = null;
 
 			if ( true === $do_once ) {

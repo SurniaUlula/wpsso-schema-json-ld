@@ -15,7 +15,7 @@
  * Requires At Least: 4.2
  * Tested Up To: 5.5
  * WC Tested Up To: 4.4.1
- * Version: 4.1.0
+ * Version: 4.2.0-rc.1
  * 
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -39,13 +39,14 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 		/**
 		 * Wpsso plugin class object variable.
 		 */
-		public $p;		// Wpsso
+		public $p;		// Wpsso.
 
 		/**
 		 * Library class object variables.
 		 */
-		public $filters;	// WpssoJsonFilters
-		public $reg;		// WpssoJsonRegister
+		public $compat;		// WpssoJsonCompat (actions and filters for compatibility).
+		public $filters;	// WpssoJsonFilters.
+		public $reg;		// WpssoJsonRegister.
 
 		/**
 		 * Reference Variables (config, options, modules, etc.).
@@ -160,6 +161,7 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 				return;	// Stop here.
 			}
 
+			$this->compat  = new WpssoJsonCompat( $this->p );	// Actions and filters for compatibility.
 			$this->filters = new WpssoJsonFilters( $this->p );
 		}
 
