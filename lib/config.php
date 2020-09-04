@@ -232,7 +232,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 
 		public static function require_libs( $plugin_file_path ) {
 
-			require_once WPSSOJSON_PLUGINDIR . 'lib/compat.php';
+			require_once WPSSOJSON_PLUGINDIR . 'lib/compat.php';	// 3rd party plugin and theme compatibility actions and filters.
 			require_once WPSSOJSON_PLUGINDIR . 'lib/filters.php';
 			require_once WPSSOJSON_PLUGINDIR . 'lib/register.php';
 

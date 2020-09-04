@@ -44,7 +44,7 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 		/**
 		 * Library class object variables.
 		 */
-		public $compat;		// WpssoJsonCompat (actions and filters for compatibility).
+		public $compat;		// WpssoJsonCompat (3rd party plugin and theme compatibility actions and filters).
 		public $filters;	// WpssoJsonFilters.
 		public $reg;		// WpssoJsonRegister.
 
@@ -161,7 +161,7 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 				return;	// Stop here.
 			}
 
-			$this->compat  = new WpssoJsonCompat( $this->p );	// Actions and filters for compatibility.
+			$this->compat  = new WpssoJsonCompat( $this->p );	// 3rd party plugin and theme compatibility actions and filters.
 			$this->filters = new WpssoJsonFilters( $this->p );
 		}
 
