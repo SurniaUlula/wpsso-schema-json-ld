@@ -312,7 +312,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.2.0-rc.2 (2020/09/05)**
+**Version 4.2.0 (2020/09/05)**
 
 * **New Features**
 	* None.
@@ -326,7 +326,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v8.3.0-rc.2.
+	* WPSSO Core v8.3.0.
 
 **Version 4.1.0 (2020/08/15)**
 
@@ -409,11 +409,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.2.0-rc.2 =
+= 4.2.0 =
 
 (2020/09/05) Added a cleanup method for Yoast SEO and Rank Math.
-
-= 4.1.0 =
-
-(2020/08/15) Added a new filter hook to sanitize the post metadata event attendence, event status, and offer availability values.
 
