@@ -24,11 +24,11 @@ Google Rich Results and Structured Data for Articles, Carousels, Events, FAQ Pag
 
 Google Rich Results and Structured Data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Video Objects, and more.
 
-**Reads your existing WordPress content, plugin and service API data:**
+**Uses your existing WordPress content, plugin data, and service API data:**
 
-There's no need to manually re-create descriptions, titles, product information, re-select images / videos, etc.
+There's no need to manually re-enter descriptions, titles, product information, re-select images / videos, etc. like other SEO and Schema markup plugins.
 
-This add-on provides accurate and comprehensive Schema JSON-LD markup for posts, pages, custom post types, terms (category, tags, etc.), custom taxonomies, user profile pages, search result pages, archive pages, and Accelerated Mobile Pages (AMP) pages &mdash; including image SEO, video SEO, local business, organization, publisher, person, author and co-authors, extensive e-Commerce product markup, product variations, product ratings, aggregate ratings, reviews, recipe information, event details, collection pages, profile pages, search pages, FAQ pages, item lists for [Google's Carousel Rich Results](https://developers.google.com/search/docs/guides/mark-up-listings), and much more.
+Provides comprehensive Schema JSON-LD markup for posts, pages, custom post types, terms (category, tags, etc.), custom taxonomies, user profile pages, search result pages, archive pages, and Accelerated Mobile Pages (AMP) pages &mdash; including image SEO, video SEO, local business, organization, publisher, person, author and co-authors, extensive e-Commerce product markup, product variations, product ratings, aggregate ratings, reviews, recipe information, event details, collection pages, profile pages, search pages, FAQ pages, item lists for [Google's Carousel Rich Results](https://developers.google.com/search/docs/guides/mark-up-listings), and much more.
 
 **Most complete Schema JSON-LD markup for WooCommerce products:**
 
