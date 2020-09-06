@@ -95,7 +95,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 
 				$sharing_url = $this->p->util->get_sharing_url( $mod );
 
-				$this->p->notice->set_ref( $sharing_url, $mod, __( 'adding reviewed subject image', 'wpsso-schema-json-ld' ) );
+				$this->p->util->maybe_set_ref( $sharing_url, $mod, __( 'adding reviewed subject image', 'wpsso-schema-json-ld' ) );
 			}
 
 			/**
@@ -119,7 +119,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 			 */
 			if ( is_admin() ) {
 
-				$this->p->notice->unset_ref( $sharing_url );
+				$this->p->util->maybe_unset_ref( $sharing_url );
 			}
 
 			/**

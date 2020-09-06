@@ -118,8 +118,8 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 
 							$sharing_url = $this->p->util->get_sharing_url( $mod );
 
-							$this->p->notice->set_ref( $sharing_url, $mod,
-								sprintf( __( 'adding schema howto step option #%d image', 'wpsso-schema-json-ld' ), $md_num + 1 ) );
+							$this->p->notice->set_ref( $sharing_url, $mod, sprintf( __( 'adding schema howto step option #%d image',
+								'wpsso-schema-json-ld' ), $md_num + 1 ) );
 						}
 
 						$mt_images = $this->p->media->get_mt_opts_images( $md_opts, $size_names = 'schema', $img_pre = 'schema_howto_step_img', $md_num );

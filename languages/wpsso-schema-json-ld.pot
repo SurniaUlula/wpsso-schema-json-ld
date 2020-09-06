@@ -50,7 +50,7 @@ msgstr ""
 msgid "Google requires at least one question for the Schema FAQPage markup."
 msgstr ""
 
-#: lib/filters/type/howto.php:122
+#: lib/filters/type/howto.php:121
 msgid "adding schema howto step option #%d image"
 msgstr ""
 
