@@ -1118,7 +1118,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Product Length', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-product_length_value',
-					'content'  => $form->get_no_input( 'product_length_value', '', $css_id = '', $placeholder = true ) .
+					'content'  => $form->get_no_input( 'product_length_value', '', $css_id = '', $holder = true ) .
 						WpssoAdmin::get_option_unit_comment( 'product_length_value' ),
 				),
 				'schema_product_width_value' => array(
@@ -1127,7 +1127,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Product Width', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-product_width_value',
-					'content'  => $form->get_no_input( 'product_width_value', '', $css_id = '', $placeholder = true ) .
+					'content'  => $form->get_no_input( 'product_width_value', '', $css_id = '', $holder = true ) .
 						WpssoAdmin::get_option_unit_comment( 'product_width_value' ),
 				),
 				'schema_product_height_value' => array(
@@ -1136,7 +1136,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Product Height', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-product_height_value',
-					'content'  => $form->get_no_input( 'product_height_value', '', $css_id = '', $placeholder = true ) .
+					'content'  => $form->get_no_input( 'product_height_value', '', $css_id = '', $holder = true ) .
 						WpssoAdmin::get_option_unit_comment( 'product_height_value' ),
 				),
 				'schema_product_depth_value' => array(
@@ -1145,7 +1145,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Product Depth', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-product_depth_value',
-					'content'  => $form->get_no_input( 'product_depth_value', '', $css_id = '', $placeholder = true ) .
+					'content'  => $form->get_no_input( 'product_depth_value', '', $css_id = '', $holder = true ) .
 						WpssoAdmin::get_option_unit_comment( 'product_depth_value' ),
 				),
 				'schema_product_fluid_volume_value' => array(
@@ -1154,7 +1154,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Product Fluid Volume', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-product_fluid_volume_value',
-					'content'  => $form->get_no_input( 'product_fluid_volume_value', '', $css_id = '', $placeholder = true ) .
+					'content'  => $form->get_no_input( 'product_fluid_volume_value', '', $css_id = '', $holder = true ) .
 						WpssoAdmin::get_option_unit_comment( 'product_fluid_volume_value' ),
 				),
 				'schema_product_gtin14' => array(
@@ -1163,7 +1163,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Product GTIN-14', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-product_gtin14',
-					'content'  => $form->get_no_input( 'product_gtin14', '', $css_id = '', $placeholder = true ),
+					'content'  => $form->get_no_input( 'product_gtin14', '', $css_id = '', $holder = true ),
 				),
 				'schema_product_gtin13' => array(
 					'tr_class' => $schema_type_row_class[ 'product' ],
@@ -1171,7 +1171,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Product GTIN-13 (EAN)', 'option label', 'wpsso-schema-json-ld' ),	// aka Product EAN.
 					'tooltip'  => 'meta-product_gtin13',
-					'content'  => $form->get_no_input( 'product_gtin13', '', $css_id = '', $placeholder = true ),
+					'content'  => $form->get_no_input( 'product_gtin13', '', $css_id = '', $holder = true ),
 				),
 				'schema_product_gtin12' => array(
 					'tr_class' => $schema_type_row_class[ 'product' ],
@@ -1179,7 +1179,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Product GTIN-12 (UPC)', 'option label', 'wpsso-schema-json-ld' ),	// aka Product UPC.
 					'tooltip'  => 'meta-product_gtin12',
-					'content'  => $form->get_no_input( 'product_gtin12', '', $css_id = '', $placeholder = true ),
+					'content'  => $form->get_no_input( 'product_gtin12', '', $css_id = '', $holder = true ),
 				),
 				'schema_product_gtin8' => array(
 					'tr_class' => $schema_type_row_class[ 'product' ],
@@ -1187,7 +1187,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Product GTIN-8', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-product_gtin8',
-					'content'  => $form->get_no_input( 'product_gtin8', '', $css_id = '', $placeholder = true ),
+					'content'  => $form->get_no_input( 'product_gtin8', '', $css_id = '', $holder = true ),
 				),
 				'schema_product_gtin' => array(
 					'tr_class' => $schema_type_row_class[ 'product' ],
@@ -1195,7 +1195,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 					'td_class' => 'blank',
 					'label'    => _x( 'Product GTIN', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-product_gtin',
-					'content'  => $form->get_no_input( 'product_gtin', '', $css_id = '', $placeholder = true ),
+					'content'  => $form->get_no_input( 'product_gtin', '', $css_id = '', $holder = true ),
 				),
 			);
 
