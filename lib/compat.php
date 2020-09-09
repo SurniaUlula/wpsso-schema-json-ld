@@ -37,10 +37,40 @@ if ( ! class_exists( 'WpssoJsonCompat' ) ) {
 				$this->p->debug->mark();
 			}
 
-			if ( ! is_admin() ) {
+			if ( is_admin() ) {
 
 				/**
-				 * Disable Yoast SEO Schema markup.
+				 * Rank Math.
+				 */
+				if ( ! empty( $this->p->avail[ 'seo' ][ 'rankmath' ] ) ) {
+
+					$this->p->util->add_plugin_filters( $this, array( 
+						'admin_page_style_css_rank_math' => array( 'admin_page_style_css' => 1 ),
+					) );
+				}
+
+				/**
+				 * Yoast SEO.
+				 */
+				if ( ! empty( $this->p->avail[ 'seo' ][ 'wpseo' ] ) ) {
+
+					$this->p->util->add_plugin_filters( $this, array( 
+						'admin_page_style_css_wpseo' => array( 'admin_page_style_css' => 1 ),
+					) );
+				}
+
+			} else {
+
+				/**
+				 * Rank Math.
+				 */
+				if ( ! empty( $this->p->avail[ 'seo' ][ 'rankmath' ] ) ) {
+
+					add_filter( 'rank_math/json_ld', array( $this, 'cleanup_rankmath_json_ld' ), PHP_INT_MAX );
+				}
+
+				/**
+				 * Yoast SEO.
 				 */
 				if ( ! empty( $this->p->avail[ 'seo' ][ 'wpseo' ] ) ) {
 
@@ -58,15 +88,25 @@ if ( ! class_exists( 'WpssoJsonCompat' ) ) {
 						add_action( 'amp_post_template_head', array( $this, 'cleanup_wpseo_json_ld' ), -1000 );
 					}
 				}
-
-				/**
-				 * Disable Rank Math Schema markup.
-				 */
-				if ( ! empty( $this->p->avail[ 'seo' ][ 'rankmath' ] ) ) {
-
-					add_filter( 'rank_math/json_ld', array( $this, 'cleanup_rankmath_json_ld' ), PHP_INT_MAX );
-				}
 			}
+		}
+
+		/**
+		 * Disable Rank Math Schema markup.
+		 */
+		public function cleanup_rankmath_json_ld( $data ) {
+
+			if ( $this->p->debug->enabled ) {
+
+				$this->p->debug->mark();
+			}
+
+			/**
+			 * Remove everything except for the BreadcrumbList markup.
+			 *
+			 * The WPSSO BC add-on removes the BreadcrumbList markup.
+			 */
+			return SucomUtil::preg_grep_keys( '/^BreadcrumbList$/', $data );
 		}
 
 		/**
@@ -131,10 +171,7 @@ if ( ! class_exists( 'WpssoJsonCompat' ) ) {
 			add_filter( 'wpseo_schema_graph_pieces', '__return_empty_array', PHP_INT_MAX );
 		}
 
-		/**
-		 * Disable Rank Math Schema markup.
-		 */
-		public function cleanup_rankmath_json_ld( $data ) {
+		public function filter_admin_page_style_css_rank_math( $custom_style_css ) {
 
 			if ( $this->p->debug->enabled ) {
 
@@ -142,11 +179,32 @@ if ( ! class_exists( 'WpssoJsonCompat' ) ) {
 			}
 
 			/**
-			 * Remove everything except for the BreadcrumbList markup.
-			 *
-			 * The WPSSO BC add-on removes the BreadcrumbList markup.
+			 * The "Schema" metabox tab and its options cannot be disabled, so hide them instead.
 			 */
-			return SucomUtil::preg_grep_keys( '/^BreadcrumbList$/', $data );
+			$custom_style_css .= '
+				.rank-math-tabs > div > a[href="#setting-panel-richsnippet"] { display: none; }
+				.rank-math-tabs-content .setting-panel-richsnippet { display: none; }
+			';
+
+			return $custom_style_css;
+		}
+
+		public function filter_admin_page_style_css_wpseo( $custom_style_css ) {
+
+			if ( $this->p->debug->enabled ) {
+
+				$this->p->debug->mark();
+			}
+
+			/**
+			 * The "Schema" metabox tab and its options cannot be disabled, so hide them instead.
+			 */
+			$custom_style_css .= '
+				#wpseo-meta-tab-schema { display: none; }
+				#wpseo-meta-section-schema { display: none; }
+			';
+
+			return $custom_style_css;
 		}
 	}
 }
