@@ -312,13 +312,28 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 4.2.1-dev.3 (2020/09/09)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Added custom CSS filters for Yoast SEO and Rank Math in the WpssoJsonCompat class.
+* **Requires At Least**
+	* PHP v5.6.
+	* WordPress v4.2.
+	* WPSSO Core v8.4.0-dev.3.
+
 **Version 4.2.0 (2020/09/05)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* Added a cleanup method for Yoast SEO to remove its Schema JSON-LD markup.
-	* Added a cleanup method for Rank Math to remove its Schema JSON-LD markup, except for the Schema BreadcrumbList markup.
+	* Added Schema cleanup for Yoast SEO to remove its Schema JSON-LD markup.
+	* Added Schema cleanup for Rank Math to remove its Schema JSON-LD markup, except for the Schema BreadcrumbList markup.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -409,7 +424,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
+= 4.2.1-dev.3 =
+
+(2020/09/09) Added custom CSS filters for Yoast SEO and Rank Math in the WpssoJsonCompat class.
+
 = 4.2.0 =
 
-(2020/09/05) Added a cleanup method for Yoast SEO and Rank Math.
+(2020/09/05) Added Schema cleanup for Yoast SEO and Rank Math.
 
