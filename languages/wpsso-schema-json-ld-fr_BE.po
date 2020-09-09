@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.2.0\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.2.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-09-04 12:39-0700\n"
-"PO-Revision-Date: 2020-09-04 12:39-0700\n"
+"POT-Creation-Date: 2020-09-09 09:29-0700\n"
+"PO-Revision-Date: 2020-09-09 09:29-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -43,7 +43,7 @@ msgstr "Aucune question trouvée pour le balisage de Schéma FAQPage."
 msgid "Google requires at least one question for the Schema FAQPage markup."
 msgstr "Google requiert au moins une question pour le balisage de Schéma FAQPage."
 
-#: lib/filters/type/howto.php:122
+#: lib/filters/type/howto.php:121
 msgid "adding schema howto step option #%d image"
 msgstr "ajout d'image d'étape de l'option #%d du Schéma How-To"
 
