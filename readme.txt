@@ -312,7 +312,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.2.1-rc.1 (2020/09/10)**
+**Version 4.2.1 (2020/09/11)**
 
 * **New Features**
 	* None.
@@ -325,7 +325,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v8.4.0-rc.1.
+	* WPSSO Core v8.4.0.
 
 **Version 4.2.0 (2020/09/05)**
 
@@ -424,9 +424,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.2.1-rc.1 =
+= 4.2.1 =
 
-(2020/09/10) Added custom CSS filters for Yoast SEO and Rank Math in the WpssoJsonCompat class.
+(2020/09/11) Added custom CSS filters for Yoast SEO and Rank Math in the WpssoJsonCompat class.
 
 = 4.2.0 =
 
