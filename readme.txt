@@ -12,7 +12,7 @@ Requires PHP: 5.6
 Requires At Least: 4.2
 Tested Up To: 5.5
 WC Tested Up To: 4.5.1
-Stable Tag: 4.2.0
+Stable Tag: 4.2.1
 
 Google Rich Results and Structured Data for Articles, Carousels, Events, FAQ Pages, How-Tos, Local SEO, Products, Recipes, Ratings, Reviews, and More.
 
@@ -385,42 +385,6 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* PHP v5.6.
 	* WordPress v4.2.
 	* WPSSO Core v8.0.0.
-
-**Version 3.14.0 (2020/08/02)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added the ability to translate labels in the "Standard Features Status" metabox in the SSO &gt; Dashboard page.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Tested with WordPress v5.5.
-* **Requires At Least**
-	* PHP v5.6.
-	* WordPress v4.2.
-	* WPSSO Core v7.15.0.
-
-**Version 3.13.0 (2020/07/04)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added a new "Publisher (Person)" option in the Document SSO metabox.
-	* Added a new "Service Provider (Person)" option in the Document SSO metabox.
-	* Added a new "Default Publisher (Person)" option under the SSO &gt; Schema Markup &gt; Schema Defaults tab.
-	* Added a new "Default Service Provider (Person)" option under the SSO &gt; Schema Markup &gt; Schema Defaults tab.
-	* Added a new "WebSite Publisher Type" option under the SSO &gt; Schema Markup &gt; General Settings tab.
-	* Renamed the Schema Properties tab to General Settings.
-	* Removed the Knowledge Graph settings page tab.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Replaced the 'wpsso_json_data_https_schema_org_organization' filter hook in `WpssoJsonFiltersTypeOrganization` by the filter from `WpssoSchema`.
-* **Requires At Least**
-	* PHP v5.6.
-	* WordPress v4.2.
-	* WPSSO Core v7.12.0.
 
 == Upgrade Notice ==
 
