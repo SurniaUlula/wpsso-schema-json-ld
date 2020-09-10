@@ -65,7 +65,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 			 */
 			$og_title_max_len        = $this->p->options[ 'og_title_max_len' ];
 			$schema_headline_max_len = $this->p->cf[ 'head' ][ 'limit_max' ][ 'schema_headline_len' ];
-			$schema_desc_max_len     = $this->p->options[ 'schema_desc_max_len' ];		// Max. Schema Description Length.
+			$schema_desc_max_len     = $this->p->options[ 'schema_desc_max_len' ];		// Schema Description Max. Length.
 			$schema_text_max_len     = $this->p->options[ 'schema_text_max_len' ];
 
 			/**

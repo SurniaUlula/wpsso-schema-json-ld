@@ -690,7 +690,7 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 			switch ( $msg_key ) {
 
-				case 'tooltip-schema_text_max_len':		// Max. Text and Article Body Length.
+				case 'tooltip-schema_text_max_len':		// Text and Article Body Max. Length.
 
 					$text = sprintf( __( 'The maximum length of the Schema CreativeWork "text" and "articleBody" property values (the default is %d characters).', 'wpsso-schema-json-ld' ), $this->p->opt->get_defaults( 'schema_text_max_len' ) );
 

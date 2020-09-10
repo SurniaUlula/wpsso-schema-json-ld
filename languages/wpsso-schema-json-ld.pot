@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.2.1-dev.4\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.2.1-dev.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-"
 "ld\n"
 "POT-Creation-Date: 2020-MO-DA HO:MI+ZONE\n"
@@ -1947,7 +1947,7 @@ msgstr ""
 
 #: lib/submenu/schema-general.php:202
 msgctxt "option label"
-msgid "Max. Text and Article Body Length"
+msgid "Text and Article Body Max. Length"
 msgstr ""
 
 #: lib/submenu/schema-general.php:205

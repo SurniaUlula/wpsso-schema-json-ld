@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssojson' => array(			// Plugin acronym.
-					'version'     => '4.2.1-dev.4',	// Plugin version.
+					'version'     => '4.2.1-dev.5',	// Plugin version.
 					'opt_version' => '43',		// Increment when changing default option values.
 					'short'       => 'WPSSO JSON',	// Short plugin name.
 					'name'        => 'WPSSO Schema JSON-LD Markup',
@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '8.4.0-dev.4',
+							'min_version'   => '8.4.0-dev.5',
 						),
 					),
 
@@ -127,7 +127,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 			 */
 			'opt' => array(
 				'defaults' => array(
-					'schema_text_max_len'      => 10000,	// Max. Text and Article Body Length.
+					'schema_text_max_len'      => 10000,	// Text and Article Body Max. Length.
 					'schema_add_text_prop'     => 1,	// Add Text and Article Body Properties.
 					'schema_add_5_star_rating' => 0,	// Add 5 Star Rating If No Rating.
 
