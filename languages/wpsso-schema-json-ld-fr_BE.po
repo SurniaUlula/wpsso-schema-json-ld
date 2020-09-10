@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Schema JSON-LD Markup 4.2.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-09-09 09:29-0700\n"
-"PO-Revision-Date: 2020-09-10 11:44-0700\n"
+"POT-Creation-Date: 2020-09-10 13:32-0700\n"
+"PO-Revision-Date: 2020-09-10 13:33-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -1812,7 +1812,7 @@ msgstr "Description du site Web"
 
 #: lib/submenu/schema-general.php:202
 msgctxt "option label"
-msgid "Max. Text and Article Body Length"
+msgid "Text and Article Body Max. Length"
 msgstr "Longueur max. text et corps d'article"
 
 #: lib/submenu/schema-general.php:205
