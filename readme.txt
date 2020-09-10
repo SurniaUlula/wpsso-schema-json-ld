@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 5.6
 Requires At Least: 4.2
 Tested Up To: 5.5
-WC Tested Up To: 4.5.0
+WC Tested Up To: 4.5.1
 Stable Tag: 4.2.0
 
 Google Rich Results and Structured Data for Articles, Carousels, Events, FAQ Pages, How-Tos, Local SEO, Products, Recipes, Ratings, Reviews, and More.
@@ -312,7 +312,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.2.1-dev.4 (2020/09/09)**
+**Version 4.2.1-dev.5 (2020/09/09)**
 
 * **New Features**
 	* None.
@@ -325,7 +325,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v8.4.0-dev.4.
+	* WPSSO Core v8.4.0-dev.5.
 
 **Version 4.2.0 (2020/09/05)**
 
@@ -424,7 +424,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.2.1-dev.4 =
+= 4.2.1-dev.5 =
 
 (2020/09/09) Added custom CSS filters for Yoast SEO and Rank Math in the WpssoJsonCompat class.
 
