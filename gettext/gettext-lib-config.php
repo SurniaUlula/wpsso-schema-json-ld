@@ -1,7 +1,7 @@
 <?php die( 'These aren\'t the droids you\'re looking for.' );
 
 /**
- * Extract of translatable strings from the config array.
+ * Extract of translatable strings from lib/config.php.
  */
 _x( '(code) Schema Type Article [schema_type:article]', 'lib file description', 'wpsso-schema-json-ld' );
 _x( '(code) Schema Type Audiobook [schema_type:book.audio]', 'lib file description', 'wpsso-schema-json-ld' );
