@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Schema JSON-LD Markup 4.2.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-09-10 13:32-0700\n"
-"PO-Revision-Date: 2020-09-10 13:33-0700\n"
+"POT-Creation-Date: 2020-09-13 12:22-0700\n"
+"PO-Revision-Date: 2020-09-13 12:22-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -12,6 +12,1261 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: gettext/gettext-config.php:6 lib/gettext-config.php:6
+msgctxt "lib file description"
+msgid "(code) Schema Type Article [schema_type:article]"
+msgstr "(code) Type de Schéma Article [schema_type:article]"
+
+#: gettext/gettext-config.php:7 lib/gettext-config.php:7
+msgctxt "lib file description"
+msgid "(code) Schema Type Audiobook [schema_type:book.audio]"
+msgstr "(code) Type de Schéma Audiobook [schema_type:book.audio]"
+
+#: gettext/gettext-config.php:8 lib/gettext-config.php:8
+msgctxt "lib file description"
+msgid "(code) Schema Type Blog [schema_type:blog]"
+msgstr "(code) Type de Schéma Blog [schema_type:blog]"
+
+#: gettext/gettext-config.php:9 lib/gettext-config.php:9
+msgctxt "lib file description"
+msgid "(code) Schema Type Book [schema_type:book]"
+msgstr "(code) Type de Schéma Book [schema_type:book]"
+
+#: gettext/gettext-config.php:10 lib/gettext-config.php:10
+msgctxt "lib file description"
+msgid "(code) Schema Type Brand [schema_type:brand]"
+msgstr "(code) Type de Schéma Brand [schema_type:brand]"
+
+#: gettext/gettext-config.php:11 lib/gettext-config.php:11
+msgctxt "lib file description"
+msgid "(code) Schema Type Claim Review [schema_type:review.claim]"
+msgstr "(code) Type de Schéma Claim Review [schema_type:review.claim]"
+
+#: gettext/gettext-config.php:12 lib/gettext-config.php:12
+msgctxt "lib file description"
+msgid "(code) Schema Type Collection Page [schema_type:webpage.collection]"
+msgstr "(code) Type de Schéma Collection Page [schema_type:webpage.collection]"
+
+#: gettext/gettext-config.php:13 lib/gettext-config.php:13
+msgctxt "lib file description"
+msgid "(code) Schema Type Course [schema_type:course]"
+msgstr "(code) Type de Schéma Course [schema_type:course]"
+
+#: gettext/gettext-config.php:14 lib/gettext-config.php:14
+msgctxt "lib file description"
+msgid "(code) Schema Type CreativeWork [schema_type:creative.work]"
+msgstr "(code) Type de Schéma CreativeWork [schema_type:creative.work]"
+
+#: gettext/gettext-config.php:15 lib/gettext-config.php:15
+msgctxt "lib file description"
+msgid "(code) Schema Type Event [schema_type:event]"
+msgstr "(code) Type de Schéma Event [schema_type:event]"
+
+#: gettext/gettext-config.php:16 lib/gettext-config.php:16
+msgctxt "lib file description"
+msgid "(code) Schema Type FAQPage [schema_type:webpage.faq]"
+msgstr "(code) Type de Schéma FAQPage [schema_type:webpage.faq]"
+
+#: gettext/gettext-config.php:17 lib/gettext-config.php:17
+msgctxt "lib file description"
+msgid "(code) Schema Type Food Establishment [schema_type:food.establishment]"
+msgstr "(code) Type de Schéma Food Establishment [schema_type:food.establishment]"
+
+#: gettext/gettext-config.php:18 lib/gettext-config.php:18
+msgctxt "lib file description"
+msgid "(code) Schema Type How-To [schema_type:how.to]"
+msgstr "(code) Type de Schéma How-To [schema_type:how.to]"
+
+#: gettext/gettext-config.php:19 lib/gettext-config.php:19
+msgctxt "lib file description"
+msgid "(code) Schema Type ItemList [schema_type:item.list]"
+msgstr "(code) Type de Schéma ItemList [schema_type:item.list]"
+
+#: gettext/gettext-config.php:20 lib/gettext-config.php:20
+msgctxt "lib file description"
+msgid "(code) Schema Type Job Posting [schema_type:job.posting]"
+msgstr "(code) Type de Schéma Job Posting [schema_type:job.posting]"
+
+#: gettext/gettext-config.php:21 lib/gettext-config.php:21
+msgctxt "lib file description"
+msgid "(code) Schema Type Local Business [schema_type:local.business]"
+msgstr "(code) Type de Schéma Local Business [schema_type:local.business]"
+
+#: gettext/gettext-config.php:22 lib/gettext-config.php:22
+msgctxt "lib file description"
+msgid "(code) Schema Type Movie [schema_type:movie]"
+msgstr "(code) Type de Schéma Movie [schema_type:movie]"
+
+#: gettext/gettext-config.php:23 lib/gettext-config.php:23
+msgctxt "lib file description"
+msgid "(code) Schema Type Organization [schema_type:organization]"
+msgstr "(code) Type de Schéma Organization [schema_type:organization]"
+
+#: gettext/gettext-config.php:24 lib/gettext-config.php:24
+msgctxt "lib file description"
+msgid "(code) Schema Type Person [schema_type:person]"
+msgstr "(code) Type de Schéma Person [schema_type:person]"
+
+#: gettext/gettext-config.php:25 lib/gettext-config.php:25
+msgctxt "lib file description"
+msgid "(code) Schema Type Place [schema_type:place]"
+msgstr "(code) Type de Schéma Place [schema_type:place]"
+
+#: gettext/gettext-config.php:26 lib/gettext-config.php:26
+msgctxt "lib file description"
+msgid "(code) Schema Type Product [schema_type:product]"
+msgstr "(code) Type de Schéma Product [schema_type:product]"
+
+#: gettext/gettext-config.php:27 lib/gettext-config.php:27
+msgctxt "lib file description"
+msgid "(code) Schema Type Profile Page [schema_type:webpage.profile]"
+msgstr "(code) Type de Schéma Profile Page [schema_type:webpage.profile]"
+
+#: gettext/gettext-config.php:28 lib/gettext-config.php:28
+msgctxt "lib file description"
+msgid "(code) Schema Type QAPage [schema_type:webpage.qa]"
+msgstr "(code) Type de Schéma QAPage [schema_type:webpage.qa]"
+
+#: gettext/gettext-config.php:29 lib/gettext-config.php:29
+msgctxt "lib file description"
+msgid "(code) Schema Type Question and Answer [schema_type:question]"
+msgstr "(code) Type de Schéma Question and Answer [schema_type:question]"
+
+#: gettext/gettext-config.php:30 lib/gettext-config.php:30
+msgctxt "lib file description"
+msgid "(code) Schema Type Recipe [schema_type:recipe]"
+msgstr "(code) Type de Schéma Recipe [schema_type:recipe]"
+
+#: gettext/gettext-config.php:31 lib/gettext-config.php:31
+msgctxt "lib file description"
+msgid "(code) Schema Type Review [schema_type:review]"
+msgstr "(code) Type de Schéma Review [schema_type:review]"
+
+#: gettext/gettext-config.php:32 lib/gettext-config.php:32
+msgctxt "lib file description"
+msgid "(code) Schema Type Search Results Page [schema_type:webpage.search.results]"
+msgstr "(code) Type de Schéma Search Results Page [schema_type:webpage.search.results]"
+
+#: gettext/gettext-config.php:33 lib/gettext-config.php:33
+msgctxt "lib file description"
+msgid "(code) Schema Type Software Application [schema_type:software.application]"
+msgstr "(code) Type de Schéma Software Application [schema_type:software.application]"
+
+#: gettext/gettext-config.php:34 lib/gettext-config.php:34
+msgctxt "lib file description"
+msgid "(code) Schema Type Thing [schema_type:thing]"
+msgstr "(code) Type de Schéma Thing [schema_type:thing]"
+
+#: gettext/gettext-config.php:35 lib/gettext-config.php:35
+msgctxt "lib file description"
+msgid "(code) Schema Type WebPage [schema_type:webpage]"
+msgstr "(code) Type de Schéma WebPage [schema_type:webpage]"
+
+#: gettext/gettext-config.php:36 lib/gettext-config.php:36
+msgctxt "lib file description"
+msgid "(code) Schema Type WebSite [schema_type:website]"
+msgstr "(code) Type de Schéma WebSite [schema_type:website]"
+
+#: gettext/gettext-config.php:37 lib/gettext-config.php:37
+msgctxt "lib file description"
+msgid "(plus) Schema Property aggregateRating"
+msgstr "(plus) Propriété de Schéma aggregateRating"
+
+#: gettext/gettext-config.php:38 lib/gettext-config.php:38
+msgctxt "lib file description"
+msgid "(plus) Schema Property hasPart"
+msgstr "(plus) Propriété de Schéma hasPart"
+
+#: gettext/gettext-config.php:39 lib/gettext-config.php:39
+msgctxt "lib file description"
+msgid "(plus) Schema Property review"
+msgstr "(plus) Propriété de Schéma review"
+
+#: gettext/gettext-config.php:40 lib/gettext-config.php:40
+msgctxt "lib file description"
+msgid "Schema Markup"
+msgstr "Balisage Schéma"
+
+#: gettext/gettext-config.php:41 lib/gettext-config.php:41
+msgctxt "lib file description"
+msgid "Schema Shortcode Guide"
+msgstr "Guide code court Schéma"
+
+#: gettext/gettext-config.php:42 lib/gettext-config.php:42
+msgctxt "plugin description"
+msgid "Google Rich Results and Structured Data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Videos, and More."
+msgstr "Résultats riche et données structurées Google pour articles, carrousels,, évaluations de déclarations, événements, pages FAQ, étapes pratiques, images, entreprise / référencement locale, organisations, produits, recettes, restaurants, critiques, videos, et plus."
+
+#: gettext/gettext-pro.php:6 gettext/gettext-pro.php:28 lib/gettext-pro.php:6
+#: lib/gettext-pro.php:28 lib/pro/admin/edit.php:180
+#: lib/pro/admin/schema-general.php:81 lib/std/admin/edit.php:164
+#: lib/std/admin/schema-general.php:77
+msgctxt "metabox title"
+msgid "Creative Work Information"
+msgstr "Informations de l'oeuvre"
+
+#: gettext/gettext-pro.php:7 lib/gettext-pro.php:7
+#: lib/pro/admin/schema-general.php:84 lib/std/admin/schema-general.php:81
+msgctxt "option label"
+msgid "Default Family Friendly"
+msgstr "Favorable à la famille par défaut"
+
+#: gettext/gettext-pro.php:8 lib/gettext-pro.php:8
+#: lib/pro/admin/schema-general.php:90 lib/std/admin/schema-general.php:88
+msgctxt "option label"
+msgid "Default Publisher (Org)"
+msgstr "Éditeur par défaut (org)"
+
+#: gettext/gettext-pro.php:9 lib/gettext-pro.php:9
+#: lib/pro/admin/schema-general.php:96 lib/std/admin/schema-general.php:95
+msgctxt "option label"
+msgid "Default Publisher (Person)"
+msgstr "Éditeur par défaut (personne)"
+
+#: gettext/gettext-pro.php:10 lib/gettext-pro.php:10
+#: lib/pro/admin/schema-general.php:103 lib/std/admin/schema-general.php:102
+msgctxt "option label"
+msgid "Default Service Prov. (Org)"
+msgstr "Fournisseur de service par défaut (org)"
+
+#: gettext/gettext-pro.php:11 lib/gettext-pro.php:11
+#: lib/pro/admin/schema-general.php:109 lib/std/admin/schema-general.php:109
+msgctxt "option label"
+msgid "Default Service Prov. (Person)"
+msgstr "Fournisseur de service par défaut (personne)"
+
+#: gettext/gettext-pro.php:12 gettext/gettext-pro.php:142
+#: lib/gettext-pro.php:12 lib/gettext-pro.php:142 lib/pro/admin/edit.php:975
+#: lib/pro/admin/schema-general.php:122 lib/std/admin/edit.php:841
+#: lib/std/admin/schema-general.php:121
+msgctxt "metabox title"
+msgid "Event Information"
+msgstr "Informations d'événement"
+
+#: gettext/gettext-pro.php:13 lib/gettext-pro.php:13
+#: lib/pro/admin/schema-general.php:125 lib/std/admin/schema-general.php:125
+msgctxt "option label"
+msgid "Default Physical Venue"
+msgstr "Lieu physique par défaut pour l'événement"
+
+#: gettext/gettext-pro.php:14 lib/gettext-pro.php:14
+#: lib/pro/admin/schema-general.php:131 lib/std/admin/schema-general.php:132
+msgctxt "option label"
+msgid "Default Organizer (Org)"
+msgstr "Organisateur par défaut (org)"
+
+#: gettext/gettext-pro.php:15 lib/gettext-pro.php:15
+#: lib/pro/admin/schema-general.php:137 lib/std/admin/schema-general.php:139
+msgctxt "option label"
+msgid "Default Organizer (Person)"
+msgstr "Organisateur par défaut (personne)"
+
+#: gettext/gettext-pro.php:16 lib/gettext-pro.php:16
+#: lib/pro/admin/schema-general.php:144 lib/std/admin/schema-general.php:146
+msgctxt "option label"
+msgid "Default Performer (Org)"
+msgstr "Interprète par défaut (org)"
+
+#: gettext/gettext-pro.php:17 lib/gettext-pro.php:17
+#: lib/pro/admin/schema-general.php:150 lib/std/admin/schema-general.php:153
+msgctxt "option label"
+msgid "Default Performer (Person)"
+msgstr "Interprète par défaut (personne)"
+
+#: gettext/gettext-pro.php:18 gettext/gettext-pro.php:162
+#: lib/gettext-pro.php:18 lib/gettext-pro.php:162 lib/pro/admin/edit.php:1127
+#: lib/pro/admin/schema-general.php:163 lib/std/admin/edit.php:1004
+#: lib/std/admin/schema-general.php:165
+msgctxt "metabox title"
+msgid "Job Posting Information"
+msgstr "Informations d'affichage d'emploi"
+
+#: gettext/gettext-pro.php:19 lib/gettext-pro.php:19
+#: lib/pro/admin/schema-general.php:166 lib/std/admin/schema-general.php:169
+msgctxt "option label"
+msgid "Default Hiring Organization"
+msgstr "Organisation d'embauche par défaut"
+
+#: gettext/gettext-pro.php:20 lib/gettext-pro.php:20
+#: lib/pro/admin/schema-general.php:172 lib/std/admin/schema-general.php:176
+msgctxt "option label"
+msgid "Default Job Location"
+msgstr "Emplacement de travail par défaut"
+
+#: gettext/gettext-pro.php:21 gettext/gettext-pro.php:93 lib/gettext-pro.php:21
+#: lib/gettext-pro.php:93 lib/pro/admin/edit.php:600
+#: lib/pro/admin/schema-general.php:184 lib/std/admin/edit.php:617
+#: lib/std/admin/schema-general.php:188
+msgctxt "metabox title"
+msgid "Review Information"
+msgstr "Informations d'évaluation"
+
+#: gettext/gettext-pro.php:22 lib/gettext-pro.php:22
+#: lib/pro/admin/schema-general.php:187 lib/std/admin/schema-general.php:192
+msgctxt "option label"
+msgid "Default Subject Webpage Type"
+msgstr "Type par défaut de page Web du sujet"
+
+#: gettext/gettext-pro.php:23 lib/gettext-pro.php:23 lib/pro/admin/edit.php:137
+#: lib/std/admin/edit.php:121
+msgctxt "option label"
+msgid "Name / Title"
+msgstr "Nom / titre"
+
+#: gettext/gettext-pro.php:24 lib/gettext-pro.php:24 lib/pro/admin/edit.php:144
+#: lib/std/admin/edit.php:128
+msgctxt "option label"
+msgid "Alternate Name"
+msgstr "Autre nom"
+
+#: gettext/gettext-pro.php:25 gettext/gettext-pro.php:52 lib/gettext-pro.php:25
+#: lib/gettext-pro.php:52 lib/pro/admin/edit.php:151 lib/pro/admin/edit.php:360
+#: lib/std/admin/edit.php:135 lib/std/admin/edit.php:355
+msgctxt "option label"
+msgid "Description"
+msgstr "Description"
+
+#: gettext/gettext-pro.php:26 lib/gettext-pro.php:26 lib/pro/admin/edit.php:159
+#: lib/std/admin/edit.php:144
+msgctxt "option label"
+msgid "Microdata Type URLs"
+msgstr "URLs de type microdonnées"
+
+#: gettext/gettext-pro.php:27 lib/gettext-pro.php:27 lib/pro/admin/edit.php:167
+#: lib/std/admin/edit.php:152
+msgctxt "option label"
+msgid "Same-As URLs"
+msgstr "URLs pareilles"
+
+#: gettext/gettext-pro.php:29 lib/gettext-pro.php:29 lib/pro/admin/edit.php:185
+#: lib/std/admin/edit.php:170
+msgctxt "option label"
+msgid "Is Part of URL"
+msgstr "Fait partie de l'URL"
+
+#: gettext/gettext-pro.php:30 lib/gettext-pro.php:30 lib/pro/admin/edit.php:193
+#: lib/std/admin/edit.php:178
+msgctxt "option label"
+msgid "Headline"
+msgstr "Manchette"
+
+#: gettext/gettext-pro.php:31 lib/gettext-pro.php:31 lib/pro/admin/edit.php:201
+#: lib/std/admin/edit.php:186
+msgctxt "option label"
+msgid "Full Text"
+msgstr "Texte intégral"
+
+#: gettext/gettext-pro.php:32 lib/gettext-pro.php:32 lib/pro/admin/edit.php:209
+#: lib/std/admin/edit.php:194
+msgctxt "option label"
+msgid "Keywords"
+msgstr "Mots clés"
+
+#: gettext/gettext-pro.php:33 lib/gettext-pro.php:33 lib/pro/admin/edit.php:217
+#: lib/std/admin/edit.php:202
+msgctxt "option label"
+msgid "Language"
+msgstr "Language"
+
+#: gettext/gettext-pro.php:34 lib/gettext-pro.php:34 lib/pro/admin/edit.php:224
+#: lib/std/admin/edit.php:210
+msgctxt "option label"
+msgid "Family Friendly"
+msgstr "Favorable à la famille"
+
+#: gettext/gettext-pro.php:35 lib/gettext-pro.php:35 lib/pro/admin/edit.php:232
+#: lib/std/admin/edit.php:219
+msgctxt "option label"
+msgid "Copyright Year"
+msgstr "Année du droit d'auteur"
+
+#: gettext/gettext-pro.php:36 lib/gettext-pro.php:36 lib/pro/admin/edit.php:239
+#: lib/std/admin/edit.php:227
+msgctxt "option label"
+msgid "License URL"
+msgstr "URL de licence"
+
+#: gettext/gettext-pro.php:37 lib/gettext-pro.php:37 lib/pro/admin/edit.php:246
+#: lib/std/admin/edit.php:235
+msgctxt "option label"
+msgid "Publisher (Org)"
+msgstr "Éditeur (org)"
+
+#: gettext/gettext-pro.php:38 lib/gettext-pro.php:38 lib/pro/admin/edit.php:254
+#: lib/std/admin/edit.php:244
+msgctxt "option label"
+msgid "Publisher (Person)"
+msgstr "Éditeur (personne)"
+
+#: gettext/gettext-pro.php:39 lib/gettext-pro.php:39 lib/pro/admin/edit.php:263
+#: lib/std/admin/edit.php:253
+msgctxt "option label"
+msgid "Service Prov. (Org)"
+msgstr "Fournisseur de service (org)"
+
+#: gettext/gettext-pro.php:40 lib/gettext-pro.php:40 lib/pro/admin/edit.php:271
+#: lib/std/admin/edit.php:262
+msgctxt "option label"
+msgid "Service Prov. (Person)"
+msgstr "Fournisseur de service (personne)"
+
+#: gettext/gettext-pro.php:41 lib/gettext-pro.php:41 lib/pro/admin/edit.php:285
+#: lib/std/admin/edit.php:275
+msgctxt "metabox title"
+msgid "Audiobook Information"
+msgstr "Informations du livre audio"
+
+#: gettext/gettext-pro.php:42 lib/gettext-pro.php:42 lib/pro/admin/edit.php:290
+#: lib/std/admin/edit.php:281
+msgctxt "option label"
+msgid "Duration"
+msgstr "Durée"
+
+#: gettext/gettext-pro.php:43 lib/gettext-pro.php:43 lib/pro/admin/edit.php:302
+#: lib/std/admin/edit.php:293
+msgctxt "metabox title"
+msgid "How-To Information"
+msgstr "Informations du How-To"
+
+#: gettext/gettext-pro.php:44 lib/gettext-pro.php:44 lib/pro/admin/edit.php:307
+#: lib/std/admin/edit.php:299
+msgctxt "option label"
+msgid "How-To Makes"
+msgstr "Le How-To crée"
+
+#: gettext/gettext-pro.php:45 gettext/gettext-pro.php:59 lib/gettext-pro.php:45
+#: lib/gettext-pro.php:59 lib/pro/admin/edit.php:314 lib/pro/admin/edit.php:413
+#: lib/std/admin/edit.php:307 lib/std/admin/edit.php:413
+msgctxt "option label"
+msgid "Preparation Time"
+msgstr "Temps de préparation"
+
+#: gettext/gettext-pro.php:46 gettext/gettext-pro.php:61 lib/gettext-pro.php:46
+#: lib/gettext-pro.php:61 lib/pro/admin/edit.php:321 lib/pro/admin/edit.php:427
+#: lib/std/admin/edit.php:315 lib/std/admin/edit.php:429
+msgctxt "option label"
+msgid "Total Time"
+msgstr "Temps total"
+
+#: gettext/gettext-pro.php:47 lib/gettext-pro.php:47 lib/pro/admin/edit.php:328
+#: lib/std/admin/edit.php:323
+msgctxt "option label"
+msgid "How-To Supplies"
+msgstr "Fournitures pour How-To"
+
+#: gettext/gettext-pro.php:48 lib/gettext-pro.php:48 lib/pro/admin/edit.php:336
+#: lib/std/admin/edit.php:331
+msgctxt "option label"
+msgid "How-To Tools"
+msgstr "Outils pour How-To"
+
+#: gettext/gettext-pro.php:49 lib/gettext-pro.php:49 lib/pro/admin/edit.php:344
+#: lib/std/admin/edit.php:339
+msgctxt "option label"
+msgid "How-To Steps"
+msgstr "Etapes pour How-To"
+
+#: gettext/gettext-pro.php:50 lib/gettext-pro.php:50 lib/pro/admin/edit.php:350
+#: lib/std/admin/edit.php:345
+msgctxt "option label"
+msgid "%1$s Step Details %2$s or New Section Details"
+msgstr "%1$s Détails de l'étape %2$s ou détails d'une nouvelle section"
+
+#: gettext/gettext-pro.php:51 lib/gettext-pro.php:51 lib/pro/admin/edit.php:355
+#: lib/std/admin/edit.php:350
+msgctxt "option label"
+msgid "Name"
+msgstr "Nom"
+
+#. translators: Please ignore - translation uses a different text domain.
+#: gettext/gettext-pro.php:53 gettext/gettext-pro.php:188
+#: lib/gettext-pro.php:53 lib/gettext-pro.php:188 lib/pro/admin/edit.php:365
+#: lib/pro/admin/edit.php:1350 lib/std/admin/edit.php:360
+#: lib/std/admin/edit.php:1249
+msgctxt "option label"
+msgid "Image ID"
+msgstr "ID d'une image"
+
+#: gettext/gettext-pro.php:54 lib/gettext-pro.php:54 lib/pro/admin/edit.php:380
+#: lib/std/admin/edit.php:375
+msgctxt "metabox title"
+msgid "Recipe Information"
+msgstr "Informations de recette"
+
+#: gettext/gettext-pro.php:55 lib/gettext-pro.php:55 lib/pro/admin/edit.php:385
+#: lib/std/admin/edit.php:381
+msgctxt "option label"
+msgid "Recipe Cuisine"
+msgstr "Cuisine de la recette"
+
+#: gettext/gettext-pro.php:56 lib/gettext-pro.php:56 lib/pro/admin/edit.php:392
+#: lib/std/admin/edit.php:389
+msgctxt "option label"
+msgid "Recipe Course"
+msgstr "Cours de la recette"
+
+#: gettext/gettext-pro.php:57 lib/gettext-pro.php:57 lib/pro/admin/edit.php:399
+#: lib/std/admin/edit.php:397
+msgctxt "option label"
+msgid "Recipe Makes"
+msgstr "La recette crée"
+
+#: gettext/gettext-pro.php:58 lib/gettext-pro.php:58 lib/pro/admin/edit.php:406
+#: lib/std/admin/edit.php:405
+msgctxt "option label"
+msgid "Cooking Method"
+msgstr "Méthode de cuisson"
+
+#: gettext/gettext-pro.php:60 lib/gettext-pro.php:60 lib/pro/admin/edit.php:420
+#: lib/std/admin/edit.php:421
+msgctxt "option label"
+msgid "Cooking Time"
+msgstr "Temps de cuisson"
+
+#: gettext/gettext-pro.php:62 lib/gettext-pro.php:62 lib/pro/admin/edit.php:434
+#: lib/std/admin/edit.php:437
+msgctxt "option label"
+msgid "Recipe Ingredients"
+msgstr "Ingrédients de recette"
+
+#: gettext/gettext-pro.php:63 lib/gettext-pro.php:63 lib/pro/admin/edit.php:442
+#: lib/std/admin/edit.php:445
+msgctxt "option label"
+msgid "Recipe Instructions"
+msgstr "Instructions de recette"
+
+#: gettext/gettext-pro.php:64 lib/gettext-pro.php:64 lib/pro/admin/edit.php:454
+#: lib/std/admin/edit.php:457
+msgctxt "metabox title"
+msgid "Nutrition Information per Serving"
+msgstr "Informations nutritionnelle par portion"
+
+#: gettext/gettext-pro.php:65 lib/gettext-pro.php:65 lib/pro/admin/edit.php:459
+#: lib/std/admin/edit.php:463
+msgctxt "option label"
+msgid "Serving Size"
+msgstr "Taille de portion"
+
+#: gettext/gettext-pro.php:66 lib/gettext-pro.php:66 lib/pro/admin/edit.php:466
+#: lib/std/admin/edit.php:471
+msgctxt "option label"
+msgid "Calories"
+msgstr "Calories"
+
+#: gettext/gettext-pro.php:67 lib/gettext-pro.php:67 lib/pro/admin/edit.php:469
+#: lib/std/admin/edit.php:474
+msgctxt "option comment"
+msgid "calories"
+msgstr "calories"
+
+#: gettext/gettext-pro.php:68 lib/gettext-pro.php:68 lib/pro/admin/edit.php:474
+#: lib/std/admin/edit.php:480
+msgctxt "option label"
+msgid "Protein"
+msgstr "Protéine"
+
+#: gettext/gettext-pro.php:69 lib/gettext-pro.php:69 lib/pro/admin/edit.php:477
+#: lib/std/admin/edit.php:483
+msgctxt "option comment"
+msgid "grams of protein"
+msgstr "grammes de protéines"
+
+#: gettext/gettext-pro.php:70 lib/gettext-pro.php:70 lib/pro/admin/edit.php:482
+#: lib/std/admin/edit.php:489
+msgctxt "option label"
+msgid "Fiber"
+msgstr "Fibre"
+
+#: gettext/gettext-pro.php:71 lib/gettext-pro.php:71 lib/pro/admin/edit.php:485
+#: lib/std/admin/edit.php:492
+msgctxt "option comment"
+msgid "grams of fiber"
+msgstr "grammes de fibres"
+
+#: gettext/gettext-pro.php:72 lib/gettext-pro.php:72 lib/pro/admin/edit.php:490
+#: lib/std/admin/edit.php:498
+msgctxt "option label"
+msgid "Carbohydrates"
+msgstr "Glucides"
+
+#: gettext/gettext-pro.php:73 lib/gettext-pro.php:73 lib/pro/admin/edit.php:493
+#: lib/std/admin/edit.php:501
+msgctxt "option comment"
+msgid "grams of carbohydrates"
+msgstr "grammes de glucides"
+
+#: gettext/gettext-pro.php:74 lib/gettext-pro.php:74 lib/pro/admin/edit.php:498
+#: lib/std/admin/edit.php:507
+msgctxt "option label"
+msgid "Sugar"
+msgstr "Sucre"
+
+#: gettext/gettext-pro.php:75 lib/gettext-pro.php:75 lib/pro/admin/edit.php:501
+#: lib/std/admin/edit.php:510
+msgctxt "option comment"
+msgid "grams of sugar"
+msgstr "grammes de sucre"
+
+#: gettext/gettext-pro.php:76 lib/gettext-pro.php:76 lib/pro/admin/edit.php:506
+#: lib/std/admin/edit.php:516
+msgctxt "option label"
+msgid "Sodium"
+msgstr "Sodium"
+
+#: gettext/gettext-pro.php:77 lib/gettext-pro.php:77 lib/pro/admin/edit.php:509
+#: lib/std/admin/edit.php:519
+msgctxt "option comment"
+msgid "milligrams of sodium"
+msgstr "milligrammes de sodium"
+
+#: gettext/gettext-pro.php:78 lib/gettext-pro.php:78 lib/pro/admin/edit.php:514
+#: lib/std/admin/edit.php:525
+msgctxt "option label"
+msgid "Fat"
+msgstr "Gras"
+
+#: gettext/gettext-pro.php:79 lib/gettext-pro.php:79 lib/pro/admin/edit.php:517
+#: lib/std/admin/edit.php:528
+msgctxt "option comment"
+msgid "grams of fat"
+msgstr "grammes de matières grasses"
+
+#: gettext/gettext-pro.php:80 lib/gettext-pro.php:80 lib/pro/admin/edit.php:522
+#: lib/std/admin/edit.php:534
+msgctxt "option label"
+msgid "Saturated Fat"
+msgstr "Gras saturée"
+
+#: gettext/gettext-pro.php:81 lib/gettext-pro.php:81 lib/pro/admin/edit.php:525
+#: lib/std/admin/edit.php:537
+msgctxt "option comment"
+msgid "grams of saturated fat"
+msgstr "grammes de gras saturés"
+
+#: gettext/gettext-pro.php:82 lib/gettext-pro.php:82 lib/pro/admin/edit.php:530
+#: lib/std/admin/edit.php:543
+msgctxt "option label"
+msgid "Unsaturated Fat"
+msgstr "Grais insaturées"
+
+#: gettext/gettext-pro.php:83 lib/gettext-pro.php:83 lib/pro/admin/edit.php:533
+#: lib/std/admin/edit.php:546
+msgctxt "option comment"
+msgid "grams of unsaturated fat"
+msgstr "grammes de gras insaturés"
+
+#: gettext/gettext-pro.php:84 lib/gettext-pro.php:84 lib/pro/admin/edit.php:538
+#: lib/std/admin/edit.php:552
+msgctxt "option label"
+msgid "Trans Fat"
+msgstr "Gras trans"
+
+#: gettext/gettext-pro.php:85 lib/gettext-pro.php:85 lib/pro/admin/edit.php:541
+#: lib/std/admin/edit.php:555
+msgctxt "option comment"
+msgid "grams of trans fat"
+msgstr "grammes de gras trans"
+
+#: gettext/gettext-pro.php:86 lib/gettext-pro.php:86 lib/pro/admin/edit.php:546
+#: lib/std/admin/edit.php:561
+msgctxt "option label"
+msgid "Cholesterol"
+msgstr "Cholestérol"
+
+#: gettext/gettext-pro.php:87 lib/gettext-pro.php:87 lib/pro/admin/edit.php:549
+#: lib/std/admin/edit.php:564
+msgctxt "option comment"
+msgid "milligrams of cholesterol"
+msgstr "milligrammes de cholestérol"
+
+#: gettext/gettext-pro.php:88 lib/gettext-pro.php:88 lib/pro/admin/edit.php:559
+#: lib/std/admin/edit.php:574
+msgctxt "metabox title"
+msgid "Movie Information"
+msgstr "Informations du film"
+
+#: gettext/gettext-pro.php:89 lib/gettext-pro.php:89 lib/pro/admin/edit.php:564
+#: lib/std/admin/edit.php:580
+msgctxt "option label"
+msgid "Cast Names"
+msgstr "Noms des acteurs"
+
+#: gettext/gettext-pro.php:90 lib/gettext-pro.php:90 lib/pro/admin/edit.php:572
+#: lib/std/admin/edit.php:588
+msgctxt "option label"
+msgid "Director Names"
+msgstr "Noms des réalisateurs"
+
+#: gettext/gettext-pro.php:91 lib/gettext-pro.php:91 lib/pro/admin/edit.php:580
+#: lib/std/admin/edit.php:596
+msgctxt "option label"
+msgid "Production Company"
+msgstr "Société de production"
+
+#: gettext/gettext-pro.php:92 lib/gettext-pro.php:92 lib/pro/admin/edit.php:588
+#: lib/std/admin/edit.php:605
+msgctxt "option label"
+msgid "Movie Runtime"
+msgstr "Durée du film"
+
+#: gettext/gettext-pro.php:94 lib/gettext-pro.php:94 lib/pro/admin/edit.php:605
+#: lib/std/admin/edit.php:623
+msgctxt "option label"
+msgid "Review Rating"
+msgstr "Note de l'évaluation"
+
+#: gettext/gettext-pro.php:95 lib/gettext-pro.php:95 lib/pro/admin/edit.php:608
+#: lib/std/admin/edit.php:626
+msgctxt "option comment"
+msgid "from"
+msgstr "de"
+
+#: gettext/gettext-pro.php:96 lib/gettext-pro.php:96 lib/pro/admin/edit.php:610
+#: lib/std/admin/edit.php:628
+msgctxt "option comment"
+msgid "to"
+msgstr "à"
+
+#: gettext/gettext-pro.php:97 lib/gettext-pro.php:97 lib/pro/admin/edit.php:616
+#: lib/std/admin/edit.php:635
+msgctxt "option label"
+msgid "Rating Value Name"
+msgstr "Un nom pour la note"
+
+#: gettext/gettext-pro.php:98 lib/gettext-pro.php:98 lib/pro/admin/edit.php:628
+#: lib/std/admin/edit.php:647
+msgctxt "metabox title"
+msgid "Subject of the Review"
+msgstr "Sujet de l'évaluation"
+
+#: gettext/gettext-pro.php:99 lib/gettext-pro.php:99 lib/pro/admin/edit.php:633
+#: lib/std/admin/edit.php:653
+msgctxt "option label"
+msgid "Subject Webpage Type"
+msgstr "Type de page Web du sujet"
+
+#: gettext/gettext-pro.php:100 lib/gettext-pro.php:100
+#: lib/pro/admin/edit.php:648 lib/std/admin/edit.php:669
+msgctxt "option label"
+msgid "Subject Webpage URL"
+msgstr "URL de page Web du sujet"
+
+#: gettext/gettext-pro.php:101 lib/gettext-pro.php:101
+#: lib/pro/admin/edit.php:655 lib/std/admin/edit.php:677
+msgctxt "option label"
+msgid "Subject Same-As URLs"
+msgstr "URL pareilles au sujet"
+
+#: gettext/gettext-pro.php:102 lib/gettext-pro.php:102
+#: lib/pro/admin/edit.php:663 lib/std/admin/edit.php:685
+msgctxt "option label"
+msgid "Subject Name"
+msgstr "Nom du sujet"
+
+#: gettext/gettext-pro.php:103 lib/gettext-pro.php:103
+#: lib/pro/admin/edit.php:670 lib/std/admin/edit.php:693
+msgctxt "option label"
+msgid "Subject Description"
+msgstr "Description du sujet"
+
+#: gettext/gettext-pro.php:104 lib/gettext-pro.php:104
+#: lib/pro/admin/edit.php:677 lib/std/admin/edit.php:701
+msgctxt "option label"
+msgid "Subject Image ID"
+msgstr "ID d'image du sujet"
+
+#. translators: Please ignore - translation uses a different text domain.
+#: gettext/gettext-pro.php:105 gettext/gettext-pro.php:190
+#: lib/gettext-pro.php:105 lib/gettext-pro.php:190 lib/pro/admin/edit.php:684
+#: lib/pro/admin/edit.php:1358 lib/std/admin/edit.php:709
+#: lib/std/admin/edit.php:1258
+msgctxt "option label"
+msgid "or an Image URL"
+msgstr "ou URL d'une image"
+
+#: gettext/gettext-pro.php:106 lib/gettext-pro.php:106
+#: lib/pro/admin/edit.php:696 lib/std/admin/edit.php:721
+msgctxt "metabox title"
+msgid "Creative Work Subject Information"
+msgstr "Informations sur le sujet de l'oeuvre"
+
+#: gettext/gettext-pro.php:107 lib/gettext-pro.php:107
+#: lib/pro/admin/edit.php:701 lib/std/admin/edit.php:727
+msgctxt "option label"
+msgid "C.W. Author Type"
+msgstr "Type d'auteur de l'oeuvre"
+
+#: gettext/gettext-pro.php:108 lib/gettext-pro.php:108
+#: lib/pro/admin/edit.php:708 lib/std/admin/edit.php:735
+msgctxt "option label"
+msgid "C.W. Author Name"
+msgstr "Nom d'auteur de l'oeuvre"
+
+#: gettext/gettext-pro.php:109 lib/gettext-pro.php:109
+#: lib/pro/admin/edit.php:715 lib/std/admin/edit.php:743
+msgctxt "option label"
+msgid "C.W. Author URL"
+msgstr "URL d'auteur de l'oeuvre"
+
+#: gettext/gettext-pro.php:110 lib/gettext-pro.php:110
+#: lib/pro/admin/edit.php:722 lib/std/admin/edit.php:751
+msgctxt "option label"
+msgid "C.W. Published Date"
+msgstr "Date de publi. de l'oeuvre"
+
+#: gettext/gettext-pro.php:111 lib/gettext-pro.php:111
+#: lib/pro/admin/edit.php:729 lib/std/admin/edit.php:759
+msgctxt "option label"
+msgid "C.W. Created Date"
+msgstr "Date de création de l'oeuvre"
+
+#: gettext/gettext-pro.php:112 lib/gettext-pro.php:112
+#: lib/pro/admin/edit.php:741
+msgctxt "metabox title"
+msgid "Book Subject Information"
+msgstr "Informations du livre évalué"
+
+#: gettext/gettext-pro.php:113 lib/gettext-pro.php:113
+#: lib/pro/admin/edit.php:746
+msgctxt "option label"
+msgid "Book ISBN"
+msgstr "ISBN du livre"
+
+#: gettext/gettext-pro.php:114 lib/gettext-pro.php:114
+#: lib/pro/admin/edit.php:759
+msgctxt "metabox title"
+msgid "Movie Subject Information"
+msgstr "Informations sur le sujet du film"
+
+#: gettext/gettext-pro.php:115 lib/gettext-pro.php:115
+#: lib/pro/admin/edit.php:764
+msgctxt "option label"
+msgid "Movie Cast Names"
+msgstr "Noms des acteurs du film"
+
+#: gettext/gettext-pro.php:116 lib/gettext-pro.php:116
+#: lib/pro/admin/edit.php:772
+msgctxt "option label"
+msgid "Movie Director Names"
+msgstr "Noms des réalisateurs du film"
+
+#: gettext/gettext-pro.php:117 lib/gettext-pro.php:117
+#: lib/pro/admin/edit.php:785
+msgctxt "metabox title"
+msgid "Product Subject Information"
+msgstr "Informations sur le sujet du produit"
+
+#: gettext/gettext-pro.php:118 lib/gettext-pro.php:118
+#: lib/pro/admin/edit.php:790
+msgctxt "option label"
+msgid "Product Brand"
+msgstr "Marque du produit"
+
+#: gettext/gettext-pro.php:119 lib/gettext-pro.php:119
+#: lib/pro/admin/edit.php:797
+msgctxt "option label"
+msgid "Product Offers"
+msgstr "Offres du produit"
+
+#: gettext/gettext-pro.php:120 lib/gettext-pro.php:120
+#: lib/pro/admin/edit.php:801
+msgctxt "option label"
+msgid "Product Offer Name"
+msgstr "Nom de l'offre du produit"
+
+#: gettext/gettext-pro.php:121 lib/gettext-pro.php:121
+#: lib/pro/admin/edit.php:806
+msgctxt "option label"
+msgid "Product Offer Price"
+msgstr "Prix de l'offre du produit"
+
+#: gettext/gettext-pro.php:122 lib/gettext-pro.php:122
+#: lib/pro/admin/edit.php:811
+msgctxt "option label"
+msgid "Product Offer Currency"
+msgstr "Devise de l'offre du produit"
+
+#: gettext/gettext-pro.php:123 lib/gettext-pro.php:123
+#: lib/pro/admin/edit.php:820
+msgctxt "option label"
+msgid "Product Offer Availability"
+msgstr "Disponibilité de l'offre du produit"
+
+#: gettext/gettext-pro.php:124 lib/gettext-pro.php:124
+#: lib/pro/admin/edit.php:832
+msgctxt "option label"
+msgid "Product SKU"
+msgstr "SKU du produit"
+
+#: gettext/gettext-pro.php:125 lib/gettext-pro.php:125
+#: lib/pro/admin/edit.php:839
+msgctxt "option label"
+msgid "Product MPN"
+msgstr "MPN du produit"
+
+#: gettext/gettext-pro.php:126 lib/gettext-pro.php:126
+#: lib/pro/admin/edit.php:851
+msgctxt "metabox title"
+msgid "Software App Subject Information"
+msgstr "Informations d'application logicielle"
+
+#: gettext/gettext-pro.php:127 gettext/gettext-pro.php:138
+#: lib/gettext-pro.php:127 lib/gettext-pro.php:138 lib/pro/admin/edit.php:856
+#: lib/pro/admin/edit.php:939 lib/std/admin/edit.php:803
+msgctxt "option label"
+msgid "Operating System"
+msgstr "Système d'exploitation"
+
+#: gettext/gettext-pro.php:128 gettext/gettext-pro.php:139
+#: lib/gettext-pro.php:128 lib/gettext-pro.php:139 lib/pro/admin/edit.php:863
+#: lib/pro/admin/edit.php:946 lib/std/admin/edit.php:811
+msgctxt "option label"
+msgid "Application Category"
+msgstr "Catégorie d'application"
+
+#: gettext/gettext-pro.php:129 lib/gettext-pro.php:129
+#: lib/pro/admin/edit.php:870
+msgctxt "option label"
+msgid "Software App Offers"
+msgstr "Offres d'appli. logicielle"
+
+#: gettext/gettext-pro.php:130 lib/gettext-pro.php:130
+#: lib/pro/admin/edit.php:874
+msgctxt "option label"
+msgid "Software App Offer Name"
+msgstr "Nom de l'offre d'application logicielle"
+
+#: gettext/gettext-pro.php:131 lib/gettext-pro.php:131
+#: lib/pro/admin/edit.php:879
+msgctxt "option label"
+msgid "Software App Offer Price"
+msgstr "Prix de l'offre d'application logicielle"
+
+#: gettext/gettext-pro.php:132 lib/gettext-pro.php:132
+#: lib/pro/admin/edit.php:884
+msgctxt "option label"
+msgid "Software App Offer Currency"
+msgstr "Devise de l'offre d'application logicielle"
+
+#: gettext/gettext-pro.php:133 lib/gettext-pro.php:133
+#: lib/pro/admin/edit.php:893
+msgctxt "option label"
+msgid "Software App Offer Availability"
+msgstr "Disponibilité de l'offre d'application logicielle"
+
+#: gettext/gettext-pro.php:134 lib/gettext-pro.php:134
+#: lib/pro/admin/edit.php:910 lib/std/admin/edit.php:771
+msgctxt "metabox title"
+msgid "Claim Subject Information"
+msgstr "Informations sur le sujet de la déclaration"
+
+#: gettext/gettext-pro.php:135 lib/gettext-pro.php:135
+#: lib/pro/admin/edit.php:915 lib/std/admin/edit.php:777
+msgctxt "option label"
+msgid "Short Summary of Claim"
+msgstr "Résumé de la déclaration"
+
+#: gettext/gettext-pro.php:136 lib/gettext-pro.php:136
+#: lib/pro/admin/edit.php:922 lib/std/admin/edit.php:785
+msgctxt "option label"
+msgid "First Appearance URL"
+msgstr "URL de première apparence"
+
+#: gettext/gettext-pro.php:137 lib/gettext-pro.php:137
+#: lib/pro/admin/edit.php:934 lib/std/admin/edit.php:797
+msgctxt "metabox title"
+msgid "Software Application Information"
+msgstr "Informations sur l'application logicielle"
+
+#: gettext/gettext-pro.php:140 lib/gettext-pro.php:140
+#: lib/pro/admin/edit.php:958 lib/std/admin/edit.php:823
+msgctxt "metabox title"
+msgid "QA Page Information"
+msgstr "Informations de page QA"
+
+#: gettext/gettext-pro.php:141 lib/gettext-pro.php:141
+#: lib/pro/admin/edit.php:963 lib/std/admin/edit.php:829
+msgctxt "option label"
+msgid "QA Heading"
+msgstr "En-tête QA"
+
+#: gettext/gettext-pro.php:143 lib/gettext-pro.php:143
+#: lib/pro/admin/edit.php:980 lib/std/admin/edit.php:847
+msgctxt "option label"
+msgid "Event Language"
+msgstr "Langue de l'événement"
+
+#: gettext/gettext-pro.php:144 lib/gettext-pro.php:144
+#: lib/pro/admin/edit.php:987 lib/std/admin/edit.php:855
+msgctxt "option label"
+msgid "Event Attendance"
+msgstr "Participation pour l'événement"
+
+#: gettext/gettext-pro.php:145 lib/gettext-pro.php:145
+#: lib/pro/admin/edit.php:995 lib/std/admin/edit.php:864
+msgctxt "option label"
+msgid "Event Online URL"
+msgstr "URL de l'événement en ligne"
+
+#: gettext/gettext-pro.php:146 lib/gettext-pro.php:146
+#: lib/pro/admin/edit.php:1002 lib/std/admin/edit.php:872
+msgctxt "option label"
+msgid "Event Physical Venue"
+msgstr "Lieu physique pour l'événement"
+
+#: gettext/gettext-pro.php:147 lib/gettext-pro.php:147
+#: lib/pro/admin/edit.php:1010 lib/std/admin/edit.php:881
+msgctxt "option label"
+msgid "Organizer (Org)"
+msgstr "Organisateur (org)"
+
+#: gettext/gettext-pro.php:148 lib/gettext-pro.php:148
+#: lib/pro/admin/edit.php:1018 lib/std/admin/edit.php:890
+msgctxt "option label"
+msgid "Organizer (Person)"
+msgstr "Organisateur (personne)"
+
+#: gettext/gettext-pro.php:149 lib/gettext-pro.php:149
+#: lib/pro/admin/edit.php:1027 lib/std/admin/edit.php:899
+msgctxt "option label"
+msgid "Performer (Org)"
+msgstr "Interprète (org)"
+
+#: gettext/gettext-pro.php:150 lib/gettext-pro.php:150
+#: lib/pro/admin/edit.php:1035 lib/std/admin/edit.php:908
+msgctxt "option label"
+msgid "Performer (Person)"
+msgstr "Interprète (personne)"
+
+#: gettext/gettext-pro.php:151 lib/gettext-pro.php:151
+#: lib/pro/admin/edit.php:1044 lib/std/admin/edit.php:917
+msgctxt "option label"
+msgid "Event Status"
+msgstr "Statut de l'événement"
+
+#: gettext/gettext-pro.php:152 lib/gettext-pro.php:152
+#: lib/pro/admin/edit.php:1052 lib/std/admin/edit.php:926
+msgctxt "option label"
+msgid "Event Start"
+msgstr "Début de l'événement"
+
+#: gettext/gettext-pro.php:153 lib/gettext-pro.php:153
+#: lib/pro/admin/edit.php:1059 lib/std/admin/edit.php:934
+msgctxt "option label"
+msgid "Event End"
+msgstr "Fin de l'événement"
+
+#: gettext/gettext-pro.php:154 lib/gettext-pro.php:154
+#: lib/pro/admin/edit.php:1066 lib/std/admin/edit.php:942
+msgctxt "option label"
+msgid "Event Previous Start"
+msgstr "Début précédent de l'événement"
+
+#: gettext/gettext-pro.php:155 lib/gettext-pro.php:155
+#: lib/pro/admin/edit.php:1073 lib/std/admin/edit.php:950
+msgctxt "option label"
+msgid "Event Offers Start"
+msgstr "Début des offres de l'événement"
+
+#: gettext/gettext-pro.php:156 lib/gettext-pro.php:156
+#: lib/pro/admin/edit.php:1080 lib/std/admin/edit.php:958
+msgctxt "option label"
+msgid "Event Offers End"
+msgstr "Fin des offres de l'événement"
+
+#: gettext/gettext-pro.php:157 lib/gettext-pro.php:157
+#: lib/pro/admin/edit.php:1087 lib/std/admin/edit.php:966
+msgctxt "option label"
+msgid "Event Offers"
+msgstr "Offres pour l'événement"
+
+#: gettext/gettext-pro.php:158 lib/gettext-pro.php:158
+#: lib/pro/admin/edit.php:1091 lib/std/admin/edit.php:970
+msgctxt "option label"
+msgid "Event Offer Name"
+msgstr "Nom de l'offre pour l'événement"
+
+#: gettext/gettext-pro.php:159 lib/gettext-pro.php:159
+#: lib/pro/admin/edit.php:1096 lib/std/admin/edit.php:975
+msgctxt "option label"
+msgid "Event Offer Price"
+msgstr "Prix de l'offre pour l'événement"
+
+#: gettext/gettext-pro.php:160 lib/gettext-pro.php:160
+#: lib/pro/admin/edit.php:1101 lib/std/admin/edit.php:980
+msgctxt "option label"
+msgid "Event Offer Currency"
+msgstr "Devise de l'offre pour l'événement"
+
+#: gettext/gettext-pro.php:161 lib/gettext-pro.php:161
+#: lib/pro/admin/edit.php:1110 lib/std/admin/edit.php:987
+msgctxt "option label"
+msgid "Event Offer Availability"
+msgstr "Disponibilité de l'offre pour l'événement"
+
+#: gettext/gettext-pro.php:163 lib/gettext-pro.php:163
+#: lib/pro/admin/edit.php:1132 lib/std/admin/edit.php:1010
+msgctxt "option label"
+msgid "Job Title"
+msgstr "Titre du poste"
+
+#: gettext/gettext-pro.php:164 lib/gettext-pro.php:164
+#: lib/pro/admin/edit.php:1139 lib/std/admin/edit.php:1018
+msgctxt "option label"
+msgid "Hiring Organization"
+msgstr "Organisation d'embauche"
+
+#: gettext/gettext-pro.php:165 lib/gettext-pro.php:165
+#: lib/pro/admin/edit.php:1147 lib/std/admin/edit.php:1027
+msgctxt "option label"
+msgid "Job Location"
+msgstr "Emplacement de travail"
+
+#: gettext/gettext-pro.php:166 lib/gettext-pro.php:166
+#: lib/pro/admin/edit.php:1155 lib/std/admin/edit.php:1036
+msgctxt "option label"
+msgid "Base Salary"
+msgstr "Salaire de base"
+
+#: gettext/gettext-pro.php:167 lib/gettext-pro.php:167
+#: lib/pro/admin/edit.php:1161 lib/std/admin/edit.php:1040
+msgctxt "option comment"
+msgid "per"
+msgstr "par"
+
+#: gettext/gettext-pro.php:168 lib/gettext-pro.php:168
+#: lib/pro/admin/edit.php:1167 lib/std/admin/edit.php:1047
+msgctxt "option label"
+msgid "Employment Type"
+msgstr "Type d'emploi"
+
+#: gettext/gettext-pro.php:169 lib/gettext-pro.php:169
+#: lib/pro/admin/edit.php:1174 lib/std/admin/edit.php:1055
+msgctxt "option label"
+msgid "Job Posting Expires"
+msgstr "L'offre d'emploi expire"
+
+#: gettext/gettext-pro.php:170 lib/gettext-pro.php:170
+#: lib/pro/admin/edit.php:1186 lib/std/admin/edit.php:1067
+msgctxt "metabox title"
+msgid "Organization Information"
+msgstr "Informations d'organisation"
+
+#: gettext/gettext-pro.php:171 lib/gettext-pro.php:171
+#: lib/pro/admin/edit.php:1191 lib/std/admin/edit.php:1073
+msgctxt "option label"
+msgid "Select an Organization"
+msgstr "Choisir une organisation"
+
+#: gettext/gettext-pro.php:172 lib/gettext-pro.php:172
+#: lib/pro/admin/edit.php:1205 lib/std/admin/edit.php:1087
+msgctxt "metabox title"
+msgid "Person Information"
+msgstr "Informations de personne"
+
+#: gettext/gettext-pro.php:173 lib/gettext-pro.php:173
+#: lib/pro/admin/edit.php:1210 lib/std/admin/edit.php:1093
+msgctxt "option label"
+msgid "Select a Person"
+msgstr "Choisir une personne"
+
+#: gettext/gettext-pro.php:174 lib/gettext-pro.php:174
+#: lib/pro/admin/edit.php:1226 lib/std/admin/edit.php:1108
+msgctxt "metabox title"
+msgid "Additional Product Information"
+msgstr "Informations supplémentaire du produit"
+
+#: gettext/gettext-pro.php:175 lib/gettext-pro.php:175
+#: lib/pro/admin/edit.php:1236 lib/std/admin/edit.php:1119
+msgctxt "option label"
+msgid "Product Length"
+msgstr "Longueur du produit"
+
+#: gettext/gettext-pro.php:176 lib/gettext-pro.php:176
+#: lib/pro/admin/edit.php:1244 lib/std/admin/edit.php:1128
+msgctxt "option label"
+msgid "Product Width"
+msgstr "Largeur du produit"
+
+#: gettext/gettext-pro.php:177 lib/gettext-pro.php:177
+#: lib/pro/admin/edit.php:1252 lib/std/admin/edit.php:1137
+msgctxt "option label"
+msgid "Product Height"
+msgstr "Hauteur du produit"
+
+#: gettext/gettext-pro.php:178 lib/gettext-pro.php:178
+#: lib/pro/admin/edit.php:1260 lib/std/admin/edit.php:1146
+msgctxt "option label"
+msgid "Product Depth"
+msgstr "Profondeur du produit"
+
+#: gettext/gettext-pro.php:179 lib/gettext-pro.php:179
+#: lib/pro/admin/edit.php:1268 lib/std/admin/edit.php:1155
+msgctxt "option label"
+msgid "Product Fluid Volume"
+msgstr "Volume fluide du produit"
+
+#: gettext/gettext-pro.php:180 lib/gettext-pro.php:180
+#: lib/pro/admin/edit.php:1276 lib/std/admin/edit.php:1164
+msgctxt "option label"
+msgid "Product GTIN-14"
+msgstr "GTIN-14 du produit"
+
+#: gettext/gettext-pro.php:181 lib/gettext-pro.php:181
+#: lib/pro/admin/edit.php:1283 lib/std/admin/edit.php:1172
+msgctxt "option label"
+msgid "Product GTIN-13 (EAN)"
+msgstr "GTIN-13 (EAN) du produit"
+
+#: gettext/gettext-pro.php:182 lib/gettext-pro.php:182
+#: lib/pro/admin/edit.php:1290 lib/std/admin/edit.php:1180
+msgctxt "option label"
+msgid "Product GTIN-12 (UPC)"
+msgstr "GTIN-12 (UPC) du produit"
+
+#: gettext/gettext-pro.php:183 lib/gettext-pro.php:183
+#: lib/pro/admin/edit.php:1297 lib/std/admin/edit.php:1188
+msgctxt "option label"
+msgid "Product GTIN-8"
+msgstr "GTIN-8 du produit"
+
+#: gettext/gettext-pro.php:184 lib/gettext-pro.php:184
+#: lib/pro/admin/edit.php:1304 lib/std/admin/edit.php:1196
+msgctxt "option label"
+msgid "Product GTIN"
+msgstr "GTIN du produit"
+
+#. translators: Please ignore - translation uses a different text domain.
+#: gettext/gettext-pro.php:186 lib/gettext-pro.php:186
+#: lib/pro/admin/edit.php:1341 lib/std/admin/edit.php:1239
+msgctxt "option label"
+msgid "Maximum Images"
+msgstr "Images maximum"
+
+#: gettext/gettext-pro.php:191 lib/gettext-pro.php:191
+#: lib/pro/admin/edit.php:1378 lib/std/admin/edit.php:1278
+msgctxt "option comment"
+msgid "days"
+msgstr "jours"
+
+#: gettext/gettext-pro.php:192 lib/gettext-pro.php:192
+#: lib/pro/admin/edit.php:1379 lib/std/admin/edit.php:1279
+msgctxt "option comment"
+msgid "hours"
+msgstr "heures"
+
+#: gettext/gettext-pro.php:193 lib/gettext-pro.php:193
+#: lib/pro/admin/edit.php:1380 lib/std/admin/edit.php:1280
+msgctxt "option comment"
+msgid "mins"
+msgstr "mins"
+
+#: gettext/gettext-pro.php:194 lib/gettext-pro.php:194
+#: lib/pro/admin/edit.php:1381 lib/std/admin/edit.php:1281
+msgctxt "option comment"
+msgid "secs"
+msgstr "secs"
 
 #: lib/filters/prop/aggregaterating.php:193
 msgid "An aggregate rating value for this markup has been ignored &mdash; <a href=\"%1$s\">Google does not allow an aggregate rating value for the Schema Type %2$s</a>."
@@ -581,1165 +1836,6 @@ msgstr "Valeur non standard trouvée pour l'option \"%s\" - réinitialisation de
 #: lib/filters.php:739
 msgid "Please select a subject webpage type that better describes the subject of the webpage (ie. the content) being reviewed."
 msgstr "SVP sélectionner un type de page Web du sujet qui décrit mieux le sujet de la page Web (c'est-à-dire le contenu) en cours de révision."
-
-#: lib/gettext-config.php:6
-msgctxt "lib file description"
-msgid "(code) Schema Type Article [schema_type:article]"
-msgstr "(code) Type de Schéma Article [schema_type:article]"
-
-#: lib/gettext-config.php:7
-msgctxt "lib file description"
-msgid "(code) Schema Type Audiobook [schema_type:book.audio]"
-msgstr "(code) Type de Schéma Audiobook [schema_type:book.audio]"
-
-#: lib/gettext-config.php:8
-msgctxt "lib file description"
-msgid "(code) Schema Type Blog [schema_type:blog]"
-msgstr "(code) Type de Schéma Blog [schema_type:blog]"
-
-#: lib/gettext-config.php:9
-msgctxt "lib file description"
-msgid "(code) Schema Type Book [schema_type:book]"
-msgstr "(code) Type de Schéma Book [schema_type:book]"
-
-#: lib/gettext-config.php:10
-msgctxt "lib file description"
-msgid "(code) Schema Type Brand [schema_type:brand]"
-msgstr "(code) Type de Schéma Brand [schema_type:brand]"
-
-#: lib/gettext-config.php:11
-msgctxt "lib file description"
-msgid "(code) Schema Type Claim Review [schema_type:review.claim]"
-msgstr "(code) Type de Schéma Claim Review [schema_type:review.claim]"
-
-#: lib/gettext-config.php:12
-msgctxt "lib file description"
-msgid "(code) Schema Type Collection Page [schema_type:webpage.collection]"
-msgstr "(code) Type de Schéma Collection Page [schema_type:webpage.collection]"
-
-#: lib/gettext-config.php:13
-msgctxt "lib file description"
-msgid "(code) Schema Type Course [schema_type:course]"
-msgstr "(code) Type de Schéma Course [schema_type:course]"
-
-#: lib/gettext-config.php:14
-msgctxt "lib file description"
-msgid "(code) Schema Type CreativeWork [schema_type:creative.work]"
-msgstr "(code) Type de Schéma CreativeWork [schema_type:creative.work]"
-
-#: lib/gettext-config.php:15
-msgctxt "lib file description"
-msgid "(code) Schema Type Event [schema_type:event]"
-msgstr "(code) Type de Schéma Event [schema_type:event]"
-
-#: lib/gettext-config.php:16
-msgctxt "lib file description"
-msgid "(code) Schema Type FAQPage [schema_type:webpage.faq]"
-msgstr "(code) Type de Schéma FAQPage [schema_type:webpage.faq]"
-
-#: lib/gettext-config.php:17
-msgctxt "lib file description"
-msgid "(code) Schema Type Food Establishment [schema_type:food.establishment]"
-msgstr "(code) Type de Schéma Food Establishment [schema_type:food.establishment]"
-
-#: lib/gettext-config.php:18
-msgctxt "lib file description"
-msgid "(code) Schema Type How-To [schema_type:how.to]"
-msgstr "(code) Type de Schéma How-To [schema_type:how.to]"
-
-#: lib/gettext-config.php:19
-msgctxt "lib file description"
-msgid "(code) Schema Type ItemList [schema_type:item.list]"
-msgstr "(code) Type de Schéma ItemList [schema_type:item.list]"
-
-#: lib/gettext-config.php:20
-msgctxt "lib file description"
-msgid "(code) Schema Type Job Posting [schema_type:job.posting]"
-msgstr "(code) Type de Schéma Job Posting [schema_type:job.posting]"
-
-#: lib/gettext-config.php:21
-msgctxt "lib file description"
-msgid "(code) Schema Type Local Business [schema_type:local.business]"
-msgstr "(code) Type de Schéma Local Business [schema_type:local.business]"
-
-#: lib/gettext-config.php:22
-msgctxt "lib file description"
-msgid "(code) Schema Type Movie [schema_type:movie]"
-msgstr "(code) Type de Schéma Movie [schema_type:movie]"
-
-#: lib/gettext-config.php:23
-msgctxt "lib file description"
-msgid "(code) Schema Type Organization [schema_type:organization]"
-msgstr "(code) Type de Schéma Organization [schema_type:organization]"
-
-#: lib/gettext-config.php:24
-msgctxt "lib file description"
-msgid "(code) Schema Type Person [schema_type:person]"
-msgstr "(code) Type de Schéma Person [schema_type:person]"
-
-#: lib/gettext-config.php:25
-msgctxt "lib file description"
-msgid "(code) Schema Type Place [schema_type:place]"
-msgstr "(code) Type de Schéma Place [schema_type:place]"
-
-#: lib/gettext-config.php:26
-msgctxt "lib file description"
-msgid "(code) Schema Type Product [schema_type:product]"
-msgstr "(code) Type de Schéma Product [schema_type:product]"
-
-#: lib/gettext-config.php:27
-msgctxt "lib file description"
-msgid "(code) Schema Type Profile Page [schema_type:webpage.profile]"
-msgstr "(code) Type de Schéma Profile Page [schema_type:webpage.profile]"
-
-#: lib/gettext-config.php:28
-msgctxt "lib file description"
-msgid "(code) Schema Type QAPage [schema_type:webpage.qa]"
-msgstr "(code) Type de Schéma QAPage [schema_type:webpage.qa]"
-
-#: lib/gettext-config.php:29
-msgctxt "lib file description"
-msgid "(code) Schema Type Question and Answer [schema_type:question]"
-msgstr "(code) Type de Schéma Question and Answer [schema_type:question]"
-
-#: lib/gettext-config.php:30
-msgctxt "lib file description"
-msgid "(code) Schema Type Recipe [schema_type:recipe]"
-msgstr "(code) Type de Schéma Recipe [schema_type:recipe]"
-
-#: lib/gettext-config.php:31
-msgctxt "lib file description"
-msgid "(code) Schema Type Review [schema_type:review]"
-msgstr "(code) Type de Schéma Review [schema_type:review]"
-
-#: lib/gettext-config.php:32
-msgctxt "lib file description"
-msgid "(code) Schema Type Search Results Page [schema_type:webpage.search.results]"
-msgstr "(code) Type de Schéma Search Results Page [schema_type:webpage.search.results]"
-
-#: lib/gettext-config.php:33
-msgctxt "lib file description"
-msgid "(code) Schema Type Software Application [schema_type:software.application]"
-msgstr "(code) Type de Schéma Software Application [schema_type:software.application]"
-
-#: lib/gettext-config.php:34
-msgctxt "lib file description"
-msgid "(code) Schema Type Thing [schema_type:thing]"
-msgstr "(code) Type de Schéma Thing [schema_type:thing]"
-
-#: lib/gettext-config.php:35
-msgctxt "lib file description"
-msgid "(code) Schema Type WebPage [schema_type:webpage]"
-msgstr "(code) Type de Schéma WebPage [schema_type:webpage]"
-
-#: lib/gettext-config.php:36
-msgctxt "lib file description"
-msgid "(code) Schema Type WebSite [schema_type:website]"
-msgstr "(code) Type de Schéma WebSite [schema_type:website]"
-
-#: lib/gettext-config.php:37
-msgctxt "lib file description"
-msgid "(plus) Schema Property aggregateRating"
-msgstr "(plus) Propriété de Schéma aggregateRating"
-
-#: lib/gettext-config.php:38
-msgctxt "lib file description"
-msgid "(plus) Schema Property hasPart"
-msgstr "(plus) Propriété de Schéma hasPart"
-
-#: lib/gettext-config.php:39
-msgctxt "lib file description"
-msgid "(plus) Schema Property review"
-msgstr "(plus) Propriété de Schéma review"
-
-#: lib/gettext-config.php:40
-msgctxt "lib file description"
-msgid "Schema Markup"
-msgstr "Balisage Schéma"
-
-#: lib/gettext-config.php:41
-msgctxt "lib file description"
-msgid "Schema Shortcode Guide"
-msgstr "Guide code court Schéma"
-
-#: lib/gettext-config.php:42
-msgctxt "plugin description"
-msgid "Google Rich Results and Structured Data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Videos, and More."
-msgstr "Résultats riche et données structurées Google pour articles, carrousels,, évaluations de déclarations, événements, pages FAQ, étapes pratiques, images, entreprise / référencement locale, organisations, produits, recettes, restaurants, critiques, videos, et plus."
-
-#: lib/gettext-pro.php:6 lib/gettext-pro.php:28 lib/pro/admin/edit.php:180
-#: lib/pro/admin/schema-general.php:81 lib/std/admin/edit.php:164
-#: lib/std/admin/schema-general.php:77
-msgctxt "metabox title"
-msgid "Creative Work Information"
-msgstr "Informations de l'oeuvre"
-
-#: lib/gettext-pro.php:7 lib/pro/admin/schema-general.php:84
-#: lib/std/admin/schema-general.php:81
-msgctxt "option label"
-msgid "Default Family Friendly"
-msgstr "Favorable à la famille par défaut"
-
-#: lib/gettext-pro.php:8 lib/pro/admin/schema-general.php:90
-#: lib/std/admin/schema-general.php:88
-msgctxt "option label"
-msgid "Default Publisher (Org)"
-msgstr "Éditeur par défaut (org)"
-
-#: lib/gettext-pro.php:9 lib/pro/admin/schema-general.php:96
-#: lib/std/admin/schema-general.php:95
-msgctxt "option label"
-msgid "Default Publisher (Person)"
-msgstr "Éditeur par défaut (personne)"
-
-#: lib/gettext-pro.php:10 lib/pro/admin/schema-general.php:103
-#: lib/std/admin/schema-general.php:102
-msgctxt "option label"
-msgid "Default Service Prov. (Org)"
-msgstr "Fournisseur de service par défaut (org)"
-
-#: lib/gettext-pro.php:11 lib/pro/admin/schema-general.php:109
-#: lib/std/admin/schema-general.php:109
-msgctxt "option label"
-msgid "Default Service Prov. (Person)"
-msgstr "Fournisseur de service par défaut (personne)"
-
-#: lib/gettext-pro.php:12 lib/gettext-pro.php:142 lib/pro/admin/edit.php:975
-#: lib/pro/admin/schema-general.php:122 lib/std/admin/edit.php:841
-#: lib/std/admin/schema-general.php:121
-msgctxt "metabox title"
-msgid "Event Information"
-msgstr "Informations d'événement"
-
-#: lib/gettext-pro.php:13 lib/pro/admin/schema-general.php:125
-#: lib/std/admin/schema-general.php:125
-msgctxt "option label"
-msgid "Default Physical Venue"
-msgstr "Lieu physique par défaut pour l'événement"
-
-#: lib/gettext-pro.php:14 lib/pro/admin/schema-general.php:131
-#: lib/std/admin/schema-general.php:132
-msgctxt "option label"
-msgid "Default Organizer (Org)"
-msgstr "Organisateur par défaut (org)"
-
-#: lib/gettext-pro.php:15 lib/pro/admin/schema-general.php:137
-#: lib/std/admin/schema-general.php:139
-msgctxt "option label"
-msgid "Default Organizer (Person)"
-msgstr "Organisateur par défaut (personne)"
-
-#: lib/gettext-pro.php:16 lib/pro/admin/schema-general.php:144
-#: lib/std/admin/schema-general.php:146
-msgctxt "option label"
-msgid "Default Performer (Org)"
-msgstr "Interprète par défaut (org)"
-
-#: lib/gettext-pro.php:17 lib/pro/admin/schema-general.php:150
-#: lib/std/admin/schema-general.php:153
-msgctxt "option label"
-msgid "Default Performer (Person)"
-msgstr "Interprète par défaut (personne)"
-
-#: lib/gettext-pro.php:18 lib/gettext-pro.php:162 lib/pro/admin/edit.php:1127
-#: lib/pro/admin/schema-general.php:163 lib/std/admin/edit.php:1004
-#: lib/std/admin/schema-general.php:165
-msgctxt "metabox title"
-msgid "Job Posting Information"
-msgstr "Informations d'affichage d'emploi"
-
-#: lib/gettext-pro.php:19 lib/pro/admin/schema-general.php:166
-#: lib/std/admin/schema-general.php:169
-msgctxt "option label"
-msgid "Default Hiring Organization"
-msgstr "Organisation d'embauche par défaut"
-
-#: lib/gettext-pro.php:20 lib/pro/admin/schema-general.php:172
-#: lib/std/admin/schema-general.php:176
-msgctxt "option label"
-msgid "Default Job Location"
-msgstr "Emplacement de travail par défaut"
-
-#: lib/gettext-pro.php:21 lib/gettext-pro.php:93 lib/pro/admin/edit.php:600
-#: lib/pro/admin/schema-general.php:184 lib/std/admin/edit.php:617
-#: lib/std/admin/schema-general.php:188
-msgctxt "metabox title"
-msgid "Review Information"
-msgstr "Informations d'évaluation"
-
-#: lib/gettext-pro.php:22 lib/pro/admin/schema-general.php:187
-#: lib/std/admin/schema-general.php:192
-msgctxt "option label"
-msgid "Default Subject Webpage Type"
-msgstr "Type par défaut de page Web du sujet"
-
-#: lib/gettext-pro.php:23 lib/pro/admin/edit.php:137 lib/std/admin/edit.php:121
-msgctxt "option label"
-msgid "Name / Title"
-msgstr "Nom / titre"
-
-#: lib/gettext-pro.php:24 lib/pro/admin/edit.php:144 lib/std/admin/edit.php:128
-msgctxt "option label"
-msgid "Alternate Name"
-msgstr "Autre nom"
-
-#: lib/gettext-pro.php:25 lib/gettext-pro.php:52 lib/pro/admin/edit.php:151
-#: lib/pro/admin/edit.php:360 lib/std/admin/edit.php:135
-#: lib/std/admin/edit.php:355
-msgctxt "option label"
-msgid "Description"
-msgstr "Description"
-
-#: lib/gettext-pro.php:26 lib/pro/admin/edit.php:159 lib/std/admin/edit.php:144
-msgctxt "option label"
-msgid "Microdata Type URLs"
-msgstr "URLs de type microdonnées"
-
-#: lib/gettext-pro.php:27 lib/pro/admin/edit.php:167 lib/std/admin/edit.php:152
-msgctxt "option label"
-msgid "Same-As URLs"
-msgstr "URLs pareilles"
-
-#: lib/gettext-pro.php:29 lib/pro/admin/edit.php:185 lib/std/admin/edit.php:170
-msgctxt "option label"
-msgid "Is Part of URL"
-msgstr "Fait partie de l'URL"
-
-#: lib/gettext-pro.php:30 lib/pro/admin/edit.php:193 lib/std/admin/edit.php:178
-msgctxt "option label"
-msgid "Headline"
-msgstr "Manchette"
-
-#: lib/gettext-pro.php:31 lib/pro/admin/edit.php:201 lib/std/admin/edit.php:186
-msgctxt "option label"
-msgid "Full Text"
-msgstr "Texte intégral"
-
-#: lib/gettext-pro.php:32 lib/pro/admin/edit.php:209 lib/std/admin/edit.php:194
-msgctxt "option label"
-msgid "Keywords"
-msgstr "Mots clés"
-
-#: lib/gettext-pro.php:33 lib/pro/admin/edit.php:217 lib/std/admin/edit.php:202
-msgctxt "option label"
-msgid "Language"
-msgstr "Language"
-
-#: lib/gettext-pro.php:34 lib/pro/admin/edit.php:224 lib/std/admin/edit.php:210
-msgctxt "option label"
-msgid "Family Friendly"
-msgstr "Favorable à la famille"
-
-#: lib/gettext-pro.php:35 lib/pro/admin/edit.php:232 lib/std/admin/edit.php:219
-msgctxt "option label"
-msgid "Copyright Year"
-msgstr "Année du droit d'auteur"
-
-#: lib/gettext-pro.php:36 lib/pro/admin/edit.php:239 lib/std/admin/edit.php:227
-msgctxt "option label"
-msgid "License URL"
-msgstr "URL de licence"
-
-#: lib/gettext-pro.php:37 lib/pro/admin/edit.php:246 lib/std/admin/edit.php:235
-msgctxt "option label"
-msgid "Publisher (Org)"
-msgstr "Éditeur (org)"
-
-#: lib/gettext-pro.php:38 lib/pro/admin/edit.php:254 lib/std/admin/edit.php:244
-msgctxt "option label"
-msgid "Publisher (Person)"
-msgstr "Éditeur (personne)"
-
-#: lib/gettext-pro.php:39 lib/pro/admin/edit.php:263 lib/std/admin/edit.php:253
-msgctxt "option label"
-msgid "Service Prov. (Org)"
-msgstr "Fournisseur de service (org)"
-
-#: lib/gettext-pro.php:40 lib/pro/admin/edit.php:271 lib/std/admin/edit.php:262
-msgctxt "option label"
-msgid "Service Prov. (Person)"
-msgstr "Fournisseur de service (personne)"
-
-#: lib/gettext-pro.php:41 lib/pro/admin/edit.php:285 lib/std/admin/edit.php:275
-msgctxt "metabox title"
-msgid "Audiobook Information"
-msgstr "Informations du livre audio"
-
-#: lib/gettext-pro.php:42 lib/pro/admin/edit.php:290 lib/std/admin/edit.php:281
-msgctxt "option label"
-msgid "Duration"
-msgstr "Durée"
-
-#: lib/gettext-pro.php:43 lib/pro/admin/edit.php:302 lib/std/admin/edit.php:293
-msgctxt "metabox title"
-msgid "How-To Information"
-msgstr "Informations du How-To"
-
-#: lib/gettext-pro.php:44 lib/pro/admin/edit.php:307 lib/std/admin/edit.php:299
-msgctxt "option label"
-msgid "How-To Makes"
-msgstr "Le How-To crée"
-
-#: lib/gettext-pro.php:45 lib/gettext-pro.php:59 lib/pro/admin/edit.php:314
-#: lib/pro/admin/edit.php:413 lib/std/admin/edit.php:307
-#: lib/std/admin/edit.php:413
-msgctxt "option label"
-msgid "Preparation Time"
-msgstr "Temps de préparation"
-
-#: lib/gettext-pro.php:46 lib/gettext-pro.php:61 lib/pro/admin/edit.php:321
-#: lib/pro/admin/edit.php:427 lib/std/admin/edit.php:315
-#: lib/std/admin/edit.php:429
-msgctxt "option label"
-msgid "Total Time"
-msgstr "Temps total"
-
-#: lib/gettext-pro.php:47 lib/pro/admin/edit.php:328 lib/std/admin/edit.php:323
-msgctxt "option label"
-msgid "How-To Supplies"
-msgstr "Fournitures pour How-To"
-
-#: lib/gettext-pro.php:48 lib/pro/admin/edit.php:336 lib/std/admin/edit.php:331
-msgctxt "option label"
-msgid "How-To Tools"
-msgstr "Outils pour How-To"
-
-#: lib/gettext-pro.php:49 lib/pro/admin/edit.php:344 lib/std/admin/edit.php:339
-msgctxt "option label"
-msgid "How-To Steps"
-msgstr "Etapes pour How-To"
-
-#: lib/gettext-pro.php:50 lib/pro/admin/edit.php:350 lib/std/admin/edit.php:345
-msgctxt "option label"
-msgid "%1$s Step Details %2$s or New Section Details"
-msgstr "%1$s Détails de l'étape %2$s ou détails d'une nouvelle section"
-
-#: lib/gettext-pro.php:51 lib/pro/admin/edit.php:355 lib/std/admin/edit.php:350
-msgctxt "option label"
-msgid "Name"
-msgstr "Nom"
-
-#. translators: Please ignore - translation uses a different text domain.
-#: lib/gettext-pro.php:53 lib/gettext-pro.php:188 lib/pro/admin/edit.php:365
-#: lib/pro/admin/edit.php:1350 lib/std/admin/edit.php:360
-#: lib/std/admin/edit.php:1249
-msgctxt "option label"
-msgid "Image ID"
-msgstr "ID d'une image"
-
-#: lib/gettext-pro.php:54 lib/pro/admin/edit.php:380 lib/std/admin/edit.php:375
-msgctxt "metabox title"
-msgid "Recipe Information"
-msgstr "Informations de recette"
-
-#: lib/gettext-pro.php:55 lib/pro/admin/edit.php:385 lib/std/admin/edit.php:381
-msgctxt "option label"
-msgid "Recipe Cuisine"
-msgstr "Cuisine de la recette"
-
-#: lib/gettext-pro.php:56 lib/pro/admin/edit.php:392 lib/std/admin/edit.php:389
-msgctxt "option label"
-msgid "Recipe Course"
-msgstr "Cours de la recette"
-
-#: lib/gettext-pro.php:57 lib/pro/admin/edit.php:399 lib/std/admin/edit.php:397
-msgctxt "option label"
-msgid "Recipe Makes"
-msgstr "La recette crée"
-
-#: lib/gettext-pro.php:58 lib/pro/admin/edit.php:406 lib/std/admin/edit.php:405
-msgctxt "option label"
-msgid "Cooking Method"
-msgstr "Méthode de cuisson"
-
-#: lib/gettext-pro.php:60 lib/pro/admin/edit.php:420 lib/std/admin/edit.php:421
-msgctxt "option label"
-msgid "Cooking Time"
-msgstr "Temps de cuisson"
-
-#: lib/gettext-pro.php:62 lib/pro/admin/edit.php:434 lib/std/admin/edit.php:437
-msgctxt "option label"
-msgid "Recipe Ingredients"
-msgstr "Ingrédients de recette"
-
-#: lib/gettext-pro.php:63 lib/pro/admin/edit.php:442 lib/std/admin/edit.php:445
-msgctxt "option label"
-msgid "Recipe Instructions"
-msgstr "Instructions de recette"
-
-#: lib/gettext-pro.php:64 lib/pro/admin/edit.php:454 lib/std/admin/edit.php:457
-msgctxt "metabox title"
-msgid "Nutrition Information per Serving"
-msgstr "Informations nutritionnelle par portion"
-
-#: lib/gettext-pro.php:65 lib/pro/admin/edit.php:459 lib/std/admin/edit.php:463
-msgctxt "option label"
-msgid "Serving Size"
-msgstr "Taille de portion"
-
-#: lib/gettext-pro.php:66 lib/pro/admin/edit.php:466 lib/std/admin/edit.php:471
-msgctxt "option label"
-msgid "Calories"
-msgstr "Calories"
-
-#: lib/gettext-pro.php:67 lib/pro/admin/edit.php:469 lib/std/admin/edit.php:474
-msgctxt "option comment"
-msgid "calories"
-msgstr "calories"
-
-#: lib/gettext-pro.php:68 lib/pro/admin/edit.php:474 lib/std/admin/edit.php:480
-msgctxt "option label"
-msgid "Protein"
-msgstr "Protéine"
-
-#: lib/gettext-pro.php:69 lib/pro/admin/edit.php:477 lib/std/admin/edit.php:483
-msgctxt "option comment"
-msgid "grams of protein"
-msgstr "grammes de protéines"
-
-#: lib/gettext-pro.php:70 lib/pro/admin/edit.php:482 lib/std/admin/edit.php:489
-msgctxt "option label"
-msgid "Fiber"
-msgstr "Fibre"
-
-#: lib/gettext-pro.php:71 lib/pro/admin/edit.php:485 lib/std/admin/edit.php:492
-msgctxt "option comment"
-msgid "grams of fiber"
-msgstr "grammes de fibres"
-
-#: lib/gettext-pro.php:72 lib/pro/admin/edit.php:490 lib/std/admin/edit.php:498
-msgctxt "option label"
-msgid "Carbohydrates"
-msgstr "Glucides"
-
-#: lib/gettext-pro.php:73 lib/pro/admin/edit.php:493 lib/std/admin/edit.php:501
-msgctxt "option comment"
-msgid "grams of carbohydrates"
-msgstr "grammes de glucides"
-
-#: lib/gettext-pro.php:74 lib/pro/admin/edit.php:498 lib/std/admin/edit.php:507
-msgctxt "option label"
-msgid "Sugar"
-msgstr "Sucre"
-
-#: lib/gettext-pro.php:75 lib/pro/admin/edit.php:501 lib/std/admin/edit.php:510
-msgctxt "option comment"
-msgid "grams of sugar"
-msgstr "grammes de sucre"
-
-#: lib/gettext-pro.php:76 lib/pro/admin/edit.php:506 lib/std/admin/edit.php:516
-msgctxt "option label"
-msgid "Sodium"
-msgstr "Sodium"
-
-#: lib/gettext-pro.php:77 lib/pro/admin/edit.php:509 lib/std/admin/edit.php:519
-msgctxt "option comment"
-msgid "milligrams of sodium"
-msgstr "milligrammes de sodium"
-
-#: lib/gettext-pro.php:78 lib/pro/admin/edit.php:514 lib/std/admin/edit.php:525
-msgctxt "option label"
-msgid "Fat"
-msgstr "Gras"
-
-#: lib/gettext-pro.php:79 lib/pro/admin/edit.php:517 lib/std/admin/edit.php:528
-msgctxt "option comment"
-msgid "grams of fat"
-msgstr "grammes de matières grasses"
-
-#: lib/gettext-pro.php:80 lib/pro/admin/edit.php:522 lib/std/admin/edit.php:534
-msgctxt "option label"
-msgid "Saturated Fat"
-msgstr "Gras saturée"
-
-#: lib/gettext-pro.php:81 lib/pro/admin/edit.php:525 lib/std/admin/edit.php:537
-msgctxt "option comment"
-msgid "grams of saturated fat"
-msgstr "grammes de gras saturés"
-
-#: lib/gettext-pro.php:82 lib/pro/admin/edit.php:530 lib/std/admin/edit.php:543
-msgctxt "option label"
-msgid "Unsaturated Fat"
-msgstr "Grais insaturées"
-
-#: lib/gettext-pro.php:83 lib/pro/admin/edit.php:533 lib/std/admin/edit.php:546
-msgctxt "option comment"
-msgid "grams of unsaturated fat"
-msgstr "grammes de gras insaturés"
-
-#: lib/gettext-pro.php:84 lib/pro/admin/edit.php:538 lib/std/admin/edit.php:552
-msgctxt "option label"
-msgid "Trans Fat"
-msgstr "Gras trans"
-
-#: lib/gettext-pro.php:85 lib/pro/admin/edit.php:541 lib/std/admin/edit.php:555
-msgctxt "option comment"
-msgid "grams of trans fat"
-msgstr "grammes de gras trans"
-
-#: lib/gettext-pro.php:86 lib/pro/admin/edit.php:546 lib/std/admin/edit.php:561
-msgctxt "option label"
-msgid "Cholesterol"
-msgstr "Cholestérol"
-
-#: lib/gettext-pro.php:87 lib/pro/admin/edit.php:549 lib/std/admin/edit.php:564
-msgctxt "option comment"
-msgid "milligrams of cholesterol"
-msgstr "milligrammes de cholestérol"
-
-#: lib/gettext-pro.php:88 lib/pro/admin/edit.php:559 lib/std/admin/edit.php:574
-msgctxt "metabox title"
-msgid "Movie Information"
-msgstr "Informations du film"
-
-#: lib/gettext-pro.php:89 lib/pro/admin/edit.php:564 lib/std/admin/edit.php:580
-msgctxt "option label"
-msgid "Cast Names"
-msgstr "Noms des acteurs"
-
-#: lib/gettext-pro.php:90 lib/pro/admin/edit.php:572 lib/std/admin/edit.php:588
-msgctxt "option label"
-msgid "Director Names"
-msgstr "Noms des réalisateurs"
-
-#: lib/gettext-pro.php:91 lib/pro/admin/edit.php:580 lib/std/admin/edit.php:596
-msgctxt "option label"
-msgid "Production Company"
-msgstr "Société de production"
-
-#: lib/gettext-pro.php:92 lib/pro/admin/edit.php:588 lib/std/admin/edit.php:605
-msgctxt "option label"
-msgid "Movie Runtime"
-msgstr "Durée du film"
-
-#: lib/gettext-pro.php:94 lib/pro/admin/edit.php:605 lib/std/admin/edit.php:623
-msgctxt "option label"
-msgid "Review Rating"
-msgstr "Note de l'évaluation"
-
-#: lib/gettext-pro.php:95 lib/pro/admin/edit.php:608 lib/std/admin/edit.php:626
-msgctxt "option comment"
-msgid "from"
-msgstr "de"
-
-#: lib/gettext-pro.php:96 lib/pro/admin/edit.php:610 lib/std/admin/edit.php:628
-msgctxt "option comment"
-msgid "to"
-msgstr "à"
-
-#: lib/gettext-pro.php:97 lib/pro/admin/edit.php:616 lib/std/admin/edit.php:635
-msgctxt "option label"
-msgid "Rating Value Name"
-msgstr "Un nom pour la note"
-
-#: lib/gettext-pro.php:98 lib/pro/admin/edit.php:628 lib/std/admin/edit.php:647
-msgctxt "metabox title"
-msgid "Subject of the Review"
-msgstr "Sujet de l'évaluation"
-
-#: lib/gettext-pro.php:99 lib/pro/admin/edit.php:633 lib/std/admin/edit.php:653
-msgctxt "option label"
-msgid "Subject Webpage Type"
-msgstr "Type de page Web du sujet"
-
-#: lib/gettext-pro.php:100 lib/pro/admin/edit.php:648
-#: lib/std/admin/edit.php:669
-msgctxt "option label"
-msgid "Subject Webpage URL"
-msgstr "URL de page Web du sujet"
-
-#: lib/gettext-pro.php:101 lib/pro/admin/edit.php:655
-#: lib/std/admin/edit.php:677
-msgctxt "option label"
-msgid "Subject Same-As URLs"
-msgstr "URL pareilles au sujet"
-
-#: lib/gettext-pro.php:102 lib/pro/admin/edit.php:663
-#: lib/std/admin/edit.php:685
-msgctxt "option label"
-msgid "Subject Name"
-msgstr "Nom du sujet"
-
-#: lib/gettext-pro.php:103 lib/pro/admin/edit.php:670
-#: lib/std/admin/edit.php:693
-msgctxt "option label"
-msgid "Subject Description"
-msgstr "Description du sujet"
-
-#: lib/gettext-pro.php:104 lib/pro/admin/edit.php:677
-#: lib/std/admin/edit.php:701
-msgctxt "option label"
-msgid "Subject Image ID"
-msgstr "ID d'image du sujet"
-
-#. translators: Please ignore - translation uses a different text domain.
-#: lib/gettext-pro.php:105 lib/gettext-pro.php:190 lib/pro/admin/edit.php:684
-#: lib/pro/admin/edit.php:1358 lib/std/admin/edit.php:709
-#: lib/std/admin/edit.php:1258
-msgctxt "option label"
-msgid "or an Image URL"
-msgstr "ou URL d'une image"
-
-#: lib/gettext-pro.php:106 lib/pro/admin/edit.php:696
-#: lib/std/admin/edit.php:721
-msgctxt "metabox title"
-msgid "Creative Work Subject Information"
-msgstr "Informations sur le sujet de l'oeuvre"
-
-#: lib/gettext-pro.php:107 lib/pro/admin/edit.php:701
-#: lib/std/admin/edit.php:727
-msgctxt "option label"
-msgid "C.W. Author Type"
-msgstr "Type d'auteur de l'oeuvre"
-
-#: lib/gettext-pro.php:108 lib/pro/admin/edit.php:708
-#: lib/std/admin/edit.php:735
-msgctxt "option label"
-msgid "C.W. Author Name"
-msgstr "Nom d'auteur de l'oeuvre"
-
-#: lib/gettext-pro.php:109 lib/pro/admin/edit.php:715
-#: lib/std/admin/edit.php:743
-msgctxt "option label"
-msgid "C.W. Author URL"
-msgstr "URL d'auteur de l'oeuvre"
-
-#: lib/gettext-pro.php:110 lib/pro/admin/edit.php:722
-#: lib/std/admin/edit.php:751
-msgctxt "option label"
-msgid "C.W. Published Date"
-msgstr "Date de publi. de l'oeuvre"
-
-#: lib/gettext-pro.php:111 lib/pro/admin/edit.php:729
-#: lib/std/admin/edit.php:759
-msgctxt "option label"
-msgid "C.W. Created Date"
-msgstr "Date de création de l'oeuvre"
-
-#: lib/gettext-pro.php:112 lib/pro/admin/edit.php:741
-msgctxt "metabox title"
-msgid "Book Subject Information"
-msgstr "Informations du livre évalué"
-
-#: lib/gettext-pro.php:113 lib/pro/admin/edit.php:746
-msgctxt "option label"
-msgid "Book ISBN"
-msgstr "ISBN du livre"
-
-#: lib/gettext-pro.php:114 lib/pro/admin/edit.php:759
-msgctxt "metabox title"
-msgid "Movie Subject Information"
-msgstr "Informations sur le sujet du film"
-
-#: lib/gettext-pro.php:115 lib/pro/admin/edit.php:764
-msgctxt "option label"
-msgid "Movie Cast Names"
-msgstr "Noms des acteurs du film"
-
-#: lib/gettext-pro.php:116 lib/pro/admin/edit.php:772
-msgctxt "option label"
-msgid "Movie Director Names"
-msgstr "Noms des réalisateurs du film"
-
-#: lib/gettext-pro.php:117 lib/pro/admin/edit.php:785
-msgctxt "metabox title"
-msgid "Product Subject Information"
-msgstr "Informations sur le sujet du produit"
-
-#: lib/gettext-pro.php:118 lib/pro/admin/edit.php:790
-msgctxt "option label"
-msgid "Product Brand"
-msgstr "Marque du produit"
-
-#: lib/gettext-pro.php:119 lib/pro/admin/edit.php:797
-msgctxt "option label"
-msgid "Product Offers"
-msgstr "Offres du produit"
-
-#: lib/gettext-pro.php:120 lib/pro/admin/edit.php:801
-msgctxt "option label"
-msgid "Product Offer Name"
-msgstr "Nom de l'offre du produit"
-
-#: lib/gettext-pro.php:121 lib/pro/admin/edit.php:806
-msgctxt "option label"
-msgid "Product Offer Price"
-msgstr "Prix de l'offre du produit"
-
-#: lib/gettext-pro.php:122 lib/pro/admin/edit.php:811
-msgctxt "option label"
-msgid "Product Offer Currency"
-msgstr "Devise de l'offre du produit"
-
-#: lib/gettext-pro.php:123 lib/pro/admin/edit.php:820
-msgctxt "option label"
-msgid "Product Offer Availability"
-msgstr "Disponibilité de l'offre du produit"
-
-#: lib/gettext-pro.php:124 lib/pro/admin/edit.php:832
-msgctxt "option label"
-msgid "Product SKU"
-msgstr "SKU du produit"
-
-#: lib/gettext-pro.php:125 lib/pro/admin/edit.php:839
-msgctxt "option label"
-msgid "Product MPN"
-msgstr "MPN du produit"
-
-#: lib/gettext-pro.php:126 lib/pro/admin/edit.php:851
-msgctxt "metabox title"
-msgid "Software App Subject Information"
-msgstr "Informations d'application logicielle"
-
-#: lib/gettext-pro.php:127 lib/gettext-pro.php:138 lib/pro/admin/edit.php:856
-#: lib/pro/admin/edit.php:939 lib/std/admin/edit.php:803
-msgctxt "option label"
-msgid "Operating System"
-msgstr "Système d'exploitation"
-
-#: lib/gettext-pro.php:128 lib/gettext-pro.php:139 lib/pro/admin/edit.php:863
-#: lib/pro/admin/edit.php:946 lib/std/admin/edit.php:811
-msgctxt "option label"
-msgid "Application Category"
-msgstr "Catégorie d'application"
-
-#: lib/gettext-pro.php:129 lib/pro/admin/edit.php:870
-msgctxt "option label"
-msgid "Software App Offers"
-msgstr "Offres d'appli. logicielle"
-
-#: lib/gettext-pro.php:130 lib/pro/admin/edit.php:874
-msgctxt "option label"
-msgid "Software App Offer Name"
-msgstr "Nom de l'offre d'application logicielle"
-
-#: lib/gettext-pro.php:131 lib/pro/admin/edit.php:879
-msgctxt "option label"
-msgid "Software App Offer Price"
-msgstr "Prix de l'offre d'application logicielle"
-
-#: lib/gettext-pro.php:132 lib/pro/admin/edit.php:884
-msgctxt "option label"
-msgid "Software App Offer Currency"
-msgstr "Devise de l'offre d'application logicielle"
-
-#: lib/gettext-pro.php:133 lib/pro/admin/edit.php:893
-msgctxt "option label"
-msgid "Software App Offer Availability"
-msgstr "Disponibilité de l'offre d'application logicielle"
-
-#: lib/gettext-pro.php:134 lib/pro/admin/edit.php:910
-#: lib/std/admin/edit.php:771
-msgctxt "metabox title"
-msgid "Claim Subject Information"
-msgstr "Informations sur le sujet de la déclaration"
-
-#: lib/gettext-pro.php:135 lib/pro/admin/edit.php:915
-#: lib/std/admin/edit.php:777
-msgctxt "option label"
-msgid "Short Summary of Claim"
-msgstr "Résumé de la déclaration"
-
-#: lib/gettext-pro.php:136 lib/pro/admin/edit.php:922
-#: lib/std/admin/edit.php:785
-msgctxt "option label"
-msgid "First Appearance URL"
-msgstr "URL de première apparence"
-
-#: lib/gettext-pro.php:137 lib/pro/admin/edit.php:934
-#: lib/std/admin/edit.php:797
-msgctxt "metabox title"
-msgid "Software Application Information"
-msgstr "Informations sur l'application logicielle"
-
-#: lib/gettext-pro.php:140 lib/pro/admin/edit.php:958
-#: lib/std/admin/edit.php:823
-msgctxt "metabox title"
-msgid "QA Page Information"
-msgstr "Informations de page QA"
-
-#: lib/gettext-pro.php:141 lib/pro/admin/edit.php:963
-#: lib/std/admin/edit.php:829
-msgctxt "option label"
-msgid "QA Heading"
-msgstr "En-tête QA"
-
-#: lib/gettext-pro.php:143 lib/pro/admin/edit.php:980
-#: lib/std/admin/edit.php:847
-msgctxt "option label"
-msgid "Event Language"
-msgstr "Langue de l'événement"
-
-#: lib/gettext-pro.php:144 lib/pro/admin/edit.php:987
-#: lib/std/admin/edit.php:855
-msgctxt "option label"
-msgid "Event Attendance"
-msgstr "Participation pour l'événement"
-
-#: lib/gettext-pro.php:145 lib/pro/admin/edit.php:995
-#: lib/std/admin/edit.php:864
-msgctxt "option label"
-msgid "Event Online URL"
-msgstr "URL de l'événement en ligne"
-
-#: lib/gettext-pro.php:146 lib/pro/admin/edit.php:1002
-#: lib/std/admin/edit.php:872
-msgctxt "option label"
-msgid "Event Physical Venue"
-msgstr "Lieu physique pour l'événement"
-
-#: lib/gettext-pro.php:147 lib/pro/admin/edit.php:1010
-#: lib/std/admin/edit.php:881
-msgctxt "option label"
-msgid "Organizer (Org)"
-msgstr "Organisateur (org)"
-
-#: lib/gettext-pro.php:148 lib/pro/admin/edit.php:1018
-#: lib/std/admin/edit.php:890
-msgctxt "option label"
-msgid "Organizer (Person)"
-msgstr "Organisateur (personne)"
-
-#: lib/gettext-pro.php:149 lib/pro/admin/edit.php:1027
-#: lib/std/admin/edit.php:899
-msgctxt "option label"
-msgid "Performer (Org)"
-msgstr "Interprète (org)"
-
-#: lib/gettext-pro.php:150 lib/pro/admin/edit.php:1035
-#: lib/std/admin/edit.php:908
-msgctxt "option label"
-msgid "Performer (Person)"
-msgstr "Interprète (personne)"
-
-#: lib/gettext-pro.php:151 lib/pro/admin/edit.php:1044
-#: lib/std/admin/edit.php:917
-msgctxt "option label"
-msgid "Event Status"
-msgstr "Statut de l'événement"
-
-#: lib/gettext-pro.php:152 lib/pro/admin/edit.php:1052
-#: lib/std/admin/edit.php:926
-msgctxt "option label"
-msgid "Event Start"
-msgstr "Début de l'événement"
-
-#: lib/gettext-pro.php:153 lib/pro/admin/edit.php:1059
-#: lib/std/admin/edit.php:934
-msgctxt "option label"
-msgid "Event End"
-msgstr "Fin de l'événement"
-
-#: lib/gettext-pro.php:154 lib/pro/admin/edit.php:1066
-#: lib/std/admin/edit.php:942
-msgctxt "option label"
-msgid "Event Previous Start"
-msgstr "Début précédent de l'événement"
-
-#: lib/gettext-pro.php:155 lib/pro/admin/edit.php:1073
-#: lib/std/admin/edit.php:950
-msgctxt "option label"
-msgid "Event Offers Start"
-msgstr "Début des offres de l'événement"
-
-#: lib/gettext-pro.php:156 lib/pro/admin/edit.php:1080
-#: lib/std/admin/edit.php:958
-msgctxt "option label"
-msgid "Event Offers End"
-msgstr "Fin des offres de l'événement"
-
-#: lib/gettext-pro.php:157 lib/pro/admin/edit.php:1087
-#: lib/std/admin/edit.php:966
-msgctxt "option label"
-msgid "Event Offers"
-msgstr "Offres pour l'événement"
-
-#: lib/gettext-pro.php:158 lib/pro/admin/edit.php:1091
-#: lib/std/admin/edit.php:970
-msgctxt "option label"
-msgid "Event Offer Name"
-msgstr "Nom de l'offre pour l'événement"
-
-#: lib/gettext-pro.php:159 lib/pro/admin/edit.php:1096
-#: lib/std/admin/edit.php:975
-msgctxt "option label"
-msgid "Event Offer Price"
-msgstr "Prix de l'offre pour l'événement"
-
-#: lib/gettext-pro.php:160 lib/pro/admin/edit.php:1101
-#: lib/std/admin/edit.php:980
-msgctxt "option label"
-msgid "Event Offer Currency"
-msgstr "Devise de l'offre pour l'événement"
-
-#: lib/gettext-pro.php:161 lib/pro/admin/edit.php:1110
-#: lib/std/admin/edit.php:987
-msgctxt "option label"
-msgid "Event Offer Availability"
-msgstr "Disponibilité de l'offre pour l'événement"
-
-#: lib/gettext-pro.php:163 lib/pro/admin/edit.php:1132
-#: lib/std/admin/edit.php:1010
-msgctxt "option label"
-msgid "Job Title"
-msgstr "Titre du poste"
-
-#: lib/gettext-pro.php:164 lib/pro/admin/edit.php:1139
-#: lib/std/admin/edit.php:1018
-msgctxt "option label"
-msgid "Hiring Organization"
-msgstr "Organisation d'embauche"
-
-#: lib/gettext-pro.php:165 lib/pro/admin/edit.php:1147
-#: lib/std/admin/edit.php:1027
-msgctxt "option label"
-msgid "Job Location"
-msgstr "Emplacement de travail"
-
-#: lib/gettext-pro.php:166 lib/pro/admin/edit.php:1155
-#: lib/std/admin/edit.php:1036
-msgctxt "option label"
-msgid "Base Salary"
-msgstr "Salaire de base"
-
-#: lib/gettext-pro.php:167 lib/pro/admin/edit.php:1161
-#: lib/std/admin/edit.php:1040
-msgctxt "option comment"
-msgid "per"
-msgstr "par"
-
-#: lib/gettext-pro.php:168 lib/pro/admin/edit.php:1167
-#: lib/std/admin/edit.php:1047
-msgctxt "option label"
-msgid "Employment Type"
-msgstr "Type d'emploi"
-
-#: lib/gettext-pro.php:169 lib/pro/admin/edit.php:1174
-#: lib/std/admin/edit.php:1055
-msgctxt "option label"
-msgid "Job Posting Expires"
-msgstr "L'offre d'emploi expire"
-
-#: lib/gettext-pro.php:170 lib/pro/admin/edit.php:1186
-#: lib/std/admin/edit.php:1067
-msgctxt "metabox title"
-msgid "Organization Information"
-msgstr "Informations d'organisation"
-
-#: lib/gettext-pro.php:171 lib/pro/admin/edit.php:1191
-#: lib/std/admin/edit.php:1073
-msgctxt "option label"
-msgid "Select an Organization"
-msgstr "Choisir une organisation"
-
-#: lib/gettext-pro.php:172 lib/pro/admin/edit.php:1205
-#: lib/std/admin/edit.php:1087
-msgctxt "metabox title"
-msgid "Person Information"
-msgstr "Informations de personne"
-
-#: lib/gettext-pro.php:173 lib/pro/admin/edit.php:1210
-#: lib/std/admin/edit.php:1093
-msgctxt "option label"
-msgid "Select a Person"
-msgstr "Choisir une personne"
-
-#: lib/gettext-pro.php:174 lib/pro/admin/edit.php:1226
-#: lib/std/admin/edit.php:1108
-msgctxt "metabox title"
-msgid "Additional Product Information"
-msgstr "Informations supplémentaire du produit"
-
-#: lib/gettext-pro.php:175 lib/pro/admin/edit.php:1236
-#: lib/std/admin/edit.php:1119
-msgctxt "option label"
-msgid "Product Length"
-msgstr "Longueur du produit"
-
-#: lib/gettext-pro.php:176 lib/pro/admin/edit.php:1244
-#: lib/std/admin/edit.php:1128
-msgctxt "option label"
-msgid "Product Width"
-msgstr "Largeur du produit"
-
-#: lib/gettext-pro.php:177 lib/pro/admin/edit.php:1252
-#: lib/std/admin/edit.php:1137
-msgctxt "option label"
-msgid "Product Height"
-msgstr "Hauteur du produit"
-
-#: lib/gettext-pro.php:178 lib/pro/admin/edit.php:1260
-#: lib/std/admin/edit.php:1146
-msgctxt "option label"
-msgid "Product Depth"
-msgstr "Profondeur du produit"
-
-#: lib/gettext-pro.php:179 lib/pro/admin/edit.php:1268
-#: lib/std/admin/edit.php:1155
-msgctxt "option label"
-msgid "Product Fluid Volume"
-msgstr "Volume fluide du produit"
-
-#: lib/gettext-pro.php:180 lib/pro/admin/edit.php:1276
-#: lib/std/admin/edit.php:1164
-msgctxt "option label"
-msgid "Product GTIN-14"
-msgstr "GTIN-14 du produit"
-
-#: lib/gettext-pro.php:181 lib/pro/admin/edit.php:1283
-#: lib/std/admin/edit.php:1172
-msgctxt "option label"
-msgid "Product GTIN-13 (EAN)"
-msgstr "GTIN-13 (EAN) du produit"
-
-#: lib/gettext-pro.php:182 lib/pro/admin/edit.php:1290
-#: lib/std/admin/edit.php:1180
-msgctxt "option label"
-msgid "Product GTIN-12 (UPC)"
-msgstr "GTIN-12 (UPC) du produit"
-
-#: lib/gettext-pro.php:183 lib/pro/admin/edit.php:1297
-#: lib/std/admin/edit.php:1188
-msgctxt "option label"
-msgid "Product GTIN-8"
-msgstr "GTIN-8 du produit"
-
-#: lib/gettext-pro.php:184 lib/pro/admin/edit.php:1304
-#: lib/std/admin/edit.php:1196
-msgctxt "option label"
-msgid "Product GTIN"
-msgstr "GTIN du produit"
-
-#. translators: Please ignore - translation uses a different text domain.
-#: lib/gettext-pro.php:186 lib/pro/admin/edit.php:1341
-#: lib/std/admin/edit.php:1239
-msgctxt "option label"
-msgid "Maximum Images"
-msgstr "Images maximum"
-
-#: lib/gettext-pro.php:191 lib/pro/admin/edit.php:1378
-#: lib/std/admin/edit.php:1278
-msgctxt "option comment"
-msgid "days"
-msgstr "jours"
-
-#: lib/gettext-pro.php:192 lib/pro/admin/edit.php:1379
-#: lib/std/admin/edit.php:1279
-msgctxt "option comment"
-msgid "hours"
-msgstr "heures"
-
-#: lib/gettext-pro.php:193 lib/pro/admin/edit.php:1380
-#: lib/std/admin/edit.php:1280
-msgctxt "option comment"
-msgid "mins"
-msgstr "mins"
-
-#: lib/gettext-pro.php:194 lib/pro/admin/edit.php:1381
-#: lib/std/admin/edit.php:1281
-msgctxt "option comment"
-msgid "secs"
-msgstr "secs"
 
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag, %3$s is the type attribute value
 #: lib/shortcode/schema.php:186
