@@ -72,9 +72,9 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaShortcode' ) && class_exists( 'Wpsso
 
 		public function show_metabox_schema_shortcode() {
 
-			echo '<table class="sucom-settings '.$this->p->lca.' html-content-metabox">';
+			echo '<table class="sucom-settings ' . $this->p->lca . ' html-content-metabox">';
 			echo '<tr><td>';
-			echo $this->get_config_url_content( 'wpssojson', 'html/shortcode.html' );
+			echo $this->get_config_url_content( $ext = 'wpssojson', $rel_file = 'html/shortcode.html' );
 			echo '</td></tr></table>';
 		}
 	}
