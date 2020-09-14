@@ -83,7 +83,7 @@ if ( ! class_exists( 'WpssoJsonFiltersUpgrade' ) ) {
 					'schema_question_desc' => 'schema_qa_desc',
 				),
 				26 => array(
-					'schema_part_of_url' => 'schema_ispartof_url',
+					'schema_part_of_url' => 'schema_ispartof_url_0',
 				),
 				32 => array(
 					'schema_review_claim_author_type'   => 'schema_review_item_cw_author_type',
