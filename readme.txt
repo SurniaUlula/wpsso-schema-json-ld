@@ -312,7 +312,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.3.0-rc.1 (2020/09/15)**
+**Version 4.3.0 (2020/09/15)**
 
 * **New Features**
 	* None.
@@ -327,7 +327,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v8.4.1.
+	* WPSSO Core v8.5.0.
 
 **Version 4.2.1 (2020/09/11)**
 
@@ -405,11 +405,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.3.0-rc.1 =
+= 4.3.0 =
 
 (2020/09/15) Added translation support for the SSO &gt; Schema Shortcode Guide page.
-
-= 4.2.1 =
-
-(2020/09/11) Added custom CSS filters for Yoast SEO and Rank Math in the WpssoJsonCompat class.
 
