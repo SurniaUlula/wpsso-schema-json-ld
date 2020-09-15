@@ -341,6 +341,11 @@ msgid "Schema Shortcode Guide"
 msgstr ""
 
 #: gettext/gettext-lib-config.php:42
+msgctxt "plugin name"
+msgid "WPSSO Schema JSON-LD Markup"
+msgstr ""
+
+#: gettext/gettext-lib-config.php:43
 msgctxt "plugin description"
 msgid ""
 "Google Rich Results and Structured Data for Articles, Carousels (aka Item "

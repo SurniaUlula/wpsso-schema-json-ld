@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WPSSO Schema JSON-LD Markup 4.3.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
 "POT-Creation-Date: 2020-09-14 11:17-0700\n"
-"PO-Revision-Date: 2020-09-14 11:17-0700\n"
+"PO-Revision-Date: 2020-09-15 08:45-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -1985,7 +1985,7 @@ msgstr "L'ajout %1$s version %2$s nécessite %3$s version %4$s ou plus récente 
 
 #. Plugin Name of the plugin/theme
 msgid "WPSSO Schema JSON-LD Markup"
-msgstr "WPSSO Schema JSON-LD Markup"
+msgstr "Balisage JSON-LD de Schéma WPSSO"
 
 #. Plugin URI of the plugin/theme
 msgid "https://wpsso.com/extend/plugins/wpsso-schema-json-ld/"
