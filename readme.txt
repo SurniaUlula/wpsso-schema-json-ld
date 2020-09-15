@@ -312,7 +312,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.3.0-dev.2 (2020/09/14)**
+**Version 4.3.0-b.1 (2020/09/15)**
 
 * **New Features**
 	* None.
@@ -403,9 +403,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.3.0-dev.2 =
+= 4.3.0-b.1 =
 
-(2020/09/14) Added translation support for the SSO &gt; Schema Shortcode Guide page.
+(2020/09/15) Added translation support for the SSO &gt; Schema Shortcode Guide page.
 
 = 4.2.1 =
 
