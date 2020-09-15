@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.3.0-b.1\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.3.0-b.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-"
 "ld\n"
 "POT-Creation-Date: 2020-MO-DA HO:MI+ZONE\n"
@@ -2108,74 +2108,73 @@ msgstr ""
 
 #: lib/submenu/schema-general.php:38
 msgctxt "metabox title"
-msgid "Schema Markup"
+msgid "Schema Markup Settings"
 msgstr ""
 
-#. translators: Please ignore - translation uses a different text domain.
-#: lib/submenu/schema-general.php:51
+#: lib/submenu/schema-general.php:50
 msgctxt "metabox title"
-msgid "Advanced Settings"
+msgid "Advanced Settings (%s)"
 msgstr ""
 
-#: lib/submenu/schema-general.php:70
+#: lib/submenu/schema-general.php:69
 msgctxt "metabox tab"
 msgid "General Settings"
 msgstr ""
 
-#: lib/submenu/schema-general.php:71
+#: lib/submenu/schema-general.php:70
 msgctxt "metabox tab"
 msgid "Schema Defaults"
 msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/submenu/schema-general.php:103
+#: lib/submenu/schema-general.php:102
 msgctxt "metabox tab"
 msgid "Schema Types"
 msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/submenu/schema-general.php:105
+#: lib/submenu/schema-general.php:104
 msgctxt "metabox tab"
 msgid "Product Attributes"
 msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/submenu/schema-general.php:107
+#: lib/submenu/schema-general.php:106
 msgctxt "metabox tab"
-msgid "Custom Fields (Metadata)"
+msgid "Custom Fields"
 msgstr ""
 
-#: lib/submenu/schema-general.php:183
+#: lib/submenu/schema-general.php:182
 msgctxt "option label"
 msgid "WebSite Name"
 msgstr ""
 
-#: lib/submenu/schema-general.php:189
+#: lib/submenu/schema-general.php:188
 msgctxt "option label"
 msgid "WebSite Alternate Name"
 msgstr ""
 
-#: lib/submenu/schema-general.php:194
+#: lib/submenu/schema-general.php:193
 msgctxt "option label"
 msgid "WebSite Description"
 msgstr ""
 
-#: lib/submenu/schema-general.php:202
+#: lib/submenu/schema-general.php:201
 msgctxt "option label"
 msgid "Text and Article Body Max. Length"
 msgstr ""
 
-#: lib/submenu/schema-general.php:205
+#: lib/submenu/schema-general.php:204
 msgctxt "option comment"
 msgid "characters or less"
 msgstr ""
 
-#: lib/submenu/schema-general.php:208
+#: lib/submenu/schema-general.php:207
 msgctxt "option label"
 msgid "Add Text and Article Body Properties"
 msgstr ""
 
-#: lib/submenu/schema-general.php:213
+#: lib/submenu/schema-general.php:212
 msgctxt "option label"
 msgid "Add 5 Star Rating If No Rating"
 msgstr ""

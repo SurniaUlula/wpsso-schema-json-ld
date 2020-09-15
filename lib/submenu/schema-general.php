@@ -35,7 +35,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 			$this->maybe_show_language_notice();
 
 			$metabox_id      = 'general';
-			$metabox_title   = _x( 'Schema Markup', 'metabox title', 'wpsso-schema-json-ld' );
+			$metabox_title   = _x( 'Schema Markup Settings', 'metabox title', 'wpsso-schema-json-ld' );
 			$metabox_screen  = $this->pagehook;
 			$metabox_context = 'normal';
 			$metabox_prio    = 'default';
@@ -47,8 +47,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 					$metabox_context, $metabox_prio, $callback_args );
 
 			$metabox_id      = 'advanced';
-			// translators: Please ignore - translation uses a different text domain.
-			$metabox_title   = _x( 'Advanced Settings', 'metabox title', 'wpsso' );
+			$metabox_title   = sprintf( _x( 'Advanced Settings (%s)', 'metabox title', 'wpsso' ), self::$pkg[ $this->p->lca ][ 'short' ] );
 			$metabox_screen  = $this->pagehook;
 			$metabox_context = 'normal';
 			$metabox_prio    = 'default';
@@ -104,7 +103,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 				// translators: Please ignore - translation uses a different text domain.
 				'product_attrs' => _x( 'Product Attributes', 'metabox tab', 'wpsso' ),
 				// translators: Please ignore - translation uses a different text domain.
-				'custom_fields' => _x( 'Custom Fields (Metadata)', 'metabox tab', 'wpsso' ),
+				'custom_fields' => _x( 'Custom Fields', 'metabox tab', 'wpsso' ),
 			) );
 
 			$table_rows = array();
