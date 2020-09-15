@@ -317,6 +317,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **New Features**
 	* None.
 * **Improvements**
+	* Updated the French plugin translations.
 	* Added translation support for the SSO &gt; Schema Shortcode Guide page.
 * **Bugfixes**
 	* None.
