@@ -312,7 +312,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.3.0-b.1 (2020/09/15)**
+**Version 4.3.0-b.2 (2020/09/15)**
 
 * **New Features**
 	* None.
@@ -321,7 +321,8 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* None.
+	* Moved extracted translation strings from lib/gettext-*.php files to a new gettext/ folder.
+	* Added a new gettext/gettext-html-shortcode.php file to translate the Schema Shortcode Guide.
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
@@ -403,7 +404,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.3.0-b.1 =
+= 4.3.0-b.2 =
 
 (2020/09/15) Added translation support for the SSO &gt; Schema Shortcode Guide page.
 
