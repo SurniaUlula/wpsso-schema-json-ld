@@ -312,6 +312,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 4.3.1-dev.3 (2020/09/17)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Added a conflict notification for the Yoast SEO: WooCommerce plugin.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Added a new WpssoJsonConflict class in lib/conflict.php.
+* **Requires At Least**
+	* PHP v5.6.
+	* WordPress v4.2.
+	* WPSSO Core v8.5.0.
+
 **Version 4.3.0 (2020/09/15)**
 
 * **New Features**
@@ -404,6 +419,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v8.0.0.
 
 == Upgrade Notice ==
+
+= 4.3.1-dev.3 =
+
+(2020/09/17) Added a conflict notification for the Yoast SEO: WooCommerce plugin.
 
 = 4.3.0 =
 
