@@ -15,7 +15,7 @@
  * Requires At Least: 4.2
  * Tested Up To: 5.5.1
  * WC Tested Up To: 4.5.2
- * Version: 4.3.0
+ * Version: 4.3.1-dev.3
  * 
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -45,6 +45,7 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 		 * Library class object variables.
 		 */
 		public $compat;		// WpssoJsonCompat (3rd party plugin and theme compatibility actions and filters).
+		public $conflict;	// WpssoJsonConflict (admin plugin conflict checks).
 		public $filters;	// WpssoJsonFilters.
 		public $reg;		// WpssoJsonRegister.
 
@@ -151,6 +152,8 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 				$this->p->debug->mark();
 			}
 
+			$is_admin = is_admin();
+
 			if ( self::get_missing_requirements() ) {	// Returns false or an array of missing requirements.
 
 				if ( $this->p->debug->enabled ) {
@@ -163,6 +166,13 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 
 			$this->compat  = new WpssoJsonCompat( $this->p );	// 3rd party plugin and theme compatibility actions and filters.
 			$this->filters = new WpssoJsonFilters( $this->p );
+
+			if ( $is_admin ) {
+
+				require_once WPSSOJSON_PLUGINDIR . 'lib/conflict.php';
+
+				$this->conflict = new WpssoJsonConflict( $this->p );	// Admin plugin conflict checks.
+			}
 		}
 
 		/**
