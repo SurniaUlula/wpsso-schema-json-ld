@@ -17,6 +17,9 @@ if ( ! defined( 'WPSSO_PLUGINDIR' ) ) {
 
 if ( ! class_exists( 'WpssoJsonConflict' ) ) {
 
+	/**
+	 * Since WPSSO JSON v4.3.1.
+	 */
 	class WpssoJsonConflict {
 
 		private $p;
