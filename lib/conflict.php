@@ -50,7 +50,7 @@ if ( ! class_exists( 'WpssoJsonConflict' ) ) {
 		private function conflict_check_seo() {
 
 			/**
-			 * Yoast SEO for WooCommerce.
+			 * Yoast WooCommerce SEO.
 			 */
 			if ( $this->p->avail[ 'seo' ][ 'wpseo-wc' ] ) {
 
@@ -58,7 +58,7 @@ if ( ! class_exists( 'WpssoJsonConflict' ) ) {
 				$ext = 'wpssojson';
 				$pkg = $this->p->admin->plugin_pkg_info();
 
-				$wpseo_wc_label = 'Yoast SEO: WooCommerce';
+				$wpseo_wc_label = 'Yoast WooCommerce SEO';
 
 				if ( ! empty( $pkg[ $lca ][ 'pp' ] ) && ! empty( $pkg[ $ext ][ 'pp' ] ) ) {
 
