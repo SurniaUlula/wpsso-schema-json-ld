@@ -1398,17 +1398,17 @@ msgctxt "option comment"
 msgid "secs"
 msgstr ""
 
-#: lib/conflict.php:68
+#: lib/conflict.php:67
 msgid ""
 "The combination of %1$s and its %2$s add-on provide much better Schema "
 "markup for WooCommerce products than the %3$s plugin."
 msgstr ""
 
-#: lib/conflict.php:70
+#: lib/conflict.php:69
 msgid "There is absolutely no advantage in continuing to use the %1$s plugin."
 msgstr ""
 
-#: lib/conflict.php:72
+#: lib/conflict.php:71
 msgid ""
 "To avoid adding incorrect and confusing Schema markup in your webpages, <a "
 "href=\"%1$s\">please deactivate the %2$s plugin immediately</a>."

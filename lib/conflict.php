@@ -54,18 +54,17 @@ if ( ! class_exists( 'WpssoJsonConflict' ) ) {
 			 */
 			if ( $this->p->avail[ 'seo' ][ 'wpseo-wc' ] ) {
 
-				$lca = $this->p->lca;
-				$ext = 'wpssojson';
 				$pkg = $this->p->admin->plugin_pkg_info();
 
 				$wpseo_wc_label = 'Yoast WooCommerce SEO';
 
-				if ( ! empty( $pkg[ $lca ][ 'pp' ] ) && ! empty( $pkg[ $ext ][ 'pp' ] ) ) {
+				if ( ! empty( $pkg[ 'wpsso' ][ 'pp' ] ) ) {
 
 					$plugins_url = is_multisite() ? network_admin_url( 'plugins.php', null ) : get_admin_url( $blog_id = null, 'plugins.php' );
+
 					$plugins_url = add_query_arg( array( 's' => 'yoast seo' ), $plugins_url );
 
-					$notice_msg = sprintf( __( 'The combination of %1$s and its %2$s add-on provide much better Schema markup for WooCommerce products than the %3$s plugin.', 'wpsso' ), $pkg[ $lca ][ 'short_pro' ], $pkg[ $ext ][ 'short_pro' ], $wpseo_wc_label ) . ' ';
+					$notice_msg = sprintf( __( 'The combination of %1$s and its %2$s add-on provide much better Schema markup for WooCommerce products than the %3$s plugin.', 'wpsso' ), $pkg[ 'wpsso' ][ 'short_pro' ], $pkg[ 'wpssojson' ][ 'short' ], $wpseo_wc_label ) . ' ';
 
 					$notice_msg .= sprintf( __( 'There is absolutely no advantage in continuing to use the %1$s plugin.', 'wpsso' ), $wpseo_wc_label ) . ' ';
 
