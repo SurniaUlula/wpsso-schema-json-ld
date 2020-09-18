@@ -317,7 +317,13 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **New Features**
 	* None.
 * **Improvements**
-	* Added a conflict notification for the Yoast SEO: WooCommerce plugin.
+	* Added a conflict notification for the Yoast WooCommerce SEO plugin.
+	* Added new Schema Review sub-types:
+		* https://schema.org/CriticReview
+		* https://schema.org/EmployerReview
+		* https://schema.org/MediaReview
+		* https://schema.org/Recommendation
+		* https://schema.org/UserReview
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -422,7 +428,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 4.3.1-b.1 =
 
-(2020/09/18) Added a conflict notification for the Yoast SEO: WooCommerce plugin.
+(2020/09/18) Added a conflict notification for the Yoast WooCommerce SEO plugin.
 
 = 4.3.0 =
 
