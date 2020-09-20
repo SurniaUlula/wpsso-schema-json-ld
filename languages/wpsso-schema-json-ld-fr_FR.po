@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Schema JSON-LD Markup 4.3.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-09-18 10:48-0700\n"
-"PO-Revision-Date: 2020-09-18 10:51-0700\n"
+"POT-Creation-Date: 2020-09-20 10:56-0700\n"
+"PO-Revision-Date: 2020-09-20 10:56-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -189,16 +189,11 @@ msgid "Schema Markup"
 msgstr "Balisage Schéma"
 
 #: gettext/gettext-lib-config.php:41
-msgctxt "lib file description"
-msgid "Schema Shortcode Guide"
-msgstr "Guide code court Schéma"
-
-#: gettext/gettext-lib-config.php:42
 msgctxt "plugin name"
 msgid "WPSSO Schema JSON-LD Markup"
 msgstr "WPSSO balisage JSON-LD de Schéma"
 
-#: gettext/gettext-lib-config.php:43
+#: gettext/gettext-lib-config.php:42
 msgctxt "plugin description"
 msgid "Google Rich Results and Structured Data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Videos, and More."
 msgstr "Résultats riche et données structurées Google pour articles, carrousels,, évaluations de déclarations, événements, pages FAQ, étapes pratiques, images, entreprise / référencement locale, organisations, produits, recettes, restaurants, critiques, videos, et plus."
@@ -1915,11 +1910,6 @@ msgstr "Ajouter prop. texte et corps d'article"
 msgctxt "option label"
 msgid "Add 5 Star Rating If No Rating"
 msgstr "Ajouter note 5 étoiles si aucune note"
-
-#: lib/submenu/schema-shortcode.php:61
-msgctxt "metabox title"
-msgid "Schema Shortcode"
-msgstr "Code court de Schéma"
 
 #: wpsso-schema-json-ld.php:283
 msgid "The %1$s version %2$s add-on requires the %3$s plugin &mdash; please activate the missing plugin."
