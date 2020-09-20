@@ -191,16 +191,11 @@ msgid "Schema Markup"
 msgstr ""
 
 #: gettext/gettext-lib-config.php:41
-msgctxt "lib file description"
-msgid "Schema Shortcode Guide"
-msgstr ""
-
-#: gettext/gettext-lib-config.php:42
 msgctxt "plugin name"
 msgid "WPSSO Schema JSON-LD Markup"
 msgstr ""
 
-#: gettext/gettext-lib-config.php:43
+#: gettext/gettext-lib-config.php:42
 msgctxt "plugin description"
 msgid ""
 "Google Rich Results and Structured Data for Articles, Carousels (aka Item "
@@ -2053,11 +2048,6 @@ msgstr ""
 #: lib/submenu/schema-general.php:212
 msgctxt "option label"
 msgid "Add 5 Star Rating If No Rating"
-msgstr ""
-
-#: lib/submenu/schema-shortcode.php:61
-msgctxt "metabox title"
-msgid "Schema Shortcode"
 msgstr ""
 
 #: wpsso-schema-json-ld.php:283

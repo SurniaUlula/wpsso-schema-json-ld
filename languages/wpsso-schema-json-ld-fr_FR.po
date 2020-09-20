@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.3.0\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.3.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-09-15 11:06-0700\n"
-"PO-Revision-Date: 2020-09-15 11:07-0700\n"
+"POT-Creation-Date: 2020-09-18 10:48-0700\n"
+"PO-Revision-Date: 2020-09-18 10:51-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -12,76 +12,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-
-#: gettext/gettext-html-shortcode.php:6
-msgctxt "html header"
-msgid "Practical Examples"
-msgstr ""
-
-#: gettext/gettext-html-shortcode.php:7
-msgctxt "html header"
-msgid "Customer Reviews"
-msgstr ""
-
-#: gettext/gettext-html-shortcode.php:8
-msgctxt "html header"
-msgid "Aggregate Ratings"
-msgstr ""
-
-#: gettext/gettext-html-shortcode.php:9
-msgctxt "html paragraph"
-msgid "The <a href=\"https://wordpress.org/plugins/wpsso-schema-json-ld/\">WPSSO Schema JSON-LD Markup add-on</a> provides extensive support for hundreds of Schema types and the <a href=\"https://wpsso.com/extend/plugins/wpsso/\">WPSSO Core Premium plugin</a> can pull information from dozens of supported 3rd party plugins and service APIs. The most popular Schema properties can be customized easily in the <em>Document SSO</em> metabox, and if necessary, the <code>&#91;schema&#93;</code> shortcode can also be used to define additional (non-standard) properties and types for sections of your content."
-msgstr ""
-
-#: gettext/gettext-html-shortcode.php:10
-msgctxt "html paragraph"
-msgid "PLEASE NOTE that the <code>&#91;schema&#93;</code> shortcode is meant for <strong>advanced users only</strong> and is not required for WPSSO Core and WPSSO JSON to create complete and accurate Schema JSON-LD markup for your content. You should not use the <code>&#91;schema&#93;</code> shortcode unless you're familiar and comfortable with <a href=\"https://schema.org\">https://schema.org</a> markup &mdash; and have a very specific / non-standard requirement. If you use the <code>&#91;schema&#93;</code> shortcode, make sure you always validate any change with the <a href=\"https://search.google.com/test/rich-results\">Google Rich Results Test</a> tool."
-msgstr ""
-
-#: gettext/gettext-html-shortcode.php:11
-msgctxt "html paragraph"
-msgid "The <code>&#91;schema&#93;</code> shortcode can be used to define additional properties for the content. The following example defines an 'articleSection' property for the Schema Article type. Note that all shortcode attributes are considered to be Schema property names, except for the 'prop' and 'type' attribute names, which have special meaning (see below)."
-msgstr ""
-
-#: gettext/gettext-html-shortcode.php:12
-msgctxt "html paragraph"
-msgid "The <code>&#91;schema&#93;</code> shortcode can also be used to define a Schema type for a section of content, along with using that section of content for the Schema type description and its media properties. The following example defines a section of content as a Schema Map type. Please note that the 'type' value can be a WPSSO Schema type ID (as shown here) or a complete <a href=\"https://schema.org\">https://schema.org</a> URL. When using the 'type' shortcode attribute, the 'prop' shortcode attribute is required (so the Schema type can be assigned to a Schema property). WPSSO JSON will automatically detect and include the example image in the Schema Map content."
-msgstr ""
-
-#: gettext/gettext-html-shortcode.php:13
-msgctxt "html paragraph"
-msgid "By default, the <code>&#91;schema&#93;</code> shortcode merges / repaces existing Schema property values &mdash; if instead you want to <em>add</em> a new element to the Schema property array, prefix the 'prop' attribute value with a '+' sign. For example, the following shortcodes will create an offers array with two price specifications (see below for additional notes on using nested shortcodes)."
-msgstr ""
-
-#: gettext/gettext-html-shortcode.php:14
-msgctxt "html paragraph"
-msgid "The resulting JSON-LD array:"
-msgstr ""
-
-#: gettext/gettext-html-shortcode.php:15
-msgctxt "html paragraph"
-msgid "<strong>Please note that WordPress is not currently able to parse nested shortcodes</strong>, so the following shortcode structure is not supported by WordPress."
-msgstr ""
-
-#: gettext/gettext-html-shortcode.php:16
-msgctxt "html paragraph"
-msgid "<strong>The WPSSO JSON add-on <em>does</em> support nested shortcodes</strong>, but a numeric extension must be used to work around the WordPress limitation. WPSSO JSON supports up to 3 levels of nesting (by default), as the following example illustrates."
-msgstr ""
-
-#: gettext/gettext-html-shortcode.php:17
-msgctxt "html paragraph"
-msgid "You can add (and maintain) customer reviews in your content manually using this example, but <strong>a much better (and more scalable) solution is to use a proper content rating / review plugin</strong>, like the <a href=\"https://wordpress.org/plugins/wpsso-ratings-and-reviews/\">WPSSO Ratings and Reviews</a> add-on, which adds customer ratings, reviews, replies and aggregate ratings markup automatically. The WPSSO Core Premium plugin also supports ratings and reviews from the <a href=\"https://wordpress.org/plugins/woocommerce/\">WooCommerce</a> and <a href=\"https://wordpress.org/plugins/wp-postratings/\">WP-PostRatings</a> plugins."
-msgstr ""
-
-#: gettext/gettext-html-shortcode.php:18
-msgctxt "html paragraph"
-msgid "Note that we're using Schema type IDs from WPSSO in this example &mdash; using <code>type=\"review\"</code> is the same as using <code>type=\"https://schema.org/Review\"</code>. Also note the use of a leading \"+\" sign in the first <code>&#91;schema&#93;</code> shortcode 'prop' attribute &mdash; this tells WPSSO JSON to add this property as an array, so several reviews can be included this way. WPSSO JSON handles nested shortcodes, but WordPress does not, so nested shortcodes must be numbered for WordPress (schema, schema_1, schema_2, etc.). Don't forget to terminate the shortcode enclosure &mdash; it can be easy to forget that closing <code>&#91;/schema&#93;</code> tag. ;-)"
-msgstr ""
-
-#: gettext/gettext-html-shortcode.php:19
-msgctxt "html paragraph"
-msgid "Again, you can add (and maintain) aggregate rating values in your content manually using this example, but <strong>a much better (and more scalable) solution is to use a proper content rating / review plugin</strong>. ;-) And in case you're using a non-supported rating / review plugin &mdash; that saves aggregate rating values in post meta &mdash; instead of using a shortcode, you can also use a <a href=\"https://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/developer/filters/examples/modify-the-aggregaterating-property/\">plugin filter to update the Schema aggregateRating property value</a>."
-msgstr ""
 
 #: gettext/gettext-lib-config.php:6
 msgctxt "lib file description"
@@ -1317,6 +1247,18 @@ msgctxt "option comment"
 msgid "secs"
 msgstr "secs"
 
+#: lib/conflict.php:70
+msgid "The combination of %1$s and its %2$s add-on provide much better Schema markup for WooCommerce products than the %3$s plugin."
+msgstr "La combinaison de %1$s et son ajout %2$s fournit un bien meilleur balisage de Schéma pour les produits WooCommerce que l'extension %3$s."
+
+#: lib/conflict.php:72
+msgid "There is absolutely no advantage in continuing to use the %1$s plugin."
+msgstr "Il n'y a absolument aucun avantage à continuer à utiliser l'extension %1$s."
+
+#: lib/conflict.php:74
+msgid "To avoid adding incorrect and confusing Schema markup in your webpages, <a href=\"%1$s\">please deactivate the %2$s plugin immediately</a>."
+msgstr "Pour éviter d'ajouter un balisage de Schéma incorrect et déroutant dans vos pages Web, <a href=\"%1$s\">veuillez désactiver l'extension %2$s immédiatement</a>."
+
 #: lib/filters/prop/aggregaterating.php:193
 msgid "An aggregate rating value for this markup has been ignored &mdash; <a href=\"%1$s\">Google does not allow an aggregate rating value for the Schema Type %2$s</a>."
 msgstr "Une note agrégé pour ce balisage a été ignorée &mdash; <a href=\"%1$s\">Google n'autorise pas de note agrégé pour le type de schéma %2$s</a> ."
@@ -1979,11 +1921,11 @@ msgctxt "metabox title"
 msgid "Schema Shortcode"
 msgstr "Code court de Schéma"
 
-#: wpsso-schema-json-ld.php:273
+#: wpsso-schema-json-ld.php:283
 msgid "The %1$s version %2$s add-on requires the %3$s plugin &mdash; please activate the missing plugin."
 msgstr "L'ajout %1$s version %2$s nécessite l'extension %3$s &mdash; veuillez activer l'extension manquante."
 
-#: wpsso-schema-json-ld.php:286
+#: wpsso-schema-json-ld.php:296
 msgid "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version %5$s is currently installed)."
 msgstr "L'ajout %1$s version %2$s nécessite %3$s version %4$s ou plus récente (la version %5$s est actuellement installée)."
 
