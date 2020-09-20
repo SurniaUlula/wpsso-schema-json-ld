@@ -32,7 +32,7 @@ Provides comprehensive Schema JSON-LD markup for posts, pages, custom post types
 
 **Most complete Schema JSON-LD markup for WooCommerce products:**
 
-The WooCommerce plugin is known to offer incomplete Schema markup for Google. The <a href="https://wpsso.com/extend/plugins/wpsso/">WPSSO Core Premium plugin</a> (required for WooCommerce integration) and this add-on provide a far better solution by offering complete Facebook / Pinterest Product meta tags and Schema Product markup for Google Rich Results (aka Rich Snippets) &mdash; including additional product images, product variations, product information (brand, color, condition, dimensions, material, size, weight, SKU, GTIN-8/12/13/14, EAN, ISBN, MPN, etc), product reviews, product ratings, prices and currencies, sale start / end dates, sale prices, pre-tax prices, VAT prices, and much, much more.
+The WooCommerce plugin is known to offer incomplete Schema markup for Google. The <a href="https://wpsso.com/extend/plugins/wpsso/">WPSSO Core Premium plugin</a> (required for WooCommerce integration) and this add-on provide a much better solution by offering complete product meta tags for Facebook / Pinterest, and complete Schema product markup for Google Rich Results (aka Rich Snippets) &mdash; including additional product images, product variations, product information (brand, color, condition, EAN, dimensions, GTIN-8/12/13/14, ISBN, material, MPN, size, SKU, weight, etc), product reviews, product ratings, sale start / end dates, sale prices, pre-tax prices, VAT prices, and much, much more.
 
 **Fixes all Google Search Console / Structured Data Testing Tool errors:**
 
@@ -281,7 +281,7 @@ WPSSO Schema JSON-LD Markup (aka WPSSO JSON) is an add-on for the [WPSSO Core pl
 			* [Exclude Schema Markup by Post Type](https://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/developer/filters/examples/exclude-schema-markup-by-post-type/)
 			* [Modify the aggregateRating Property](https://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/developer/filters/examples/modify-the-aggregaterating-property/)
 			* [Modify the VideoObject Name and Description](https://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/developer/filters/examples/modify-the-videoobject-name-and-description/)
-* [Schema Shortcode for Custom Markup](https://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/schema-shortcode/)
+* [Schema Shortcode Guide](https://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/schema-shortcode/)
 
 == Screenshots ==
 
@@ -339,12 +339,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None.
 * **Improvements**
 	* Updated the French plugin translations.
-	* Added translation support for the SSO &gt; Schema Shortcode Guide page.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
 	* Moved extracted translation strings from lib/gettext-*.php files to a new gettext/ folder.
-	* Added a new gettext/gettext-html-shortcode.php file to translate the Schema Shortcode Guide.
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
