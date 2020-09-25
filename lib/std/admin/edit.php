@@ -118,7 +118,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 				'schema_title' => array(
 					'th_class' => 'medium',
 					'td_class' => 'blank',
-					'label'    => _x( 'Name / Title', 'option label', 'wpsso-schema-json-ld' ),
+					'label'    => _x( 'Name (Title)', 'option label', 'wpsso-schema-json-ld' ),
 					'tooltip'  => 'meta-schema_title',
 					'content'  => $form->get_no_input_value( $def_schema_title, $css_class = 'wide' ),
 				),

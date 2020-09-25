@@ -106,7 +106,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 					return 'checkbox';
 
-				case 'schema_title':				// Name / Title.
+				case 'schema_title':				// Name (Title).
 				case 'schema_title_alt':			// Alternate Name.
 				case 'schema_desc':				// Description.
 				case 'schema_headline':				// Headline.
@@ -365,7 +365,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				 * All Schema Types.
 				 */
 				'schema_type'      => $def_schema_type,	// Schema Type.
-				'schema_title'     => '',		// Name / Title.
+				'schema_title'     => '',		// Name (Title).
 				'schema_title_alt' => '',		// Alternate Name.
 				'schema_desc'      => '',		// Description.
 

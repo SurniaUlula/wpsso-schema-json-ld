@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Schema JSON-LD Markup 4.3.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-09-20 10:56-0700\n"
-"PO-Revision-Date: 2020-09-20 10:56-0700\n"
+"POT-Creation-Date: 2020-09-25 11:41-0700\n"
+"PO-Revision-Date: 2020-09-25 11:41-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -307,8 +307,8 @@ msgstr "Type par défaut de page Web du sujet"
 #: gettext/gettext-lib-pro.php:23 lib/pro/admin/edit.php:137
 #: lib/std/admin/edit.php:121
 msgctxt "option label"
-msgid "Name / Title"
-msgstr "Nom / titre"
+msgid "Name (Title)"
+msgstr "Nom (titre)"
 
 #: gettext/gettext-lib-pro.php:24 lib/pro/admin/edit.php:144
 #: lib/std/admin/edit.php:128

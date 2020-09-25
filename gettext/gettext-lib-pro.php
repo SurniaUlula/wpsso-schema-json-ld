@@ -20,7 +20,7 @@ _x( 'Default Hiring Organization', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Default Job Location', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Review Information', 'metabox title', 'wpsso-schema-json-ld' );
 _x( 'Default Subject Webpage Type', 'option label', 'wpsso-schema-json-ld' );
-_x( 'Name / Title', 'option label', 'wpsso-schema-json-ld' );
+_x( 'Name (Title)', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Alternate Name', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Description', 'option label', 'wpsso-schema-json-ld' );
 _x( 'Microdata Type URLs', 'option label', 'wpsso-schema-json-ld' );

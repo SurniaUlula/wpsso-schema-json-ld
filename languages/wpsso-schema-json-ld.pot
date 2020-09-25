@@ -313,7 +313,7 @@ msgstr ""
 #: gettext/gettext-lib-pro.php:23 lib/pro/admin/edit.php:137
 #: lib/std/admin/edit.php:121
 msgctxt "option label"
-msgid "Name / Title"
+msgid "Name (Title)"
 msgstr ""
 
 #: gettext/gettext-lib-pro.php:24 lib/pro/admin/edit.php:144

@@ -51,7 +51,7 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 			switch ( $msg_key ) {
 
-				case 'tooltip-meta-schema_title':		// Name / Title.
+				case 'tooltip-meta-schema_title':		// Name (Title).
 
 					$text = __( 'A customized name / title for the Schema "name" property.', 'wpsso-schema-json-ld' );
 
