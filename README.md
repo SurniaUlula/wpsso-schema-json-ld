@@ -5,7 +5,7 @@
 <tr><th align="right" valign="top" nowrap>Summary</th><td>Google Rich Results and Structured Data for Articles, Carousels, Events, FAQ Pages, How-Tos, Local SEO, Products, Recipes, Ratings, Reviews, and More.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>4.3.1</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires PHP</th><td>5.6 or newer</td></tr>
-<tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>4.2 or newer</td></tr>
+<tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>4.4 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To WordPress</th><td>5.5.1</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To WooCommerce</th><td>4.5.2</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>

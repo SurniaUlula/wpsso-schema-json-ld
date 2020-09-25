@@ -9,7 +9,7 @@ Assets URI: https://surniaulula.github.io/wpsso-schema-json-ld/assets/
 Tags: schema.org, rich results, image seo, video seo, woocommerce, schema, rich results, structured data, seo, news seo, knowledge graph
 Contributors: jsmoriss
 Requires PHP: 5.6
-Requires At Least: 4.2
+Requires At Least: 4.4
 Tested Up To: 5.5.1
 WC Tested Up To: 4.5.2
 Stable Tag: 4.3.1
@@ -314,6 +314,8 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 **Version 4.4.0-dev.1 (TBD)**
 
+Added support for the new Schema 'shippingDetails' property for WooCommerce products. [Google is now showing shipping costs from Schema markup in search results.](https://webmasters.googleblog.com/2020/09/new-schemaorg-support-for-retailer.html)
+
 * **New Features**
 	* None.
 * **Improvements**
@@ -324,8 +326,8 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None.
 * **Requires At Least**
 	* PHP v5.6.
-	* WordPress v4.2.
-	* WPSSO Core v8.6.0-b.2.
+	* WordPress v4.4.
+	* WPSSO Core v8.6.0-rc.2.
 
 **Version 4.3.1 (2020/09/18)**
 
@@ -345,7 +347,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Added a new WpssoJsonConflict class in lib/conflict.php.
 * **Requires At Least**
 	* PHP v5.6.
-	* WordPress v4.2.
+	* WordPress v4.4.
 	* WPSSO Core v8.5.1.
 
 **Version 4.3.0 (2020/09/15)**
