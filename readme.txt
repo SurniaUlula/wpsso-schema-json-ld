@@ -327,7 +327,7 @@ Added support for the new Schema 'shippingDetails' property for WooCommerce prod
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.4.
-	* WPSSO Core v8.6.0-rc.2.
+	* WPSSO Core v8.6.0.
 
 **Version 4.3.1 (2020/09/18)**
 
