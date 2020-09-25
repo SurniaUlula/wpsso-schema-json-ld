@@ -125,7 +125,7 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 * Includes additional customizable option values in the Document SSO metabox:
 
 	* All Schema Types
-		* Name / Title
+		* Name (Title)
 		* Alternate Name
 		* Description
 		* Microdata Type URLs

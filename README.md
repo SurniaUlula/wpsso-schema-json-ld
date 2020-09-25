@@ -120,7 +120,7 @@
 <li>All Schema Types
 
 <ul>
-<li>Name / Title</li>
+<li>Name (Title)</li>
 <li>Alternate Name</li>
 <li>Description</li>
 <li>Microdata Type URLs</li>
