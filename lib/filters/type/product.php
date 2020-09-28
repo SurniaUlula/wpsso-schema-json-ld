@@ -195,7 +195,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 
 					} elseif ( $this->p->debug->enabled ) {
 
-						$this->p->debug->log( 'returned $single_offer is empty' );
+						$this->p->debug->log( 'returned single offer is empty' );
 					}
 
 				/**
@@ -210,6 +210,13 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 					}
 
 					WpssoSchema::add_aggregate_offer_data( $json_ret, $mod, $mt_og[ 'product:offers' ] );
+
+				} else {
+
+					if ( $this->p->debug->enabled ) {
+
+						$this->p->debug->log( 'product offers is not an array' );
+					}
 				}
 
 				$local_recursion = false;
