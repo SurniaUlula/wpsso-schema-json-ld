@@ -319,7 +319,7 @@ Added support for the new Schema 'shippingDetails' property for WooCommerce prod
 * **New Features**
 	* None.
 * **Improvements**
-	* None.
+	* Added support for the new Schema 'shippingDetails' property for WooCommerce products.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
