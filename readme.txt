@@ -314,12 +314,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 **Version 4.4.0-dev.1 (TBD)**
 
-Added support for the new Schema 'shippingDetails' property for WooCommerce products. [Google is now showing shipping costs from Schema markup in search results.](https://webmasters.googleblog.com/2020/09/new-schemaorg-support-for-retailer.html)
+Added support for the new Schema 'shippingDetails' property in Schema Product offers for WooCommerce products. [Google is now showing shipping costs from Schema markup in search results.](https://webmasters.googleblog.com/2020/09/new-schemaorg-support-for-retailer.html)
 
 * **New Features**
 	* None.
 * **Improvements**
-	* Added support for the new Schema 'shippingDetails' property for WooCommerce products.
+	* Added support for the new Schema 'shippingDetails' property in Schema Product offers for WooCommerce products.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -327,7 +327,7 @@ Added support for the new Schema 'shippingDetails' property for WooCommerce prod
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.4.
-	* WPSSO Core v8.6.0.
+	* WPSSO Core v8.7.0-dev.1.
 
 **Version 4.3.1 (2020/09/18)**
 
