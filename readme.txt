@@ -319,7 +319,7 @@ Added support for the new Schema 'shippingDetails' property in Schema Product of
 * **New Features**
 	* None.
 * **Improvements**
-	* Added support for the new Schema 'shippingDetails' property in Schema Product offers for WooCommerce products.
+	* Added support for the new Schema 'shippingDetails' property in Schema Product offers for WooCommerce products, including shippingRate values by currency, and shippingDestination with countries, states, and postal code limits (WooCommerce postal code wildcards and ranges are supported).
 * **Bugfixes**
 	* None.
 * **Developer Notes**
