@@ -312,6 +312,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 4.5.0-dev.1 (TBD)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v5.6.
+	* WordPress v4.4.
+	* WPSSO Core v8.8.0-dev.1.
+
 **Version 4.4.0 (2020/10/02)**
 
 **Added support for the new Schema shippingDetails property in Schema Product offers for WooCommerce products. Note that [Google is now showing shipping costs from Schema markup in search results](https://webmasters.googleblog.com/2020/09/new-schemaorg-support-for-retailer.html).**
