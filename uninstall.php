@@ -11,12 +11,12 @@ if ( ! defined( 'ABSPATH' ) || ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 
 $plugin_dir = trailingslashit( dirname( __FILE__ ) );
 
-$plugin_file_path = $plugin_dir . 'wpsso-schema-json-ld.php';
+$plugin_file = $plugin_dir . 'wpsso-schema-json-ld.php';
 
 require_once $plugin_dir . 'lib/config.php';
 
-WpssoJsonConfig::set_constants( $plugin_file_path );
+WpssoJsonConfig::set_constants( $plugin_file );
 
-WpssoJsonConfig::require_libs( $plugin_file_path );	// Includes the register.php class library.
+WpssoJsonConfig::require_libs( $plugin_file );	// Includes the register.php class library.
 
 WpssoJsonRegister::network_uninstall();

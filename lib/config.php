@@ -162,7 +162,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 			return $add_slug ? $info[ 'slug' ] . '-' . $info[ 'version' ] : $info[ 'version' ];
 		}
 
-		public static function set_constants( $plugin_file_path ) { 
+		public static function set_constants( $plugin_file ) { 
 
 			if ( defined( 'WPSSOJSON_VERSION' ) ) {	// Define constants only once.
 
@@ -174,11 +174,11 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 			/**
 			 * Define fixed constants.
 			 */
-			define( 'WPSSOJSON_FILEPATH', $plugin_file_path );						
+			define( 'WPSSOJSON_FILEPATH', $plugin_file );						
 			define( 'WPSSOJSON_PLUGINBASE', $info[ 'base' ] );	// Example: wpsso-schema-json-ld/wpsso-schema-json-ld.php.
-			define( 'WPSSOJSON_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_file_path ) ) ) );
+			define( 'WPSSOJSON_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_file ) ) ) );
 			define( 'WPSSOJSON_PLUGINSLUG', $info[ 'slug' ] );	// Example: wpsso-schema-json-ld.
-			define( 'WPSSOJSON_URLPATH', trailingslashit( plugins_url( '', $plugin_file_path ) ) );
+			define( 'WPSSOJSON_URLPATH', trailingslashit( plugins_url( '', $plugin_file ) ) );
 			define( 'WPSSOJSON_VERSION', $info[ 'version' ] );						
 
 			/**
@@ -229,7 +229,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 			return $var_const;
 		}
 
-		public static function require_libs( $plugin_file_path ) {
+		public static function require_libs( $plugin_file ) {
 
 			require_once WPSSOJSON_PLUGINDIR . 'lib/compat.php';	// 3rd party plugin and theme compatibility actions and filters.
 			require_once WPSSOJSON_PLUGINDIR . 'lib/filters.php';
