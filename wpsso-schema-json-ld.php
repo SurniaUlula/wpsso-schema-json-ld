@@ -44,7 +44,6 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 		public $compat;		// WpssoJsonCompat class.
 		public $conflict;	// WpssoJsonConflict class.
 		public $filters;	// WpssoJsonFilters class.
-		public $reg;		// WpssoJsonRegister class.
 
 		protected $p;
 
