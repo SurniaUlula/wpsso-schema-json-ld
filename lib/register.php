@@ -131,7 +131,6 @@ if ( ! class_exists( 'WpssoJsonRegister' ) ) {
 			}
 		}
 
-		private static function uninstall_plugin() {
-		}
+		private static function uninstall_plugin() {}
 	}
 }
