@@ -6,6 +6,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -23,6 +24,7 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 			static $do_once = null;
 
 			if ( true === $do_once ) {
+
 				return;	// Stop here.
 			}
 
@@ -31,6 +33,7 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -46,6 +49,7 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 		public function filter_messages_tooltip_meta( $text, $msg_key ) {
 
 			if ( strpos( $msg_key, 'tooltip-meta-schema_' ) !== 0 ) {
+
 				return $text;
 			}
 
@@ -685,6 +689,7 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 		public function filter_messages_tooltip_schema( $text, $msg_key ) {
 
 			if ( strpos( $msg_key, 'tooltip-schema_' ) !== 0 ) {
+
 				return $text;
 			}
 

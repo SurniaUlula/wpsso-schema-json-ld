@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.5.0-dev.3\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.5.0-dev.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-"
 "ld\n"
 "POT-Creation-Date: 2020-MO-DA HO:MI+ZONE\n"
@@ -1321,21 +1321,21 @@ msgstr ""
 msgid "adding reviewed subject image"
 msgstr ""
 
-#: lib/filters-messages.php:56
+#: lib/filters-messages.php:60
 msgid "A customized name / title for the Schema \"name\" property."
 msgstr ""
 
-#: lib/filters-messages.php:62
+#: lib/filters-messages.php:66
 msgid ""
 "A customized alternate name / title for the Schema \"alternateName\" "
 "property."
 msgstr ""
 
-#: lib/filters-messages.php:68
+#: lib/filters-messages.php:72
 msgid "A customized description for the Schema \"description\" property."
 msgstr ""
 
-#: lib/filters-messages.php:74
+#: lib/filters-messages.php:78
 msgid ""
 "Additional (and optional) type URLs for the item, typically used to specify "
 "more precise types from an external vocabulary in microdata syntax. For "
@@ -1343,617 +1343,617 @@ msgid ""
 "www.productontology.org/id/Hammer (see %s for more examples)."
 msgstr ""
 
-#: lib/filters-messages.php:80
+#: lib/filters-messages.php:84
 msgid ""
 "Additional (and optional) webpage reference URLs that unambiguously indicate "
 "the item's identity. For example, the URL of the item's Wikipedia page, "
 "Wikidata entry, IMDB page, official website, etc."
 msgstr ""
 
-#: lib/filters-messages.php:86
+#: lib/filters-messages.php:90
 msgid ""
 "Optional URLs to other Schema CreativeWorks that this content is a part of."
 msgstr ""
 
-#: lib/filters-messages.php:92
+#: lib/filters-messages.php:96
 msgid "The headline for the Schema CreativeWork type and/or its sub-types."
 msgstr ""
 
-#: lib/filters-messages.php:98
+#: lib/filters-messages.php:102
 msgid ""
 "The complete textual and searchable content for the Schema CreativeWork type "
 "and/or its sub-types."
 msgstr ""
 
-#: lib/filters-messages.php:104
+#: lib/filters-messages.php:108
 msgid ""
 "Comma delimited list of keywords or tags describing the Schema CreativeWork "
 "content."
 msgstr ""
 
-#: lib/filters-messages.php:110
+#: lib/filters-messages.php:114
 msgid "The language (aka locale) for the Schema CreativeWork content."
 msgstr ""
 
-#: lib/filters-messages.php:116
+#: lib/filters-messages.php:120
 msgid "The content of this Schema CreativeWork is family friendly."
 msgstr ""
 
-#: lib/filters-messages.php:122
+#: lib/filters-messages.php:126
 msgid ""
 "Select a publisher organization for the Schema CreativeWork type and/or its "
 "sub-types (Article, BlogPosting, WebPage, etc)."
 msgstr ""
 
-#: lib/filters-messages.php:128
+#: lib/filters-messages.php:132
 msgid ""
 "Select a publisher person for the Schema CreativeWork type and/or its sub-"
 "types (Article, BlogPosting, WebPage, etc)."
 msgstr ""
 
-#: lib/filters-messages.php:135
+#: lib/filters-messages.php:139
 msgid ""
 "Select a service provider, service operator or service performer (example: "
 "\"Netflix\")."
 msgstr ""
 
-#: lib/filters-messages.php:141
+#: lib/filters-messages.php:145
 msgid ""
 "The year during which the claimed copyright was first asserted for this "
 "creative work."
 msgstr ""
 
-#: lib/filters-messages.php:147
+#: lib/filters-messages.php:151
 msgid "A license document URL that applies to this content."
 msgstr ""
 
-#: lib/filters-messages.php:153
+#: lib/filters-messages.php:157
 msgid "The total duration of the audio recording."
 msgstr ""
 
-#: lib/filters-messages.php:158
+#: lib/filters-messages.php:162
 msgid "The language (aka locale) for the event performance."
 msgstr ""
 
-#: lib/filters-messages.php:164
+#: lib/filters-messages.php:168
 msgid ""
 "Select whether the event occurs online, offline at a physical location, or a "
 "mix of both online and offline."
 msgstr ""
 
-#: lib/filters-messages.php:170
+#: lib/filters-messages.php:174
 msgid "An online or virtual location URL to attend the event."
 msgstr ""
 
-#: lib/filters-messages.php:176
+#: lib/filters-messages.php:180
 msgid "Select a physical venue for the event."
 msgstr ""
 
-#: lib/filters-messages.php:182
+#: lib/filters-messages.php:186
 msgid "Select an organizer (organization) for the event."
 msgstr ""
 
-#: lib/filters-messages.php:188
+#: lib/filters-messages.php:192
 msgid "Select an organizer (person) for the event."
 msgstr ""
 
-#: lib/filters-messages.php:194
+#: lib/filters-messages.php:198
 msgid "Select a performer (organization) for the event."
 msgstr ""
 
-#: lib/filters-messages.php:200
+#: lib/filters-messages.php:204
 msgid "Select a performer (person) for the event."
 msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/filters-messages.php:207
+#: lib/filters-messages.php:211
 msgctxt "option value"
 msgid "Cancelled"
 msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/filters-messages.php:210
+#: lib/filters-messages.php:214
 msgctxt "option value"
 msgid "Postponed"
 msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/filters-messages.php:213
+#: lib/filters-messages.php:217
 msgctxt "option value"
 msgid "Rescheduled"
 msgstr ""
 
-#: lib/filters-messages.php:215
+#: lib/filters-messages.php:219
 msgid "Select the event status (default is Scheduled)."
 msgstr ""
 
 #. translators: %s is the "Cancelled" event status.
-#: lib/filters-messages.php:218
+#: lib/filters-messages.php:222
 msgid "If you select %s, do not change the original event start date."
 msgstr ""
 
 #. translators: %s is the "Postponed" event status.
-#: lib/filters-messages.php:222
+#: lib/filters-messages.php:226
 msgid ""
 "If you select %s (but the rescheduled date isn't known yet), do not change "
 "the original event start date."
 msgstr ""
 
 #. translators: %s is the "Rescheduled" event status.
-#: lib/filters-messages.php:226
+#: lib/filters-messages.php:230
 msgid ""
 "If you select %s, update the previous start date option, then change the "
 "original start and end dates."
 msgstr ""
 
-#: lib/filters-messages.php:233
+#: lib/filters-messages.php:237
 msgid "Select the event start date and time."
 msgstr ""
 
-#: lib/filters-messages.php:239
+#: lib/filters-messages.php:243
 msgid "Select the event end date and time."
 msgstr ""
 
-#: lib/filters-messages.php:245
+#: lib/filters-messages.php:249
 msgid ""
 "The previously scheduled start date for the event, if the event has been "
 "rescheduled."
 msgstr ""
 
-#: lib/filters-messages.php:251
+#: lib/filters-messages.php:255
 msgid "The date and time when tickets go on sale."
 msgstr ""
 
-#: lib/filters-messages.php:257
+#: lib/filters-messages.php:261
 msgid "The date and time when tickets are no longer on sale."
 msgstr ""
 
-#: lib/filters-messages.php:263
+#: lib/filters-messages.php:267
 msgid ""
 "One or more offers for the event, including the offer name, price and "
 "currency."
 msgstr ""
 
-#: lib/filters-messages.php:269
+#: lib/filters-messages.php:273
 msgid ""
 "A list of steps to complete this How-To, including the How-To Step Name and "
 "(optionally) a longer How-To Direction Text."
 msgstr ""
 
-#: lib/filters-messages.php:271
+#: lib/filters-messages.php:275
 msgid ""
 "You can also (optionally) define one or more How-To Sections to group "
 "individual steps."
 msgstr ""
 
-#: lib/filters-messages.php:277
+#: lib/filters-messages.php:281
 msgid "A list of supplies that are consumed when completing this How-To."
 msgstr ""
 
-#: lib/filters-messages.php:283
+#: lib/filters-messages.php:287
 msgid "A list of tools or objects that are required to complete this How-To."
 msgstr ""
 
-#: lib/filters-messages.php:290
+#: lib/filters-messages.php:294
 msgid ""
 "The total time it takes to prepare the items before executing the "
 "instruction steps."
 msgstr ""
 
-#: lib/filters-messages.php:297
+#: lib/filters-messages.php:301
 msgid ""
 "The total time required to perform the all instructions (including any "
 "preparation time)."
 msgstr ""
 
-#: lib/filters-messages.php:303
+#: lib/filters-messages.php:307
 msgid ""
 "The quantity made when following these How-To instructions (example: \"a "
 "paper airplane\", \"10 personalized candles\", etc.)."
 msgstr ""
 
-#: lib/filters-messages.php:309
+#: lib/filters-messages.php:313
 msgid ""
 "The title of this job, which may be different than the WordPress post / page "
 "title."
 msgstr ""
 
-#: lib/filters-messages.php:315
+#: lib/filters-messages.php:319
 msgid "Select a organization for the Schema JobPosting hiring organization."
 msgstr ""
 
-#: lib/filters-messages.php:321
+#: lib/filters-messages.php:325
 msgid "Select a location for the Schema JobPosting job location."
 msgstr ""
 
-#: lib/filters-messages.php:327
+#: lib/filters-messages.php:331
 msgid "Optionally provide details on the base salary."
 msgstr ""
 
-#: lib/filters-messages.php:329
+#: lib/filters-messages.php:333
 msgid "The base salary must be numeric, like 120000, 50.00, etc."
 msgstr ""
 
-#: lib/filters-messages.php:331
+#: lib/filters-messages.php:335
 msgid ""
 "Do not use spaces, commas, or currency symbols, as these are not valid "
 "numeric values."
 msgstr ""
 
-#: lib/filters-messages.php:337
+#: lib/filters-messages.php:341
 msgid ""
 "Check one or more Google approved employment types (see <a href=\"%s"
 "\">Google's Job Posting guidelines</a> for more information)."
 msgstr ""
 
-#: lib/filters-messages.php:343
+#: lib/filters-messages.php:347
 msgid "Select a job posting expiration date and time."
 msgstr ""
 
-#: lib/filters-messages.php:345
+#: lib/filters-messages.php:349
 msgid ""
 "If a job posting never expires, or you do not know when the job will expire, "
 "do not select an expiration date and time."
 msgstr ""
 
-#: lib/filters-messages.php:351
+#: lib/filters-messages.php:355
 msgid "The name of one or more actors appearing in the movie."
 msgstr ""
 
-#: lib/filters-messages.php:357
+#: lib/filters-messages.php:361
 msgid "The name of one or more directors of the movie."
 msgstr ""
 
-#: lib/filters-messages.php:363
+#: lib/filters-messages.php:367
 msgid "The principle production company or studio responsible for the movie."
 msgstr ""
 
-#: lib/filters-messages.php:369
+#: lib/filters-messages.php:373
 msgid "The total movie runtime from the start to the end of the credits."
 msgstr ""
 
-#: lib/filters-messages.php:375
+#: lib/filters-messages.php:379
 msgid ""
 "Optionally select a different organization for the Schema Organization item "
 "type and/or its sub-type (Airline, Corporation, School, etc). Select "
 "\"[None]\" to use the default organization details."
 msgstr ""
 
-#: lib/filters-messages.php:381
+#: lib/filters-messages.php:385
 msgctxt "user role"
 msgid "Person"
 msgstr ""
 
-#: lib/filters-messages.php:383
+#: lib/filters-messages.php:387
 msgid ""
 "Select a person from the list of eligible WordPress users. To be included in "
 "this list, a user must be member of the WordPress \"%s\" role."
 msgstr ""
 
-#: lib/filters-messages.php:389
+#: lib/filters-messages.php:393
 msgid "An optional heading / description of the question and it's answer."
 msgstr ""
 
-#: lib/filters-messages.php:391
+#: lib/filters-messages.php:395
 msgid ""
 "If the question is part of a larger group of questions on the same subject, "
 "then this would be an appropriate field to describe that subject (example: "
 "\"QA about a Flying Toaster\" )."
 msgstr ""
 
-#: lib/filters-messages.php:397
+#: lib/filters-messages.php:401
 msgid "A person's job title (for example, Financial Manager)."
 msgstr ""
 
-#: lib/filters-messages.php:403
+#: lib/filters-messages.php:407
 msgid ""
 "The cooking method used for this recipe (example: Baking, Frying, Steaming, "
 "etc.)"
 msgstr ""
 
-#: lib/filters-messages.php:409
+#: lib/filters-messages.php:413
 msgid "The total time it takes to cook this recipe."
 msgstr ""
 
-#: lib/filters-messages.php:415
+#: lib/filters-messages.php:419
 msgid ""
 "The course name for this recipe (example: Appetizer, Entr&eacute;e, Main "
 "Course / Main Dish, Dessert, Side-dish, etc.)."
 msgstr ""
 
-#: lib/filters-messages.php:421
+#: lib/filters-messages.php:425
 msgid ""
 "The type of cuisine for this recipe (example: French, Indian, Italian, "
 "Japanese, Thai, etc.)."
 msgstr ""
 
-#: lib/filters-messages.php:427
+#: lib/filters-messages.php:431
 msgid ""
 "A list of ingredients for this recipe (example: \"1 cup flour\", \"1 tsp salt"
 "\", etc.)."
 msgstr ""
 
-#: lib/filters-messages.php:433
+#: lib/filters-messages.php:437
 msgid ""
 "A list of instructions for this recipe (example: \"beat eggs\", \"add and "
 "mix flour\", etc.)."
 msgstr ""
 
-#: lib/filters-messages.php:439
+#: lib/filters-messages.php:443
 msgid ""
 "The serving size in volume or mass. A serving size is required to include "
 "nutrition information in the Schema recipe markup."
 msgstr ""
 
-#: lib/filters-messages.php:445
+#: lib/filters-messages.php:449
 msgid "The number of calories per serving."
 msgstr ""
 
-#: lib/filters-messages.php:451
+#: lib/filters-messages.php:455
 msgid "The number of grams of protein per serving."
 msgstr ""
 
-#: lib/filters-messages.php:457
+#: lib/filters-messages.php:461
 msgid "The number of grams of fiber per serving."
 msgstr ""
 
-#: lib/filters-messages.php:463
+#: lib/filters-messages.php:467
 msgid "The number of grams of carbohydrates per serving."
 msgstr ""
 
-#: lib/filters-messages.php:469
+#: lib/filters-messages.php:473
 msgid "The number of grams of sugar per serving."
 msgstr ""
 
-#: lib/filters-messages.php:475
+#: lib/filters-messages.php:479
 msgid "The number of milligrams of sodium per serving."
 msgstr ""
 
-#: lib/filters-messages.php:481
+#: lib/filters-messages.php:485
 msgid "The number of grams of fat per serving."
 msgstr ""
 
-#: lib/filters-messages.php:487
+#: lib/filters-messages.php:491
 msgid "The number of grams of trans fat per serving."
 msgstr ""
 
-#: lib/filters-messages.php:493
+#: lib/filters-messages.php:497
 msgid "The number of grams of saturated fat per serving."
 msgstr ""
 
-#: lib/filters-messages.php:499
+#: lib/filters-messages.php:503
 msgid "The number of grams of unsaturated fat per serving."
 msgstr ""
 
-#: lib/filters-messages.php:505
+#: lib/filters-messages.php:509
 msgid "The number of milligrams of cholesterol per serving."
 msgstr ""
 
-#: lib/filters-messages.php:511
+#: lib/filters-messages.php:515
 msgid ""
 "The quantity or servings made by this recipe (example: \"5 servings\", "
 "\"Serves 4-6\", \"Yields 10 burgers\", etc.)."
 msgstr ""
 
-#: lib/filters-messages.php:517
+#: lib/filters-messages.php:521
 msgid ""
 "A rating for the subject being reviewed, along with the low / high rating "
 "scale (default is 1 to 5)."
 msgstr ""
 
-#: lib/filters-messages.php:519
+#: lib/filters-messages.php:523
 msgid ""
 "If you are reviewing a claim, the following rating scale is used: 1 = False, "
 "2 = Mostly false, 3 = Half true, 4 = Mostly true, 5 = True."
 msgstr ""
 
-#: lib/filters-messages.php:525
+#: lib/filters-messages.php:529
 msgid ""
 "An alternate name for the rating value (example: False, Misleading, "
 "Accurate, etc.)."
 msgstr ""
 
-#: lib/filters-messages.php:531
+#: lib/filters-messages.php:535
 msgid ""
 "A Schema type for the subject of the webpage (ie. the content) being "
 "reviewed."
 msgstr ""
 
-#: lib/filters-messages.php:537
+#: lib/filters-messages.php:541
 msgid "A webpage URL for the subject of the review."
 msgstr ""
 
-#: lib/filters-messages.php:549
+#: lib/filters-messages.php:553
 msgid "A name for the subject of the review."
 msgstr ""
 
-#: lib/filters-messages.php:555
+#: lib/filters-messages.php:559
 msgid "A description for the subject of the review."
 msgstr ""
 
-#: lib/filters-messages.php:561
+#: lib/filters-messages.php:565
 msgid "An image ID showing the subject of the review."
 msgstr ""
 
-#: lib/filters-messages.php:567
+#: lib/filters-messages.php:571
 msgid ""
 "An image URL (instead of an image ID) showing the subject of the review."
 msgstr ""
 
-#: lib/filters-messages.php:569
+#: lib/filters-messages.php:573
 msgid "This field is disabled if an image ID is selected."
 msgstr ""
 
-#: lib/filters-messages.php:575
+#: lib/filters-messages.php:579
 msgid "The creative work author can be a person or an organization."
 msgstr ""
 
-#: lib/filters-messages.php:581
+#: lib/filters-messages.php:585
 msgid "Enter the name of the author for this creative work."
 msgstr ""
 
-#: lib/filters-messages.php:587
+#: lib/filters-messages.php:591
 msgid ""
 "The home page of the author, or another definitive URL that provides "
 "information about the author, such as the person or organization's Wikipedia "
 "or Wikidata page."
 msgstr ""
 
-#: lib/filters-messages.php:593
+#: lib/filters-messages.php:597
 msgid ""
 "The date when this creative work was published or became popular / entered "
 "public discourse (for example, when it became popular on social networks)."
 msgstr ""
 
-#: lib/filters-messages.php:599
+#: lib/filters-messages.php:603
 msgid "The date when this creative work was created."
 msgstr ""
 
-#: lib/filters-messages.php:605
+#: lib/filters-messages.php:609
 msgid ""
 "The ISBN code (aka International Standard Book Number) for the book being "
 "reviewed."
 msgstr ""
 
-#: lib/filters-messages.php:623
+#: lib/filters-messages.php:627
 msgid "The brand name of the product being reviewed."
 msgstr ""
 
-#: lib/filters-messages.php:629
+#: lib/filters-messages.php:633
 msgid ""
 "One or more offers for the product being reviewed, including the offer name, "
 "price and currency."
 msgstr ""
 
-#: lib/filters-messages.php:635
+#: lib/filters-messages.php:639
 msgid "The SKU (aka Stock-Keeping Unit) of the product being reviewed."
 msgstr ""
 
-#: lib/filters-messages.php:641
+#: lib/filters-messages.php:645
 msgid "The MPN (aka Manufacturer Part Number) of the product being reviewed."
 msgstr ""
 
-#: lib/filters-messages.php:647
+#: lib/filters-messages.php:651
 msgid ""
 "One or more offers for the software application being reviewed, including "
 "the offer name, price and currency."
 msgstr ""
 
-#: lib/filters-messages.php:652
+#: lib/filters-messages.php:656
 msgid ""
 "A short summary of specific claim(s) being reviewed in the Schema "
 "ClaimReview content."
 msgstr ""
 
-#: lib/filters-messages.php:654
+#: lib/filters-messages.php:658
 msgid ""
 "The summary should be less than 75 characters to minimize wrapping on mobile "
 "devices."
 msgstr ""
 
-#: lib/filters-messages.php:660
+#: lib/filters-messages.php:664
 msgid "An optional webpage URL where this specific claim first appeared."
 msgstr ""
 
-#: lib/filters-messages.php:667
+#: lib/filters-messages.php:671
 msgid "Type of software application (example: %s, etc.)."
 msgstr ""
 
-#: lib/filters-messages.php:674
+#: lib/filters-messages.php:678
 msgid "The operating system supported (example: %s, etc.)."
 msgstr ""
 
-#: lib/filters-messages.php:695
+#: lib/filters-messages.php:700
 msgid ""
 "The maximum length of the Schema CreativeWork \"text\" and \"articleBody\" "
 "property values (the default is %d characters)."
 msgstr ""
 
-#: lib/filters-messages.php:701
+#: lib/filters-messages.php:706
 msgid ""
 "Add a \"text\" or \"articleBody\" property to Schema CreativeWork markup "
 "with the complete textual content of the post / page."
 msgstr ""
 
-#: lib/filters-messages.php:707
+#: lib/filters-messages.php:712
 msgid ""
 "When a rating value for the webpage content is not available, a 5 star "
 "rating from the site organization can be added to the main Schema type "
 "markup."
 msgstr ""
 
-#: lib/filters-messages.php:709
+#: lib/filters-messages.php:714
 msgid ""
 "Visitor rating and review features are available from several supported "
 "plugins, including %s."
 msgstr ""
 
-#: lib/filters-messages.php:711
+#: lib/filters-messages.php:716
 msgid "See the <a href=\"%1$s\">%2$s</a> webpage for details."
 msgstr ""
 
-#: lib/filters-messages.php:712
+#: lib/filters-messages.php:717
 msgid "https://developers.google.com/search/docs/data-types/review-snippet"
 msgstr ""
 
-#: lib/filters-messages.php:713
+#: lib/filters-messages.php:718
 msgid "Google Review snippet structured data guidelines"
 msgstr ""
 
-#: lib/filters-messages.php:719
+#: lib/filters-messages.php:724
 msgid ""
 "Select a default family friendly value for the Schema CreativeWork type and/"
 "or its sub-types (Article, BlogPosting, WebPage, etc)."
 msgstr ""
 
-#: lib/filters-messages.php:725
+#: lib/filters-messages.php:730
 msgid ""
 "Select a default publisher organization for the Schema CreativeWork type and/"
 "or its sub-types (Article, BlogPosting, WebPage, etc)."
 msgstr ""
 
-#: lib/filters-messages.php:731
+#: lib/filters-messages.php:736
 msgid ""
 "Select a default publisher person for the Schema CreativeWork type and/or "
 "its sub-types (Article, BlogPosting, WebPage, etc)."
 msgstr ""
 
-#: lib/filters-messages.php:738
+#: lib/filters-messages.php:743
 msgid ""
 "Select a default service provider, service operator or service performer "
 "(example: \"Netflix\")."
 msgstr ""
 
-#: lib/filters-messages.php:744
+#: lib/filters-messages.php:749
 msgid "Select a default venue for the Schema Event type."
 msgstr ""
 
-#: lib/filters-messages.php:750
+#: lib/filters-messages.php:755
 msgid "Select a default organizer (organization) for the Schema Event type."
 msgstr ""
 
-#: lib/filters-messages.php:756
+#: lib/filters-messages.php:761
 msgid "Select a default organizer (person) for the Schema Event type."
 msgstr ""
 
-#: lib/filters-messages.php:762
+#: lib/filters-messages.php:767
 msgid "Select a default performer (organization) for the Schema Event type."
 msgstr ""
 
-#: lib/filters-messages.php:768
+#: lib/filters-messages.php:773
 msgid "Select a default performer (person) for the Schema Event type."
 msgstr ""
 
-#: lib/filters-messages.php:774
+#: lib/filters-messages.php:779
 msgid ""
 "Select a default organization for the Schema JobPosting hiring organization."
 msgstr ""
 
-#: lib/filters-messages.php:780
+#: lib/filters-messages.php:785
 msgid "Select a default location for the Schema JobPosting job location."
 msgstr ""
 
-#: lib/filters-messages.php:786
+#: lib/filters-messages.php:791
 msgid "Select a default Schema type for the Schema Review subject URL."
 msgstr ""
 
