@@ -39,4 +39,4 @@ _x( '(plus) Schema Property hasPart', 'lib file description', 'wpsso-schema-json
 _x( '(plus) Schema Property review', 'lib file description', 'wpsso-schema-json-ld' );
 _x( 'Schema Markup', 'lib file description', 'wpsso-schema-json-ld' );
 _x( 'WPSSO Schema JSON-LD Markup', 'plugin name', 'wpsso-schema-json-ld' );
-_x( 'Google Rich Results and Structured Data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Videos, and More.', 'plugin description', 'wpsso-schema-json-ld' );
+_x( 'Google Rich Results and JSON-LD structured data for Articles, Carousels, Events, FAQ pages, How-tos, Local SEO, Products, Recipes, Ratings, Reviews, and more.', 'plugin description', 'wpsso-schema-json-ld' );
