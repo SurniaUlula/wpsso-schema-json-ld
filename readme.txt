@@ -14,7 +14,7 @@ Tested Up To: 5.5.1
 WC Tested Up To: 4.6.0
 Stable Tag: 4.4.0
 
-Google Rich Results and Structured Data for Articles, Carousels, Events, FAQ Pages, How-Tos, Local SEO, Products, Recipes, Ratings, Reviews, and More.
+Google Rich Results and JSON-LD structured data for Articles, Carousels, Events, FAQ pages, How-tos, Local SEO, Products, Recipes, Ratings, Reviews, and more.
 
 == Description ==
 
@@ -22,7 +22,7 @@ Google Rich Results and Structured Data for Articles, Carousels, Events, FAQ Pag
 
 **Supports over 495 different Schema types and sub-types:**
 
-Google Rich Results and Structured Data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ Pages, How-Tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Video Objects, and more.
+Google Rich Results and JSON-LD structured data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ pages, How-tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Video Objects, and much more.
 
 **Uses your existing WordPress content, plugin data, and service API data:**
 
@@ -256,6 +256,8 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 <h3>WPSSO Core Plugin Required</h3>
 
 WPSSO Schema JSON-LD Markup (aka WPSSO JSON) is an add-on for the [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/).
+
+WPSSO Core and its add-ons make sure your content looks great on social sites and in search results, no matter how your URLs are crawled, shared, re-shared, posted, or embedded.
 
 == Installation ==
 
