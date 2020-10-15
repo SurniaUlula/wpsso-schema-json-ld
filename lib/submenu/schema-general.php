@@ -73,7 +73,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 			$table_rows = array();
 
 			foreach ( $tabs as $tab_key => $title ) {
-				
+
 				if ( empty( $this->p->avail[ 'p' ][ 'schema' ] ) ) {	// Since WPSSO Core v6.23.3.
 
 					$table_rows[ $tab_key ] = $this->p->msgs->get_schema_disabled_rows( $table_rows[ $tab_key ], $col_span = 1 );
@@ -109,7 +109,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 			$table_rows = array();
 
 			foreach ( $tabs as $tab_key => $title ) {
-				
+
 				if ( empty( $this->p->avail[ 'p' ][ 'schema' ] ) ) {	// Since WPSSO Core v6.23.3.
 
 					$table_rows[ $tab_key ] = $this->p->msgs->get_schema_disabled_rows( $table_rows[ $tab_key ], $col_span = 1 );
@@ -153,13 +153,13 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 					break;
 
 				case 'json-advanced-product_attrs':
-			
+
 					$this->add_advanced_product_attrs_table_rows( $table_rows, $this->form );
 
 					break;
 
 				case 'json-advanced-custom_fields':
-			
+
 					$this->add_advanced_custom_fields_table_rows( $table_rows, $this->form );
 
 					break;

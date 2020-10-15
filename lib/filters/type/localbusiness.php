@@ -78,7 +78,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeLocalBusiness' ) ) {
 				if ( ! empty( $mt_og[ 'place:location:latitude' ] ) &&
 					! empty( $mt_og[ 'place:location:longitude' ] ) &&
 						! empty( $mt_og[ 'place:business:service_radius' ] ) ) {
-	
+
 					$json_ret[ 'areaServed' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/GeoShape', array(
 						'circle' => $mt_og[ 'place:location:latitude' ] . ' ' . $mt_og[ 'place:location:longitude' ] . ' ' .
 							$mt_og[ 'place:business:service_radius' ]

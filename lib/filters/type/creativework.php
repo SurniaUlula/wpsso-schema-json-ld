@@ -123,7 +123,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 
 							$ispartof_type_url = $this->p->schema->get_schema_type_url( $md_opts[ 'schema_ispartof_type_' . $num ] );
 						}
-					
+
 						$json_ret[ 'isPartOf' ][] = WpssoSchema::get_schema_type_context( $ispartof_type_url, array(
 							'url' => $ispartof_url,
 						) );
@@ -190,7 +190,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 						switch ( $prop_name ) {
 
 							case 'isFamilyFriendly':	// Must be a true or false boolean value.
-	
+
 								$md_val = empty( $md_val ) ? false : true;
 
 								break;

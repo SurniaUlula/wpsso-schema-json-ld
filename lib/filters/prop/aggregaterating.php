@@ -250,7 +250,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 					return true;
 				}
 			}
-			
+
 			if ( $this->p->debug->enabled ) {
 
 				$this->p->debug->log( 'aggregate rating for schema type ' . $page_type_id . ' not allowed' );

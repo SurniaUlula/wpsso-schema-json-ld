@@ -391,7 +391,7 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 				case 'tooltip-meta-schema_qa_desc':
 
 			 		$text = __( 'An optional heading / description of the question and it\'s answer.', 'wpsso-schema-json-ld' ) . ' ';
-					
+
 					$text .= __( 'If the question is part of a larger group of questions on the same subject, then this would be an appropriate field to describe that subject (example: "QA about a Flying Toaster" ).', 'wpsso-schema-json-ld' );
 
 				 	break;

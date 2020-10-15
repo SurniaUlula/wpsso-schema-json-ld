@@ -91,7 +91,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeQAPage' ) ) {
 			}
 
 			$question[ 'answerCount' ] = $answer_count;
-			
+
 			$json_ret[ 'mainEntity' ] = $question;
 
 			return WpssoSchema::return_data_from_filter( $json_data, $json_ret, $is_main );

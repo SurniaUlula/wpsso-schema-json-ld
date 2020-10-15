@@ -179,7 +179,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 					}
 				}
 			}
-	
+
 			/**
 			 * Get additional sameAs URLs from the post/term/user custom meta.
 			 */
@@ -191,21 +191,21 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 				}
 
 				$md_opts = $mod[ 'obj' ]->get_options( $mod[ 'id' ] );
-	
+
 				if ( is_array( $md_opts ) ) {	// Just in case
-	
+
 					foreach ( SucomUtil::preg_grep_keys( '/^schema_sameas_url_[0-9]+$/', $md_opts ) as $url ) {
 
 						$json_ret[ 'sameAs' ][] = SucomUtil::esc_url_encode( $url );
 					}
 				}
 			}
-	
+
 			$json_ret[ 'sameAs' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_sameas',
 				$json_ret[ 'sameAs' ], $mod, $mt_og, $page_type_id, $is_main );
-	
+
 			WpssoSchema::check_prop_value_sameas( $json_ret );
-	
+
 			if ( $this->p->debug->enabled ) {
 
 				$this->p->debug->log_arr( 'sameAs', $json_ret[ 'sameAs' ] );

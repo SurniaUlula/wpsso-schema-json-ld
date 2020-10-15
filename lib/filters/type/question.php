@@ -52,7 +52,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeQuestion' ) ) {
 			 * first, before changing / removing some question properties.
 			 */
 			$accepted_answer = WpssoSchema::get_schema_type_context( 'https://schema.org/Answer' );
-			
+
 			WpssoSchema::add_data_itemprop_from_assoc( $accepted_answer, $json_data, array( 
 				'url'           => 'url',
 				'name'          => 'description',	// Answer name is CreativeWork custom description or excerpt.

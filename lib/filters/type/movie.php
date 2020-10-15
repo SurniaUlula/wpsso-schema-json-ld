@@ -85,7 +85,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeMovie' ) ) {
 			if ( WpssoSchema::is_valid_key( $md_opts, 'schema_movie_prodco_org_id' ) ) {	// Not null, an empty string, or 'none'.
 
 				$md_val = $md_opts[ 'schema_movie_prodco_org_id' ]; 
-				
+
 				WpssoSchemaSingle::add_organization_data( $json_ret[ 'productionCompany' ], $mod, $md_val, 'org_logo_url', $list_element = true );
 			}
 

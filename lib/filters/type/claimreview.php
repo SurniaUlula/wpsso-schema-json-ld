@@ -75,7 +75,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeClaimReview' ) ) {
 					 * Add notice only if the admin notices have not already been shown.
 					 */
 					if ( $this->p->notice->is_admin_pre_notices() ) {
-						
+
 						$notice_msg = __( 'A claim review cannot be the subject of another claim review.', 'wpsso-schema-json-ld' ) . ' ';
 
 						$notice_msg .= __( 'CreativeWork will be used instead as the Schema type for the subject of the webpage (ie. the content) being reviewed.', 'wpsso-schema-json-ld' );

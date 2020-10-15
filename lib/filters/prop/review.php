@@ -119,7 +119,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 
 						$this->p->debug->log( 'adding ' . count( $mt_og[ $og_type . ':reviews' ] ) . ' product reviews from mt_og' );
 					}
-	
+
 					foreach ( $mt_og[ $og_type . ':reviews' ] as $mt_review ) {
 
 						$single_review = array();
@@ -155,7 +155,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 										$author_data );
 								}
 							}
-	
+
 							if ( ! empty( $mt_review[ $mt_pre . ':id' ] ) ) {
 
 								$replies_added = WpssoSchemaSingle::add_comment_reply_data( $single_review[ 'comment' ],
@@ -264,7 +264,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 					return true;
 				}
 			}
-			
+
 			if ( $this->p->debug->enabled ) {
 
 				$this->p->debug->log( 'review for schema type ' . $page_type_id . ' not allowed' );

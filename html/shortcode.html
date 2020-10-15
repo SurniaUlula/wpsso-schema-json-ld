@@ -40,7 +40,7 @@
 </pre> 
 
 <p>The <code>&#91;schema&#93;</code> shortcode can also be used to define a Schema type for a section of content, along with using that section of content for the Schema type description and its media properties. The following example defines a section of content as a Schema Map type. Please note that the 'type' value can be a WPSSO Schema type ID (as shown here) or a complete <a href="https://schema.org">https://schema.org</a> URL. When using the 'type' shortcode attribute, the 'prop' shortcode attribute is required (so the Schema type can be assigned to a Schema property). WPSSO JSON will automatically detect and include the example image in the Schema Map content.</p>
- 
+
 <pre class="lang:xhtml decode:true">
 &#91;schema prop="hasPart" type="map" name="Map of the World"&#93;
 
@@ -110,7 +110,7 @@
 </pre> 
 
 <p><strong>Please note that WordPress is not currently able to parse nested shortcodes</strong>, so the following shortcode structure is not supported by WordPress.</p>
- 
+
 <pre class="lang:xhtml decode:true">
 &#91;schema&#93;
         &#91;schema&#93;

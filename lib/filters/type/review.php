@@ -192,16 +192,16 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 				 * Schema Reviewed Item: Creative Work -> Software Application
 				 */
 				} elseif ( $this->p->schema->is_schema_type_child( $item_type_id, 'software.application' ) ) {
-	
+
 					WpssoSchema::add_data_itemprop_from_assoc( $item_reviewed, $md_opts, array(
 						'applicationCategory'  => 'schema_review_item_software_app_cat',
 						'operatingSystem'      => 'schema_review_item_software_app_os',
 					) );
-	
+
 					$metadata_offers_max = SucomUtil::get_const( 'WPSSO_SCHEMA_METADATA_OFFERS_MAX', 5 );
 
 					foreach ( range( 0, $metadata_offers_max - 1, 1 ) as $key_num ) {
-	
+
 						$offer_opts = SucomUtil::preg_grep_keys( '/^schema_review_item_software_app_(offer_.*)_' . $key_num. '$/',
 							$md_opts, $invert = false, $replace = '$1' );
 
@@ -216,7 +216,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 								'priceCurrency' => 'offer_currency',
 								'availability'  => 'offer_avail',	// In stock, Out of stock, Pre-order, etc.
 							) ) ) ) {
-	
+
 								/**
 								 * Avoid Google validator warnings.
 								 */
@@ -272,7 +272,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 							'priceCurrency' => 'offer_currency',
 							'availability'  => 'offer_avail',	// In stock, Out of stock, Pre-order, etc.
 						) ) ) ) {
-	
+
 							/**
 							 * Add the offer.
 							 */

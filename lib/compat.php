@@ -126,7 +126,7 @@ if ( ! class_exists( 'WpssoJsonCompat' ) ) {
 				$class_name = get_class( $obj );
 
 				if ( preg_match( '/(Schema)/', $class_name ) ) {
-			
+
 					if ( $this->p->debug->enabled ) {
 
 						$this->p->debug->log( 'removing presenter: ' . $class_name );

@@ -729,7 +729,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			}
 
 			if ( isset( $md_opts[ 'schema_type' ] ) && 'review.claim' === $md_opts[ 'schema_type' ] ) {
-			
+
 				if ( isset( $md_opts[ 'schema_review_item_type' ] ) && 'review.claim' === $md_opts[ 'schema_review_item_type' ] ) {
 
 					$md_opts[ 'schema_review_item_type' ] = $this->p->options[ 'schema_def_review_item_type' ];
@@ -754,7 +754,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				WpssoSchema::check_prop_value_enumeration( $md_opts, $prop_name = 'schema_event_status', $enum_key = 'event_status' );
 
 				foreach ( SucomUtil::preg_grep_keys( '/^schema_(.*)_offer_avail/', $md_opts ) as $prop_name => $prop_val ) {
-		
+
 					WpssoSchema::check_prop_value_enumeration( $md_opts, $prop_name, $enum_key = 'item_availability' );
 				}
 			}

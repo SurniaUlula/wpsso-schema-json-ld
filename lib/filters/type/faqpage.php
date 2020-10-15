@@ -70,7 +70,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeFAQPage' ) ) {
 						$entity_count = count( $json_data[ 'mainEntity' ] );
 					}
 				}
-			
+
 				$notice_key = $mod[ 'name' ] . '-' . $mod[ 'id' ] . '-questions-added-to-faqpage';
 
 				if ( $entity_count ) {

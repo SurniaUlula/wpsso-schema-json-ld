@@ -64,21 +64,12 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 			return self::$instance;
 		}
 
-		public function init_textdomain( $debug_enabled = false ) {
+		public function init_textdomain() {
 
-			static $local_cache = null;
-
-			if ( null === $local_cache || $debug_enabled ) {
-
-				$local_cache = 'wpsso-schema-json-ld';
-
-				load_plugin_textdomain( 'wpsso-schema-json-ld', false, 'wpsso-schema-json-ld/languages/' );
-			}
-
-			return $local_cache;
+			load_plugin_textdomain( 'wpsso-schema-json-ld', false, 'wpsso-schema-json-ld/languages/' );
 		}
 
-		public function init_objects() {
+		public function init_objects( $is_admin, $doing_ajax, $doing_cron ) {
 
 			$this->p =& Wpsso::get_instance();
 
@@ -86,8 +77,6 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 
 				$this->p->debug->mark();
 			}
-
-			$is_admin = is_admin();
 
 			if ( $this->get_missing_requirements() ) {	// Returns false or an array of missing requirements.
 

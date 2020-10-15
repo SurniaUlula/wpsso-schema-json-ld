@@ -141,11 +141,11 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 
 								$this->p->debug->log_arr( 'adding single data for $single_md5 ' . $single_md5, $single_data );
 							}
-	
+
 							$this->maybe_add_single_data( $md5_added, $data_props, $single_md5, $single_data );
-	
+
 						} else {
-	
+
 							if ( $this->p->debug->enabled ) {
 
 								$this->p->debug->log( 'skipped ' . $single_md5 . ': single data is not an array' );
