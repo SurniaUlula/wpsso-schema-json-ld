@@ -12,7 +12,7 @@ Requires PHP: 5.6
 Requires At Least: 4.4
 Tested Up To: 5.5.1
 WC Tested Up To: 4.6.0
-Stable Tag: 4.4.0
+Stable Tag: 4.5.0
 
 Google Rich Results and JSON-LD structured data for Articles, Carousels, Events, FAQ pages, How-tos, Local SEO, Products, Recipes, Ratings, Reviews, and more.
 
@@ -466,8 +466,4 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 = 4.4.0 =
 
 (2020/10/02) Added support for the new Schema shippingDetails property in Schema Product offers for WooCommerce products.
-
-= 4.3.1 =
-
-(2020/09/18) Added a conflict notification for the Yoast WooCommerce SEO plugin.
 
