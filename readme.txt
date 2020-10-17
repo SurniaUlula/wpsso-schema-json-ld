@@ -12,7 +12,7 @@ Requires PHP: 5.6
 Requires At Least: 4.4
 Tested Up To: 5.5.1
 WC Tested Up To: 4.6.0
-Stable Tag: 4.5.0
+Stable Tag: 4.5.1
 
 Google Rich Results and JSON-LD structured data for Articles, Carousels, Events, FAQ pages, How-tos, Local SEO, Products, Recipes, Ratings, Reviews, and more.
 
@@ -314,14 +314,14 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.5.0 (2020/10/17)**
+**Version 4.5.1 (2020/10/17)**
 
 * **New Features**
 	* None.
 * **Improvements**
 	* Refactored the add-on class to extend a new WpssoAddOn abstract class.
 * **Bugfixes**
-	* None.
+	* Fixed backwards compatibility with WPSSO Core v8.7.1 'init_objects' and 'init_plugin' action arguments.
 * **Developer Notes**
 	* Added a new WpssoAddOn class in lib/abstracts/add-on.php.
 	* Added a new SucomAddOn class in lib/abstracts/com/add-on.php.
@@ -459,7 +459,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.5.0 =
+= 4.5.1 =
 
 (2020/10/17) Refactored the add-on class to extend a new WpssoAddOn abstract class.
 
