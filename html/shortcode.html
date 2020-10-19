@@ -1,0 +1,173 @@
+
+<!-- Canonical URL: https://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/schema-shortcode/ -->
+
+<style type="text/css">
+
+	#wpsso-shortcode-guide img.alignright {
+		float:right;
+		width:30%;
+		max-width:1200px;
+		margin:1em 0 2em 5em;
+	}
+
+	@media screen and (max-width: 782px) {
+
+		#wpsso-shortcode-guide pre {
+			white-space:pre-wrap;
+		}
+
+		#wpsso-shortcode-guide img.alignright {
+			float:none;
+			width:auto;
+			max-width:100%;
+			margin:2.5em 0;
+		}
+	}
+</style>
+
+<div id="wpsso-shortcode-guide">
+
+<img src="https://surniaulula.github.io/wpsso/images/googlebot-1200x1159.png" class="alignright">
+
+<p>The <a href="https://wordpress.org/plugins/wpsso-schema-json-ld/">WPSSO Schema JSON-LD Markup add-on</a> provides extensive support for hundreds of Schema types and the <a href="https://wpsso.com/extend/plugins/wpsso/">WPSSO Core Premium plugin</a> can pull information from dozens of supported 3rd party plugins and service APIs. The most popular Schema properties can be customized easily in the <em>Document SSO</em> metabox, and if necessary, the <code>&#91;schema&#93;</code> shortcode can also be used to define additional (non-standard) properties and types for sections of your content.</p>
+
+<p>PLEASE NOTE that the <code>&#91;schema&#93;</code> shortcode is meant for <strong>advanced users only</strong> and is not required for WPSSO Core and WPSSO JSON to create complete and accurate Schema JSON-LD markup for your content. You should not use the <code>&#91;schema&#93;</code> shortcode unless you're familiar and comfortable with <a href="https://schema.org">https://schema.org</a> markup &mdash; and have a very specific / non-standard requirement. If you use the <code>&#91;schema&#93;</code> shortcode, make sure you always validate any change with the <a href="https://search.google.com/test/rich-results">Google Rich Results Test</a> tool.</p>
+
+<p>The <code>&#91;schema&#93;</code> shortcode can be used to define additional properties for the content. The following example defines an 'articleSection' property for the Schema Article type. Note that all shortcode attributes are considered to be Schema property names, except for the 'prop' and 'type' attribute names, which have special meaning (see below).</p>
+
+<pre class="lang:xhtml decode:true">
+&#91;schema articleSection="Sports" /&#93;
+</pre> 
+
+<p>The <code>&#91;schema&#93;</code> shortcode can also be used to define a Schema type for a section of content, along with using that section of content for the Schema type description and its media properties. The following example defines a section of content as a Schema Map type. Please note that the 'type' value can be a WPSSO Schema type ID (as shown here) or a complete <a href="https://schema.org">https://schema.org</a> URL. When using the 'type' shortcode attribute, the 'prop' shortcode attribute is required (so the Schema type can be assigned to a Schema property). WPSSO JSON will automatically detect and include the example image in the Schema Map content.</p>
+
+<pre class="lang:xhtml decode:true">
+&#91;schema prop="hasPart" type="map" name="Map of the World"&#93;
+
+        Here's a nice detailed map of the world.
+
+        &#91;caption id="attachment_1" align="alignnone" width="600"&#93;
+
+                &lt;img src="http://example.com/wp-content/uploads/worldmap.jpg"
+                        alt="A nice world map." width="600" height="600" 
+                        class="size-featured wp-image-1" data-wp-pid="1"
+                        data-pin-nopin="nopin" /&gt;
+
+                A nice world map.
+
+        &#91;/caption&#93;
+
+&#91;/schema&#93;
+</pre> 
+
+<p>By default, the <code>&#91;schema&#93;</code> shortcode merges / repaces existing Schema property values &mdash; if instead you want to <em>add</em> a new element to the Schema property array, prefix the 'prop' attribute value with a '+' sign. For example, the following shortcodes will create an offers array with two price specifications (see below for additional notes on using nested shortcodes).</p>
+
+<pre class="lang:xhtml decode:true">
+&#91;schema prop="+offers" type="https://schema.org/Offer"&#93;
+
+	&#91;schema_1 prop="priceSpecification"
+		type="https://schema.org/UnitPriceSpecification"
+		price="50.00" priceCurrency="USD" unitText="DAY" /&#93;
+
+&#91;/schema&#93;
+
+&#91;schema prop="+offers" type="https://schema.org/Offer"&#93;
+
+	&#91;schema_1 prop="priceSpecification"
+		type="https://schema.org/UnitPriceSpecification"
+		 price="250.00" priceCurrency="USD" unitText="WEEK" /&#93;
+
+&#91;/schema&#93;
+</pre> 
+
+<p>The resulting JSON-LD array:</p>
+
+<pre class="lang:xhtml decode:true">
+"offers": &#91;
+    {
+        "@context": "https://schema.org",
+        "@type": "Offer",
+        "priceSpecification": {
+            "@context": "http://schema.org",
+            "@type": "UnitPriceSpecification",
+            "price": "50.00",
+            "pricecurrency": "USD",
+            "unittext": "DAY"
+        }
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "Offer",
+        "priceSpecification": {
+            "@context": "http://schema.org",
+            "@type": "UnitPriceSpecification",
+            "price": "250.00",
+            "pricecurrency": "USD",
+            "unittext": "WEEK"
+        }
+    }
+&#93;
+</pre> 
+
+<p><strong>Please note that WordPress is not currently able to parse nested shortcodes</strong>, so the following shortcode structure is not supported by WordPress.</p>
+
+<pre class="lang:xhtml decode:true">
+&#91;schema&#93;
+        &#91;schema&#93;
+        &#91;/schema&#93;
+&#91;/schema&#93;
+</pre> 
+
+<p><strong>The WPSSO JSON add-on <em>does</em> support nested shortcodes</strong>, but a numeric extension must be used to work around the WordPress limitation. WPSSO JSON supports up to 3 levels of nesting (by default), as the following example illustrates.</p>
+
+<pre class="lang:xhtml decode:true">
+&#91;schema&#93;
+        &#91;schema_1&#93;
+                &#91;schema_2&#93;
+                        &#91;schema_3&#93;
+                        &#91;/schema_3&#93;
+                &#91;/schema_2&#93;
+        &#91;/schema_1&#93;
+&#91;/schema&#93;
+</pre>
+
+<h3>Practical Examples</h3>
+
+<h4>Customer Reviews</h4>
+
+<p>You can add (and maintain) customer reviews in your content manually using this example, but <strong>a much better (and more scalable) solution is to use a proper content rating / review plugin</strong>, like the <a href="https://wordpress.org/plugins/wpsso-ratings-and-reviews/">WPSSO Ratings and Reviews</a> add-on, which adds customer ratings, reviews, replies and aggregate ratings markup automatically. The WPSSO Core Premium plugin also supports ratings and reviews from the <a href="https://wordpress.org/plugins/woocommerce/">WooCommerce</a> and <a href="https://wordpress.org/plugins/wp-postratings/">WP-PostRatings</a> plugins.</p>
+
+<p>Note that we're using Schema type IDs from WPSSO in this example &mdash; using <code>type="review"</code> is the same as using <code>type="https://schema.org/Review"</code>. Also note the use of a leading "+" sign in the first <code>&#91;schema&#93;</code> shortcode 'prop' attribute &mdash; this tells WPSSO JSON to add this property as an array, so several reviews can be included this way. WPSSO JSON handles nested shortcodes, but WordPress does not, so nested shortcodes must be numbered for WordPress (schema, schema_1, schema_2, etc.). Don't forget to terminate the shortcode enclosure &mdash; it can be easy to forget that closing <code>&#91;/schema&#93;</code> tag. ;-)</p>
+
+<pre class="lang:xhtml decode:true">
+&lt;dl&gt;
+&lt;dt&gt;John Doe said on June 25th, 2018:&lt;dt&gt;
+&lt;dd&gt;
+
+&#91;schema prop="+review" type="review" dateCreated="2018-06-25T12:40:09+00:00"&#93;
+
+    &#91;schema_1 prop="reviewRating" type="rating"
+        ratingValue="4" worstRating="1" bestRating="5"/&#93;
+
+    &#91;schema_1 prop="author" type="person" name="John Doe"/&#93;
+
+    An example review text.
+
+&#91;/schema&#93;
+
+Rating: 4/5
+
+&lt;dd&gt;
+&lt;dl&gt;
+</pre>
+
+<h4>Aggregate Ratings</h4>
+
+<p>Again, you can add (and maintain) aggregate rating values in your content manually using this example, but <strong>a much better (and more scalable) solution is to use a proper content rating / review plugin</strong>. ;-) And in case you're using a non-supported rating / review plugin &mdash; that saves aggregate rating values in post meta &mdash; instead of using a shortcode, you can also use a <a href="https://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/developer/filters/examples/modify-the-aggregaterating-property/">plugin filter to update the Schema aggregateRating property value</a>.</p>
+
+<pre class="lang:xhtml decode:true">
+&#91;schema prop="aggregateRating" type="rating.aggregate"
+    ratingValue="4" ratingCount="1" worstRating="1" bestRating="5"/&#93;
+</pre>
+
+</div>
