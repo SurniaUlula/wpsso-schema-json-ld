@@ -135,7 +135,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 					/**
 					 * Add the shortlink / short URL, but only if the link rel shortlink tag is enabled.
 					 */
-					$add_link_rel_shortlink = empty( $this->p->options[ 'add_link_rel_shortlink' ] ) ? false : true; 
+					$add_link_rel_shortlink = empty( $this->p->options[ 'add_link_rel_shortlink' ] ) ? false : true;
 
 					if ( apply_filters( $this->p->lca . '_add_link_rel_shortlink', $add_link_rel_shortlink, $mod ) ) {
 

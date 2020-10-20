@@ -37,7 +37,7 @@
 
 <pre class="lang:xhtml decode:true">
 &#91;schema articleSection="Sports" /&#93;
-</pre> 
+</pre>
 
 <p>The <code>&#91;schema&#93;</code> shortcode can also be used to define a Schema type for a section of content, along with using that section of content for the Schema type description and its media properties. The following example defines a section of content as a Schema Map type. Please note that the 'type' value can be a WPSSO Schema type ID (as shown here) or a complete <a href="https://schema.org">https://schema.org</a> URL. When using the 'type' shortcode attribute, the 'prop' shortcode attribute is required (so the Schema type can be assigned to a Schema property). WPSSO JSON will automatically detect and include the example image in the Schema Map content.</p>
 
@@ -58,7 +58,7 @@
         &#91;/caption&#93;
 
 &#91;/schema&#93;
-</pre> 
+</pre>
 
 <p>By default, the <code>&#91;schema&#93;</code> shortcode merges / repaces existing Schema property values &mdash; if instead you want to <em>add</em> a new element to the Schema property array, prefix the 'prop' attribute value with a '+' sign. For example, the following shortcodes will create an offers array with two price specifications (see below for additional notes on using nested shortcodes).</p>
 
@@ -78,7 +78,7 @@
 		 price="250.00" priceCurrency="USD" unitText="WEEK" /&#93;
 
 &#91;/schema&#93;
-</pre> 
+</pre>
 
 <p>The resulting JSON-LD array:</p>
 
@@ -107,7 +107,7 @@
         }
     }
 &#93;
-</pre> 
+</pre>
 
 <p><strong>Please note that WordPress is not currently able to parse nested shortcodes</strong>, so the following shortcode structure is not supported by WordPress.</p>
 
@@ -116,7 +116,7 @@
         &#91;schema&#93;
         &#91;/schema&#93;
 &#91;/schema&#93;
-</pre> 
+</pre>
 
 <p><strong>The WPSSO JSON add-on <em>does</em> support nested shortcodes</strong>, but a numeric extension must be used to work around the WordPress limitation. WPSSO JSON supports up to 3 levels of nesting (by default), as the following example illustrates.</p>
 

@@ -126,7 +126,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeClaimReview' ) ) {
 			if ( ! empty( $md_opts[ 'schema_review_claim_reviewed' ] ) ) {
 
 				$json_ret[ 'claimReviewed' ] = $md_opts[ 'schema_review_claim_reviewed' ];
-			} 
+			}
 
 			/**
 			 * If there's a first appearance URL, add the URL using a CreativeWork object as well.

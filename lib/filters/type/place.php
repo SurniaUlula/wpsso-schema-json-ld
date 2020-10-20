@@ -180,7 +180,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 
 				if ( ! empty( $geo_coords ) ) {
 
-					$json_ret[ 'geo' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/GeoCoordinates', $geo_coords ); 
+					$json_ret[ 'geo' ] = WpssoSchema::get_schema_type_context( 'https://schema.org/GeoCoordinates', $geo_coords );
 
 				} elseif ( $this->p->debug->enabled ) {
 
@@ -213,12 +213,13 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 
 					foreach ( $this->p->cf[ 'form' ][ 'weekdays' ] as $weekday => $label ) {
 
-						$open_close = SucomUtil::get_open_close(
+						$open_close = SucomUtil::get_open_close_hours(
 							$mt_opening_hours,
 							'place:opening_hours:day:' . $weekday . ':open',
 							'place:opening_hours:midday:close',
 							'place:opening_hours:midday:open',
-							'place:opening_hours:day:' . $weekday . ':close'
+							'place:opening_hours:day:' . $weekday . ':close',
+							'place:opening_hours:timezone'
 						);
 
 						foreach ( $open_close as $open => $close ) {

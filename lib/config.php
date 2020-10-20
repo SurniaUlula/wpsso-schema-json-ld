@@ -174,12 +174,12 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 			/**
 			 * Define fixed constants.
 			 */
-			define( 'WPSSOJSON_FILEPATH', $plugin_file );						
+			define( 'WPSSOJSON_FILEPATH', $plugin_file );
 			define( 'WPSSOJSON_PLUGINBASE', $info[ 'base' ] );	// Example: wpsso-schema-json-ld/wpsso-schema-json-ld.php.
 			define( 'WPSSOJSON_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_file ) ) ) );
 			define( 'WPSSOJSON_PLUGINSLUG', $info[ 'slug' ] );	// Example: wpsso-schema-json-ld.
 			define( 'WPSSOJSON_URLPATH', trailingslashit( plugins_url( '', $plugin_file ) ) );
-			define( 'WPSSOJSON_VERSION', $info[ 'version' ] );						
+			define( 'WPSSOJSON_VERSION', $info[ 'version' ] );
 
 			/**
 			 * Define variable constants.
