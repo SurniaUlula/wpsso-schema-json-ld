@@ -272,7 +272,7 @@ WPSSO Core and its add-ons make sure your content looks great on social sites an
 
 * [Can I add custom Schema properties to the JSON-LD?](https://wpsso.com/docs/plugins/wpsso-schema-json-ld/faqs/can-i-add-custom-schema-properties-to-the-json-ld/)
 * [How do I create a Schema FAQPage?](https://wpsso.com/docs/plugins/wpsso-schema-json-ld/faqs/how-do-i-create-a-schema-faqpage/)
-* [How do I remove Schema shippingDetails from the markup?](https://wpsso.com/docs/plugins/wpsso-schema-json-ld/faqs/how-do-i-remove-schema-shippingdetails-from-the-markup/)
+* [How do I exclude Offer Shipping Details from the markup?](https://wpsso.com/docs/plugins/wpsso-schema-json-ld/faqs/how-do-i-exclude-offer-shipping-details-from-the-markup/)
 
 <h3>Notes and Documentation</h3>
 
