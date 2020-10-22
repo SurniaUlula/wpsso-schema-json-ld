@@ -209,47 +209,55 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 
 				if ( ! empty( $mt_opening_hours ) ) {
 
-					$opening_spec = array();
+					$weekdays =& $wpsso->cf[ 'form' ][ 'weekdays' ];
 
-					foreach ( $this->p->cf[ 'form' ][ 'weekdays' ] as $weekday => $label ) {
+					$opening_hours_spec = array();
 
-						$open_close = SucomUtil::get_open_close_hours(
+					foreach ( $weekdays as $day_name => $day_label ) {
+
+						/**
+						 * Returns an empty array or an associative array of open => close hours with timezone offset.
+						 */
+						$open_close = SucomUtil::get_open_close_hours_tz(
 							$mt_opening_hours,
-							'place:opening_hours:day:' . $weekday . ':open',
+							'place:opening_hours:day:' . $day_name . ':open',
 							'place:opening_hours:midday:close',
 							'place:opening_hours:midday:open',
-							'place:opening_hours:day:' . $weekday . ':close',
+							'place:opening_hours:day:' . $day_name . ':close',
 							'place:opening_hours:timezone'
 						);
 
-						foreach ( $open_close as $open => $close ) {
+						if ( ! empty( $open_close ) ) {
 
-							$weekday_spec = array(
-								'@context'  => 'https://schema.org',
-								'@type'     => 'OpeningHoursSpecification',
-								'dayOfWeek' => $label,
-								'opens'     => $open,
-								'closes'    => $close,
-							);
+							foreach ( $open_close as $open => $close ) {
 
-							foreach ( array(
-								'validFrom'    => 'place:opening_hours:season:from_date',
-								'validThrough' => 'place:opening_hours:season:to_date',
-							) as $prop_name => $mt_key ) {
+								$weekday_spec = array(
+									'@context'  => 'https://schema.org',
+									'@type'     => 'OpeningHoursSpecification',
+									'dayOfWeek' => $day_label,
+									'opens'     => $open,
+									'closes'    => $close,
+								);
 
-								if ( isset( $mt_opening_hours[ $mt_key ] ) && $mt_opening_hours[ $mt_key ] !== '' ) {
+								foreach ( array(
+									'validFrom'    => 'place:opening_hours:season:from_date',
+									'validThrough' => 'place:opening_hours:season:to_date',
+								) as $prop_name => $mt_key ) {
 
-									$weekday_spec[ $prop_name ] = $mt_opening_hours[ $mt_key ];
+									if ( isset( $mt_opening_hours[ $mt_key ] ) && $mt_opening_hours[ $mt_key ] !== '' ) {
+
+										$weekday_spec[ $prop_name ] = $mt_opening_hours[ $mt_key ];
+									}
 								}
-							}
 
-							$opening_spec[] = $weekday_spec;
+								$opening_hours_spec[] = $weekday_spec;
+							}
 						}
 					}
 
-					if ( ! empty( $opening_spec ) ) {
+					if ( ! empty( $opening_hours_spec ) ) {
 
-						$json_ret[ 'openingHoursSpecification' ] = $opening_spec;
+						$json_ret[ 'openingHoursSpecification' ] = $opening_hours_spec;
 					}
 
 				} elseif ( $this->p->debug->enabled ) {
