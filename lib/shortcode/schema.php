@@ -14,7 +14,8 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 
 	class WpssoJsonShortcodeSchema {
 
-		private $p;
+		private $p;	// Wpsso class object.
+
 		private $doing_json_data = false;
 		private $json_data_ref   = null;
 		private $prev_data_ref   = null;

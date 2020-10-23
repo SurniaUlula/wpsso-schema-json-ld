@@ -19,7 +19,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 
 	class WpssoJsonFiltersPropHasPart {
 
-		private $p;
+		private $p;	// Wpsso class object.
 
 		private static $meta_key = '_wpsso_json_haspart';
 

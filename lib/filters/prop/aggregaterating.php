@@ -19,7 +19,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropAggregateRating' ) ) {
 
 	class WpssoJsonFiltersPropAggregateRating {
 
-		private $p;
+		private $p;	// Wpsso class object.
 
 		public function __construct( &$plugin ) {
 

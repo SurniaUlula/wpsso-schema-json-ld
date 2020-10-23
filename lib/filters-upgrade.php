@@ -14,7 +14,7 @@ if ( ! class_exists( 'WpssoJsonFiltersUpgrade' ) ) {
 
 	class WpssoJsonFiltersUpgrade {
 
-		private $p;
+		private $p;	// Wpsso class object.
 
 		/**
 		 * Instantiated by WpssoJsonFilters->__construct().

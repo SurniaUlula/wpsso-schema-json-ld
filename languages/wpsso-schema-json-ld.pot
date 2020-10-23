@@ -13,13 +13,13 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: gettext/gettext-lib-abstracts-com.php:6 lib/abstracts/com/add-on.php:161
+#: gettext/gettext-lib-abstracts-com.php:6 lib/abstracts/com/add-on.php:162
 msgid ""
 "The %1$s add-on requires the %2$s plugin &mdash; please activate the missing "
 "plugin."
 msgstr ""
 
-#: gettext/gettext-lib-abstracts-com.php:7 lib/abstracts/com/add-on.php:179
+#: gettext/gettext-lib-abstracts-com.php:7 lib/abstracts/com/add-on.php:180
 msgid ""
 "The %1$s add-on requires %2$s version %3$s or newer (version %4$s is "
 "currently installed)."
@@ -1970,21 +1970,21 @@ msgid ""
 msgstr ""
 
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag, %3$s is the type attribute value
-#: lib/shortcode/schema.php:186
+#: lib/shortcode/schema.php:187
 msgid ""
 "%1$s %2$s shortcode with a type value of \"%3$s\" is missing a required "
 "'prop' attribute value."
 msgstr ""
 
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag
-#: lib/shortcode/schema.php:214
+#: lib/shortcode/schema.php:215
 msgid ""
 "%1$s %2$s shortcode with a content is missing a required 'type' attribute "
 "value."
 msgstr ""
 
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag, %3$s is the type attribute value
-#: lib/shortcode/schema.php:314
+#: lib/shortcode/schema.php:315
 msgid "%1$s %2$s shortcode type attribute \"%3$s\" is not a recognized value."
 msgstr ""
 

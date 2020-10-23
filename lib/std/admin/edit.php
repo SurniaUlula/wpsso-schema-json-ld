@@ -14,7 +14,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 
 	class WpssoJsonStdAdminEdit {
 
-		private $p;
+		private $p;	// Wpsso class object.
 
 		public function __construct( &$plugin ) {
 

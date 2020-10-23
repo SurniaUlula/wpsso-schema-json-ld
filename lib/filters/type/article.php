@@ -19,7 +19,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeArticle' ) ) {
 
 	class WpssoJsonFiltersTypeArticle {
 
-		private $p;
+		private $p;	// Wpsso class object.
 
 		public function __construct( &$plugin ) {
 

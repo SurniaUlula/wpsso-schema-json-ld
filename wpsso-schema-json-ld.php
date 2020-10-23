@@ -41,13 +41,13 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 
 	class WpssoJson extends WpssoAddOn {
 
-		public $compat;		// WpssoJsonCompat class.
-		public $conflict;	// WpssoJsonConflict class.
-		public $filters;	// WpssoJsonFilters class.
+		public $compat;		// WpssoJsonCompat class object.
+		public $conflict;	// WpssoJsonConflict class object.
+		public $filters;	// WpssoJsonFilters class object.
 
-		protected $p;
+		protected $p;	// Wpsso class object.
 
-		private static $instance = null;
+		private static $instance = null;	// WpssoJson class object.
 
 		public function __construct() {
 

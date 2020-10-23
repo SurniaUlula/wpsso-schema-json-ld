@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoJsonCompat' ) ) {
 	 */
 	class WpssoJsonCompat {
 
-		private $p;
+		private $p;	// Wpsso class object.
 
 		public function __construct( &$plugin ) {
 

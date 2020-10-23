@@ -22,7 +22,7 @@ if ( ! class_exists( 'WpssoJsonConflict' ) ) {
 	 */
 	class WpssoJsonConflict {
 
-		private $p;
+		private $p;	// Wpsso class object.
 
 		/**
 		 * Instantiated by WpssoJson->wpsso_init_objects() when is_admin() is true.
