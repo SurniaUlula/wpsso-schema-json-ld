@@ -47,7 +47,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 			if ( ! empty( $mod[ 'obj' ] ) ) {	// Just in case.
 
 				$md_opts = SucomUtil::get_opts_begin( 'schema_review_', array_merge( 
-					(array) $mod[ 'obj' ]->get_defaults( $mod[ 'id' ] ), 
+					(array) $mod[ 'obj' ]->get_defaults( $mod[ 'id' ] ),
 					(array) $mod[ 'obj' ]->get_options( $mod[ 'id' ] )	// Returns empty string if no meta found.
 				) );
 

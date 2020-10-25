@@ -47,7 +47,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeRecipe' ) ) {
 			if ( ! empty( $mod[ 'obj' ] ) ) {	// Just in case.
 
 				$md_opts = SucomUtil::get_opts_begin( 'schema_recipe_', array_merge( 
-					(array) $mod[ 'obj' ]->get_defaults( $mod[ 'id' ] ), 
+					(array) $mod[ 'obj' ]->get_defaults( $mod[ 'id' ] ),
 					(array) $mod[ 'obj' ]->get_options( $mod[ 'id' ] )	// Returns empty string if no meta found.
 				) );
 
@@ -161,7 +161,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeRecipe' ) ) {
 				'sugarContent'          => 'grams sugar',
 				'sodiumContent'         => 'milligrams sodium',
 				'fatContent'            => 'grams fat',
-				'saturatedFatContent'   => 'grams saturated fat', 
+				'saturatedFatContent'   => 'grams saturated fat',
 				'unsaturatedFatContent' => 'grams unsaturated fat',
 				'transFatContent'       => 'grams trans fat',
 				'cholesterolContent'    => 'milligrams cholesterol',

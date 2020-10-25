@@ -100,9 +100,9 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 				$postal_address = array();
 
 				foreach ( array(
-					'name'                => 'name', 
-					'streetAddress'       => 'street_address', 
-					'postOfficeBoxNumber' => 'po_box_number', 
+					'name'                => 'name',
+					'streetAddress'       => 'street_address',
+					'postOfficeBoxNumber' => 'po_box_number',
 					'addressLocality'     => 'locality',
 					'addressRegion'       => 'region',
 					'postalCode'          => 'postal_code',
@@ -137,7 +137,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 			if ( $read_mt_place ) {
 
 				foreach ( array(
-					'telephone' => 'telephone', 
+					'telephone' => 'telephone',
 				) as $prop_name => $og_key ) {
 
 					if ( isset( $mt_og[ 'place:' . $og_key ] ) ) {
@@ -163,7 +163,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 				$geo_coords = array();
 
 				foreach ( array(
-					'elevation' => 'altitude', 
+					'elevation' => 'altitude',
 					'latitude'  => 'latitude',
 					'longitude' => 'longitude',
 				) as $prop_name => $mt_suffix ) {

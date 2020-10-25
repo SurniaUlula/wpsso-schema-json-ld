@@ -162,7 +162,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 			return $add_slug ? $info[ 'slug' ] . '-' . $info[ 'version' ] : $info[ 'version' ];
 		}
 
-		public static function set_constants( $plugin_file ) { 
+		public static function set_constants( $plugin_file ) {
 
 			if ( defined( 'WPSSOJSON_VERSION' ) ) {	// Define constants only once.
 
