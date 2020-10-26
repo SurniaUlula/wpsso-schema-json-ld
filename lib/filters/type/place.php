@@ -209,7 +209,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 
 				if ( ! empty( $mt_opening_hours ) ) {
 
-					$weekdays =& $wpsso->cf[ 'form' ][ 'weekdays' ];
+					$weekdays =& $this->p->cf[ 'form' ][ 'weekdays' ];
 
 					$opening_hours_spec = array();
 
