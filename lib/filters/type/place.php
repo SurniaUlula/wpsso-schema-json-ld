@@ -58,30 +58,22 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 			/**
 			 * Skip reading place meta tags if not main schema type or if there are no place meta tags.
 			 */
+			$read_mt_place = false;
+
 			if ( preg_grep( '/^(place:|og:(altitude|latitude|longitude))/', array_keys( $mt_og ) ) ) {
 
 				if ( $is_main ) {
 
 					$read_mt_place = true;
 
-				} else {
+				} elseif ( $this->p->debug->enabled ) {
 
-					if ( $this->p->debug->enabled ) {
-
-						$this->p->debug->log( 'skipped reading place meta tags (not main schema type)' );
-					}
-
-					$read_mt_place = false;
+					$this->p->debug->log( 'skipped reading place meta tags (not main schema type)' );
 				}
 
-			} else {
+			} elseif ( $this->p->debug->enabled ) {
 
-				if ( $this->p->debug->enabled ) {
-
-					$this->p->debug->log( 'no place meta tags found' );
-				}
-
-				$read_mt_place = false;
+				$this->p->debug->log( 'no place meta tags found' );
 			}
 
 			/**
@@ -190,70 +182,22 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 
 			/**
 			 * Property:
-			 * 	openingHoursSpecification
-			 *
-			 * $mt_opening_hours = Array (
-			 *	[place:opening_hours:day:monday:open]          => 09:00
-			 *	[place:opening_hours:day:monday:close]         => 17:00
-			 *	[place:opening_hours:day:publicholidays:open]  => 09:00
-			 *	[place:opening_hours:day:publicholidays:close] => 17:00
-			 *	[place:opening_hours:midday:close]             => 12:00
-			 *	[place:opening_hours:midday:open]              => 13:00
-			 *	[place:opening_hours:season:from_date]         => 2016-04-01
-			 *	[place:opening_hours:season:to_date]           => 2016-05-01
-			 * )
+			 * 	openingHoursSpecification as https://schema.org/OpeningHoursSpecification
 			 */
 			if ( $read_mt_place ) {
 
-				$mt_opening_hours = SucomUtil::preg_grep_keys( '/^place:opening_hours:/', $mt_og );
+				$replace = array( '/^place:opening_hours:/' => 'place_', '/:/' => '_' );
 
-				if ( ! empty( $mt_opening_hours ) ) {
+				$place_opts = SucomUtil::preg_grep_keys( '/^place:opening_hours:/', $mt_og, $invert = false, $replace );
 
-					$weekdays =& $this->p->cf[ 'form' ][ 'weekdays' ];
+				if ( ! empty( $place_opts ) ) {
 
-					$opening_hours_spec = array();
+					if ( ! empty( $mt_og[ 'og:url' ] ) ) {
 
-					foreach ( $weekdays as $day_name => $day_label ) {
-
-						/**
-						 * Returns an empty array or an associative array of open => close hours with timezone offset.
-						 */
-						$open_close = SucomUtil::get_open_close_hours_tz(
-							$mt_opening_hours,
-							'place:opening_hours:day:' . $day_name . ':open',
-							'place:opening_hours:midday:close',
-							'place:opening_hours:midday:open',
-							'place:opening_hours:day:' . $day_name . ':close',
-							'place:opening_hours:timezone'
-						);
-
-						if ( ! empty( $open_close ) ) {
-
-							foreach ( $open_close as $open => $close ) {
-
-								$weekday_spec = array(
-									'@context'  => 'https://schema.org',
-									'@type'     => 'OpeningHoursSpecification',
-									'dayOfWeek' => $day_label,
-									'opens'     => $open,
-									'closes'    => $close,
-								);
-
-								foreach ( array(
-									'validFrom'    => 'place:opening_hours:season:from_date',
-									'validThrough' => 'place:opening_hours:season:to_date',
-								) as $prop_name => $mt_key ) {
-
-									if ( isset( $mt_opening_hours[ $mt_key ] ) && $mt_opening_hours[ $mt_key ] !== '' ) {
-
-										$weekday_spec[ $prop_name ] = $mt_opening_hours[ $mt_key ];
-									}
-								}
-
-								$opening_hours_spec[] = $weekday_spec;
-							}
-						}
+						$place_opts[ 'place_rel' ] = $mt_og[ 'og:url' ];
 					}
+
+					$opening_hours_spec = WpssoSchemaSingle::get_opening_hours_data( $place_opts, $opt_prefix = 'place' );
 
 					if ( ! empty( $opening_hours_spec ) ) {
 
@@ -262,7 +206,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypePlace' ) ) {
 
 				} elseif ( $this->p->debug->enabled ) {
 
-					$this->p->debug->log( 'no place:opening_hours:day meta tags found for opening hours specification' );
+					$this->p->debug->log( 'no place:opening_hours meta tags for opening hours specification' );
 				}
 			}
 
