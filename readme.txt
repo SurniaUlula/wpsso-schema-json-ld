@@ -315,6 +315,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 4.5.2 (2020/10/26)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* Fixed invalid argument error in the WpssoJsonFiltersTypePlace class.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v5.6.
+	* WordPress v4.4.
+	* WPSSO Core v8.9.0.
+
 **Version 4.5.1 (2020/10/17)**
 
 * **New Features**
@@ -459,6 +474,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v8.0.0.
 
 == Upgrade Notice ==
+
+= 4.5.2 =
+
+(2020/10/26) Fixed invalid argument error in the WpssoJsonFiltersTypePlace class.
 
 = 4.5.1 =
 
