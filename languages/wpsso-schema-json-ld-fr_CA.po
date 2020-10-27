@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.5.1\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.6.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-10-17 11:40-0700\n"
-"PO-Revision-Date: 2020-10-17 11:40-0700\n"
+"POT-Creation-Date: 2020-10-27 07:12-0700\n"
+"PO-Revision-Date: 2020-10-27 07:12-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -13,11 +13,11 @@ msgstr ""
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: gettext/gettext-lib-abstracts-com.php:6 lib/abstracts/com/add-on.php:161
+#: gettext/gettext-lib-abstracts-com.php:6 lib/abstracts/com/add-on.php:162
 msgid "The %1$s add-on requires the %2$s plugin &mdash; please activate the missing plugin."
 msgstr "L'ajout %1$s nécessite l'extension %2$s &mdash; veuillez activer l'extension manquante."
 
-#: gettext/gettext-lib-abstracts-com.php:7 lib/abstracts/com/add-on.php:179
+#: gettext/gettext-lib-abstracts-com.php:7 lib/abstracts/com/add-on.php:180
 msgid "The %1$s add-on requires %2$s version %3$s or newer (version %4$s is currently installed)."
 msgstr "L'ajout %1$s nécessite %2$s version %3$s ou plus récente (la version %4$s est actuellement installée)."
 
@@ -1832,17 +1832,17 @@ msgid "Please select a subject webpage type that better describes the subject of
 msgstr "SVP sélectionner un type de page Web du sujet qui décrit mieux le sujet de la page Web (c'est-à-dire le contenu) en cours de révision."
 
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag, %3$s is the type attribute value
-#: lib/shortcode/schema.php:186
+#: lib/shortcode/schema.php:187
 msgid "%1$s %2$s shortcode with a type value of \"%3$s\" is missing a required 'prop' attribute value."
 msgstr "Le code court %2$s de %1$s avec \"%3$s\" comme attribut type doit avoir une valeur pour l'attribut 'prop' aussi."
 
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag
-#: lib/shortcode/schema.php:214
+#: lib/shortcode/schema.php:215
 msgid "%1$s %2$s shortcode with a content is missing a required 'type' attribute value."
 msgstr "Le code court %2$s de %1$s avec un texte de description doit avoir une valeur pour l'attribut 'type'."
 
 #. translators: %1$s is the short plugin name, %2$s is the shortcode tag, %3$s is the type attribute value
-#: lib/shortcode/schema.php:314
+#: lib/shortcode/schema.php:315
 msgid "%1$s %2$s shortcode type attribute \"%3$s\" is not a recognized value."
 msgstr "Le code court %2$s de %1$s avec \"%3$s\" pour l'attribut type n'est pas une valeur reconnue."
 
