@@ -315,7 +315,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.6.0-rc.1 (2020/10/28)**
+**Version 4.6.0 (2020/10/28)**
 
 * **New Features**
 	* None.
@@ -328,7 +328,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.4.
-	* WPSSO Core v8.10.0-rc.1.
+	* WPSSO Core v8.10.0.
 
 **Version 4.5.2 (2020/10/26)**
 
@@ -490,7 +490,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.6.0-rc.1 =
+= 4.6.0 =
 
 (2020/10/28) Refactored the WpssoJsonFiltersTypePlace class.
 
