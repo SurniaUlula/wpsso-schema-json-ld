@@ -6,6 +6,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -18,6 +19,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -172,6 +174,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 		private function add_schema_general_table_rows( array &$table_rows, $form ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -179,39 +182,39 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 			$def_site_desc = get_bloginfo( 'description', 'display' );
 
 			$table_rows[ 'site_name' ] = '' .
-			$form->get_th_html_locale( _x( 'WebSite Name', 'option label', 'wpsso-schema-json-ld' ),
-				$css_class = '', $css_id = 'site_name' ) . 
-			'<td>' . $form->get_input_locale( 'site_name', $css_class = 'long_name', $css_id = '',
-				$len = 0, $def_site_name ) . '</td>';
+				$form->get_th_html_locale( _x( 'WebSite Name', 'option label', 'wpsso-schema-json-ld' ),
+					$css_class = '', $css_id = 'site_name' ) . 
+				'<td>' . $form->get_input_locale( 'site_name', $css_class = 'long_name', $css_id = '',
+					$len = 0, $def_site_name ) . '</td>';
 
 			$table_rows[ 'site_name_alt' ] = '' .
-			$form->get_th_html_locale( _x( 'WebSite Alternate Name', 'option label', 'wpsso-schema-json-ld' ),
-				$css_class = '', $css_id = 'site_name_alt' ) . 
-			'<td>' . $form->get_input_locale( 'site_name_alt', $css_class = 'long_name' ) . '</td>';
+				$form->get_th_html_locale( _x( 'WebSite Alternate Name', 'option label', 'wpsso-schema-json-ld' ),
+					$css_class = '', $css_id = 'site_name_alt' ) . 
+				'<td>' . $form->get_input_locale( 'site_name_alt', $css_class = 'long_name' ) . '</td>';
 
 			$table_rows[ 'site_desc' ] = '' .
-			$form->get_th_html_locale( _x( 'WebSite Description', 'option label', 'wpsso-schema-json-ld' ),
-				$css_class = '', $css_id = 'site_desc' ) . 
-			'<td>' . $form->get_textarea_locale( 'site_desc', $css_class = '', $css_id = '',
-				$len = 0, $def_site_desc ) . '</td>';
+				$form->get_th_html_locale( _x( 'WebSite Description', 'option label', 'wpsso-schema-json-ld' ),
+					$css_class = '', $css_id = 'site_desc' ) . 
+				'<td>' . $form->get_textarea_locale( 'site_desc', $css_class = '', $css_id = '',
+					$len = 0, $def_site_desc ) . '</td>';
 
 			$this->add_schema_item_props_table_rows( $table_rows, $form );
 
 			$table_rows[ 'schema_text_max_len' ] = $form->get_tr_hide( 'basic', 'schema_text_max_len' ) . 
-			$form->get_th_html( _x( 'Text and Article Body Max. Length', 'option label', 'wpsso-schema-json-ld' ),
-				$css_class = '', $css_id = 'schema_text_max_len' ) . 
-			'<td>' . $form->get_input( 'schema_text_max_len', $css_class = 'chars' ) . ' ' .
-				_x( 'characters or less', 'option comment', 'wpsso-schema-json-ld' ) . '</td>';
+				$form->get_th_html( _x( 'Text and Article Body Max. Length', 'option label', 'wpsso-schema-json-ld' ),
+					$css_class = '', $css_id = 'schema_text_max_len' ) . 
+				'<td>' . $form->get_input( 'schema_text_max_len', $css_class = 'chars' ) . ' ' .
+					_x( 'characters or less', 'option comment', 'wpsso-schema-json-ld' ) . '</td>';
 
 			$table_rows[ 'schema_add_text_prop' ] = $form->get_tr_hide( 'basic', 'schema_add_text_prop' ) .
-			$form->get_th_html( _x( 'Add Text and Article Body Properties', 'option label', 'wpsso-schema-json-ld' ),
-				$css_class = '', $css_id = 'schema_add_text_prop' ) . 
-			'<td>' . $form->get_checkbox( 'schema_add_text_prop' ) . '</td>';
-
+				$form->get_th_html( _x( 'Add Text and Article Body Properties', 'option label', 'wpsso-schema-json-ld' ),
+					$css_class = '', $css_id = 'schema_add_text_prop' ) . 
+				'<td>' . $form->get_checkbox( 'schema_add_text_prop' ) . '</td>';
+	
 			$table_rows[ 'schema_add_5_star_rating' ] = $form->get_tr_hide( 'basic', 'schema_add_5_star_rating' ) .
-			$form->get_th_html( _x( 'Add 5 Star Rating If No Rating', 'option label', 'wpsso-schema-json-ld' ),
-				$css_class = '', $css_id = 'schema_add_5_star_rating' ) . 
-			'<td>' . $form->get_checkbox( 'schema_add_5_star_rating' ) . '</td>';
+				$form->get_th_html( _x( 'Add 5 Star Rating If No Rating', 'option label', 'wpsso-schema-json-ld' ),
+					$css_class = '', $css_id = 'schema_add_5_star_rating' ) . 
+				'<td>' . $form->get_checkbox( 'schema_add_5_star_rating' ) . '</td>';
 		}
 	}
 }
