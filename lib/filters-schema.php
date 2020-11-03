@@ -46,9 +46,8 @@ if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
 				'og_add_mt_offers'                        => '__return_true',
 				'og_add_mt_rating'                        => '__return_true',
 				'og_add_mt_reviews'                       => '__return_true',
-				'og_add_mt_shipping_offers'               => '__return_true',
 				'json_data_graph_element'                 => 5,
-			), $prio = -10000 );	// Make sure we run first.
+			), $prio = -1000 );	// Make sure we run first.
 		}
 
 		/**
