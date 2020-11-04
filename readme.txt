@@ -314,7 +314,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.7.0-dev.1 (2020/11/03)**
+**Version 4.7.0-dev.2 (2020/11/04)**
 
 * **New Features**
 	* None.
@@ -504,9 +504,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.7.0-dev.1 =
+= 4.7.0-dev.2 =
 
-(2020/11/03) Moved the activation of shipping offers for Schema JSON-LD from WPSSO JSON to WPSSO WCSDT.
+(2020/11/04) Moved the activation of shipping offers for Schema JSON-LD from WPSSO JSON to WPSSO WCSDT.
 
 = 4.6.0 =
 
