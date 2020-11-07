@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.6.0\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.7.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-10-27 07:12-0700\n"
-"PO-Revision-Date: 2020-10-27 07:12-0700\n"
+"POT-Creation-Date: 2020-11-07 08:49-0800\n"
+"PO-Revision-Date: 2020-11-07 08:50-0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -13,11 +13,11 @@ msgstr ""
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: gettext/gettext-lib-abstracts-com.php:6 lib/abstracts/com/add-on.php:162
+#: gettext/gettext-lib-abstracts-com.php:6 lib/abstracts/com/add-on.php:178
 msgid "The %1$s add-on requires the %2$s plugin &mdash; please activate the missing plugin."
 msgstr "L'ajout %1$s nécessite l'extension %2$s &mdash; veuillez activer l'extension manquante."
 
-#: gettext/gettext-lib-abstracts-com.php:7 lib/abstracts/com/add-on.php:180
+#: gettext/gettext-lib-abstracts-com.php:7 lib/abstracts/com/add-on.php:196
 msgid "The %1$s add-on requires %2$s version %3$s or newer (version %4$s is currently installed)."
 msgstr "L'ajout %1$s nécessite %2$s version %3$s ou plus récente (la version %4$s est actuellement installée)."
 
@@ -1846,75 +1846,75 @@ msgstr "Le code court %2$s de %1$s avec un texte de description doit avoir une v
 msgid "%1$s %2$s shortcode type attribute \"%3$s\" is not a recognized value."
 msgstr "Le code court %2$s de %1$s avec \"%3$s\" pour l'attribut type n'est pas une valeur reconnue."
 
-#: lib/submenu/schema-general.php:38
+#: lib/submenu/schema-general.php:40
 msgctxt "metabox title"
 msgid "Schema Markup Settings"
 msgstr "Réglages balisage de Schéma"
 
-#: lib/submenu/schema-general.php:50
+#: lib/submenu/schema-general.php:52
 msgctxt "metabox title"
 msgid "Advanced Settings (%s)"
 msgstr "Réglages avancés (%s)"
 
-#: lib/submenu/schema-general.php:69
+#: lib/submenu/schema-general.php:71
 msgctxt "metabox tab"
 msgid "General Settings"
 msgstr "Réglages généraux"
 
-#: lib/submenu/schema-general.php:70
+#: lib/submenu/schema-general.php:72
 msgctxt "metabox tab"
 msgid "Schema Defaults"
 msgstr "Défauts de Schéma"
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/submenu/schema-general.php:102
+#: lib/submenu/schema-general.php:104
 msgctxt "metabox tab"
 msgid "Schema Types"
 msgstr "Types de Schéma"
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/submenu/schema-general.php:104
+#: lib/submenu/schema-general.php:106
 msgctxt "metabox tab"
 msgid "Product Attributes"
 msgstr "Attributs de produit"
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/submenu/schema-general.php:106
+#: lib/submenu/schema-general.php:108
 msgctxt "metabox tab"
 msgid "Custom Fields"
 msgstr "Champs personnalisés"
 
-#: lib/submenu/schema-general.php:182
+#: lib/submenu/schema-general.php:185
 msgctxt "option label"
 msgid "WebSite Name"
 msgstr "Nom du site Web"
 
-#: lib/submenu/schema-general.php:188
+#: lib/submenu/schema-general.php:191
 msgctxt "option label"
 msgid "WebSite Alternate Name"
 msgstr "Autre nom du site Web"
 
-#: lib/submenu/schema-general.php:193
+#: lib/submenu/schema-general.php:196
 msgctxt "option label"
 msgid "WebSite Description"
 msgstr "Description du site Web"
 
-#: lib/submenu/schema-general.php:201
+#: lib/submenu/schema-general.php:204
 msgctxt "option label"
 msgid "Text and Article Body Max. Length"
 msgstr "Longueur max. text et corps d'article"
 
-#: lib/submenu/schema-general.php:204
+#: lib/submenu/schema-general.php:207
 msgctxt "option comment"
 msgid "characters or less"
 msgstr "caractères ou moins"
 
-#: lib/submenu/schema-general.php:207
+#: lib/submenu/schema-general.php:210
 msgctxt "option label"
 msgid "Add Text and Article Body Properties"
 msgstr "Ajouter prop. texte et corps d'article"
 
-#: lib/submenu/schema-general.php:212
+#: lib/submenu/schema-general.php:215
 msgctxt "option label"
 msgid "Add 5 Star Rating If No Rating"
 msgstr "Ajouter note 5 étoiles si aucune note"
