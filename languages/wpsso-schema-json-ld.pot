@@ -2009,54 +2009,54 @@ msgid "Schema Defaults"
 msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/submenu/schema-general.php:104
+#: lib/submenu/schema-general.php:106
 msgctxt "metabox tab"
 msgid "Schema Types"
 msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/submenu/schema-general.php:106
+#: lib/submenu/schema-general.php:108
 msgctxt "metabox tab"
 msgid "Product Attributes"
 msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/submenu/schema-general.php:108
+#: lib/submenu/schema-general.php:110
 msgctxt "metabox tab"
 msgid "Custom Fields"
 msgstr ""
 
-#: lib/submenu/schema-general.php:185
+#: lib/submenu/schema-general.php:189
 msgctxt "option label"
 msgid "WebSite Name"
 msgstr ""
 
-#: lib/submenu/schema-general.php:191
+#: lib/submenu/schema-general.php:195
 msgctxt "option label"
 msgid "WebSite Alternate Name"
 msgstr ""
 
-#: lib/submenu/schema-general.php:196
+#: lib/submenu/schema-general.php:200
 msgctxt "option label"
 msgid "WebSite Description"
 msgstr ""
 
-#: lib/submenu/schema-general.php:204
+#: lib/submenu/schema-general.php:208
 msgctxt "option label"
 msgid "Text and Article Body Max. Length"
 msgstr ""
 
-#: lib/submenu/schema-general.php:207
+#: lib/submenu/schema-general.php:211
 msgctxt "option comment"
 msgid "characters or less"
 msgstr ""
 
-#: lib/submenu/schema-general.php:210
+#: lib/submenu/schema-general.php:214
 msgctxt "option label"
 msgid "Add Text and Article Body Properties"
 msgstr ""
 
-#: lib/submenu/schema-general.php:215
+#: lib/submenu/schema-general.php:219
 msgctxt "option label"
 msgid "Add 5 Star Rating If No Rating"
 msgstr ""

@@ -21,8 +21,8 @@ if ( ! class_exists( 'WpssoJsonShortcodeSchema' ) ) {
 		private $prev_data_ref   = null;
 		private $content_depth   = 0;
 		private $shortcode_name  = 'schema';	// Default shortcode name.
-		private $shortcode_sep   = '_';	// Default shortcode separator.
-		private $shortcode_depth = 3;	// Default shortcode depth.
+		private $shortcode_sep   = '_';		// Default shortcode separator.
+		private $shortcode_depth = 3;		// Default shortcode depth.
 		private $sc_tag_names    = array();
 
 		public function __construct( &$plugin ) {
