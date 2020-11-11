@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssojson' => array(			// Plugin acronym.
-					'version'     => '4.7.0',	// Plugin version.
+					'version'     => '4.8.0-dev.2',	// Plugin version.
 					'opt_version' => '43',		// Increment when changing default option values.
 					'short'       => 'WPSSO JSON',	// Short plugin name.
 					'name'        => 'WPSSO Schema JSON-LD Markup',
@@ -242,6 +242,23 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 
 			if ( false === $success && ! empty( $filespec ) ) {
 
+				static $avail_schema = null;
+
+				if ( null === $avail_schema ) {	// Only check once.
+
+					$wpsso =& Wpsso::get_instance();
+
+					$avail_schema = isset( $wpsso->avail[ 'p' ][ 'schema' ] ) ? $wpsso->avail[ 'p' ][ 'schema' ] : true;
+				}
+
+				if ( ! $avail_schema ) {
+				
+					if ( 0 === strpos( $filespec, 'filters/' ) ) {
+
+						return 'none';
+					}
+				}
+
 				$file_path = WPSSOJSON_PLUGINDIR . 'lib/' . $filespec . '.php';
 
 				if ( file_exists( $file_path ) ) {
@@ -250,7 +267,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 
 					if ( empty( $classname ) ) {
 
-						return SucomUtil::sanitize_classname( 'wpssojson' . $filespec, $allow_underscore = false );
+						$classname = SucomUtil::sanitize_classname( 'wpssojson' . $filespec, $allow_underscore = false );
 					}
 
 					return $classname;
