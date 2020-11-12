@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.7.0\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.8.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-11-07 08:49-0800\n"
-"PO-Revision-Date: 2020-11-07 08:50-0800\n"
+"POT-Creation-Date: 2020-11-12 09:34-0800\n"
+"PO-Revision-Date: 2020-11-12 09:34-0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -1867,54 +1867,54 @@ msgid "Schema Defaults"
 msgstr "Défauts de Schéma"
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/submenu/schema-general.php:104
+#: lib/submenu/schema-general.php:106
 msgctxt "metabox tab"
 msgid "Schema Types"
 msgstr "Types de Schéma"
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/submenu/schema-general.php:106
+#: lib/submenu/schema-general.php:108
 msgctxt "metabox tab"
 msgid "Product Attributes"
 msgstr "Attributs de produit"
 
 #. translators: Please ignore - translation uses a different text domain.
-#: lib/submenu/schema-general.php:108
+#: lib/submenu/schema-general.php:110
 msgctxt "metabox tab"
 msgid "Custom Fields"
 msgstr "Champs personnalisés"
 
-#: lib/submenu/schema-general.php:185
+#: lib/submenu/schema-general.php:189
 msgctxt "option label"
 msgid "WebSite Name"
 msgstr "Nom du site Web"
 
-#: lib/submenu/schema-general.php:191
+#: lib/submenu/schema-general.php:195
 msgctxt "option label"
 msgid "WebSite Alternate Name"
 msgstr "Autre nom du site Web"
 
-#: lib/submenu/schema-general.php:196
+#: lib/submenu/schema-general.php:200
 msgctxt "option label"
 msgid "WebSite Description"
 msgstr "Description du site Web"
 
-#: lib/submenu/schema-general.php:204
+#: lib/submenu/schema-general.php:208
 msgctxt "option label"
 msgid "Text and Article Body Max. Length"
 msgstr "Longueur max. text et corps d'article"
 
-#: lib/submenu/schema-general.php:207
+#: lib/submenu/schema-general.php:211
 msgctxt "option comment"
 msgid "characters or less"
 msgstr "caractères ou moins"
 
-#: lib/submenu/schema-general.php:210
+#: lib/submenu/schema-general.php:214
 msgctxt "option label"
 msgid "Add Text and Article Body Properties"
 msgstr "Ajouter prop. texte et corps d'article"
 
-#: lib/submenu/schema-general.php:215
+#: lib/submenu/schema-general.php:219
 msgctxt "option label"
 msgid "Add 5 Star Rating If No Rating"
 msgstr "Ajouter note 5 étoiles si aucune note"
