@@ -314,12 +314,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.8.0-rc.2 (2020/11/13)**
+**Version 4.8.0 (2020/11/13)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* Added a check to skip loading Schema filters if Schema markup is disabled.
+	* Added a check to skip loading Schema filter hooks if Schema markup is disabled.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -327,7 +327,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.4.
-	* WPSSO Core v8.12.0-rc.2.
+	* WPSSO Core v8.12.0.
 
 **Version 4.7.0 (2020/11/07)**
 
@@ -519,9 +519,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.8.0-rc.2 =
+= 4.8.0 =
 
-(2020/11/13) Added a check to skip loading Schema filters if Schema markup is disabled.
+(2020/11/13) Added a check to skip loading Schema filter hooks if Schema markup is disabled.
 
 = 4.7.0 =
 
