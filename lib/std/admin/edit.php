@@ -981,7 +981,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 							'input_type'     => 'select',
 							'input_class'    => 'currency',
 							'select_options' => $currencies,
-							'select_default' => $this->p->options[ 'plugin_def_currency' ],
+							'select_default' => $this->p->options[ 'og_def_currency' ],
 						),
 						'schema_event_offer_avail' => array(
 							'input_title'    => _x( 'Event Offer Availability', 'option label', 'wpsso-schema-json-ld' ),

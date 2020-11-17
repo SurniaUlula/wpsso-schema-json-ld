@@ -441,7 +441,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				'schema_job_hiring_org_id'        => $opts[ 'schema_def_job_hiring_org_id' ],	// Job Hiring Organization.
 				'schema_job_location_id'          => $opts[ 'schema_def_job_location_id' ],	// Job Location.
 				'schema_job_salary'               => '',					// Base Salary.
-				'schema_job_salary_currency'      => $opts[ 'plugin_def_currency' ],		// Base Salary Currency.
+				'schema_job_salary_currency'      => $opts[ 'og_def_currency' ],		// Base Salary Currency.
 				'schema_job_salary_period'        => 'year',					// Base Salary per Year, Month, Week, Hour.
 				'schema_job_empl_type_FULL_TIME'  => 0,
 				'schema_job_empl_type_PART_TIME'  => 0,
