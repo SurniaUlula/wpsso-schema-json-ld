@@ -314,7 +314,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.9.0-dev.2 (2020/11/17)**
+**Version 4.9.0-rc.1 (2020/11/17)**
 
 * **New Features**
 	* None.
@@ -327,7 +327,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.4.
-	* WPSSO Core v8.13.0-dev.2
+	* WPSSO Core v8.13.0-rc.1
 
 **Version 4.8.0 (2020/11/13)**
 
@@ -534,7 +534,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.9.0-dev.2 =
+= 4.9.0-rc.1 =
 
 (2020/11/17) Renamed the 'plugin_def_currency' options key to 'og_def_currency' for WPSSO Core v8.13.0.
 
