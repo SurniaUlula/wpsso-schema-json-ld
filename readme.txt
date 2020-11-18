@@ -314,7 +314,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.9.0-rc.2 (2020/11/18)**
+**Version 4.9.0-rc.3 (2020/11/18)**
 
 * **New Features**
 	* None.
@@ -534,7 +534,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.9.0-rc.2 =
+= 4.9.0-rc.3 =
 
 (2020/11/18) Renamed the 'plugin_def_currency' options key to 'og_def_currency' for WPSSO Core v8.13.0.
 
