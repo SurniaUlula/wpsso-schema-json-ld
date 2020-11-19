@@ -1,4 +1,4 @@
-<h1>Schema JSON-LD Markup for Google Rich Results, Rich Snippets, and Structured Data</h1><h3>WPSSO Add-on</h3>
+<h1>WPSSO Schema JSON-LD Markup for Google Rich Results, Rich Snippets, and Structured Data</h1>
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Schema JSON-LD Markup</td></tr>
