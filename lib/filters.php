@@ -846,7 +846,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 							$features[ $label ] = array(
 								'label_transl' => $label_transl,
-								'classname'    => $classname,
+								'status'       => class_exists( $classname ) ? 'on' : 'disabled',
 							);
 						}
 					}
