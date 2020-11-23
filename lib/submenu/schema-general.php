@@ -49,7 +49,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 					$metabox_context, $metabox_prio, $callback_args );
 
 			$metabox_id      = 'defaults';
-			$metabox_title   = sprintf( _x( 'Schema Defaults', 'metabox title', 'wpsso' ), self::$pkg[ $this->p->lca ][ 'short' ] );
+			$metabox_title   = _x( 'Schema Defaults', 'metabox title', 'wpsso-schema-json-ld' );
 			$metabox_screen  = $this->pagehook;
 			$metabox_context = 'normal';
 			$metabox_prio    = 'default';
