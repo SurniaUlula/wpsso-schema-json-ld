@@ -314,6 +314,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 4.10.0-dev.1 (2020/11/23)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Moved all SSO &gt; Schema Markup &gt; Schema Defaults tab options to a new Schema Defaults metabox.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v5.6.
+	* WordPress v4.4.
+	* WPSSO Core v8.14.0-dev.1.
+
 **Version 4.9.0 (2020/11/20)**
 
 * **New Features**
@@ -533,6 +548,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v8.0.0.
 
 == Upgrade Notice ==
+
+= 4.10.0-dev.1 =
+
+(2020/11/23) Moved all SSO &gt; Schema Markup &gt; Schema Defaults tab options to a new Schema Defaults metabox.
 
 = 4.9.0 =
 
