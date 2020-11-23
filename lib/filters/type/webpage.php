@@ -44,7 +44,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeWebpage' ) ) {
 
 			$json_ret = array();
 
-			$crumb_data = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_breadcrumb',
+			$crumb_data = (array) apply_filters( 'wpsso_json_prop_https_schema_org_breadcrumb',
 				array(), $mod, $mt_og, $page_type_id, $is_main );
 
 			if ( ! empty( $crumb_data ) ) {

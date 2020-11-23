@@ -177,7 +177,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 
 			foreach ( $data_props as $prop_name => $prop_values ) {
 
-				$filter_name = $this->p->lca . '_json_prop_https_schema_org_' . strtolower( $prop_name );
+				$filter_name = 'wpsso_json_prop_https_schema_org_' . strtolower( $prop_name );
 
 				$prop_values = (array) apply_filters( $filter_name, $prop_values, $mod, $mt_og, $page_type_id, $is_main );
 
@@ -272,11 +272,11 @@ if ( ! class_exists( 'WpssoJsonFiltersPropHasPart' ) ) {
 				$this->p->debug->mark();
 			}
 
-			if ( ! empty( $GLOBALS[ $this->p->lca . '_doing_filter_the_content' ] ) ) {
+			if ( ! empty( $GLOBALS[ 'wpsso_doing_filter_the_content' ] ) ) {
 
 				if ( $this->p->debug->enabled ) {
 
-					$this->p->debug->log( 'exiting early: ' . $this->p->lca . '_doing_filter_the_content is true' );
+					$this->p->debug->log( 'exiting early: wpsso_doing_filter_the_content is true' );
 				}
 
 				return $content;

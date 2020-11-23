@@ -131,7 +131,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 				}
 			}
 
-			$json_ret[ 'isPartOf' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_ispartof',
+			$json_ret[ 'isPartOf' ] = (array) apply_filters( 'wpsso_json_prop_https_schema_org_ispartof',
 				$json_ret[ 'isPartOf' ], $mod, $mt_og, $page_type_id, $is_main );
 
 			/**
@@ -224,7 +224,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 			 * Property:
 			 *      thumbnailURL
 			 */
-			$json_ret[ 'thumbnailUrl' ] = $this->p->og->get_thumbnail_url( $this->p->lca . '-thumbnail', $mod, $md_pre = 'schema' );
+			$json_ret[ 'thumbnailUrl' ] = $this->p->og->get_thumbnail_url( 'wpsso-thumbnail', $mod, $md_pre = 'schema' );
 
 			/**
 			 * Property:

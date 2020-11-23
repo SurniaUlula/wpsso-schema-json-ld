@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 			$this->maybe_show_language_notice();
 
 			$metabox_id      = 'general';
-			$metabox_title   = _x( 'Schema Markup Settings', 'metabox title', 'wpsso-schema-json-ld' );
+			$metabox_title   = _x( 'Schema Settings', 'metabox title', 'wpsso-schema-json-ld' );
 			$metabox_screen  = $this->pagehook;
 			$metabox_context = 'normal';
 			$metabox_prio    = 'default';
@@ -48,8 +48,8 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 				array( $this, 'show_metabox_' . $metabox_id ), $metabox_screen,
 					$metabox_context, $metabox_prio, $callback_args );
 
-			$metabox_id      = 'advanced';
-			$metabox_title   = sprintf( _x( 'Advanced Settings (%s)', 'metabox title', 'wpsso' ), self::$pkg[ $this->p->lca ][ 'short' ] );
+			$metabox_id      = 'defaults';
+			$metabox_title   = sprintf( _x( 'Schema Defaults', 'metabox title', 'wpsso' ), self::$pkg[ $this->p->lca ][ 'short' ] );
 			$metabox_screen  = $this->pagehook;
 			$metabox_context = 'normal';
 			$metabox_prio    = 'default';
@@ -63,51 +63,37 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 
 		public function show_metabox_general() {
 
-			$metabox_id = 'json-general';
+			$metabox_id = 'schema';
 
-			$filter_name = SucomUtil::sanitize_hookname( $this->p->lca . '_' . $metabox_id . '_tabs' );
+			$tab_key = 'general';
 
-			$tabs = apply_filters( $filter_name, array( 
-				'schema_general'  => _x( 'General Settings', 'metabox tab', 'wpsso-schema-json-ld' ),
-				'schema_defaults' => _x( 'Schema Defaults', 'metabox tab', 'wpsso-schema-json-ld' ),
-			) );
+			$filter_name = SucomUtil::sanitize_hookname( 'wpsso_' . $metabox_id . '_' . $tab_key . '_rows' );
 
-			$table_rows = array();
+			if ( isset( $this->p->avail[ 'p' ][ 'schema' ] ) && empty( $this->p->avail[ 'p' ][ 'schema' ] ) ) {	// Since WPSSO Core v6.23.3.
 
-			foreach ( $tabs as $tab_key => $title ) {
+				$table_rows = array();
 
-				if ( isset( $this->p->avail[ 'p' ][ 'schema' ] ) && empty( $this->p->avail[ 'p' ][ 'schema' ] ) ) {	// Since WPSSO Core v6.23.3.
+				$table_rows = $this->p->msgs->get_schema_disabled_rows( $table_rows, $col_span = 1 );
 
-					$table_rows[ $tab_key ] = array();	// Older versions forced a reference argument.
+			} else {
 
-					$table_rows[ $tab_key ] = $this->p->msgs->get_schema_disabled_rows( $table_rows[ $tab_key ], $col_span = 1 );
-
-				} else {
-
-					$filter_name = SucomUtil::sanitize_hookname( $this->p->lca . '_' . $metabox_id . '_' . $tab_key . '_rows' );
-
-					$table_rows[ $tab_key ] = $this->get_table_rows( $metabox_id, $tab_key );
-
-					$table_rows[ $tab_key ] = apply_filters( $filter_name, $table_rows[ $tab_key ], $this->form );
-				}
+				$table_rows = apply_filters( $filter_name, $this->get_table_rows( $metabox_id, $tab_key ), $this->form );
 			}
 
-			$this->p->util->metabox->do_tabbed( $metabox_id, $tabs, $table_rows );
+			$this->p->util->metabox->do_table( $table_rows, 'metabox-' . $metabox_id . '-' . $tab_key );
 		}
 
-		public function show_metabox_advanced() {
+		public function show_metabox_defaults() {
 
-			$metabox_id = 'json-advanced';
+			$metabox_id = 'schema-defaults';
 
-			$filter_name = SucomUtil::sanitize_hookname( $this->p->lca . '_' . $metabox_id . '_tabs' );
+			$filter_name = SucomUtil::sanitize_hookname( 'wpsso_' . $metabox_id . '_tabs' );
 
 			$tabs = apply_filters( $filter_name, array( 
-				// translators: Please ignore - translation uses a different text domain.
-				'schema_types'  => _x( 'Schema Types', 'metabox tab', 'wpsso' ),
-				// translators: Please ignore - translation uses a different text domain.
-				'product_attrs' => _x( 'Product Attributes', 'metabox tab', 'wpsso' ),
-				// translators: Please ignore - translation uses a different text domain.
-				'custom_fields' => _x( 'Custom Fields', 'metabox tab', 'wpsso' ),
+				'creative_work' => _x( 'Creative Work', 'metabox tab', 'wpsso' ),
+				'event'         => _x( 'Event', 'metabox tab', 'wpsso' ),
+				'job_posting'   => _x( 'Job Posting', 'metabox tab', 'wpsso' ),
+				'review'        => _x( 'Review', 'metabox tab', 'wpsso' ),
 			) );
 
 			$table_rows = array();
@@ -122,7 +108,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 
 				} else {
 
-					$filter_name = SucomUtil::sanitize_hookname( $this->p->lca . '_' . $metabox_id . '_' . $tab_key . '_rows' );
+					$filter_name = SucomUtil::sanitize_hookname( 'wpsso_' . $metabox_id . '_' . $tab_key . '_rows' );
 
 					$table_rows[ $tab_key ] = $this->get_table_rows( $metabox_id, $tab_key );
 
@@ -139,37 +125,11 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 
 			switch ( $metabox_id . '-' . $tab_key ) {
 
-				case 'json-general-schema_general':
+				case 'schema-general':
 
 					$this->add_schema_general_table_rows( $table_rows, $this->form );
 
 					break;
-
-				case 'json-general-schema_defaults':
-
-					break;
-
-				/**
-				 * Advanced Settings metabox.
-				 */
-				case 'json-advanced-schema_types':
-
-					$this->add_schema_item_types_table_rows( $table_rows, $this->form );
-
-					break;
-
-				case 'json-advanced-product_attrs':
-
-					$this->add_advanced_product_attrs_table_rows( $table_rows, $this->form );
-
-					break;
-
-				case 'json-advanced-custom_fields':
-
-					$this->add_advanced_custom_fields_table_rows( $table_rows, $this->form );
-
-					break;
-
 			}
 
 			return $table_rows;
@@ -183,6 +143,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 			}
 
 			$def_site_name = get_bloginfo( 'name', 'display' );
+
 			$def_site_desc = get_bloginfo( 'description', 'display' );
 
 			$table_rows[ 'site_name' ] = '' .

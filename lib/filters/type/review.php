@@ -282,7 +282,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 				}
 			}
 
-			$json_ret[ 'itemReviewed' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_itemreviewed',
+			$json_ret[ 'itemReviewed' ] = (array) apply_filters( 'wpsso_json_prop_https_schema_org_itemreviewed',
 				$item_reviewed, $mod, $mt_og, $page_type_id, $is_main );
 
 			/**
@@ -298,7 +298,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 				'bestRating'    => 'schema_review_rating_to',
 			) );
 
-			$json_ret[ 'reviewRating' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_reviewrating',
+			$json_ret[ 'reviewRating' ] = (array) apply_filters( 'wpsso_json_prop_https_schema_org_reviewrating',
 				$json_ret[ 'reviewRating' ], $mod, $mt_og, $page_type_id, $is_main );
 
 			return WpssoSchema::return_data_from_filter( $json_data, $json_ret, $is_main );

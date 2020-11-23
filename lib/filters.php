@@ -767,8 +767,8 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			/**
 			 * Clear the WPSSO Core head meta tags array.
 			 */
-			$cache_md5_pre = $this->p->lca . '_h_';
-			$cache_method = 'WpssoHead::get_head_array';
+			$cache_md5_pre = 'wpsso_h_';
+			$cache_method  = 'WpssoHead::get_head_array';
 
 			$year  = get_the_time( 'Y', $mod[ 'id' ] );
 			$month = get_the_time( 'm', $mod[ 'id' ] );

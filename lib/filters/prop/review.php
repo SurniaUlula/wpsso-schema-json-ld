@@ -176,7 +176,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 				}
 			}
 
-			$all_reviews = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_review',
+			$all_reviews = (array) apply_filters( 'wpsso_json_prop_https_schema_org_review',
 				$all_reviews, $mod, $mt_og, $page_type_id, $is_main );
 
 			if ( ! empty( $all_reviews ) ) {

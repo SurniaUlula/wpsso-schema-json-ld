@@ -81,7 +81,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 				}
 			}
 
-			$json_ret[ 'additionalType' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_additionaltype',
+			$json_ret[ 'additionalType' ] = (array) apply_filters( 'wpsso_json_prop_https_schema_org_additionaltype',
 				$json_ret[ 'additionalType' ], $mod, $mt_og, $page_type_id, $is_main );
 
 			/**
@@ -137,7 +137,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 					 */
 					$add_link_rel_shortlink = empty( $this->p->options[ 'add_link_rel_shortlink' ] ) ? false : true;
 
-					if ( apply_filters( $this->p->lca . '_add_link_rel_shortlink', $add_link_rel_shortlink, $mod ) ) {
+					if ( apply_filters( 'wpsso_add_link_rel_shortlink', $add_link_rel_shortlink, $mod ) ) {
 
 						if ( $this->p->debug->enabled ) {
 
@@ -175,7 +175,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 							$this->p->debug->log( 'getting short url for ' . $mt_og[ 'og:url' ] );
 						}
 
-						$json_ret[ 'sameAs' ][] = apply_filters( $this->p->lca . '_get_short_url', $mt_og[ 'og:url' ], $shortener, $mod, $is_main );
+						$json_ret[ 'sameAs' ][] = apply_filters( 'wpsso_get_short_url', $mt_og[ 'og:url' ], $shortener, $mod, $is_main );
 					}
 				}
 			}
@@ -201,7 +201,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 				}
 			}
 
-			$json_ret[ 'sameAs' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_sameas',
+			$json_ret[ 'sameAs' ] = (array) apply_filters( 'wpsso_json_prop_https_schema_org_sameas',
 				$json_ret[ 'sameAs' ], $mod, $mt_og, $page_type_id, $is_main );
 
 			WpssoSchema::check_prop_value_sameas( $json_ret );
@@ -260,7 +260,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 			 */
 			$json_ret[ 'potentialAction' ] = array();
 
-			$json_ret[ 'potentialAction' ] = (array) apply_filters( $this->p->lca . '_json_prop_https_schema_org_potentialaction',
+			$json_ret[ 'potentialAction' ] = (array) apply_filters( 'wpsso_json_prop_https_schema_org_potentialaction',
 				$json_ret[ 'potentialAction' ], $mod, $mt_og, $page_type_id, $is_main );
 
 			/**
