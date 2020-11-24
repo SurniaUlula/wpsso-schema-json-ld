@@ -40,8 +40,8 @@ if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
 			add_filter( 'amp_post_template_metadata', '__return_empty_array', 10000, 2 );
 
 			$this->p->util->add_plugin_filters( $this, array(
-				'add_schema_head_attributes'              => '__return_false',
-				'add_schema_meta_array'                   => '__return_false',
+				'add_schema_head_attributes'              => '__return_false',	// Aka head itemscope attribute.
+				'add_schema_meta_array'                   => '__return_false',	// Aka meta itemprop tags.
 				'add_schema_noscript_aggregaterating'     => '__return_false',
 				'og_add_mt_offers'                        => '__return_true',
 				'og_add_mt_rating'                        => '__return_true',
