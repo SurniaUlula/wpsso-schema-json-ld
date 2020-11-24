@@ -71,9 +71,9 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 
 			if ( isset( $this->p->avail[ 'p' ][ 'schema' ] ) && empty( $this->p->avail[ 'p' ][ 'schema' ] ) ) {	// Since WPSSO Core v6.23.3.
 
-				$table_rows = array();
+				$table_rows = array();	// Older versions forced a reference argument.
 
-				$table_rows = $this->p->msgs->get_schema_disabled_rows( $table_rows, $col_span = 1 );
+				$table_rows = $this->p->msgs->get_schema_disabled_rows( $table_rows );
 
 			} else {
 
@@ -104,7 +104,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 
 					$table_rows[ $tab_key ] = array();	// Older versions forced a reference argument.
 
-					$table_rows[ $tab_key ] = $this->p->msgs->get_schema_disabled_rows( $table_rows[ $tab_key ], $col_span = 1 );
+					$table_rows[ $tab_key ] = $this->p->msgs->get_schema_disabled_rows( $table_rows[ $tab_key ] );
 
 				} else {
 
