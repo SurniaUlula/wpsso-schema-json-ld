@@ -32,7 +32,7 @@ Provides comprehensive Schema JSON-LD markup for posts, pages, custom post types
 
 **Most complete Schema JSON-LD markup for WooCommerce products:**
 
-The WooCommerce plugin is known to offer incomplete Schema markup for Google. The <a href="https://wpsso.com/extend/plugins/wpsso/">WPSSO Core Premium plugin</a> (required for WooCommerce integration) and this add-on provide a much better solution by offering complete product meta tags for Facebook / Pinterest, and complete Schema product markup for Google Rich Results (aka Rich Snippets) &mdash; including additional product images, product variations, product information (brand, color, condition, EAN, dimensions, GTIN-8/12/13/14, ISBN, material, MPN, size, SKU, volume, weight, etc), product reviews, product ratings, sale start / end dates, sale prices, pre-tax prices, VAT prices, shipping rates, shipping times, and much, much more.
+The WooCommerce plugin is known to offer incomplete Schema markup for Google Rich Results. The <a href="https://wpsso.com/extend/plugins/wpsso/">WPSSO Core Premium plugin</a> (required for WooCommerce integration) and this add-on provide a much better solution by offering complete product meta tags for Facebook / Pinterest, and complete Schema product markup for Google Rich Results (aka Rich Snippets) &mdash; including additional product images, product variations, product information (brand, color, condition, EAN, dimensions, GTIN-8/12/13/14, ISBN, material, MPN, size, SKU, volume, weight, etc), product reviews, product ratings, sale start / end dates, sale prices, pre-tax prices, VAT prices, shipping rates, shipping times, and much, much more.
 
 **Fixes all Google Search Console / Structured Data Testing Tool errors:**
 
@@ -257,7 +257,7 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 
 WPSSO Schema JSON-LD Markup (aka WPSSO JSON) is an add-on for the [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/).
 
-WPSSO Core and its add-ons make sure your content looks great on social sites and in search results, no matter how your URLs are crawled, shared, re-shared, posted, or embedded.
+WPSSO Core and its add-ons make sure your content looks best on social sites and in search results, no matter how your webpages are shared, re-shared, messaged, posted, embedded, or crawled.
 
 == Installation ==
 
@@ -314,7 +314,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.10.0-dev.3 (2020/11/24)**
+**Version 4.10.0-dev.4 (2020/11/24)**
 
 * **New Features**
 	* None.
@@ -327,7 +327,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.4.
-	* WPSSO Core v8.14.0-dev.3.
+	* WPSSO Core v8.14.0-dev.4.
 
 **Version 4.9.0 (2020/11/20)**
 
@@ -549,7 +549,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.10.0-dev.3 =
+= 4.10.0-dev.4 =
 
 (2020/11/24) Moved all SSO &gt; Schema Markup &gt; Schema Defaults tab options to a new Schema Defaults metabox.
 
