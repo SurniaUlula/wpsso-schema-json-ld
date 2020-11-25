@@ -67,9 +67,9 @@ if ( ! class_exists( 'WpssoJsonConflict' ) ) {
 
 					$plugins_url = add_query_arg( array( 's' => 'yoast seo' ), $plugins_url );
 
-					$notice_msg = sprintf( __( 'The combination of %1$s and its %2$s add-on provide much better Schema markup for WooCommerce products than the %3$s plugin.', 'wpsso' ), $pkg_info[ 'wpsso' ][ 'short_pro' ], $pkg_info[ 'wpssojson' ][ 'short' ], $wpseo_wc_label ) . ' ';
+					$notice_msg = sprintf( __( 'The combination of %1$s and its %2$s add-on provide much better Schema markup for WooCommerce products than the %3$s plugin.', 'wpsso-schema-json-ld' ), $pkg_info[ 'wpsso' ][ 'short_pro' ], $pkg_info[ 'wpssojson' ][ 'short' ], $wpseo_wc_label ) . ' ';
 
-					$notice_msg .= sprintf( __( 'There is absolutely no advantage in continuing to use the %1$s plugin.', 'wpsso' ), $wpseo_wc_label ) . ' ';
+					$notice_msg .= sprintf( __( 'There is absolutely no advantage in continuing to use the %1$s plugin.', 'wpsso-schema-json-ld' ), $wpseo_wc_label ) . ' ';
 
 					$notice_msg .= sprintf( __( 'To avoid adding incorrect and confusing Schema markup in your webpages, <a href="%1$s">please deactivate the %2$s plugin immediately</a>.' ), $plugins_url, $wpseo_wc_label );
 

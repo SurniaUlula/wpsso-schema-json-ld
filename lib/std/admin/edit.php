@@ -1236,6 +1236,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 					'tr_class' => $row_class,
 					'th_class' => 'medium',
 					'td_class' => 'blank',
+					// translators: Please ignore - translation uses a different text domain.
 					'label'    => _x( 'Maximum Images', 'option label', 'wpsso' ),
 					'tooltip'  => 'schema_img_max',	// Use tooltip message from settings.
 					'content'  => $form->get_no_select( 'schema_img_max', range( 0, $max_media_items ), $css_class = 'medium' ),
@@ -1246,6 +1247,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 				'tr_class' => $row_class,
 				'th_class' => 'medium',
 				'td_class' => 'blank',
+				// translators: Please ignore - translation uses a different text domain.
 				'label'    => _x( 'Image ID', 'option label', 'wpsso' ),
 				'tooltip'  => 'meta-schema_img_id',
 				'content'  => $form->get_no_input_image_upload( 'schema_img', $media_info[ 'pid' ], true ),
@@ -1255,6 +1257,7 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 				'tr_class' => $row_class,
 				'th_class' => 'medium',
 				'td_class' => 'blank',
+				// translators: Please ignore - translation uses a different text domain.
 				'label'    => _x( 'or an Image URL', 'option label', 'wpsso' ),
 				'tooltip'  => 'meta-schema_img_url',
 				'content'  => $form->get_no_input_value( $media_info[ 'img_url' ], $css_class = 'wide' ),

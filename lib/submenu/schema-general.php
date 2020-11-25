@@ -90,10 +90,10 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 			$filter_name = SucomUtil::sanitize_hookname( 'wpsso_' . $metabox_id . '_tabs' );
 
 			$tabs = apply_filters( $filter_name, array( 
-				'creative_work' => _x( 'Creative Work', 'metabox tab', 'wpsso' ),
-				'event'         => _x( 'Event', 'metabox tab', 'wpsso' ),
-				'job_posting'   => _x( 'Job Posting', 'metabox tab', 'wpsso' ),
-				'review'        => _x( 'Review', 'metabox tab', 'wpsso' ),
+				'creative_work' => _x( 'Creative Work', 'metabox tab', 'wpsso-schema-json-ld' ),
+				'event'         => _x( 'Event', 'metabox tab', 'wpsso-schema-json-ld' ),
+				'job_posting'   => _x( 'Job Posting', 'metabox tab', 'wpsso-schema-json-ld' ),
+				'review'        => _x( 'Review', 'metabox tab', 'wpsso-schema-json-ld' ),
 			) );
 
 			$tabbed_args = array();

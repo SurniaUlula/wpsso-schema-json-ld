@@ -472,8 +472,8 @@ msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
 #: gettext/gettext-lib-pro.php:49 gettext/gettext-lib-pro.php:184
-#: lib/pro/admin/edit.php:365 lib/pro/admin/edit.php:1350
-#: lib/std/admin/edit.php:360 lib/std/admin/edit.php:1249
+#: lib/pro/admin/edit.php:365 lib/pro/admin/edit.php:1352
+#: lib/std/admin/edit.php:360 lib/std/admin/edit.php:1251
 msgctxt "option label"
 msgid "Image ID"
 msgstr ""
@@ -774,8 +774,8 @@ msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
 #: gettext/gettext-lib-pro.php:101 gettext/gettext-lib-pro.php:186
-#: lib/pro/admin/edit.php:684 lib/pro/admin/edit.php:1358
-#: lib/std/admin/edit.php:709 lib/std/admin/edit.php:1258
+#: lib/pro/admin/edit.php:684 lib/pro/admin/edit.php:1361
+#: lib/std/admin/edit.php:709 lib/std/admin/edit.php:1261
 msgctxt "option label"
 msgid "or an Image URL"
 msgstr ""
@@ -1225,32 +1225,32 @@ msgid "Product GTIN"
 msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
-#: gettext/gettext-lib-pro.php:182 lib/pro/admin/edit.php:1341
-#: lib/std/admin/edit.php:1239
+#: gettext/gettext-lib-pro.php:182 lib/pro/admin/edit.php:1342
+#: lib/std/admin/edit.php:1240
 msgctxt "option label"
 msgid "Maximum Images"
 msgstr ""
 
-#: gettext/gettext-lib-pro.php:187 lib/pro/admin/edit.php:1378
-#: lib/std/admin/edit.php:1278
+#: gettext/gettext-lib-pro.php:187 lib/pro/admin/edit.php:1381
+#: lib/std/admin/edit.php:1281
 msgctxt "option comment"
 msgid "days"
 msgstr ""
 
-#: gettext/gettext-lib-pro.php:188 lib/pro/admin/edit.php:1379
-#: lib/std/admin/edit.php:1279
+#: gettext/gettext-lib-pro.php:188 lib/pro/admin/edit.php:1382
+#: lib/std/admin/edit.php:1282
 msgctxt "option comment"
 msgid "hours"
 msgstr ""
 
-#: gettext/gettext-lib-pro.php:189 lib/pro/admin/edit.php:1380
-#: lib/std/admin/edit.php:1280
+#: gettext/gettext-lib-pro.php:189 lib/pro/admin/edit.php:1383
+#: lib/std/admin/edit.php:1283
 msgctxt "option comment"
 msgid "mins"
 msgstr ""
 
-#: gettext/gettext-lib-pro.php:190 lib/pro/admin/edit.php:1381
-#: lib/std/admin/edit.php:1281
+#: gettext/gettext-lib-pro.php:190 lib/pro/admin/edit.php:1384
+#: lib/std/admin/edit.php:1284
 msgctxt "option comment"
 msgid "secs"
 msgstr ""
