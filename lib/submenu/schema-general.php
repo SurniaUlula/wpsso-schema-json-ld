@@ -96,6 +96,8 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 				'review'        => _x( 'Review', 'metabox tab', 'wpsso' ),
 			) );
 
+			$tabbed_args = array();
+
 			$table_rows = array();
 
 			foreach ( $tabs as $tab_key => $title ) {
@@ -116,7 +118,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 				}
 			}
 
-			$this->p->util->metabox->do_tabbed( $metabox_id, $tabs, $table_rows );
+			$this->p->util->metabox->do_tabbed( $metabox_id, $tabs, $table_rows, $tabbed_args );
 		}
 
 		protected function get_table_rows( $metabox_id, $tab_key ) {
