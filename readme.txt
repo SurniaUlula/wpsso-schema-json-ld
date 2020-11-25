@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 5.6
 Requires At Least: 4.4
 Tested Up To: 5.6
-WC Tested Up To: 4.7.0
+WC Tested Up To: 4.7.1
 Stable Tag: 4.9.0
 
 Google Rich Results and JSON-LD structured data for Articles, Carousels, Events, FAQ pages, How-tos, Local SEO, Products, Recipes, Ratings, Reviews, and more.
@@ -314,7 +314,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.10.0-dev.4 (2020/11/24)**
+**Version 4.10.0-dev.5 (2020/11/24)**
 
 * **New Features**
 	* None.
@@ -327,7 +327,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.4.
-	* WPSSO Core v8.14.0-dev.4.
+	* WPSSO Core v8.14.0-dev.5.
 
 **Version 4.9.0 (2020/11/20)**
 
@@ -549,7 +549,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.10.0-dev.4 =
+= 4.10.0-dev.5 =
 
 (2020/11/24) Moved all SSO &gt; Schema Markup &gt; Schema Defaults tab options to a new Schema Defaults metabox.
 
