@@ -314,7 +314,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.10.0 (2020/11/25)**
+**Version 4.10.0 (2020/11/26)**
 
 * **New Features**
 	* None.
@@ -551,7 +551,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 4.10.0 =
 
-(2020/11/25) Moved all SSO &gt; Schema Markup &gt; Schema Defaults tab options to a new Schema Defaults metabox.
+(2020/11/26) Moved all SSO &gt; Schema Markup &gt; Schema Defaults tab options to a new Schema Defaults metabox.
 
 = 4.9.0 =
 
