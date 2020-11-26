@@ -1109,8 +1109,8 @@ if ( ! class_exists( 'WpssoJsonStdAdminEdit' ) ) {
 				),
 				'schema_product_ecom_msg' => array(
 					'tr_class' => $schema_type_row_class[ 'product' ],
-					'table_row' => ( empty( $this->p->avail[ 'ecom' ][ 'any' ] ) ? '' :
-						'<td colspan="2">' . $this->p->msgs->get( 'pro-ecom-product-msg' ) . '</td>' ),
+					'table_row' => empty( $this->p->avail[ 'ecom' ][ 'any' ] ) ? '' :
+						'<td colspan="2">' . $this->p->msgs->get( 'pro-ecom-product-msg' ) . '</td>',
 				),
 				'schema_product_length_value' => array(
 					'tr_class' => $schema_type_row_class[ 'product' ],

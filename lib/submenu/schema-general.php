@@ -177,7 +177,7 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 				$form->get_th_html( _x( 'Add Text and Article Body Properties', 'option label', 'wpsso-schema-json-ld' ),
 					$css_class = '', $css_id = 'schema_add_text_prop' ) . 
 				'<td>' . $form->get_checkbox( 'schema_add_text_prop' ) . '</td>';
-	
+
 			$table_rows[ 'schema_add_5_star_rating' ] = $form->get_tr_hide( 'basic', 'schema_add_5_star_rating' ) .
 				$form->get_th_html( _x( 'Add 5 Star Rating If No Rating', 'option label', 'wpsso-schema-json-ld' ),
 					$css_class = '', $css_id = 'schema_add_5_star_rating' ) . 

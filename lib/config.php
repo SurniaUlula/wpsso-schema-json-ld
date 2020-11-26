@@ -252,7 +252,7 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 				}
 
 				if ( ! $avail_schema ) {
-				
+
 					if ( 0 === strpos( $filespec, 'filters/' ) ) {
 
 						return 'none';
