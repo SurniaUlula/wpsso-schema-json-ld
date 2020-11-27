@@ -37,23 +37,11 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 				$this->p->debug->mark();
 			}
 
-			/**
-			 * Instantiate the WpssoJsonFiltersSchema class object.
-			 */
-			if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
-
-				require_once WPSSOJSON_PLUGINDIR . 'lib/filters-schema.php';
-			}
+			require_once WPSSOJSON_PLUGINDIR . 'lib/filters-schema.php';
 
 			$this->schema = new WpssoJsonFiltersSchema( $plugin );
 
-			/**
-			 * Instantiate the WpssoJsonFiltersUpgrade class object.
-			 */
-			if ( ! class_exists( 'WpssoJsonFiltersUpgrade' ) ) {
-
-				require_once WPSSOJSON_PLUGINDIR . 'lib/filters-upgrade.php';
-			}
+			require_once WPSSOJSON_PLUGINDIR . 'lib/filters-upgrade.php';
 
 			$this->upg = new WpssoJsonFiltersUpgrade( $plugin );
 
@@ -68,13 +56,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 			if ( is_admin() ) {
 
-				/**
-				 * Instantiate the WpssoJsonFiltersMessages class object.
-				 */
-				if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
-
-					require_once WPSSOJSON_PLUGINDIR . 'lib/filters-messages.php';
-				}
+				require_once WPSSOJSON_PLUGINDIR . 'lib/filters-messages.php';
 
 				$this->msgs = new WpssoJsonFiltersMessages( $plugin );
 
