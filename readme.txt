@@ -1,4 +1,4 @@
-=== WPSSO Schema JSON-LD Markup for Google Rich Results, Rich Snippets, and Structured Data ===
+=== WPSSO Schema JSON-LD Markup (Google Rich Results, Rich Snippets, Structured Data) ===
 Plugin Name: WPSSO Schema JSON-LD Markup
 Plugin Slug: wpsso-schema-json-ld
 Text Domain: wpsso-schema-json-ld
@@ -20,7 +20,7 @@ Google Rich Results and JSON-LD structured data for Articles, Carousels, Events,
 
 <p style="margin:0;"><img class="readme-icon" src="https://surniaulula.github.io/wpsso-schema-json-ld/assets/icon-256x256.png"></p>
 
-**Supports over 495 different Schema types and sub-types:**
+**Supports over 500 different Schema (aka Schema.org) types and sub-types:**
 
 Google Rich Results and JSON-LD structured data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ pages, How-tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Video Objects, and much more.
 
