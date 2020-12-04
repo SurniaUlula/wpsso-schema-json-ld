@@ -15,18 +15,15 @@ if ( ! class_exists( 'WpssoJsonFiltersUpgrade' ) ) {
 	class WpssoJsonFiltersUpgrade {
 
 		private $p;	// Wpsso class object.
+		private $a;	// WpssoJson class object.
 
 		/**
 		 * Instantiated by WpssoJsonFilters->__construct().
 		 */
-		public function __construct( &$plugin ) {
+		public function __construct( &$plugin, &$addon ) {
 
 			$this->p =& $plugin;
-
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
+			$this->a =& $addon;
 
 			$this->p->util->add_plugin_filters( $this, array(
 				'rename_options_keys'    => 1,
@@ -35,11 +32,6 @@ if ( ! class_exists( 'WpssoJsonFiltersUpgrade' ) ) {
 		}
 
 		public function filter_rename_options_keys( $options_keys ) {
-
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
 
 			$options_keys[ 'wpssojson' ] = array(
 				16 => array(
@@ -51,11 +43,6 @@ if ( ! class_exists( 'WpssoJsonFiltersUpgrade' ) ) {
 		}
 
 		public function filter_rename_md_options_keys( $options_keys ) {
-
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
 
 			$options_keys[ 'wpssojson' ] = array(
 				11 => array(

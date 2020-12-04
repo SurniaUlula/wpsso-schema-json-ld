@@ -18,8 +18,12 @@ if ( ! class_exists( 'WpssoJsonCompat' ) ) {
 	class WpssoJsonCompat {
 
 		private $p;	// Wpsso class object.
+		private $a;	// WpssoJson class object.
 
-		public function __construct( &$plugin ) {
+		/**
+		 * Instantiated by WpssoJson->init_objects().
+		 */
+		public function __construct( &$plugin, &$addon ) {
 
 			static $do_once = null;
 
@@ -31,11 +35,7 @@ if ( ! class_exists( 'WpssoJsonCompat' ) ) {
 			$do_once = true;
 
 			$this->p =& $plugin;
-
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
+			$this->a =& $addon;
 
 			if ( is_admin() ) {
 
@@ -96,11 +96,6 @@ if ( ! class_exists( 'WpssoJsonCompat' ) ) {
 		 */
 		public function cleanup_rankmath_json_ld( $data ) {
 
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
-
 			/**
 			 * Remove everything except for the BreadcrumbList markup.
 			 *
@@ -115,11 +110,6 @@ if ( ! class_exists( 'WpssoJsonCompat' ) ) {
 		 * Disable Yoast SEO Schema markup.
 		 */
 		public function cleanup_wpseo_frontend_presenters( $presenters ) {
-
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
 
 			foreach ( $presenters as $num => $obj ) {
 
@@ -153,11 +143,6 @@ if ( ! class_exists( 'WpssoJsonCompat' ) ) {
 		 */
 		public function cleanup_wpseo_json_ld() {
 
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
-
 			/**
 			 * Disable Yoast SEO JSON-LD.
 			 */
@@ -173,11 +158,6 @@ if ( ! class_exists( 'WpssoJsonCompat' ) ) {
 
 		public function filter_admin_page_style_css_rank_math( $custom_style_css ) {
 
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
-
 			/**
 			 * The "Schema" metabox tab and its options cannot be disabled, so hide them instead.
 			 */
@@ -190,11 +170,6 @@ if ( ! class_exists( 'WpssoJsonCompat' ) ) {
 		}
 
 		public function filter_admin_page_style_css_wpseo( $custom_style_css ) {
-
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
 
 			/**
 			 * The "Schema" metabox tab and its options cannot be disabled, so hide them instead.

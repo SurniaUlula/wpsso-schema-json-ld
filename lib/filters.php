@@ -15,11 +15,15 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 	class WpssoJsonFilters {
 
 		private $p;		// Wpsso class object.
+		private $a;		// WpssoJson class object.
 		private $msgs;		// WpssoJsonFiltersMessages class object.
 		private $schema;	// WpssoJsonFiltersSchema class object.
 		private $upg;		// WpssoJsonFiltersUpgrade class object.
 
-		public function __construct( &$plugin ) {
+		/**
+		 * Instantiated by WpssoJson->init_objects().
+		 */
+		public function __construct( &$plugin, &$addon ) {
 
 			static $do_once = null;
 
@@ -31,19 +35,15 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			$do_once = true;
 
 			$this->p =& $plugin;
-
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
+			$this->a =& $addon;
 
 			require_once WPSSOJSON_PLUGINDIR . 'lib/filters-schema.php';
 
-			$this->schema = new WpssoJsonFiltersSchema( $plugin );
+			$this->schema = new WpssoJsonFiltersSchema( $plugin, $addon );
 
 			require_once WPSSOJSON_PLUGINDIR . 'lib/filters-upgrade.php';
 
-			$this->upg = new WpssoJsonFiltersUpgrade( $plugin );
+			$this->upg = new WpssoJsonFiltersUpgrade( $plugin, $addon );
 
 			$this->p->util->add_plugin_filters( $this, array(
 				'option_type'          => 2,
@@ -58,7 +58,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 				require_once WPSSOJSON_PLUGINDIR . 'lib/filters-messages.php';
 
-				$this->msgs = new WpssoJsonFiltersMessages( $plugin );
+				$this->msgs = new WpssoJsonFiltersMessages( $plugin, $addon );
 
 				$this->p->util->add_plugin_filters( $this, array(
 					'post_cache_transient_keys' => 4,
@@ -235,11 +235,6 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 		public function filter_get_defaults( $defs ) {
 
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
-
 			switch ( $this->p->options[ 'site_pub_schema_type' ] ) {
 
 				case 'organization':
@@ -264,11 +259,6 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 		 * $network is true if saving multisite network settings.
 		 */
 		public function filter_save_setting_options( array $opts, $network, $upgrading ) {
-
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
 
 			if ( $network ) {
 
@@ -564,11 +554,6 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 		public function filter_save_md_options( $md_opts, $mod ) {
 
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
-
 			$md_defs = $this->filter_get_md_defaults( array(), $mod );	// Only get the schema options.
 
 			/**
@@ -773,15 +758,22 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 			/**
 			 * Clear term archive page meta tags (and json markup).
 			 */
-			foreach ( get_post_taxonomies( $mod[ 'id' ] ) as $tax_name ) {
+			$post_taxonomies = get_post_taxonomies( $mod[ 'id' ] );
 
-				foreach ( wp_get_post_terms( $mod[ 'id' ], $tax_name ) as $term ) {
+			foreach ( $post_taxonomies as $tax_slug ) {
 
-					$transient_keys[] = array(
-						'id'   => $cache_md5_pre . md5( $cache_method . '(term:' . $term->term_id . '_tax:' . $tax_name . ')' ),
-						'pre'  => $cache_md5_pre,
-						'salt' => $cache_method . '(term:' . $term->term_id . '_tax:' . $tax_name . ')',
-					);
+				$post_terms = wp_get_post_terms( $post_id, $tax_slug );	// Returns WP_Error if $tax_slug does not exist.
+
+				if ( is_array( $post_terms ) ) {
+
+					foreach ( $post_terms as $term_obj ) {
+
+						$transient_keys[] = array(
+							'id'   => $cache_md5_pre . md5( $cache_method . '(term:' . $term_obj->term_id . '_tax:' . $tax_slug . ')' ),
+							'pre'  => $cache_md5_pre,
+							'salt' => $cache_method . '(term:' . $term_obj->term_id . '_tax:' . $tax_slug . ')',
+						);
+					}
 				}
 			}
 
@@ -803,11 +795,6 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 		 * Filter for 'wpssojson_status_std_features'.
 		 */
 		public function filter_status_std_features( $features, $ext, $info ) {
-
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
 
 			foreach ( array( 'filters' ) as $type_dir ) {
 

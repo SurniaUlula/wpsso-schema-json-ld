@@ -15,26 +15,20 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 	class WpssoJsonFiltersMessages {
 
 		private $p;	// Wpsso class object.
+		private $a;	// WpssoJson class object.
 
 		/**
 		 * Instantiated by WpssoJsonFilters->__construct().
 		 */
-		public function __construct( &$plugin ) {
+		public function __construct( &$plugin, &$addon ) {
 
 			$this->p =& $plugin;
+			$this->a =& $addon;
 
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
-
-			if ( is_admin() ) {
-
-				$this->p->util->add_plugin_filters( $this, array(
-					'messages_tooltip_meta'         => 2,
-					'messages_tooltip_schema'       => 2,
-				) );
-			}
+			$this->p->util->add_plugin_filters( $this, array(
+				'messages_tooltip_meta'   => 2,
+				'messages_tooltip_schema' => 2,
+			) );
 		}
 
 		public function filter_messages_tooltip_meta( $text, $msg_key ) {

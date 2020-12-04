@@ -23,18 +23,15 @@ if ( ! class_exists( 'WpssoJsonConflict' ) ) {
 	class WpssoJsonConflict {
 
 		private $p;	// Wpsso class object.
+		private $a;	// WpssoJson class object.
 
 		/**
-		 * Instantiated by WpssoJson->wpsso_init_objects() when is_admin() is true.
+		 * Instantiated by WpssoJson->init_objects().
 		 */
-		public function __construct( &$plugin ) {
+		public function __construct( &$plugin, &$addon ) {
 
 			$this->p =& $plugin;
-
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
+			$this->a =& $addon;
 
 			if ( ! SucomUtil::get_const( 'DOING_AJAX' ) ) {
 

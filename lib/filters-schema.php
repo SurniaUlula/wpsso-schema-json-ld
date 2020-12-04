@@ -15,17 +15,19 @@ if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
 	class WpssoJsonFiltersSchema {
 
 		private $p;	// Wpsso class object.
+		private $a;	// WpssoJson class object.
 
 		/**
 		 * Instantiated by WpssoJsonFilters->__construct().
 		 */
-		public function __construct( &$plugin ) {
+		public function __construct( &$plugin, &$addon ) {
 
 			$this->p =& $plugin;
+			$this->a =& $addon;
 
 			if ( $this->p->debug->enabled ) {
 
-				$this->p->debug->mark();
+				$this->p->debug->log( 'disabling amp_post_template_metadata' );
 			}
 
 			add_filter( 'amp_post_template_metadata', '__return_empty_array', 10000, 2 );

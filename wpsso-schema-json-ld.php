@@ -15,7 +15,7 @@
  * Requires At Least: 4.4
  * Tested Up To: 5.6
  * WC Tested Up To: 4.7.1
- * Version: 4.10.0
+ * Version: 4.11.0
  * 
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -86,14 +86,14 @@ if ( ! class_exists( 'WpssoJson' ) ) {
 				return;	// Stop here.
 			}
 
-			$this->compat  = new WpssoJsonCompat( $this->p );	// 3rd party plugin and theme compatibility actions and filters.
-			$this->filters = new WpssoJsonFilters( $this->p );
+			$this->compat  = new WpssoJsonCompat( $this->p, $this );	// 3rd party plugin and theme compatibility actions and filters.
+			$this->filters = new WpssoJsonFilters( $this->p, $this );
 
 			if ( $is_admin ) {
 
 				require_once WPSSOJSON_PLUGINDIR . 'lib/conflict.php';
 
-				$this->conflict = new WpssoJsonConflict( $this->p );	// Admin plugin conflict checks.
+				$this->conflict = new WpssoJsonConflict( $this->p, $this );	// Admin plugin conflict checks.
 			}
 		}
 	}
