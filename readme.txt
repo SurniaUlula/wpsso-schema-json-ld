@@ -89,7 +89,6 @@ Google regularly updates and changes their Schema markup requirements - WPSSO JS
 
 	* Product Availability
 	* Product Brand
-	* Product Category
 	* Product Color
 	* Product Condition
 	* Product Depth
@@ -103,10 +102,11 @@ Google regularly updates and changes their Schema markup requirements - WPSSO JS
 	* Product Length
 	* Product Material
 	* Product MPN
-	* Product SKU
 	* Product Price
 	* Product Size
+	* Product SKU
 	* Product Target Gender
+	* Product Type
 	* Product Weight
 	* Product Width
 

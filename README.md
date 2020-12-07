@@ -81,7 +81,6 @@
 <ul>
 <li>Product Availability</li>
 <li>Product Brand</li>
-<li>Product Category</li>
 <li>Product Color</li>
 <li>Product Condition</li>
 <li>Product Depth</li>
@@ -95,10 +94,11 @@
 <li>Product Length</li>
 <li>Product Material</li>
 <li>Product MPN</li>
-<li>Product SKU</li>
 <li>Product Price</li>
 <li>Product Size</li>
+<li>Product SKU</li>
 <li>Product Target Gender</li>
+<li>Product Type</li>
 <li>Product Weight</li>
 <li>Product Width</li>
 </ul></li>
