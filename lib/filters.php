@@ -762,7 +762,7 @@ if ( ! class_exists( 'WpssoJsonFilters' ) ) {
 
 			foreach ( $post_taxonomies as $tax_slug ) {
 
-				$post_terms = wp_get_post_terms( $post_id, $tax_slug );	// Returns WP_Error if $tax_slug does not exist.
+				$post_terms = wp_get_post_terms( $mod[ 'id' ], $tax_slug );	// Returns WP_Error if $tax_slug does not exist.
 
 				if ( is_array( $post_terms ) ) {
 
