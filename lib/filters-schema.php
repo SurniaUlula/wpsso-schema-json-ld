@@ -62,7 +62,7 @@ if ( ! class_exists( 'WpssoJsonFiltersSchema' ) ) {
 
 					if ( $this->p->debug->enabled ) {
 
-						$this->p->debug->log( 'post_content for post id ' . $mod[ 'id' ] . ' is empty' );
+						$this->p->debug->log( 'post_content for post ID ' . $mod[ 'id' ] . ' is empty' );
 					}
 
 				/**

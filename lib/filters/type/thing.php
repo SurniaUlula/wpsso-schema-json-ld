@@ -187,7 +187,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeThing' ) ) {
 
 				if ( $this->p->debug->enabled ) {
 
-					$this->p->debug->log( 'getting custom urls' );
+					$this->p->debug->log( 'getting custom URLs' );
 				}
 
 				$md_opts = $mod[ 'obj' ]->get_options( $mod[ 'id' ] );

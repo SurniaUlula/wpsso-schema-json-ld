@@ -42,7 +42,7 @@ if ( ! class_exists( 'WpssoJsonCompat' ) ) {
 				/**
 				 * Rank Math.
 				 */
-				if ( ! empty( $this->p->avail[ 'seo' ][ 'rankmath' ] ) ) {
+				if ( ! empty( $this->p->avail[ 'seo' ][ 'rank-math' ] ) ) {
 
 					$this->p->util->add_plugin_filters( $this, array( 
 						'admin_page_style_css_rank_math' => array( 'admin_page_style_css' => 1 ),
@@ -64,9 +64,9 @@ if ( ! class_exists( 'WpssoJsonCompat' ) ) {
 				/**
 				 * Rank Math.
 				 */
-				if ( ! empty( $this->p->avail[ 'seo' ][ 'rankmath' ] ) ) {
+				if ( ! empty( $this->p->avail[ 'seo' ][ 'rank-math' ] ) ) {
 
-					add_filter( 'rank_math/json_ld', array( $this, 'cleanup_rankmath_json_ld' ), PHP_INT_MAX );
+					add_filter( 'rank_math/json_ld', array( $this, 'cleanup_rank_math_json_ld' ), PHP_INT_MAX );
 				}
 
 				/**
@@ -94,7 +94,7 @@ if ( ! class_exists( 'WpssoJsonCompat' ) ) {
 		/**
 		 * Disable Rank Math Schema markup.
 		 */
-		public function cleanup_rankmath_json_ld( $data ) {
+		public function cleanup_rank_math_json_ld( $data ) {
 
 			/**
 			 * Remove everything except for the BreadcrumbList markup.
