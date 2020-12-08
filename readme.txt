@@ -24,7 +24,7 @@ Google Rich Results and JSON-LD structured data for Articles, Carousels, Events,
 
 Google Rich Results and JSON-LD structured data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ pages, How-tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Video Objects, and much more.
 
-**Uses your existing WordPress content, plugin data, and service API data:**
+**Reads your existing WordPress content, plugin data, and service API data:**
 
 There's no need to manually re-enter descriptions, titles, product information, re-select images / videos, etc. like other SEO and Schema markup plugins.
 
