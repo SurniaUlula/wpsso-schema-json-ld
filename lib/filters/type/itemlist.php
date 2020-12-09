@@ -42,9 +42,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeItemList' ) ) {
 				$this->p->debug->mark();
 			}
 
-			$ppp = SucomUtil::get_const( 'WPSSO_SCHEMA_ITEMS_PER_LIST_MAX', 100 );
-
-			$item_count = WpssoSchema::add_itemlist_data( $json_data, $mod, $mt_og, $page_type_id, $is_main, $ppp );
+			$item_count = WpssoSchema::add_itemlist_data( $json_data, $mod, $mt_og, $page_type_id, $is_main );
 
 			return $json_data;
 		}

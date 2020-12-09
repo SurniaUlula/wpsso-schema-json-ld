@@ -86,8 +86,7 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeQAPage' ) ) {
 
 			if ( isset( $question[ 'suggestedAnswer' ] ) ) {
 
-				$answer_count += SucomUtil::is_non_assoc( $question[ 'suggestedAnswer' ] ) ?
-					count( $question[ 'suggestedAnswer' ] ) : 1;
+				$answer_count += SucomUtil::is_non_assoc( $question[ 'suggestedAnswer' ] ) ? count( $question[ 'suggestedAnswer' ] ) : 1;
 			}
 
 			$question[ 'answerCount' ] = $answer_count;

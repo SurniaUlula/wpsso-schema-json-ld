@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.11.0\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.12.0-dev.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-"
 "ld\n"
 "POT-Creation-Date: 2020-MO-DA HO:MI+ZONE\n"
@@ -1294,17 +1294,17 @@ msgid ""
 "webpage (ie. the content) being reviewed."
 msgstr ""
 
-#: lib/filters/type/faqpage.php:78
+#: lib/filters/type/faqpage.php:76
 msgid "%d question added to the Schema FAQPage markup."
 msgid_plural "%d questions added to the Schema FAQPage markup."
 msgstr[0] ""
 msgstr[1] ""
 
-#: lib/filters/type/faqpage.php:86
+#: lib/filters/type/faqpage.php:84
 msgid "No question(s) found for the Schema FAQPage markup."
 msgstr ""
 
-#: lib/filters/type/faqpage.php:89
+#: lib/filters/type/faqpage.php:87
 msgid "Google requires at least one question for the Schema FAQPage markup."
 msgstr ""
 

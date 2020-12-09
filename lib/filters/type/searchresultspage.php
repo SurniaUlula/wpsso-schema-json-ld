@@ -42,11 +42,9 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeSearchResultsPage' ) ) {
 				$this->p->debug->mark();
 			}
 
-			$ppp = SucomUtil::get_const( 'WPSSO_SCHEMA_MENTIONS_PER_SEARCH_MAX', 10 );
+			$prop_type_ids = array( 'mentions' => false );	// Allow any post schema type to be added.
 
-			$prop_name_type_ids = array( 'mentions' => false );	// Allow any post schema type to be added.
-
-			WpssoSchema::add_posts_data( $json_data, $mod, $mt_og, $page_type_id, $is_main, $ppp, $prop_name_type_ids );
+			WpssoSchema::add_posts_data( $json_data, $mod, $mt_og, $page_type_id, $is_main, $prop_type_ids );
 
 			return $json_data;
 		}
