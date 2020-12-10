@@ -314,7 +314,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.12.0-dev.1 (2020/12/09)**
+**Version 4.12.0-dev.2 (2020/12/09)**
 
 * **New Features**
 	* None.
@@ -323,6 +323,8 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
+	* Removed deprecated `$posts_per_page` argument from `WpssoSchema::add_itemlist_data()` method calls.
+	* Removed deprecated `$posts_per_page` argument from `WpssoSchema::add_posts_data()` method calls.
 	* Removed deprecated constants:
 		* WPSSO_SCHEMA_POSTS_PER_BLOG_MAX
 		* WPSSO_SCHEMA_MENTIONS_PER_COLLECTION_MAX
@@ -330,12 +332,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 		* WPSSO_SCHEMA_ITEMS_PER_LIST_MAX
 		* WPSSO_SCHEMA_MENTIONS_PER_PROFILE_MAX
 		* WPSSO_SCHEMA_MENTIONS_PER_SEARCH_MAX
-	* Removed the `$ppp` deprecated argument from `WpssoSchema::add_itemlist_data()` method calls.
-	* Removed the `$ppp` deprecated argument from `WpssoSchema::add_posts_data()` method calls.
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.5.
-	* WPSSO Core v8.17.0-dev.1.
+	* WPSSO Core v8.17.0-dev.2.
 
 **Version 4.11.0 (2020/12/04)**
 
@@ -587,9 +587,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.12.0-dev.1 =
+= 4.12.0-dev.2 =
 
-(2020/12/09) Removed deprecated constants and method arguments.
+(2020/12/09) Removed deprecated `$posts_per_page` method arguments and constants.
 
 = 4.11.0 =
 
