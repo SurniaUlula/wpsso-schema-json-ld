@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.11.0\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.12.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-12-08 06:23-0800\n"
-"PO-Revision-Date: 2020-12-08 06:23-0800\n"
+"POT-Creation-Date: 2020-12-10 10:32-0800\n"
+"PO-Revision-Date: 2020-12-10 10:32-0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -1274,17 +1274,17 @@ msgstr "Un examen d'évaluation ne peut pas être le sujet d'un autre examen d'�
 msgid "CreativeWork will be used instead as the Schema type for the subject of the webpage (ie. the content) being reviewed."
 msgstr "CreativeWork sera utilisé à la place comme type de Schéma pour le sujet de la page Web (c'est-à-dire le contenu) en cours d'évaluation."
 
-#: lib/filters/type/faqpage.php:78
+#: lib/filters/type/faqpage.php:76
 msgid "%d question added to the Schema FAQPage markup."
 msgid_plural "%d questions added to the Schema FAQPage markup."
 msgstr[0] "%d question ajoutée au balisage de Schéma FAQPage."
 msgstr[1] "%d questions ajoutées au balisage de Schéma FAQPage."
 
-#: lib/filters/type/faqpage.php:86
+#: lib/filters/type/faqpage.php:84
 msgid "No question(s) found for the Schema FAQPage markup."
 msgstr "Aucune question trouvée pour le balisage de Schéma FAQPage."
 
-#: lib/filters/type/faqpage.php:89
+#: lib/filters/type/faqpage.php:87
 msgid "Google requires at least one question for the Schema FAQPage markup."
 msgstr "Google requiert au moins une question pour le balisage de Schéma FAQPage."
 
