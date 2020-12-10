@@ -33,7 +33,7 @@ if ( ! class_exists( 'WpssoJsonConflict' ) ) {
 			$this->p =& $plugin;
 			$this->a =& $addon;
 
-			if ( ! SucomUtil::get_const( 'DOING_AJAX' ) ) {
+			if ( ! SucomUtilWP::doing_ajax() ) {
 
 				if ( ! SucomUtilWP::doing_block_editor() ) {
 
