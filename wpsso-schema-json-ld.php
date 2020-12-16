@@ -11,7 +11,7 @@
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl.txt
  * Description: Google Rich Results and JSON-LD structured data for Articles, Carousels, Events, FAQ pages, How-tos, Local SEO, Products, Recipes, Ratings, Reviews, and more.
- * Requires PHP: 5.6
+ * Requires PHP: 7.0
  * Requires At Least: 4.5
  * Tested Up To: 5.6
  * WC Tested Up To: 4.8.0
