@@ -81,7 +81,7 @@ Google regularly updates and changes their Schema markup requirements - WPSSO JS
 
 * Includes Schema JSON-LD scripts from shortcodes and WordPress editor blocks in the Schema CreativeWork type and sub-types.
 
-* Built-in support for [AMP](https://wordpress.org/plugins/amp/), [Better AMP](https://wordpress.org/plugins/better-amp/), and [AMP for WP](https://wordpress.org/plugins/accelerated-mobile-pages/) plugins.
+* Built-in support for [AMP](https://wordpress.org/plugins/amp/) and [AMP for WP](https://wordpress.org/plugins/accelerated-mobile-pages/) plugins.
 
 * Includes contributor markup for [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/) authors and guest authors ([WPSSO Core Premium plugin](https://wpsso.com/) required).
 
