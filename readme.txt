@@ -257,7 +257,7 @@ The Standard version is designed to satisfy the requirements of most standard Wo
 
 WPSSO Schema JSON-LD Markup (aka WPSSO JSON) is an add-on for the [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/).
 
-WPSSO Core and its add-ons make sure your content looks best on social sites and in search results, no matter how your webpages are shared, re-shared, messaged, posted, embedded, or crawled.
+WPSSO Core and its add-ons make sure your content looks best on social sites and in search results, no matter how webpages are shared, re-shared, messaged, posted, embedded, or crawled.
 
 == Installation ==
 
