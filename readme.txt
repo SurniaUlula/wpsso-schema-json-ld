@@ -314,6 +314,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 4.13.0-dev.4 (2021/01/20)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Added support for images in each element of the review property.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v7.0.
+	* WordPress v4.5.
+	* WPSSO Core v8.20.0-dev.4.
+
 **Version 4.12.0 (2020/12/11)**
 
 * **New Features**
@@ -586,6 +601,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v8.0.0.
 
 == Upgrade Notice ==
+
+= 4.13.0-dev.4 =
+
+(2021/01/20) Added support for images in each element of the review property.
 
 = 4.12.0 =
 
