@@ -122,6 +122,9 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeHowTo' ) ) {
 								'wpsso-schema-json-ld' ), $md_num + 1 ) );
 						}
 
+						/**
+						 * $size_names can be a keyword (ie. 'opengraph' or 'schema'), a registered size name, or an array of size names.
+						 */
 						$mt_images = $this->p->media->get_mt_opts_images( $md_opts, $size_names = 'schema', $img_pre = 'schema_howto_step_img', $md_num );
 
 						WpssoSchema::add_images_data_mt( $step_images, $mt_images );

@@ -100,6 +100,8 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeReview' ) ) {
 
 			/**
 			 * Add the item images.
+			 *
+			 * $size_names can be a keyword (ie. 'opengraph' or 'schema'), a registered size name, or an array of size names.
 			 */
 			$mt_images = $this->p->media->get_mt_opts_images( $md_opts, $size_names = 'schema', $img_pre = 'schema_review_item_img' );
 
