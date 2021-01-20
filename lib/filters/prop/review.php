@@ -139,7 +139,8 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 										'ratingValue' => $mt_pre . ':rating:value',
 										'worstRating' => $mt_pre . ':rating:worst',
 										'bestRating'  => $mt_pre . ':rating:best',
-									) ) );
+									) )
+								);
 							}
 
 							if ( ! empty( $mt_review[ $mt_pre . ':author:name' ] ) ) {
@@ -166,6 +167,12 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 									unset( $single_review[ 'comment' ] );
 								}
 							}
+				
+							if ( ! empty( $mt_review[ $mt_pre . ':image' ] ) ) {
+
+								WpssoSchema::add_images_data_mt( $single_review[ 'image' ],
+									$mt_review[ $mt_pre . ':image' ], $mt_pre .':image' );
+							}
 
 							/**
 							 * Add the complete review.
@@ -176,8 +183,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 				}
 			}
 
-			$all_reviews = (array) apply_filters( 'wpsso_json_prop_https_schema_org_review',
-				$all_reviews, $mod, $mt_og, $page_type_id, $is_main );
+			$all_reviews = (array) apply_filters( 'wpsso_json_prop_https_schema_org_review', $all_reviews, $mod, $mt_og, $page_type_id, $is_main );
 
 			if ( ! empty( $all_reviews ) ) {
 
