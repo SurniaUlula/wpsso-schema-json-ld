@@ -167,7 +167,7 @@ if ( ! class_exists( 'WpssoJsonFiltersPropReview' ) ) {
 									unset( $single_review[ 'comment' ] );
 								}
 							}
-				
+
 							if ( ! empty( $mt_review[ $mt_pre . ':image' ] ) ) {
 
 								WpssoSchema::add_images_data_mt( $single_review[ 'image' ],

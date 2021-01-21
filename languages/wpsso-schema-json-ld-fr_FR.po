@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.12.0\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.13.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
-"POT-Creation-Date: 2020-12-10 10:32-0800\n"
-"PO-Revision-Date: 2020-12-10 10:32-0800\n"
+"POT-Creation-Date: 2021-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2021-01-21 05:49-0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 2.4.2\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: gettext/gettext-lib-abstracts-com.php:6 lib/abstracts/com/add-on.php:178
@@ -1262,7 +1262,7 @@ msgstr "Pour éviter d'ajouter un balisage de Schéma incorrect et déroutant da
 msgid "An aggregate rating value for this markup has been ignored &mdash; <a href=\"%1$s\">Google does not allow an aggregate rating value for the Schema Type %2$s</a>."
 msgstr "Une note agrégé pour ce balisage a été ignorée &mdash; <a href=\"%1$s\">Google n'autorise pas de note agrégé pour le type de schéma %2$s</a> ."
 
-#: lib/filters/prop/review.php:203
+#: lib/filters/prop/review.php:209
 msgid "Reviews for this markup have been ignored &mdash; <a href=\"%1$s\">Google does not allow reviews for the Schema Type %2$s</a>."
 msgstr "Les critiques pour ce balisage ont été ignorés &mdash; <a href=\"%1$s\"> Google n'autorise pas les critiques pour le type de schéma %2$s</a>."
 
