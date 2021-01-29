@@ -314,6 +314,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 4.13.1-b.2 (2021/01/29)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* Fixed an incorrect banner image source for the Schema Article publisher property markup.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v7.0.
+	* WordPress v4.5.
+	* WPSSO Core v8.20.0.
+
 **Version 4.13.0 (2021/01/21)**
 
 * **New Features**
@@ -601,6 +616,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v8.0.0.
 
 == Upgrade Notice ==
+
+= 4.13.1-b.2 =
+
+(2021/01/29) Fixed an incorrect banner image source for the Schema Article publisher property markup.
 
 = 4.13.0 =
 
