@@ -44,8 +44,6 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 
 			$json_ret = array();
 
-			$org_logo_key = 'org_logo_url';
-
 			/**
 			 * Property:
 			 *      text
@@ -73,6 +71,8 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 			 */
 			if ( ! empty( $mod[ 'obj' ] ) ) {	// Just in case.
 
+				$is_article = $this->p->schema->is_schema_type_child( $page_type_id, 'article' );
+
 				/**
 				 * The meta data key is unique, but the Schema property name may be repeated to add more than one
 				 * value to a property array.
@@ -89,6 +89,15 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeCreativeWork' ) ) {
 					if ( WpssoSchema::is_valid_val( $md_val ) ) {	// Not null, an empty string, or 'none'.
 
 						if ( strpos( $md_key, '_org_id' ) ) {
+
+							if ( 'publisher' === $prop_name && $is_article ) {
+
+								$org_logo_key = 'org_banner_url';
+
+							} else {
+
+								$org_logo_key = 'org_logo_url';
+							}
 
 							WpssoSchemaSingle::add_organization_data( $json_ret[ $prop_name ], $mod, $md_val, $org_logo_key, $list_element = true );
 
