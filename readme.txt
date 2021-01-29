@@ -314,7 +314,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.13.1-rc.1 (2021/01/29)**
+**Version 4.13.1 (2021/01/29)**
 
 * **New Features**
 	* None.
@@ -617,7 +617,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.13.1-rc.1 =
+= 4.13.1 =
 
 (2021/01/29) Fixed an incorrect banner image source for the Schema Article publisher property markup.
 
