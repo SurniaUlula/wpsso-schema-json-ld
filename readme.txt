@@ -63,7 +63,7 @@ Google regularly updates and changes their Schema markup requirements - WPSSO JS
 
 &#x2605;&#x2605;&#x2605;&#x2605;&#x2605; &mdash; "This plugin is heaven sent. I know little about SSO and this has taken care of everything. The support makes this an even better plugin to have. Keep up the great work!" - [kevanchetty](https://wordpress.org/support/topic/best-plugin-and-support-10/)
 
-<h3>WPSSO JSON Standard Features</h3>
+<h3>WPSSO JSON Add-on Features</h3>
 
 Extends the features of the [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/) (required plugin).
 
@@ -114,11 +114,7 @@ Fixes common Google testing tool warnings like "aggregateRating field is recomme
 
 Fixes Google testing tool warnings for supported WPSSO Core Premium e-commerce products, like "brand field is recommended", "missing a global identifier", etc.
 
-<h3>WPSSO JSON Premium Features</h3>
-
-The Standard version is designed to satisfy the requirements of most WordPress sites, but if your site requires additional customizable Schema properties, then you may consider getting the Premium version for those additional features.
-
-* Includes additional customizable option values in the Document SSO metabox:
+**[Premium]** Includes additional customizable option values in the Document SSO metabox:
 
 	* All Schema Types
 		* Name (Title)
