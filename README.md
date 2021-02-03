@@ -64,17 +64,25 @@
 
 <h3>WPSSO JSON Standard Features</h3>
 
-<ul>
-<li><p>Extends the features of the <a href="https://wordpress.org/plugins/wpsso/">WPSSO Core plugin</a>.</p></li>
-<li><p>Provides accurate and comprehensive Schema JSON-LD markup for Google Rich Results (aka Rich Snippets) with Structured Data.</p></li>
-<li><p>Provides complete Schema ImageObject SEO markup with image information from the WordPress Media Library (name, alternateName, alternativeHeadline, caption, description, fileFormat, uploadDate, and more).</p></li>
-<li><p>Provides complete Schema VideoObject SEO markup with video information from WPSSO Core Premium service APIs (Facebook, Slideshare, Soundcloud, Vimeo, Wistia, YouTube) including the 'embedUrl' and 'contentUrl' properties for Google.</p></li>
-<li><p>Provides Schema 1:1, 4:3, and 16:9 images for Google Rich Results (see the <a href="https://developers.google.com/search/docs/guides/search-gallery">Google rich results search library</a> for details).</p></li>
-<li><p>Provides Schema FAQPage and Question / Answer markup for the <a href="https://wordpress.org/plugins/wpsso-faq/">WPSSO FAQ Manager</a> add-on.</p></li>
-<li><p>Includes Schema JSON-LD scripts from shortcodes and WordPress editor blocks in the Schema CreativeWork type and sub-types.</p></li>
-<li><p>Built-in support for <a href="https://wordpress.org/plugins/amp/">AMP</a> and <a href="https://wordpress.org/plugins/accelerated-mobile-pages/">AMP for WP</a> plugins.</p></li>
-<li><p>Includes contributor markup for <a href="https://wordpress.org/plugins/co-authors-plus/">Co-Authors Plus</a> authors and guest authors (<a href="https://wpsso.com/">WPSSO Core Premium plugin</a> required).</p></li>
-<li><p>Supports additional custom product information and WooCommerce product attributes from the WPSSO Core Premium plugin:</p>
+<p>Extends the features of the <a href="https://wordpress.org/plugins/wpsso/">WPSSO Core plugin</a> (required plugin).</p>
+
+<p>Provides accurate and comprehensive Schema JSON-LD markup for Google Rich Results (aka Rich Snippets) with Structured Data.</p>
+
+<p>Provides complete Schema ImageObject SEO markup with image information from the WordPress Media Library (name, alternateName, alternativeHeadline, caption, description, fileFormat, uploadDate, and more).</p>
+
+<p>Provides complete Schema VideoObject SEO markup with video information from WPSSO Core Premium service APIs (Facebook, Slideshare, Soundcloud, Vimeo, Wistia, YouTube) including the 'embedUrl' and 'contentUrl' properties for Google.</p>
+
+<p>Provides Schema 1:1, 4:3, and 16:9 images for Google Rich Results (see the <a href="https://developers.google.com/search/docs/guides/search-gallery">Google rich results search library</a> for details).</p>
+
+<p>Provides Schema FAQPage and Question / Answer markup for the <a href="https://wordpress.org/plugins/wpsso-faq/">WPSSO FAQ Manager</a> add-on.</p>
+
+<p>Includes Schema JSON-LD scripts from shortcodes and WordPress editor blocks in the Schema CreativeWork type and sub-types.</p>
+
+<p>Built-in support for <a href="https://wordpress.org/plugins/amp/">AMP</a> and <a href="https://wordpress.org/plugins/accelerated-mobile-pages/">AMP for WP</a> plugins.</p>
+
+<p>Includes contributor markup for <a href="https://wordpress.org/plugins/co-authors-plus/">Co-Authors Plus</a> authors and guest authors (<a href="https://wpsso.com/">WPSSO Core Premium plugin</a> required).</p>
+
+<p>Supports additional custom product information and WooCommerce product attributes from the WPSSO Core Premium plugin:</p>
 
 <ul>
 <li>Product Availability</li>
@@ -99,11 +107,13 @@
 <li>Product Type</li>
 <li>Product Weight</li>
 <li>Product Width</li>
-</ul></li>
-<li><p>WooCommerce product variations from the WPSSO Core Premium plugin are grouped by currency and added as Schema AggregateOffer for Google's Rich Results (includes the product variation group high price, low price, and currency).</p></li>
-<li><p>Fixes common Google testing tool warnings like "aggregateRating field is recommended" and "review field is recommended".</p></li>
-<li><p>Fixes Google testing tool warnings for supported WPSSO Core Premium e-commerce products, like "brand field is recommended", "missing a global identifier", etc.</p></li>
 </ul>
+
+<p>WooCommerce product variations from the WPSSO Core Premium plugin are grouped by currency and added as Schema AggregateOffer for Google's Rich Results (includes the product variation group high price, low price, and currency).</p>
+
+<p>Fixes common Google testing tool warnings like "aggregateRating field is recommended" and "review field is recommended".</p>
+
+<p>Fixes Google testing tool warnings for supported WPSSO Core Premium e-commerce products, like "brand field is recommended", "missing a global identifier", etc.</p>
 
 <h3>WPSSO JSON Premium Features</h3>
 
@@ -309,9 +319,7 @@
 
 <h3>WPSSO Core Plugin Required</h3>
 
-<p>WPSSO Schema JSON-LD Markup (aka WPSSO JSON) is an add-on for the <a href="https://wordpress.org/plugins/wpsso/">WPSSO Core plugin</a>.</p>
-
-<p>WPSSO Core and its add-ons make sure your content looks best on social sites and in search results, no matter how webpages are shared, re-shared, messaged, posted, embedded, or crawled.</p>
+<p>WPSSO Schema JSON-LD Markup (aka WPSSO JSON) is an add-on for the <a href="https://wordpress.org/plugins/wpsso/">WPSSO Core plugin</a>. WPSSO Core and its add-ons make sure your content looks best on social sites and in search results, no matter how webpages are shared, re-shared, messaged, posted, embedded, or crawled.</p>
 
 
 <h2>Installation</h2>
