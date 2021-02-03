@@ -114,6 +114,8 @@ Fixes common Google testing tool warnings like "aggregateRating field is recomme
 
 Fixes Google testing tool warnings for supported WPSSO Core Premium e-commerce products, like "brand field is recommended", "missing a global identifier", etc.
 
+The WPSSO Schema JSON-LD Markup Standard add-on is designed to satisfy the requirements of most standard WordPress sites. If your content requires additional customization of some Schema properties for products, events, places / locations, recipes, etc., then you may want to get the [WPSSO JSON Premium add-on](https://wpsso.com/extend/plugins/wpsso-schema-json-ld/) for those additional features.
+
 **[Premium]** Includes additional customizable option values in the Document SSO metabox:
 
 * All Schema Types
