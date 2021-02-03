@@ -21,7 +21,7 @@
 
 <p><strong>Reads your existing WordPress content, plugin data, and service API data:</strong></p>
 
-<p>There's no need to manually re-enter descriptions, titles, product information, re-select images / videos, etc. like other SEO and Schema markup plugins.</p>
+<p>There's no need to manually re-enter descriptions, titles, product information, and re-select images / videos like other SEO and Schema markup plugins.</p>
 
 <p>Provides comprehensive Schema JSON-LD markup for posts, pages, custom post types, terms (category, tags, etc.), custom taxonomies, user profile pages, search result pages, archive pages, and Accelerated Mobile Pages (AMP) pages &mdash; including image SEO, video SEO, local business, organization, publisher, person, author and co-authors, extensive e-Commerce product markup, product variations, product ratings, aggregate ratings, reviews, recipe information, event details, collection pages, profile pages, search pages, FAQ pages, item lists for <a href="https://developers.google.com/search/docs/guides/mark-up-listings">Google's Carousel Rich Results</a>, and much more.</p>
 

@@ -24,7 +24,7 @@ Google Rich Results and JSON-LD structured data for Articles, Carousels (aka Ite
 
 **Reads your existing WordPress content, plugin data, and service API data:**
 
-There's no need to manually re-enter descriptions, titles, product information, re-select images / videos, etc. like other SEO and Schema markup plugins.
+There's no need to manually re-enter descriptions, titles, product information, and re-select images / videos like other SEO and Schema markup plugins.
 
 Provides comprehensive Schema JSON-LD markup for posts, pages, custom post types, terms (category, tags, etc.), custom taxonomies, user profile pages, search result pages, archive pages, and Accelerated Mobile Pages (AMP) pages &mdash; including image SEO, video SEO, local business, organization, publisher, person, author and co-authors, extensive e-Commerce product markup, product variations, product ratings, aggregate ratings, reviews, recipe information, event details, collection pages, profile pages, search pages, FAQ pages, item lists for [Google's Carousel Rich Results](https://developers.google.com/search/docs/guides/mark-up-listings), and much more.
 
