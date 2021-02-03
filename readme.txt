@@ -116,134 +116,134 @@ Fixes Google testing tool warnings for supported WPSSO Core Premium e-commerce p
 
 **[Premium]** Includes additional customizable option values in the Document SSO metabox:
 
-	* All Schema Types
-		* Name (Title)
-		* Alternate Name
-		* Description
-		* Microdata Type URLs
-		* Same-As URLs
-	* Creative Work Information
-		* Is Part of URL
-		* Headline
-		* Full Text
-		* Keywords
-		* Language
-		* Family Friendly
-		* Copyright Year
-		* License URL
-		* Publisher (Org)
-		* Publisher (Person)
-		* Service Provider (Org)
-		* Service Provider (Person)
-	* Event Information
-		* Event Language
-		* Event Attendance
-		* Event Online URL
-		* Event Physical Venue
-		* Event Organizer (Org)
-		* Event Organizer (Person)
-		* Event Performer (Org)
-		* Event Performer (Person)
-		* Event Start (date, time, timezone)
-		* Event End (date, time, timezone)
-		* Event Offers Start (date, time, timezone)
-		* Event Offers End (date, time, timezone)
-		* Event Offers (name, price, currency, availability)
-	* How-To
-		* How-To Makes 
-		* How-To Preparation Time 
-		* How-To Total Time 
-		* How-To Supplies 
-		* How-To Tools 
-		* How-To Steps (section name, section description, step name, direction text and image)
-	* Job Posting Information
-		* Job Title
-		* Hiring Organization
-		* Job Location
-		* Base Salary
-		* Employment Type
-		* Jpb Posting Expires
-	* Movie Information
-		* Cast Names
-		* Director Names
-		* Production Company
-		* Movie Runtime
-	* Organization Information
-		* Select an Organization
-	* Person Information
-		* Select a Person
-	* Product Information (Additional)
-		* Product Length (cm)
-		* Product Width (cm)
-		* Product Height (cm)
-		* Product Depth (cm)
-		* Product Fluid Volume (ml)
-		* Product GTIN-14
-		* Product GTIN-13 (EAN)
-		* Product GTIN-12 (UPC)
-		* Product GTIN-8
-		* Product GTIN
-	* QA Page Information
-		* QA Heading
-	* Recipe Information
-		* Recipe Cuisine 
-		* Recipe Course 
-		* Recipe Makes 
-		* Cooking Method 
-		* Preparation Time 
-		* Cooking Time 
-		* Total Time 
-		* Recipe Ingredients 
-		* Recipe Instructions 
-		* Nutrition Information per Serving 
-			* Serving Size
-			* Calories
-			* Protein
-			* Fiber
-			* Carbohydrates
-			* Sugar
-			* Sodium
-			* Fat
-			* Saturated Fat
-			* Unsaturated Fat
-			* Trans Fat
-			* Cholesterol
-	* Review Information
-		* Review Rating 
-		* Rating Value Name
-		* Subject of the Review
-			* Subject Webpage Type 
-			* Subject Webpage URL 
-			* Subject Same-As URL 
-			* Subject Name 
-			* Subject Description 
-			* Subject Image ID or URL 
-			* Claim Subject Information (for Claim Review)
-				* Short Summary of Claim
-				* First Appearance URL
-			* Creative Work Subject Information
-				* C.W. Author Type
-				* C.W. Author Name
-				* C.W. Author URL
-				* C.W. Published Date
-				* C.W. Created Date
-			* Book Subject Information
-				* Book ISBN
-			* Movie Subject Information
-				* Movie Cast Names
-				* Movie Director Names
-			* Product Subject Information
-				* Product Brand
-				* Product Offers (name, price, currency, availability)
-				* Product SKU
-				* Product MPN
-			* Software App Subject Information
-				* Operating System
-				* Application Category
-				* Software App Offers (name, price, currency, availability)
-	* Software Application Information
-		* Operating System
-		* Application Category
+* All Schema Types
+	* Name (Title)
+	* Alternate Name
+	* Description
+	* Microdata Type URLs
+	* Same-As URLs
+* Creative Work Information
+	* Is Part of URL
+	* Headline
+	* Full Text
+	* Keywords
+	* Language
+	* Family Friendly
+	* Copyright Year
+	* License URL
+	* Publisher (Org)
+	* Publisher (Person)
+	* Service Provider (Org)
+	* Service Provider (Person)
+* Event Information
+	* Event Language
+	* Event Attendance
+	* Event Online URL
+	* Event Physical Venue
+	* Event Organizer (Org)
+	* Event Organizer (Person)
+	* Event Performer (Org)
+	* Event Performer (Person)
+	* Event Start (date, time, timezone)
+	* Event End (date, time, timezone)
+	* Event Offers Start (date, time, timezone)
+	* Event Offers End (date, time, timezone)
+	* Event Offers (name, price, currency, availability)
+* How-To
+	* How-To Makes 
+	* How-To Preparation Time 
+	* How-To Total Time 
+	* How-To Supplies 
+	* How-To Tools 
+	* How-To Steps (section name, section description, step name, direction text and image)
+* Job Posting Information
+	* Job Title
+	* Hiring Organization
+	* Job Location
+	* Base Salary
+	* Employment Type
+	* Jpb Posting Expires
+* Movie Information
+	* Cast Names
+	* Director Names
+	* Production Company
+	* Movie Runtime
+* Organization Information
+	* Select an Organization
+* Person Information
+	* Select a Person
+* Product Information (Additional)
+	* Product Length (cm)
+	* Product Width (cm)
+	* Product Height (cm)
+	* Product Depth (cm)
+	* Product Fluid Volume (ml)
+	* Product GTIN-14
+	* Product GTIN-13 (EAN)
+	* Product GTIN-12 (UPC)
+	* Product GTIN-8
+	* Product GTIN
+* QA Page Information
+	* QA Heading
+* Recipe Information
+	* Recipe Cuisine 
+	* Recipe Course 
+	* Recipe Makes 
+	* Cooking Method 
+	* Preparation Time 
+	* Cooking Time 
+	* Total Time 
+	* Recipe Ingredients 
+	* Recipe Instructions 
+	* Nutrition Information per Serving 
+		* Serving Size
+		* Calories
+		* Protein
+		* Fiber
+		* Carbohydrates
+		* Sugar
+		* Sodium
+		* Fat
+		* Saturated Fat
+		* Unsaturated Fat
+		* Trans Fat
+		* Cholesterol
+* Review Information
+	* Review Rating 
+	* Rating Value Name
+	* Subject of the Review
+		* Subject Webpage Type 
+		* Subject Webpage URL 
+		* Subject Same-As URL 
+		* Subject Name 
+		* Subject Description 
+		* Subject Image ID or URL 
+		* Claim Subject Information (for Claim Review)
+			* Short Summary of Claim
+			* First Appearance URL
+		* Creative Work Subject Information
+			* C.W. Author Type
+			* C.W. Author Name
+			* C.W. Author URL
+			* C.W. Published Date
+			* C.W. Created Date
+		* Book Subject Information
+			* Book ISBN
+		* Movie Subject Information
+			* Movie Cast Names
+			* Movie Director Names
+		* Product Subject Information
+			* Product Brand
+			* Product Offers (name, price, currency, availability)
+			* Product SKU
+			* Product MPN
+		* Software App Subject Information
+			* Operating System
+			* Application Category
+			* Software App Offers (name, price, currency, availability)
+* Software Application Information
+	* Operating System
+	* Application Category
 
 <h3>WPSSO Core Plugin Required</h3>
 
