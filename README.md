@@ -107,9 +107,7 @@
 
 <h3>WPSSO JSON Premium Features</h3>
 
-<p>The Standard version is designed to satisfy the requirements of most standard WordPress sites / blogs. If your site requires additional customizable Schema properties for products, events, places / locations, recipes, etc., then you may want the Premium version for those additional features.</p>
-
-<p><strong>Note that values for Schema type and sub-type properties are created automatically based on different option values, WordPress object properties, WordPress object metadata, 3rd party plugin data, and service API data. The WPSSO JSON Premium add-on offers <em>human-friendly</em> customizable options, and option values may be used for one or several different properties.</strong></p>
+<p>The Standard version is designed to satisfy the requirements of most WordPress sites, but if your site requires additional customizable Schema properties, then you may consider getting the Premium version for those additional features.</p>
 
 <ul>
 <li><p>Includes additional customizable option values in the Document SSO metabox:</p>
