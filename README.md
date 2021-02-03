@@ -15,9 +15,7 @@
 
 <h2>Description</h2>
 
-<p style="margin:0;"><img class="readme-icon" src="https://surniaulula.github.io/wpsso-schema-json-ld/assets/icon-256x256.png"></p>
-
-<p><strong>Supports over 500 different Schema (aka Schema.org) types and sub-types:</strong></p>
+<p><img class="readme-icon" src="https://surniaulula.github.io/wpsso-schema-json-ld/assets/icon-256x256.png"><strong>Supports over 500 different Schema (aka Schema.org) types and sub-types:</strong></p>
 
 <p>Google Rich Results and JSON-LD structured data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ pages, How-tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Video Objects, and much more.</p>
 
@@ -67,7 +65,7 @@
 <h3>WPSSO JSON Standard Features</h3>
 
 <ul>
-<li><p>Extends the features of the WPSSO Core plugin.</p></li>
+<li><p>Extends the features of the <a href="https://wordpress.org/plugins/wpsso/">WPSSO Core plugin</a>.</p></li>
 <li><p>Provides accurate and comprehensive Schema JSON-LD markup for Google Rich Results (aka Rich Snippets) with Structured Data.</p></li>
 <li><p>Provides complete Schema ImageObject SEO markup with image information from the WordPress Media Library (name, alternateName, alternativeHeadline, caption, description, fileFormat, uploadDate, and more).</p></li>
 <li><p>Provides complete Schema VideoObject SEO markup with video information from WPSSO Core Premium service APIs (Facebook, Slideshare, Soundcloud, Vimeo, Wistia, YouTube) including the 'embedUrl' and 'contentUrl' properties for Google.</p></li>
