@@ -696,7 +696,7 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 					$text = __( 'Aggregate (aka group) product offers by currency.', 'wpsso-schema-json-ld' ) . ' ';
 
-					$text .= sprintf( __( 'Note that to be eligible for the <a href="%s">Google price drop feature in search results</a>, product offers cannot be aggregated.', 'wpsso-schema-json-ld' ), 'https://developers.google.com/search/docs/data-types/product#price-drop' );
+					$text .= sprintf( __( 'Note that to be eligible for <a href="%s">price drop appearance in Google search results</a>, product offers cannot be aggregated.', 'wpsso-schema-json-ld' ), 'https://developers.google.com/search/docs/data-types/product#price-drop' );
 
 				 	break;
 

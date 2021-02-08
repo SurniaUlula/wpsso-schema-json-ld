@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.13.1\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.14.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-ld\n"
 "POT-Creation-Date: 2021-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-01-30 10:58-0800\n"
+"PO-Revision-Date: 2021-02-08 11:32-0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -1751,70 +1751,78 @@ msgid "Add a \"text\" or \"articleBody\" property to Schema CreativeWork markup 
 msgstr "Ajoutez une propriété \"text\" ou \"articleBody\" au balisage Schema CreativeWork avec le contenu textuel complet de l'article / page."
 
 #: lib/filters-messages.php:697
+msgid "Aggregate (aka group) product offers by currency."
+msgstr "Agréger (regrouper) les offres de produits par devise."
+
+#: lib/filters-messages.php:699
+msgid "Note that to be eligible for <a href=\"%s\">price drop appearance in Google search results</a>, product offers cannot be aggregated."
+msgstr "Notez que pour être éligible à <a href=\"%s\">l'affichage de la baisse de prix dans les résultats de recherche Google</a>, les offres de produits ne peuvent pas être agrégées."
+
+#: lib/filters-messages.php:705
 msgid "When a rating value for the webpage content is not available, a 5 star rating from the site organization can be added to the main Schema type markup."
 msgstr "Lorsque qu'une note pour le contenu de la page Web n'est pas disponible, une note 5 étoiles attribuée à l'organisation du site peut être ajoutée au balisage du type de Schéma principale."
 
-#: lib/filters-messages.php:699
+#: lib/filters-messages.php:707
 msgid "Visitor rating and review features are available from several supported plugins, including %s."
 msgstr "Les fonctionnalités de notes et critiques de visiteurs sont disponibles à partir de plusieurs extensions supportés, notamment %s."
 
-#: lib/filters-messages.php:701
+#: lib/filters-messages.php:709
 msgid "See the <a href=\"%1$s\">%2$s</a> webpage for details."
 msgstr "Consultez la page Web <a href=\"%1$s\">%2$s</a> pour plus de détails."
 
-#: lib/filters-messages.php:702
+#: lib/filters-messages.php:710
 msgid "https://developers.google.com/search/docs/data-types/review-snippet"
 msgstr "https://developers.google.com/search/docs/data-types/review-snippet"
 
-#: lib/filters-messages.php:703
+#: lib/filters-messages.php:711
 msgid "Google Review snippet structured data guidelines"
 msgstr "Google Review snippet structured data guidelines"
 
-#: lib/filters-messages.php:709
+#: lib/filters-messages.php:717
 msgid "Select a default family friendly value for the Schema CreativeWork type and/or its sub-types (Article, BlogPosting, WebPage, etc)."
 msgstr "Sélectionnez une valeur conviviale à la famille par défaut pour le type Schema CreativeWork et/ou ses sous-types (Article, BlogPosting, WebPage, etc.)."
 
-#: lib/filters-messages.php:715
+#: lib/filters-messages.php:723
 msgid "Select a default publisher organization for the Schema CreativeWork type and/or its sub-types (Article, BlogPosting, WebPage, etc)."
 msgstr "Sélectionnez une organisation par défaut pour l'éditeur du type de Schéma CreativeWork et/ou ses sous-types (Article, BlogPosting, WebPage, etc)."
 
-#: lib/filters-messages.php:721
+#: lib/filters-messages.php:729
 msgid "Select a default publisher person for the Schema CreativeWork type and/or its sub-types (Article, BlogPosting, WebPage, etc)."
 msgstr "Sélectionnez une personne par défaut pour l'éditeur du type de Schéma CreativeWork et/ou ses sous-types (Article, BlogPosting, WebPage, etc)."
 
-#: lib/filters-messages.php:728
+#: lib/filters-messages.php:736
 msgid "Select a default service provider, service operator or service performer (example: \"Netflix\")."
 msgstr "Sélectionnez un fournisseur de services, un opérateur de service ou un prestataire de services par défaut (exemple: \"Netflix\")."
 
-#: lib/filters-messages.php:734
+#: lib/filters-messages.php:742
 msgid "Select a default venue for the Schema Event type."
 msgstr "Sélectionnez un lieu par défaut pour le type de Schéma Event."
 
-#: lib/filters-messages.php:740
+#: lib/filters-messages.php:748
 msgid "Select a default organizer (organization) for the Schema Event type."
 msgstr "Sélectionnez un organisateur (organisation) par défaut pour le type de Schéma Event."
 
-#: lib/filters-messages.php:746
+#: lib/filters-messages.php:754
 msgid "Select a default organizer (person) for the Schema Event type."
 msgstr "Sélectionnez un organisateur (personne) par défaut pour le type de Schéma Event."
 
-#: lib/filters-messages.php:752
+#: lib/filters-messages.php:760
 msgid "Select a default performer (organization) for the Schema Event type."
 msgstr "Sélectionnez un interprète (organisation) par défaut pour le type de Schéma Event."
 
-#: lib/filters-messages.php:758
+#: lib/filters-messages.php:766
 msgid "Select a default performer (person) for the Schema Event type."
 msgstr "Sélectionnez un interprète (personne) par défaut pour le type de Schéma Event."
 
-#: lib/filters-messages.php:764
+#: lib/filters-messages.php:772
 msgid "Select a default organization for the Schema JobPosting hiring organization."
 msgstr "Sélectionnez une organisation d'embauche par défaut pour le type de Schéma JobPosting."
 
-#: lib/filters-messages.php:770
+#: lib/filters-messages.php:778
 msgid "Select a default location for the Schema JobPosting job location."
 msgstr "Sélectionnez un emplacement de travail par défaut pour le type de Schéma JobPosting."
 
-#: lib/filters-messages.php:776
+#: lib/filters-messages.php:784
 msgid "Select a default Schema type for the Schema Review subject URL."
 msgstr "Sélectionnez un type de Schéma par défaut pour l'URL du sujet de l'évaluation."
 
@@ -1903,6 +1911,16 @@ msgid "Add Text and Article Body Properties"
 msgstr "Ajouter prop. texte et corps d'article"
 
 #: lib/submenu/schema-general.php:182
+msgctxt "option label"
+msgid "Aggregate Offers by Currency"
+msgstr "Agréger les offres par devise"
+
+#: lib/submenu/schema-general.php:185
+msgctxt "option comment"
+msgid "incompatible with <a href=\"%s\">price drop appearance</a>"
+msgstr "incompatible avec <a href=\"%s\">l'affichage de la baisse de prix</a>"
+
+#: lib/submenu/schema-general.php:189
 msgctxt "option label"
 msgid "Add 5 Star Rating If No Rating"
 msgstr "Ajouter note 5 étoiles si aucune note"
