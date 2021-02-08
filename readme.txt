@@ -306,6 +306,23 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 4.14.0-dev.1 (2021/02/08)**
+
+To support the new [Google price drop feature in search results](https://developers.google.com/search/docs/data-types/product#price-drop), product offer markup has been changed to include all offers as a single array (by default) instead of aggregating offers by currency.
+
+* **New Features**
+	* Added a new "Aggregate Offers by Currency" option in the SSO &gt; Schema Markup settings page (unchecked by default).
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v7.0.
+	* WordPress v4.5.
+	* WPSSO Core v8.20.0.
+
 **Version 4.13.1 (2021/01/29)**
 
 * **New Features**
@@ -608,6 +625,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v8.0.0.
 
 == Upgrade Notice ==
+
+= 4.14.0-dev.1 =
+
+(2021/01/29) Added support the new Google price drop feature in search results.
 
 = 4.13.1 =
 
