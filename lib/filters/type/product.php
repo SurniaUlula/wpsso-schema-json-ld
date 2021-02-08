@@ -209,7 +209,14 @@ if ( ! class_exists( 'WpssoJsonFiltersTypeProduct' ) ) {
 						$this->p->debug->log( 'getting aggregate offer data' );
 					}
 
-					WpssoSchema::add_aggregate_offer_data( $json_ret, $mod, $mt_og[ 'product:offers' ] );
+					if ( empty( $this->p->options[ 'schema_aggr_offers' ] ) ) {
+
+						WpssoSchema::add_offers_data( $json_ret, $mod, $mt_og[ 'product:offers' ] );
+
+					} else {
+
+						WpssoSchema::add_offers_aggregate_data( $json_ret, $mod, $mt_og[ 'product:offers' ] );
+					}
 
 				} else {
 

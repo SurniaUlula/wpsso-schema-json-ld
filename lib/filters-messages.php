@@ -692,6 +692,14 @@ if ( ! class_exists( 'WpssoJsonFiltersMessages' ) ) {
 
 				 	break;
 
+				case 'tooltip-schema_aggr_offers':		// Aggregate Offers by Currency.
+
+					$text = __( 'Aggregate (aka group) product offers by currency.', 'wpsso-schema-json-ld' ) . ' ';
+
+					$text .= sprintf( __( 'Note that to be eligible for the <a href="%s">Google price drop feature in search results</a>, product offers cannot be aggregated.', 'wpsso-schema-json-ld' ), 'https://developers.google.com/search/docs/data-types/product#price-drop' );
+
+				 	break;
+
 				case 'tooltip-schema_add_5_star_rating':	// Add 5 Star Rating If No Rating.
 
 					$text .= __( 'When a rating value for the webpage content is not available, a 5 star rating from the site organization can be added to the main Schema type markup.', 'wpsso-schema-json-ld' ) . ' ';

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema JSON-LD Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.13.1\n"
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 4.14.0-dev.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-"
 "ld\n"
 "POT-Creation-Date: 2021-MO-DA HO:MI+ZONE\n"
@@ -1871,84 +1871,94 @@ msgid ""
 msgstr ""
 
 #: lib/filters-messages.php:697
+msgid "Aggregate (aka group) product offers by currency."
+msgstr ""
+
+#: lib/filters-messages.php:699
+msgid ""
+"Note that to be eligible for the <a href=\"%s\">Google price drop feature in "
+"search results</a>, product offers cannot be aggregated."
+msgstr ""
+
+#: lib/filters-messages.php:705
 msgid ""
 "When a rating value for the webpage content is not available, a 5 star "
 "rating from the site organization can be added to the main Schema type "
 "markup."
 msgstr ""
 
-#: lib/filters-messages.php:699
+#: lib/filters-messages.php:707
 msgid ""
 "Visitor rating and review features are available from several supported "
 "plugins, including %s."
 msgstr ""
 
-#: lib/filters-messages.php:701
+#: lib/filters-messages.php:709
 msgid "See the <a href=\"%1$s\">%2$s</a> webpage for details."
 msgstr ""
 
-#: lib/filters-messages.php:702
+#: lib/filters-messages.php:710
 msgid "https://developers.google.com/search/docs/data-types/review-snippet"
 msgstr ""
 
-#: lib/filters-messages.php:703
+#: lib/filters-messages.php:711
 msgid "Google Review snippet structured data guidelines"
 msgstr ""
 
-#: lib/filters-messages.php:709
+#: lib/filters-messages.php:717
 msgid ""
 "Select a default family friendly value for the Schema CreativeWork type and/"
 "or its sub-types (Article, BlogPosting, WebPage, etc)."
 msgstr ""
 
-#: lib/filters-messages.php:715
+#: lib/filters-messages.php:723
 msgid ""
 "Select a default publisher organization for the Schema CreativeWork type and/"
 "or its sub-types (Article, BlogPosting, WebPage, etc)."
 msgstr ""
 
-#: lib/filters-messages.php:721
+#: lib/filters-messages.php:729
 msgid ""
 "Select a default publisher person for the Schema CreativeWork type and/or "
 "its sub-types (Article, BlogPosting, WebPage, etc)."
 msgstr ""
 
-#: lib/filters-messages.php:728
+#: lib/filters-messages.php:736
 msgid ""
 "Select a default service provider, service operator or service performer "
 "(example: \"Netflix\")."
 msgstr ""
 
-#: lib/filters-messages.php:734
+#: lib/filters-messages.php:742
 msgid "Select a default venue for the Schema Event type."
 msgstr ""
 
-#: lib/filters-messages.php:740
+#: lib/filters-messages.php:748
 msgid "Select a default organizer (organization) for the Schema Event type."
 msgstr ""
 
-#: lib/filters-messages.php:746
+#: lib/filters-messages.php:754
 msgid "Select a default organizer (person) for the Schema Event type."
 msgstr ""
 
-#: lib/filters-messages.php:752
+#: lib/filters-messages.php:760
 msgid "Select a default performer (organization) for the Schema Event type."
 msgstr ""
 
-#: lib/filters-messages.php:758
+#: lib/filters-messages.php:766
 msgid "Select a default performer (person) for the Schema Event type."
 msgstr ""
 
-#: lib/filters-messages.php:764
+#: lib/filters-messages.php:772
 msgid ""
 "Select a default organization for the Schema JobPosting hiring organization."
 msgstr ""
 
-#: lib/filters-messages.php:770
+#: lib/filters-messages.php:778
 msgid "Select a default location for the Schema JobPosting job location."
 msgstr ""
 
-#: lib/filters-messages.php:776
+#: lib/filters-messages.php:784
 msgid "Select a default Schema type for the Schema Review subject URL."
 msgstr ""
 
@@ -2045,6 +2055,16 @@ msgid "Add Text and Article Body Properties"
 msgstr ""
 
 #: lib/submenu/schema-general.php:182
+msgctxt "option label"
+msgid "Aggregate Offers by Currency"
+msgstr ""
+
+#: lib/submenu/schema-general.php:185
+msgctxt "option comment"
+msgid "incompatible with <a href=\"%s\">price drop appearance</a>"
+msgstr ""
+
+#: lib/submenu/schema-general.php:189
 msgctxt "option label"
 msgid "Add 5 Star Rating If No Rating"
 msgstr ""

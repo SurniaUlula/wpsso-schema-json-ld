@@ -178,6 +178,13 @@ if ( ! class_exists( 'WpssoJsonSubmenuSchemaGeneral' ) && class_exists( 'WpssoAd
 					$css_class = '', $css_id = 'schema_add_text_prop' ) . 
 				'<td>' . $form->get_checkbox( 'schema_add_text_prop' ) . '</td>';
 
+			$table_rows[ 'schema_aggr_offers' ] = $form->get_tr_hide( 'basic', 'schema_aggr_offers' ) .
+				$form->get_th_html( _x( 'Aggregate Offers by Currency', 'option label', 'wpsso-schema-json-ld' ),
+					$css_class = '', $css_id = 'schema_aggr_offers' ) . 
+				'<td>' . $form->get_checkbox( 'schema_aggr_offers' ) . ' ' .
+					sprintf( _x( 'incompatible with <a href="%s">price drop appearance</a>', 'option comment', 'wpsso-schema-json-ld' ),
+						'https://developers.google.com/search/docs/data-types/product#price-drop' ) . '</td>';
+
 			$table_rows[ 'schema_add_5_star_rating' ] = $form->get_tr_hide( 'basic', 'schema_add_5_star_rating' ) .
 				$form->get_th_html( _x( 'Add 5 Star Rating If No Rating', 'option label', 'wpsso-schema-json-ld' ),
 					$css_class = '', $css_id = 'schema_add_5_star_rating' ) . 
