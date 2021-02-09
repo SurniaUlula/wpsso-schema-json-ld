@@ -2,8 +2,8 @@
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Schema JSON-LD Markup</td></tr>
-<tr><th align="right" valign="top" nowrap>Summary</th><td>Google Rich Results and JSON-LD structured data for Articles, Carousels, Events, FAQ pages, How-tos, Local SEO, Products, Recipes, Ratings, Reviews, a</td></tr>
-<tr><th align="right" valign="top" nowrap>Stable Version</th><td>4.13.1</td></tr>
+<tr><th align="right" valign="top" nowrap>Summary</th><td>Google Rich Results with JSON-LD structured data for Articles, Carousels, Events, FAQ pages, How-Tos, Local SEO, Products, Recipes, Ratings, Reviews, </td></tr>
+<tr><th align="right" valign="top" nowrap>Stable Version</th><td>4.14.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires PHP</th><td>7.0 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>4.5 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To WordPress</th><td>5.6.1</td></tr>
@@ -17,7 +17,7 @@
 
 <p><img class="readme-icon" src="https://surniaulula.github.io/wpsso-schema-json-ld/assets/icon-256x256.png"><strong>Supports over 500 different Schema (aka Schema.org) types and sub-types:</strong></p>
 
-<p>Google Rich Results and JSON-LD structured data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ pages, How-tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Video Objects, and much more.</p>
+<p>Google Rich Results with JSON-LD structured data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ pages, How-Tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Video Objects, and much more.</p>
 
 <p><strong>Reads your existing WordPress content, plugin data, and service API data:</strong></p>
 

@@ -12,15 +12,15 @@ Requires PHP: 7.0
 Requires At Least: 4.5
 Tested Up To: 5.6.1
 WC Tested Up To: 4.9.2
-Stable Tag: 4.13.1
+Stable Tag: 4.14.0
 
-Google Rich Results and JSON-LD structured data for Articles, Carousels, Events, FAQ pages, How-tos, Local SEO, Products, Recipes, Ratings, Reviews, and more.
+Google Rich Results with JSON-LD structured data for Articles, Carousels, Events, FAQ pages, How-Tos, Local SEO, Products, Recipes, Ratings, Reviews, and more.
 
 == Description ==
 
 <p><img class="readme-icon" src="https://surniaulula.github.io/wpsso-schema-json-ld/assets/icon-256x256.png"><strong>Supports over 500 different Schema (aka Schema.org) types and sub-types:</strong></p>
 
-Google Rich Results and JSON-LD structured data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ pages, How-tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Video Objects, and much more.
+Google Rich Results with JSON-LD structured data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ pages, How-Tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Video Objects, and much more.
 
 **Reads your existing WordPress content, plugin data, and service API data:**
 
