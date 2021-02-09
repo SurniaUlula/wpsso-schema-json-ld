@@ -306,7 +306,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.14.0-b.1 (2021/02/08)**
+**Version 4.14.0-rc.1 (2021/02/09)**
 
 To support the new [price drop appearance feature in Google search results](https://developers.google.com/search/docs/data-types/product#price-drop), product offer markup has been changed to include all offers as a single array (by default) instead of aggregating offers by currency.
 
@@ -626,9 +626,9 @@ To support the new [price drop appearance feature in Google search results](http
 
 == Upgrade Notice ==
 
-= 4.14.0-b.1 =
+= 4.14.0-rc.1 =
 
-(2021/02/08) Added support the new price drop appearance feature in Google search results.
+(2021/02/09) Added support the new price drop appearance feature in Google search results.
 
 = 4.13.1 =
 
