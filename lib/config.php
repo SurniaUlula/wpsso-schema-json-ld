@@ -17,8 +17,8 @@ if ( ! class_exists( 'WpssoJsonConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssojson' => array(			// Plugin acronym.
-					'version'     => '4.14.0-rc.1',	// Plugin version.
-					'opt_version' => '43',		// Increment when changing default option values.
+					'version'     => '4.14.0',	// Plugin version.
+					'opt_version' => '44',		// Increment when changing default option values.
 					'short'       => 'WPSSO JSON',	// Short plugin name.
 					'name'        => 'WPSSO Schema JSON-LD Markup',
 					'desc'        => 'Google Rich Results and JSON-LD structured data for Articles, Carousels, Events, FAQ pages, How-tos, Local SEO, Products, Recipes, Ratings, Reviews, and more.',
