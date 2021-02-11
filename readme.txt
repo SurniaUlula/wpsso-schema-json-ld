@@ -321,7 +321,7 @@ To support the new [price drop appearance feature in Google search results](http
 * **Requires At Least**
 	* PHP v7.0.
 	* WordPress v4.5.
-	* WPSSO Core v8.20.0.
+	* WPSSO Core v8.22.0.
 
 **Version 4.13.1 (2021/01/29)**
 
