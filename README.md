@@ -111,6 +111,8 @@
 
 <p>WooCommerce product variations data, provided by the <a href="https://wpsso.com/extend/plugins/wpsso/">WPSSO Core Premium plugin</a>, can be added as a Schema Offers array or optionally grouped by currency using the Schema AggregateOffer markup (includes high price, low price, and currency).</p>
 
+<p>Provides Schema Product markup for <a href="https://developers.google.com/search/docs/data-types/product#price-drop">Google price drop appearance in search results</a>.</p>
+
 <p>Fixes common Google testing tool warnings like "aggregateRating field is recommended" and "review field is recommended".</p>
 
 <p>Fixes Google testing tool warnings for supported WPSSO Core Premium e-commerce products, like "brand field is recommended", "missing a global identifier", etc.</p>
