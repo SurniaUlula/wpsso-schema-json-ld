@@ -108,7 +108,7 @@ Supports additional custom product information and WooCommerce product attribute
 * Product Weight
 * Product Width
 
-WooCommerce product variations from the WPSSO Core Premium plugin are grouped by currency and added as Schema AggregateOffer for Google's Rich Results (includes the product variation group high price, low price, and currency).
+WooCommerce product variations data, provided by the [WPSSO Core Premium plugin](https://wpsso.com/extend/plugins/wpsso/), can be added as a Schema Offers array or optionally grouped by currency using the Schema AggregateOffer markup (includes high price, low price, and currency).
 
 Fixes common Google testing tool warnings like "aggregateRating field is recommended" and "review field is recommended".
 
