@@ -10,7 +10,7 @@ Tags: schema.org, rich results, image seo, video seo, woocommerce, schema, rich 
 Contributors: jsmoriss
 Requires PHP: 7.0
 Requires At Least: 4.5
-Tested Up To: 5.6.1
+Tested Up To: 5.6.2
 WC Tested Up To: 5.0.0
 Stable Tag: 4.14.0
 
@@ -22,7 +22,7 @@ Google Rich Results with JSON-LD structured data for Articles, Carousels, Events
 
 Google Rich Results with JSON-LD structured data for Articles, Carousels (aka Item Lists), Claim Reviews, Events, FAQ pages, How-Tos, Images, Local Business / Local SEO, Organizations, Products, Ratings, Recipes, Restaurants, Reviews, Video Objects, and much more.
 
-**Reads your existing WordPress content, plugin data, and service API data:**
+**Reads your existing content, plugin data, and service API data:**
 
 There's no need to manually re-enter descriptions, titles, product information, and re-select images / videos like other SEO and Schema markup plugins.
 
