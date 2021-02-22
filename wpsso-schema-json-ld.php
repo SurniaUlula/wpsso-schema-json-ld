@@ -13,7 +13,7 @@
  * Description: Google Rich Results and JSON-LD structured data for Articles, Carousels, Events, FAQ pages, How-tos, Local SEO, Products, Recipes, Ratings, Reviews, and more.
  * Requires PHP: 7.0
  * Requires At Least: 4.5
- * Tested Up To: 5.6.1
+ * Tested Up To: 5.6.2
  * WC Tested Up To: 5.0.0
  * Version: 4.14.0
  * 
