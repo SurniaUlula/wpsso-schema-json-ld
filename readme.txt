@@ -12,7 +12,7 @@ Requires PHP: 7.0
 Requires At Least: 4.5
 Tested Up To: 5.6.2
 WC Tested Up To: 5.0.0
-Stable Tag: 4.14.0
+Stable Tag: 4.14.1
 
 Google Rich Results with JSON-LD structured data for Articles, Carousels, Events, FAQ pages, How-Tos, Local SEO, Products, Recipes, Ratings, Reviews, and more.
 
