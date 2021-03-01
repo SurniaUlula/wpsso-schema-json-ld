@@ -10,7 +10,7 @@ Tags: schema.org, rich results, image seo, video seo, woocommerce, schema, rich 
 Contributors: jsmoriss
 Requires PHP: 7.0
 Requires At Least: 4.5
-Tested Up To: 5.6.2
+Tested Up To: 5.7
 WC Tested Up To: 5.0.0
 Stable Tag: 4.14.1
 
